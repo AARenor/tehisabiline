@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="et">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tehisabiline – AI-põhine automatiseerimine</title>
+    <meta name="description" content="Tehisabiline aitab Eesti ettevõtetel luua AI-chatbote, automatiseeritud töövooge ja paremini müüvaid veebilehti. Küsi tasuta auditit.">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container">
+
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-2xl border-b border-white/20" id="navbar">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+        <a href="#hero" class="flex items-center gap-4">
+            <img alt="Tehisabiline Logo" class="w-10 h-10 object-contain" src="favicon.png"/>
+            <div class="text-2xl font-bold tracking-tighter text-deep-navy font-headline uppercase">
+                Tehisabiline
+            </div>
+        </a>
+        <div class="hidden md:flex items-center space-x-12">
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#services">Teenused</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#team">Meeskond</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#contact">Kontakt</a>
+            <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Alusta siit</a>
+        </div>
+        <button class="md:hidden text-on-surface" id="nav-toggle" aria-label="Menüü">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden flex-col items-center gap-6 pb-8 bg-white/90 backdrop-blur-2xl" id="mobile-menu">
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#services">Teenused</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#team">Meeskond</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-xs uppercase tracking-widest" href="#contact">Kontakt</a>
+        <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Alusta siit</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-dynamic-bg relative min-h-screen flex items-center justify-center pt-24" id="hero">
+    <!-- Abstract Glowing Orbs -->
+    <div class="orb w-[500px] h-[500px] bg-primary-container top-[-100px] left-[-100px]"></div>
+    <div class="orb w-[400px] h-[400px] bg-secondary-container bottom-[-100px] right-[-50px]" style="animation-delay: -5s;"></div>
+    <div class="orb w-[300px] h-[300px] bg-blue-100 top-1/2 left-2/3" style="animation-delay: -10s;"></div>
+    <!-- Abstract Glass Shapes -->
+    <div class="absolute top-1/4 -left-20 w-96 h-96 luxury-glass rounded-full opacity-20 glass-float" style="animation-delay: 0s;"></div>
+    <div class="absolute bottom-1/4 -right-20 w-[30rem] h-[30rem] luxury-glass rounded-[4rem] opacity-30 glass-float" style="animation-delay: -3s;"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-12 reveal">
+        <div class="inline-flex items-center px-6 py-2 rounded-full bg-white/40 border border-white/60 text-primary text-[10px] font-bold tracking-[0.3em] uppercase backdrop-blur-md">
+            Õpilasfirma Reaalkoolist
+        </div>
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.95] text-deep-navy font-headline">
+            Tehisabiline – <br/><span class="gradient-text italic">efektiivsem</span> juhtimine
+        </h1>
+        <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light">
+            Vabastage oma meeskond rutiinsetest ülesannetest. Loome nutikad AI-lahendused, mis optimeerivad äriprotsesse ja kasvatavad tulu.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+            <a class="btn-premium px-12 py-5 rounded-full text-xs font-bold shadow-2xl shadow-primary/10 magnetic" href="#contact">
+                Alusta koostööd
+            </a>
+            <a class="text-deep-navy px-12 py-5 rounded-full text-xs font-bold hover:bg-white/40 transition-all border border-transparent hover:border-white/60 tracking-widest uppercase" href="#services">
+                Vaata teenuseid
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats -->
+<section class="py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-24 text-center">
+            <div class="space-y-6 reveal">
+                <div class="text-6xl font-headline italic text-primary font-bold" data-count="80">0</div>
+                <p class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60">% vähem manuaalset tööd</p>
+            </div>
+            <div class="space-y-6 reveal">
+                <div class="text-6xl font-headline italic text-primary font-bold">24/7</div>
+                <p class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60">Automaatne klienditugi</p>
+            </div>
+            <div class="space-y-6 reveal">
+                <div class="text-6xl font-headline italic text-primary font-bold" data-count="100">0</div>
+                <p class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60">% eestikeelne koostöö</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-32 bg-surface" id="services">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-32 max-w-3xl mx-auto space-y-6 reveal">
+            <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Meie teenused</h2>
+            <div class="h-1 w-20 bg-primary mx-auto"></div>
+            <p class="text-xl text-on-surface-variant font-light">
+                Kõik vajalik ühe katuse alt – alates nutikatest chatbotidest kuni keerukate täislahendusteni.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Chatbot -->
+            <div class="premium-card rounded-4xl p-12 flex flex-col md:flex-row gap-12 reveal">
+                <div class="w-full md:w-1/2 space-y-8">
+                    <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-4xl">forum</span>
+                    </div>
+                    <h3 class="text-4xl font-headline font-bold text-deep-navy">Veebilehe chatbotid</h3>
+                    <p class="text-on-surface-variant leading-relaxed font-light">
+                        24/7 kättesaadav klienditugi eesti keeles. Vastab küsimustele, kogub kontakte ja suunab järgmise sammu poole ilma teie sekkumiseta.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Eesti- ja ingliskeelsed vastused
+                        </li>
+                        <li class="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Kliendipäringute kogumine
+                        </li>
+                        <li class="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Selge CTA otse vestluses
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                        Soovin chatboti <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 bg-sky-50/30 rounded-3xl p-8 relative border border-sky-100/50 flex flex-col justify-center">
+                    <div class="space-y-6" id="chat-demo">
+                        <div class="flex justify-end">
+                            <div class="luxury-glass px-6 py-3 rounded-2xl rounded-tr-none text-sm text-deep-navy max-w-[90%]">
+                                Tere! Kuidas saame täna aidata?
+                            </div>
+                        </div>
+                        <div class="flex justify-start">
+                            <div class="bg-primary/10 px-6 py-3 rounded-2xl rounded-tl-none border border-primary/10 text-sm text-deep-navy max-w-[90%]">
+                                Kas chatbot saab vastata ka eesti keeles?
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="luxury-glass px-6 py-3 rounded-2xl rounded-tr-none text-sm text-deep-navy max-w-[90%]">
+                                Jah! Meie chatbotid toetavad eesti keelt ja kohanduvad sinu ärivajadustele.
+                            </div>
+                        </div>
+                        <div class="flex justify-start opacity-0" id="typing-indicator">
+                            <div class="bg-primary/10 px-6 py-3 rounded-2xl rounded-tl-none border border-primary/10 flex items-center gap-2">
+                                <span class="typing-dot"></span>
+                                <span class="typing-dot"></span>
+                                <span class="typing-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price Tracker -->
+            <div class="premium-card rounded-4xl p-12 flex flex-col md:flex-row gap-12 reveal">
+                <div class="w-full md:w-1/2 space-y-8">
+                    <div class="w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
+                        <span class="material-symbols-outlined text-4xl">monitoring</span>
+                    </div>
+                    <h3 class="text-4xl font-headline font-bold text-deep-navy">Hinnajälgijad</h3>
+                    <p class="text-on-surface-variant leading-relaxed font-light">
+                        Automaatne konkurentide hindade jälgimine ja analüüs. Saate reaalajas e-posti raporteid turu muutustest.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-[10px] font-bold uppercase tracking-widest">API Access</div>
+                        <div class="px-4 py-2 rounded-full bg-sky-50 text-sky-700 text-[10px] font-bold uppercase tracking-widest">Real-time</div>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
+                        Tahan hinnajälgijat <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 bg-slate-50/50 rounded-3xl p-8 border border-slate-100/50 flex flex-col justify-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Trend</span>
+                            <span class="text-[10px] font-bold text-teal-600 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
+                            </span>
+                        </div>
+                        <div class="flex items-end gap-3 h-24" id="price-bars">
+                            <div class="flex-1 bg-teal-200/40 rounded-t-sm price-bar" style="--target-height: 33%"></div>
+                            <div class="flex-1 bg-teal-200/60 rounded-t-sm price-bar" style="--target-height: 50%"></div>
+                            <div class="flex-1 bg-teal-300/80 rounded-t-sm price-bar" style="--target-height: 66%"></div>
+                            <div class="flex-1 bg-teal-500 rounded-t-sm price-bar" style="--target-height: 100%"></div>
+                            <div class="flex-1 bg-teal-300/80 rounded-t-sm price-bar" style="--target-height: 75%"></div>
+                            <div class="flex-1 bg-teal-200/60 rounded-t-sm price-bar" style="--target-height: 58%"></div>
+                            <div class="flex-1 bg-teal-400 rounded-t-sm price-bar" style="--target-height: 85%"></div>
+                        </div>
+                        <div class="flex items-center justify-between text-[10px] text-on-surface-variant/60 uppercase tracking-wider font-bold">
+                            <span>E-R</span>
+                            <span>Automaatne raport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automations -->
+            <div class="premium-card rounded-4xl p-10 group reveal">
+                <div class="flex items-center gap-10">
+                    <div class="w-20 h-20 rounded-full bg-slate-50 flex items-center justify-center text-primary flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl">auto_mode</span>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-headline font-bold text-deep-navy mb-2">Automatiseeritud tööprotsessid</h4>
+                        <p class="text-on-surface-variant font-light text-base">Eritellimusel põhinevad automatiseerimised ja integratsioonid. Vähem kopeerimist, selgem töövoog.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Solutions -->
+            <div class="premium-card rounded-4xl p-10 group reveal">
+                <div class="flex items-center gap-10">
+                    <div class="w-20 h-20 rounded-full bg-slate-50 flex items-center justify-center text-primary flex-shrink-0">
+                        <span class="material-symbols-outlined text-4xl">web</span>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-headline font-bold text-deep-navy mb-2">Veebilehe lahendused</h4>
+                        <p class="text-on-surface-variant font-light text-base">Kaasaegsed veebilehed koos domeeni halduse ja majutusega. Selge väärtuspakkumine esimestel sekunditel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-32 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,101,141,0.03),_transparent_70%)]"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <h2 class="text-5xl md:text-6xl font-headline font-light text-center mb-24 tracking-tight text-deep-navy reveal">Miks valida <span class="italic">meid?</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="text-center space-y-6 reveal">
+                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
+                    <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                </div>
+                <h5 class="font-headline text-2xl text-deep-navy font-bold">AI Tehnoloogia</h5>
+                <p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Uusimad mudelid</p>
+            </div>
+            <div class="text-center space-y-6 reveal">
+                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
+                    <span class="material-symbols-outlined text-3xl">query_stats</span>
+                </div>
+                <h5 class="font-headline text-2xl text-deep-navy font-bold">Äri kasv</h5>
+                <p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Andmepõhine</p>
+            </div>
+            <div class="text-center space-y-6 reveal">
+                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
+                    <span class="material-symbols-outlined text-3xl">person_pin</span>
+                </div>
+                <h5 class="font-headline text-2xl text-deep-navy font-bold">Personaalsus</h5>
+                <p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Rätseptöö</p>
+            </div>
+            <div class="text-center space-y-6 reveal">
+                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
+                    <span class="material-symbols-outlined text-3xl">payments</span>
+                </div>
+                <h5 class="font-headline text-2xl text-deep-navy font-bold">Hinnastamine</h5>
+                <p class="text-xs text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Väärtuspõhine</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-32 bg-surface" id="team">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-32 space-y-6 reveal">
+            <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Meie meeskond</h2>
+            <div class="h-1 w-20 bg-primary mx-auto"></div>
+            <p class="text-xl text-on-surface-variant font-light">Kolm noort ja ambitsioonikat Tallinna Reaalkooli õpilast, kes on pühendunud tehisintellekti lahenduste loomisele Eesti ettevõtetele.</p>
+        </div>
+        <div class="premium-card rounded-4xl p-0 overflow-hidden reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="relative overflow-hidden">
+                    <img class="w-full h-full object-cover min-h-[400px] hover:scale-105 transition-transform duration-1000" src="team.jpg" alt="Tehisabiline tiim"/>
+                </div>
+                <div class="p-12 lg:p-16 flex flex-col justify-center space-y-8">
+                    <div class="inline-flex items-center px-5 py-2 rounded-full bg-white/40 border border-white/60 text-primary text-[10px] font-bold tracking-[0.3em] uppercase backdrop-blur-md w-fit">
+                        Tehisabiline Tiim
+                    </div>
+                    <h3 class="text-3xl lg:text-4xl font-headline font-bold text-deep-navy leading-tight">Arle Aron Reidma, Tristan Tobias Kõrkjas ja Steven Laas</h3>
+                    <p class="text-primary font-bold tracking-[0.2em] uppercase text-[10px]">Asutajad</p>
+                    <p class="text-on-surface-variant leading-relaxed font-light text-lg">
+                        Meie eesmärk on tuua keerulised tehnoloogid kõikidele kättesaadavaks. Kiirus, värske pilk ja võime tõlkida tehnoloogia lihtsaks ärikasuks on meie tugevus.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm font-medium text-on-surface-variant">Mõtleme tulemuse, mitte funktsiooni peale</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm font-medium text-on-surface-variant">Tehniline keerukus jääb meie kanda</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="text-sm font-medium text-on-surface-variant">Paindlik koostöö väikesele ettevõttele</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-32 bg-deep-navy relative overflow-hidden reveal">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(0,174,239,0.15),_transparent_50%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(0,101,141,0.1),_transparent_50%)]"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-12">
+        <h2 class="text-5xl md:text-7xl font-headline font-bold text-white leading-tight">Säästa aega. <span class="italic text-secondary-container">Kasvata tulu.</span></h2>
+        <p class="text-xl text-white/60 font-light max-w-2xl mx-auto">Tark töö ei tähenda rohkem töötunde, vaid paremaid süsteeme. Alustame tasuta auditiga.</p>
+        <a class="inline-block bg-white text-deep-navy px-12 py-5 rounded-full text-xs font-bold tracking-widest uppercase shadow-2xl hover:shadow-white/20 hover:-translate-y-1 transition-all duration-500" href="#contact">
+            Broneeri tasuta vestlus
+        </a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-32 bg-surface" id="contact">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+        <div class="space-y-12 reveal">
+            <h2 class="text-6xl font-headline font-medium text-deep-navy leading-tight">Võtke <span class="italic">meiega</span> ühendust</h2>
+            <p class="text-xl text-on-surface-variant font-light leading-relaxed">
+                Oleme valmis aitama teil viia ettevõte uuele tasemele. Täitke vorm või saatke meile otse kiri.
+            </p>
+            <div class="space-y-10">
+                <div class="flex items-center gap-8 group">
+                    <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                        <span class="material-symbols-outlined text-xl">mail</span>
+                    </div>
+                    <a href="mailto:tehisabiline@gmail.com" class="text-xl font-headline font-bold text-deep-navy">tehisabiline@gmail.com</a>
+                </div>
+                <div class="flex items-center gap-8 group">
+                    <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                        <span class="material-symbols-outlined text-xl">location_on</span>
+                    </div>
+                    <span class="text-xl font-headline font-bold text-deep-navy">Tallinn, Eesti</span>
+                </div>
+            </div>
+            <div class="space-y-6 pt-8 border-t border-outline-variant">
+                <h4 class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant/60">Mida saad vastu</h4>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="text-sm font-medium text-on-surface-variant">Tasuta esmane audit</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="text-sm font-medium text-on-surface-variant">Riskivaba esimene vestlus</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="text-sm font-medium text-on-surface-variant">1-2 praktilist automatsiooniideed</span>
+                </div>
+            </div>
+        </div>
+        <div class="premium-card p-12 rounded-4xl relative overflow-hidden reveal">
+            <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+            <form class="space-y-8 relative z-10" id="contact-form">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="name">Nimi</label>
+                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="name" name="name" placeholder="Teie nimi" required type="text"/>
+                    </div>
+                    <div class="space-y-3">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="email">Email</label>
+                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="email" name="email" placeholder="teie@email.com" required type="email"/>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="company">Ettevõte</label>
+                    <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="company" name="company" placeholder="Ettevõtte nimi" type="text"/>
+                </div>
+                <div class="space-y-3">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="message">Sõnum</label>
+                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="message" name="message" placeholder="Kuidas saame aidata?" required rows="3"></textarea>
+                </div>
+                <button class="w-full btn-premium py-6 rounded-full font-bold text-[10px] mt-8" type="submit">
+                    Saada päring
+                </button>
+                <div id="form-success" class="hidden text-center py-6 bg-primary/5 border border-primary/10 rounded-2xl text-primary font-bold text-sm">
+                    Sõnum edukalt saadetud! Võtame peagi ühendust.
+                </div>
+                <div id="form-error" class="hidden text-center py-6 bg-red-50 border border-red-100 rounded-2xl text-red-600 font-bold text-sm">
+                    Sõnumi saatmine ebaõnnestus. Proovi hetke pärast uuesti.
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-24 bg-deep-navy text-white/90">
+    <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
+            <div class="col-span-1 md:col-span-2 space-y-8">
+                <div class="flex items-center gap-4">
+                    <img alt="Tehisabiline Logo" class="w-10 h-10 object-contain brightness-0 invert" src="favicon.png"/>
+                    <div class="text-2xl font-bold tracking-tighter font-headline uppercase text-white">Tehisabiline ÕF</div>
+                </div>
+                <p class="text-white/40 text-lg font-light leading-relaxed max-w-sm">
+                    AI automatiseerimise partner teie äri kiireks ja nutikaks kasvuks. Säästame aega ja tõstame efektiivsust.
+                </p>
+            </div>
+            <div class="space-y-8">
+                <h5 class="font-bold text-white uppercase text-[10px] tracking-[0.3em]">Lehed</h5>
+                <nav class="flex flex-col space-y-4">
+                    <a class="text-white/40 hover:text-white transition-colors text-xs font-light tracking-wide" href="#hero">Avaleht</a>
+                    <a class="text-white/40 hover:text-white transition-colors text-xs font-light tracking-wide" href="#services">Teenused</a>
+                    <a class="text-white/40 hover:text-white transition-colors text-xs font-light tracking-wide" href="#team">Meeskond</a>
+                    <a class="text-white/40 hover:text-white transition-colors text-xs font-light tracking-wide" href="#contact">Kontakt</a>
+                </nav>
+            </div>
+            <div class="space-y-8">
+                <h5 class="font-bold text-white uppercase text-[10px] tracking-[0.3em]">Kontakt</h5>
+                <nav class="flex flex-col space-y-4">
+                    <a class="text-white/40 hover:text-white transition-colors text-xs font-light tracking-wide" href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a>
+                    <span class="text-white/40 text-xs font-light tracking-wide">Tallinn, Eesti</span>
+                </nav>
+            </div>
+        </div>
+        <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <div>© 2026 Tehisabiline ÕF. Kõik õigused kaitstud.</div>
+            <div>Valmistatud Tallinnas</div>
+        </div>
+    </div>
+</footer>
+
+<!-- Sticky CTA -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-white/40 backdrop-blur-2xl border-t border-white/20 py-4 px-6 hidden" id="sticky-cta">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div>
+            <strong class="text-deep-navy text-sm">Kas veeb või protsess võiks rohkem müüa?</strong>
+            <span class="text-on-surface-variant text-xs ml-2">Teeme auditiga esimese sammu selgeks.</span>
+        </div>
+        <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Võta ühendust</a>
+    </div>
+</div>
+
+<script src="index.js" defer></script>
+</body>
+</html>
