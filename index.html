@@ -10,6 +10,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00658d",
+                        "primary-container": "#00aeef",
+                        "on-primary": "#ffffff",
+                        "secondary": "#13677b",
+                        "secondary-container": "#a1e7ff",
+                        "tertiary": "#2b6958",
+                        "surface": "#fcfdfe",
+                        "on-surface": "#0a0c0d",
+                        "on-surface-variant": "#4a5568",
+                        "outline": "#cbd5e1",
+                        "outline-variant": "#e2e8f0",
+                        "deep-navy": "#001e2d"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        "2xl": "0.75rem",
+                        "3xl": "1.5rem",
+                        "4xl": "3rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Cormorant Garamond", "serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body class="bg-surface text-on-surface selection:bg-secondary-container">
