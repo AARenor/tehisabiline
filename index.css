@@ -172,6 +172,31 @@ input, textarea { font-family: inherit; }
     height: var(--target-height);
 }
 
+/* ---------- Hero Entrance Animation ---------- */
+.hero-animate {
+    opacity: 0;
+    transform: translateY(50px) scale(0.97);
+    animation: hero-entrance 1s var(--ease-out) forwards;
+}
+
+.hero-animate-1 { animation-delay: 0.2s; }
+.hero-animate-2 { animation-delay: 0.45s; }
+.hero-animate-3 { animation-delay: 0.7s; }
+.hero-animate-4 { animation-delay: 0.95s; }
+
+@keyframes hero-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.97);
+        filter: blur(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
 /* ---------- Scroll Reveal ---------- */
 .reveal {
     opacity: 0;
@@ -234,4 +259,5 @@ input:focus, textarea:focus {
     .orb, .glass-float { animation: none; }
     .reveal { transition-duration: 0.01ms; }
     .price-bar { transition-duration: 0.01ms; }
+    .hero-animate { animation-duration: 0.01ms; animation-delay: 0ms; }
 }
