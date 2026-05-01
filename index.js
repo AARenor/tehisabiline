@@ -41,21 +41,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (navToggle && mobileMenu) {
+        let menuOpen = false;
+
         navToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            if (isHidden) {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
+                navToggle.querySelector('.material-symbols-outlined').textContent = 'close';
             } else {
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
+                navToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
             }
         });
 
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
+                menuOpen = false;
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
+                navToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
             });
         });
     }

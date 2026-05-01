@@ -1,1 +1,3 @@
-node_modules/\n.superpowers/\n*.png\n*.jpg\n.DS_Store
+node_modules/
+.superpowers/
+.DS_Store

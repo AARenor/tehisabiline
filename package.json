@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "test:seo": "node tools/seo-check.mjs"
+    }
+}
