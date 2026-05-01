@@ -2,7 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const siteUrl = process.env.SITE_URL || 'https://aarenor.github.io/tehisabiline/';
+const siteUrl = process.env.SITE_URL || 'https://tehisabiline.ee/';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const html = readFileSync(join(root, 'index.html'), 'utf8');
 const failures = [];
@@ -30,7 +30,7 @@ function metaValue(key) {
 }
 
 function localPathExists(pathname) {
-    const cleanPath = pathname.replace(/^\/tehisabiline\//, '').replace(/^\.\//, '');
+    const cleanPath = pathname.replace(/^\/tehisabiline\//, '').replace(/^\//, '').replace(/^\.\//, '');
     return existsSync(join(root, decodeURIComponent(cleanPath)));
 }
 
@@ -95,7 +95,7 @@ if (existsSync(join(root, 'site.webmanifest'))) {
         const manifest = JSON.parse(readFileSync(join(root, 'site.webmanifest'), 'utf8'));
         assert(manifest.name === 'Tehisabiline ÕF', 'Manifest should use the full site name.');
         assert(manifest.lang === 'et', 'Manifest language should be Estonian.');
-        assert(manifest.start_url === '/tehisabiline/', 'Manifest start_url should match GitHub Pages path.');
+        assert(manifest.start_url === '/', 'Manifest start_url should match the production domain root.');
         assert(Array.isArray(manifest.icons) && manifest.icons.length >= 3, 'Manifest should define favicon icons.');
         for (const icon of manifest.icons || []) {
             assert(localPathExists(icon.src), `Manifest icon does not exist: ${icon.src}`);

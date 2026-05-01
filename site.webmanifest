@@ -3,24 +3,24 @@
     "short_name": "Tehisabiline",
     "description": "AI-chatbotid, töövoo automatiseerimine, hinnajälgijad ja veebilehed Eesti ettevõtetele.",
     "lang": "et",
-    "start_url": "/tehisabiline/",
-    "scope": "/tehisabiline/",
+    "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#fcfdfe",
     "theme_color": "#00658d",
     "icons": [
         {
-            "src": "/tehisabiline/assets/brand/favicon-16.png",
+            "src": "/assets/brand/favicon-16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "/tehisabiline/assets/brand/favicon-32.png",
+            "src": "/assets/brand/favicon-32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/tehisabiline/assets/brand/favicon-64.png",
+            "src": "/assets/brand/favicon-64.png",
             "sizes": "64x64",
             "type": "image/png"
         }

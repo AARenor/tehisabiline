@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aarenor.github.io/tehisabiline/sitemap.xml
+Sitemap: https://tehisabiline.ee/sitemap.xml
