@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <style>
+        * { box-sizing: border-box; }
+        html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+        body {
+            position: relative;
+            display: grid;
+            align-items: center;
+            padding: 74px 86px;
+            color: #001e2d;
+            background:
+                radial-gradient(circle at 14% 20%, rgba(0,174,239,.34), transparent 32%),
+                radial-gradient(circle at 86% 80%, rgba(43,105,88,.2), transparent 34%),
+                linear-gradient(145deg, #eef9fd 0%, #fbfdfe 55%, #e9f4f2 100%);
+            font-family: Inter, Arial, sans-serif;
+        }
+        body::before {
+            position: absolute;
+            inset: 0;
+            content: "";
+            opacity: .65;
+            background-image: linear-gradient(rgba(0,30,45,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,30,45,.04) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(to bottom, #000, transparent 90%);
+        }
+        main { position: relative; z-index: 1; max-width: 980px; }
+        .brand { display: flex; align-items: center; gap: 18px; margin-bottom: 62px; font-size: 25px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+        .brand img { width: 58px; height: 58px; object-fit: contain; }
+        h1 { max-width: 900px; margin: 0; font-family: Georgia, serif; font-size: 88px; line-height: .98; letter-spacing: -.045em; }
+        h1 em { color: #00658d; }
+        p { max-width: 870px; margin: 35px 0 0; color: #3f5665; font-size: 26px; line-height: 1.35; }
+        .url { position: absolute; right: 86px; bottom: 62px; color: #00658d; font-size: 20px; font-weight: 800; letter-spacing: .08em; }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="brand"><img src="../assets/brand/favicon.png" alt="">Tehisabiline</div>
+        <h1>Praktilised AI-lahendused <em>Eesti ettevõtetele</em></h1>
+        <p>AI automatiseerimine · eestikeelsed chatbotid · konkurentide hinnajälgimine</p>
+    </main>
+    <div class="url">tehisabiline.ee</div>
+</body>
+</html>

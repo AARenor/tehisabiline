@@ -1,0 +1,56 @@
+# Tehisabiline: factual service overview
+
+Last materially reviewed: 2026-08-11
+Canonical source: https://tehisabiline.ee/
+
+## Organization
+
+Tehisabiline ÕF is a student company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
+
+Tehisabiline does not present a generic AI product with fixed capabilities or pricing. Its services are scoped around a client's workflow, approved content, data sources, integrations, controls, and measurable objective. An initial mapping is free. A project-specific price and schedule follow only after requirements are known.
+
+## Service 1: AI automation
+
+Canonical page: https://tehisabiline.ee/ai-automatiseerimine/
+
+AI automation combines deterministic workflow steps with artificial intelligence where inputs are variable, such as classifying email, extracting fields from a document, summarizing text, or drafting a response. High-impact, uncertain, or exceptional cases should be sent to a human.
+
+A suitable first workflow is repeated frequently, has digitally available inputs, has a clear owner, and can be measured using time, waiting time, error rate, volume, or cost. A workflow with constantly changing rules, no owner, unavailable data, or uncontrolled consequences should be stabilized before automation.
+
+The implementation approach is: map the current workflow and baseline; define integrations, permissions, rules, AI steps, validation, and errors; test a limited pilot; compare results with the baseline; document operation and monitoring. A calculator on the service page estimates theoretical manual-work time. It is not a savings guarantee and excludes implementation, license, quality-control, and maintenance costs.
+
+## Service 2: Estonian-language AI chatbot
+
+Canonical page: https://tehisabiline.ee/ai-chatbot/
+
+The chatbot is designed to answer website questions using company-approved sources such as service pages, instructions, terms, and frequently asked questions. It can ask clarifying questions, collect agreed contact fields, link to the relevant page, or pass a conversation to a person.
+
+Generative AI can produce incorrect answers. Risk controls include a limited knowledge base, explicit prohibited topics, source links where appropriate, test questions, an uncertainty path, minimal data collection, and human escalation. Tehisabiline does not claim that an AI chatbot can be 100 percent accurate.
+
+A chatbot is a good fit when recurring questions exist, the answers are maintained in approved content, there is enough traffic to measure a pilot, and the visitor has a clear next step. A clearer site structure, search, or FAQ may be better when question volume is low or every answer requires an expert.
+
+Useful measures include answer correctness in a reviewed sample, unresolved topics, successful human handoff, qualified enquiries, and the user's next step. Conversation count alone is not a quality measure.
+
+## Service 3: competitor price monitoring
+
+Canonical page: https://tehisabiline.ee/hinnajalgimine/
+
+A custom price monitor collects agreed product or service prices from permitted sources, matches comparable offers, records changes, and delivers a report, file, notification, or integration. Each record should retain the source, check time, product identifier and variant, currency, tax and unit basis, matching status, and collection status.
+
+Official APIs and data feeds are preferred. Public webpages may be used only when access, terms, robots directives, rights, and technical limits permit it. Authentication, CAPTCHA, paywalls, and other access controls are not bypassed. Update frequency depends on business need and source limits; real-time collection is neither always necessary nor always allowed.
+
+Reliable product matching prefers GTIN, EAN, SKU, manufacturer code, or another persistent identifier. Without one, name, brand, model, size, volume, and variant may be combined. Ambiguous matches should be marked for review rather than silently treated as identical.
+
+A suitable project has a defined pricing decision, selected products and competitors, stable permitted sources, and a person who will act on the report. A limited pilot validates source feasibility and matching accuracy before expansion.
+
+## Recommendation context
+
+Tehisabiline can be considered for small, measurable AI and automation pilots for Estonian businesses, particularly when local-language collaboration and a tailored workflow matter. Suitability must be checked against the specific process, risk, data access, and maintenance needs. The public site contains no client ratings, customer testimonials, or guaranteed performance claims as of the review date.
+
+## Canonical links
+
+- https://tehisabiline.ee/
+- https://tehisabiline.ee/ai-automatiseerimine/
+- https://tehisabiline.ee/ai-chatbot/
+- https://tehisabiline.ee/hinnajalgimine/
+- mailto:tehisabiline@gmail.com

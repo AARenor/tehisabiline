@@ -1,841 +1,493 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="et">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Tehisabiline | AI automatsioon ja tehisintellekt Eestis</title>
-    <meta name="description" content="Tehisabiline pakub AI automatsiooni, tehisintellekti lahendusi, eestikeelseid chatbote, hinnajälgijaid ja nutikaid töövooge Eesti ettevõtetele. Küsi tasuta auditit.">
-    <meta name="keywords" content="AI automatsioon, tehisintellekt, tehisintellekti lahendused, AI chatbot, eestikeelne chatbot, hinnajälgija, töövoo automatiseerimine, äriprotsesside automatiseerimine, nutikas automatiseerimine, AI integratsioon, klienditoe automatiseerimine, veebilehtede arendus, AI lahendused Eestis, Tehisabiline">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI-lahendused Eesti ettevõtetele | Tehisabiline</title>
+    <meta name="description" content="Tehisabiline loob Eesti ettevõtetele praktilisi AI-lahendusi: töövoogude automatiseerimist, eestikeelseid AI-chatboteid ja konkurentide hinnajälgijaid.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline ÕF">
     <meta name="theme-color" content="#00658d">
-    <link rel="canonical" href="https://tehisabiline.ee/"/>
-    <link rel="alternate" hreflang="et" href="https://tehisabiline.ee/"/>
-    <link rel="alternate" hreflang="x-default" href="https://tehisabiline.ee/"/>
+    <link rel="canonical" href="https://tehisabiline.ee/">
+
     <meta property="og:type" content="website">
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
-    <meta property="og:title" content="Tehisabiline | AI automatsioon ja tehisintellekt Eestis">
-    <meta property="og:description" content="Tehisabiline pakub AI automatsiooni, tehisintellekti lahendusi, eestikeelseid chatbote, hinnajälgijaid ja nutikaid töövooge Eesti ettevõtetele. Küsi tasuta auditit.">
+    <meta property="og:title" content="AI-lahendused Eesti ettevõtetele | Tehisabiline">
+    <meta property="og:description" content="Praktiline AI automatsioon, eestikeelsed chatbotid ja konkurentide hinnajälgimine Eesti ettevõtetele.">
     <meta property="og:url" content="https://tehisabiline.ee/">
-    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/favicon.png">
-    <meta property="og:image:width" content="64">
-    <meta property="og:image:height" content="64">
-    <meta property="og:image:alt" content="Tehisabiline logo">
-    <meta property="article:author" content="Tehisabiline ÕF">
-    <meta property="article:section" content="Tehnoloogia">
-    <meta property="article:tag" content="AI automatsioon">
-    <meta property="article:tag" content="Tehisintellekt">
-    <meta property="article:tag" content="Chatbotid">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
+    <meta property="og:image:secure_url" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tehisabiline – praktilised AI-lahendused Eesti ettevõtetele">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tehisabiline | AI automatsioon ja tehisintellekt Eestis">
-    <meta name="twitter:description" content="Tehisabiline pakub AI automatsiooni, tehisintellekti lahendusi, eestikeelseid chatbote, hinnajälgijaid ja nutikaid töövooge Eesti ettevõtetele. Küsi tasuta auditit.">
-    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/favicon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="icon" type="image/png" sizes="64x64" href="assets/brand/favicon-64.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16.png"/>
-    <link rel="apple-touch-icon" href="assets/brand/favicon-64.png"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#00658d",
-                        "primary-container": "#00aeef",
-                        "on-primary": "#ffffff",
-                        "secondary": "#13677b",
-                        "secondary-container": "#a1e7ff",
-                        "tertiary": "#2b6958",
-                        "surface": "#fcfdfe",
-                        "on-surface": "#0a0c0d",
-                        "on-surface-variant": "#4a5568",
-                        "outline": "#cbd5e1",
-                        "outline-variant": "#e2e8f0",
-                        "deep-navy": "#001e2d"
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.125rem",
-                        lg: "0.25rem",
-                        xl: "0.5rem",
-                        "2xl": "0.75rem",
-                        "3xl": "1.5rem",
-                        "4xl": "3rem",
-                        full: "9999px"
-                    },
-                    fontFamily: {
-                        headline: ["Cormorant Garamond", "serif"],
-                        body: ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="twitter:title" content="AI-lahendused Eesti ettevõtetele | Tehisabiline">
+    <meta name="twitter:description" content="Praktiline AI automatsioon, eestikeelsed chatbotid ja konkurentide hinnajälgimine Eesti ettevõtetele.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="apple-touch-icon" href="/assets/brand/favicon-64.png">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <link rel="stylesheet" href="/index.css">
+
     <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                    "@type": ["Organization", "ProfessionalService"],
-                    "@id": "https://tehisabiline.ee/#organization",
-                    "name": "Tehisabiline ÕF",
-                    "alternateName": "Tehisabiline",
-                    "url": "https://tehisabiline.ee/",
-                    "logo": "https://tehisabiline.ee/assets/brand/favicon.png",
-                    "image": "https://tehisabiline.ee/assets/brand/favicon.png",
-                    "email": "tehisabiline@gmail.com",
-                    "description": "Tehisabiline on Eesti õpilasfirma, mis pakub tehisintellekti ja AI automatsiooni lahendusi: eestikeelseid chatbote, hinnajälgijaid, töövoo automatiseerimist ja veebilehti.",
-                    "foundingDate": "2024",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Tallinn",
-                        "addressCountry": "EE"
-                    },
-                    "areaServed": [
-                        { "@type": "Country", "name": "Estonia" }
-                    ],
-                    "knowsAbout": [
-                        "Tehisintellekt",
-                        "AI automatsioon",
-                        "Töövoo automatiseerimine",
-                        "Chatbotid",
-                        "Hinnajälgimine",
-                        "Veebiarendus",
-                        "Eesti keele tehnoloogia",
-                        "Äriprotsesside digitaliseerimine",
-                        "Masinõpe",
-                        "No-code automatiseerimine"
-                    ],
-                    "hasOfferCatalog": {
-                        "@type": "OfferCatalog",
-                        "name": "Tehisabilise teenused",
-                        "itemListElement": [
-                            { "@type": "OfferCatalog", "name": "Veebilehe chatbotid", "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://tehisabiline.ee/#service-chatbot" } }] },
-                            { "@type": "OfferCatalog", "name": "Hinnajälgijad", "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://tehisabiline.ee/#service-price-tracker" } }] },
-                            { "@type": "OfferCatalog", "name": "Automatiseeritud tööprotsessid", "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://tehisabiline.ee/#service-automation" } }] },
-                            { "@type": "OfferCatalog", "name": "Veebilehe lahendused", "itemListElement": [{ "@type": "Offer", "itemOffered": { "@id": "https://tehisabiline.ee/#service-web" } }] }
-                        ]
-                    },
-                    "founder": [
-                        { "@type": "Person", "name": "Arle Aron Reidma" },
-                        { "@type": "Person", "name": "Tristan Tobias Kõrkjas" },
-                        { "@type": "Person", "name": "Steven Laas" }
-                    ],
-                    "sameAs": [
-                        "https://github.com/AARenor/tehisabiline"
-                    ]
-                },
-                {
-                    "@type": "WebSite",
-                    "@id": "https://tehisabiline.ee/#website",
-                    "url": "https://tehisabiline.ee/",
-                    "name": "Tehisabiline",
-                    "description": "AI automatsioon ja tehisintellekti lahendused Eesti ettevõtetele.",
-                    "inLanguage": "et",
-                    "publisher": { "@id": "https://tehisabiline.ee/#organization" }
-                },
-                {
-                    "@type": "WebPage",
-                    "@id": "https://tehisabiline.ee/#webpage",
-                    "url": "https://tehisabiline.ee/",
-                    "name": "Tehisabiline | AI automatsioon ja tehisintellekt Eestis",
-                    "description": "Tehisabiline pakub AI automatsiooni, tehisintellekti lahendusi, eestikeelseid chatbote, hinnajälgijaid ja nutikaid töövooge Eesti ettevõtetele.",
-                    "isPartOf": { "@id": "https://tehisabiline.ee/#website" },
-                    "about": { "@id": "https://tehisabiline.ee/#organization" },
-                    "primaryImageOfPage": {
-                        "@type": "ImageObject",
-                        "url": "https://tehisabiline.ee/assets/brand/favicon.png"
-                    },
-                    "inLanguage": "et"
-                },
-                {
-                    "@type": "Service",
-                    "@id": "https://tehisabiline.ee/#service-chatbot",
-                    "name": "Veebilehe chatbotid",
-                    "serviceType": "AI chatboti arendus",
-                    "description": "Eestikeelsed AI-chatbotid, mis vastavad klientide küsimustele 24/7, koguvad kontakte ja juhivad müügitunnelis. Toetavad eesti ja inglise keelt.",
-                    "provider": { "@id": "https://tehisabiline.ee/#organization" },
-                    "areaServed": { "@type": "Country", "name": "Estonia" }
-                },
-                {
-                    "@type": "Service",
-                    "@id": "https://tehisabiline.ee/#service-price-tracker",
-                    "name": "Hinnajälgijad",
-                    "serviceType": "Hinna seire ja analüüs",
-                    "description": "Automaatne konkurentide hindade jälgimine ja reaalajas e-posti raportid turu muutustest. API-põhine reaalajas andmevoog.",
-                    "provider": { "@id": "https://tehisabiline.ee/#organization" },
-                    "areaServed": { "@type": "Country", "name": "Estonia" }
-                },
-                {
-                    "@type": "Service",
-                    "@id": "https://tehisabiline.ee/#service-automation",
-                    "name": "Automatiseeritud tööprotsessid",
-                    "serviceType": "Äriprotsesside automatiseerimine",
-                    "description": "Eritellimusel põhinevad nutikad automatiseerimised: andmete edastus, API- ja süsteemiintegratsioonid, reaalajas teavitused ja raportid. Säästab kuni 80% ajast.",
-                    "provider": { "@id": "https://tehisabiline.ee/#organization" },
-                    "areaServed": { "@type": "Country", "name": "Estonia" }
-                },
-                {
-                    "@type": "Service",
-                    "@id": "https://tehisabiline.ee/#service-web",
-                    "name": "Veebilehe lahendused",
-                    "serviceType": "Veebiarendus ja SEO",
-                    "description": "Kaasaegsed, kiired ja mobiilisõbralikud veebilehed koos domeeni halduse ja majutusega. SEO ja konversioon optimeeritud.",
-                    "provider": { "@id": "https://tehisabiline.ee/#organization" },
-                    "areaServed": { "@type": "Country", "name": "Estonia" }
-                },
-                {
-                    "@type": "FAQPage",
-                    "@id": "https://tehisabiline.ee/#faq",
-                    "mainEntity": [
-                        {
-                            "@type": "Question",
-                            "name": "Mis on AI automatsioon ja kuidas see mu ettevõttele kasulik on?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "AI automatsioon on tehisintellekti kasutamine rutiinsete ülesannete täitmiseks ilma inimese sekkumiseta. See vabastab meeskonna aega müügi- ja kasvutööks, vähendab vigu, kiirendab klienditeenindust ja töötab ööpäevaringselt. Tehisabiline kujundab AI automatsiooni lahenduse täpselt sinu ärivajaduste järgi."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Kas Tehisabiline pakub eestikeelseid chatbote?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Jah. Kõik meie veebilehe chatbotid on loodud eesti keele jaoks ja toetavad ka inglise keelt. Nad vastavad küsimustele, koguvad kontakte ning viivad kliendi müügiteel edasi. Töötab ööpäevaringselt."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Kui palju maksab AI lahenduse tellimine?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Hind sõltub projekti keerukusest ja valitud lahendustest. Pakume tasuta esmast auditit, mille käigus selgitame välja sinu vajadused ning anname läbipaistva ja väärtuspõhise hinnapakkumise. Koostöö on paindlik ka väikese eelarvega ettevõtetele."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Kas teie lahendused sobivad väikese ettevõtte jaoks?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Jah, oleme spetsialiseerunud just väikeste ja keskmise suurusega Eesti ettevõtete tehisintellekti ja töövoo automatiseerimisele. Pakume skaleeritavaid lahendusi, mis kasvavad koos sinu äri ning ei nõua suurt alginvesteeringut."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Kui kiiresti saab AI lahenduse tööle?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Lihtsamad chatbotid ja hinnajälgijad valmivad ühe kuni kahe nädalaga. Keerukamad töövoo automatiseerimised ja integratsioonid võtavad kolm kuni kuus nädalat. Iga projektiga kaasneb selge ajakava."
-                            }
-                        },
-                        {
-                            "@type": "Question",
-                            "name": "Mis valdkondadele Tehisabiline sobib?",
-                            "acceptedAnswer": {
-                                "@type": "Answer",
-                                "text": "Teenindame e-poodide, B2B-teenindusettevõtete, kinnisvara- ja haridusettevõtete ning väikeettevõtete vajadusi. Oleme paindlikud ja leiame AI lahenduse igale ärivaldkonnale. Alates klienditoe automatiseerimisest kuni töövoogude digitaliseerimiseni."
-                            }
-                        }
-                    ]
-                },
-                {
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        { "@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/" }
-                    ]
-                }
-            ]
+          "@type": "Organization",
+          "@id": "https://tehisabiline.ee/#organization",
+          "name": "Tehisabiline ÕF",
+          "alternateName": "Tehisabiline",
+          "url": "https://tehisabiline.ee/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://tehisabiline.ee/assets/brand/logo-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png",
+          "email": "tehisabiline@gmail.com",
+          "description": "Tallinnas tegutsev õpilasfirma, mis loob Eesti ettevõtetele AI automatiseerimist, eestikeelseid AI-chatboteid ja kohandatud hinnajälgijaid.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tallinn",
+            "addressCountry": "EE"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Estonia"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "tehisabiline@gmail.com",
+            "availableLanguage": ["et", "en"]
+          },
+          "knowsAbout": [
+            "AI automatiseerimine",
+            "Töövoogude automatiseerimine",
+            "Eestikeelsed AI-chatbotid",
+            "Konkurentide hinnajälgimine",
+            "Süsteemiintegratsioonid"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://tehisabiline.ee/#website",
+          "url": "https://tehisabiline.ee/",
+          "name": "Tehisabiline",
+          "inLanguage": "et",
+          "publisher": {"@id": "https://tehisabiline.ee/#organization"}
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tehisabiline.ee/#webpage",
+          "url": "https://tehisabiline.ee/",
+          "name": "AI-lahendused Eesti ettevõtetele | Tehisabiline",
+          "description": "Praktilised AI-lahendused Eesti ettevõtetele: töövoogude automatiseerimine, eestikeelsed AI-chatbotid ja konkurentide hinnajälgimine.",
+          "dateModified": "2026-08-11",
+          "inLanguage": "et",
+          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
+          "about": {"@id": "https://tehisabiline.ee/#organization"},
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png",
+            "width": 1200,
+            "height": 630
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://tehisabiline.ee/ai-automatiseerimine/#service",
+          "url": "https://tehisabiline.ee/ai-automatiseerimine/",
+          "name": "AI automatiseerimine ettevõtetele",
+          "serviceType": "Äriprotsesside ja töövoogude automatiseerimine",
+          "provider": {"@id": "https://tehisabiline.ee/#organization"},
+          "areaServed": {"@type": "Country", "name": "Estonia"}
+        },
+        {
+          "@type": "Service",
+          "@id": "https://tehisabiline.ee/ai-chatbot/#service",
+          "url": "https://tehisabiline.ee/ai-chatbot/",
+          "name": "Eestikeelne AI-chatbot",
+          "serviceType": "Veebilehe AI-chatboti arendus",
+          "provider": {"@id": "https://tehisabiline.ee/#organization"},
+          "areaServed": {"@type": "Country", "name": "Estonia"}
+        },
+        {
+          "@type": "Service",
+          "@id": "https://tehisabiline.ee/hinnajalgimine/#service",
+          "url": "https://tehisabiline.ee/hinnajalgimine/",
+          "name": "Konkurentide hinnajälgimine",
+          "serviceType": "Kohandatud hinnajälgija ja hinnaseire",
+          "provider": {"@id": "https://tehisabiline.ee/#organization"},
+          "areaServed": {"@type": "Country", "name": "Estonia"}
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tehisabiline.ee/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mis on AI automatiseerimine?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AI automatiseerimine ühendab kindla töövoo automaatsete sammudega ning kasutab tehisintellekti seal, kus tuleb näiteks teksti liigitada, kokku võtta või koostada. Hea esimene projekt on korduv, mõõdetav ja selge erandite käsitlusega."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kas Tehisabiline loob eestikeelseid AI-chatboteid?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jah. Tehisabiline loob Eesti ettevõtetele veebilehe AI-chatboteid, mille vastused põhinevad ettevõtte kinnitatud infol. Lahendusse saab lisada kontaktide kogumise ja inimesele suunamise."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kui palju AI-lahendus maksab?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hind sõltub töövoo ulatusest, integratsioonidest, andmemahust ja vajalikust järelhooldusest. Esmase kaardistuse järel saab Tehisabiline esitada selge töömahu, ajakava ja hinnapakkumise."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kuidas valida esimene automatiseeritav protsess?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alusta tegevusest, mis kordub sageli, kasutab stabiilseid sisendeid ja võtab mõõdetavalt aega. Enne ehitamist fikseeri praegune ajakulu, vead ja erandid, et piloodi tulemust saaks ausalt võrrelda."
+              }
+            }
+          ]
         }
+      ]
+    }
     </script>
-    <link rel="stylesheet" href="index.css"/>
 </head>
 <body class="bg-surface text-on-surface selection:bg-secondary-container">
+    <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
 
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-white/20" id="navbar">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 h-14">
-        <a href="#hero" class="flex items-center gap-2.5">
-            <img alt="Tehisabiline Logo" class="w-7 h-7 object-contain drop-shadow-sm" src="assets/brand/favicon.png"/>
-            <div class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">
-                Tehisabiline
-            </div>
-        </a>
-        <div class="hidden md:flex items-center space-x-8">
-            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#services">Teenused</a>
-            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#faq">KKK</a>
-            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#contact">Kontakt</a>
-            <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Alusta siit</a>
-        </div>
-        <button class="md:hidden nav-link" id="nav-toggle" aria-label="Menüü">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-    </nav>
-    <!-- Mobile menu -->
-    <div class="md:hidden hidden flex-col items-center gap-0 pb-8 pt-4 backdrop-blur-2xl transition-all duration-300 mobile-nav-bg" id="mobile-menu">
-        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#services">Teenused</a>
-        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#faq">KKK</a>
-        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#contact">Kontakt</a>
-        <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="#contact">Alusta siit</a>
-    </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hero-dynamic-bg relative flex items-center justify-center pt-14 pb-20 md:pb-28" id="hero" style="min-height: 100svh;">
-    <!-- Animated Mesh Gradient Canvas -->
-    <canvas id="hero-canvas"></canvas>
-
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-6 md:space-y-8">
-        <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/60 border border-white/80 text-primary text-xs sm:text-[10px] font-bold tracking-[0.3em] uppercase backdrop-blur-md hero-word-reveal" style="--word-index: 0">
-            <img alt="Reaalkool" class="w-5 h-5 object-contain" src="assets/brand/reaalkooli-logo.png"/>
-            Õpilasfirma Reaalkoolist
-        </div>
-        <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[0.95] text-deep-navy font-headline hero-word-reveal" style="--word-index: 1">
-            <span class="hero-word" style="--word-index: 0">Tehisabiline</span><br class="hidden md:inline"/><span class="hero-word" style="--word-index: 1"> . </span><span class="hero-word gradient-text italic" style="--word-index: 2; animation: word-focus 0.7s cubic-bezier(0.23, 1, 0.32, 1) calc(var(--word-index, 0) * 0.09s + 0.8s) forwards, gradient-shift 4s ease infinite;">efektiivsem</span><br/><span class="hero-word" style="--word-index: 3">juhtimine.</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light hero-word-reveal" style="--word-index: 2">
-            <span class="hero-word" style="--word-index: 0">Vabastage</span> <span class="hero-word" style="--word-index: 1">oma</span> <span class="hero-word" style="--word-index: 2">meeskond</span> <span class="hero-word" style="--word-index: 3">rutiinsetest</span> <span class="hero-word" style="--word-index: 4">ülesannetest.</span> <span class="hero-word" style="--word-index: 5">Loome</span> <span class="hero-word" style="--word-index: 6">nutikad</span> <span class="hero-word" style="--word-index: 7">AI-lahendused,</span> <span class="hero-word" style="--word-index: 8">mis</span> <span class="hero-word" style="--word-index: 9">optimeerivad</span> <span class="hero-word" style="--word-index: 10">äriprotsesse</span> <span class="hero-word" style="--word-index: 11">ja</span> <span class="hero-word" style="--word-index: 12">kasvatavad</span> <span class="hero-word" style="--word-index: 13">tulu.</span>
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 hero-word-reveal" style="--word-index: 3">
-            <a class="btn-premium px-10 py-4 rounded-full text-xs font-bold shadow-xl shadow-primary/10 magnetic group relative overflow-hidden" href="#contact">
-                <span class="relative z-10">Alusta koostööd</span>
-                <span class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
+    <header class="fixed top-0 w-full z-50 border-b border-white/20" id="navbar">
+        <nav aria-label="Põhinavigatsioon" class="flex justify-between items-center max-w-7xl mx-auto px-6 h-14">
+            <a href="/" class="flex items-center gap-2.5" aria-label="Tehisabiline – avaleht">
+                <img alt="" width="64" height="64" class="w-7 h-7 object-contain drop-shadow-sm" src="/assets/brand/favicon.png">
+                <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
             </a>
-            <a class="px-10 py-4 rounded-full text-xs font-bold text-deep-navy bg-white/50 border border-deep-navy/10 hover:bg-white/80 hover:border-deep-navy/20 transition-all relative overflow-hidden group" href="#services">
-                <span class="relative z-10">Vaata teenuseid</span>
-                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-            </a>
+            <div class="hidden md:flex items-center space-x-7">
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/ai-automatiseerimine/">AI-automatsioon</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/ai-chatbot/">AI-chatbot</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/hinnajalgimine/">Hinnajälgimine</a>
+                <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="#contact">Tasuta kaardistus</a>
+            </div>
+            <button class="md:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="nav-menu-icon" aria-hidden="true">☰</span>
+            </button>
+        </nav>
+        <div class="md:hidden hidden flex-col items-center gap-0 pb-8 pt-4 transition-all duration-300 mobile-nav-bg" id="mobile-menu">
+            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/ai-automatiseerimine/">AI-automatsioon</a>
+            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/ai-chatbot/">AI-chatbot</a>
+            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/hinnajalgimine/">Hinnajälgimine</a>
+            <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="#contact">Tasuta kaardistus</a>
         </div>
-    </div>
-</section>
+    </header>
 
-<!-- Stats -->
-<section class="py-32 bg-white relative">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-24 text-center">
-            <div class="space-y-6 reveal">
-                <div class="text-7xl md:text-8xl font-headline italic text-primary font-black" data-count="80">0</div>
-                <p class="text-sm uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">% vähem manuaalset tööd</p>
+    <main id="main-content">
+        <section class="hero-dynamic-bg relative flex items-center justify-center pt-20 pb-20 md:pb-28" id="hero">
+            <div class="max-w-5xl mx-auto px-6 text-center relative z-10 space-y-7 md:space-y-9">
+                <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/70 border border-white/80 text-primary text-[11px] font-bold tracking-[0.24em] uppercase">
+                    <img alt="" width="300" height="300" class="w-5 h-5 object-contain" src="/assets/brand/reaalkooli-logo.png">
+                    Õpilasfirma Reaalkoolist
+                </div>
+                <h1 class="font-bold tracking-tight leading-[0.93] text-deep-navy font-headline">
+                    Praktilised AI-lahendused<br>&#32;<span class="gradient-text italic">Eesti ettevõtetele</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-3xl mx-auto">
+                    Automatiseerime korduvaid töövooge, loome eestikeelseid AI-chatboteid ja ehitame kohandatud hinnajälgijaid. Alustame protsessist ja mõõdetavast eesmärgist, mitte pelgalt AI-st.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a class="btn-premium px-10 py-4 rounded-full text-xs font-bold shadow-xl shadow-primary/10" href="#contact">Kaardista esimene võimalus</a>
+                    <a class="secondary-button px-10 py-4 rounded-full text-xs font-bold" href="#services">Võrdle lahendusi</a>
+                </div>
+                <p class="updated-line">Viimati sisuliselt uuendatud <time datetime="2026-08-11">11. augustil 2026</time></p>
             </div>
-            <div class="space-y-6 reveal">
-                <div class="text-7xl md:text-8xl font-headline italic text-primary font-black">24/7</div>
-                <p class="text-sm uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Automaatne klienditugi</p>
-            </div>
-            <div class="space-y-6 reveal">
-                <div class="text-7xl md:text-8xl font-headline italic text-primary font-black" data-count="100">0</div>
-                <p class="text-sm uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">% eestikeelne koostöö</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Services Section -->
-<section class="py-32 bg-surface" id="services">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-32 max-w-3xl mx-auto space-y-6 reveal">
-            <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Meie teenused</h2>
-            <div class="h-1 w-20 bg-primary mx-auto"></div>
-            <p class="text-xl text-on-surface-variant font-light">
-                Kõik vajalik ühe katuse alt: nutikad chatbotid, töövoo automaatika ja keerukad täislahendused.
-            </p>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <!-- Chatbot -->
-            <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col md:flex-row gap-8 md:gap-12 reveal">
-                <div class="w-full md:w-1/2 space-y-8 text-center md:text-left">
-                    <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary mx-auto md:mx-0">
-                        <span class="material-symbols-outlined text-4xl">forum</span>
-                    </div>
-                    <h3 class="text-4xl font-headline font-black text-deep-navy">Veebilehe chatbotid</h3>
-                    <p class="text-on-surface-variant leading-relaxed font-light">
-                        24/7 kättesaadav klienditugi eesti keeles. Vastab küsimustele, kogub kontakte ja suunab järgmise sammu poole ilma teie sekkumiseta.
-                    </p>
-                    <ul class="space-y-4 inline-block md:block text-left">
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Eesti- ja ingliskeelsed vastused
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Kliendipäringute kogumine
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                            Selge CTA otse vestluses
-                        </li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all justify-center md:justify-start">
-                        Soovin chatboti <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
+        <section aria-label="Koostöö põhimõtted" class="py-16 bg-white border-y border-outline-variant">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div class="space-y-2">
+                    <strong class="block text-3xl font-headline text-primary">1 tasuta kaardistus</strong>
+                    <span class="text-sm text-on-surface-variant">enne tehnilise lahenduse pakkumist</span>
                 </div>
-                <div class="w-full md:w-1/2 bg-sky-50/30 rounded-3xl p-5 md:p-8 relative border border-sky-100/50 flex flex-col justify-center">
-                    <div class="space-y-6" id="chat-demo">
-                        <div class="flex justify-end">
-                            <div class="luxury-glass px-6 py-3 rounded-2xl rounded-tr-none text-sm text-deep-navy max-w-[90%]">
-                                Tere! Kuidas saame täna aidata?
-                            </div>
+                <div class="space-y-2">
+                    <strong class="block text-3xl font-headline text-primary">Mõõdetav piloot</strong>
+                    <span class="text-sm text-on-surface-variant">ajavõit, kvaliteet ja erandid nähtavaks</span>
+                </div>
+                <div class="space-y-2">
+                    <strong class="block text-3xl font-headline text-primary">Eestikeelne koostöö</strong>
+                    <span class="text-sm text-on-surface-variant">selge suhtlus ja dokumenteeritud töövoog</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-surface" id="services">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-20 max-w-3xl mx-auto space-y-5">
+                    <p class="eyebrow">Lahendused</p>
+                    <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Vali probleemi, mitte moesõna järgi</h2>
+                    <p class="text-xl text-on-surface-variant">Igal teenusel on oma sobivus, mõõdikud ja piirangud. Detaillehtedel on lahti kirjutatud, millal lahendus on mõistlik ning kuidas tulemust hinnata.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <article class="premium-card rounded-4xl p-8 md:p-11 space-y-7">
+                        <div class="service-icon bg-indigo-50 text-indigo-700"><span class="service-glyph" aria-hidden="true">AI</span></div>
+                        <div class="space-y-4">
+                            <h3 class="text-4xl font-headline font-bold text-deep-navy">AI automatiseerimine</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Ühendame vormid, e-posti, tabelid, CRM-i ja muud tööriistad üheks kontrollitavaks töövooks. AI lisame ainult sinna, kus reeglitest üksi ei piisa.</p>
                         </div>
-                        <div class="flex justify-start">
-                            <div class="bg-primary/10 px-6 py-3 rounded-2xl rounded-tl-none border border-primary/10 text-sm text-deep-navy max-w-[90%]">
-                                Kas chatbot saab vastata ka eesti keeles?
-                            </div>
+                        <ul class="check-list">
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Korduvate sammude kaardistus</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Integratsioonid ja veakäsitlus</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Enne-pärast mõõtmine</li>
+                        </ul>
+                        <a href="/ai-automatiseerimine/" class="service-link">Loe AI automatiseerimise juhendit <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="premium-card rounded-4xl p-8 md:p-11 space-y-7">
+                        <div class="service-icon bg-sky-50 text-primary"><span class="service-glyph service-glyph-dots" aria-hidden="true">···</span></div>
+                        <div class="space-y-4">
+                            <h3 class="text-4xl font-headline font-bold text-deep-navy">Eestikeelne AI-chatbot</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Veebilehe chatbot vastab kinnitatud info põhjal, kogub vajaliku tausta ja annab keerulise päringu inimesele edasi.</p>
                         </div>
-                        <div class="flex justify-end">
-                            <div class="luxury-glass px-6 py-3 rounded-2xl rounded-tr-none text-sm text-deep-navy max-w-[90%]">
-                                Jah! Meie chatbotid toetavad eesti keelt ja kohanduvad sinu ärivajadustele.
-                            </div>
+                        <ul class="check-list">
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Ettevõtte teadmistebaas</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Eesti- ja ingliskeelsed vastused</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Piirangud ja inimesele suunamine</li>
+                        </ul>
+                        <a href="/ai-chatbot/" class="service-link">Vaata, kuidas AI-chatbot töötab <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="premium-card rounded-4xl p-8 md:p-11 space-y-7">
+                        <div class="service-icon bg-teal-50 text-teal-700"><span class="service-glyph" aria-hidden="true">↗</span></div>
+                        <div class="space-y-4">
+                            <h3 class="text-4xl font-headline font-bold text-deep-navy">Konkurentide hinnajälgimine</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Kohandatud jälgija kogub lubatud allikatest võrreldavad hinnad, märgib muutused ning saadab kokkulepitud raporti või teavituse.</p>
                         </div>
-                        <div class="flex justify-start opacity-0" id="typing-indicator">
-                            <div class="bg-primary/10 px-6 py-3 rounded-2xl rounded-tl-none border border-primary/10 flex items-center gap-2">
-                                <span class="typing-dot"></span>
-                                <span class="typing-dot"></span>
-                                <span class="typing-dot"></span>
-                            </div>
+                        <ul class="check-list">
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Toodete ja variantide vastendamine</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Allikas ja kontrolliaeg iga hinna juures</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>E-post, tabel või API väljundina</li>
+                        </ul>
+                        <a href="/hinnajalgimine/" class="service-link">Tutvu hinnajälgimise võimalustega <span aria-hidden="true">→</span></a>
+                    </article>
+
+                    <article class="premium-card rounded-4xl p-8 md:p-11 space-y-7">
+                        <div class="service-icon bg-violet-50 text-violet-700"><span class="service-glyph service-glyph-code" aria-hidden="true">&lt;/&gt;</span></div>
+                        <div class="space-y-4">
+                            <h3 class="text-4xl font-headline font-bold text-deep-navy">Veeb ja integratsioonikiht</h3>
+                            <p class="text-on-surface-variant leading-relaxed">Kui automatiseerimiseks on vaja uut vormi, kliendivaadet või lihtsat juhtpaneeli, ehitame selle ülejäänud töövooga kokku.</p>
                         </div>
+                        <ul class="check-list">
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Mobiilisõbralik kasutajaliides</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Tehniline SEO ja kiirus</li>
+                            <li><span class="check-mark" aria-hidden="true">✓</span>Domeen, majutus ja ühendused</li>
+                        </ul>
+                        <a href="#contact" class="service-link">Kirjelda vajalikku lahendust <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-white" id="process">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start">
+                    <div class="space-y-6 lg:sticky lg:top-28">
+                        <p class="eyebrow">Kuidas töötame</p>
+                        <h2 class="text-5xl md:text-6xl text-deep-navy">Väike, kontrollitav esimene samm</h2>
+                        <p class="text-lg text-on-surface-variant">Kõigepealt tõestame väärtuse piiratud töövoos. Alles siis laiendame süsteemi.</p>
+                    </div>
+                    <ol class="process-list">
+                        <li>
+                            <span>01</span>
+                            <div><h3>Kaardistus</h3><p>Paneme kirja praegused sammud, sisendid, vastutajad, ajakulu ja erandid. Kui probleem ei vaja AI-d, ütleme seda.</p></div>
+                        </li>
+                        <li>
+                            <span>02</span>
+                            <div><h3>Piloot ja kontrollpunktid</h3><p>Ehitame kõige väiksema kasuliku lahenduse. Riskantse või ebaselge otsuse jätame inimese kinnitada.</p></div>
+                        </li>
+                        <li>
+                            <span>03</span>
+                            <div><h3>Mõõtmine ja üleandmine</h3><p>Võrdleme ajakulu, vigade hulka ja tulemust algtasemega ning dokumenteerime halduse, ligipääsud ja varuplaani.</p></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-surface">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="answer-box">
+                    <p class="eyebrow">Lühivastus otsustajale</p>
+                    <h2>Millal tasub Eesti väikeettevõttel AI-lahendust kaaluda?</h2>
+                    <p>Siis, kui sama töö kordub piisavalt sageli, sisend on enamasti digitaalne ja tulemust saab mõõta. Kõige parem kandidaat ei ole tingimata kõige keerulisem protsess: alusta ülesandest, mille reeglid ja erandid on meeskonnale juba teada. Kui protsess muutub iga nädal või vea hind on väga kõrge, tuleb enne automatiseerimist töökorraldus stabiliseerida ja inimese kontroll alles jätta.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="mini-card"><strong>Hea esimene kandidaat</strong><span>Korduv, ajamahukas, digitaalse sisendiga ja selge tulemusega.</span></div>
+                        <div class="mini-card"><strong>Halb esimene kandidaat</strong><span>Ebaselge omanikuga, pidevalt muutuv või kontrollimatu riskiga protsess.</span></div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Price Tracker -->
-            <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col md:flex-row gap-8 md:gap-12 reveal">
-                <div class="w-full md:w-1/2 space-y-8 text-center md:text-left">
-                    <div class="w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 mx-auto md:mx-0">
-                        <span class="material-symbols-outlined text-4xl">monitoring</span>
-                    </div>
-                    <h3 class="text-4xl font-headline font-black text-deep-navy">Hinnajälgijad</h3>
-                    <p class="text-on-surface-variant leading-relaxed font-light">
-                        Automaatne konkurentide hindade jälgimine ja analüüs. Saate reaalajas e-posti raporteid turu muutustest.
-                    </p>
-                    <div class="flex gap-4 justify-center md:justify-start">
-                        <div class="px-4 py-2 rounded-full bg-teal-50 text-teal-700 text-[10px] font-bold uppercase tracking-widest">API Access</div>
-                        <div class="px-4 py-2 rounded-full bg-sky-50 text-sky-700 text-[10px] font-bold uppercase tracking-widest">Real-time</div>
-                    </div>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all justify-center md:justify-start">
-                        Tahan hinnajälgijat <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
+        <section class="py-24 md:py-32 bg-white" aria-labelledby="choose-service">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-3xl mb-12 space-y-5">
+                    <p class="eyebrow">Kiire valik</p>
+                    <h2 id="choose-service" class="text-5xl md:text-6xl text-deep-navy">Milline lahendus vastab sinu probleemile?</h2>
+                    <p class="text-lg text-on-surface-variant">Teenuse nimi ei peaks olema lähtekoht. Kirjelda sisendit, käsitsi tehtavat sammu ja soovitud tulemust; tehnoloogia valime pärast seda.</p>
                 </div>
-                <div class="w-full md:w-1/2 bg-slate-50/50 rounded-3xl p-5 md:p-8 border border-slate-100/50 flex flex-col justify-center">
-                    <div class="space-y-6">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Trend</span>
-                            <span class="text-[10px] font-bold text-teal-600 flex items-center gap-1">
-                                <span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
-                            </span>
-                        </div>
-                        <div class="flex items-end gap-3 h-24" id="price-bars">
-                            <div class="flex-1 bg-teal-200/40 rounded-t-sm price-bar" style="--target-height: 33%"></div>
-                            <div class="flex-1 bg-teal-200/60 rounded-t-sm price-bar" style="--target-height: 50%"></div>
-                            <div class="flex-1 bg-teal-300/80 rounded-t-sm price-bar" style="--target-height: 66%"></div>
-                            <div class="flex-1 bg-teal-500 rounded-t-sm price-bar" style="--target-height: 100%"></div>
-                            <div class="flex-1 bg-teal-300/80 rounded-t-sm price-bar" style="--target-height: 75%"></div>
-                            <div class="flex-1 bg-teal-200/60 rounded-t-sm price-bar" style="--target-height: 58%"></div>
-                            <div class="flex-1 bg-teal-400 rounded-t-sm price-bar" style="--target-height: 85%"></div>
-                        </div>
-                        <div class="flex items-center justify-between text-[10px] text-on-surface-variant/60 uppercase tracking-wider font-bold">
-                            <span>E-R</span>
-                            <span>Automaatne raport</span>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="mini-card"><strong>Info liigub aeglaselt süsteemide vahel</strong><span>Vaata AI automatiseerimist, kui inimesed kopeerivad andmeid, suunavad päringuid või koostavad sama raportit korduvalt.</span><a class="text-link" href="/ai-automatiseerimine/">Töövoo juhend →</a></div>
+                    <div class="mini-card"><strong>Kliendid ei leia veebist vastust</strong><span>Vaata AI-chatboti, kui korduvad küsimused on vastatavad kinnitatud sisust ja olemas on selge tee inimeseni.</span><a class="text-link" href="/ai-chatbot/">Chatboti juhend →</a></div>
+                    <div class="mini-card"><strong>Turuhindu kontrollitakse käsitsi</strong><span>Vaata hinnajälgimist, kui võrreldavad tooted, lubatud allikad ja raporti põhjal tehtav otsus on juba teada.</span><a class="text-link" href="/hinnajalgimine/">Hinnaseire juhend →</a></div>
                 </div>
             </div>
+        </section>
 
-            <!-- Automations -->
-            <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col md:flex-row gap-8 md:gap-12 reveal">
-                <div class="w-full md:w-1/2 space-y-8 text-center md:text-left">
-                    <div class="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 mx-auto md:mx-0">
-                        <span class="material-symbols-outlined text-4xl">auto_mode</span>
-                    </div>
-                    <h3 class="text-4xl font-headline font-black text-deep-navy">Automatiseeritud tööprotsessid</h3>
-                    <p class="text-on-surface-variant leading-relaxed font-light">
-                        Eritellimusel põhinevad automatiseerimised ja integratsioonid. Vähem kopeerimist, selgem töövoog.
-                    </p>
-                    <ul class="space-y-4 inline-block md:block text-left">
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
-                            Andmete automaatne edastus
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
-                            API- ja süsteemiintegratsioonid
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
-                            Reaalajas teavitused ja raportid
-                        </li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all justify-center md:justify-start">
-                        Tahan automatiseerimist <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
+        <section class="py-24 md:py-32 bg-white" id="faq">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto space-y-5">
+                    <p class="eyebrow">KKK</p>
+                    <h2 class="text-5xl md:text-7xl text-deep-navy">Korduma kippuvad küsimused</h2>
                 </div>
-                <div class="w-full md:w-1/2 bg-indigo-50/30 rounded-3xl p-5 md:p-8 border border-indigo-100/50 flex flex-col justify-center">
-                    <!-- Workflow infographic -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <details class="faq-card">
+                        <summary><span>Mis on AI automatiseerimine?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+                        <p>AI automatiseerimine ühendab kindla töövoo automaatsete sammudega ning kasutab tehisintellekti seal, kus tuleb näiteks teksti liigitada, kokku võtta või koostada. Hea esimene projekt on korduv, mõõdetav ja selge erandite käsitlusega.</p>
+                    </details>
+                    <details class="faq-card">
+                        <summary><span>Kas Tehisabiline loob eestikeelseid AI-chatboteid?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+                        <p>Jah. Loome Eesti ettevõtetele veebilehe AI-chatboteid, mille vastused põhinevad ettevõtte kinnitatud infol. Lahendusse saab lisada kontaktide kogumise ja inimesele suunamise.</p>
+                    </details>
+                    <details class="faq-card">
+                        <summary><span>Kui palju AI-lahendus maksab?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+                        <p>Hind sõltub töövoo ulatusest, integratsioonidest, andmemahust ja vajalikust järelhooldusest. Esmase kaardistuse järel esitame selge töömahu, ajakava ja hinnapakkumise.</p>
+                    </details>
+                    <details class="faq-card">
+                        <summary><span>Kuidas valida esimene automatiseeritav protsess?</span><span class="faq-toggle" aria-hidden="true">+</span></summary>
+                        <p>Alusta tegevusest, mis kordub sageli, kasutab stabiilseid sisendeid ja võtab mõõdetavalt aega. Enne ehitamist fikseeri praegune ajakulu, vead ja erandid, et piloodi tulemust saaks ausalt võrrelda.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-deep-navy relative overflow-hidden">
+            <div class="cta-glow" aria-hidden="true"></div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-8">
+                <h2 class="text-5xl md:text-7xl font-headline font-bold text-white leading-tight">Leia üks protsess, mida tasub <span class="italic text-secondary-container">päriselt parandada.</span></h2>
+                <p class="text-xl text-white/75 max-w-2xl mx-auto">Tasuta esmane kaardistus annab 1–2 konkreetset ideed, järgmise sammu ja ausa hinnangu, kas automatiseerimine on mõistlik.</p>
+                <a class="inline-block bg-white text-deep-navy px-12 py-5 rounded-full text-xs font-bold tracking-widest uppercase shadow-2xl hover:-translate-y-1 transition-transform" href="#contact">Küsi tasuta kaardistust</a>
+            </div>
+        </section>
+
+        <section class="py-24 md:py-32 bg-surface" id="contact">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                <div class="space-y-10">
                     <div class="space-y-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                                <span class="material-symbols-outlined text-indigo-600 text-lg">input</span>
-                            </div>
-                            <div class="flex-1">
-                                <div class="text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-wider">Sisend</div>
-                                <div class="text-sm font-medium text-deep-navy">Kliendipäring laekub</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <div class="w-px h-6 bg-indigo-200 relative">
-                                <span class="material-symbols-outlined text-indigo-400 text-xs absolute -left-[7px] -bottom-1">arrow_downward</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-200 flex items-center justify-center flex-shrink-0 animate-pulse-slow">
-                                <span class="material-symbols-outlined text-indigo-700 text-lg">auto_mode</span>
-                            </div>
-                            <div class="flex-1">
-                                <div class="text-[10px] font-bold text-indigo-600 uppercase tracking-wider">Automaatne töötlus</div>
-                                <div class="text-sm font-medium text-deep-navy">Andmed analüüsitakse ja suunatakse</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-center">
-                            <div class="w-px h-6 bg-indigo-200 relative">
-                                <span class="material-symbols-outlined text-indigo-400 text-xs absolute -left-[7px] -bottom-1">arrow_downward</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
-                                <span class="material-symbols-outlined text-indigo-600 text-lg">task_alt</span>
-                            </div>
-                            <div class="flex-1">
-                                <div class="text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-wider">Tulemus</div>
-                                <div class="text-sm font-medium text-deep-navy">Valmis raport saadetud</div>
-                            </div>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-indigo-100 flex items-center justify-between">
-                            <span class="text-[10px] font-bold text-on-surface-variant/50 uppercase tracking-widest">Aja sääst</span>
-                            <span class="text-sm font-black text-indigo-600">-80%</span>
+                        <p class="eyebrow">Kontakt</p>
+                        <h2 class="text-6xl font-headline font-bold text-deep-navy leading-tight">Kirjelda üht korduvat tööd</h2>
+                        <p class="text-xl text-on-surface-variant leading-relaxed">Kirjuta, mis käivitab protsessi, millised sammud praegu käsitsi tehakse ja milline tulemus peab lõpuks tekkima.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <a href="mailto:tehisabiline@gmail.com" class="contact-row">
+                            <span class="contact-icon" aria-hidden="true">@</span>
+                            <span>tehisabiline@gmail.com</span>
+                        </a>
+                        <div class="contact-row">
+                            <span class="contact-icon" aria-hidden="true">⌖</span>
+                            <span>Tallinn, Eesti</span>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Web Solutions -->
-            <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col md:flex-row gap-8 md:gap-12 reveal">
-                <div class="w-full md:w-1/2 space-y-8 text-center md:text-left">
-                    <div class="w-16 h-16 rounded-full bg-violet-50 flex items-center justify-center text-violet-600 mx-auto md:mx-0">
-                        <span class="material-symbols-outlined text-4xl">web</span>
-                    </div>
-                    <h3 class="text-4xl font-headline font-black text-deep-navy">Veebilehe lahendused</h3>
-                    <p class="text-on-surface-variant leading-relaxed font-light">
-                        Kaasaegsed veebilehed koos domeeni halduse ja majutusega. Selge väärtuspakkumine esimestel sekunditel.
-                    </p>
-                    <ul class="space-y-4 inline-block md:block text-left">
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-violet-600 text-xl">check_circle</span>
-                            Kiire ja mobiilisõbralik
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-violet-600 text-xl">check_circle</span>
-                            SEO ja konversioon optimeeritud
-                        </li>
-                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-violet-600 text-xl">check_circle</span>
-                            Domeen ja majutus kaasas
-                        </li>
-                    </ul>
-                    <a href="#contact" class="inline-flex items-center gap-2 text-violet-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all justify-center md:justify-start">
-                        Tahan veebilehte <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </a>
-                </div>
-                <div class="w-full md:w-1/2 bg-violet-50/30 rounded-3xl p-5 md:p-8 border border-violet-100/50 flex flex-col justify-center">
-                    <!-- Browser mockup infographic -->
-                    <div class="space-y-4">
-                        <div class="bg-white rounded-xl border border-violet-100 overflow-hidden shadow-sm">
-                            <!-- Browser chrome -->
-                            <div class="flex items-center gap-2 px-4 py-2.5 bg-violet-50/60 border-b border-violet-100">
-                                <div class="w-2.5 h-2.5 rounded-full bg-red-300"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-yellow-300"></div>
-                                <div class="w-2.5 h-2.5 rounded-full bg-green-300"></div>
-                                <div class="flex-1 mx-3">
-                                    <div class="bg-white rounded-md px-3 py-1 text-[10px] text-on-surface-variant/50 border border-violet-100/60">teieait.ee</div>
-                                </div>
+                <div class="premium-card p-8 md:p-12 rounded-4xl">
+                    <form class="space-y-7" id="contact-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+                            <div class="form-field">
+                                <label for="name">Nimi</label>
+                                <input id="name" name="name" autocomplete="name" placeholder="Sinu nimi" required type="text">
                             </div>
-                            <!-- Page content skeleton -->
-                            <div class="p-4 space-y-3">
-                                <div class="h-3 bg-violet-100 rounded w-3/4"></div>
-                                <div class="h-2 bg-violet-50 rounded w-full"></div>
-                                <div class="h-2 bg-violet-50 rounded w-5/6"></div>
-                                <div class="flex gap-2 pt-1">
-                                    <div class="h-6 bg-violet-600 rounded-full w-20"></div>
-                                    <div class="h-6 bg-violet-100 rounded-full w-16"></div>
-                                </div>
+                            <div class="form-field">
+                                <label for="email">E-post</label>
+                                <input id="email" name="email" autocomplete="email" placeholder="sina@ettevote.ee" required type="email">
                             </div>
                         </div>
-                        <div class="flex items-center justify-between px-1">
-                            <div class="flex items-center gap-3">
-                                <div class="flex items-center gap-1.5 text-violet-600">
-                                    <span class="material-symbols-outlined text-sm">speed</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-wider">98/100</span>
-                                </div>
-                                <div class="flex items-center gap-1.5 text-violet-600">
-                                    <span class="material-symbols-outlined text-sm">phone_iphone</span>
-                                    <span class="text-[10px] font-bold uppercase tracking-wider">100%</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-1.5 text-violet-600">
-                                <span class="material-symbols-outlined text-sm">search</span>
-                                <span class="text-[10px] font-bold uppercase tracking-wider">SEO valmis</span>
-                            </div>
+                        <div class="form-field">
+                            <label for="company">Ettevõte <span>(soovi korral)</span></label>
+                            <input id="company" name="company" autocomplete="organization" placeholder="Ettevõtte nimi" type="text">
                         </div>
+                        <div class="form-field">
+                            <label for="message">Millist tööd tahad lihtsustada?</label>
+                            <textarea id="message" name="message" placeholder="Praegu teeme käsitsi..." required rows="4"></textarea>
+                        </div>
+                        <button class="w-full btn-premium py-5 rounded-full font-bold text-sm" type="submit">Saada päring</button>
+                        <p class="text-xs text-on-surface-variant">Kasutame saadetud andmeid ainult sinu päringule vastamiseks. Vormi asemel võid kirjutada otse e-postile.</p>
+                        <div id="form-success" role="status" aria-live="polite" class="hidden form-message form-message-success">Sõnum on saadetud. Võtame sinuga peagi ühendust.</div>
+                        <div id="form-error" role="alert" class="hidden form-message form-message-error">Saatmine ebaõnnestus. Kirjuta palun aadressile tehisabiline@gmail.com.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-20 bg-deep-navy text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2 space-y-6">
+                    <div class="flex items-center gap-4">
+                        <img alt="" width="64" height="64" class="w-10 h-10 object-contain footer-logo" src="/assets/brand/favicon.png">
+                        <span class="text-2xl font-bold tracking-tighter font-headline uppercase text-white">Tehisabiline ÕF</span>
                     </div>
+                    <p class="text-white/75 text-base leading-relaxed max-w-md">Tallinnas tegutsev õpilasfirma, mis ehitab Eesti ettevõtetele mõõdetavaid ja kontrollitavaid AI-lahendusi.</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="footer-heading">Teenused</p>
+                    <nav aria-label="Teenuste lingid" class="flex flex-col gap-3">
+                        <a href="/ai-automatiseerimine/">AI automatiseerimine</a>
+                        <a href="/ai-chatbot/">Eestikeelne AI-chatbot</a>
+                        <a href="/hinnajalgimine/">Hinnajälgimine</a>
+                    </nav>
+                </div>
+                <div class="space-y-6">
+                    <p class="footer-heading">Kontakt ja info</p>
+                    <nav aria-label="Kontaktlingid" class="flex flex-col gap-3">
+                        <a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a>
+                        <a href="/llms.txt">AI-süsteemidele</a>
+                        <span>Tallinn, Eesti</span>
+                    </nav>
                 </div>
             </div>
+            <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row justify-between gap-4 text-white/65 text-xs uppercase tracking-[0.16em]">
+                <span>© 2026 Tehisabiline ÕF</span>
+                <span>Praktilised AI-lahendused Eesti ettevõtetele</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-xl border-t border-outline-variant py-3 px-6 hidden" id="sticky-cta">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div>
+                <strong class="text-deep-navy text-sm">Kas üks töövoog kordub iga nädal?</strong>
+                <span class="text-on-surface-variant text-xs ml-2">Kaardistame tasuta, kas seda tasub automatiseerida.</span>
+            </div>
+            <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Võta ühendust</a>
         </div>
     </div>
-</section>
 
-<!-- Features Section -->
-<section class="py-32 bg-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,101,141,0.03),_transparent_70%)]"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <h2 class="text-5xl md:text-6xl font-headline font-light text-center mb-24 tracking-tight text-deep-navy reveal">Miks valida <span class="italic">meid?</span></h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-            <div class="text-center space-y-6 reveal">
-                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
-                    <span class="material-symbols-outlined text-3xl">rocket_launch</span>
-                </div>
-                <h5 class="font-headline text-2xl text-deep-navy font-black">AI Tehnoloogia</h5>
-                <p class="text-sm text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Uusimad mudelid</p>
-            </div>
-            <div class="text-center space-y-6 reveal">
-                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
-                    <span class="material-symbols-outlined text-3xl">query_stats</span>
-                </div>
-                <h5 class="font-headline text-2xl text-deep-navy font-black">Äri kasv</h5>
-                <p class="text-sm text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Andmepõhine</p>
-            </div>
-            <div class="text-center space-y-6 reveal">
-                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
-                    <span class="material-symbols-outlined text-3xl">person_pin</span>
-                </div>
-                <h5 class="font-headline text-2xl text-deep-navy font-black">Personaalsus</h5>
-                <p class="text-sm text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Rätseptöö</p>
-            </div>
-            <div class="text-center space-y-6 reveal">
-                <div class="w-16 h-16 mx-auto rounded-full bg-primary/5 flex items-center justify-center text-primary border border-primary/10">
-                    <span class="material-symbols-outlined text-3xl">payments</span>
-                </div>
-                <h5 class="font-headline text-2xl text-deep-navy font-black">Hinnastamine</h5>
-                <p class="text-sm text-on-surface-variant uppercase tracking-widest font-bold opacity-60">Väärtuspõhine</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="py-32 bg-white relative" id="faq">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-24 max-w-3xl mx-auto space-y-6 reveal">
-            <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Korduma kippuvad küsimused</h2>
-            <div class="h-1 w-20 bg-primary mx-auto"></div>
-            <p class="text-xl text-on-surface-variant font-light">
-                Kõige sagedasemad küsimused AI automatsiooni, tehisintellekti lahenduste ja meie teenuste kohta Eesti ettevõtetele.
-            </p>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mis on AI automatsioon ja kuidas see mu ettevõttele kasulik on?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    AI automatsioon on tehisintellekti kasutamine rutiinsete ülesannete täitmiseks ilma inimese sekkumiseta. See vabastab meeskonna aega müügi- ja kasvutööks, vähendab vigu, kiirendab klienditeenindust ja töötab ööpäevaringselt. Tehisabiline kujundab AI automatsiooni lahenduse täpselt sinu ärivajaduste järgi.
-                </p>
-            </details>
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas Tehisabiline pakub eestikeelseid chatbote?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Jah. Kõik meie veebilehe chatbotid on loodud eesti keele jaoks ja toetavad ka inglise keelt. Nad vastavad küsimustele, koguvad kontakte ning viivad kliendi müügiteel edasi. Töötab ööpäevaringselt.
-                </p>
-            </details>
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui palju maksab AI lahenduse tellimine?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Hind sõltub projekti keerukusest ja valitud lahendustest. Pakume tasuta esmast auditit, mille käigus selgitame välja sinu vajadused ning anname läbipaistva ja väärtuspõhise hinnapakkumise. Koostöö on paindlik ka väikese eelarvega ettevõtetele.
-                </p>
-            </details>
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas teie lahendused sobivad väikese ettevõtte jaoks?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Jah, oleme spetsialiseerunud just väikeste ja keskmise suurusega Eesti ettevõtete tehisintellekti ja töövoo automatiseerimisele. Pakume skaleeritavaid lahendusi, mis kasvavad koos sinu äri ning ei nõua suurt alginvesteeringut.
-                </p>
-            </details>
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui kiiresti saab AI lahenduse tööle?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Lihtsamad chatbotid ja hinnajälgijad valmivad ühe kuni kahe nädalaga. Keerukamad töövoo automatiseerimised ja integratsioonid võtavad kolm kuni kuus nädalat. Iga projektiga kaasneb selge ajakava.
-                </p>
-            </details>
-            <details class="premium-card rounded-3xl p-8 group reveal">
-                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mis valdkondadele Tehisabiline sobib?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
-                </summary>
-                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Teenindame e-poodide, B2B-teenindusettevõtete, kinnisvara- ja haridusettevõtete ning väikeettevõtete vajadusi. Oleme paindlikud ja leiame AI lahenduse igale ärivaldkonnale. Alates klienditoe automatiseerimisest kuni töövoogude digitaliseerimiseni.
-                </p>
-            </details>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-32 bg-deep-navy relative overflow-hidden reveal">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(0,174,239,0.15),_transparent_50%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(0,101,141,0.1),_transparent_50%)]"></div>
-    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-12">
-        <h2 class="text-5xl md:text-7xl font-headline font-black text-white leading-tight">Säästa aega. <span class="italic text-secondary-container">Kasvata tulu.</span></h2>
-        <p class="text-xl text-white/60 font-light max-w-2xl mx-auto">Head tulemused tulevad nutikatest süsteemidest, mitte ületundidest. Alustame tasuta auditiga.</p>
-        <a class="inline-block bg-white text-deep-navy px-12 py-5 rounded-full text-xs font-bold tracking-widest uppercase shadow-2xl hover:shadow-white/20 hover:-translate-y-1 transition-all duration-500" href="#contact">
-            Broneeri tasuta vestlus
-        </a>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="py-32 bg-surface" id="contact">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-        <div class="space-y-12 reveal">
-            <h2 class="text-6xl font-headline font-black text-deep-navy leading-tight">Võtke <span class="italic">meiega</span> ühendust</h2>
-            <p class="text-xl text-on-surface-variant font-light leading-relaxed">
-                Oleme valmis aitama teil viia ettevõte uuele tasemele. Täitke vorm või saatke meile otse kiri.
-            </p>
-            <div class="space-y-10">
-                <div class="flex items-center gap-8 group">
-                    <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                        <span class="material-symbols-outlined text-xl">mail</span>
-                    </div>
-                    <a href="mailto:tehisabiline@gmail.com" class="text-xl font-headline font-bold text-deep-navy">tehisabiline@gmail.com</a>
-                </div>
-                <div class="flex items-center gap-8 group">
-                    <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                        <span class="material-symbols-outlined text-xl">location_on</span>
-                    </div>
-                    <span class="text-xl font-headline font-bold text-deep-navy">Tallinn, Eesti</span>
-                </div>
-            </div>
-            <div class="space-y-6 pt-8 border-t border-outline-variant">
-                <h4 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Mida saad vastu</h4>
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                    <span class="text-sm font-medium text-on-surface-variant">Tasuta esmane audit</span>
-                </div>
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                    <span class="text-sm font-medium text-on-surface-variant">Riskivaba esimene vestlus</span>
-                </div>
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                    <span class="text-sm font-medium text-on-surface-variant">1-2 praktilist automatsiooniideed</span>
-                </div>
-            </div>
-        </div>
-        <div class="premium-card p-12 rounded-4xl relative overflow-hidden reveal">
-            <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-            <form class="space-y-8 relative z-10" id="contact-form">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-3">
-                        <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="name">Nimi</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="name" name="name" placeholder="Teie nimi" required type="text"/>
-                    </div>
-                    <div class="space-y-3">
-                        <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="email">Email</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="email" name="email" placeholder="teie@email.com" required type="email"/>
-                    </div>
-                </div>
-                <div class="space-y-3">
-                    <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="company">Ettevõte</label>
-                    <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="company" name="company" placeholder="Ettevõtte nimi" type="text"/>
-                </div>
-                <div class="space-y-3">
-                    <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="message">Sõnum</label>
-                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="message" name="message" placeholder="Kuidas saame aidata?" required rows="3"></textarea>
-                </div>
-                <button class="w-full btn-premium py-6 rounded-full font-bold text-sm mt-8" type="submit">
-                    Saada päring
-                </button>
-                <div id="form-success" class="hidden text-center py-6 bg-primary/5 border border-primary/10 rounded-2xl text-primary font-bold text-sm">
-                    Sõnum edukalt saadetud! Võtame peagi ühendust.
-                </div>
-                <div id="form-error" class="hidden text-center py-6 bg-red-50 border border-red-100 rounded-2xl text-red-600 font-bold text-sm">
-                    Sõnumi saatmine ebaõnnestus. Proovi hetke pärast uuesti.
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="w-full py-24 bg-deep-navy text-white/90">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
-            <div class="col-span-1 md:col-span-2 space-y-8">
-                <div class="flex items-center gap-4">
-                    <img alt="Tehisabiline Logo" class="w-10 h-10 object-contain" style="filter: invert(1);" src="assets/brand/favicon.png"/>
-                    <div class="text-2xl font-bold tracking-tighter font-headline uppercase text-white">Tehisabiline ÕF</div>
-                </div>
-                <p class="text-white/40 text-lg font-light leading-relaxed max-w-sm">
-                    AI automatiseerimise partner teie äri kiireks ja nutikaks kasvuks. Säästame aega ja tõstame efektiivsust.
-                </p>
-            </div>
-            <div class="space-y-8">
-                <h5 class="font-bold text-white uppercase text-sm tracking-[0.3em]">Lehed</h5>
-                <nav class="flex flex-col space-y-4">
-                    <a class="text-white/40 hover:text-white transition-colors text-sm font-light tracking-wide" href="#hero">Avaleht</a>
-                    <a class="text-white/40 hover:text-white transition-colors text-sm font-light tracking-wide" href="#services">Teenused</a>
-                    <a class="text-white/40 hover:text-white transition-colors text-sm font-light tracking-wide" href="#contact">Kontakt</a>
-                </nav>
-            </div>
-            <div class="space-y-8">
-                <h5 class="font-bold text-white uppercase text-sm tracking-[0.3em]">Kontakt</h5>
-                <nav class="flex flex-col space-y-4">
-                    <a class="text-white/40 hover:text-white transition-colors text-sm font-light tracking-wide" href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a>
-                    <span class="text-white/40 text-sm font-light tracking-wide">Tallinn, Eesti</span>
-                </nav>
-            </div>
-        </div>
-        <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-xs font-bold uppercase tracking-[0.2em]">
-            <div>© 2026 Tehisabiline ÕF. Kõik õigused kaitstud.</div>
-            <div>Valmistatud Tallinnas</div>
-        </div>
-    </div>
-</footer>
-
-<!-- Sticky CTA -->
-<div class="fixed bottom-0 left-0 right-0 z-40 bg-white/40 backdrop-blur-2xl border-t border-white/20 py-4 px-6 hidden" id="sticky-cta">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div>
-            <strong class="text-deep-navy text-sm">Kas veeb või protsess võiks rohkem müüa?</strong>
-            <span class="text-on-surface-variant text-xs ml-2">Teeme auditiga esimese sammu selgeks.</span>
-        </div>
-        <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Võta ühendust</a>
-    </div>
-</div>
-
-<script src="assets/js/hero-gradient.js"></script>
-<script src="index.js" defer></script>
+    <script src="/index.js" defer></script>
 </body>
 </html>

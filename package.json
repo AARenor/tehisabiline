@@ -1,5 +1,10 @@
 {
     "scripts": {
-        "test:seo": "node tools/seo-check.mjs"
+        "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind-input.css -o assets/css/tailwind.min.css --minify",
+        "test:seo": "node tools/seo-check.mjs",
+        "submit:indexnow": "node tools/submit-indexnow.mjs"
+    },
+    "devDependencies": {
+        "tailwindcss": "3.4.17"
     }
 }

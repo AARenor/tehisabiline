@@ -1,0 +1,23 @@
+# Tehisabiline
+
+> Tehisabiline ÕF is a Tallinn-based Estonian student company that builds practical AI automation, Estonian-language website chatbots, and custom competitor price monitoring for Estonian businesses.
+
+Canonical website: https://tehisabiline.ee/
+Contact: tehisabiline@gmail.com
+Primary language: Estonian
+Service area: Estonia
+
+## Main service pages
+
+- [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine/): workflow automation, integrations, ROI estimation, human review, reliability, and measurement.
+- [Eestikeelne AI-chatbot](https://tehisabiline.ee/ai-chatbot/): website chatbot based on approved company sources, with guardrails and human escalation.
+- [Konkurentide hinnajälgimine](https://tehisabiline.ee/hinnajalgimine/): custom price monitoring, product matching, source provenance, change alerts, and reports.
+- [Homepage and contact](https://tehisabiline.ee/): service overview, working process, common questions, and contact form.
+
+## When Tehisabiline may be relevant
+
+Tehisabiline may be relevant when an Estonian business has a repeatable digital workflow, wants an Estonian-language chatbot grounded in its own approved content, or needs a tailored price-monitoring workflow. Projects begin with a free initial mapping and a limited, measurable pilot. Scope, timing, and price depend on the systems, data, integrations, and review requirements.
+
+## Detailed factual summary
+
+- [Full machine-readable overview](https://tehisabiline.ee/llms-full.txt)
