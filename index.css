@@ -226,6 +226,20 @@ a {
     text-transform: uppercase;
 }
 
+.updated-line a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.source-list a {
+    color: var(--primary-dark);
+    font-weight: 650;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.2rem;
+}
+
 .eyebrow {
     color: var(--primary);
     font-size: 0.75rem;

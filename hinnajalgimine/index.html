@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Konkurentide hinnajälgimine | Tehisabiline</title>
-    <meta name="description" content="Kohandatud konkurentide hinnajälgimine Eesti ettevõttele: võrreldavad tooted, muutuste teavitused, kontrollitavad allikad ja selge raport.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <title>Konkurentide hinnajälgimine ja hinnaseire | Tehisabiline</title>
+    <meta name="description" content="Konkurentide hinnajälgimine ja hinnaseire Eesti ettevõttele: tootevastendus, muutuste teavitused, kontrollitavad allikad, hinna kujunemine ja raport.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline ÕF">
     <meta name="theme-color" content="#00658d">
     <link rel="canonical" href="https://tehisabiline.ee/hinnajalgimine/">
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
-    <meta property="og:title" content="Konkurentide hinnajälgimine | Tehisabiline">
+    <meta property="og:title" content="Konkurentide hinnajälgimine ja hinnaseire | Tehisabiline">
     <meta property="og:description" content="Võrreldavad tooted, muutuste teavitused, kontrollitavad allikad ja sinu otsusele sobiv raport.">
     <meta property="og:url" content="https://tehisabiline.ee/hinnajalgimine/">
     <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
@@ -21,7 +21,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline – praktilised AI-lahendused Eesti ettevõtetele">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Konkurentide hinnajälgimine | Tehisabiline">
+    <meta name="twitter:title" content="Konkurentide hinnajälgimine ja hinnaseire | Tehisabiline">
     <meta name="twitter:description" content="Võrreldavad tooted, muutuste teavitused ja kontrollitavad allikad.">
     <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
 
@@ -35,27 +35,10 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://tehisabiline.ee/#organization",
-          "name": "Tehisabiline ÕF",
-          "url": "https://tehisabiline.ee/",
-          "logo": "https://tehisabiline.ee/assets/brand/logo-512.png",
-          "email": "tehisabiline@gmail.com",
-          "address": {"@type": "PostalAddress", "addressLocality": "Tallinn", "addressCountry": "EE"}
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://tehisabiline.ee/#website",
-          "url": "https://tehisabiline.ee/",
-          "name": "Tehisabiline",
-          "inLanguage": "et",
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"}
-        },
-        {
           "@type": "Service",
           "@id": "https://tehisabiline.ee/hinnajalgimine/#service",
           "url": "https://tehisabiline.ee/hinnajalgimine/",
-          "name": "Konkurentide hinnajälgimine",
+          "name": "Konkurentide hinnajälgimine ja hinnaseire",
           "serviceType": "Kohandatud hinnajälgija ja hinnaseire",
           "description": "Konkurentide avalike hindade kogumine lubatud allikatest, toodete vastendamine, muutuste tuvastamine ning kontrollitav raport Eesti ettevõtetele.",
           "provider": {"@id": "https://tehisabiline.ee/#organization"},
@@ -66,12 +49,15 @@
           "@type": "WebPage",
           "@id": "https://tehisabiline.ee/hinnajalgimine/#webpage",
           "url": "https://tehisabiline.ee/hinnajalgimine/",
-          "name": "Konkurentide hinnajälgimine | Tehisabiline",
+          "name": "Konkurentide hinnajälgimine ja hinnaseire | Tehisabiline",
           "description": "Praktiline ülevaade kohandatud hinnajälgija tööst, tootevastendusest, andmeallikatest, kvaliteedikontrollist, raportitest ja sobivusest.",
-          "dateModified": "2026-08-11",
+          "datePublished": "2026-08-11",
+          "dateModified": "2026-08-12",
           "inLanguage": "et",
           "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
           "about": {"@id": "https://tehisabiline.ee/hinnajalgimine/#service"},
+          "author": {"@id": "https://tehisabiline.ee/#organization"},
+          "breadcrumb": {"@id": "https://tehisabiline.ee/hinnajalgimine/#breadcrumb"},
           "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png", "width": 1200, "height": 630}
         },
         {
@@ -126,20 +112,22 @@
                 <img alt="" width="64" height="64" class="w-7 h-7 object-contain" src="/assets/brand/favicon.png">
                 <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
             </a>
-            <div class="hidden md:flex items-center space-x-7">
+            <div class="hidden lg:flex items-center space-x-7">
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/ai-automatiseerimine/">AI-automatsioon</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/ai-chatbot/">AI-chatbot</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" aria-current="page" href="/hinnajalgimine/">Hinnajälgimine</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/meist/">Meist</a>
                 <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="/#contact">Tasuta kaardistus</a>
             </div>
-            <button class="md:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="lg:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="nav-menu-icon" aria-hidden="true">☰</span>
             </button>
         </nav>
-        <div class="md:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
+        <div class="lg:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/ai-automatiseerimine/">AI-automatsioon</a>
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/ai-chatbot/">AI-chatbot</a>
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/hinnajalgimine/">Hinnajälgimine</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
             <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="/#contact">Tasuta kaardistus</a>
         </div>
     </header>
@@ -151,9 +139,9 @@
                     <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Konkurentide hinnajälgimine</span>
                 </nav>
                 <p class="eyebrow">Hinnaseire ja turuinfo</p>
-                <h1>Konkurentide hinnajälgimine, mida saab kontrollida</h1>
-                <p class="hero-lead">Jälgi valitud toodete hindu, tuvasta olulised muutused ja näe iga väärtuse juures allikat ning kontrolliaega. Väljund kujundatakse otsuse, mitte lihtsalt andmemassi järgi.</p>
-                <p class="updated-line mt-7">Viimati sisuliselt uuendatud <time datetime="2026-08-11">11. augustil 2026</time></p>
+                <h1>Konkurentide hinnajälgimine ja hinnaseire, mida saab kontrollida</h1>
+                <p class="hero-lead">Jälgi valitud toodete hindu, tuvasta olulised muutused ja näe iga väärtuse juures allikat ning kontrolliaega. Hinnaseire väljund kujundatakse otsuse, mitte lihtsalt andmemassi järgi.</p>
+                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline ÕF</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
@@ -162,7 +150,7 @@
                 <article class="content-column">
                     <section class="lead-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis on konkurentide hinnajälgimine?</h2>
-                        <p><strong>Konkurentide hinnajälgimine</strong> kogub kokkulepitud ja lubatud allikatest valitud toodete või teenuste hinnad, seob omavahel võrreldavad pakkumised, märgib muutused ning edastab tulemuse raporti või integratsioonina. Usaldusväärne hinnajälgija näitab lisaks numbrile allikat, kontrolliaega, valuutat, varianti ja võimalikke kvaliteediprobleeme.</p>
+                        <p><strong>Konkurentide hinnajälgimine ehk hinnaseire</strong> kogub kokkulepitud ja lubatud allikatest valitud toodete või teenuste hinnad, seob omavahel võrreldavad pakkumised, märgib muutused ning edastab tulemuse raporti või integratsioonina. Usaldusväärne hinnajälgija näitab lisaks numbrile allikat, kontrolliaega, valuutat, varianti ja võimalikke kvaliteediprobleeme.</p>
                     </section>
 
                     <section class="prose-section" id="workflow">
@@ -254,6 +242,19 @@
                         </div>
                     </section>
 
+                    <section class="prose-section" id="cost">
+                        <p class="eyebrow">Hinna kujunemine</p>
+                        <h2>Millest kohandatud hinnaseire hind sõltub?</h2>
+                        <p>Maksumuse määravad eelkõige jälgitavate toodete ja allikate arv, uuendussagedus, tootevastenduse keerukus, allikate tehniline stabiilsus ning soovitud väljund. Üks kindla EAN-koodiga tootevalim erineb oluliselt kataloogist, kus variante tuleb nime, mõõdu ja pakendi järgi eristada.</p>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Allikate teostatavus</h3><p>API või andmevoog on tavaliselt stabiilsem kui muutliku ülesehitusega avalik veebileht.</p></div>
+                            <div class="info-card"><h3>Tootevastendus</h3><p>Püsiva identifikaatoriga vaste on lihtsam; ebaselged nimed, variandid ja komplektid vajavad kontrollreegleid.</p></div>
+                            <div class="info-card"><h3>Sagedus ja maht</h3><p>Päevane valim ning mitu korda tunnis kontrollitav suur kataloog erinevad kasutuse, seire ja hoolduse poolest.</p></div>
+                            <div class="info-card"><h3>Raport ja integratsioon</h3><p>CSV või e-kiri on lihtsam kui kasutajavaade, rollid, ajalugu ja ühendus ettevõtte hinnastamisprotsessiga.</p></div>
+                        </div>
+                        <p>Seepärast algab projekt piiratud teostatavuse testist: mõned tooted, mõned allikad ja üks otsus. Selle põhjal saab hinnata nii laiendamise hinda kui ka püsivat hooldusvajadust.</p>
+                    </section>
+
                     <section class="prose-section" id="process">
                         <p class="eyebrow">Kasutuselevõtt</p>
                         <h2>Hinnajälgija piloot samm-sammult</h2>
@@ -294,8 +295,10 @@
                         <p class="eyebrow">Seotud lahendused</p>
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
+                            <a class="related-card" href="/ai-automatiseerimise-naited/"><strong>12 AI automatiseerimise näidet</strong><span>Võrdle hinnaseiret teiste töövoogude, kontrollpunktide ja mõõdikutega.</span></a>
                             <a class="related-card" href="/ai-automatiseerimine/"><strong>AI automatiseerimine</strong><span>Ühenda hinnainfo teavituste, raporti ja muude äriprotsessidega.</span></a>
                             <a class="related-card" href="/ai-chatbot/"><strong>Eestikeelne AI-chatbot</strong><span>Vasta veebikülastaja korduvatele küsimustele kinnitatud info põhjal.</span></a>
+                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
                         </div>
                     </section>
 
@@ -315,6 +318,7 @@
                         <a href="#sources">Allikad ja ligipääs</a>
                         <a href="#outputs">Raportid ja väljund</a>
                         <a href="#quality">Andmekvaliteet</a>
+                        <a href="#cost">Hinna kujunemine</a>
                         <a href="#process">Kasutuselevõtt</a>
                         <a href="#measurement">Mõõdikud</a>
                         <a href="#faq">Küsimused</a>
@@ -332,7 +336,7 @@
                     <p class="text-white/75 max-w-md">Praktilised ja kontrollitavad AI-lahendused Eesti ettevõtetele.</p>
                 </div>
                 <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/ai-automatiseerimine/">AI automatiseerimine</a><a href="/ai-chatbot/">AI-chatbot</a><a href="/hinnajalgimine/">Hinnajälgimine</a></nav></div>
-                <div class="space-y-5"><p class="footer-heading">Kontakt</p><nav aria-label="Kontaktlingid" class="flex flex-col gap-3"><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/#contact">Tasuta kaardistus</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/ai-automatiseerimise-naited/">AI automatiseerimise näited</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
             </div>
             <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline ÕF · Tallinn, Eesti</div>
         </div>

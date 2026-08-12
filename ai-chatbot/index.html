@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eestikeelne AI-chatbot veebilehele | Tehisabiline</title>
-    <meta name="description" content="Eestikeelne AI-chatbot veebilehele: vastused kinnitatud info põhjal, kontaktide kogumine, inimesele suunamine ja mõõdetav piloot.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="description" content="Eestikeelne AI-chatbot ehk vestlusrobot veebilehele: kinnitatud allikad, andmekaitse, inimesele suunamine, hinna kujunemine ja mõõdetav piloot.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline ÕF">
     <meta name="theme-color" content="#00658d">
     <link rel="canonical" href="https://tehisabiline.ee/ai-chatbot/">
@@ -35,23 +35,6 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://tehisabiline.ee/#organization",
-          "name": "Tehisabiline ÕF",
-          "url": "https://tehisabiline.ee/",
-          "logo": "https://tehisabiline.ee/assets/brand/logo-512.png",
-          "email": "tehisabiline@gmail.com",
-          "address": {"@type": "PostalAddress", "addressLocality": "Tallinn", "addressCountry": "EE"}
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://tehisabiline.ee/#website",
-          "url": "https://tehisabiline.ee/",
-          "name": "Tehisabiline",
-          "inLanguage": "et",
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"}
-        },
-        {
           "@type": "Service",
           "@id": "https://tehisabiline.ee/ai-chatbot/#service",
           "url": "https://tehisabiline.ee/ai-chatbot/",
@@ -68,10 +51,13 @@
           "url": "https://tehisabiline.ee/ai-chatbot/",
           "name": "Eestikeelne AI-chatbot veebilehele | Tehisabiline",
           "description": "Praktiline ülevaade eestikeelse AI-chatboti tööst, sobivusest, teadmistebaasist, piirangutest, mõõdikutest ja kasutuselevõtust.",
-          "dateModified": "2026-08-11",
+          "datePublished": "2026-08-11",
+          "dateModified": "2026-08-12",
           "inLanguage": "et",
           "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
           "about": {"@id": "https://tehisabiline.ee/ai-chatbot/#service"},
+          "author": {"@id": "https://tehisabiline.ee/#organization"},
+          "breadcrumb": {"@id": "https://tehisabiline.ee/ai-chatbot/#breadcrumb"},
           "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png", "width": 1200, "height": 630}
         },
         {
@@ -126,20 +112,22 @@
                 <img alt="" width="64" height="64" class="w-7 h-7 object-contain" src="/assets/brand/favicon.png">
                 <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
             </a>
-            <div class="hidden md:flex items-center space-x-7">
+            <div class="hidden lg:flex items-center space-x-7">
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/ai-automatiseerimine/">AI-automatsioon</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" aria-current="page" href="/ai-chatbot/">AI-chatbot</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/hinnajalgimine/">Hinnajälgimine</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/meist/">Meist</a>
                 <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="/#contact">Tasuta kaardistus</a>
             </div>
-            <button class="md:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
+            <button class="lg:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="nav-menu-icon" aria-hidden="true">☰</span>
             </button>
         </nav>
-        <div class="md:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
+        <div class="lg:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/ai-automatiseerimine/">AI-automatsioon</a>
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/ai-chatbot/">AI-chatbot</a>
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/hinnajalgimine/">Hinnajälgimine</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
             <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="/#contact">Tasuta kaardistus</a>
         </div>
     </header>
@@ -151,9 +139,9 @@
                     <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Eestikeelne AI-chatbot</span>
                 </nav>
                 <p class="eyebrow">Veebilehe klienditugi ja müük</p>
-                <h1>Eestikeelne AI-chatbot, mis teab oma piire</h1>
-                <p class="hero-lead">Anna külastajale kiire vastus ettevõtte kinnitatud info põhjal, kogu vajalik taust ja suuna keeruline või tundlik küsimus inimesele.</p>
-                <p class="updated-line mt-7">Viimati sisuliselt uuendatud <time datetime="2026-08-11">11. augustil 2026</time></p>
+                <h1>Eestikeelne AI-chatbot ehk vestlusrobot, mis teab oma piire</h1>
+                <p class="hero-lead">Anna veebikülastajale kiire vastus ettevõtte kinnitatud info põhjal, kogu vajalik taust ja suuna keeruline või tundlik küsimus inimesele.</p>
+                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline ÕF</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
@@ -223,7 +211,7 @@
                         </div>
                     </section>
 
-                    <section class="prose-section" id="safety">
+                    <section class="prose-section source-list" id="safety">
                         <p class="eyebrow">Piirangud ja andmed</p>
                         <h2>Kuidas vähendada vale vastuse ja liigse andmekogumise riski?</h2>
                         <ul>
@@ -234,6 +222,7 @@
                             <li><strong>Vaata vestlusi valimina üle:</strong> kvaliteedikontroll aitab leida puuduvat sisu ja ohtlikke vastusemustreid.</li>
                         </ul>
                         <p>Generatiivne AI võib ka hea seadistuse korral eksida. Seepärast ei luba me “100% õigeid vastuseid”; ehitame nähtavad piirid, kontrollpunktid ja taganemistee.</p>
+                        <p>Veebikülastajale peab olema arusaadav, et ta suhtleb AI-süsteemiga. Vaata ajakohast raamistikku <a href="https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems">Euroopa Komisjoni AI läbipaistvusreeglite ülevaatest</a>. Praktilise kohaliku näitena kirjeldab <a href="https://www.aki.ee/uudised/aki-veebilehel-vastab-nuud-kusimustele-tehisarul-pohinev-burokratt">Andmekaitse Inspektsioon oma Bürokrati puhul</a> kontrollitud allikaid, isikuandmete vältimist, vastuste ülekontrollimist ja teed inimeseni. Täpne andmekaitse- ja õiguslik lahendus tuleb hinnata konkreetse kasutusjuhu järgi.</p>
                     </section>
 
                     <section class="prose-section" id="measurement">
@@ -253,6 +242,19 @@
                         <h2>Milline chatbot kasutajat ei aita?</h2>
                         <p>Halb chatbot avaneb pealetükkivalt, peidab tavalise kontakti, vastab ilma kontrollitava allikata ja sunnib kasutajat sama infot inimesele uuesti kirjutama. Samuti ei ole kasulik lahendus, mis mõõdab ainult vestluste arvu, kuid ei vaata vastuste õigsust ega kasutaja järgmist sammu.</p>
                         <p>Piloodis kontrollime seetõttu lisaks “õnnelikule teele” ka kirjavigu, ebamääraseid küsimusi, vastuolulist sisu, puuduvaid fakte, keelatud teemasid ja inimesele üleandmist. Chatbot peab jääma üheks valikuks: e-post, telefon või tavapärane veebisisu ei tohiks selle taha kaduda.</p>
+                    </section>
+
+                    <section class="prose-section" id="cost">
+                        <p class="eyebrow">Hinna kujunemine</p>
+                        <h2>Millest AI-chatboti hind sõltub?</h2>
+                        <p>Chatboti maksumust ei määra ainult vestlusakna kujundus. Suurim erinevus tekib teadmistebaasi mahust ja kvaliteedist, keeltest, integratsioonidest, andmekaitsenõuetest, testküsimuste hulgast ning sellest, kuidas vestlus inimesele üle antakse.</p>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Sisu ettevalmistus</h3><p>Vastuolulised teenuse-, hinna- ja tingimuslehed vajavad enne boti ühendamist korrastamist.</p></div>
+                            <div class="info-card"><h3>Integratsioonid</h3><p>Lihtne e-kirja teavitus erineb CRM-i, autentimise, tellimuse või kliendiandmete ühendamisest.</p></div>
+                            <div class="info-card"><h3>Testimine ja piirangud</h3><p>Päris küsimused, keelatud teemad, ründavad sisendid ja inimesele suunamine vajavad eraldi kontrolli.</p></div>
+                            <div class="info-card"><h3>Püsikulu</h3><p>Mudeli kasutus, majutus, vestluste maht, seire ja teadmistebaasi uuendamine jäävad pärast avaldamist alles.</p></div>
+                        </div>
+                        <p>Kaardistuse järel saab hinnata piiratud pilooti: milliseid allikaid bot kasutab, millistele küsimustele vastab, mida kogub, millal peatub ja kuidas tulemust mõõdetakse.</p>
                     </section>
 
                     <section class="prose-section" id="process">
@@ -283,8 +285,10 @@
                         <p class="eyebrow">Seotud lahendused</p>
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
+                            <a class="related-card" href="/ai-automatiseerimise-naited/"><strong>12 AI automatiseerimise näidet</strong><span>Võrdle chatboti teiste töövoogude, kontrollpunktide ja mõõdikutega.</span></a>
                             <a class="related-card" href="/ai-automatiseerimine/"><strong>AI automatiseerimine</strong><span>Ühenda chatboti järeltegevus CRM-i, teavituste ja muu töövooga.</span></a>
                             <a class="related-card" href="/hinnajalgimine/"><strong>Konkurentide hinnajälgimine</strong><span>Kogu muutuv turuinfo kontrollitavaks andmevooks ja raportiks.</span></a>
+                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
                         </div>
                     </section>
 
@@ -305,6 +309,7 @@
                         <a href="#safety">Piirangud ja andmed</a>
                         <a href="#measurement">Mõõdikud</a>
                         <a href="#failure-modes">Levinud vead</a>
+                        <a href="#cost">Hinna kujunemine</a>
                         <a href="#process">Kasutuselevõtt</a>
                         <a href="#faq">Küsimused</a>
                     </nav>
@@ -321,7 +326,7 @@
                     <p class="text-white/75 max-w-md">Praktilised ja kontrollitavad AI-lahendused Eesti ettevõtetele.</p>
                 </div>
                 <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/ai-automatiseerimine/">AI automatiseerimine</a><a href="/ai-chatbot/">AI-chatbot</a><a href="/hinnajalgimine/">Hinnajälgimine</a></nav></div>
-                <div class="space-y-5"><p class="footer-heading">Kontakt</p><nav aria-label="Kontaktlingid" class="flex flex-col gap-3"><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/#contact">Tasuta kaardistus</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/ai-automatiseerimise-naited/">AI automatiseerimise näited</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
             </div>
             <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline ÕF · Tallinn, Eesti</div>
         </div>

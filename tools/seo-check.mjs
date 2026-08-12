@@ -6,10 +6,49 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://tehisabiline.ee";
 const today = new Date().toISOString().slice(0, 10);
 const expectedPages = [
-    {file: "index.html", canonical: `${origin}/`, breadcrumb: false},
-    {file: "ai-automatiseerimine/index.html", canonical: `${origin}/ai-automatiseerimine/`, breadcrumb: true},
-    {file: "ai-chatbot/index.html", canonical: `${origin}/ai-chatbot/`, breadcrumb: true},
-    {file: "hinnajalgimine/index.html", canonical: `${origin}/hinnajalgimine/`, breadcrumb: true}
+    {
+        file: "index.html",
+        canonical: `${origin}/`,
+        schemaTypes: ["Organization", "WebSite", "WebPage", "Service", "FAQPage"],
+        dateType: "WebPage",
+        requiresOrganization: true
+    },
+    {
+        file: "ai-automatiseerimine/index.html",
+        canonical: `${origin}/ai-automatiseerimine/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "ai-chatbot/index.html",
+        canonical: `${origin}/ai-chatbot/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "hinnajalgimine/index.html",
+        canonical: `${origin}/hinnajalgimine/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "ai-automatiseerimise-naited/index.html",
+        canonical: `${origin}/ai-automatiseerimise-naited/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "meist/index.html",
+        canonical: `${origin}/meist/`,
+        schemaTypes: ["Organization", "AboutPage", "BreadcrumbList"],
+        dateType: "AboutPage",
+        requiresOrganization: true,
+        requiresPublishedDate: true
+    }
 ];
 const expectedUrls = expectedPages.map((page) => page.canonical);
 const failures = [];
@@ -137,18 +176,28 @@ for (const page of expectedPages) {
             const data = JSON.parse(block);
             const graph = Array.isArray(data["@graph"]) ? data["@graph"] : [data];
             const types = graph.flatMap((item) => Array.isArray(item["@type"]) ? item["@type"] : [item["@type"]]);
-            assert(types.includes("Organization"), `${label}: Organization schema is missing.`);
-            assert(types.includes("WebSite"), `${label}: WebSite schema is missing.`);
-            assert(types.includes("WebPage"), `${label}: WebPage schema is missing.`);
-            assert(types.includes("Service"), `${label}: Service schema is missing.`);
-            if (page.breadcrumb) assert(types.includes("BreadcrumbList"), `${label}: BreadcrumbList schema is missing.`);
-            const organization = graph.find((item) => item["@type"] === "Organization");
-            const organizationLogo = typeof organization?.logo === "string" ? organization.logo : organization?.logo?.url;
-            assert(organizationLogo === `${origin}/assets/brand/logo-512.png`, `${label}: Organization logo must use the 512×512 asset.`);
-            const webPage = graph.find((item) => item["@type"] === "WebPage");
-            const dateModified = webPage?.dateModified || "";
-            assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: WebPage dateModified must use YYYY-MM-DD.`);
+            for (const requiredType of page.schemaTypes) {
+                assert(types.includes(requiredType), `${label}: ${requiredType} schema is missing.`);
+            }
+
+            if (page.requiresOrganization) {
+                const organization = graph.find((item) => item["@type"] === "Organization");
+                const organizationLogo = typeof organization?.logo === "string" ? organization.logo : organization?.logo?.url;
+                assert(organizationLogo === `${origin}/assets/brand/logo-512.png`, `${label}: Organization logo must use the 512×512 asset.`);
+                assert(organization?.name === "Tehisabiline ÕF", `${label}: Organization name must be Tehisabiline ÕF.`);
+                assert(organization?.url === `${origin}/`, `${label}: Organization URL must use the canonical homepage.`);
+            }
+
+            const datedEntity = graph.find((item) => item["@type"] === page.dateType);
+            const dateModified = datedEntity?.dateModified || "";
+            assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: ${page.dateType} dateModified must use YYYY-MM-DD.`);
             assert(!dateModified || dateModified <= today, `${label}: WebPage dateModified cannot be in the future: ${dateModified}.`);
+            assert(!dateModified || html.includes(`<time datetime="${dateModified}">`), `${label}: visible update date must match structured data.`);
+            if (page.requiresPublishedDate) {
+                const datePublished = datedEntity?.datePublished || "";
+                assert(/^\d{4}-\d{2}-\d{2}$/.test(datePublished), `${label}: ${page.dateType} datePublished must use YYYY-MM-DD.`);
+                assert(!datePublished || datePublished <= dateModified, `${label}: datePublished cannot be later than dateModified.`);
+            }
             pageModifiedDates.set(page.canonical, dateModified);
         } catch (error) {
             failures.push(`${label}: JSON-LD is invalid: ${error.message}`);
@@ -162,6 +211,25 @@ const homeHtml = readFileSync(join(root, "index.html"), "utf8");
 for (const serviceUrl of expectedUrls.slice(1)) {
     const pathname = new URL(serviceUrl).pathname;
     assert(new RegExp(`<a\\b[^>]*href=["']${escapeRegExp(pathname)}["']`, "i").test(homeHtml), `Homepage must link directly to ${pathname}.`);
+}
+
+for (const page of expectedPages) {
+    const html = readFileSync(join(root, page.file), "utf8");
+    if (page.canonical !== `${origin}/meist/`) {
+        assert(/<a\b[^>]*href=["']\/meist\/["']/i.test(html), `${page.file}: must link to the organization and editorial page.`);
+    }
+    if (page.canonical !== `${origin}/ai-automatiseerimise-naited/`) {
+        assert(/<a\b[^>]*href=["']\/ai-automatiseerimise-naited\/["']/i.test(html), `${page.file}: must link to the practical automation guide.`);
+    }
+}
+
+const guideHtml = readFileSync(join(root, "ai-automatiseerimise-naited/index.html"), "utf8");
+for (const source of [
+    "https://www.ttja.ee/ariklient/ohutus/tooted-teenused/tehisintellektisusteemid",
+    "https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems",
+    "https://www.aki.ee/uudised/aki-veebilehel-vastab-nuud-kusimustele-tehisarul-pohinev-burokratt"
+]) {
+    assert(guideHtml.includes(`href="${source}"`), `Automation guide must retain its primary source link: ${source}`);
 }
 
 for (const requiredFile of [

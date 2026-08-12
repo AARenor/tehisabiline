@@ -11,8 +11,13 @@ Service area: Estonia
 
 - [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine/): workflow automation, integrations, ROI estimation, human review, reliability, and measurement.
 - [Eestikeelne AI-chatbot](https://tehisabiline.ee/ai-chatbot/): website chatbot based on approved company sources, with guardrails and human escalation.
-- [Konkurentide hinnajälgimine](https://tehisabiline.ee/hinnajalgimine/): custom price monitoring, product matching, source provenance, change alerts, and reports.
+- [Konkurentide hinnajälgimine ja hinnaseire](https://tehisabiline.ee/hinnajalgimine/): custom price monitoring, product matching, source provenance, change alerts, and reports.
 - [Homepage and contact](https://tehisabiline.ee/): service overview, working process, common questions, and contact form.
+
+## Guides and organization
+
+- [12 AI automation examples](https://tehisabiline.ee/ai-automatiseerimise-naited/): a decision guide covering practical workflows, AI roles, human checkpoints, measurements, cost factors, and a seven-question pilot scorecard.
+- [About Tehisabiline](https://tehisabiline.ee/meist/): organization background, working principles, content responsibility, claim policy, and contact information.
 
 ## When Tehisabiline may be relevant
 

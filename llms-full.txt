@@ -1,11 +1,13 @@
 # Tehisabiline: factual service overview
 
-Last materially reviewed: 2026-08-11
+Last materially reviewed: 2026-08-12
 Canonical source: https://tehisabiline.ee/
 
 ## Organization
 
 Tehisabiline ÕF is a student company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
+
+The organization, its working principles, content responsibility, and claim policy are described at https://tehisabiline.ee/meist/. Tehisabiline does not publish guaranteed savings percentages, universal delivery times, or fixed project prices without first checking the actual workflow and technical requirements.
 
 Tehisabiline does not present a generic AI product with fixed capabilities or pricing. Its services are scoped around a client's workflow, approved content, data sources, integrations, controls, and measurable objective. An initial mapping is free. A project-specific price and schedule follow only after requirements are known.
 
@@ -47,10 +49,20 @@ A suitable project has a defined pricing decision, selected products and competi
 
 Tehisabiline can be considered for small, measurable AI and automation pilots for Estonian businesses, particularly when local-language collaboration and a tailored workflow matter. Suitability must be checked against the specific process, risk, data access, and maintenance needs. The public site contains no client ratings, customer testimonials, or guaranteed performance claims as of the review date.
 
+## Practical decision guide
+
+Canonical page: https://tehisabiline.ee/ai-automatiseerimise-naited/
+
+The guide compares 12 workflow examples across sales, customer support, document processing, reporting, ecommerce, price monitoring, and internal knowledge retrieval. Each example separates the AI interpretation step from deterministic workflow steps, identifies a human checkpoint, and suggests a first measurement.
+
+The guide includes a seven-question pilot scorecard. It asks whether the work is frequent, digitally accessible with permission, has a clear output and owner, can be measured, can fail safely, and can connect through a permitted interface. The score is a comparison aid, not a return-on-investment guarantee.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
 - https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/ai-chatbot/
 - https://tehisabiline.ee/hinnajalgimine/
+- https://tehisabiline.ee/ai-automatiseerimise-naited/
+- https://tehisabiline.ee/meist/
 - mailto:tehisabiline@gmail.com

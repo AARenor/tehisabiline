@@ -1,7 +1,7 @@
 {
     "name": "Tehisabiline ÕF",
     "short_name": "Tehisabiline",
-    "description": "AI-chatbotid, töövoo automatiseerimine, hinnajälgijad ja veebilehed Eesti ettevõtetele.",
+    "description": "AI-chatbotid, tööprotsesside automatiseerimine ja konkurentide hinnaseire Eesti ettevõtetele.",
     "lang": "et",
     "start_url": "/",
     "scope": "/",

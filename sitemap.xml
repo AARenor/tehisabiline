@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://tehisabiline.ee/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-08-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/ai-automatiseerimine/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-08-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/ai-chatbot/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-08-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/hinnajalgimine/</loc>
-        <lastmod>2026-08-11</lastmod>
+        <lastmod>2026-08-12</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/ai-automatiseerimise-naited/</loc>
+        <lastmod>2026-08-12</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/meist/</loc>
+        <lastmod>2026-08-12</lastmod>
     </url>
 </urlset>
