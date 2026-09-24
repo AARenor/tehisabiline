@@ -247,16 +247,6 @@ input, textarea { font-family: inherit; }
     box-shadow: 0 12px 40px rgba(0, 101, 141, 0.25);
 }
 
-/* Canvas fills the hero section */
-#hero-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-
 /* ---------- Orbs (legacy - kept for reduced-motion fallback) ---------- */
 .orb {
     position: absolute;

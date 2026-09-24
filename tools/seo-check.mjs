@@ -265,7 +265,6 @@ for (const requiredFile of [
     "assets/brand/tehisabiline-og.png",
     "assets/brand/logo-512.png",
     "assets/css/tailwind.min.css",
-    "vercel.json",
     ".nojekyll"
 ]) {
     assert(existsSync(join(root, requiredFile)), `${requiredFile} is missing.`);
@@ -307,13 +306,6 @@ validateLocalReferences(notFoundHtml, "404.html");
 try {
     const vercel = JSON.parse(readFileSync(join(root, "vercel.json"), "utf8"));
     assert(vercel.trailingSlash === true, "Vercel must normalize directory URLs to the trailing-slash canonicals.");
-} catch (error) {
-    failures.push(`vercel.json is invalid JSON: ${error.message}`);
-}
-
-try {
-    const vercel = JSON.parse(readFileSync(join(root, "vercel.json"), "utf8"));
-    assert(vercel.trailingSlash === true, "Vercel must redirect extensionless paths to trailing-slash canonicals.");
 } catch (error) {
     failures.push(`vercel.json is invalid JSON: ${error.message}`);
 }
