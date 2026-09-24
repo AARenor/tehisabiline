@@ -4,6 +4,4 @@ package.json
 package-lock.json
 tailwind.config.js
 assets/css/tailwind-input.css
-assets/js/hero-gradient.js
-assets/images/
 output/
