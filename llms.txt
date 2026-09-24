@@ -10,6 +10,8 @@ Service area: Estonia
 ## Main service pages
 
 - [Uncensored private AI and cybersecurity audits (homepage)](https://tehisabiline.ee/): customer-controlled local AI without cloud censorship for lawful business use, plus security audits of websites and AI systems with a prioritized fix plan. The private AI is also available as an OpenAI-compatible API with key-based access and usage-based billing (pilot access on request).
+- [Tsenseerimata privaat-AI](https://tehisabiline.ee/privaat-ai/): how customer-controlled private AI works, data location, developer API, fit check, pricing, and written usage boundaries.
+- [Küberturve audit](https://tehisabiline.ee/kuberaudit/): website and AI-system security review, prompt-injection and data-leak testing, plain-language prioritized fix plan.
 - [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine/): workflow automation, integrations, ROI estimation, human review, reliability, and measurement.
 - [Eestikeelne AI-chatbot](https://tehisabiline.ee/ai-chatbot/): website chatbot based on approved company sources, with guardrails and human escalation.
 - [Konkurentide hinnajälgimine ja hinnaseire](https://tehisabiline.ee/hinnajalgimine/): custom price monitoring, product matching, source provenance, change alerts, and reports.

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Küberturve audit veebilehele ja AI-le | Tehisabiline</title>
+    <meta name="description" content="Küberturve audit Eesti ettevõttele: veebilehe ja AI-rakenduse turvaseisu ülevaatus, süstirünnete test ja prioriteetidega parandusplaan tavakeeles.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tehisabiline ÕF">
+    <meta name="theme-color" content="#00658d">
+    <link rel="canonical" href="https://tehisabiline.ee/kuberaudit/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="et_EE">
+    <meta property="og:site_name" content="Tehisabiline">
+    <meta property="og:title" content="Küberturve audit veebilehele ja AI-le | Tehisabiline">
+    <meta property="og:description" content="Turvaseisu ülevaatus, AI süsti- ja lekketest ning parandusplaan tähtsuse järjekorras.">
+    <meta property="og:url" content="https://tehisabiline.ee/kuberaudit/">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tehisabiline – tsenseerimata privaat-AI ja küberturve auditid Eesti ettevõtetele">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Küberturve audit veebilehele ja AI-le | Tehisabiline">
+    <meta name="twitter:description" content="Turvaseisu ülevaatus, AI süstitest ja parandusplaan tähtsuse järjekorras.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
+    <link rel="stylesheet" href="/index.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://tehisabiline.ee/kuberaudit/#service",
+          "url": "https://tehisabiline.ee/kuberaudit/",
+          "name": "Küberturve audit veebilehele ja AI-rakendusele",
+          "serviceType": "Turvaseisu ülevaatus koos parandusplaaniga",
+          "description": "Veebilehe ja AI-rakenduse turvaseisu kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI andmelekke ja süstirünnete kindlus, tulemuseks prioriteetidega parandusplaan.",
+          "provider": {"@id": "https://tehisabiline.ee/#organization"},
+          "areaServed": {"@type": "Country", "name": "Estonia"},
+          "audience": {"@type": "BusinessAudience", "audienceType": "Eesti ettevõtted"}
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://tehisabiline.ee/kuberaudit/#webpage",
+          "url": "https://tehisabiline.ee/kuberaudit/",
+          "name": "Küberturve audit veebilehele ja AI-le | Tehisabiline",
+          "description": "Mida küberturve audit kontrollib, kuidas AI süsti- ja lekketest käib, milline näeb välja parandusplaan ja millest hind sõltub.",
+          "datePublished": "2026-09-24",
+          "dateModified": "2026-09-24",
+          "inLanguage": "et",
+          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
+          "about": {"@id": "https://tehisabiline.ee/kuberaudit/#service"},
+          "author": {"@id": "https://tehisabiline.ee/#organization"},
+          "breadcrumb": {"@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb"},
+          "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png", "width": 1200, "height": 630}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
+            {"@type": "ListItem", "position": 2, "name": "Küberturve audit", "item": "https://tehisabiline.ee/kuberaudit/"}
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://tehisabiline.ee/kuberaudit/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mida küberturve audit kontrollib?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Uuendusi, kasutajaid ja ligipääsuõigusi, paroole ja kaheastmelist kinnitamist, varunduse olemasolu ja taastatavust, turvapäiseid, vormide ja liideste sisendikontrolli ning AI-rakenduse puhul andmelekke ja süstirünnete kindlust."}
+            },
+            {
+              "@type": "Question",
+              "name": "Mis on AI süstirünne ja miks seda testida?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Süstirünne (prompt injection) on katse panna AI pahatahtliku sisendi abil reegleid eirama või tundlikke andmeid avaldama. Test näitab, kas sinu chatbot või assistent peab ründele vastu või vajab lisapiiranguid."}
+            },
+            {
+              "@type": "Question",
+              "name": "Mida ma auditi tulemusena saan?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Tavakeelse raporti, kus iga leid on seotud kontrollitava tõendiga ning järjestatud tähtsuse järgi: mida parandada kohe, mida nädala jooksul ja mida plaani korras. Soovi korral teeme paranduste järel korduskontrolli."}
+            },
+            {
+              "@type": "Question",
+              "name": "Kas audit lõhub midagi ära?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Ei. Audit on ettevaatlik ülevaatus leppelises mahus: loeme seadistusi, kontrollime päiseid ja versioone ning testime sisendeid viisil, mis ei muuda andmeid. Muutvaid tegevusi teeme ainult kirjalikul kokkuleppel."}
+            },
+            {
+              "@type": "Question",
+              "name": "Millest auditi hind sõltub?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Süsteemide arvust, sügavusest (veebileht, AI-rakendus või mõlemad), ligipääsude olemasolust ja korduskontrolli vajadusest. Tasuta kaardistuse järel saab selge pakkumise."}
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+
+    <header class="fixed top-0 w-full z-50 border-b border-white/20" id="navbar">
+        <nav aria-label="Põhinavigatsioon" class="flex justify-between items-center max-w-7xl mx-auto px-6 h-14">
+            <a href="/" class="flex items-center gap-2.5" aria-label="Tehisabiline – avaleht">
+                <img alt="Tehisabiline logo" width="64" height="64" class="w-7 h-7 object-contain" src="/assets/brand/favicon.png">
+                <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-7">
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/privaat-ai/">Privaat-AI</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/kuberaudit/" aria-current="page">Küberaudit</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/meist/">Meist</a>
+                <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="/#contact">Tasuta kaardistus</a>
+            </div>
+            <button class="lg:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="nav-menu-icon" aria-hidden="true">☰</span>
+            </button>
+        </nav>
+        <div class="lg:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/privaat-ai/">Privaat-AI</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/kuberaudit/">Küberaudit</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
+            <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="/#contact">Tasuta kaardistus</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <header class="content-hero">
+            <div class="content-hero-inner">
+                <nav aria-label="Asukoharada" class="breadcrumbs">
+                    <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Küberturve audit</span>
+                </nav>
+                <p class="eyebrow">Veebilehed · AI-rakendused</p>
+                <h1>Küberturve audit, mille tulemus on parandusplaan</h1>
+                <p class="hero-lead">Vaatame üle sinu veebilehe ja AI-rakenduse turvaseisu, testime süstirünnete kindlust ning anname leiud tavakeeles tähtsuse järjekorras.</p>
+                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline ÕF</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-24">24. septembril 2026</time></p>
+            </div>
+        </header>
+
+        <div class="content-main">
+            <div class="content-shell">
+                <article class="content-column">
+                    <section class="lead-answer" aria-labelledby="short-answer">
+                        <h2 id="short-answer">Mis on küberturve audit?</h2>
+                        <p><strong>Küberturve audit</strong> on sinu veebilehe või AI-rakenduse turvaseisu süsteemne ülevaatus: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI puhul andmelekke ja süstirünnete kindlus. Tulemus ei ole hirmutav tehniline paber, vaid <strong>prioriteetidega parandusplaan</strong>, mille iga punkti saab kontrollida ja ära parandada.</p>
+                    </section>
+
+                    <section class="prose-section" id="sisu">
+                        <p class="eyebrow">Kontrollnimekiri</p>
+                        <h2>Mida audit kontrollib?</h2>
+                        <div class="table-wrap">
+                            <table class="comparison-table">
+                                <thead><tr><th scope="col">Valdkond</th><th scope="col">Mida vaatame?</th><th scope="col">Mida saad?</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>Uuendused</strong></td><td>CMS-i, pluginate, teekide ja serveritarkvara versioonid ning teadaolevad haavatavused</td><td>Nimekiri uuendamist vajavast koos kiirusjärjekorraga</td></tr>
+                                    <tr><td><strong>Ligipääsud</strong></td><td>Kasutajakontod, õigused, paroolid, kaheastmeline kinnitamine, vanad kontod</td><td>Koristamisplaan: kelle ligipääs jääb, kelle oma kaob</td></tr>
+                                    <tr><td><strong>Varundus</strong></td><td>Kas varukoopiaid tehakse, kas need on terved ja kas taastamine on proovitud</td><td>Varunduse ja taastamise kontrollplaan</td></tr>
+                                    <tr><td><strong>Turvapäised</strong></td><td>HTTPS-i seadistus ja brauserit kaitsvad päised</td><td>Puuduvate päiste loetelu koos näidisseadistusega</td></tr>
+                                    <tr><td><strong>Sisendid</strong></td><td>Vormide, otsingu ja liideste sisendikontroll levinud rünnete vastu</td><td>Leitud nõrkade kohtade kirjeldus ja parandus</td></tr>
+                                    <tr><td><strong>AI-kiht</strong></td><td>Andmelekke ja süstirünnete (prompt injection) kindlus, logide kord</td><td>Ründetestide tulemus ja piirangute ettepanekud</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="prose-section" id="ai-test">
+                        <p class="eyebrow">AI turvalisus</p>
+                        <h2>Mis on süstirünne ja andmeleke?</h2>
+                        <p><strong>Süstirünne</strong> (prompt injection) on katse panna sinu chatbot või assistent pahatahtliku sisendi abil oma reegleid eirama: avaldama juhiseid, tundlikke andmeid või tegema keelatud toiminguid. <strong>Andmeleke</strong> tähendab, et mudel paljastab treening- või kliendiandmeid, mida ta ei tohiks näidata.</p>
+                        <div class="step-grid">
+                            <div class="number-card"><span>01</span><h3>Reeglite kaardistus</h3><p>Paneme kirja, mida AI tohib ja mida ei tohi – keelatud teemad, andmed ja toimingud.</p></div>
+                            <div class="number-card"><span>02</span><h3>Ründetestid</h3><p>Proovime tüüpilisi süste, rollivahetusi ja andmete väljameelitamise katseid.</p></div>
+                            <div class="number-card"><span>03</span><h3>Logide kontroll</h3><p>Vaatame, mida salvestatakse, kes näeb ja kui kaua säilitatakse.</p></div>
+                            <div class="number-card"><span>04</span><h3>Piirangute plaan</h3><p>Soovitame sisendfiltrid, väljundkontrolli ja inimese kontrollpunkti.</p></div>
+                        </div>
+                        <div class="callout"><strong>Oluline:</strong> testime ainult sinu enda süsteeme kirjaliku loa alusel. Võõraste süsteemide testimist me ei paku.</div>
+                    </section>
+
+                    <section class="prose-section" id="tulemus">
+                        <p class="eyebrow">Tulemus</p>
+                        <h2>Raport, millest saab aru ka mitte-tehnik</h2>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Paranda kohe</h3><p>Kriitilised leiud, mida ründaja saab otse ära kasutada: näiteks uuendamata komponent või avalik admin-liides.</p></div>
+                            <div class="info-card"><h3>Paranda nädalaga</h3><p>Tõsised, kuid keerukamalt kasutatavad nõrkused: näiteks puuduv kaheastmeline kinnitamine.</p></div>
+                            <div class="info-card"><h3>Planeeri ette</h3><p>Hügieen ja vastupidavus: varunduse proovitaastamine, päiste korrastamine, logide kord.</p></div>
+                            <div class="info-card"><h3>Korduskontroll</h3><p>Pärast parandusi kontrollime kriitilised punktid üle, et töö oleks tõendatavalt tehtud.</p></div>
+                        </div>
+                    </section>
+
+                    <section class="prose-section" id="sobivus">
+                        <p class="eyebrow">Sobivus</p>
+                        <h2>Millal audit ära tasub?</h2>
+                        <div class="content-grid">
+                            <div class="info-card fit-card">
+                                <h3>Hea sobivus</h3>
+                                <p>Veebileht võtab vastu tellimusi, makseid või isikuandmeid; kasutusel on AI-chatbot; lehte pole ammu uuendatud või haldaja on vahetunud.</p>
+                            </div>
+                            <div class="info-card not-fit-card">
+                                <h3>Halb sobivus</h3>
+                                <p>Staatiline visiitkaart ilma vormide ja andmeteta, äsja auditeeritud süsteem või ootus, et üks audit asendab pidevat hooldust.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="prose-section" id="piirid">
+                        <p class="eyebrow">Ausad piirid</p>
+                        <h2>Mida audit ei ole?</h2>
+                        <ul>
+                            <li><strong>Ei ole täielik läbitungimistest:</strong> me ei käivita tootmissüsteemide vastu purustavaid ründeid ega kasuta ära leitud nõrkusi andmete muutmiseks.</li>
+                            <li><strong>Ei ole sertifikaat:</strong> raport näitab seisu auditi hetkel ega anna vastavusmärgist ühelegi standardile.</li>
+                            <li><strong>Ei ole 100% garantii:</strong> ükski audit ei leia kõike. Väärtus on teadaolevate riskide sulgemises tähtsuse järjekorras.</li>
+                            <li><strong>Ei ole loata tegevus:</strong> testime ainult sinu süsteeme, kirjalikus mahus ja leppelisel ajal.</li>
+                        </ul>
+                    </section>
+
+                    <section class="prose-section" id="hind">
+                        <p class="eyebrow">Hinna kujunemine</p>
+                        <h2>Millest auditi hind sõltub?</h2>
+                        <p>Hinda mõjutavad süsteemide arv, sügavus (veebileht, AI-rakendus või mõlemad), ligipääsude olemasolu ning see, kas soovid ka paranduste korduskontrolli.</p>
+                        <ul>
+                            <li><strong>Väike ülevaatus:</strong> üks veebileht, põhilised kontrollpunktid, lühike parandusplaan.</li>
+                            <li><strong>Täisaudit:</strong> veebileht koos AI-kihiga, süstirünnete testid, detailne raport.</li>
+                            <li><strong>Korduskontroll:</strong> kriitiliste leidude ülevaatus pärast parandusi.</li>
+                        </ul>
+                        <p>Tasuta kaardistuse järel saad selge pakkumise: maht, sügavus ja ajakava kirjas.</p>
+                    </section>
+
+                    <section class="prose-section" id="faq">
+                        <p class="eyebrow">KKK</p>
+                        <h2>Küsimused küberauditi kohta</h2>
+                        <div class="grid gap-4">
+                            <details class="faq-card"><summary><span>Mida küberturve audit kontrollib?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Uuendusi, kasutajaid ja ligipääsuõigusi, paroole ja kaheastmelist kinnitamist, varunduse olemasolu ja taastatavust, turvapäiseid, vormide ja liideste sisendikontrolli ning AI-rakenduse puhul andmelekke ja süstirünnete kindlust.</p></details>
+                            <details class="faq-card"><summary><span>Mis on AI süstirünne ja miks seda testida?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Süstirünne (prompt injection) on katse panna AI pahatahtliku sisendi abil reegleid eirama või tundlikke andmeid avaldama. Test näitab, kas sinu chatbot või assistent peab ründele vastu või vajab lisapiiranguid.</p></details>
+                            <details class="faq-card"><summary><span>Mida ma auditi tulemusena saan?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tavakeelse raporti, kus iga leid on seotud kontrollitava tõendiga ning järjestatud tähtsuse järgi: mida parandada kohe, mida nädala jooksul ja mida plaani korras. Soovi korral teeme paranduste järel korduskontrolli.</p></details>
+                            <details class="faq-card"><summary><span>Kas audit lõhub midagi ära?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Audit on ettevaatlik ülevaatus leppelises mahus: loeme seadistusi, kontrollime päiseid ja versioone ning testime sisendeid viisil, mis ei muuda andmeid. Muutvaid tegevusi teeme ainult kirjalikul kokkuleppel.</p></details>
+                            <details class="faq-card"><summary><span>Millest auditi hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Süsteemide arvust, sügavusest (veebileht, AI-rakendus või mõlemad), ligipääsude olemasolust ja korduskontrolli vajadusest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
+                        </div>
+                    </section>
+
+                    <section class="prose-section" aria-labelledby="related">
+                        <p class="eyebrow">Seotud lahendused</p>
+                        <h2 id="related">Vaata ka</h2>
+                        <div class="related-links">
+                            <a class="related-card" href="/privaat-ai/"><strong>Tsenseerimata privaat-AI</strong><span>Andmed sinu kätte, vastused sinu reeglite järgi – ka API-na.</span></a>
+                            <a class="related-card" href="/ai-automatiseerimise-naited/"><strong>12 AI automatiseerimise näidet</strong><span>Võrdle praktilisi töövooge, kontrollpunkte ja mõõdikuid.</span></a>
+                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
+                        </div>
+                    </section>
+
+                    <section class="service-cta">
+                        <h2>Kas sinu süsteemid peaks üle vaatama?</h2>
+                        <p>Saada veebilehe aadress ja lühike kirjeldus, mida süsteem teeb. Ütleme tasuta kaardistuses, kas audit annab sulle midagi.</p>
+                        <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold" href="/#contact">Küsi auditi kaardistust</a>
+                    </section>
+                </article>
+
+                <aside class="content-aside" aria-label="Sisukord">
+                    <nav class="toc-card" aria-label="Küberauditi sisukord">
+                        <strong>Sellel lehel</strong>
+                        <a href="#sisu">Mida kontrollime?</a>
+                        <a href="#ai-test">AI ründetestid</a>
+                        <a href="#tulemus">Raport ja plaan</a>
+                        <a href="#sobivus">Sobivuse kontroll</a>
+                        <a href="#piirid">Ausad piirid</a>
+                        <a href="#hind">Hinna kujunemine</a>
+                        <a href="#faq">Küsimused</a>
+                    </nav>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full py-16 bg-deep-navy text-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="col-span-1 md:col-span-2 space-y-5">
+                    <div class="flex items-center gap-3"><img alt="Tehisabiline logo" width="64" height="64" class="w-9 h-9 footer-logo" src="/assets/brand/favicon.png"><span class="text-2xl font-bold font-headline uppercase">Tehisabiline ÕF</span></div>
+                    <p class="text-white/75 max-w-md">Tsenseerimata privaat-AI seaduslikus raamis ja küberturve auditid Eesti ettevõtetele.</p>
+                </div>
+                <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/privaat-ai/">Privaat-AI</a><a href="/kuberaudit/">Küberaudit</a><a href="/">Avaleht</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/ai-automatiseerimise-naited/">AI automatiseerimise näited</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+            </div>
+            <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline ÕF · Tallinn, Eesti</div>
+        </div>
+    </footer>
+
+    <script src="/index.js" defer></script>
+</body>
+</html>

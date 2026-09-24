@@ -72,6 +72,8 @@ The guide includes a seven-question pilot scorecard. It asks whether the work is
 ## Canonical links
 
 - https://tehisabiline.ee/
+- https://tehisabiline.ee/privaat-ai/
+- https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/ai-chatbot/
 - https://tehisabiline.ee/hinnajalgimine/

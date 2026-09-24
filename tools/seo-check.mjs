@@ -48,6 +48,20 @@ const expectedPages = [
         dateType: "AboutPage",
         requiresOrganization: true,
         requiresPublishedDate: true
+    },
+    {
+        file: "privaat-ai/index.html",
+        canonical: `${origin}/privaat-ai/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "kuberaudit/index.html",
+        canonical: `${origin}/kuberaudit/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
     }
 ];
 const expectedUrls = expectedPages.map((page) => page.canonical);
