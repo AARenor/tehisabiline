@@ -19,7 +19,9 @@ Canonical page: https://tehisabiline.ee/
 
 Private AI deployments use open models in the customer's environment (customer server, Estonian cloud, or isolated setup) so conversations and documents are not sent to external model APIs by default. Retention and logging are agreed in writing. Typical uses: document analysis, code assistance, proposal drafting, and customer communication in Estonian and English, with human review for uncertain or high-impact cases.
 
-Cybersecurity audits cover websites or AI applications: updates, access control and passwords, backups, security headers, form/API input validation, and for AI systems data-leakage and prompt-injection robustness. The deliverable is a plain-language, prioritized fix plan, optionally with a re-check. Tehisabiline does not claim 100 percent security or error-free AI.
+Cbersecurity audits cover websites or AI applications: updates, access control and passwords, backups, security headers, form/API input validation, and for AI systems data-leakage and prompt-injection robustness. The deliverable is a plain-language, prioritized fix plan, optionally with a re-check. Tehisabiline does not claim 100 percent security or error-free AI.
+
+The private AI is also offered as an API for developers: an OpenAI-compatible chat-completions endpoint with key-based access, rate limits, usage-based billing, Estonian hosting, and an optional no-logs mode. During the pilot phase, access is granted on request.
 
 ## Service 1: AI automation
 

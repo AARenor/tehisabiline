@@ -120,6 +120,15 @@
         },
         {
           "@type": "Service",
+          "@id": "https://tehisabiline.ee/#api",
+          "url": "https://tehisabiline.ee/#api",
+          "name": "Tsenseerimata privaat-AI API",
+          "serviceType": "OpenAI-ühilduv rakendusliides privaatsele tehisintellektile",
+          "provider": {"@id": "https://tehisabiline.ee/#organization"},
+          "areaServed": {"@type": "Country", "name": "Estonia"}
+        },
+        {
+          "@type": "Service",
           "@id": "https://tehisabiline.ee/#kuberaudit",
           "url": "https://tehisabiline.ee/#kuberaudit",
           "name": "Küberturve audit veebilehele ja AI-süsteemile",
@@ -165,6 +174,14 @@
             },
             {
               "@type": "Question",
+              "name": "Kas pakute tsenseerimata AI-d ka API-na?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jah. OpenAI-ga ühilduv otspunkt annab rakendusele eestikeelsed vastused ilma pilvefiltrita, võtmepõhise ligipääsu ja kasutus-põhise arveldusega. Pilootfaasis avatakse ligipääs taotluse alusel."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Kui palju tsenseerimata AI või audit maksab?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -199,6 +216,7 @@
         </a>
         <div class="hidden lg:flex items-center space-x-8">
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#teenused">Teenused</a>
+            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#api">API</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#kuberaudit">Küberaudit</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#faq">KKK</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/meist/">Meist</a>
@@ -212,6 +230,7 @@
     <!-- Mobile menu -->
     <div class="lg:hidden hidden flex-col items-center gap-0 pb-8 pt-4 backdrop-blur-2xl transition-all duration-300 mobile-nav-bg" id="mobile-menu">
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#teenused">Teenused</a>
+        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#api">API</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#kuberaudit">Küberaudit</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#faq">KKK</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
@@ -320,6 +339,10 @@
                             Miks privaatne? <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
+                    <figure class="rounded-3xl overflow-hidden border border-sky-100/60">
+                        <img alt="Illustratsioon: avatud arvuti sisemus Tesla V100 videokaartidega" width="1024" height="536" class="w-full object-cover" src="/assets/images/tesla-v100-server.jpg" loading="lazy">
+                        <figcaption class="bg-white/80 px-5 py-3 text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Päris riistvara sinu privaatse AI taga</figcaption>
+                    </figure>
                 </div>
                 <div class="bg-sky-50/30 rounded-3xl p-5 md:p-8 relative border border-sky-100/50">
                     <div class="space-y-6" id="chat-demo">
@@ -406,6 +429,43 @@
                             <span>Korduskontroll hinnas</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API -->
+        <div class="premium-card rounded-4xl p-6 md:p-12 mt-12 reveal" id="api">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div class="space-y-6">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Lisaks · Arendajatele</p>
+                    <h3 class="text-4xl font-headline font-black text-deep-navy">Tsenseerimata AI ka API-na</h3>
+                    <p class="text-on-surface-variant font-light leading-relaxed">
+                        Ühenda oma äpp otse meie privaatse mudeliga. OpenAI-ga ühilduv otspunkt, eestikeelsed vastused ilma pilvefiltrita ning võtmepõhine ligipääs kasutus-põhise arveldusega. Pilootfaasis avame ligipääsu taotluse alusel.
+                    </p>
+                    <ul class="space-y-4 text-left">
+                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            OpenAI-ühilduv – kood töötab paari reaga
+                        </li>
+                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            API-võti, limiidid ja läbipaistev arveldus
+                        </li>
+                        <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            Eesti majutus ja logideta režiim valikuna
+                        </li>
+                    </ul>
+                    <a href="#contact" class="btn-premium px-8 py-4 rounded-full text-xs font-bold inline-flex">Küsi API-võtit</a>
+                </div>
+                <div class="bg-slate-50 border border-slate-200/70 rounded-3xl p-6 overflow-x-auto">
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-on-surface-variant/60 mb-4">Näide</p>
+                    <pre class="text-sm leading-relaxed text-deep-navy font-mono whitespace-pre-wrap"><code>curl https://api.tehisabiline.ee/v1/chat/completions \
+  -H "Authorization: Bearer SINU-VOTI" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "tehisabiline-privaat",
+       "messages": [{"role": "user",
+         "content": "Tere! Vasta eesti keeles."}]}'</code></pre>
                 </div>
             </div>
         </div>
@@ -580,6 +640,15 @@
             </details>
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+                    <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas pakute tsenseerimata AI-d ka API-na?</h3>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                </summary>
+                <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
+                    Jah. OpenAI-ga ühilduv otspunkt annab sinu äpile eestikeelsed vastused ilma pilvefiltrita, võtmepõhise ligipääsu ja kasutus-põhise arveldusega. Pilootfaasis küsi võtit kontaktvormi kaudu.
+                </p>
+            </details>
+            <details class="premium-card rounded-3xl p-8 group reveal">
+                <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui palju see maksab?</h3>
                     <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
                 </summary>
@@ -669,7 +738,7 @@
                 </div>
                 <div class="space-y-3">
                     <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="message">Sõnum</label>
-                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="message" name="message" placeholder="Nt: tahan privaatset AI-d pakkumiste kirjutamiseks / soovin oma e-poele turvauditit" required rows="3"></textarea>
+                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="message" name="message" placeholder="Nt: tahan privaatset AI-d pakkumiste kirjutamiseks / soovin API-võtit / soovin oma e-poele turvauditit" required rows="3"></textarea>
                 </div>
                 <button class="w-full btn-premium py-6 rounded-full font-bold text-sm mt-8" type="submit">
                     Saada päring
@@ -704,6 +773,7 @@
                 <p class="font-bold text-deep-navy uppercase text-sm tracking-[0.3em]">Teenused</p>
                 <nav aria-label="Teenuste lingid" class="flex flex-col space-y-4">
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#privaat-ai">Tsenseerimata privaat-AI</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#api">Privaat-AI API</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#kuberaudit">Küberturve audit</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/ai-automatiseerimine/">AI automatiseerimine</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/ai-chatbot/">AI-chatbot</a>
