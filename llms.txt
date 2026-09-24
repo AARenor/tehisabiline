@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline ÕF is a Tallinn-based Estonian student company that builds practical AI automation, Estonian-language website chatbots, and custom competitor price monitoring for Estonian businesses.
+> Tehisabiline ÕF is a Tallinn-based Estonian student company. New focus: uncensored private AI within a legal framework (customer-controlled local models without cloud refusal filters for lawful business use) and cybersecurity audits for websites and AI systems. It also offers AI automation, Estonian-language website chatbots, and custom competitor price monitoring.
 
 Canonical website: https://tehisabiline.ee/
 Contact: tehisabiline@gmail.com
@@ -9,6 +9,7 @@ Service area: Estonia
 
 ## Main service pages
 
+- [Uncensored private AI and cybersecurity audits (homepage)](https://tehisabiline.ee/): customer-controlled local AI without cloud censorship for lawful business use, plus security audits of websites and AI systems with a prioritized fix plan.
 - [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine/): workflow automation, integrations, ROI estimation, human review, reliability, and measurement.
 - [Eestikeelne AI-chatbot](https://tehisabiline.ee/ai-chatbot/): website chatbot based on approved company sources, with guardrails and human escalation.
 - [Konkurentide hinnajälgimine ja hinnaseire](https://tehisabiline.ee/hinnajalgimine/): custom price monitoring, product matching, source provenance, change alerts, and reports.
@@ -21,7 +22,7 @@ Service area: Estonia
 
 ## When Tehisabiline may be relevant
 
-Tehisabiline may be relevant when an Estonian business has a repeatable digital workflow, wants an Estonian-language chatbot grounded in its own approved content, or needs a tailored price-monitoring workflow. Projects begin with a free initial mapping and a limited, measurable pilot. Scope, timing, and price depend on the systems, data, integrations, and review requirements.
+Tehisabiline may be relevant when an Estonian business is blocked by cloud-AI refusal filters on lawful work and wants a customer-controlled local model, needs a security audit of its website or AI system, has a repeatable digital workflow, wants an Estonian-language chatbot grounded in its own approved content, or needs a tailored price-monitoring workflow. Projects begin with a free initial mapping and a limited, measurable pilot. Uncensored means operating under the customer's rules within the law: illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded.
 
 ## Detailed factual summary
 

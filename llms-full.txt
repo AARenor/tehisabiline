@@ -1,15 +1,25 @@
 # Tehisabiline: factual service overview
 
-Last materially reviewed: 2026-08-12
+Last materially reviewed: 2026-09-24
 Canonical source: https://tehisabiline.ee/
 
 ## Organization
 
 Tehisabiline ÕF is a student company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
 
+New focus since September 2026: uncensored private AI within a legal framework, plus cybersecurity audits for websites and AI systems. "Uncensored" means a customer-controlled local model that answers lawful business questions under the customer's rules instead of applying a cloud provider's refusal filters. Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
+
 The organization, its working principles, content responsibility, and claim policy are described at https://tehisabiline.ee/meist/. Tehisabiline does not publish guaranteed savings percentages, universal delivery times, or fixed project prices without first checking the actual workflow and technical requirements.
 
 Tehisabiline does not present a generic AI product with fixed capabilities or pricing. Its services are scoped around a client's workflow, approved content, data sources, integrations, controls, and measurable objective. An initial mapping is free. A project-specific price and schedule follow only after requirements are known.
+
+## Service 0: uncensored private AI and cybersecurity audits
+
+Canonical page: https://tehisabiline.ee/
+
+Private AI deployments use open models in the customer's environment (customer server, Estonian cloud, or isolated setup) so conversations and documents are not sent to external model APIs by default. Retention and logging are agreed in writing. Typical uses: document analysis, code assistance, proposal drafting, and customer communication in Estonian and English, with human review for uncertain or high-impact cases.
+
+Cybersecurity audits cover websites or AI applications: updates, access control and passwords, backups, security headers, form/API input validation, and for AI systems data-leakage and prompt-injection robustness. The deliverable is a plain-language, prioritized fix plan, optionally with a re-check. Tehisabiline does not claim 100 percent security or error-free AI.
 
 ## Service 1: AI automation
 
