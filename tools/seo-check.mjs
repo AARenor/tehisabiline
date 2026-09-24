@@ -62,6 +62,13 @@ const expectedPages = [
         schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
+    },
+    {
+        file: "privaatsus/index.html",
+        canonical: `${origin}/privaatsus/`,
+        schemaTypes: ["WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
     }
 ];
 const expectedUrls = expectedPages.map((page) => page.canonical);
