@@ -28,4 +28,4 @@
 ## Live-kontrollid (peale pushi)
 
 - commands: curl avaleht/mudelid/kuberaudit/kasutusjuhud + vana URL + sitemap; npm run submit:indexnow
-- result: (täidetakse peale pushi)
+- result: avaleht 200, kasutusjuhud 200, vana URL -> redirect leht ("Teisaldatud: Küber-AI kasutusjuhud"), Qwen 3.8 = 0, Qwen 27B = 1, varajases etapis = 1 (mudelid), GPAI = 1 (privaatsus), (tulekul) = 1 (avaleht), IndexNow 6 URL-i accepted.
