@@ -16,6 +16,7 @@ const expectedPages = [
     {
         file: "ai-automatiseerimine/index.html",
         canonical: `${origin}/ai-automatiseerimine/`,
+        noindex: true,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
@@ -23,6 +24,7 @@ const expectedPages = [
     {
         file: "ai-chatbot/index.html",
         canonical: `${origin}/ai-chatbot/`,
+        noindex: true,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
@@ -30,6 +32,7 @@ const expectedPages = [
     {
         file: "hinnajalgimine/index.html",
         canonical: `${origin}/hinnajalgimine/`,
+        noindex: true,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
@@ -71,7 +74,8 @@ const expectedPages = [
         requiresPublishedDate: true
     }
 ];
-const expectedUrls = expectedPages.map((page) => page.canonical);
+const expectedUrls = expectedPages.filter((page) => !page.noindex).map((page) => page.canonical);
+const noindexUrls = expectedPages.filter((page) => page.noindex).map((page) => page.canonical);
 const failures = [];
 const seenTitles = new Map();
 const seenDescriptions = new Map();
@@ -166,6 +170,9 @@ for (const page of expectedPages) {
     assert(!html.includes("hero-gradient.js") && !html.includes("hero-canvas"), `${label}: CPU-heavy canvas hero must not be loaded.`);
     assert(!/(80% vähem|-80%|säästab kuni 80%|98\/100)/i.test(stripHtml(html)), `${label}: contains an unsupported performance claim.`);
     assert(metaValue(html, "robots").includes("max-image-preview:large"), `${label}: robots meta should permit large image previews.`);
+    const robotsParts = metaValue(html, "robots").split(/\s*,\s*/);
+    if (page.noindex) assert(robotsParts.includes("noindex"), `${label}: retired page must use noindex.`);
+    else assert(!robotsParts.includes("noindex"), `${label}: indexable page must not use noindex.`);
 
     for (const key of ["og:type", "og:locale", "og:site_name", "og:title", "og:description", "og:url", "og:image", "og:image:alt"]) {
         assert(Boolean(metaValue(html, key)), `${label}: ${key} metadata is missing.`);
@@ -283,6 +290,7 @@ const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((mat
 }));
 const sitemapUrls = sitemapEntries.map((entry) => entry.loc);
 assert(JSON.stringify(sitemapUrls) === JSON.stringify(expectedUrls), `Sitemap URLs differ from expected canonical URLs: ${sitemapUrls.join(", ")}.`);
+for (const noindexed of noindexUrls) assert(!sitemapUrls.includes(noindexed), `Sitemap must not list noindexed URL: ${noindexed}.`);
 for (const {loc, lastmod} of sitemapEntries) {
     assert(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap lastmod must use YYYY-MM-DD for ${loc}.`);
     assert(!lastmod || lastmod <= today, `Sitemap lastmod cannot be in the future: ${lastmod}.`);
