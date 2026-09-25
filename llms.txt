@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ is a Tallinn-based Estonian company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent swarms.
+> Tehisabiline OÜ is a Tallinn-based Estonian company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent-driven audits.
 
 Canonical website: https://tehisabiline.ee/
 Contact: tehisabiline@gmail.com
@@ -9,9 +9,9 @@ Service area: Estonia
 
 ## Main service pages
 
-- [Local AI, hosted API and agent-driven security (homepage)](https://tehisabiline.ee/): sovereign refusal-free AI models fine-tuned for cybersecurity hosted in Estonia, OpenAI-compatible API for security-tool developers, and human-reviewed agent swarms for vulnerability audits.
+- [Sovereign cyber-AI, API and agent-driven audits (homepage)](https://tehisabiline.ee/): sovereign refusal-free AI models fine-tuned for cybersecurity hosted in Estonia, OpenAI-compatible API for security-tool developers, and human-reviewed agent-driven vulnerability audits.
 - [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): the newest and most capable uncensored models, fine-tuned for security work, hosted in Estonia, plus the developer API.
-- [Agentparvedega auditid](https://tehisabiline.ee/kuberaudit/): human-reviewed agent-swarm vulnerability audits with a prioritized fix plan.
+- [Agendipõhised auditid](https://tehisabiline.ee/kuberaudit/): human-reviewed agent-driven vulnerability audits with a prioritized fix plan.
 
 Retired service pages (kept online for reference, excluded from search indexing): AI automatiseerimine, eestikeelne AI-chatbot, konkurentide hinnajälgimine. Current focus is private AI, the developer API, and security audits.
 - [Homepage and contact](https://tehisabiline.ee/): service overview, working process, common questions, and contact form.
@@ -24,7 +24,7 @@ Retired service pages (kept online for reference, excluded from search indexing)
 
 ## When Tehisabiline may be relevant
 
-Tehisabiline may be relevant when a developer needs a refusal-free API for security tooling, or when an Estonian business wants a professional vulnerability audit powered by a human-reviewed agent swarm. Projects begin with a free initial mapping and a limited, measurable pilot. All work stays within the law: illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded.
+Tehisabiline may be relevant when a developer needs a refusal-free API for security tooling, or when an Estonian business wants a professional vulnerability audit powered by a human-reviewed agent-driven audit. Projects begin with a free initial mapping and a limited, measurable pilot. All work stays within the law: illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded.
 
 ## Detailed factual summary
 
