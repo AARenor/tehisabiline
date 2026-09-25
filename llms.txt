@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline ÕF is a Tallinn-based Estonian student company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent swarms.
+> Tehisabiline OÜ is a Tallinn-based Estonian company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent swarms.
 
 Canonical website: https://tehisabiline.ee/
 Contact: tehisabiline@gmail.com

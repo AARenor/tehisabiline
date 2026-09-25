@@ -212,7 +212,7 @@ for (const page of expectedPages) {
                 const organization = graph.find((item) => item["@type"] === "Organization");
                 const organizationLogo = typeof organization?.logo === "string" ? organization.logo : organization?.logo?.url;
                 assert(organizationLogo === `${origin}/assets/brand/logo-512.png`, `${label}: Organization logo must use the 512×512 asset.`);
-                assert(organization?.name === "Tehisabiline ÕF", `${label}: Organization name must be Tehisabiline ÕF.`);
+                assert(organization?.name === "Tehisabiline OÜ", `${label}: Organization name must be Tehisabiline OÜ.`);
                 assert(organization?.url === `${origin}/`, `${label}: Organization URL must use the canonical homepage.`);
             }
 
@@ -320,7 +320,7 @@ try {
 
 try {
     const manifest = JSON.parse(readFileSync(join(root, "site.webmanifest"), "utf8"));
-    assert(manifest.name === "Tehisabiline ÕF", "Manifest should use the full organization name.");
+    assert(manifest.name === "Tehisabiline OÜ", "Manifest should use the full organization name.");
     assert(manifest.lang === "et", "Manifest language should be Estonian.");
     assert(manifest.start_url === "/", "Manifest start_url should be the canonical root.");
     assert(Array.isArray(manifest.icons) && manifest.icons.length >= 3, "Manifest should define all favicon sizes.");

@@ -5,7 +5,7 @@ Canonical source: https://tehisabiline.ee/
 
 ## Organization
 
-Tehisabiline ÕF is a student company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
+Tehisabiline OÜ is an Estonian company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
 
 Current model: sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. An OpenAI-compatible API for developers building security tools, alongside professional vulnerability audits powered by human-reviewed agent swarms. Customer queries stay in Estonia, not in big-cloud servers. Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
 
