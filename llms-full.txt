@@ -7,21 +7,21 @@ Canonical source: https://tehisabiline.ee/
 
 Tehisabiline ÕF is a student company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
 
-Current model since September 2026: on-site local-AI computer builds (the team comes over, assembles and configures the machine), uncensored AI hosted on the company's own hardware in Estonia and offered as an OpenAI-compatible API, and agent-driven cybersecurity (audits, injection/leak testing, monitoring with a prioritized fix plan). Customer data goes to Tehisabiline in Estonia, not to big-cloud servers. Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
+Current model: sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. An OpenAI-compatible API for developers building security tools, alongside professional vulnerability audits powered by human-reviewed agent swarms. Customer queries stay in Estonia, not in big-cloud servers. Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
 
 The organization, its working principles, content responsibility, and claim policy are described at https://tehisabiline.ee/meist/. Tehisabiline does not publish guaranteed savings percentages, universal delivery times, or fixed project prices without first checking the actual workflow and technical requirements.
 
 Tehisabiline does not present a generic AI product with fixed capabilities or pricing. Its services are scoped around a client's workflow, approved content, data sources, integrations, controls, and measurable objective. An initial mapping is free. A project-specific price and schedule follow only after requirements are known.
 
-## Service 0: local-AI builds, hosted API and agent-driven security
+## Service 0: sovereign cyber-AI, API and agent-swarm audits
 
 Canonical page: https://tehisabiline.ee/
 
-Local-AI computer builds: the team visits the customer, selects GPU and parts within budget, assembles the machine, installs models, tunes Estonian language support, and trains the customer. The computer stays with the customer.
+Sovereign, refusal-free AI models fine-tuned for cybersecurity tasks (vulnerabilities, logs, configurations, adversarial testing), running on the company's own hardware in Estonia.
 
-Hosted uncensored API: open models run on the company's own servers in Estonia and are offered through an OpenAI-compatible chat-completions endpoint with key-based access, rate limits, and usage-based billing. An optional no-logs mode keeps no query content. Pilot access is granted on request.
+Hosted API: the newest and most capable uncensored models served through an OpenAI-compatible chat-completions endpoint with key-based access, rate limits, and usage-based billing for developers building security tools. An optional no-logs mode keeps no query content. Pilot access is granted on request.
 
-Agent-driven cybersecurity: AI agents review the customer's systems under written permission — updates, access control, backups, security headers, input validation, data-leakage and prompt-injection robustness — and deliver a plain-language, prioritized fix plan with optional re-checking. Tehisabiline does not claim 100 percent security or error-free AI.
+Agent-swarm audits: professional vulnerability audits performed by swarms of AI agents under the customer's written permission — updates, access control, backups, headers, input validation, data-leakage and prompt-injection robustness. Every significant finding passes human review, and delivery is a plain-language, prioritized fix plan with optional re-checking. Tehisabiline does not claim 100 percent security or error-free AI.
 
 ## Service 1: AI automation
 
@@ -72,7 +72,7 @@ The guide includes a seven-question pilot scorecard. It asks whether the work is
 ## Canonical links
 
 - https://tehisabiline.ee/
-- https://tehisabiline.ee/privaat-ai/
+- https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/ai-chatbot/

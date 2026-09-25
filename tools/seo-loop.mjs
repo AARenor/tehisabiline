@@ -31,7 +31,7 @@ const STALE_DAYS = 180;
 const HEAVY_IMG_KB = 200;
 const DEAD_KB = 50;
 const LAZY_MIN_WIDTH = 400;
-const MONEY_PAGES = ["/privaat-ai/", "/kuberaudit/"];
+const MONEY_PAGES = ["/mudelid/", "/kuberaudit/"];
 const MONEY_MIN_INBOUND = 5;
 const SKIP_DIRS = new Set([".git", ".opencode", ".playwright-cli", ".vercel", "node_modules", "output", "tools"]);
 

@@ -53,8 +53,8 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
-        file: "privaat-ai/index.html",
-        canonical: `${origin}/privaat-ai/`,
+        file: "mudelid/index.html",
+        canonical: `${origin}/mudelid/`,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
