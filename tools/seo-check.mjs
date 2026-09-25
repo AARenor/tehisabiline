@@ -38,8 +38,8 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
-        file: "ai-automatiseerimise-naited/index.html",
-        canonical: `${origin}/ai-automatiseerimise-naited/`,
+        file: "kasutusjuhud/index.html",
+        canonical: `${origin}/kasutusjuhud/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
@@ -246,18 +246,18 @@ for (const page of expectedPages) {
     if (page.canonical !== `${origin}/meist/`) {
         assert(/<a\b[^>]*href=["']\/meist\/["']/i.test(html), `${page.file}: must link to the organization and editorial page.`);
     }
-    if (page.canonical !== `${origin}/ai-automatiseerimise-naited/`) {
-        assert(/<a\b[^>]*href=["']\/ai-automatiseerimise-naited\/["']/i.test(html), `${page.file}: must link to the practical automation guide.`);
+    if (page.canonical !== `${origin}/kasutusjuhud/`) {
+        assert(/<a\b[^>]*href=["']\/kasutusjuhud\/["']/i.test(html), `${page.file}: must link to the cyber-AI use-cases guide.`);
     }
 }
 
-const guideHtml = readFileSync(join(root, "ai-automatiseerimise-naited/index.html"), "utf8");
+const guideHtml = readFileSync(join(root, "kasutusjuhud/index.html"), "utf8");
 for (const source of [
-    "https://www.ttja.ee/ariklient/ohutus/tooted-teenused/tehisintellektisusteemid",
-    "https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems",
-    "https://www.aki.ee/uudised/aki-veebilehel-vastab-nuud-kusimustele-tehisarul-pohinev-burokratt"
+    "https://attack.mitre.org/",
+    "https://genai.owasp.org/llm-top-10/",
+    "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai"
 ]) {
-    assert(guideHtml.includes(`href="${source}"`), `Automation guide must retain its primary source link: ${source}`);
+    assert(guideHtml.includes(`href="${source}"`), `Use-cases guide must retain its primary source link: ${source}`);
 }
 
 for (const requiredFile of [

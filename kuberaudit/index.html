@@ -77,7 +77,7 @@
             {
               "@type": "Question",
               "name": "Kuidas agendipõhine audit käib?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja: uuendused, ligipääsud, süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja saad parandusplaani tähtsuse järjekorras."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja: uuendused, ligipääsud, süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja saad parandusplaani tähtsuse järjekorras. Sinu andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele."}
             },
             {
               "@type": "Question",
@@ -120,7 +120,7 @@
                 <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
             </a>
             <div class="hidden lg:flex items-center space-x-7">
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/mudelid/">Mudelid</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/mudelid/">Küber-AI mudelid</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/kuberaudit/" aria-current="page">Auditid</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/meist/">Meist</a>
                 <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="/#contact">Tasuta kaardistus</a>
@@ -130,8 +130,8 @@
             </button>
         </nav>
         <div class="lg:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
-            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/mudelid/">Mudelid</a>
-            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/kuberaudit/">Auditid</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/mudelid/">Küber-AI mudelid</a>
+            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/kuberaudit/">Küberaudit</a>
             <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
             <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="/#contact">Tasuta kaardistus</a>
         </div>
@@ -145,7 +145,7 @@
                 </nav>
                 <p class="eyebrow">Agendipõhine · Inimese kontroll</p>
                 <h1>Agendipõhised haavatavuste auditid</h1>
-                <p class="hero-lead">Professionaalne audit, kus agendipõhised testid käivad nagu ründaja – ja inimene vaatab iga olulise leiu üle. Tulemus on parandusplaan, mitte hirmujutt.</p>
+                <p class="hero-lead">Professionaalne audit, kus agendipõhised testid käivad nagu ründaja – ja inimene vaatab iga olulise leiu üle. Tulemus on parandusplaan, mitte hirmujutt. Testid katavad muu hulgas koodianalüüsi, ründepayload'ide käsitlust ja red-teaming-harjutusi.</p>
                 <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-25">25. septembril 2026</time></p>
             </div>
         </header>
@@ -167,9 +167,10 @@
                                 <tbody>
                                     <tr><td><strong>Uuendused</strong></td><td>Versioonid, teadaolevad haavatavused, unustatud komponendid</td><td>Uuendamisplaan kiirusjärjekorras</td></tr>
                                     <tr><td><strong>Ligipääsud</strong></td><td>Kontod, õigused, paroolid, 2FA, vanad kasutajad</td><td>Koristamisplaan: kes jääb, kes kaob</td></tr>
-                                    <tr><td><strong>Varundus</strong></td><td>Kas koopiaid tehakse ja kas taastamine töötab</td><td>Varunduse kontrollplaan</td></tr>
-                                    <tr><td><strong>Veebiturve</strong></td><td>HTTPS, päised, vormide ja liideste sisendikontroll</td><td>Puuduste loetelu koos näidislahendusega</td></tr>
-                                    <tr><td><strong>AI-süstid</strong></td><td>Süstirünnete ja andmelekete kindlus sinu AI-rakendustes</td><td>Ründetestide tulemus ja piirangute plaan</td></tr>
+                                    <tr><td><strong>API-loogika</strong></td><td>Autentimise loogika, õiguste kontroll, rate limits</td><td>Leitud loogikavead ja nende parandus</td></tr>
+                                    <tr><td><strong>HTTP-turve</strong></td><td>Turvapäised, HTTPS, vormide ja liideste sisendikontroll</td><td>Puuduste loetelu koos näidislahendusega</td></tr>
+                                    <tr><td><strong>Süstiründed</strong></td><td>Süstirünnete (prompt injection) pinnad sinu AI-rakendustes</td><td>Ründetestide tulemus ja piirangute plaan</td></tr>
+                                    <tr><td><strong>Andmeleke</strong></td><td>Andmete eksfiltreerimise vektorid ja logide kord</td><td>Lekketestide tulemus ja kõrvaldamise plaan</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -180,10 +181,10 @@
                         <h2>Miks inimene vahele jääb?</h2>
                         <p>Agendid on kiired, aga nad ei vastuta. Seepärast käib iga oluline leid enne raportit inimese käest läbi: kas leid peab paika, kui tõsine see päriselt on ja mis on mõistlik parandus. Valehäire raportisse ei lähe.</p>
                         <div class="step-grid">
-                            <div class="number-card"><span>01</span><h3>Parv testib</h3><p>Agendid katavad pinna sinu kirjaliku loa mahus.</p></div>
-                            <div class="number-card"><span>02</span><h3>Inimene kontrollib</h3><p>Iga oluline leid kinnitatakse ja hinnatakse käsitsi.</p></div>
-                            <div class="number-card"><span>03</span><h3>Plaan valmib</h3><p>Leiud järjestatakse: kohe, nädalaga, plaani korras.</p></div>
-                            <div class="number-card"><span>04</span><h3>Korduskontroll</h3><p>Pärast parandusi kontrollime kriitilised punktid üle.</p></div>
+                            <div class="number-card"><span>01</span><h3>Pind</h3><p>Agendid kaardistavad sihtmärgi: süstiründepinnad (prompt injection), API autentimisloogika, rate limits ja HTTP turvapäised.</p></div>
+                            <div class="number-card"><span>02</span><h3>Süvakontroll</h3><p>Testime andmete eksfiltreerimise vektoreid ja nõrku kohti sinu kirjaliku loa mahus.</p></div>
+                            <div class="number-card"><span>03</span><h3>Inimene kontrollib</h3><p>Iga oluline leid kinnitatakse ja hinnatakse käsitsi, valehäired jäävad raportist välja.</p></div>
+                            <div class="number-card"><span>04</span><h3>Plaan valmib</h3><p>Leiud järjestatakse: kohe, nädalaga, plaani korras – koos korduskontrolliga.</p></div>
                         </div>
                         <div class="callout"><strong>Oluline:</strong> auditeerime ainult sinu enda süsteeme kirjaliku loa alusel. Võõraste süsteemide testimist me ei paku – ilma eranditeta.</div>
                     </section>
@@ -218,7 +219,7 @@
                         <p class="eyebrow">KKK</p>
                         <h2>Küsimused auditite kohta</h2>
                         <div class="grid gap-4">
-                            <details class="faq-card"><summary><span>Kuidas agendipõhine audit käib?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja: uuendused, ligipääsud, süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja saad parandusplaani tähtsuse järjekorras.</p></details>
+                            <details class="faq-card"><summary><span>Kuidas agendipõhine audit käib?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja: uuendused, ligipääsud, süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja saad parandusplaani tähtsuse järjekorras. Sinu andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele.</p></details>
                             <details class="faq-card"><summary><span>Mille poolest erineb see tavalisest auditist?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tavaline audit on ühe inimese ühekordne pilt. Agendipõhine töö katab rohkem pinda lühema ajaga ning inimene keskendub leidude kontrollimisele, mitte käsitsi klõpsimisele.</p></details>
                             <details class="faq-card"><summary><span>Kas AI teeb otsuseid üksi?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Agendid koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid – eriti kriitiline – vaadatakse üle inimese poolt enne raportisse minekut.</p></details>
                             <details class="faq-card"><summary><span>Kas audit lõhub midagi ära?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Testime ettevaatlikult leppelises mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult kirjalikul kokkuleppel.</p></details>
@@ -232,7 +233,7 @@
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
                             <a class="related-card" href="/mudelid/"><strong>Küber-AI mudelid</strong><span>Tsenseerimata mudelid turvatööle ja API arendajatele.</span></a>
-                            <a class="related-card" href="/ai-automatiseerimise-naited/"><strong>12 AI automatiseerimise näidet</strong><span>Võrdle praktilisi töövooge, kontrollpunkte ja mõõdikuid.</span></a>
+                            <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>12 praktilist kasutusjuhtu turvatöös – kontrollpunktid ja mõõdikud.</span></a>
                             <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
                         </div>
                     </section>
@@ -265,8 +266,8 @@
                     <div class="flex items-center gap-3"><img alt="Tehisabiline logo" width="64" height="64" class="w-9 h-9 footer-logo" src="/assets/brand/favicon.png"><span class="text-2xl font-bold font-headline uppercase">Tehisabiline OÜ</span></div>
                     <p class="text-white/75 max-w-md">Tsenseerimata küber-AI mudelid Eestis. API turvatööriistadele. Agendipõhised auditid.</p>
                 </div>
-                <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/mudelid/">Küber-AI mudelid</a><a href="/kuberaudit/">Auditid</a><a href="/">Avaleht</a></nav></div>
-                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/ai-automatiseerimise-naited/">AI automatiseerimise näited</a><a href="/privaatsus/">Privaatsus ja küpsised</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/mudelid/">Küber-AI mudelid</a><a href="/kuberaudit/">Küberaudit</a><a href="/">Avaleht</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a><a href="/privaatsus/">Privaatsus ja küpsised</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
             </div>
             <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline OÜ · Tallinn, Eesti</div>
         </div>

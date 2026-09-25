@@ -92,12 +92,22 @@
             {
               "@type": "Question",
               "name": "Milliseid mudeleid kasutate?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Muuhulgas Qwen 3.8 27B – 27 miljardi parameetriga avatud mudel, mis jookseb meie riistvaral kiiresti. Iga töö jaoks valitakse tugevaim mudel."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Avatud kaaludega tipptasemel mudeleid, sh Qwen 27B tsenseerimata lineup – võimekus läheneb frontier-tasemele ja jookseb meie riistvaral kiiresti. Mudelid on eeltreenitud avalikel andmestikel."}
             },
             {
               "@type": "Question",
               "name": "Kus mu andmed asuvad?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Meie riistvaral Eestis. Soovi korral saab logideta režiimi, kus päringute sisu ei säilitata."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Meie riistvaral Eestis. Töötleme ainult sinu esitatud sisendit: andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele."}
+            },
+            {
+              "@type": "Question",
+              "name": "Kuidas on lood AI Actiga?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Meie avatud kaaludega mudelitel põhinevad API-d liigituvad üldotstarbelise AI (GPAI) kategooriasse ega kuulu kõrge riskiga süsteemide hulka. Hoiame tehnilist dokumentatsiooni, hindame teadaolevaid riske ja hoiame kasutuse läbipaistva."}
+            },
+            {
+              "@type": "Question",
+              "name": "Miks pilv keeldub legitiimsest turvatööst?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Suured pilvemudelid rakendavad laiu keeldumisfiltreid, mis tabavad ka seaduslikku tööd: koodianalüüsi, ründepayload'ide uurimist või red-teaming-harjutusi. Meie mudelid vastavad neile sinu reeglite järgi ja seaduslikus raamis."}
             },
             {
               "@type": "Question",
@@ -155,7 +165,7 @@
                 <article class="content-column">
                     <section class="lead-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis teeb mudeli küber-AI-ks?</h2>
-                        <p>Kolm asja: <strong>peenhäälestus turvaülesannetele</strong> (haavatavused, logid, konfiguratsioonid), <strong>refusal-free käitumine</strong> seadusliku töö puhul ning <strong>majutus meie riistvaral Eestis</strong>. Mootoriks on uusimad ja võimekaimad <em>uncensored</em> mudelid – näiteks kiire Qwen 3.8 27B, 27 miljardi parameetriga avatud mudel, mis jookseb meie riistvaral. Tulemus on tööriist, mis aitab seal, kus üldine pilve-AI keeldub või eksib.</p>
+                        <p>Kolm asja: <strong>peenhäälestus turvaülesannetele</strong> (haavatavused, logid, konfiguratsioonid, koodianalüüs, ründepayload'ide käsitlus, red-teaming), <strong>refusal-free käitumine</strong> seadusliku töö puhul ning <strong>majutus meie riistvaral Eestis</strong>. Mootoriks on avatud kaaludega tipptasemel mudelid avalikel andmestikel – näiteks <strong>Qwen 27B tsenseerimata lineup</strong>, mille võimekus läheneb frontier-tasemele ja mis jookseb meie riistvaral kiiresti. Tulemus on tööriist, mis aitab seal, kus üldine pilve-AI keeldub või eksib.</p>
                     </section>
 
                     <section class="prose-section" id="eelised">
@@ -164,18 +174,32 @@
                         <div class="step-grid">
                             <div class="number-card"><span>01</span><h3>Turvakeel</h3><p>Mudel mõistab CVE-sid, logisid, päiseid ja konfiguratsioone – mitte ainult üldist juttu.</p></div>
                             <div class="number-card"><span>02</span><h3>Ei keeldu tööst</h3><p>Seaduslik turvatestimine oma süsteemidel saab juhised, mitte keeldumisteate.</p></div>
-                            <div class="number-card"><span>03</span><h3>Eesti majutus</h3><p>Päringud tulevad meie serveritesse, mitte Ameerika pilve. Reeglid on meie omad.</p></div>
-                            <div class="number-card"><span>04</span><h3>Inimese kontroll</h3><p>Kriitilised leiud ja toimingud käivad inimese ülevaatusest läbi – ka agendipõhises töös.</p></div>
+                            <div class="number-card"><span>03</span><h3>Eesti majutus</h3><p>Päringud tulevad meie serveritesse, mitte Ameerika pilve. Kogu töötlus toimub Eestis.</p></div>
+                            <div class="number-card"><span>04</span><h3>Andmeid ei koguta</h3><p>Kasutame töötlemiseks ainult sinu sisendit: ei salvesta, ei treeni edasi, ei lekita kolmandatele.</p></div>
+                            <div class="number-card"><span>05</span><h3>AI Act valmis</h3><p>GPAI-kategooria, ei ole kõrge riskiga süsteem. Tehniline dokumentatsioon ja läbipaistvus olemas.</p></div>
+                            <div class="number-card"><span>06</span><h3>Inimene kontrollib</h3><p>Kriitilised leiud ja toimingud käivad inimese ülevaatusest läbi – ka agendipõhises töös.</p></div>
                         </div>
                         <figure class="rounded-3xl overflow-hidden border border-slate-200/70 mt-7">
                             <img alt="Meie enda serveriruum Eestis" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" loading="lazy">
                         </figure>
                     </section>
 
+                    <section class="prose-section" id="vastavus">
+                        <p class="eyebrow">Andmed ja vastavus</p>
+                        <h2>Mida teeme sinu andmetega – ja mida mitte?</h2>
+                        <p>API-teenuses ja auditites töötleme <strong>ainult sinu esitatud sisendit</strong> (näiteks koodilõike või süsteemipäringuid) reaalajas vastuse või raporti genereerimiseks. Me <strong>ei kogu ega salvesta</strong> kliendi andmeid, <strong>ei treeni mudeleid</strong> nende peal edasi ega <strong>lekita neid kolmandatele osapooltele</strong>. Kogu töötlus toimub Eestis.</p>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Ei salvesta</h3><p>Päringu sisu ei jää meie süsteemidesse. Tehnilised mõõdikud on eraldi ja sisuta.</p></div>
+                            <div class="info-card"><h3>Ei treeni edasi</h3><p>Mudelid on eeltreenitud avalikel andmestikel. Sinu andmeid treeninguks ei kasutata.</p></div>
+                            <div class="info-card"><h3>Ei jagamisest</h3><p>Kolmandad osapooled sinu andmeid ei näe ega saa.</p></div>
+                            <div class="info-card"><h3>AI Act</h3><p>GPAI kategooria, ei kuulu kõrge riskiga süsteemide hulka. Tehniline dokumentatsioon ja läbipaistvus olemas.</p></div>
+                        </div>
+                    </section>
+
                     <section class="prose-section" id="api">
                         <p class="eyebrow">Arendajatele</p>
                         <h2>API turvatööriistadele</h2>
-                        <p>Otspunkt järgib OpenAI <em>chat-completions</em> liidese kuju: olemasolev kood vajab tavaliselt ainult baasaadressi ja võtme vahetust. Ligipääs on võtmepõhine, limiitide ja kasutus-põhise arveldusega. Pilootfaasis avame ligipääsu taotluse alusel.</p>
+                        <p>Otspunkt järgib OpenAI <em>chat-completions</em> liidese kuju: olemasolev kood vajab tavaliselt ainult baasaadressi ja võtme vahetust. Ligipääs on võtmepõhine, limiitide ja kasutus-põhise arveldusega. Kasutajate andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele. Pilootfaasis avame ligipääsu taotluse alusel. Oleme varajases etapis: avame ligipääsu järk-järgult, et iga klient saaks töötava ja kontrollitud teenuse.</p>
                         <div class="calculator">
                             <p class="text-sm font-bold text-deep-navy mb-3">Näide</p>
                             <pre class="text-sm leading-relaxed text-deep-navy whitespace-pre-wrap">curl https://api.tehisabiline.ee/v1/chat/completions \
@@ -234,7 +258,10 @@
                             <details class="faq-card"><summary><span>Mis on tsenseerimata AI?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Mudelid töötavad meie enda riistvaral Eestis ega sõltu suurettevõtte pilvest. Päringud ei liigu Ameerika serveritesse ning reeglid paneme paika meie koos kliendiga.</p></details>
                             <details class="faq-card"><summary><span>Mida tähendab refusal-free?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Mudel ei keeldu meelevaldselt seaduslikust turvatööst, mille puhul pilveteenused tihti keelduvad. Ebaseaduslik tegevus on endiselt välistatud.</p></details>
                             <details class="faq-card"><summary><span>Kellele API mõeldud on?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Arendajatele, kes ehitavad turvatööriistu: skannereid, monitooringut, raportite koostajaid. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutus-põhine.</p></details>
-                            <details class="faq-card"><summary><span>Milliseid mudeleid kasutate?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Muuhulgas Qwen 3.8 27B – 27 miljardi parameetriga avatud mudel, mis jookseb meie riistvaral kiiresti. Valime iga töö jaoks tugevaima mudeli ega lukusta end ühte versiooni.</p></details>
+                            <details class="faq-card"><summary><span>Milliseid mudeleid kasutate?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Avatud kaaludega tipptasemel mudeleid, sh Qwen 27B tsenseerimata lineup – võimekus läheneb frontier-tasemele ja jookseb meie riistvaral kiiresti. Mudelid on eeltreenitud avalikel andmestikel.</p></details>
+                            <details class="faq-card"><summary><span>Miks pilv keeldub legitiimsest turvatööst?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Suured pilvemudelid rakendavad laiu keeldumisfiltreid, mis tabavad ka seaduslikku tööd: koodianalüüsi, ründepayload'ide uurimist või red-teaming-harjutusi. Meie mudelid vastavad neile sinu reeglite järgi ja seaduslikus raamis.</p></details>
+                            <details class="faq-card"><summary><span>Mida te minu andmetega teete?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Töötleme ainult sinu esitatud sisendit reaalajas vastuse või raporti jaoks. Andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele. Kogu töötlus toimub Eestis.</p></details>
+                            <details class="faq-card"><summary><span>Kuidas on lood AI Actiga?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Meie avatud kaaludega mudelitel põhinevad API-d liigituvad üldotstarbelise AI (GPAI) kategooriasse ega kuulu kõrge riskiga süsteemide hulka. Hoiame tehnilist dokumentatsiooni, hindame teadaolevaid riske ja hoiame kasutuse läbipaistva.</p></details>
                             <details class="faq-card"><summary><span>Kus mu andmed asuvad?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Meie riistvaral Eestis. Soovi korral saab logideta režiimi, kus päringute sisu ei säilitata.</p></details>
                             <details class="faq-card"><summary><span>Millest hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>API puhul kasutusmahust, erilahenduste puhul mahust ja toe tasemest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
                         </div>
@@ -245,7 +272,7 @@
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
                             <a class="related-card" href="/kuberaudit/"><strong>Agendipõhised auditid</strong><span>Lase oma süsteemid agendipõhiselt üle vaadata ning saa parandusplaan.</span></a>
-                            <a class="related-card" href="/ai-automatiseerimise-naited/"><strong>12 AI automatiseerimise näidet</strong><span>Võrdle praktilisi töövooge, kontrollpunkte ja mõõdikuid.</span></a>
+                            <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>12 praktilist kasutusjuhtu turvatöös – kontrollpunktid ja mõõdikud.</span></a>
                             <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
                         </div>
                     </section>
@@ -261,6 +288,7 @@
                     <nav class="toc-card" aria-label="Mudelite sisukord">
                         <strong>Sellel lehel</strong>
                         <a href="#eelised">Miks mitte pilv?</a>
+                        <a href="#vastavus">Andmed ja vastavus</a>
                         <a href="#api">API arendajatele</a>
                         <a href="#sobivus">Sobivuse kontroll</a>
                         <a href="#hind">Hinna kujunemine</a>
@@ -280,7 +308,7 @@
                     <p class="text-white/75 max-w-md">Tsenseerimata küber-AI mudelid Eestis. API turvatööriistadele. Agendipõhised auditid.</p>
                 </div>
                 <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/mudelid/">Küber-AI mudelid</a><a href="/kuberaudit/">Auditid</a><a href="/">Avaleht</a></nav></div>
-                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/ai-automatiseerimise-naited/">AI automatiseerimise näited</a><a href="/privaatsus/">Privaatsus ja küpsised</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a><a href="/privaatsus/">Privaatsus ja küpsised</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
             </div>
             <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline OÜ · Tallinn, Eesti</div>
         </div>

@@ -31,13 +31,11 @@ AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language
 
 Tehisabiline can be considered for uncensored cyber-AI API usage and human-reviewed agent-driven audits for Estonian businesses. Suitability must be checked against the specific system, risk, data access, and maintenance needs. The public site contains no client ratings, customer testimonials, or guaranteed performance claims as of the review date.
 
-## Practical decision guide
+## Practical use-cases guide
 
-Canonical page: https://tehisabiline.ee/ai-automatiseerimise-naited/
+Canonical page: https://tehisabiline.ee/kasutusjuhud/
 
-The guide compares 12 workflow examples across sales, customer support, document processing, reporting, ecommerce, price monitoring, and internal knowledge retrieval. Each example separates the AI interpretation step from deterministic workflow steps, identifies a human checkpoint, and suggests a first measurement.
-
-The guide includes a seven-question pilot scorecard. It asks whether the work is frequent, digitally accessible with permission, has a clear output and owner, can be measured, can fail safely, and can connect through a permitted interface. The score is a comparison aid, not a return-on-investment guarantee.
+The guide lists 12 practical cyber-AI use cases for security work: log investigation, code analysis, attack-payload understanding for defence, red-teaming preparation, prompt-injection testing, API-logic review, configuration audits, security-header checks, data-exfiltration vector mapping, building scanners/agents on the API, report drafting, and team training. Each use case pairs the AI step with a human checkpoint and a measurement, and the guide is grounded in MITRE ATT&CK, OWASP LLM Top 10 and NCSC agentic-AI guidance.
 
 ## Canonical links
 
@@ -47,6 +45,6 @@ The guide includes a seven-question pilot scorecard. It asks whether the work is
 - https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/ai-chatbot/
 - https://tehisabiline.ee/hinnajalgimine/
-- https://tehisabiline.ee/ai-automatiseerimise-naited/
+- https://tehisabiline.ee/kasutusjuhud/
 - https://tehisabiline.ee/meist/
 - mailto:tehisabiline@gmail.com

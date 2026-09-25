@@ -18,7 +18,7 @@ Retired service pages (kept online for reference, excluded from search indexing)
 
 ## Guides and organization
 
-- [12 AI automation examples](https://tehisabiline.ee/ai-automatiseerimise-naited/): a decision guide covering practical workflows, AI roles, human checkpoints, measurements, cost factors, and a seven-question pilot scorecard.
+- [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): 12 practical cyber-AI use cases for security work (code analysis, logs, payloads, red-teaming, injection tests, reporting) with human checkpoints and measurements, grounded in MITRE ATT&CK, OWASP LLM Top 10 and NCSC agentic-AI guidance.
 - [About Tehisabiline](https://tehisabiline.ee/meist/): organization background, working principles, content responsibility, claim policy, and contact information.
 - [Privacy and cookies](https://tehisabiline.ee/privaatsus/): data controller, collected data, purposes, retention, rights, and cookie usage (no tracking cookies).
 
