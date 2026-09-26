@@ -86,7 +86,7 @@
             {
               "@type": "Question",
               "name": "Mille poolest erineb see tavalisest auditist?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Tavaline audit on ühe inimese ühekordne pilt. Agendipõhine töö katab rohkem pinda lühema ajaga ning inimene keskendub leidude kontrollimisele, mitte käsitsi klõpsimisele."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Tavaline audit on ühe inimese ühekordne pilt. Agendipõhine töö katab tabeli valdkonnad ühe korraga ning inimene keskendub leidude kontrollimisele, mitte käsitsi klõpsimisele."}
             },
             {
               "@type": "Question",
@@ -169,7 +169,7 @@
                 </nav>
                 <p class="eyebrow">Agendipõhine küberaudit · Inimese kontroll</p>
                 <h1>Agendipõhine küberaudit sinu süsteemidele</h1>
-                <p class="hero-lead">Professionaalne küberaudit sinu küberturvalisuse tõstmiseks: agendipõhised testid käivad nagu ründaja – ja inimene vaatab iga olulise leiu üle. Tulemus on parandusplaan, mitte hirmujutt. Testid katavad muu hulgas koodianalüüsi, ründepayload'ide käsitlust ja red-teaming-harjutusi.</p>
+                <p class="hero-lead">Küberaudit sinu küberturvalisuse tõstmiseks: agendipõhised testid käivad nagu ründaja – ja inimene vaatab iga olulise leiu üle. Tulemus on parandusplaan, mitte hirmujutt. Testid katavad muu hulgas koodianalüüsi, ründepayload'ide käsitlust ja red-teaming-harjutusi.</p>
                 <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-26">26. septembril 2026</time></p>
             </div>
         </header>
@@ -179,7 +179,7 @@
                 <article class="content-column">
                     <section class="lead-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Kuidas küberaudit käib?</h2>
-                        <p><strong>Küberaudit</strong> tõstab sinu <strong>küberturvalisust</strong>: mitu AI-agenti jagavad töö omavahel ära – üks kaardistab pinna, teine kontrollib konfiguratsioone, kolmas proovib süstiründeid sinu loal. Kõik leiud koos tõenditega jõuavad <strong>inimese ette</strong>, kes kinnitab, hindab ja kirjutab parandusplaani. Sina saad masina kiiruse ja inimese vastutuse.</p>
+                        <p><strong>Küberaudit</strong> tõstab sinu <strong>küberturvalisust</strong>: mitu AI-agenti jagavad töö omavahel ära – üks kaardistab pinna, teine kontrollib konfiguratsioone, kolmas proovib süstiründeid sinu loal. Kõik leiud koos tõenditega jõuavad <strong>inimese ette</strong>, kes kinnitab, hindab ja kirjutab parandusplaani. Iga kriitiline leid läbib inimese kinnituse enne raportit; raportile lisandub korduskontrolli tingimus.</p>
                     </section>
 
                     <section class="prose-section" id="sisu">
@@ -205,8 +205,8 @@
                         <h2>Miks inimene vahele jääb?</h2>
                         <p>Agendid on kiired, aga nad ei vastuta. Seepärast käib iga oluline leid enne raportit inimese käest läbi: kas leid peab paika, kui tõsine see päriselt on ja mis on mõistlik parandus. Valehäire raportisse ei lähe.</p>
                         <div class="step-grid">
-                            <div class="number-card"><span>01</span><h3>Pind</h3><p>Agendid kaardistavad sihtmärgi: süstiründepinnad (prompt injection), API autentimisloogika, rate limits ja HTTP turvapäised.</p></div>
-                            <div class="number-card"><span>02</span><h3>Süvakontroll</h3><p>Testime andmete eksfiltreerimise vektoreid ja nõrku kohti sinu kirjaliku loa mahus.</p></div>
+                            <div class="number-card"><span>01</span><h3>Pind</h3><p>Agendid kaardistavad sihtmärgi: süstiründepinnad (prompt injection), API autentimisloogika, rate limits ja HTTP turvapäised. Sisendiks piisab domeenide nimekirjast ja kirjalikust loast.</p></div>
+                            <div class="number-card"><span>02</span><h3>Süvakontroll</h3><p>Testime andmete eksfiltreerimise vektoreid ja nõrku kohti sinu kirjaliku loa mahus. Väljund on loetelu koos tõenditega, mitte hinnangute kogu.</p></div>
                             <div class="number-card"><span>03</span><h3>Inimene kontrollib</h3><p>Iga oluline leid kinnitatakse ja hinnatakse käsitsi, valehäired jäävad raportist välja.</p></div>
                             <div class="number-card"><span>04</span><h3>Plaan valmib</h3><p>Leiud järjestatakse: kohe, nädalaga, plaani korras – koos korduskontrolliga.</p></div>
                         </div>
@@ -247,7 +247,7 @@
                             <details class="faq-card"><summary><span>Mis vahe on küberauditil ja pentestil?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Pentest ehk läbitungimistest proovib ühte sihtmärki aktiivselt murda. Küberaudit on laiem: see vaatab üle kogu turvaseisu – konfiguratsioonid, õigused, varunduse ja protsessid – ning annab parandusplaani. Meie agendipõhine küberaudit sisaldab kontrollitud ründeteste sinu loal, aga ei lõhu toimivaid süsteeme.</p></details>
                             <details class="faq-card"><summary><span>Kui tihti peaks küberauditit tegema?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Hea tava on lasta küberturvalisus üle vaadata vähemalt kord aastas ning alati pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu. Kui viimasest kontrollist on üle aasta möödas, alusta tasuta kaardistusest.</p></details>
                             <details class="faq-card"><summary><span>Kuidas agendipõhine audit käib?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja: uuendused, ligipääsud, süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja saad parandusplaani tähtsuse järjekorras. Sinu andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele.</p></details>
-                            <details class="faq-card"><summary><span>Mille poolest erineb see tavalisest auditist?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tavaline audit on ühe inimese ühekordne pilt. Agendipõhine töö katab rohkem pinda lühema ajaga ning inimene keskendub leidude kontrollimisele, mitte käsitsi klõpsimisele.</p></details>
+                            <details class="faq-card"><summary><span>Mille poolest erineb see tavalisest auditist?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tavaline audit on ühe inimese ühekordne pilt. Agendipõhine töö katab tabeli valdkonnad ühe korraga ning inimene keskendub leidude kontrollimisele, mitte käsitsi klõpsimisele.</p></details>
                             <details class="faq-card"><summary><span>Kas AI teeb otsuseid üksi?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Agendid koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid – eriti kriitiline – vaadatakse üle inimese poolt enne raportisse minekut.</p></details>
                             <details class="faq-card"><summary><span>Kas audit lõhub midagi ära?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Testime ettevaatlikult leppelises mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult kirjalikul kokkuleppel.</p></details>
                             <details class="faq-card"><summary><span>Millest auditi hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Süsteemide arvust, sügavusest ja korduskontrolli vajadusest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
@@ -268,7 +268,7 @@
 
                     <section class="service-cta">
                         <h2>Tõsta oma küberturvalisust</h2>
-                        <p>Saada süsteemide kirjeldus. Ütleme tasuta kaardistuses, kas agendipõhine küberaudit annab sulle midagi.</p>
+                        <p>Saada domeenide arv ja kas sul on testkeskkond. Vastame, kas küberaudit sobib – või ei sobi.</p>
                         <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold" href="/#contact">Küsi turvekaardistust</a>
                     </section>
                 </article>

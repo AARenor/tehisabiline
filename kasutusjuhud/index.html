@@ -127,7 +127,7 @@
             {
               "@type": "Question",
               "name": "Kuidas alustada?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Kaardistame tasuta ühe kasutusjuhu: mis on sisend, soovitud tulemus ja kontrollpunkt. Seejärel avame API-võtme või pakume agentpõhist auditit."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Kaardistame tasuta ühe kasutusjuhu: mis on sisend, soovitud tulemus ja kontrollpunkt. Seejärel avame API-võtme või pakume agendipõhist auditit."}
             }
           ]
         }
@@ -170,7 +170,7 @@
                 </nav>
                 <p class="eyebrow">Praktiline juhend</p>
                 <h1>12 kohta, kus küber-AI turvatööd kiirendab</h1>
-                <p class="hero-lead">Koodianalüüsist raportini: need on kasutusjuhud, kus tsenseerimata mudel annab tulemuse, mida üldine pilve-AI sageli keeldub andmast – igaüks koos kontrollpunkti ja mõõdikuga. Osa neist – logide uurimine, konfiguratsioonide kontroll ja süstirünnete testid – on ka meie <a href="/kuberaudit/">küberauditi</a> igapäevane töö küberturvalisuse tõstmisel.</p>
+                <p class="hero-lead">Koodianalüüsist raportini: need on kasutusjuhud, kus tsenseerimata mudel annab tulemuse – näiteks ründepayload'i lahtiseletuse oma keskkonna kaitseks –, mille üldine pilve-AI sageli keelab. Igaüks koos kontrollpunkti ja mõõdikuga. Osa neist – logide uurimine, konfiguratsioonide kontroll ja süstirünnete testid – on ka meie <a href="/kuberaudit/">küberauditi</a> igapäevane töö küberturvalisuse tõstmisel.</p>
                 <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-26">26. septembril 2026</time></p>
             </div>
         </header>
@@ -180,7 +180,7 @@
                 <article class="content-column">
                     <section class="lead-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Milleks tsenseerimata küber-AI hea on?</h2>
-                        <p>Turvatöö on valdkond, kus üldised pilvemudelid keelduvad sageli ka <strong>seaduslikest</strong> päringutest: koodianalüüsist, ründepayload'ide uurimisest, red-teaming-harjutustest. Tsenseerimata mudel, mis jookseb Eestis ja sinu reeglite järgi, vastab neile – ja sina jääd kontrollijaks.</p>
+                        <p>Turvatöö on valdkond, kus üldised pilvemudelid keelduvad sageli ka <strong>seaduslikest</strong> päringutest: koodianalüüsist, ründepayload'ide uurimisest, red-teaming-harjutustest. Tsenseerimata mudel, mis jookseb Eestis kirjaliku loa mahus, vastab neile – ja sina jääd kontrollijaks.</p>
                     </section>
 
                     <section class="prose-section" id="kasutusjuhud">
@@ -201,11 +201,11 @@
                                     <tr><td><strong>Andmelekke vektorid</strong></td><td>Kaardistab, kuidas andmed võiksid süsteemist välja liikuda.</td><td>Testid leppeliselt; mõõdik: kaetud vektorid ja sulgemisaeg.</td></tr>
                                     <tr><td><strong>Skannerite ja agentide ehitamine</strong></td><td>On API taga: sinu tööriist saab mudeli, mis ei keeldu turvatööst.</td><td>Sinu kood, meie mudel; mõõdik: tööriista täpsus ja katvus.</td></tr>
                                     <tr><td><strong>Raportite ja kokkuvõtete koostamine</strong></td><td>Kirjutab tehnilise leiu tavakeelde ja koostab mustandeid.</td><td>Inimene toimetab ja kinnitab; mõõdik: mustandi kasutuskõlblikkus.</td></tr>
-                                    <tr><td><strong>Õppimine ja harjutamine</strong></td><td>Selgitab ründetehnikaid ja kaitseviise sinu meeskonnale.</td><td>Kontrollitud materjalide põhjal; mõõdik: meeskonna pädevuse kasv.</td></tr>
+                                    <tr><td><strong>Õppimine ja harjutamine</strong></td><td>Selgitab ründetehnikaid ja kaitseviise sinu meeskonnale.</td><td>Kontrollitud materjalide põhjal; mõõdik: läbitud harjutusstsenaariumide arv.</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="callout"><strong>Ühine joon:</strong> mudel teeb musta töö kiireks, inimene vastutab iga olulise otsuse eest. See on ka meie agendipõhiste auditite põhimõte – vaata <a href="/kuberaudit/">küberauditi lehte</a>.</div>
+                        <div class="callout"><strong>Kontrollpunkt:</strong> inimene kinnitab iga olulise otsuse. Auditi ulatuse leiad lehelt <a href="/kuberaudit/#sisu">küberaudit: mida kontrollitakse</a>.</div>
                     </section>
 
                     <section class="prose-section" id="esimene-samm">
@@ -260,7 +260,7 @@
 
                     <section class="service-cta">
                         <h2>Proovime ühe kasutusjuhu ära?</h2>
-                        <p>Kirjelda üks turvatöö ülesanne, mida tahaksid kiiremaks teha. Ütleme kaardistuses, kas ja kuidas see AI-ga mõistlikult käib.</p>
+                        <p>Kirjelda üks turvatöö ülesanne: sisend → soovitud tulemus → kes kinnitab. Ütleme kaardistuses, kas see AI-ga mõistlikult käib.</p>
                         <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold" href="/#contact">Broneeri kaardistus</a>
                     </section>
                 </article>
