@@ -225,7 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const val = (id) => (document.getElementById(id)?.value || '').trim();
-            if (!val('name') || !val('email') || !val('message')) {
+            const emailValue = val('email');
+            if (!val('name') || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue) || !val('message')) {
                 if (errorEl) errorEl.classList.remove('hidden');
                 return;
             }
@@ -241,9 +242,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = {
                 name: val('name').slice(0, 100),
-                email: val('email').slice(0, 254),
+                email: emailValue.slice(0, 254),
                 company: val('company').slice(0, 100),
                 message: val('message').slice(0, 5000),
+                source: window.location.href,
                 timestamp: new Date().toISOString()
             };
 

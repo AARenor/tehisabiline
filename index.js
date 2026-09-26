@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         const trim = (v, n) => String(v || "").trim().slice(0, n);
-        if (!trim(data.get("name"), 100) || !trim(data.get("email"), 254) || !trim(data.get("message"), 5000)) {
+        const email = trim(data.get("email"), 254);
+        if (!trim(data.get("name"), 100) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !trim(data.get("message"), 5000)) {
             errorMessage?.classList.remove("hidden");
             return;
         }
@@ -90,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
                     name: trim(data.get("name"), 100),
-                    email: trim(data.get("email"), 254),
+                    email: email,
                     company: trim(data.get("company"), 100),
                     message: trim(data.get("message"), 5000),
                     source: window.location.href,
