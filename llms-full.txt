@@ -42,6 +42,8 @@ The guide lists 12 practical cyber-AI use cases for security work: log investiga
 - https://tehisabiline.ee/
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
+ - https://tehisabiline.ee/kuberaudit/
+ - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/ai-chatbot/
 - https://tehisabiline.ee/hinnajalgimine/

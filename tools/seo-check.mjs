@@ -67,6 +67,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "nis2/index.html",
+        canonical: `${origin}/nis2/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "privaatsus/index.html",
         canonical: `${origin}/privaatsus/`,
         schemaTypes: ["WebPage", "BreadcrumbList"],
