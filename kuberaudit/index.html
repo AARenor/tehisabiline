@@ -123,6 +123,16 @@
             },
             {
               "@type": "Question",
+              "name": "Millal valida agendipõhine audit tavalise asemel?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Kui vajad laia katvust lühikese ajaga: agendid kontrollivad mitut valdkonda paralleelselt, inimene kinnitab leiud. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini traditsiooniline käsitsiaudit."}
+            },
+            {
+              "@type": "Question",
+              "name": "Kas tasuta skannerist ei piisa?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Skanner leiab teadaolevad haavatavused, aga ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. Skanner sobib pidevaks seireks; ühekordse tõehetke ja parandusplaani jaoks on vaja auditit."}
+            },
+            {
+              "@type": "Question",
               "name": "Kas NIS2 mind puudutab?",
               "acceptedAnswer": {"@type": "Answer", "text": "NIS2-e üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele – tavaline mikro- ja väikeettevõte sinna ei kuulu. Kui kahtled, kontrolli RIA ja nis2.ee juhiseid. 2025. aastal vabastati alla 50 töötajaga ettevõtted täismahus E-ITS-i või ISO 27001 järgimisest – neile tulevad esmased turvameetmed (RIA, 25.09.2025). EIS-i VKE-de kaardistustoetus on hetkel suletud; avatud NIS2-toetus on mõeldud ainult kohustuslastele (EIS). Küberaudit on kasulik ka ilma seadusest tuleneva kohustuseta: see näitab, kus su küberturvalisus päriselt seisab."}
             },
@@ -264,6 +274,16 @@
                         </ul>
                     </section>
 
+                    <section class="prose-section" id="vordlus">
+                        <p class="eyebrow">Võrdlus</p>
+                        <h2>Audit, pentest või skanner – mis sobib?</h2>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Agendipõhine audit</h3><p>Mitme kontrollvaldkonna süsteemne ülevaatus korraga: uuendused, ligipääsud, varundus, päised, sisendikontroll ja AI-süstikindlus. Iga oluline leid läbib inimese ülevaatuse ja lõppeb parandusplaaniga.</p></div>
+                            <div class="info-card"><h3>Traditsiooniline käsitsiaudit</h3><p>Ühe spetsialisti süvavaade, hea keerukate erisüsteemide puhul. Katab tavaliselt vähem pinda sama ajaga ja sõltub rohkem tegija käekirjast.</p></div>
+                            <div class="info-card"><h3>Automatiseeritud skanner</h3><p>Kiire ja odav esmane pilt teadaolevatest haavatavustest. Ei hinda äriloogikat, ligipääsude tähendust ega paranduste järjekorda – sobib seireks, mitte ühekordseks tõehetkeks.</p></div>
+                        </div>
+                    </section>
+
                     <section class="prose-section" id="faq">
                         <p class="eyebrow">KKK</p>
                         <h2>Küsimused küberauditi kohta</h2>
@@ -277,6 +297,8 @@
                             <details class="faq-card"><summary><span>Kas audit lõhub midagi ära?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Ei. Testime ettevaatlikult leppelises mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult kirjalikul kokkuleppel.</p></details>
                             <details class="faq-card"><summary><span>Millest auditi hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Süsteemide arvust, sügavusest ja korduskontrolli vajadusest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
                             <details class="faq-card"><summary><span>Mida te ei auditeeri?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Võõraid süsteeme ilma omaniku kirjaliku loata. Loata testimine on meie jaoks välistatud, ilma eranditeta.</p></details>
+                            <details class="faq-card"><summary><span>Millal valida agendipõhine audit tavalise asemel?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Kui vajad laia katvust lühikese ajaga: agendid kontrollivad mitut valdkonda paralleelselt, inimene kinnitab leiud. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini traditsiooniline käsitsiaudit – ütleme kaardistuses ausalt, kumb sinu juhul mõistlikum on.</p></details>
+                            <details class="faq-card"><summary><span>Kas tasuta skannerist ei piisa?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Skanner leiab teadaolevad haavatavused, aga ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. Skanner sobib pidevaks seireks; ühekordse tõehetke ja parandusplaani jaoks on vaja auditit.</p></details>
                             <details class="faq-card"><summary><span>Kas NIS2 mind puudutab?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>NIS2-e üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele – tavaline mikro- ja väikeettevõte sinna ei kuulu. Kui kahtled, kontrolli RIA ja <a href="https://nis2.ee/">nis2.ee</a> juhiseid. 2025. aastal vabastati alla 50 töötajaga ettevõtted täismahus E-ITS-i või ISO 27001 järgimisest – neile tulevad esmased turvameetmed (<a href="https://www.ria.ee/uudised/valitsus-leevendas-kuberturvalisuse-noudeid-vaikeettevotetele-ja-asutustele">RIA, 25.09.2025</a>). EIS-i VKE-de kaardistustoetus on hetkel suletud; avatud NIS2-toetus on mõeldud ainult kohustuslastele (<a href="https://eis.ee/teenused/kuberturbe-tostmine-nis2/">EIS</a>). Küberaudit on kasulik ka ilma seadusest tuleneva kohustuseta: see näitab, kus su küberturvalisus päriselt seisab.</p></details>
                         </div>
                     </section>
