@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ is a Tallinn-based Estonian company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent-driven audits.
+> Tehisabiline OÜ is a Tallinn-based Estonian company. Sovereign, refusal-free AI models fine-tuned for cybersecurity, with Estonian hosting forthcoming (hardware ordered). OpenAI-compatible API for developers building security tools, plus professional vulnerability audits powered by human-reviewed agent-driven audits.
 
 Canonical website: https://tehisabiline.ee/
 Contact: tehisabiline@gmail.com
@@ -9,8 +9,8 @@ Service area: Estonia
 
 ## Main service pages
 
-- [Sovereign cyber-AI, API and agent-driven audits (homepage)](https://tehisabiline.ee/): sovereign refusal-free AI models fine-tuned for cybersecurity hosted in Estonia, OpenAI-compatible API for security-tool developers, and human-reviewed agent-driven vulnerability audits.
-- [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): the newest and most capable uncensored models, fine-tuned for security work, hosted in Estonia, plus the developer API.
+- [Sovereign cyber-AI, API and agent-driven audits (homepage)](https://tehisabiline.ee/): sovereign refusal-free AI models fine-tuned for cybersecurity (Estonian hosting forthcoming), OpenAI-compatible API for security-tool developers, and human-reviewed agent-driven vulnerability audits.
+- [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): uncensored models fine-tuned for security work (Estonian hosting forthcoming, hardware ordered), plus the developer API.
 - [Küberaudit (küberturvalisuse audit)](https://tehisabiline.ee/kuberaudit/): agendipõhine küberaudit – human-reviewed agent-driven cybersecurity audit with a prioritized fix plan that raises the client's küberturvalisus.
 
 Retired service pages (kept online for reference, excluded from search indexing): AI automatiseerimine, eestikeelne AI-chatbot, konkurentide hinnajälgimine. Current focus is private AI, the developer API, and security audits.

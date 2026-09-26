@@ -7,7 +7,7 @@ Canonical source: https://tehisabiline.ee/
 
 Tehisabiline OÜ is an Estonian company based in Tallinn, Estonia. The company serves Estonian businesses in Estonian and English. Contact email: tehisabiline@gmail.com.
 
-Current model: sovereign, refusal-free AI models fine-tuned for cybersecurity, hosted locally in Estonia. An OpenAI-compatible API for developers building security tools, alongside the agendipõhine küberaudit (agent-driven cybersecurity audit): professional vulnerability audits powered by human-reviewed agent-driven audits, which raise the client's küberturvalisus (cybersecurity posture). Customer queries stay in Estonia, not in big-cloud servers. Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
+Current model: sovereign, refusal-free AI models fine-tuned for cybersecurity, with Estonian hosting forthcoming (hardware ordered as of September 2026). An OpenAI-compatible API for developers building security tools, alongside the agendipõhine küberaudit (agent-driven cybersecurity audit): professional vulnerability audits powered by human-reviewed agent-driven audits, which raise the client's küberturvalisus (cybersecurity posture). Target state: customer queries stay in Estonia, not in big-cloud servers (hosting forthcoming). Illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded from every engagement.
 
 The organization, its working principles, content responsibility, and claim policy are described at https://tehisabiline.ee/meist/. Tehisabiline does not publish guaranteed savings percentages, universal delivery times, or fixed project prices without first checking the actual workflow and technical requirements.
 
@@ -17,9 +17,9 @@ Tehisabiline does not present a generic AI product with fixed capabilities or pr
 
 Canonical page: https://tehisabiline.ee/
 
-Sovereign, refusal-free AI models fine-tuned for cybersecurity tasks (vulnerabilities, logs, configurations, adversarial testing), running on the company's own hardware in Estonia.
+Sovereign, refusal-free AI models fine-tuned for cybersecurity tasks (vulnerabilities, logs, configurations, adversarial testing), planned to run on the company's own hardware in Estonia (hardware ordered, hosting forthcoming).
 
-Hosted API: the newest and most capable uncensored models served through an OpenAI-compatible chat-completions endpoint with key-based access, rate limits, and usage-based billing for developers building security tools. An optional no-logs mode keeps no query content. Pilot access is granted on request.
+Hosted API (pilot, hosting forthcoming): uncensored models to be served through an OpenAI-compatible chat-completions endpoint with key-based access, rate limits, and usage-based billing for developers building security tools. An optional no-logs mode keeps no query content. Pilot access is granted on request.
 
 Agent-driven audits (küberaudit): professional vulnerability audits performed by agent-driven systems under the customer's written permission — updates, access control, backups, headers, input validation, data-leakage and prompt-injection robustness. Every significant finding passes human review, and delivery is a plain-language, prioritized fix plan with optional re-checking that raises küberturvalisus. Tehisabiline does not claim 100 percent security or error-free AI.
 
