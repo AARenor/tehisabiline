@@ -908,19 +908,6 @@ textarea::placeholder {
    Homepage uses .hero-dynamic-bg/.premium-card (untouched).
    ==================================================== */
 
-/* Nav links mathematically centered on desktop */
-@media (min-width: 1024px) {
-    #navbar nav[aria-label="Põhinavigatsioon"] {
-        position: relative;
-    }
-
-    #navbar nav[aria-label="Põhinavigatsioon"] > div.hidden.lg\:flex {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
 /* Nav link text vertically centered (subpages don't load homepage.css) */
 #navbar nav > div > a.nav-link {
     display: inline-flex;
