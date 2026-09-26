@@ -123,6 +123,11 @@
               "@type": "Question",
               "name": "Millest hind sõltub?",
               "acceptedAnswer": {"@type": "Answer", "text": "API puhul kasutusmahust, erilahenduste puhul mahust ja toe tasemest. Tasuta kaardistuse järel saab selge pakkumise."}
+            },
+            {
+              "@type": "Question",
+              "name": "Kas API töötab OpenAI teekidega?",
+              "acceptedAnswer": {"@type": "Answer", "text": "Jah. Vaheta ainult baasaadress api.tehisabiline.ee vastu ja kasuta oma võtit."}
             }
           ]
         }
@@ -219,6 +224,10 @@
   -d '{"model": "tehisabiline-cyber",
        "messages": [{"role": "user",
          "content": "Analüüsi see Nginxi konfig."}]}'</pre>
+                            <p class="text-sm font-bold text-deep-navy mb-3 mt-6">Sama Pythonis (OpenAI teek)</p>
+                            <pre class="text-sm leading-relaxed text-deep-navy whitespace-pre-wrap">from openai import OpenAI
+client = OpenAI(base_url="https://api.tehisabiline.ee/v1", api_key="SINU-VOTI")
+vastus = client.chat.completions.create(model="tehisabiline-cyber", messages=[{"role": "user", "content": "Analüüsi see Nginxi konfig."}])</pre>
                         </div>
                         <div class="content-grid">
                             <div class="info-card"><h3>Võti ja limiidid</h3><p>Iga rakendus saab oma võtme, kululimiidi ja kasutusaruande.</p></div>
@@ -275,6 +284,7 @@
                             <details class="faq-card"><summary><span>Kuidas on lood AI Actiga?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Meie avatud kaaludega mudelitel põhinevad API-d liigituvad üldotstarbelise AI (GPAI) kategooriasse ega kuulu kõrge riskiga süsteemide hulka. Hoiame tehnilist dokumentatsiooni, hindame teadaolevaid riske ja hoiame kasutuse läbipaistva.</p></details>
                             <details class="faq-card"><summary><span>Kus mu andmed asuvad?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tulevikus meie riistvaral Eestis – riistvara on tellitud. Soovi korral saab logideta režiimi, kus päringute sisu ei säilitata.</p></details>
                             <details class="faq-card"><summary><span>Millest hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>API puhul kasutusmahust, erilahenduste puhul mahust ja toe tasemest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
+                            <details class="faq-card"><summary><span>Kas API töötab OpenAI teekidega?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Jah. Vaheta ainult baasaadress api.tehisabiline.ee vastu ja kasuta oma võtit – curl-i ja Pythoni näited on <a href="#api">API jaotises</a>.</p></details>
                         </div>
                     </section>
 
