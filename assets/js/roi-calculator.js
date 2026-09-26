@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const calculate = () => {
-        const tasks = read("tasks-per-day");
-        const minutes = read("minutes-per-task");
+        const tasks = read("tasks-per-day", 10000);
+        const minutes = read("minutes-per-task", 1440);
         const days = read("workdays", 31);
         const share = read("automation-share", 100) / 100;
-        const hourlyCost = read("hourly-cost");
+        const hourlyCost = read("hourly-cost", 10000);
         const hours = tasks * minutes * days * share / 60;
 
         if (hoursOutput) hoursOutput.textContent = `${number.format(hours)} tundi`;

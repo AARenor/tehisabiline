@@ -50,11 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (menuOpen) {
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
-                navToggle.querySelector('.material-symbols-outlined').textContent = 'close';
+                const iconOpen = navToggle.querySelector('.material-symbols-outlined');
+                if (iconOpen) iconOpen.textContent = 'close';
             } else {
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
-                navToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+                const iconEl = navToggle.querySelector('.material-symbols-outlined');
+                if (iconEl) iconEl.textContent = 'menu';
             }
         });
 
@@ -65,7 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 navToggle.setAttribute('aria-label', 'Ava menüü');
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
-                navToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+                const iconEl = navToggle.querySelector('.material-symbols-outlined');
+                if (iconEl) iconEl.textContent = 'menu';
             });
         });
     }
@@ -76,7 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.getAttribute('href');
             if (!targetId || targetId === '#') return;
 
-            const target = document.querySelector(targetId);
+            let target = null;
+            try {
+                target = targetId.startsWith('#') && /^#[A-Za-z][\w:.-]*$/.test(targetId)
+                    ? document.getElementById(targetId.slice(1))
+                    : document.querySelector(targetId);
+            } catch { return; }
             if (!target) return;
 
             e.preventDefault();
@@ -129,29 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
         counters.forEach(counter => counterObserver.observe(counter));
     }
 
-    /* ---- 6. Price Bars Animation ---- */
-    const priceBars = document.querySelectorAll('.price-bar');
-
-    if (priceBars.length) {
-        const barsObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-
-                priceBars.forEach((bar, i) => {
-                    setTimeout(() => {
-                        bar.classList.add('animate');
-                    }, i * 100);
-                });
-
-                observer.unobserve(entry.target);
-            });
-        }, { threshold: 0.5 });
-
-        const barsContainer = document.getElementById('price-bars');
-        if (barsContainer) barsObserver.observe(barsContainer);
-    }
-
-    /* ---- 7. Chat Demo Typing Animation ---- */
+    /* ---- 6. Chat Demo Typing Animation ---- */
     const typingIndicator = document.getElementById('typing-indicator');
 
     if (typingIndicator && !prefersReducedMotion) {
@@ -177,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chatDemo) chatObserver.observe(chatDemo);
     }
 
-    /* ---- 8. Sticky CTA ---- */
+    /* ---- 7. Sticky CTA ---- */
     const stickyCta = document.getElementById('sticky-cta');
     const contactSection = document.getElementById('contact');
 
@@ -199,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', updateStickyCta, { passive: true });
     }
 
-    /* ---- 9. Magnetic Buttons ---- */
+    /* ---- 8. Magnetic Buttons ---- */
     const magneticButtons = document.querySelectorAll('.magnetic');
 
     if (!prefersReducedMotion) {
@@ -217,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---- 10. Contact Form with n8n Webhook ---- */
+    /* ---- 9. Contact Form with n8n Webhook ---- */
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
@@ -225,31 +211,53 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
+            if (!submitBtn) return;
+            const originalText = submitBtn.textContent || 'Saada päring';
             const successEl = document.getElementById('form-success');
             const errorEl = document.getElementById('form-error');
+
+            // Honeypot: bots fill this, humans never see it
+            const trap = document.getElementById('website');
+            if (trap && trap.value) {
+                if (errorEl) errorEl.classList.add('hidden');
+                if (successEl) successEl.classList.remove('hidden');
+                return;
+            }
+
+            const val = (id) => (document.getElementById(id)?.value || '').trim();
+            if (!val('name') || !val('email') || !val('message')) {
+                if (errorEl) errorEl.classList.remove('hidden');
+                return;
+            }
 
             // Loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Saadan...';
             submitBtn.style.opacity = '0.7';
 
+            // Reset opposite message box (never show both stacked)
+            if (successEl) successEl.classList.add('hidden');
+            if (errorEl) errorEl.classList.add('hidden');
+
             const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('company').value || '',
-                message: document.getElementById('message').value,
+                name: val('name').slice(0, 100),
+                email: val('email').slice(0, 254),
+                company: val('company').slice(0, 100),
+                message: val('message').slice(0, 5000),
                 timestamp: new Date().toISOString()
             };
 
             try {
                 const WEBHOOK_URL = 'https://n8n.arleserver.cfd/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb';
 
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 15000);
                 const response = await fetch(WEBHOOK_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+                    body: JSON.stringify(formData),
+                    signal: controller.signal
+                }).finally(() => clearTimeout(timeout));
 
                 if (!response.ok) throw new Error('Server error');
 

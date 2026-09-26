@@ -113,7 +113,6 @@ a {
     font-size: 1.65rem;
     font-weight: 400;
     line-height: 1;
-    line-height: 1;
 }
 
 /* Navigation */
@@ -267,55 +266,6 @@ a {
     }
 }
 
-.service-icon {
-    display: grid;
-    width: 3.75rem;
-    height: 3.75rem;
-    place-items: center;
-    border-radius: 999px;
-}
-
-.service-glyph {
-    font-family: var(--font-body);
-    font-size: 1.15rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.service-glyph-dots {
-    font-size: 1.75rem;
-    letter-spacing: 0.08em;
-    transform: translateY(-0.2rem);
-}
-
-.service-glyph-code {
-    font-size: 0.9rem;
-}
-
-.check-list {
-    display: grid;
-    gap: 0.8rem;
-    padding: 0;
-    color: var(--on-surface-variant);
-    font-size: 0.9rem;
-    list-style: none;
-}
-
-.check-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-}
-
-.check-list .check-mark {
-    flex: 0 0 auto;
-    color: var(--primary);
-    font-size: 1rem;
-    font-weight: 800;
-    transform: translateY(0.1rem);
-}
-
-.service-link,
 .text-link {
     display: inline-flex;
     min-height: 44px;
@@ -328,7 +278,6 @@ a {
     text-transform: uppercase;
 }
 
-.service-link:hover,
 .text-link:hover {
     color: var(--primary);
     text-decoration: underline;
@@ -375,46 +324,6 @@ a {
 }
 
 /* Direct answer / quotable section */
-.answer-box {
-    padding: clamp(2rem, 5vw, 4.5rem);
-    border: 1px solid #c7dde8;
-    border-radius: 2rem;
-    background:
-        radial-gradient(circle at 95% 5%, rgba(0, 174, 239, 0.14), transparent 34%),
-        #fff;
-    box-shadow: 0 25px 70px -50px rgba(0, 30, 45, 0.45);
-}
-
-.answer-box h2 {
-    max-width: 18ch;
-    margin: 1rem 0 1.5rem;
-    color: var(--deep-navy);
-}
-
-.answer-box > p:not(.eyebrow) {
-    max-width: 76ch;
-    color: var(--on-surface-variant);
-    font-size: 1.08rem;
-}
-
-.mini-card {
-    display: grid;
-    gap: 0.4rem;
-    padding: 1.25rem;
-    border: 1px solid var(--outline-variant);
-    border-radius: 1rem;
-    background: rgba(248, 251, 253, 0.88);
-}
-
-.mini-card strong {
-    color: var(--deep-navy);
-}
-
-.mini-card span {
-    color: var(--on-surface-variant);
-    font-size: 0.9rem;
-}
-
 /* FAQ */
 .faq-card {
     border: 1px solid var(--outline-variant);
@@ -462,95 +371,6 @@ a {
 }
 
 /* CTA and contact */
-.cta-glow {
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(circle at 20% 40%, rgba(0, 174, 239, 0.18), transparent 36%),
-        radial-gradient(circle at 80% 70%, rgba(43, 105, 88, 0.18), transparent 32%);
-}
-
-.contact-row {
-    display: flex;
-    min-height: 52px;
-    align-items: center;
-    gap: 1rem;
-    color: var(--deep-navy);
-    font-size: 1.05rem;
-    font-weight: 700;
-}
-
-.contact-row .contact-icon {
-    display: grid;
-    width: 2.8rem;
-    height: 2.8rem;
-    place-items: center;
-    border: 1px solid var(--outline);
-    border-radius: 999px;
-    color: var(--primary);
-    font-size: 1.05rem;
-    font-weight: 800;
-}
-
-.form-field {
-    display: grid;
-    gap: 0.5rem;
-}
-
-.form-field label {
-    color: var(--deep-navy);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.form-field label span {
-    color: var(--on-surface-variant);
-    font-size: 0.65rem;
-    font-weight: 500;
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    border: 1px solid var(--outline);
-    border-radius: 0.75rem;
-    color: var(--on-surface);
-    background: #fff;
-    padding: 0.85rem 1rem;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    outline: 3px solid rgba(0, 174, 239, 0.22);
-    border-color: var(--primary);
-}
-
-.form-field textarea {
-    resize: vertical;
-}
-
-.form-message {
-    border-radius: 0.85rem;
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.form-message-success {
-    color: #075e4c;
-    border: 1px solid #a5dfd0;
-    background: #eefaf6;
-}
-
-.form-message-error {
-    color: #9f1c1c;
-    border: 1px solid #fecaca;
-    background: #fef2f2;
-}
-
 .footer-logo {
     filter: brightness(0) invert(1);
 }
@@ -1061,10 +881,6 @@ footer nav a:hover {
     .hero-dynamic-bg {
         min-height: 720px;
     }
-
-    .answer-box {
-        border-radius: 1.3rem;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1076,4 +892,11 @@ footer nav a:hover {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+/* Placeholder contrast (WCAG AA): darker than outline-variant */
+input::placeholder,
+textarea::placeholder {
+    color: #5b6b7b;
+    opacity: 1;
 }

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         document.addEventListener("keydown", (event) => {
-            if (event.key === "Escape") {
+            if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
                 setMenu(false);
                 navToggle.focus();
             }
@@ -63,7 +63,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const errorMessage = document.getElementById("form-error");
         const originalText = submitButton?.textContent || "Saada päring";
         const data = new FormData(contactForm);
-
+        if (String(data.get("website") || "")) {
+            errorMessage?.classList.add("hidden");
+            successMessage?.classList.remove("hidden");
+            return;
+        }
+        const trim = (v, n) => String(v || "").trim().slice(0, n);
+        if (!trim(data.get("name"), 100) || !trim(data.get("email"), 254) || !trim(data.get("message"), 5000)) {
+            errorMessage?.classList.remove("hidden");
+            return;
+        }
         successMessage?.classList.add("hidden");
         errorMessage?.classList.add("hidden");
 
@@ -74,18 +83,21 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.setAttribute("aria-busy", "true");
 
         try {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 15000);
             const response = await fetch("https://n8n.arleserver.cfd/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
-                    name: String(data.get("name") || ""),
-                    email: String(data.get("email") || ""),
-                    company: String(data.get("company") || ""),
-                    message: String(data.get("message") || ""),
+                    name: trim(data.get("name"), 100),
+                    email: trim(data.get("email"), 254),
+                    company: trim(data.get("company"), 100),
+                    message: trim(data.get("message"), 5000),
                     source: window.location.href,
                     timestamp: new Date().toISOString()
-                })
-            });
+                }),
+                signal: controller.signal
+            }).finally(() => clearTimeout(timeout));
 
             if (!response.ok) throw new Error(`Vormi vastus: ${response.status}`);
 

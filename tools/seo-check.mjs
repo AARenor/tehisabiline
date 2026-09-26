@@ -134,8 +134,14 @@ function localTargetExists(value) {
 }
 
 function validateLocalReferences(html, label) {
-    const refs = [...html.matchAll(/<(?:a|img|script|link)\b[^>]*\b(?:href|src)=["']([^"']+)["'][^>]*>/gi)]
+    const refs = [...html.matchAll(/<(?:a|img|script|link|source)\b[^>]*\b(?:href|src)=["']([^"']+)["'][^>]*>/gi)]
         .map((match) => match[1]);
+    for (const tag of [...html.matchAll(/<source\b[^>]*\bsrcset=["']([^"']+)["'][^>]*>/gi)]) {
+        for (const entry of tag[1].split(",")) {
+            const url = entry.trim().split(/\s+/)[0];
+            if (url) refs.push(url);
+        }
+    }
     for (const ref of refs) {
         assert(localTargetExists(ref), `${label}: local reference does not resolve: ${ref}`);
     }

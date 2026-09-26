@@ -40,6 +40,8 @@
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="/homepage.css">
 
+    <noscript><style>.reveal,.hero-word-reveal,.hero-word{opacity:1 !important;transform:none !important;filter:none !important;}</style></noscript>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -243,7 +245,7 @@
 <!-- Hero Section -->
 <section class="hero-dynamic-bg relative flex items-center justify-center pt-14 pb-20 md:pb-28" id="hero">
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-6 md:space-y-8">
-        <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] text-deep-navy font-headline hero-word-reveal hero-reveal-1">
+        <h1 class="text-6xl md:text-7xl font-bold tracking-tight leading-[0.95] text-deep-navy font-headline hero-word-reveal hero-reveal-1">
             <span class="hero-word hero-word-0">Tsenseerimata</span> <span class="hero-word hero-word-1">AI.</span><br class="hidden md:inline"><span class="hero-word hero-word-2 gradient-text italic">Keeldudeta.</span><br><span class="hero-word hero-word-3">Eestis</span> <span class="hero-word hero-word-4">hostitud.</span>
         </h1>
         <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light hero-word-reveal hero-reveal-2">
@@ -271,25 +273,25 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="space-y-3 reveal">
                 <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                    <span class="material-symbols-outlined text-2xl">place</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">place</span>
                 </div>
                 <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Tsenseerimata ja Eestis</p>
             </div>
             <div class="space-y-3 reveal">
                 <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                    <span class="material-symbols-outlined text-2xl">speed</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">speed</span>
                 </div>
                 <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Refusal-free turvatööle</p>
             </div>
             <div class="space-y-3 reveal">
                 <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                    <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">rocket_launch</span>
                 </div>
                 <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">API arendajatele</p>
             </div>
             <div class="space-y-3 reveal">
                 <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                    <span class="material-symbols-outlined text-2xl">task_alt</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">task_alt</span>
                 </div>
                 <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Agendid + inimese kontroll</p>
             </div>
@@ -339,7 +341,7 @@
             <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col gap-8 reveal" id="mudelid">
                 <div class="space-y-8">
                     <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary">
-                        <span class="material-symbols-outlined text-4xl">question_answer</span>
+                        <span class="material-symbols-outlined" aria-hidden="true" text-4xl">question_answer</span>
                     </div>
                     <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Põhiteenus · Mudelid</p>
                     <h3 class="text-4xl font-headline font-black text-deep-navy">Küberturbele häälestatud mudelid</h3>
@@ -348,30 +350,30 @@
                     </p>
                     <ul class="space-y-4 text-left">
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                             Fine-tuned küberturbele, mitte üldjutule
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                             Refusal-free seadusliku turvatöö puhul
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                             Uusimad uncensored mudelid mootoriks
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                             Eesti riistvara, eesti- ja ingliskeelne tugi
                         </li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" class="btn-premium px-8 py-4 rounded-full text-xs font-bold text-center">Küsi ligipääsu</a>
                         <a href="/mudelid/" class="inline-flex items-center justify-center gap-2 text-primary font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
-                            Loe mudelitest <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            Loe mudelitest <span class="material-symbols-outlined" aria-hidden="true" text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <figure class="rounded-3xl overflow-hidden border border-sky-100/60">
-                        <img alt="Meie enda serveriruum Eestis" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" loading="lazy">
+                        <picture><source type="image/avif" srcset="/assets/images/tehisabiline-setup.avif"><img alt="Meie enda serveriruum Eestis" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" loading="lazy"></picture>
                         <figcaption class="bg-white/80 px-5 py-3 text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Meie enda riistvara Eestis (tulekul)</figcaption>
                     </figure>
                 </div>
@@ -407,39 +409,39 @@
             <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col gap-8 reveal" id="api">
                 <div class="space-y-8">
                     <div class="w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
-                        <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+                        <span class="material-symbols-outlined" aria-hidden="true" text-4xl">rocket_launch</span>
                     </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-600">Põhiteenus · Arendajatele</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-700">Põhiteenus · Arendajatele</p>
                     <h3 class="text-4xl font-headline font-black text-deep-navy">API turvatööriistadele</h3>
                     <p class="text-on-surface-variant leading-relaxed font-light">
                         Ehitad skannerit, monitooringut või raportite koostajat? Ühenda meie mudelid otse: OpenAI-ga ühilduv otspunkt, võtmepõhine ligipääs ja kasutus-põhine arveldus. Pilootfaasis avame ligipääsu taotluse alusel.
                     </p>
                     <ul class="space-y-4 text-left">
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-teal-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-teal-600 text-xl">check_circle</span>
                             OpenAI-ühilduv – kood töötab paari reaga
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-teal-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-teal-600 text-xl">check_circle</span>
                             Võti, limiidid ja läbipaistev arveldus
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-teal-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-teal-600 text-xl">check_circle</span>
                             Logideta režiim valikuna
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-teal-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-teal-600 text-xl">check_circle</span>
                             Sihtrühm: arendajad ja kübertiimid
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-teal-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-teal-600 text-xl">check_circle</span>
                             Ei koguta, ei treenita, ei lekita
                         </li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" class="btn-premium px-8 py-4 rounded-full text-xs font-bold text-center">Küsi API-võtit</a>
                         <a href="#vordlus" class="inline-flex items-center justify-center gap-2 text-teal-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
-                            Miks mitte tavaline AI? <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            Miks mitte tavaline AI? <span class="material-symbols-outlined" aria-hidden="true" text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -458,31 +460,31 @@
             <div class="premium-card rounded-4xl p-6 md:p-12 flex flex-col gap-8 reveal lg:col-span-2 lg:flex-row lg:gap-12" id="kuberaudit">
                 <div class="w-full lg:w-1/2 space-y-8">
                     <div class="w-16 h-16 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
-                        <span class="material-symbols-outlined text-4xl">search</span>
+                        <span class="material-symbols-outlined" aria-hidden="true" text-4xl">search</span>
                     </div>
-                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-indigo-600">Põhiteenus · Auditid</p>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-indigo-700">Põhiteenus · Auditid</p>
                     <h3 class="text-4xl font-headline font-black text-deep-navy">Agendipõhised auditid</h3>
                     <p class="text-on-surface-variant leading-relaxed font-light">
                         Professionaalsed haavatavuste auditid, mille teevad meie agendipõhised süsteemid – ja mille iga olulise leiu vaatab üle inimene. Uuendused, ligipääsud, süstikindlus, parandusplaan tähtsuse järjekorras.
                     </p>
                     <ul class="space-y-4 text-left">
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-indigo-600 text-xl">check_circle</span>
                             Agendipõhine test nagu ründaja, sinu loal
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-indigo-600 text-xl">check_circle</span>
                             Iga leid inimese ülevaatusega
                         </li>
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
-                            <span class="material-symbols-outlined text-indigo-600 text-xl">check_circle</span>
+                            <span class="material-symbols-outlined" aria-hidden="true" text-indigo-600 text-xl">check_circle</span>
                             Parandusplaan ja korduskontroll
                         </li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" class="btn-premium px-8 py-4 rounded-full text-xs font-bold text-center">Telli audit</a>
                         <a href="/kuberaudit/" class="inline-flex items-center justify-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
-                            Loe lähemalt <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            Loe lähemalt <span class="material-symbols-outlined" aria-hidden="true" text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -491,7 +493,7 @@
                         <div class="flex items-center justify-between">
                             <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Agendipõhine valve</span>
                             <span class="text-[10px] font-bold text-teal-600 flex items-center gap-1">
-                                <span class="material-symbols-outlined text-sm">check_circle</span> Aktiivne
+                                <span class="material-symbols-outlined" aria-hidden="true" text-sm">check_circle</span> Aktiivne
                             </span>
                         </div>
                         <div class="space-y-3 text-sm">
@@ -611,7 +613,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div class="premium-card rounded-3xl p-8 md:p-10 reveal">
                 <div class="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 mb-6">
-                    <span class="material-symbols-outlined text-2xl">check_circle</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">check_circle</span>
                 </div>
                 <h3 class="text-3xl font-headline font-black text-deep-navy mb-6">Mida me teeme</h3>
                 <ul class="space-y-4 text-on-surface-variant font-light">
@@ -623,7 +625,7 @@
             </div>
             <div class="premium-card rounded-3xl p-8 md:p-10 reveal">
                 <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-red-600 mb-6">
-                    <span class="material-symbols-outlined text-2xl">clear</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-2xl">clear</span>
                 </div>
                 <h3 class="text-3xl font-headline font-black text-deep-navy mb-6">Mida me ei tee</h3>
                 <ul class="space-y-4 text-on-surface-variant font-light">
@@ -651,7 +653,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mis on tsenseerimata AI?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Mudelid töötavad meie enda riistvaral Eestis ega sõltu suurettevõtte pilvest. Sinu päringud ei liigu Ameerika serveritesse.
@@ -660,7 +662,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mida tähendab refusal-free?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Mudel ei keeldu meelevaldselt seaduslikust turvatööst, mille puhul pilveteenused tihti keelduvad. Ebaseaduslik tegevus on endiselt välistatud.
@@ -669,7 +671,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Milleks mudelid häälestatud on?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Küberturbe ülesannetele: haavatavused, logid, konfiguratsioonid, ründetestid. Täpsed mõõdikud lepime kokku piloodis.
@@ -678,7 +680,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kellele API mõeldud on?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Arendajatele, kes ehitavad turvatööriistu. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutus-põhine. Sinu päringuid ei kasutata mudelite treenimiseks.
@@ -687,7 +689,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kuidas agendipõhine audit käib?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja ning iga oluline leid läbib inimese ülevaatuse. Tulemus on parandusplaan koos korduskontrolliga.
@@ -696,7 +698,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui palju see maksab?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise.
@@ -705,7 +707,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mida te ei tee?</h3>
-                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45">add</span>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Ei aita ebaseadusliku tegevusega, ei testi võõraid süsteeme ilma loata ega mööda ligipääsukontrollidest. Iga töö algab kirjalikest piiridest.
@@ -738,13 +740,13 @@
             <div class="space-y-10">
                 <div class="flex items-center gap-8 group">
                     <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                        <span class="material-symbols-outlined text-xl">mail</span>
+                        <span class="material-symbols-outlined" aria-hidden="true" text-xl">mail</span>
                     </div>
                     <a href="mailto:tehisabiline@gmail.com" class="text-xl font-headline font-bold text-deep-navy">tehisabiline@gmail.com</a>
                 </div>
                 <div class="flex items-center gap-8 group">
                     <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                        <span class="material-symbols-outlined text-xl">location_on</span>
+                        <span class="material-symbols-outlined" aria-hidden="true" text-xl">location_on</span>
                     </div>
                     <span class="text-xl font-headline font-bold text-deep-navy">Tallinn, Eesti</span>
                 </div>
@@ -752,15 +754,15 @@
             <div class="space-y-6 pt-8 border-t border-outline-variant">
                 <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Mida saad vastu</h3>
                 <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                     <span class="text-sm font-medium text-on-surface-variant">Tasuta esmane kaardistus</span>
                 </div>
                 <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                     <span class="text-sm font-medium text-on-surface-variant">Aus sobivuse hinnang – ka eitav</span>
                 </div>
                 <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                    <span class="material-symbols-outlined" aria-hidden="true" text-primary text-xl">check_circle</span>
                     <span class="text-sm font-medium text-on-surface-variant">Selge hind ja ajakava kirjas</span>
                 </div>
             </div>
@@ -768,32 +770,36 @@
         <div class="premium-card p-12 rounded-4xl relative overflow-hidden reveal">
             <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             <form class="space-y-8 relative z-10" id="contact-form">
+                <div class="hidden" aria-hidden="true">
+                    <label for="website">Veebileht</label>
+                    <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-3">
                         <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="name">Nimi</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="name" name="name" placeholder="Teie nimi" required type="text">
+                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="name" name="name" placeholder="Teie nimi" required type="text" autocomplete="name" maxlength="100">
                     </div>
                     <div class="space-y-3">
                         <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="email">Email</label>
-                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="email" name="email" placeholder="teie@email.com" required type="email">
+                        <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="email" name="email" placeholder="teie@email.com" required type="email" autocomplete="email" maxlength="254">
                     </div>
                 </div>
                 <div class="space-y-3">
                     <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="company">Ettevõte</label>
-                    <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="company" name="company" placeholder="Ettevõtte nimi" type="text">
+                    <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="company" name="company" placeholder="Ettevõtte nimi" type="text" autocomplete="organization" maxlength="100">
                 </div>
                 <div class="space-y-3">
                     <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="message">Sõnum</label>
-                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm placeholder:text-outline-variant font-light" id="message" name="message" placeholder="Nt: soovin API-võtit turvatööriista jaoks / tahan agendipõhist auditit" required rows="3"></textarea>
+                    <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="message" name="message" placeholder="Nt: soovin API-võtit turvatööriista jaoks / tahan agendipõhist auditit" required rows="3" maxlength="5000"></textarea>
                 </div>
                 <button class="w-full btn-premium py-6 rounded-full font-bold text-sm mt-8" type="submit">
                     Saada päring
                 </button>
                 <p class="text-center text-xs text-on-surface-variant/60 font-light">Vormi andmeid kasutame ainult päringule vastamiseks. Vaata <a class="underline hover:text-primary" href="/privaatsus/">privaatsustingimusi</a>.</p>
-                <div id="form-success" class="hidden text-center py-6 bg-primary/5 border border-primary/10 rounded-2xl text-primary font-bold text-sm">
+                <div id="form-success" role="status" class="hidden text-center py-6 bg-primary/5 border border-primary/10 rounded-2xl text-primary font-bold text-sm">
                     Sõnum edukalt saadetud! Võtame peagi ühendust.
                 </div>
-                <div id="form-error" class="hidden text-center py-6 bg-red-50 border border-red-100 rounded-2xl text-red-600 font-bold text-sm">
+                <div id="form-error" role="alert" class="hidden text-center py-6 bg-red-50 border border-red-100 rounded-2xl text-red-600 font-bold text-sm">
                     Sõnumi saatmine ebaõnnestus. Proovi hetke pärast uuesti.
                 </div>
             </form>

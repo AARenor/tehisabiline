@@ -99,20 +99,24 @@ const refSet = new Set();
 function addRef(p) { occurrences.push(p); refSet.add(p); }
 for (const file of pageFiles) {
     const html = read(file);
-    for (const m of html.matchAll(/<(a|img|script|link)\b[^>]*>/gi)) {
+    for (const m of html.matchAll(/<(a|img|script|link|source)\b[^>]*>/gi)) {
         const tag = m[0];
         // canonical links are self-identifiers, not navigational votes
         if (/^<link\b/i.test(tag) && /\brel=["']canonical["']/i.test(tag)) continue;
         const v = tag.match(/(?:href|src)=["']([^"']+)["']/i)?.[1] ?? "";
-        if (/^(#|mailto:|tel:|data:|javascript:|\/\/)/i.test(v) || v === "") continue;
-        if (/^https?:\/\//i.test(v)) {
-            try {
-                if (new URL(v).origin !== origin) continue;
-                addRef(new URL(v).pathname);
-            } catch { continue; }
-        } else {
-            const base = dirname("/" + rel(file));
-            addRef(resolve(base, v.split("#")[0].split("?")[0]));
+        const srcset = tag.match(/srcset=["']([^"']+)["']/i)?.[1] ?? "";
+        for (const raw of [v, ...srcset.split(",").map((s) => s.trim().split(/\s+/)[0]).filter(Boolean)]) {
+            const u = raw;
+            if (/^(#|mailto:|tel:|data:|javascript:|\/\/)/i.test(u) || u === "") continue;
+            if (/^https?:\/\//i.test(u)) {
+                try {
+                    if (new URL(u).origin !== origin) continue;
+                    addRef(new URL(u).pathname);
+                } catch { continue; }
+            } else {
+                const base = dirname("/" + rel(file));
+                addRef(resolve(base, u.split("#")[0].split("?")[0]));
+            }
         }
     }
     // meta content URLs (og:image, twitter:image, ...) — skip og:url (self-identifier)
@@ -127,8 +131,8 @@ for (const file of pageFiles) {
         }
     }
 }
-// CSS url(...) references (fonts, backgrounds). Known limitation: srcset,
-// <source>, <video poster> and inline styles are not collected.
+// CSS url(...) references (fonts, backgrounds). Known limitation: <video poster>
+// and inline styles are not collected.
 for (const f of allFiles.filter((p) => p.endsWith(".css"))) {
     const css = read(f);
     for (const m of css.matchAll(/url\(["']?([^)"']+)["']?\)/g)) {
@@ -149,17 +153,30 @@ const referenced = refSet;
 // --- 2b. image weights + lazy -------------------------------------------------
 const heavy = [];
 const noLazy = [];
+const weighed = new Set();
 for (const file of pageFiles) {
     const html = read(file);
-    for (const m of html.matchAll(/<img\b[^>]*>/gi)) {
-        const tag = m[0];
-        const src = tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] ?? "";
-        if (!src.startsWith("/assets/")) continue;
+    const weigh = (src) => {
+        if (!src.startsWith("/assets/") || weighed.has(src)) return;
+        weighed.add(src);
         const disk = join(root, src);
         if (existsSync(disk) && !/\.svg$/i.test(src)) {
             const kb = Math.round(statSync(disk).size / 1024);
             if (kb > HEAVY_IMG_KB) heavy.push(`${src.slice(1)}: ${kb}KB`);
         }
+    };
+    for (const m of html.matchAll(/<(img|source)\b[^>]*>/gi)) {
+        const tag = m[0];
+        const src = tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] ?? "";
+        weigh(src);
+        for (const mm of tag.matchAll(/srcset=["']([^"']+)["']/gi)) {
+            for (const entry of mm[1].split(",")) {
+                const u = entry.trim().split(/\s+/)[0];
+                if (u) weigh(u);
+            }
+        }
+        if (!/^<img\b/i.test(tag)) continue;
+        if (!src.startsWith("/assets/")) continue;
         const w = parseInt(tag.match(/\bwidth=["'](\d+)["']/i)?.[1] ?? "0", 10);
         if (w >= LAZY_MIN_WIDTH && !/\bloading=["']lazy["']/i.test(tag)) noLazy.push(`${rel(file)}: large img missing loading=lazy (${src})`);
     }
