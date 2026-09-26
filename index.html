@@ -141,6 +141,17 @@
           "areaServed": {"@type": "Country", "name": "Estonia"}
         },
         {
+          "@type": "HowTo",
+          "@id": "https://tehisabiline.ee/#protsess",
+          "name": "Kuidas alustada: kolm sammu tööle",
+          "description": "Tasuta kaardistus, võti või pilootaudit, üleandmine.",
+          "step": [
+            {"@type": "HowToStep", "position": 1, "name": "Tasuta kaardistus", "text": "Räägid, mida vajad: API-t oma tööriistale või auditit oma süsteemidele. Me ütleme ausalt, kas tasub ära – ja kui ei tasu, ütleme seda otse."},
+            {"@type": "HowToStep", "position": 2, "name": "Võti või pilootaudit", "text": "Avame API-võtme limiitidega või käivitame agendipõhise piiratud pilootauditi. Üks asi korraga, kirjalike piiridega."},
+            {"@type": "HowToStep", "position": 3, "name": "Üleandmine", "text": "Saad toimiva integratsiooni või turvaraporti parandusplaani ja korduskontrolliga. Üleandmise tingimus on kirjas pakkumises."}
+          ]
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://tehisabiline.ee/#faq",
           "mainEntity": [
@@ -392,7 +403,7 @@
                     </div>
                     <figure class="rounded-3xl overflow-hidden border border-sky-100/60">
                         <picture><source type="image/avif" srcset="/assets/images/tehisabiline-setup.avif"><img alt="Meie tulevane serveriruum Eestis (illustratsioon)" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" srcset="/assets/images/tehisabiline-setup-640.jpg 640w, /assets/images/tehisabiline-setup-960.jpg 960w, /assets/images/tehisabiline-setup.jpg 1280w" sizes="(max-width: 768px) 100vw, 800px" loading="lazy"></picture>
-                        <figcaption class="bg-white/80 px-5 py-3 text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Meie enda riistvara Eestis (tulekul)</figcaption>
+                        <figcaption class="bg-white/80 px-5 py-3 text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Meie tulevane serveriruum Eestis (illustratsioon)</figcaption>
                     </figure>
                 </div>
                 <div class="bg-sky-50/30 rounded-3xl p-5 md:p-8 relative border border-sky-100/50">
@@ -509,7 +520,7 @@
                 <div class="w-full lg:w-1/2 bg-slate-50/50 rounded-3xl p-5 md:p-8 border border-slate-100/50 flex flex-col justify-center">
                     <div class="space-y-5">
                         <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Agendipõhine valve</span>
+                            <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Agendipõhine valve · näide</span>
                             <span class="text-[10px] font-bold text-teal-600 flex items-center gap-1">
                                 <span class="material-symbols-outlined" aria-hidden="true" text-sm">check_circle</span> Aktiivne
                             </span>

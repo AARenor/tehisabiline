@@ -52,6 +52,18 @@
           "audience": {"@type": "BusinessAudience", "audienceType": "Eesti ettevõtted"}
         },
         {
+          "@type": "HowTo",
+          "@id": "https://tehisabiline.ee/kuberaudit/#protsess",
+          "name": "Kuidas küberaudit käib",
+          "description": "Agendipõhise küberauditi neli sammu kirjaliku loa alusel.",
+          "step": [
+            {"@type": "HowToStep", "position": 1, "name": "Pind", "text": "Agendid kaardistavad sihtmärgi: süstiründepinnad (prompt injection), API autentimisloogika, rate limits ja HTTP turvapäised. Sisendiks piisab domeenide nimekirjast ja kirjalikust loast."},
+            {"@type": "HowToStep", "position": 2, "name": "Süvakontroll", "text": "Testime andmete eksfiltreerimise vektoreid ja nõrku kohti sinu kirjaliku loa mahus. Väljund on loetelu koos tõenditega, mitte hinnangute kogu."},
+            {"@type": "HowToStep", "position": 3, "name": "Inimene kontrollib", "text": "Iga oluline leid kinnitatakse ja hinnatakse käsitsi, valehäired jäävad raportist välja."},
+            {"@type": "HowToStep", "position": 4, "name": "Plaan valmib", "text": "Leiud järjestatakse: kohe, nädalaga, plaani korras – koos korduskontrolliga."}
+          ]
+        },
+        {
           "@type": "WebPage",
           "@id": "https://tehisabiline.ee/kuberaudit/#webpage",
           "url": "https://tehisabiline.ee/kuberaudit/",
@@ -239,6 +251,17 @@
                         <p>Tasuta kaardistuse järel saad selge pakkumise kirjas.</p>
                     </section>
 
+                    <section class="prose-section" id="tingimused">
+                        <p class="eyebrow">Tingimused</p>
+                        <h2>Mis tingimustel audit käib?</h2>
+                        <ul>
+                            <li><strong>Kirjalik luba:</strong> testime ainult sinu süsteeme, kirjalikus mahus ja leppelisel ajal.</li>
+                            <li><strong>Tõendid, mitte hinnangud:</strong> iga leid tuleb koos tõendi ja parandusettepanekuga.</li>
+                            <li><strong>Korduskontroll:</strong> paranduste ülevaatus pakkumise mahus.</li>
+                            <li><strong>Konfidentsiaalsus:</strong> sinu andmeid ei koguta, ei treenita edasi ega anta kolmandatele.</li>
+                        </ul>
+                    </section>
+
                     <section class="prose-section" id="faq">
                         <p class="eyebrow">KKK</p>
                         <h2>Küsimused küberauditi kohta</h2>
@@ -280,6 +303,7 @@
                         <a href="#inimene">Inimese roll</a>
                         <a href="#sobivus">Sobivuse kontroll</a>
                         <a href="#hind">Hinna kujunemine</a>
+                        <a href="#tingimused">Tingimused</a>
                         <a href="#faq">Küsimused</a>
                     </nav>
                 </aside>
