@@ -134,7 +134,7 @@
         {
           "@type": "Service",
           "@id": "https://tehisabiline.ee/#kuberaudit",
-          "url": "https://tehisabiline.ee/#kuberaudit",
+          "url": "https://tehisabiline.ee/kuberaudit/",
           "name": "Agendipõhised haavatavuste auditid",
           "serviceType": "Inimese kontrollitud agendipõhised turvaauditid",
           "provider": {"@id": "https://tehisabiline.ee/#organization"},
@@ -154,7 +154,7 @@
             },
             {
               "@type": "Question",
-              "name": "Mida tähendab refusal-free ehk keeldudeta?",
+              "name": "Mida tähendab refusal-free?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Mudel ei keeldu meelevaldselt seaduslikust turvatööst, mille puhul pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Ebaseaduslik tegevus on endiselt välistatud."
@@ -162,7 +162,7 @@
             },
             {
               "@type": "Question",
-              "name": "Milleks on mudelid küberturbele häälestatud?",
+              "name": "Milleks mudelid häälestatud on?",
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Peenhäälestus turvaülesannetele tähendab paremaid vastuseid haavatavuste, logide, konfiguratsioonide ja ründetestide teemal kui üldmudelitel. Täpsed mõõdikud lepime kokku piloodis."
@@ -173,7 +173,7 @@
               "name": "Kellele API mõeldud on?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Arendajatele, kes ehitavad turvatööriistu: skannereid, monitooringut, raportite koostajaid. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutus-põhine. Päringuid ei kasutata mudelite treenimiseks."
+                "text": "Arendajatele, kes ehitavad turvatööriistu: skannereid, monitooringut, raportite koostajaid. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutuspõhine. Päringuid ei kasutata mudelite treenimiseks."
               }
             },
             {
@@ -229,7 +229,7 @@
         <div class="hidden lg:flex items-center space-x-8">
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#teenused">Teenused</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#api">API</a>
-            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#kuberaudit">Auditid</a>
+            <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#kuberaudit">Küberaudit</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#faq">KKK</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/meist/">Meist</a>
             <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#contact">Kontakt</a>
@@ -243,7 +243,7 @@
     <div class="lg:hidden hidden flex-col items-center gap-0 pb-8 pt-4 backdrop-blur-2xl transition-all duration-300 mobile-nav-bg" id="mobile-menu">
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#teenused">Teenused</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#api">API</a>
-        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#kuberaudit">Auditid</a>
+        <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#kuberaudit">Küberaudit</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#faq">KKK</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
         <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#contact">Kontakt</a>
@@ -267,7 +267,7 @@
                 <span class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
             </a>
             <a class="px-10 py-4 rounded-full text-xs font-bold text-deep-navy bg-white/50 border border-deep-navy/10 hover:bg-white/80 hover:border-deep-navy/20 transition-all relative overflow-hidden group" href="#kuberaudit">
-                <span class="relative z-10">Vaata auditeid</span>
+                <span class="relative z-10">Vaata küberauditit</span>
                 <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             </a>
         </div>
@@ -391,7 +391,7 @@
                         </a>
                     </div>
                     <figure class="rounded-3xl overflow-hidden border border-sky-100/60">
-                        <picture><source type="image/avif" srcset="/assets/images/tehisabiline-setup.avif"><img alt="Meie enda serveriruum Eestis" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" loading="lazy"></picture>
+                        <picture><source type="image/avif" srcset="/assets/images/tehisabiline-setup.avif"><img alt="Meie tulevane serveriruum Eestis (illustratsioon)" width="1280" height="960" class="w-full object-cover" src="/assets/images/tehisabiline-setup.jpg" loading="lazy"></picture>
                         <figcaption class="bg-white/80 px-5 py-3 text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/60">Meie enda riistvara Eestis (tulekul)</figcaption>
                     </figure>
                 </div>
@@ -432,7 +432,7 @@
                     <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-teal-700">Põhiteenus · Arendajatele</p>
                     <h3 class="text-4xl font-headline font-black text-deep-navy">API turvatööriistadele</h3>
                     <p class="text-on-surface-variant leading-relaxed font-light">
-                        Ehitad skannerit, monitooringut või raportite koostajat? Ühenda meie mudelid otse: OpenAI-ga ühilduv otspunkt, võtmepõhine ligipääs ja kasutus-põhine arveldus. Pilootfaasis avame ligipääsu taotluse alusel.
+                        Ehitad skannerit, monitooringut või raportite koostajat? Ühenda meie mudelid otse: OpenAI-ga ühilduv otspunkt, võtmepõhine ligipääs ja kasutuspõhine arveldus. Pilootfaasis avame ligipääsu taotluse alusel.
                     </p>
                     <ul class="space-y-4 text-left">
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
@@ -502,7 +502,7 @@
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contact" class="btn-premium px-8 py-4 rounded-full text-xs font-bold text-center">Telli audit</a>
                         <a href="/kuberaudit/" class="inline-flex items-center justify-center gap-2 text-indigo-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all">
-                            Loe lähemalt <span class="material-symbols-outlined" aria-hidden="true" text-sm">arrow_forward</span>
+                            Loe küberauditist <span class="material-symbols-outlined" aria-hidden="true" text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -701,7 +701,7 @@
                     <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                    Arendajatele, kes ehitavad turvatööriistu. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutus-põhine. Sinu päringuid ei kasutata mudelite treenimiseks.
+                    Arendajatele, kes ehitavad turvatööriistu. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutuspõhine. Sinu päringuid ei kasutata mudelite treenimiseks.
                 </p>
             </details>
             <details class="premium-card rounded-3xl p-8 group reveal">
@@ -854,9 +854,9 @@
                 <nav aria-label="Teenuste lingid" class="flex flex-col space-y-4">
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#mudelid">Küber-AI mudelid</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#api">API arendajatele</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#kuberaudit">Agendipõhised auditid</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="#kuberaudit">Agendipõhine küberaudit</a>
                     <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/mudelid/">Mudelitest lähemalt</a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/kuberaudit/">Audititest lähemalt</a>
+                    <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/kuberaudit/">Küberauditist lähemalt</a>
                 </nav>
             </div>
             <div class="space-y-8">

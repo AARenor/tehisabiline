@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Küber-AI kasutusjuhud turvatöös | Tehisabiline</title>
-    <meta name="description" content="12 praktilist tsenseerimata küber-AI kasutusjuhtu: koodianalüüs, logide uurimine, ründepayload'id, süstirünnete testid ja raportid – koos kontrollpunktidega.">
+    <title>Küber-AI kasutusjuhud ja küberaudit turvatöös | Tehisabiline</title>
+    <meta name="description" content="12 praktilist tsenseerimata küber-AI kasutusjuhtu: koodianalüüs, logide uurimine, ründepayload'id, süstirünnete testid ja raportid – koos kontrollpunktidega. Vajadusel jätka küberauditiga.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
     <meta name="author" content="Tehisabiline OÜ">
     <meta name="theme-color" content="#00658d">
@@ -13,7 +13,7 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
-    <meta property="og:title" content="Küber-AI kasutusjuhud turvatöös">
+    <meta property="og:title" content="Küber-AI kasutusjuhud ja küberaudit turvatöös">
     <meta property="og:description" content="Mida teha tsenseerimata küber-AI-ga: koodianalüüs, logid, payload'id, red-teaming, raportid – koos kontrollpunktide ja mõõdikutega.">
     <meta property="og:url" content="https://tehisabiline.ee/kasutusjuhud/">
     <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
@@ -21,9 +21,9 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Küber-AI kasutusjuhud turvatöös – Tehisabiline">
     <meta name="article:published_time" content="2026-08-12">
-    <meta name="article:modified_time" content="2026-09-25">
+    <meta name="article:modified_time" content="2026-09-26">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Küber-AI kasutusjuhud turvatöös">
+    <meta name="twitter:title" content="Küber-AI kasutusjuhud ja küberaudit turvatöös">
     <meta name="twitter:description" content="12 praktilist kasutusjuhtu küber-AI-le – koos kontrollpunktide ja mõõdikutega.">
     <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png">
 
@@ -118,7 +118,7 @@
             {
               "@type": "Question",
               "name": "Kas AI vastuseid saab alati usaldada?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Ei. Küber-AI kiirendab tööd, kuid iga oluline leid tuleb üle kontrollida – seda põhimõtet kasutame ka oma agentpõhistes auditites, kus inimene kinnitab leiud."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Ei. Küber-AI kiirendab tööd, kuid iga oluline leid tuleb üle kontrollida – seda põhimõtet kasutame ka oma agendipõhistes auditites, kus inimene kinnitab leiud."}
             },
             {
               "@type": "Question",
@@ -201,7 +201,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="callout"><strong>Ühine joon:</strong> mudel teeb musta töö kiireks, inimene vastutab iga olulise otsuse eest. See on ka meie agendipõhiste auditite põhimõte – vaata <a href="/kuberaudit/">auditite lehte</a>.</div>
+                        <div class="callout"><strong>Ühine joon:</strong> mudel teeb musta töö kiireks, inimene vastutab iga olulise otsuse eest. See on ka meie agendipõhiste auditite põhimõte – vaata <a href="/kuberaudit/">küberauditi lehte</a>.</div>
                     </section>
 
                     <section class="prose-section" id="esimene-samm">
@@ -211,7 +211,7 @@
                             <li><strong>Vali üks korduv ülesanne</strong>, näiteks logilõigu mustrite otsimine või koodianalüüsi eeltöö – mitte kolm korraga.</li>
                             <li><strong>Pane paika kontrollpunkt:</strong> kes kinnitab leiud ja millal ei tohi mudel üksi edasi minna.</li>
                             <li><strong>Vali mõõdik:</strong> aeg, leitud päris probleemide arv, mustandi kasutuskõlblikkus.</li>
-                            <li><strong>Võta API-võti</strong> või alusta <a href="/kuberaudit/">agendipõhise auditiga</a>, kui tahad kohe tervikpilti.</li>
+                            <li><strong>Võta API-võti</strong> või alusta <a href="/kuberaudit/">agendipõhise küberauditiga</a>, kui tahad kohe tervikpilti.</li>
                         </ol>
                         <p>Kui soovid teada, mida meie mudelid oskavad ja kuidas andmetega ümber käime, vaata <a href="/mudelid/">mudelite lehte</a>.</p>
                     </section>
@@ -220,6 +220,17 @@
                         <p class="eyebrow">Allikad ja raamistikud</p>
                         <h2>Millele see tugineb?</h2>
                         <p>Kasutusjuhud lähtuvad laialt tunnustatud raamistikest, mida tasub ka ise lugeda: <a href="https://attack.mitre.org/">MITRE ATT&CK</a> ründetehnikate taksonoomia, <a href="https://genai.owasp.org/llm-top-10/">OWASP LLM Top 10</a> (sh prompt injection) ning <a href="https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai">UK NCSC juhised agentlike AI-süsteemide riskijuhtimiseks</a>. Need raamistikud ei ole meist sõltumatud tõendid meie mudelite soorituse kohta – need on taust, mille järgi kasutusjuhud on valitud.</p>
+                    </section>
+
+                    <section class="prose-section" id="sonastik">
+                        <p class="eyebrow">Mõisted</p>
+                        <h2>Küberturvalisuse põhimõisted lühidalt</h2>
+                        <div class="content-grid">
+                            <div class="info-card"><h3>Turvatestimine</h3><p>Oma süsteemide turvalisuse kontrollimine seaduslikus raamis ja omaniku loal – näiteks skaneerimine, konfiguratsioonide ülevaatus ja logide analüüs.</p></div>
+                            <div class="info-card"><h3>Pentest ehk läbitungimistest</h3><p>Ühe sihtmärgi aktiivne murdmiskatse kokkulepitud mahus. Kitsam kui <a href="/kuberaudit/">küberaudit</a>, mis vaatab üle kogu turvaseisu.</p></div>
+                            <div class="info-card"><h3>Haavatavuste audit</h3><p>Teadaolevate nõrkuste süsteemne kaardistamine koos parandusjärjekorraga. Meie <a href="/kuberaudit/">küberaudit</a> sisaldab seda koos ründetestide ja inimese ülevaatusega.</p></div>
+                            <div class="info-card"><h3>Küberaudit</h3><p>Kogu küberturvalisuse ülevaatus: uuendused, ligipääsud, varundus, päised ja protsessid – tulemuseks parandusplaan, mitte hirmujutt.</p></div>
+                        </div>
                     </section>
 
                     <section class="prose-section" id="faq">
@@ -238,7 +249,7 @@
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
                             <a class="related-card" href="/mudelid/"><strong>Küber-AI mudelid</strong><span>Avatud kaalud, Qwen 27B tsenseerimata lineup ja API arendajatele.</span></a>
-                            <a class="related-card" href="/kuberaudit/"><strong>Agendipõhised auditid</strong><span>Süstiründed, API-loogika, rate limits, päised ja andmeleke – inimese kontrolliga.</span></a>
+                            <a class="related-card" href="/kuberaudit/"><strong>Küberaudit</strong><span>Süstiründed, API-loogika, rate limits, päised ja andmeleke – inimese kontrolliga.</span></a>
                             <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
                         </div>
                     </section>
@@ -255,6 +266,7 @@
                         <strong>Sellel lehel</strong>
                         <a href="#kasutusjuhud">12 kasutusjuhtu</a>
                         <a href="#esimene-samm">Millest alustada?</a>
+                        <a href="#sonastik">Mõisted</a>
                         <a href="#allikad">Allikad ja raamistikud</a>
                         <a href="#faq">Küsimused</a>
                     </nav>
