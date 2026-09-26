@@ -2,7 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
   "redirects": [
+    { "source": "/privaat-ai", "destination": "/mudelid/", "permanent": true },
     { "source": "/privaat-ai/:path*", "destination": "/mudelid/:path*", "permanent": true },
+    { "source": "/ai-automatiseerimise-naited", "destination": "/kasutusjuhud/", "permanent": true },
     { "source": "/ai-automatiseerimise-naited/:path*", "destination": "/kasutusjuhud/:path*", "permanent": true }
   ],
   "headers": [
