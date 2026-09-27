@@ -40,7 +40,7 @@ const expectedPages = [
     {
         file: "kasutusjuhud/index.html",
         canonical: `${origin}/kasutusjuhud/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage", "ItemList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
