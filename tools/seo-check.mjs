@@ -375,6 +375,16 @@ const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((mat
 const sitemapUrls = sitemapEntries.map((entry) => entry.loc);
 assert(JSON.stringify(sitemapUrls) === JSON.stringify(expectedUrls), `Sitemap URLs differ from expected canonical URLs: ${sitemapUrls.join(", ")}.`);
 for (const noindexed of noindexUrls) assert(!sitemapUrls.includes(noindexed), `Sitemap must not list noindexed URL: ${noindexed}.`);
+const retiredSoftMigration = [
+    {file: "ai-automatiseerimise-naited/index.html", url: `${origin}/ai-automatiseerimise-naited/`, successor: `${origin}/kasutusjuhud/`},
+    {file: "privaat-ai/index.html", url: `${origin}/privaat-ai/`, successor: `${origin}/mudelid/`}
+];
+for (const retired of retiredSoftMigration) {
+    const retiredHtml = readFileSync(join(root, retired.file), "utf8");
+    assert(metaValue(retiredHtml, "robots").split(/\s*,\s*/).includes("noindex"), `${retired.file} must stay noindex until the owner picks the 301-vs-page outcome.`);
+    assert(!sitemapUrls.includes(retired.url), `Sitemap must not list retired URL: ${retired.url}.`);
+    assert(retiredHtml.includes(retired.successor), `${retired.file} must keep its forward link to ${retired.successor}.`);
+}
 for (const {loc, lastmod} of sitemapEntries) {
     assert(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap lastmod must use YYYY-MM-DD for ${loc}.`);
     assert(!lastmod || lastmod <= today, `Sitemap lastmod cannot be in the future: ${lastmod}.`);
