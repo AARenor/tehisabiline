@@ -304,6 +304,7 @@ for (const page of expectedPages) {
     validateLocalReferences(html, label);
     validateFontPreloads(html, label);
     assert(html.includes("mailto:tehisabiline@gmail.com"), label + ": contact email must be present.");
+    assert(html.includes("/privaatsus/"), label + ": privacy link must be present.");
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
