@@ -160,6 +160,31 @@ function validateLocalReferences(html, label) {
     }
 }
 
+function validateFontPreloads(html, label) {
+    const tags = html.match(/<link[^>]*preload[^>]*>/gi) || [];
+    const fonts = [];
+    for (const tag of tags) {
+        const href = attrValue(tag, "href");
+        if (href.endsWith(".woff2")) fonts.push(href);
+    }
+    if (!fonts.length) return;
+    const cssTags = html.match(/<link[^>]*stylesheet[^>]*>/gi) || [];
+    let cssText = "";
+    for (const tag of cssTags) {
+        try {
+            const u = new URL(attrValue(tag, "href"), origin);
+            if (u.origin !== origin) continue;
+            cssText += readFileSync(resolveLocalPath(u.pathname), "utf8");
+        } catch {
+            continue;
+        }
+    }
+    for (const font of fonts) {
+        const base = font.split("/").pop().split("?")[0];
+        assert(cssText.includes(base), label + ": preloaded font is not used by any stylesheet: " + base);
+    }
+}
+
 for (const page of expectedPages) {
     const label = page.file;
     const filePath = join(root, page.file);
@@ -257,6 +282,7 @@ for (const page of expectedPages) {
     }
 
     validateLocalReferences(html, label);
+    validateFontPreloads(html, label);
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
