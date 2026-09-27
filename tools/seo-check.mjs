@@ -263,6 +263,8 @@ for (const page of expectedPages) {
                 }
                 assert(metaValue(html, "og:type") === "article", label + ": Article pages must declare og:type article.");
                 assert(html.includes("article:published_time") && html.includes("article:modified_time"), label + ": Article pages must expose publish dates.");
+                assert(metaValue(html, "article:modified_time") === article.dateModified, label + ": social modified date must match schema.");
+                assert(metaValue(html, "article:published_time") === article.datePublished, label + ": social publish date must match schema.");
             }
 
             const datedEntity = graph.find((item) => item["@type"] === page.dateType);
