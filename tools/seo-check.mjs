@@ -267,6 +267,13 @@ for (const page of expectedPages) {
                 assert(metaValue(html, "article:published_time") === article.datePublished, label + ": social publish date must match schema.");
             }
 
+            const faqPage = graph.find((item) => item["@type"] === "FAQPage" || (Array.isArray(item["@type"]) && item["@type"].includes("FAQPage")));
+            if (faqPage) {
+                const visibleText = stripHtml(html);
+                for (const q of faqPage.mainEntity || []) {
+                    assert(q.name && visibleText.includes(q.name), label + ": FAQ question missing from visible content.");
+                }
+            }
             const datedEntity = graph.find((item) => item["@type"] === page.dateType);
             const dateModified = datedEntity?.dateModified || "";
             assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: ${page.dateType} dateModified must use YYYY-MM-DD.`);
