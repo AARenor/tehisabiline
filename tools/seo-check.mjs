@@ -306,6 +306,7 @@ for (const page of expectedPages) {
     assert(html.includes("mailto:tehisabiline@gmail.com"), label + ": contact email must be present.");
     assert(html.includes("/privaatsus/"), label + ": privacy link must be present.");
     assert(!html.includes("http://"), label + ": insecure http reference found.");
+    assert(canonical.endsWith("/"), label + ": canonical must end with trailing slash.");
     assert(title.length <= 60, label + ": title exceeds 60 characters.");
     assert(description.length >= 50 && description.length <= 160, label + ": meta description must be 50-160 characters.");
 }
