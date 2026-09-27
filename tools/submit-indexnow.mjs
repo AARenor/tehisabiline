@@ -6,10 +6,15 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const key = "5f126675c51465984e48a3d63ec60940";
 const site = new URL(process.env.SITE_URL || "https://tehisabiline.ee/");
 const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
-const urlList = [...sitemap.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g)].map((match) => match[1]);
+const allUrls = [...sitemap.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g)].map((match) => match[1]);
 
-if (!urlList.length) {
+const onlyArgs = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const urlList = allUrls.filter((u) => !onlyArgs.length || onlyArgs.includes(u));
+if (!allUrls.length) {
     throw new Error("Sitemap does not contain any HTTPS URLs.");
+}
+if (!urlList.length) {
+    throw new Error("None of the given URLs are in the sitemap.");
 }
 
 for (const url of urlList) {
