@@ -1,5 +1,7 @@
 # Tehisabiline
 
+Live: https://tehisabiline.ee/
+
 AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Projekt ei vaja backend'i ega rakenduse runtime-sõltuvusi.
 
 ## Arendus
