@@ -19,8 +19,7 @@ Retired service pages (kept online for reference, excluded from search indexing)
 ## Guides and organization
 
 - [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): 12 practical cyber-AI use cases for security work (code analysis, logs, payloads, red-teaming, injection tests, reporting) with human checkpoints and measurements, grounded in MITRE ATT&CK, OWASP LLM Top 10 and NCSC agentic-AI guidance.
- - [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): 12 practical cyber-AI use cases for security work (code analysis, logs, payloads, red-teaming, injection tests, reporting) with human checkpoints and measurements, grounded in MITRE ATT&CK, OWASP LLM Top 10 and NCSC agentic-AI guidance.
- - [NIS2 juhend Eesti ettevõttele](https://tehisabiline.ee/nis2/): plain-language guide to the Estonian cybersecurity act (kohaldumine, VKE exemptions, support options, first steps) with questions and answers.
+- [NIS2 juhend Eesti ettevõttele](https://tehisabiline.ee/nis2/): plain-language guide to the Estonian cybersecurity act (kohaldumine, VKE exemptions, support options, first steps) with questions and answers.
 - [About Tehisabiline](https://tehisabiline.ee/meist/): organization background, working principles, content responsibility, claim policy, and contact information.
 - [Privacy and cookies](https://tehisabiline.ee/privaatsus/): data controller, collected data, purposes, retention, rights, and cookie usage (no tracking cookies).
 
