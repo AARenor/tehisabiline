@@ -11,3 +11,13 @@ jobs:
         with:
           node-version: 24
       - run: node tools/seo-check.mjs
+
+  seo-loop:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node tools/seo-loop.mjs --strict
