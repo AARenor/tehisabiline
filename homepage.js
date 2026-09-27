@@ -60,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        document.addEventListener("keydown", (event) => { if (event.key === "Escape" && menuOpen) navToggle.click(); });
+
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuOpen = false;
