@@ -252,6 +252,7 @@ for (const page of expectedPages) {
                 assert(organizationLogo === `${origin}/assets/brand/logo-512.png`, `${label}: Organization logo must use the 512×512 asset.`);
                 assert(organization?.name === "Tehisabiline OÜ", `${label}: Organization name must be Tehisabiline OÜ.`);
                 assert(organization?.url === `${origin}/`, `${label}: Organization URL must use the canonical homepage.`);
+                assert(Array.isArray(organization?.sameAs) && organization.sameAs.length > 0, label + ": Organization must list sameAs profiles.");
             }
 
             const article = graph.find((item) => item["@type"] === "Article" || (Array.isArray(item["@type"]) && item["@type"].includes("Article")));
