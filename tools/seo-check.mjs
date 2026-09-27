@@ -274,6 +274,17 @@ for (const page of expectedPages) {
                     assert(q.name && visibleText.includes(q.name), label + ": FAQ question missing from visible content.");
                 }
             }
+            const schemaUrls = [];
+            for (const raw of block.match(/https?:\/\/[^\s"'<>]+/g) || []) schemaUrls.push(raw);
+            for (const ref of schemaUrls) {
+                try {
+                    const u = new URL(ref);
+                    if (u.origin !== origin) continue;
+                    assert(localTargetExists(u.pathname), label + ": schema URL does not resolve: " + u.pathname);
+                } catch {
+                    continue;
+                }
+            }
             const datedEntity = graph.find((item) => item["@type"] === page.dateType);
             const dateModified = datedEntity?.dateModified || "";
             assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: ${page.dateType} dateModified must use YYYY-MM-DD.`);
