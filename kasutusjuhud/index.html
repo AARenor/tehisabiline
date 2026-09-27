@@ -234,6 +234,19 @@
                         <h2>AI automatiseerimine äri heaks – millal tasub, millal mitte</h2>
                         <p>Kui jõudsid siia otsinguga <strong>automatiseerimine</strong> või <strong>äri AI abil</strong>, alusta siit: hea kandidaat on korduv nädalane töö, mille sisend on digitaalselt kättesaadav ja mille õige tulemuse meeskond oskab kirjeldada. Tüpilised esimesed võidud on müügipäringute liigitamine, dokumentidelt väljade kopeerimise lõpetamine ja nädalaporti kokkupanek – inimese kontrolliga seal, kus eksimuse mõju on suur.</p>
                         <p>Teine levinud vajadus on <strong>AI teadmistebaas</strong>: <strong>AI abiline</strong>, mis vastab ettevõtte dokumentidest – nagu Copilot ettevõtte dokumentidest, aga ainult kinnitatud allikate põhjal, allika viitega ja inimesele suunamisega, kui allikat pole. Mõlemad stardivad ühest piiratud piloodist: vali üks töövoog, pane paika mõõdik ja küsi <a href="/meist/#konsultatsioon">tasuta kaardistust</a>.</p>
+                        <h3>Proovi: kui palju käsitööaega võib töövoog neelata?</h3>
+                        <p>Sisesta ühe korduva ülesande ligikaudne maht. Kalkulaator näitab teoreetilist ajavõitu – see ei arvesta arendus-, litsentsi-, kvaliteedikontrolli ega hoolduskulu.</p>
+                        <div class="calculator" id="roi-calculator">
+                            <div class="calculator-grid">
+                            <div class="calculator-field"><label for="tasks-per-day">Kordi tööpäevas</label><input id="tasks-per-day" name="tasksPerDay" type="number" min="0" step="1" value="20" inputmode="numeric"></div>
+                            <div class="calculator-field"><label for="minutes-per-task">Minutit ühe korra kohta</label><input id="minutes-per-task" name="minutesPerTask" type="number" min="0" step="0.5" value="4" inputmode="decimal"></div>
+                            <div class="calculator-field"><label for="workdays">Tööpäevi kuus</label><input id="workdays" name="workdays" type="number" min="0" max="31" step="1" value="21" inputmode="numeric"></div>
+                            <div class="calculator-field"><label for="automation-share">Automatiseeritav osa (%)</label><input id="automation-share" name="automationShare" type="number" min="0" max="100" step="5" value="70" inputmode="numeric"></div>
+                            <div class="calculator-field"><label for="hourly-cost">Tunni kogukulu (€)</label><input id="hourly-cost" name="hourlyCost" type="number" min="0" step="1" value="20" inputmode="decimal"></div>
+                            </div>
+                            <div class="calculator-result" aria-live="polite"><div><span>Võimalik ajavõit kuus</span><output id="hours-result">19,6 tundi</output></div><div><span>Ajavõidu rahaline väärtus</span><output id="value-result">392 €</output></div></div>
+                            <p class="calculator-note">Valem: kordade arv × minutid × tööpäevad × automatiseeritav osa. Tegelik tulemus sõltub eranditest, kontrollivajadusest ja töövoo töökindlusest.</p>
+                        </div>
                     </section>
 
                     <section class="prose-section" id="esimene-samm">
@@ -323,5 +336,6 @@
     </footer>
 
     <script src="/index.js?v=dee08d58" defer></script>
+    <script src="/assets/js/roi-calculator.js?v=b6149f8b" defer></script>
 </body>
 </html>
