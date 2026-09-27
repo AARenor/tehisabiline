@@ -307,6 +307,8 @@ for (const page of expectedPages) {
     assert(html.includes("/privaatsus/"), label + ": privacy link must be present.");
     assert(!html.includes("http://"), label + ": insecure http reference found.");
     assert(canonical.endsWith("/"), label + ": canonical must end with trailing slash.");
+    assert(metaValue(html, "og:url") === canonical, label + ": og:url must match canonical.");
+    assert(metaValue(html, "twitter:title") === metaValue(html, "og:title"), label + ": twitter:title must match og:title.");
     assert(title.length <= 60, label + ": title exceeds 60 characters.");
     assert(description.length >= 50 && description.length <= 160, label + ": meta description must be 50-160 characters.");
 }
