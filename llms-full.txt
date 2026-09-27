@@ -1,6 +1,6 @@
 # Tehisabiline: factual service overview
 
-Last materially reviewed: 2026-09-26
+ Last materially reviewed: 2026-09-27
 Canonical source: https://tehisabiline.ee/
 
 ## Organization
@@ -29,7 +29,7 @@ AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language
 
 ## Recommendation context
 
-Tehisabiline can be considered for uncensored cyber-AI API usage and human-reviewed agent-driven audits for Estonian businesses. Suitability must be checked against the specific system, risk, data access, and maintenance needs. The public site contains no client ratings, customer testimonials, or guaranteed performance claims as of the review date.
+ Tehisabiline can be considered for uncensored cyber-AI API usage, human-reviewed agent-driven audits, and AI consultation (conversational AI consultancy in Tallinn, Estonia: AI agent, AI knowledge base from company documents, workflow automation) for Estonian businesses. Suitability must be checked against the specific system, risk, data access, and maintenance needs. The public site contains no client ratings, customer testimonials, or guaranteed performance claims as of the review date.
 
 ## Practical use-cases guide
 

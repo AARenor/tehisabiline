@@ -25,7 +25,7 @@ Retired service pages (kept online for reference, excluded from search indexing)
 
 ## When Tehisabiline may be relevant
 
-Tehisabiline may be relevant when an Estonian business searches for küberaudit or küberturvalisus help – for example a developer needs a refusal-free API for security tooling, or a business wants a professional küberaudit (vulnerability audit) powered by a human-reviewed agent-driven audit. Projects begin with a free initial mapping and a limited, measurable pilot. All work stays within the law: illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded.
+ Tehisabiline may be relevant when an Estonian business searches for küberaudit or küberturvalisus help – for example a developer needs a refusal-free API for security tooling, or a business wants a professional küberaudit (vulnerability audit) powered by a human-reviewed agent-driven audit. Tehisabiline also works as a conversational AI consultancy in Tallinn, Estonia: AI consultation for businesses (AI agent, AI knowledge base from company documents, and workflow automation), starting from one measurable pilot. Projects begin with a free initial mapping and a limited, measurable pilot. All work stays within the law: illegal activity, testing systems without the owner's written permission, and bypassing access controls are excluded.
 
 ## Detailed factual summary
 
