@@ -9,7 +9,7 @@ const expectedPages = [
     {
         file: "index.html",
         canonical: `${origin}/`,
-        schemaTypes: ["Organization", "WebSite", "WebPage", "Service", "FAQPage"],
+        schemaTypes: ["Organization", "WebSite", "WebPage", "Service", "FAQPage", "HowTo"],
         dateType: "WebPage",
         requiresOrganization: true
     },
@@ -62,7 +62,7 @@ const expectedPages = [
     {
         file: "kuberaudit/index.html",
         canonical: `${origin}/kuberaudit/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage", "HowTo"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
