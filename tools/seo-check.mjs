@@ -229,6 +229,17 @@ for (const page of expectedPages) {
                 assert(organization?.url === `${origin}/`, `${label}: Organization URL must use the canonical homepage.`);
             }
 
+            const article = graph.find((item) => item["@type"] === "Article" || (Array.isArray(item["@type"]) && item["@type"].includes("Article")));
+            if (article) {
+                const articleImage = typeof article.image === "string" ? article.image : article.image?.url;
+                assert(articleImage === origin + "/assets/brand/tehisabiline-og.png", label + ": Article image must use the 1200x630 social asset.");
+                for (const role of ["author", "publisher"]) {
+                    if (article[role]) assert(article[role]["@type"] === "Organization", label + ": Article role must be typed.");
+                }
+                assert(metaValue(html, "og:type") === "article", label + ": Article pages must declare og:type article.");
+                assert(html.includes("article:published_time") && html.includes("article:modified_time"), label + ": Article pages must expose publish dates.");
+            }
+
             const datedEntity = graph.find((item) => item["@type"] === page.dateType);
             const dateModified = datedEntity?.dateModified || "";
             assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: ${page.dateType} dateModified must use YYYY-MM-DD.`);
