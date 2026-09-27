@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.textContent = 'Saadan...';
             submitBtn.style.opacity = '0.7';
+            contactForm.setAttribute("aria-busy", "true");
 
             // Reset opposite message box (never show both stacked)
             if (successEl) successEl.classList.add('hidden');
@@ -280,6 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
+                contactForm.removeAttribute("aria-busy");
                 submitBtn.style.opacity = '1';
             }
         });
