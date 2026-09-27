@@ -19,6 +19,13 @@ SEO kontroll:
 npm run test:seo
 ```
 
+IndexNow teavitus pärast muudatusi (kõik või valitud URL-id):
+
+```bash
+npm run submit:indexnow
+npm run submit:indexnow https://tehisabiline.ee/nis2/
+```
+
 Peamised failid:
 
 - `index.html`, `index.js`, `index.css` — avaleht
