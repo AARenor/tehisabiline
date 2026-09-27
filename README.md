@@ -2,6 +2,8 @@
 
 Live: https://tehisabiline.ee/
 
+Company website of Tehisabiline OÜ (Tallinn, Estonia): agent-driven cybersecurity audits and a private cyber-AI API for developers. Static HTML/CSS/JS, no backend.
+
 AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Projekt ei vaja backend'i ega rakenduse runtime-sõltuvusi.
 
 ## Arendus
