@@ -384,6 +384,7 @@ for (const retired of retiredSoftMigration) {
     assert(metaValue(retiredHtml, "robots").split(/\s*,\s*/).includes("noindex"), `${retired.file} must stay noindex until the owner picks the 301-vs-page outcome.`);
     assert(!sitemapUrls.includes(retired.url), `Sitemap must not list retired URL: ${retired.url}.`);
     assert(retiredHtml.includes(retired.successor), `${retired.file} must keep its forward link to ${retired.successor}.`);
+    validateLocalReferences(retiredHtml, retired.file);
 }
 for (const {loc, lastmod} of sitemapEntries) {
     assert(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap lastmod must use YYYY-MM-DD for ${loc}.`);
