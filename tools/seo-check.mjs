@@ -339,6 +339,7 @@ for (const requiredFile of [
     "llms.txt",
     "llms-full.txt",
     "5f126675c51465984e48a3d63ec60940.txt",
+    ".well-known/security.txt",
     "assets/brand/tehisabiline-og.png",
     "assets/brand/logo-512.png",
     "assets/css/tailwind.min.css",
@@ -352,6 +353,10 @@ for (const crawler of ["OAI-SearchBot", "GPTBot", "ChatGPT-User", "PerplexityBot
     assert(new RegExp(`User-agent:\\s*${escapeRegExp(crawler)}[\\s\\S]*?Allow:\\s*/(?:\\s|$)`, "i").test(robots), `robots.txt should explicitly allow ${crawler}.`);
 }
 assert(robots.includes(`Sitemap: ${origin}/sitemap.xml`), "robots.txt must point to the canonical sitemap.");
+
+const securityTxt = readFileSync(join(root, ".well-known/security.txt"), "utf8");
+const securityExpires = (securityTxt.match(/^Expires:\s*(\S+)/m) || [])[1] || "";
+assert(securityExpires > today, "security.txt Expires must be a future date.");
 
 const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
 const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => ({
