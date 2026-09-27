@@ -1,4 +1,12 @@
 {
+    "name": "tehisabiline-website",
+    "version": "1.0.0",
+    "description": "Tehisabiline OÜ company website (https://tehisabiline.ee/)",
+    "homepage": "https://tehisabiline.ee/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AARenor/tehisabiline.git"
+    },
     "scripts": {
         "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind-input.css -o assets/css/tailwind.min.css --minify",
         "build:assets": "npm run build:css && node tools/version-assets.mjs",
