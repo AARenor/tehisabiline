@@ -834,7 +834,7 @@ footer nav a:hover {
 /* Responsive */
 @media (max-width: 900px) {
     .content-shell {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2rem;
     }
 
@@ -866,7 +866,7 @@ footer nav a:hover {
     .related-links,
     .calculator-grid,
     .calculator-result {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .process-list li {

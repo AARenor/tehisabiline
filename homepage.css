@@ -492,7 +492,7 @@ a, button, [role="button"] {
     .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 { gap: 2rem; }
 
     /* Team section */
-    .grid.grid-cols-1.lg\:grid-cols-2 { grid-template-columns: 1fr; }
+    .grid.grid-cols-1.lg\:grid-cols-2 { grid-template-columns: minmax(0, 1fr); }
     .p-12.lg\:p-16 { padding: 1.5rem; }
 
     /* CTA section */
@@ -500,7 +500,11 @@ a, button, [role="button"] {
     .bg-deep-navy .text-xl { font-size: 1rem !important; }
 
     /* Contact form */
-    .grid.grid-cols-1.lg\:grid-cols-2.gap-24 { gap: 2rem; grid-template-columns: 1fr; }
+    .grid.grid-cols-1.lg\:grid-cols-2.gap-24 { gap: 2rem; grid-template-columns: minmax(0, 1fr); }
+    /* API koodinäide: murdumatu URL (https://api.tehisabiline.ee/...) on
+       flex-item min-width:auto tõttu laiem kui telefon. Luba kahandada;
+       overflow-x-auto kerib koodi kasti sees, mitte ei lükka sektsiooni välja. */
+    #teenused .overflow-x-auto { min-width: 0; }
     .premium-card.p-12 { padding: 1.5rem; }
 
     /* Footer */
