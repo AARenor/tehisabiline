@@ -339,6 +339,13 @@ for (const source of [
     assert(guideHtml.includes(`href="${source}"`), `Use-cases guide must retain its primary source link: ${source}`);
 }
 
+const auditHtml = readFileSync(join(root, "kuberaudit/index.html"), "utf8");
+assert(/<body\b[^>]*class=["'][^"']*\baudit-page\b/i.test(auditHtml), "Küberaudit must use its report-style page design.");
+assert(auditHtml.includes('href="/kuberaudit/kuberaudit.css'), "Küberaudit must load its page-specific stylesheet.");
+for (const genericClass of ["eyebrow", "content-grid", "info-card", "step-grid", "number-card", "faq-card", "related-card", "service-cta"]) {
+    assert(!new RegExp(`class=["'][^"']*\\b${genericClass}\\b`, "i").test(auditHtml), `Küberaudit must not use the generic ${genericClass} pattern.`);
+}
+
 for (const requiredFile of [
     "robots.txt",
     "sitemap.xml",

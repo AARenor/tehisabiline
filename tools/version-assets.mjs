@@ -13,6 +13,7 @@ const assets = [
     "/assets/css/tailwind.min.css",
     "/index.css",
     "/homepage.css",
+    "/kuberaudit/kuberaudit.css",
     "/index.js",
     "/homepage.js",
     "/assets/js/roi-calculator.js",
