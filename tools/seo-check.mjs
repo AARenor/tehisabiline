@@ -9,7 +9,7 @@ const expectedPages = [
     {
         file: "index.html",
         canonical: `${origin}/`,
-        schemaTypes: ["Organization", "WebSite", "WebPage", "Service", "FAQPage", "HowTo"],
+        schemaTypes: ["Organization", "WebSite", "WebPage", "Service"],
         dateType: "WebPage",
         requiresOrganization: true
     },
@@ -17,7 +17,7 @@ const expectedPages = [
         file: "ai-automatiseerimine/index.html",
         canonical: `${origin}/ai-automatiseerimine/`,
         noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
@@ -25,7 +25,7 @@ const expectedPages = [
         file: "ai-chatbot/index.html",
         canonical: `${origin}/ai-chatbot/`,
         noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
@@ -33,14 +33,14 @@ const expectedPages = [
         file: "hinnajalgimine/index.html",
         canonical: `${origin}/hinnajalgimine/`,
         noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
     {
         file: "kasutusjuhud/index.html",
         canonical: `${origin}/kasutusjuhud/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage", "ItemList"],
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "ItemList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
@@ -55,21 +55,21 @@ const expectedPages = [
     {
         file: "mudelid/index.html",
         canonical: `${origin}/mudelid/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
     {
         file: "kuberaudit/index.html",
         canonical: `${origin}/kuberaudit/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage", "HowTo"],
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
     {
         file: "nis2/index.html",
         canonical: `${origin}/nis2/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
@@ -118,6 +118,21 @@ function stripHtml(html) {
         .replace(/&[a-z0-9#]+;/gi, " ")
         .replace(/\s+/g, " ")
         .trim();
+}
+
+function detailsNesting(html) {
+    let depth = 0;
+    let maxDepth = 0;
+    let minDepth = 0;
+    for (const match of html.matchAll(/<\/?details\b[^>]*>/gi)) {
+        if (match[0].startsWith("</")) depth--;
+        else {
+            depth++;
+            maxDepth = Math.max(maxDepth, depth);
+        }
+        minDepth = Math.min(minDepth, depth);
+    }
+    return {depth, maxDepth, minDepth};
 }
 
 function resolveLocalPath(pathname) {
@@ -312,9 +327,16 @@ for (const page of expectedPages) {
     assert(metaValue(html, "twitter:title") === metaValue(html, "og:title"), label + ": twitter:title must match og:title.");
     assert(title.length <= 60, label + ": title exceeds 60 characters.");
     assert(description.length >= 50 && description.length <= 160, label + ": meta description must be 50-160 characters.");
+    const details = detailsNesting(html);
+    assert(details.maxDepth <= 1, `${label}: FAQ disclosures must not be nested.`);
+    assert(details.depth === 0 && details.minDepth === 0, `${label}: FAQ disclosure tags must be balanced.`);
+    assert(!/api\.tehisabiline\.ee/i.test(html), `${label}: must not present the unavailable API hostname as live.`);
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
+const homeH1 = stripHtml(homeHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
+assert(homeH1.includes("Küberaudit") && homeH1.includes("küber-AI"), "Homepage H1 must name both küberaudit and küber-AI.");
+assert(homeHtml.includes("API pole veel avalik"), "Homepage API example must say that the API is not yet public.");
 for (const serviceUrl of expectedUrls.slice(1)) {
     const pathname = new URL(serviceUrl).pathname;
     assert(new RegExp(`<a\\b[^>]*href=["']${escapeRegExp(pathname)}["']`, "i").test(homeHtml), `Homepage must link directly to ${pathname}.`);
@@ -337,6 +359,19 @@ for (const source of [
     "https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai"
 ]) {
     assert(guideHtml.includes(`href="${source}"`), `Use-cases guide must retain its primary source link: ${source}`);
+}
+
+const aboutHtml = readFileSync(join(root, "meist/index.html"), "utf8");
+const aboutH1 = stripHtml(aboutHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
+assert(aboutH1.includes("AI konsultatsioon") && aboutH1.includes("küberaudit") && /\bTallinnas\b/.test(aboutH1), "Meist H1 must align with its Tallinn AI-consultation and küberaudit title intent.");
+
+const modelsHtml = readFileSync(join(root, "mudelid/index.html"), "utf8");
+assert(modelsHtml.includes("API pole veel avalik"), "Models API example must say that the API is not yet public.");
+
+for (const file of ["index.html", "mudelid/index.html", "kasutusjuhud/index.html"]) {
+    const html = readFileSync(join(root, file), "utf8");
+    assert(html.includes("Qwen3.8-27B"), `${file}: must use the verified Qwen3.8-27B model name.`);
+    assert(!/Qwen 27B tsenseerimata lineup/i.test(html), `${file}: must not use the stale vague Qwen 27B lineup wording.`);
 }
 
 const auditHtml = readFileSync(join(root, "kuberaudit/index.html"), "utf8");
@@ -405,6 +440,19 @@ for (const url of expectedUrls) {
 }
 assert(llms.includes(`${origin}/llms-full.txt`), "llms.txt should link to llms-full.txt.");
 
+const llmsFull = readFileSync(join(root, "llms-full.txt"), "utf8");
+const canonicalSection = llmsFull.split("## Canonical links")[1]?.split("\n## ")[0] || "";
+const canonicalLinks = [...canonicalSection.matchAll(/^\s*-\s+(https:\/\/tehisabiline\.ee\/[^\s]*)$/gm)].map((match) => match[1]);
+assert(canonicalLinks.length === new Set(canonicalLinks).size, "llms-full.txt canonical links must be unique.");
+assert(canonicalLinks.length === expectedUrls.length && expectedUrls.every((url) => canonicalLinks.includes(url)), "llms-full.txt canonical links must list exactly the indexable sitemap URLs.");
+const llmsReviewed = llmsFull.match(/^Last materially reviewed:\s*(\S+)/m)?.[1] || "";
+const newestPageDate = [...pageModifiedDates.values()].sort().at(-1) || "";
+assert(/^\d{4}-\d{2}-\d{2}$/.test(llmsReviewed) && llmsReviewed <= today, "llms-full.txt review date must be a valid non-future YYYY-MM-DD date.");
+assert(llmsReviewed >= newestPageDate, "llms-full.txt review date must cover the newest indexable page update.");
+
+const homepageCss = readFileSync(join(root, "homepage.css"), "utf8");
+assert(!homepageCss.includes("api.tehisabiline.ee"), "homepage.css must not preserve the unavailable API hostname, even in comments.");
+
 const indexNowKey = readFileSync(join(root, "5f126675c51465984e48a3d63ec60940.txt"), "utf8").trim();
 assert(indexNowKey === "5f126675c51465984e48a3d63ec60940", "IndexNow key file content must match its filename.");
 
@@ -439,4 +487,4 @@ if (failures.length) {
     process.exit(1);
 }
 
-console.log(`SEO check passed for ${expectedPages.length} indexable pages.`);
+console.log(`SEO check passed for ${expectedUrls.length} indexable and ${noindexUrls.length} noindex pages.`);

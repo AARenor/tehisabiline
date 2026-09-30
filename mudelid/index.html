@@ -55,7 +55,7 @@
           "name": "Tsenseerimata küber-AI mudelid | Tehisabiline",
           "description": "Mida tähendab tsenseerimata ja refusal-free AI, milleks mudelid häälestatud on, kuidas API töötab ja millest hind sõltub.",
           "datePublished": "2026-09-24",
-          "dateModified": "2026-09-27",
+          "dateModified": "2026-09-30",
           "inLanguage": "et",
           "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
           "about": {"@id": "https://tehisabiline.ee/mudelid/#service"},
@@ -93,7 +93,7 @@
             {
               "@type": "Question",
               "name": "Milliseid mudeleid kasutate?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Avatud kaaludega tipptasemel mudeleid, sh Qwen 27B tsenseerimata lineup – võimekus läheneb frontier-tasemele ja hakkab töötama meie riistvaral (riistvara tellitud). Mudelid on eeltreenitud avalikel andmestikel."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Avatud kaaludega alusmudel on Qwen3.8-27B. Tehisabiline häälestab refusal-free käitumise eraldi seadusliku turvatöö jaoks. Mudel hakkab töötama meie riistvaral Eestis (riistvara tellitud)."}
             },
             {
               "@type": "Question",
@@ -123,7 +123,7 @@
             {
               "@type": "Question",
               "name": "Kas API töötab OpenAI teekidega?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Jah. Vaheta ainult baasaadress api.tehisabiline.ee vastu ja kasuta oma võtit."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Planeeritud liides ühildub OpenAI teekidega. API pole veel avalik; tegeliku baasaadressi, mudelinime ja võtme saab pilootligipääsuga."}
             }
           ]
         }
@@ -167,7 +167,7 @@
                 <p class="eyebrow">Tsenseerimata · Refusal-free · Eesti majutus tulekul</p>
                 <h1>Küberturbele häälestatud AI-mudelid</h1>
                 <p class="hero-lead">Üldmudelid on tehtud jutuks. Meie omad on peenhäälestatud turvatööle, vastavad seaduslikus raamis ka seal, kus pilv keeldub, ning hakkavad töötama meie riistvaral Eestis (riistvara tellitud).</p>
-                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-27">27. septembril 2026</time></p>
+                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-09-30">30. septembril 2026</time></p>
             </div>
         </header>
 
@@ -176,7 +176,7 @@
                 <article class="content-column">
                     <section class="lead-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis teeb mudeli küber-AI-ks?</h2>
-                        <p>Kolm asja: <strong>peenhäälestus turvaülesannetele</strong> (haavatavused, logid, konfiguratsioonid, koodianalüüs, ründepayload'ide käsitlus, red-teaming), <strong>refusal-free käitumine</strong> seadusliku töö puhul ning <strong>hostimine tulekul meie riistvaral Eestis (riistvara tellitud)</strong>. Mootoriks on avatud kaaludega mudelid avalikel andmestikel – näiteks <strong>Qwen 27B tsenseerimata lineup</strong>, mis hakkab töötama meie riistvaral (riistvara tellitud). Näiteks analüüsime sinu Nginxi konfi ja logilõiku kirjaliku loa mahus – seal, kus üldine pilve-AI keeldub.</p>
+                        <p>Kolm asja: <strong>peenhäälestus turvaülesannetele</strong> (haavatavused, logid, konfiguratsioonid, koodianalüüs, ründepayload'ide käsitlus, red-teaming), <strong>refusal-free käitumine</strong> seadusliku töö puhul ning <strong>hostimine tulekul meie riistvaral Eestis (riistvara tellitud)</strong>. Avatud kaaludega alusmudel on <strong><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a></strong>; refusal-free häälestus ja kasutuspiirid tulevad Tehisabiliselt, mitte alusmudeli nimest. Näiteks analüüsime sinu Nginxi konfi ja logilõiku kirjaliku loa mahus – seal, kus üldine pilve-AI keeldub.</p>
                     </section>
 
                     <section class="prose-section" id="eelised">
@@ -213,17 +213,17 @@
                         <h2>API turvatööriistadele</h2>
                         <p>Otspunkt järgib OpenAI <em>chat-completions</em> liidese kuju: olemasolev kood vajab tavaliselt ainult baasaadressi ja võtme vahetust. Ligipääs on võtmepõhine, limiitide ja kasutuspõhise arveldusega. Kasutajate andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele. Oleme varajases etapis: avame ligipääsu taotluse alusel ja limiitidega. Kui vajad tervikpilti oma süsteemide seisust, telli <a class="text-link" href="/kuberaudit/">küberaudit</a>.</p>
                         <div class="calculator">
-                            <p class="text-sm font-bold text-deep-navy mb-3">Näide</p>
-                            <pre class="text-sm leading-relaxed text-deep-navy whitespace-pre-wrap">curl https://api.tehisabiline.ee/v1/chat/completions \
+                            <p class="text-sm font-bold text-deep-navy mb-3">Planeeritava liidese näide · API pole veel avalik</p>
+                            <pre class="text-sm leading-relaxed text-deep-navy whitespace-pre-wrap">curl https://PILOODI-ENDPOINT.example/v1/chat/completions \
   -H "Authorization: Bearer SINU-VOTI" \
   -H "Content-Type: application/json" \
-  -d '{"model": "tehisabiline-cyber",
+  -d '{"model": "PILOODI-MUDEL",
        "messages": [{"role": "user",
          "content": "Analüüsi see Nginxi konfig."}]}'</pre>
                             <p class="text-sm font-bold text-deep-navy mb-3 mt-6">Sama Pythonis (OpenAI teek)</p>
                             <pre class="text-sm leading-relaxed text-deep-navy whitespace-pre-wrap">from openai import OpenAI
-client = OpenAI(base_url="https://api.tehisabiline.ee/v1", api_key="SINU-VOTI")
-vastus = client.chat.completions.create(model="tehisabiline-cyber", messages=[{"role": "user", "content": "Analüüsi see Nginxi konfig."}])</pre>
+client = OpenAI(base_url="https://PILOODI-ENDPOINT.example/v1", api_key="SINU-VOTI")
+vastus = client.chat.completions.create(model="PILOODI-MUDEL", messages=[{"role": "user", "content": "Analüüsi see Nginxi konfig."}])</pre>
                         </div>
                         <div class="content-grid">
                             <div class="info-card"><h3>Võti ja limiidid</h3><p>Iga rakendus saab oma võtme, kululimiidi ja kasutusaruande.</p></div>
@@ -274,13 +274,13 @@ vastus = client.chat.completions.create(model="tehisabiline-cyber", messages=[{"
                             <details class="faq-card"><summary><span>Mis on tsenseerimata AI?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Mudelid hakkavad töötama meie enda riistvaral Eestis (riistvara tellitud) ega hakka sõltuma suurettevõtte pilvest. Päringud ei hakka liikuma Ameerika serveritesse ning reeglid paneme paika meie koos kliendiga.</p></details>
                             <details class="faq-card"><summary><span>Mida tähendab refusal-free?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Mudel ei keeldu meelevaldselt seaduslikust turvatööst, mille puhul pilveteenused tihti keelduvad. Ebaseaduslik tegevus on endiselt välistatud.</p></details>
                             <details class="faq-card"><summary><span>Kellele API mõeldud on?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Arendajatele, kes ehitavad turvatööriistu: skannereid, monitooringut, raportite koostajaid. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutuspõhine.</p></details>
-                            <details class="faq-card"><summary><span>Milliseid mudeleid kasutate?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Avatud kaaludega tipptasemel mudeleid, sh Qwen 27B tsenseerimata lineup – võimekus läheneb frontier-tasemele ja hakkab töötama meie riistvaral (riistvara tellitud). Mudelid on eeltreenitud avalikel andmestikel.</p></details>
+                            <details class="faq-card"><summary><span>Milliseid mudeleid kasutate?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Avatud kaaludega alusmudel on <a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a>. Tehisabiline häälestab refusal-free käitumise eraldi seadusliku turvatöö jaoks. Mudel hakkab töötama meie riistvaral Eestis (riistvara tellitud).</p></details>
                             <details class="faq-card"><summary><span>Miks pilv keeldub legitiimsest turvatööst?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Suured pilvemudelid rakendavad laiu keeldumisfiltreid, mis tabavad ka seaduslikku tööd: koodianalüüsi, ründepayload'ide uurimist või red-teaming-harjutusi. Meie mudelid vastavad neile sinu reeglite järgi ja seaduslikus raamis.</p></details>
                             <details class="faq-card"><summary><span>Mida te minu andmetega teete?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Töötleme ainult sinu esitatud sisendit reaalajas vastuse või raporti jaoks. Andmeid ei koguta, ei treenita edasi ega lekita kolmandatele osapooltele. Kogu mudelite töötlus hakkab toimuma Eestis.</p></details>
                             <details class="faq-card"><summary><span>Kuidas on lood AI Actiga?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Meie avatud kaaludega mudelitel põhinevad API-d liigituvad üldotstarbelise AI (GPAI) kategooriasse ega kuulu kõrge riskiga süsteemide hulka. Hoiame tehnilist dokumentatsiooni, hindame teadaolevaid riske ja hoiame kasutuse läbipaistva.</p></details>
                             <details class="faq-card"><summary><span>Kus mu andmed asuvad?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Tulevikus meie riistvaral Eestis – riistvara on tellitud. Soovi korral saab logideta režiimi, kus päringute sisu ei säilitata.</p></details>
                             <details class="faq-card"><summary><span>Millest hind sõltub?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>API puhul kasutusmahust, erilahenduste puhul mahust ja toe tasemest. Tasuta kaardistuse järel saab selge pakkumise.</p></details>
-                            <details class="faq-card"><summary><span>Kas API töötab OpenAI teekidega?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Jah. Vaheta ainult baasaadress api.tehisabiline.ee vastu ja kasuta oma võtit – curl-i ja Pythoni näited on <a href="#api">API jaotises</a>.</p></details>
+                            <details class="faq-card"><summary><span>Kas API töötab OpenAI teekidega?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p>Planeeritud liides ühildub OpenAI teekidega. API pole veel avalik; tegeliku baasaadressi, mudelinime ja võtme saad pilootligipääsuga. Liidese kuju näited on <a href="#api">API jaotises</a>.</p></details>
                         </div>
                     </section>
 

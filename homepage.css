@@ -501,7 +501,7 @@ a, button, [role="button"] {
 
     /* Contact form */
     .grid.grid-cols-1.lg\:grid-cols-2.gap-24 { gap: 2rem; grid-template-columns: minmax(0, 1fr); }
-    /* API koodinäide: murdumatu URL (https://api.tehisabiline.ee/...) on
+    /* API koodinäide: pikk planeeritava liidese URL on
        flex-item min-width:auto tõttu laiem kui telefon. Luba kahandada;
        overflow-x-auto kerib koodi kasti sees, mitte ei lükka sektsiooni välja. */
     #teenused .overflow-x-auto { min-width: 0; }

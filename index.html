@@ -39,7 +39,7 @@
     <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/index.css?v=a7aba025">
-    <link rel="stylesheet" href="/homepage.css?v=326d2615">
+    <link rel="stylesheet" href="/homepage.css?v=b73b832d">
 
     <noscript><style>.reveal,.hero-word-reveal,.hero-word{opacity:1 !important;transform:none !important;filter:none !important;}</style></noscript>
 
@@ -104,7 +104,7 @@
           "url": "https://tehisabiline.ee/",
           "name": "Küberaudit ja tsenseerimata AI Eestis | Tehisabiline",
           "description": "Küberaudit ja tsenseerimata AI-mudelid Eesti ettevõttele: agendipõhine küberturvalisuse audit, Eesti API turvatööriistadele (riistvara tellitud).",
-          "dateModified": "2026-09-27",
+          "dateModified": "2026-09-30",
           "inLanguage": "et",
           "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
           "about": {"@id": "https://tehisabiline.ee/#organization"},
@@ -302,7 +302,7 @@
 <section class="hero-dynamic-bg relative flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-28" id="hero">
     <div class="max-w-5xl mx-auto px-4 text-center relative z-10 space-y-6 md:space-y-8">
         <h1 class="text-[4.5rem] md:text-[5.25rem] lg:text-[7rem] font-bold tracking-tight leading-[1] text-deep-navy font-headline hero-word-reveal hero-reveal-1 text-balance break-words">
-            <span class="hero-word hero-word-0">Tsenseerimata</span> <span class="hero-word hero-word-1">AI.</span><br class="hidden md:inline"><span class="hero-word hero-word-2 gradient-text italic">Keeldudeta.</span><br><span class="hero-word hero-word-3">Eestis</span> <span class="hero-word hero-word-4">tulekul.</span>
+            <span class="hero-word hero-word-0">Küberaudit.</span><br><span class="hero-word hero-word-1 gradient-text italic">Tsenseerimata küber-AI.</span><br><span class="hero-word hero-word-2">Eestis tulekul.</span>
         </h1>
         <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light hero-word-reveal hero-reveal-2">
             <span class="hero-word hero-word-0">Küberturbele</span> <span class="hero-word hero-word-1">häälestatud</span> <span class="hero-word hero-word-2">AI-mudelid</span> <span class="hero-word hero-word-3">meie</span> <span class="hero-word hero-word-4">riistvaral</span> <span class="hero-word hero-word-5">tulekul.</span> <span class="hero-word hero-word-6">API</span> <span class="hero-word hero-word-7">turvatööriistadele.</span> <span class="hero-word hero-word-8">Agendipõhised</span> <span class="hero-word hero-word-9">auditid</span> <span class="hero-word hero-word-10">–</span> <span class="hero-word hero-word-11">inimese</span> <span class="hero-word hero-word-12">kontrolliga.</span>
@@ -410,7 +410,7 @@
                     <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Põhiteenus · Mudelid</p>
                     <h3 class="text-4xl font-headline font-black text-deep-navy">Küberturbele häälestatud mudelid</h3>
                     <p class="text-on-surface-variant leading-relaxed font-light">
-                        Tsenseerimata AI-mudelid, mis on peenhäälestatud küberturbe ülesannetele: haavatavused, logid, konfiguratsioonid, ründetestid. Mootoriks on avatud kaaludega mudelid, sh <strong>Qwen 27B tsenseerimata lineup</strong> – ilma pilvefiltriteta. Riistvara on tellitud, majutus tulekul Eestis.
+                        Tsenseerimata AI-mudelid, mis on peenhäälestatud küberturbe ülesannetele: haavatavused, logid, konfiguratsioonid, ründetestid. Avatud kaaludega alusmudel on <strong><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a></strong>; refusal-free turvakäitumise häälestame meie seadusliku töö piiridele. Riistvara on tellitud, majutus tulekul Eestis.
                     </p>
                     <ul class="space-y-4 text-left">
                         <li class="flex items-center gap-4 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
@@ -510,11 +510,11 @@
                     </div>
                 </div>
                 <div class="bg-slate-50 border border-slate-200/70 rounded-3xl p-6 overflow-x-auto">
-                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-on-surface-variant/60 mb-4">Näide</p>
-                    <pre class="text-sm leading-relaxed text-deep-navy font-mono whitespace-pre-wrap"><code>curl https://api.tehisabiline.ee/v1/chat/completions \
+                    <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-on-surface-variant/60 mb-4">Planeeritava liidese näide · API pole veel avalik</p>
+                    <pre class="text-sm leading-relaxed text-deep-navy font-mono whitespace-pre-wrap"><code>curl https://PILOODI-ENDPOINT.example/v1/chat/completions \
   -H "Authorization: Bearer SINU-VOTI" \
   -H "Content-Type: application/json" \
-  -d '{"model": "tehisabiline-cyber",
+  -d '{"model": "PILOODI-MUDEL",
        "messages": [{"role": "user",
          "content": "Analüüsi see Nginxi konfig."}]}'</code></pre>
                 </div>
@@ -722,6 +722,7 @@
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Mudelid hakkavad töötama meie enda riistvaral Eestis (riistvara tellitud) ega hakka sõltuma suurettevõtte pilvest. Päringud ei hakka liikuma Ameerika serveritesse ning reeglid paneme paika meie koos sinuga, mitte võõras platvorm.
                 </p>
+            </details>
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mis on tehisaru?</h3>
@@ -730,7 +731,6 @@
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Tehisaru on tehisintellekti kõnekeelne lühend. Sellel lehel tähendab see sama: keelemudelid ja AI-agendid ning nende turvaline kasutamine Eesti ettevõtetes.
                 </p>
-            </details>
             </details>
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
@@ -807,6 +807,7 @@
             <details class="premium-card rounded-3xl p-8 group reveal">
                 <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
                     <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas pakute AI konsultatsiooni ettevõttele?</h3>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
                 </summary>
                 <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
                     Jah – Tallinnas ja üle Eesti: AI-agent, AI teadmistebaas ettevõtte dokumentidest ja automatiseerimine, alati ühest mõõdetavast piloodist. Loe lähemalt: <a class="text-primary font-bold underline underline-offset-4" href="/meist/#konsultatsioon">AI konsultatsioon</a>.
@@ -945,7 +946,7 @@
         </div>
         <div class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-on-surface-variant text-xs font-bold uppercase tracking-[0.2em]">
             <div>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</div>
-            <div>Viimati sisuliselt uuendatud <time datetime="2026-09-27">27. septembril 2026</time></div>
+            <div>Viimati sisuliselt uuendatud <time datetime="2026-09-30">30. septembril 2026</time></div>
         </div>
     </div>
 </footer>
