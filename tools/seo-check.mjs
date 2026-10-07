@@ -417,16 +417,14 @@ const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((mat
 const sitemapUrls = sitemapEntries.map((entry) => entry.loc);
 assert(JSON.stringify(sitemapUrls) === JSON.stringify(expectedUrls), `Sitemap URLs differ from expected canonical URLs: ${sitemapUrls.join(", ")}.`);
 for (const noindexed of noindexUrls) assert(!sitemapUrls.includes(noindexed), `Sitemap must not list noindexed URL: ${noindexed}.`);
-const retiredSoftMigration = [
-    {file: "ai-automatiseerimise-naited/index.html", url: `${origin}/ai-automatiseerimise-naited/`, successor: `${origin}/kasutusjuhud/`},
-    {file: "privaat-ai/index.html", url: `${origin}/privaat-ai/`, successor: `${origin}/mudelid/`}
+const retiredHardRedirect = [
+    {path: "ai-automatiseerimise-naited", successor: "/kasutusjuhud/"},
+    {path: "privaat-ai", successor: "/mudelid/"}
 ];
-for (const retired of retiredSoftMigration) {
-    const retiredHtml = readFileSync(join(root, retired.file), "utf8");
-    assert(metaValue(retiredHtml, "robots").split(/\s*,\s*/).includes("noindex"), `${retired.file} must stay noindex until the owner picks the 301-vs-page outcome.`);
-    assert(!sitemapUrls.includes(retired.url), `Sitemap must not list retired URL: ${retired.url}.`);
-    assert(retiredHtml.includes(retired.successor), `${retired.file} must keep its forward link to ${retired.successor}.`);
-    validateLocalReferences(retiredHtml, retired.file);
+for (const retired of retiredHardRedirect) {
+    assert(!existsSync(join(root, retired.path, "index.html")), `${retired.path}/index.html must not exist: a static file at that path shadows the Vercel redirect and turns the permanent redirect back into a noindex HTML page.`);
+    assert(!existsSync(join(root, `${retired.path}.html`)), `${retired.path}.html must not exist: it would shadow the Vercel redirect.`);
+    assert(!sitemapUrls.includes(`${origin}/${retired.path}/`), `Sitemap must not list redirected URL: ${origin}/${retired.path}/.`);
 }
 for (const {loc, lastmod} of sitemapEntries) {
     assert(/^\d{4}-\d{2}-\d{2}$/.test(lastmod), `Sitemap lastmod must use YYYY-MM-DD for ${loc}.`);
@@ -464,6 +462,14 @@ validateLocalReferences(notFoundHtml, "404.html");
 try {
     const vercel = JSON.parse(readFileSync(join(root, "vercel.json"), "utf8"));
     assert(vercel.trailingSlash === true, "Vercel must normalize directory URLs to the trailing-slash canonicals.");
+    for (const retired of retiredHardRedirect) {
+        const rules = (vercel.redirects || []).filter((rule) => rule.source === `/${retired.path}` || rule.source === `/${retired.path}/`);
+        assert(rules.some((rule) => rule.destination === retired.successor && rule.permanent === true), `vercel.json must permanently redirect /${retired.path} to ${retired.successor}.`);
+        assert(rules.some((rule) => rule.source === `/${retired.path}/`), `vercel.json needs an explicit trailing-slash rule for /${retired.path}/ because trailingSlash normalization rewrites the request before redirect matching.`);
+    }
+    for (const retired of retiredHardRedirect) {
+        assert((vercel.redirects || []).some((rule) => rule.source === `/${retired.path}/:path*`), `vercel.json must keep the deep-link rule /${retired.path}/:path* so nested legacy URLs do not 404.`);
+    }
 } catch (error) {
     failures.push(`vercel.json is invalid JSON: ${error.message}`);
 }
