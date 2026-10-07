@@ -463,12 +463,12 @@ try {
     const vercel = JSON.parse(readFileSync(join(root, "vercel.json"), "utf8"));
     assert(vercel.trailingSlash === true, "Vercel must normalize directory URLs to the trailing-slash canonicals.");
     for (const retired of retiredHardRedirect) {
-        const rules = (vercel.redirects || []).filter((rule) => rule.source === `/${retired.path}` || rule.source === `/${retired.path}/`);
-        assert(rules.some((rule) => rule.destination === retired.successor && rule.permanent === true), `vercel.json must permanently redirect /${retired.path} to ${retired.successor}.`);
-        assert(rules.some((rule) => rule.source === `/${retired.path}/`), `vercel.json needs an explicit trailing-slash rule for /${retired.path}/ because trailingSlash normalization rewrites the request before redirect matching.`);
-    }
-    for (const retired of retiredHardRedirect) {
-        assert((vercel.redirects || []).some((rule) => rule.source === `/${retired.path}/:path*`), `vercel.json must keep the deep-link rule /${retired.path}/:path* so nested legacy URLs do not 404.`);
+        const rules = (vercel.redirects || []).filter((rule) => rule.source === `/${retired.path}/`);
+        assert(rules.some((rule) => rule.destination === retired.successor && rule.permanent === true), `vercel.json must permanently redirect /${retired.path}/ to ${retired.successor}.`);
+        // A bare "/:path*" source never matches once trailingSlash has normalized the
+        // path; the source has to be written "/:path*/". Verified against Vercel: the
+        // bare form 404s nested legacy URLs, the trailing-slash form redirects them.
+        assert((vercel.redirects || []).some((rule) => rule.source === `/${retired.path}/:path*/` && rule.destination === retired.successor), `vercel.json must redirect nested legacy URLs via "/${retired.path}/:path*/" (note the trailing slash after *); the bare "/:path*" form silently 404s.`);
     }
 } catch (error) {
     failures.push(`vercel.json is invalid JSON: ${error.message}`);
