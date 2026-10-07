@@ -132,6 +132,7 @@
             </a>
             <div class="hidden lg:flex items-center space-x-8">
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#lahendused">Teenused</a>
+                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#kuidas">Kuidas</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#hind">Hind</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#faq">KKK</a>
                 <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/meist/">Meist</a>
@@ -145,6 +146,7 @@
         <!-- Mobile menu -->
         <div class="lg:hidden hidden flex-col items-center gap-0 pb-8 pt-4 backdrop-blur-2xl transition-all duration-300 mobile-nav-bg" id="mobile-menu">
             <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#lahendused">Teenused</a>
+            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#kuidas">Kuidas</a>
             <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#hind">Hind</a>
             <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#faq">KKK</a>
             <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
@@ -250,6 +252,240 @@
                         <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-on-surface-variant/60 mb-4">Automatiseerimine</p>
                         <p class="text-sm text-on-surface-variant font-light mb-3">Päringute eeltöötlus, kategoriseerimine ja vastusemustandid sinu mallide järgi.</p>
                         <p class="text-sm text-on-surface-variant font-light">Rutiin liigub ise, erandid ja otsused jäävad inimesele.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: AI-assistent -->
+        <section class="py-24 bg-surface" id="assistent">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6 reveal">
+                        <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl" aria-hidden="true">question_answer</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-light tracking-tight text-deep-navy">AI-assistent, mis <span class="italic">sinu sõnast</span> vastab</h2>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Tavaline AI juturobot vastab üldistele küsimustele oma treeningandmete põhjal – sinu ettevõttest ei tea ta midagi. Meie assistent seotakse sinu dokumentide, juhendite ja hinnakirjadega, nii et iga vastus põhineb sinu materjalidel, mitte üldistel arusaamadel.
+                        </p>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Iga vastus tuleb koos allikaviitega – sa näed, millist dokumenti ja lõiku on kasutatud. Kui vastust ei leita, ütleb assistent seda otse, mitte väljendib välja.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-10 reveal">
+                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60 mb-6">Mida assistent teeb</h3>
+                        <ul class="space-y-5 text-on-surface-variant font-light">
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Vastab kliendi- ja meeskonnaküsimustele sinu dokumentide põhjal – hinnakirjad, juhendid, poliitikad, tootetingimused.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Iga väite juures on kontrollitav allikas – sa näed täpselt, kust vastus tuli.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Rollipõhised õigused: iga kasutaja näeb ainult neid dokumente, mis talle kuuluvad.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Ei vastata küsimustele, mille kohta sinu dokumendid ei tea midagi – ausalt "ei tea" on parem kui väljendatud vastus.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Eesti keeles – nii kui sinu dokumendid on eesti keeles.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: Teadmistebaas -->
+        <section class="py-24 bg-white" id="teadmistebaas">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="premium-card rounded-3xl p-10 reveal order-2 lg:order-1">
+                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60 mb-6">Mida teadmistebaas teeb</h3>
+                        <ul class="space-y-5 text-on-surface-variant font-light">
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Kogub kõik sinu dokumendid – PDF-id, Wordid, siseveebid, juhendid – ühte otsitavasse kohta.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Uueneb automaatselt, kui sa dokumente uuendad – vananenud versioonid märgistatakse.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Otsing töötab eesti keeles – tähenduslik, mitte ainult sõnade järgi.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Saad ise määrata, millised dokumendid on avalikud ja millised ainult sisemiseks kasutamiseks.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Integreerub assistendiga – kui keegi küsib, otsib teadmistebaasist vastuse koos allikaviitega.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6 reveal order-1 lg:order-2">
+                        <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl" aria-hidden="true">library_books</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-light tracking-tight text-deep-navy">Teadmistebaas, mis <span class="italic">ei jää vananema</span></h2>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Sinu dokumendid on laiali – üks PDF-is, teine siseveebis, kolmas keegi head käest. Teadmistebaas toob need kokku ühte otsitavasse kohta, mida saad kasutada nii siselt kui kliendile.
+                        </p>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Erinevalt tavalisest otsingust, mis leiab ainult täpsed sõnad, mõistab teadmistebaas tähendust – kui kliitija küsib "kas teie toode tuleb koos juhendiga", leiab ta vastuse ka siis, kui dokumentis on kirjas "toode sisaldab kasutusjuhendit".
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Detail: Automatiseerimine -->
+        <section class="py-24 bg-surface" id="automatiseerimine">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-6 reveal">
+                        <div class="w-16 h-16 rounded-full bg-sky-50 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-4xl" aria-hidden="true">bolt</span>
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-headline font-light tracking-tight text-deep-navy">Automatiseerimine, mis <span class="italic">inimesi asendab</span></h2>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Rutiinne töö – päringute kategoriseerimine, vastusemustandite koostamine, dokumentide liigitus – võtab sinu meeskonnalt tunde. Automatiseerimine võtab selle üle, aga olulised otsused jäävad inimesele.
+                        </p>
+                        <p class="text-lg text-on-surface-variant font-light leading-relaxed">
+                            Me ei automatiseeri kogu ettevõtet korraga. Alustame ühest töölõigust – näiteks kliendipäringute eeltöötlusest – ja laiendame, kui näed, et see töötab.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-10 reveal">
+                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60 mb-6">Mida automatiseerimine teeb</h3>
+                        <ul class="space-y-5 text-on-surface-variant font-light">
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Kliendipäringute eeltöötlus: kategoriseerib, otsib vastuse teadmistebaasist ja koostab mustandi.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Dokumentide liigitus: uued failid liigitatakse automaatselt sinu reeglite järgi.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Erandite tuvastus: kui midagi ei sobi, märgib süsteem selle inimese ülevaatuseks.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Raportid: iga kuu saad ülevaate, mida süsteem on teinud ja kus inimesid on aidanud.</span>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary flex-shrink-0" aria-hidden="true">check_circle</span>
+                                <span>Inimene kinnitab: kriitilised väljundid – pakkumised, kliendivastused, otsused – käivad inimese käest läbi.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="py-24 bg-white" id="tootab">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto space-y-6 reveal">
+                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Kuidas see <span class="italic">töötab</span></h2>
+                    <p class="text-xl text-on-surface-variant font-light">Kolm lihtsat sammu – andmed sisse, mudel tööle, vastus välja.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">database</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">1. Andmed sisse</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            Laadid üles oma dokumendid – PDF-id, Wordid, siseveebid. Meie süsteem loeb need, tükeldab arusaadavateks osaks ja salvestab sinu andmetebaasi. Andmed jäävad sinu omaks – me ei jaga neid kolmandate osapooltega ega treeni nendega mudeleid.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">search</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">2. Mudel tööle</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            Kui keegi küsib, otsib mudel sinu andmetebaasist relevantseid tüki, koostab nendest vastuse ja lisab allikaviited. Kui vastust ei leita, ütleb mudel seda otse – mitte väljendab välja.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">verified</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">3. Inimene kontrollib</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            Kriitilised vastused – pakkumised, kliendivastused, otsused – käivad inimese käest läbi. Sa näed, mida süsteem on teinud, ja saad igal ajal seadistusi muuta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use cases -->
+        <section class="py-24 bg-surface" id="kasutusjuhud">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto space-y-6 reveal">
+                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Kus see <span class="italic">päriselt</span> töötab</h2>
+                    <p class="text-xl text-on-surface-variant font-light">Mõned konkreetsed näited – need on reaalsed stsenaariumid, mitte teoreetilised lubadused.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">question_answer</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">Klienditugi</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-4">
+                            Klient küsib: "Kas teie toode tuleb koos juhendiga?" Tavaline AI ei tea seda. Meie assistent otsib teadmistebaasist, leiab vastuse sinu dokumentidest ja vastab: "Jah, toode sisaldab kasutusjuhendit – vaata siit."
+                        </p>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            <strong class="text-deep-navy">Tähtsus:</strong> Klient saab vastuse kohe, mitte 24 tunni pärast. Iga vastus on kontrollitav.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">library_books</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">Siseinfo leidmine</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-4">
+                            Uus töötaja küsib: "Kus on meie puhverdamise poliitika?" Tavaline otsing leiab selle ainult, kui ta teab täpset sõna. Meie teadmistebaas leiab selle tähenduse järgi – "puhverdamise reeglid" või "varude haldus".
+                        </p>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            <strong class="text-deep-navy">Tähtsus:</strong> Uued inimesed leiavad kiiremini üles, kusjuures info on alati ajakohane.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">bolt</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">Päringute eeltöötlus</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-4">
+                            Iga päev tuleb kümneid sarnaseid e-kirju. Automatiseerimine kategoriseerib need, otsib vastuse teadmistebaasist ja koostab mustandi. Sa lihtsalt kinnitad või parandad.
+                        </p>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            <strong class="text-deep-navy">Tähtsus:</strong> Säästad tunde – mustand on 90% valmis, sina teed ainult viimase kontrolli.
+                        </p>
+                    </div>
+                    <div class="premium-card rounded-3xl p-8 reveal">
+                        <div class="w-12 h-12 rounded-full bg-sky-50 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">fact_check</span>
+                        </div>
+                        <h3 class="text-xl font-headline font-bold text-deep-navy mb-4">Dokumentide uuendamine</h3>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed mb-4">
+                            Sa uuendad hinnakirja. Teadmistebaas märgib vananenud versioonid ja uuendab automaatselt. Kliendid ja meeskond näevad alati värskeimat versiooni.
+                        </p>
+                        <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+                            <strong class="text-deep-navy">Tähtsus:</strong> Ei jää vanu versioone kõrvale – info on alati ajakohane ja kontrollitav.
+                        </p>
                     </div>
                 </div>
             </div>
