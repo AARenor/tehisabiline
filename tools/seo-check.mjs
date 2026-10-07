@@ -207,6 +207,27 @@ function validateFontPreloads(html, label) {
     }
 }
 
+// Ligatures present in assets/fonts/material-symbols-outlined.woff2 (subset of
+// Google's Material Symbols Outlined). Any icon name used in HTML must be in
+// this list, otherwise it renders as raw text. Regenerate the subset if a new
+// icon is needed.
+const COVERED_ICONS = new Set([
+    "add", "arrow_forward", "bolt", "business_center", "check_circle",
+    "check_circle_filled", "check_circle_outline", "clear", "close", "database",
+    "email", "fact_check", "fmd_good", "forum", "language", "library_books",
+    "location_on", "location_pin", "mail", "mail_outline", "markunread", "menu",
+    "new_releases", "place", "question_answer", "rocket_launch", "room",
+    "search", "speed", "task_alt", "verified",
+]);
+function validateMaterialIcons(html, label) {
+    const names = [...html.matchAll(/material-symbols-outlined[^>]*>([^<]+)</gi)]
+        .map((m) => m[1].trim())
+        .filter(Boolean);
+    for (const name of names) {
+        assert(COVERED_ICONS.has(name), `${label}: icon "${name}" is not in the icon font subset and would render as raw text.`);
+    }
+}
+
 for (const page of expectedPages) {
     const label = page.file;
     const filePath = join(root, page.file);
@@ -326,6 +347,7 @@ for (const page of expectedPages) {
 
     validateLocalReferences(html, label);
     validateFontPreloads(html, label);
+    validateMaterialIcons(html, label);
     assert(html.includes("mailto:tehisabiline@gmail.com"), label + ": contact email must be present.");
     assert(html.includes("/privaatsus/"), label + ": privacy link must be present.");
     assert(!html.includes("http://"), label + ": insecure http reference found.");
