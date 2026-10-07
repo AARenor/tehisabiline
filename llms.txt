@@ -12,6 +12,7 @@ Service area: Estonia
 - [Sovereign cyber-AI, API and agent-driven audits (homepage)](https://tehisabiline.ee/): sovereign refusal-free AI models fine-tuned for cybersecurity (Estonian hosting forthcoming), OpenAI-compatible API for security-tool developers, and human-reviewed agent-driven vulnerability audits.
 - [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): uncensored models fine-tuned for security work (Estonian hosting forthcoming, hardware ordered), plus the developer API.
 - [B2B AI-teenused](https://tehisabiline.ee/ai/): managed AI services for Estonian businesses – AI assistant on company documents, searchable knowledge base, and workflow automation with human approval, starting from a free mapping and one measurable pilot.
+- [AI idufirmale](https://tehisabiline.ee/idufirmadele/): managed AI for Estonian startups – assistant, knowledge base and automation on the startup's own data, fixed-scope pilot in 2–4 weeks, free mapping first, plus Estonian grant options (teekaart, arendustegevus, Töötukassa training).
 - [Küberaudit (küberturvalisuse audit)](https://tehisabiline.ee/kuberaudit/): agendipõhine küberaudit – human-reviewed agent-driven cybersecurity audit with a prioritized fix plan that raises the client's küberturvalisus.
 
 Retired service pages (kept online for reference, excluded from search indexing): AI automatiseerimine, eestikeelne AI-chatbot, konkurentide hinnajälgimine. Current focus is private AI, the developer API, and security audits.

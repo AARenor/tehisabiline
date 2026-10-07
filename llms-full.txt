@@ -29,6 +29,12 @@ Canonical page: https://tehisabiline.ee/ai/
 
 Managed AI services for Estonian businesses on the client's own documents and workflows: an AI assistant answering from company materials with source references and role-based access, a searchable knowledge base that stays in sync with the documents, and workflow automation (triage, categorization, drafts) with human approval of significant outputs. Delivery starts with a free mapping and one measurable 2–4 week pilot with a pre-agreed success metric, continuing as a maintained monthly service. Client data is not stored aside, not used for further training, and not shared with third parties; an optional no-logs mode keeps no query content. Target state is Estonian hosting (hardware ordered). No fixed prices are published before the work is known; illegal work, testing foreign systems without written permission, and bypassing access controls are excluded.
 
+## Service: AI idufirmale (managed AI for startups)
+
+Canonical page: https://tehisabiline.ee/idufirmadele/
+
+Managed AI for Estonian startups and early-stage companies on their own data: customer-facing assistant, searchable team knowledge base, and routine automation with human approval, sized for a small team (no separate AI team to hire). Delivery follows the same free mapping → fixed-scope 2–4 week pilot → monthly service pattern, with the success metric agreed before work starts and a clear stop if the pilot does not pay off. The page also documents Estonian grant options (digitaliseerimise teekaart up to 10 000 EUR, arendustegevus up to 35 000 EUR, Töötukassa training support; conditions checked at eis.ee) and the EU AI Act obligations that apply regardless of company size. No fixed prices are published before the workflow is known.
+
 ## Retired services (reference only, excluded from search indexing)
 
 AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language AI chatbot (https://tehisabiline.ee/ai-chatbot/) and competitor price monitoring (https://tehisabiline.ee/hinnajalgimine/) are retired offerings. Their pages stay online for reference with noindex directives. Current focus: sovereign cyber-AI models, the developer API, and human-reviewed agent-driven audits.
@@ -50,6 +56,7 @@ The guide lists 12 practical cyber-AI use cases for security work: log investiga
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/ai/
+- https://tehisabiline.ee/idufirmadele/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/privaatsus/
