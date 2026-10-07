@@ -35,6 +35,12 @@ Canonical page: https://tehisabiline.ee/idufirmadele/
 
 Managed AI for Estonian startups and early-stage companies on their own data: customer-facing assistant, searchable team knowledge base, and routine automation with human approval, sized for a small team (no separate AI team to hire). Delivery follows the same free mapping → fixed-scope 2–4 week pilot → monthly service pattern, with the success metric agreed before work starts and a clear stop if the pilot does not pay off. The page also documents Estonian grant options (digitaliseerimise teekaart up to 10 000 EUR, arendustegevus up to 35 000 EUR, Töötukassa training support; conditions checked at eis.ee) and the EU AI Act obligations that apply regardless of company size. No fixed prices are published before the workflow is known.
 
+## Service: AI SEO ja GEO teenus (AI-search visibility)
+
+Canonical page: https://tehisabiline.ee/ai/seo/
+
+AI-search visibility work (generative engine optimization, GEO, and answer engine optimization, AEO) for Estonian businesses: a free first check of 10–15 real customer questions across ChatGPT, Gemini, Perplexity and Google AI Overviews, a written audit with prioritized fixes (clear question-answer content, citations, structured data, consistent brand entity, third-party sources), and ongoing monitoring that reports brand mentions, citations and share against competitors in a before/after table. The page follows Google's own guidance that AEO/GEO is still SEO, cites measured evidence (Princeton GEO study, Seer and Ahrefs CTR data), explicitly lists tactics that do not work (guaranteed placements, mass AI content, fake citations, single-file magic), and publishes no guaranteed rankings or savings. Initial check is free; audit and content work are quoted in writing before work starts; monitoring is monthly.
+
 ## Retired services (reference only, excluded from search indexing)
 
 AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language AI chatbot (https://tehisabiline.ee/ai-chatbot/) and competitor price monitoring (https://tehisabiline.ee/hinnajalgimine/) are retired offerings. Their pages stay online for reference with noindex directives. Current focus: sovereign cyber-AI models, the developer API, and human-reviewed agent-driven audits.
@@ -57,6 +63,7 @@ The guide lists 12 practical cyber-AI use cases for security work: log investiga
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/ai/
 - https://tehisabiline.ee/idufirmadele/
+- https://tehisabiline.ee/ai/seo/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/privaatsus/

@@ -13,6 +13,7 @@ Service area: Estonia
 - [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): uncensored models fine-tuned for security work (Estonian hosting forthcoming, hardware ordered), plus the developer API.
 - [B2B AI-teenused](https://tehisabiline.ee/ai/): managed AI services for Estonian businesses – AI assistant on company documents, searchable knowledge base, and workflow automation with human approval, starting from a free mapping and one measurable pilot.
 - [AI idufirmale](https://tehisabiline.ee/idufirmadele/): managed AI for Estonian startups – assistant, knowledge base and automation on the startup's own data, fixed-scope pilot in 2–4 weeks, free mapping first, plus Estonian grant options (teekaart, arendustegevus, Töötukassa training).
+- [AI SEO ja GEO teenus](https://tehisabiline.ee/ai/seo/): AI-search visibility (GEO/AEO) for Estonian businesses – free first check across ChatGPT, Gemini, Perplexity and Google AI Overviews, then a written audit, content/structured-data work and monitoring of brand mentions. No guaranteed placements, honest measurement.
 - [Küberaudit (küberturvalisuse audit)](https://tehisabiline.ee/kuberaudit/): agendipõhine küberaudit – human-reviewed agent-driven cybersecurity audit with a prioritized fix plan that raises the client's küberturvalisus.
 
 Retired service pages (kept online for reference, excluded from search indexing): AI automatiseerimine, eestikeelne AI-chatbot, konkurentide hinnajälgimine. Current focus is private AI, the developer API, and security audits.

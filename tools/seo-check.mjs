@@ -74,6 +74,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "ai/seo/index.html",
+        canonical: `${origin}/ai/seo/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "kuberaudit/index.html",
         canonical: `${origin}/kuberaudit/`,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
