@@ -1,6 +1,6 @@
 # Tehisabiline: factual service overview
 
-Last materially reviewed: 2026-09-30
+Last materially reviewed: 2026-10-07
 Canonical source: https://tehisabiline.ee/
 
 ## Organization
@@ -23,6 +23,12 @@ Hosted API (pilot, hosting forthcoming): uncensored models to be served through 
 
 Agent-driven audits (küberaudit): professional vulnerability audits performed by agent-driven systems under the customer's written permission — updates, access control, backups, headers, input validation, data-leakage and prompt-injection robustness. Every significant finding passes human review, and delivery is a plain-language, prioritized fix plan with optional re-checking that raises küberturvalisus. Tehisabiline does not claim 100 percent security or error-free AI.
 
+## Service: B2B AI-teenused (managed AI for businesses)
+
+Canonical page: https://tehisabiline.ee/ai/
+
+Managed AI services for Estonian businesses on the client's own documents and workflows: an AI assistant answering from company materials with source references and role-based access, a searchable knowledge base that stays in sync with the documents, and workflow automation (triage, categorization, drafts) with human approval of significant outputs. Delivery starts with a free mapping and one measurable 2–4 week pilot with a pre-agreed success metric, continuing as a maintained monthly service. Client data is not stored aside, not used for further training, and not shared with third parties; an optional no-logs mode keeps no query content. Target state is Estonian hosting (hardware ordered). No fixed prices are published before the work is known; illegal work, testing foreign systems without written permission, and bypassing access controls are excluded.
+
 ## Retired services (reference only, excluded from search indexing)
 
 AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language AI chatbot (https://tehisabiline.ee/ai-chatbot/) and competitor price monitoring (https://tehisabiline.ee/hinnajalgimine/) are retired offerings. Their pages stay online for reference with noindex directives. Current focus: sovereign cyber-AI models, the developer API, and human-reviewed agent-driven audits.
@@ -43,6 +49,7 @@ The guide lists 12 practical cyber-AI use cases for security work: log investiga
 - https://tehisabiline.ee/kasutusjuhud/
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/
+- https://tehisabiline.ee/ai/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/privaatsus/
