@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const controller = new AbortController();
             const timeout = setTimeout(() => controller.abort(), 15000);
-            const response = await fetch("https://n8n.arleserver.cfd/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb", {
+            const response = await fetch("https://n8n.arle.top/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({

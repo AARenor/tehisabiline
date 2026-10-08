@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                const WEBHOOK_URL = 'https://n8n.arleserver.cfd/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb';
+                const WEBHOOK_URL = 'https://n8n.arle.top/webhook/1e82c9b9-6dd7-4d57-b2b7-e0187587e8eb';
 
                 const controller = new AbortController();
                 const timeout = setTimeout(() => controller.abort(), 15000);
