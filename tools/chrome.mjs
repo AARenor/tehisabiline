@@ -28,10 +28,9 @@ const NAV = [
 
 function header(path) {
     const link = ([href, label]) => `<a href="${href}"${path === href ? ' aria-current="page"' : ""}>${label}</a>`;
-    const mobile = ([href, label]) => `<a href="${href}"${path === href ? ' aria-current="page"' : ""}>${label}</a>`;
     return `<header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             ${NAV.map(link).join("\n            ")}
         </nav>
@@ -39,7 +38,7 @@ function header(path) {
         <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">${icon("menu", "i i--open")}${icon("x", "i i--close")}</button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
-        ${NAV.map(mobile).join("\n        ")}
+        ${NAV.map(link).join("\n        ")}
         <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
     </nav>
 </header>`;
@@ -50,7 +49,7 @@ function footer(date) {
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
             <nav aria-label="Teenuste lingid">

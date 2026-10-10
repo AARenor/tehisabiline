@@ -30,8 +30,8 @@
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=59ede12d">
-    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=a2bc2db8">
+    <link rel="stylesheet" href="/site.css?v=7f6e359c">
+    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=aaf03830">
 
     <script type="application/ld+json">
     {
@@ -112,7 +112,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/kuberaudit/">Küberaudit</a>
             <a href="/mudelid/">Mudelid ja API</a>
@@ -136,53 +136,52 @@
 <main id="main-content">
         <header class="page-head">
             <div class="wrap">
-                <nav aria-label="Asukoharada" class="breadcrumbs">
-                    <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Konkurentide hinnajälgimine</span>
-                </nav>
+                <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">Konkurentide hinnajälgimine</li></ol></nav>
                 <h1>Konkurentide hinnajälgimine ja hinnaseire, mida saab kontrollida</h1>
                 <p class="lead">Jälgi valitud toodete hindu, tuvasta olulised muutused ja näe iga väärtuse juures allikat ning kontrolliaega. Hinnaseire väljund kujundatakse otsuse, mitte lihtsalt andmemassi järgi.</p>
-                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
+                <p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
-        <div class="section">
-            <div class="wrap">
-                <article class="prose" style="overflow-wrap:anywhere; min-width:0">
-                    <section class="callout" aria-labelledby="short-answer">
+        <section class="section">
+            <div class="wrap article">
+                <nav class="toc" aria-label="Hinnajälgimise sisukord"><strong>Sellel lehel</strong><ol><li><a href="#workflow">Kuidas see töötab?</a></li><li><a href="#comparison">Lahenduse valik</a></li><li><a href="#matching">Tootevastendus</a></li><li><a href="#sources">Allikad ja ligipääs</a></li><li><a href="#outputs">Raportid ja väljund</a></li><li><a href="#quality">Andmekvaliteet</a></li><li><a href="#cost">Hinna kujunemine</a></li><li><a href="#process">Kasutuselevõtt</a></li><li><a href="#measurement">Mõõdikud</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+                <article class="prose">
+                    <section class="short-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis on konkurentide hinnajälgimine?</h2>
                         <p><strong>Konkurentide hinnajälgimine ehk hinnaseire</strong> kogub kokkulepitud ja lubatud allikatest valitud toodete või teenuste hinnad, seob omavahel võrreldavad pakkumised, märgib muutused ning edastab tulemuse raporti või integratsioonina. Usaldusväärne hinnajälgija näitab lisaks numbrile allikat, kontrolliaega, valuutat, varianti ja võimalikke kvaliteediprobleeme.</p>
                     </section>
 
-                    <section class="section section--tight" id="workflow">
+                    <section id="workflow">
                         <h2>Kuidas kohandatud hinnajälgija töötab?</h2>
-                        <div class="step-grid">
-                            <div class="number-card"><span>01</span><h3>Valik ja allikad</h3><p>Määrame tooted, konkurendid, lubatud andmeallikad, kontrollisageduse ja otsuse, mida raport toetab.</p></div>
-                            <div class="number-card"><span>02</span><h3>Kogumine</h3><p>Andmed tulevad eelistatult API-st või voost, vajadusel avalikult lehelt selle piiranguid arvestades.</p></div>
-                            <div class="number-card"><span>03</span><h3>Vastendamine</h3><p>Ühendame sama toote variandid koodi või tunnuste järgi ning saadame ebaselge vaste kontrolli.</p></div>
-                            <div class="number-card"><span>04</span><h3>Muutus ja väljund</h3><p>Normaliseerime hinna, võrdleme varasema seisuga ning saadame ainult kokkulepitud muutused.</p></div>
+                        <ol class="steps">
+                            <li><h3>Valik ja allikad</h3><p>Määrame tooted, konkurendid, lubatud andmeallikad, kontrollisageduse ja otsuse, mida raport toetab.</p></li>
+                            <li><h3>Kogumine</h3><p>Andmed tulevad eelistatult API-st või voost, vajadusel avalikult lehelt selle piiranguid arvestades.</p></li>
+                            <li><h3>Vastendamine</h3><p>Ühendame sama toote variandid koodi või tunnuste järgi ning saadame ebaselge vaste kontrolli.</p></li>
+                            <li><h3>Muutus ja väljund</h3><p>Normaliseerime hinna, võrdleme varasema seisuga ning saadame ainult kokkulepitud muutused.</p></li>
                         </div>
-                        <p>“Reaalajas” ei ole automaatselt parem. Kontrollisagedus peab lähtuma hinnamuutuste tegelikust tempost, otsuse ajakriitilisusest ja allika tehnilistest ning lepingulistest piirangutest.</p>
+                        <p>„Reaalajas“ ei ole automaatselt parem. Kontrollisagedus peab lähtuma hinnamuutuste tegelikust tempost, otsuse ajakriitilisusest ja allika tehnilistest ning lepingulistest piirangutest.</p>
                     </section>
 
-                    <section class="prose-section" id="comparison">
+                    <section id="comparison">
                         <h2>Millal eelistada kohandatud hinnajälgijat?</h2>
-                        <div class="table-wrap" style="max-width:100%; min-width:0; padding:12px">
-                            <table class="data comparison-table">
-                                <thead><tr><th>Variant</th><th>Sobib siis, kui</th><th>Peamine piirang</th></tr></thead>
+                        <div class="table-wrap table-wrap--stack">
+                            <table class="data">
+                                <thead><tr><th scope="col">Variant</th><th scope="col">Sobib siis, kui</th><th scope="col">Peamine piirang</th></tr></thead>
                                 <tbody>
-                                    <tr><td>Käsitsi kontroll</td><td>Tooteid ja kontrolle on väga vähe ning muutused harvad</td><td>Ajamahukas, ebaühtlane ja ajalugu tekib vaid siis, kui keegi selle salvestab</td></tr>
-                                    <tr><td>Üldine hinnavõrdlusportaal</td><td>Vajalikud tooted, müüjad ja väljad on portaalis juba kvaliteetselt olemas</td><td>Ei pruugi katta sinu nišši, B2B hinda, varianti või soovitud väljundit</td></tr>
-                                    <tr><td>Kohandatud hinnajälgija</td><td>Vaja on kindlat konkurendivalikut, oma tootevastendust, ajalugu või ühendust töövooga</td><td>Vajab allikate teostatavuse kontrolli, seadistust ja hooldust</td></tr>
+                                    <tr><td data-label="Variant">Käsitsi kontroll</td><td data-label="Sobib siis, kui">Tooteid ja kontrolle on väga vähe ning muutused harvad</td><td data-label="Peamine piirang">Ajamahukas, ebaühtlane ja ajalugu tekib vaid siis, kui keegi selle salvestab</td></tr>
+                                    <tr><td data-label="Variant">Üldine hinnavõrdlusportaal</td><td data-label="Sobib siis, kui">Vajalikud tooted, müüjad ja väljad on portaalis juba kvaliteetselt olemas</td><td data-label="Peamine piirang">Ei pruugi katta sinu nišši, B2B hinda, varianti või soovitud väljundit</td></tr>
+                                    <tr><td data-label="Variant">Kohandatud hinnajälgija</td><td data-label="Sobib siis, kui">Vaja on kindlat konkurendivalikut, oma tootevastendust, ajalugu või ühendust töövooga</td><td data-label="Peamine piirang">Vajab allikate teostatavuse kontrolli, seadistust ja hooldust</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="content-grid">
-                            <div class="info-card fit-card"><h3>Hea sobivus</h3><p>Sul on korduv hinnastamisotsus, selge tootevalik, stabiilsed avalikud või lepingulised andmeallikad ning inimene, kes raporti põhjal tegutseb.</p></div>
-                            <div class="info-card not-fit-card"><h3>Halb sobivus</h3><p>Tooted ei ole omavahel võrreldavad, hindu näeb ainult isikliku pakkumise järel või andmeid soovitakse koguda ligipääsukontrollist möödudes.</p></div>
-                        </div>
-                    </section>
+                        <div class="limits">
+                            <div><h3>Hea sobivus</h3><p>Sul on korduv hinnastamisotsus, selge tootevalik, stabiilsed avalikud või lepingulised andmeallikad ning inimene, kes raporti põhjal tegutseb.</p></div>
+                            <div><h3>Halb sobivus</h3><p>Tooted ei ole omavahel võrreldavad, hindu näeb ainult isikliku pakkumise järel või andmeid soovitakse koguda ligipääsukontrollist möödudes.</p></div>
+                        </ol>
+                        </section>
 
-                    <section class="prose-section" id="matching">
+                    <section id="matching">
                         <h2>Õige võrdlus algab samast tootest ja samast hinnast</h2>
                         <p>Odavaim number võib olla vale järeldus, kui üks pakkumine on teise mahu, komplekti või tarnetingimusega. Seetõttu määrame enne kogumist, millised väljad peavad võrdluses olema.</p>
                         <ul>
@@ -192,10 +191,10 @@
                             <li><strong>Lisakulud:</strong> tarne, minimaalne tellimus, liikmehind või muu tingimus, kui see on avalikult võrreldav.</li>
                             <li><strong>Saadavus:</strong> laosolek või tarneaeg, kui hinnal pole ilma selleta otsuse väärtust.</li>
                         </ul>
-                        <div class="callout"><strong>Kvaliteedireegel:</strong> ebaselge vaste tuleb tähistada ebaselgeks, mitte suruda automaatselt “lähima” toote külge.</div>
+                        <div class="callout"><strong>Kvaliteedireegel:</strong> ebaselge vaste tuleb tähistada ebaselgeks, mitte suruda automaatselt „lähima“ toote külge.</div>
                     </section>
 
-                    <section class="prose-section" id="sources">
+                    <section id="sources">
                         <h2>Millistest allikatest saab hindu koguda?</h2>
                         <p>Eelistusjärjekord on ametlik API või andmevoog, kokkulepitud eksport ning seejärel avalikult ligipääsetav veebileht. Enne teostust kontrollime, kas allikas on tehniliselt stabiilne ja kasutusviis lubatud.</p>
                         <div class="content-grid">
@@ -204,10 +203,10 @@
                             <div class="info-card"><h3>Ettevõtte enda failid</h3><p>Oma hinnakiri või tootekataloog annab võrdlusele vajaliku lähtevaliku ja tunnused.</p></div>
                             <div class="info-card"><h3>Keelatud otsetee</h3><p>Sisselogimist, CAPTCHA-t, tasulist ligipääsu või muud kaitset ei hakata automatiseerimisega mööda minema.</p></div>
                         </div>
-                        <p>Veebilehed ja vood muutuvad. Hinnajälgija hooldusplaan peab sisaldama ebaõnnestunud kogumise teavitust ja kontrolli, et “puuduv hind” ei muutuks ekslikult nullhinnaks.</p>
+                        <p>Veebilehed ja vood muutuvad. Hinnajälgija hooldusplaan peab sisaldama ebaõnnestunud kogumise teavitust ja kontrolli, et „puuduv hind“ ei muutuks ekslikult nullhinnaks.</p>
                     </section>
 
-                    <section class="prose-section" id="outputs">
+                    <section id="outputs">
                         <h2>Raport peab aitama teha kindlat otsust</h2>
                         <p>Enne kujundamist küsime: kes raportit kasutab ja mida ta pärast selle lugemist teeb? Vastusest sõltub, kas vaja on kiiret teavitust, nädala kokkuvõtet või süsteemiintegratsiooni.</p>
                         <div class="content-grid">
@@ -219,24 +218,24 @@
                         <p>Automaatne omahinna muutmine vajab eriti ettevaatlikku lähenemist. Mõistlik esimene etapp on seire ja inimese kinnitatud otsus, mitte kontrollimatu hinnasõda.</p>
                     </section>
 
-                    <section class="prose-section" id="quality">
+                    <section id="quality">
                         <h2>Mida iga hinnakirje juures säilitada?</h2>
-                        <div class="table-wrap">
-                            <table class="comparison-table">
-                                <thead><tr><th>Väli</th><th>Miks see vajalik on?</th></tr></thead>
+                        <div class="table-wrap table-wrap--stack">
+                            <table class="data">
+                                <thead><tr><th scope="col">Väli</th><th scope="col">Miks see vajalik on?</th></tr></thead>
                                 <tbody>
-                                    <tr><td>Allika URL või ID</td><td>Võimaldab numbri lähtekohast üle kontrollida</td></tr>
-                                    <tr><td>Kontrolliaeg ja ajavöönd</td><td>Näitab, kui värske on hind ja millal muutus avastati</td></tr>
-                                    <tr><td>Toote tunnus ning variant</td><td>Vähendab eri pakkumiste ekslikku kokkusidumist</td></tr>
-                                    <tr><td>Valuuta, maksud ja ühik</td><td>Muudab hinnad sisuliselt võrreldavaks</td></tr>
-                                    <tr><td>Vastenduse kindlus või staatus</td><td>Eraldab kinnitatud, automaatse ja kontrolli vajava vaste</td></tr>
-                                    <tr><td>Kogumise tulemus</td><td>Eristab päris hinnapuudust tehnilisest veast</td></tr>
+                                    <tr><td data-label="Väli">Allika URL või ID</td><td data-label="Miks see vajalik on?">Võimaldab numbri lähtekohast üle kontrollida</td></tr>
+                                    <tr><td data-label="Väli">Kontrolliaeg ja ajavöönd</td><td data-label="Miks see vajalik on?">Näitab, kui värske on hind ja millal muutus avastati</td></tr>
+                                    <tr><td data-label="Väli">Toote tunnus ning variant</td><td data-label="Miks see vajalik on?">Vähendab eri pakkumiste ekslikku kokkusidumist</td></tr>
+                                    <tr><td data-label="Väli">Valuuta, maksud ja ühik</td><td data-label="Miks see vajalik on?">Muudab hinnad sisuliselt võrreldavaks</td></tr>
+                                    <tr><td data-label="Väli">Vastenduse kindlus või staatus</td><td data-label="Miks see vajalik on?">Eraldab kinnitatud, automaatse ja kontrolli vajava vaste</td></tr>
+                                    <tr><td data-label="Väli">Kogumise tulemus</td><td data-label="Miks see vajalik on?">Eristab päris hinnapuudust tehnilisest veast</td></tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
 
-                    <section class="prose-section" id="cost">
+                    <section id="cost">
                         <h2>Millest kohandatud hinnaseire hind sõltub?</h2>
                         <p>Maksumuse määravad eelkõige jälgitavate toodete ja allikate arv, uuendussagedus, tootevastenduse keerukus, allikate tehniline stabiilsus ning soovitud väljund. Üks kindla EAN-koodiga tootevalim erineb oluliselt kataloogist, kus variante tuleb nime, mõõdu ja pakendi järgi eristada.</p>
                         <div class="content-grid">
@@ -248,7 +247,7 @@
                         <p>Seepärast algab projekt piiratud teostatavuse testist: mõned tooted, mõned allikad ja üks otsus. Selle põhjal saab hinnata nii laiendamise hinda kui ka püsivat hooldusvajadust.</p>
                     </section>
 
-                    <section class="prose-section" id="process">
+                    <section id="process">
                         <h2>Hinnajälgija piloot samm-sammult</h2>
                         <ol>
                             <li><strong>Otsus ja valim:</strong> määrame ühe kasutaja, otsuse ning piiratud toote- ja konkurendivaliku.</li>
@@ -259,7 +258,7 @@
                         </ol>
                     </section>
 
-                    <section class="prose-section" id="measurement">
+                    <section id="measurement">
                         <h2>Kuidas hinnajälgija kvaliteeti hinnata?</h2>
                         <ul>
                             <li><strong>Katvus:</strong> kui suure osa valitud toodetest ja allikatest süsteem kontrollis?</li>
@@ -270,51 +269,28 @@
                         </ul>
                     </section>
 
-                    <section class="prose-section" id="faq">
+                    <section id="faq">
                         <h2>Küsimused konkurentide hinnajälgimise kohta</h2>
-                        <div class="grid gap-4">
-                            <details class="faq-card"><summary><span>Mis on konkurentide hinnajälgimine?</span><span aria-hidden="true">+</span></summary><p>Konkurentide hinnajälgimine kogub kokkulepitud allikatest valitud toodete või teenuste hinnad, normaliseerib võrreldavad väljad, märgib muutused ja edastab tulemuse raporti, tabeli või integratsioonina.</p></details>
-                            <details class="faq-card"><summary><span>Kui sageli saab hindu uuendada?</span><span aria-hidden="true">+</span></summary><p>Sagedus sõltub allika liidesest, kasutustingimustest, tehnilistest piirangutest ja ärivajadusest. Kõigile projektidele ei ole reaalajas seire vajalik ega lubatud; sageli piisab päevasest või nädalasest kontrollist.</p></details>
-                            <details class="faq-card"><summary><span>Kuidas veenduda, et võrreldakse sama toodet?</span><span aria-hidden="true">+</span></summary><p>Kõige kindlamad tunnused on tootjakood, GTIN või muu unikaalne ID. Nende puudumisel kasutatakse nime, brändi, mudeli, mahu ja variandi kombinatsiooni ning ebaselged vasted jäetakse inimese kontrollida.</p></details>
-                            <details class="faq-card"><summary><span>Kas hinnajälgija saab jälgida kõiki veebilehti?</span><span aria-hidden="true">+</span></summary><p>Ei. Eelistame ametlikku API-t, andmevoogu või avalikku ligipääsetavat lehte ning arvestame kasutustingimuste, robots-juhiste, ligipääsuõiguste ja tehniliste piirangutega. Sisselogimist, CAPTCHA-t või muud ligipääsukontrolli ei hakata mööda minema.</p></details>
-                            <details class="faq-card"><summary><span>Millise kujuga hinnaraporti saab?</span><span aria-hidden="true">+</span></summary><p>Väljund võib olla e-kirja kokkuvõte, CSV- või tabelifail, juhtpaneel või API kaudu edasi antav andmevoog. Vorm valitakse selle järgi, millise otsuse või töövoo jaoks andmeid kasutatakse.</p></details>
+                        <div class="faq">
+                            <details><summary><h3>Mis on konkurentide hinnajälgimine?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Konkurentide hinnajälgimine kogub kokkulepitud allikatest valitud toodete või teenuste hinnad, normaliseerib võrreldavad väljad, märgib muutused ja edastab tulemuse raporti, tabeli või integratsioonina.</p></div></details>
+                            <details><summary><h3>Kui sageli saab hindu uuendada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Sagedus sõltub allika liidesest, kasutustingimustest, tehnilistest piirangutest ja ärivajadusest. Kõigile projektidele ei ole reaalajas seire vajalik ega lubatud; sageli piisab päevasest või nädalasest kontrollist.</p></div></details>
+                            <details><summary><h3>Kuidas veenduda, et võrreldakse sama toodet?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Kõige kindlamad tunnused on tootjakood, GTIN või muu unikaalne ID. Nende puudumisel kasutatakse nime, brändi, mudeli, mahu ja variandi kombinatsiooni ning ebaselged vasted jäetakse inimese kontrollida.</p></div></details>
+                            <details><summary><h3>Kas hinnajälgija saab jälgida kõiki veebilehti?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Ei. Eelistame ametlikku API-t, andmevoogu või avalikku ligipääsetavat lehte ning arvestame kasutustingimuste, robots-juhiste, ligipääsuõiguste ja tehniliste piirangutega. Sisselogimist, CAPTCHA-t või muud ligipääsukontrolli ei hakata mööda minema.</p></div></details>
+                            <details><summary><h3>Millise kujuga hinnaraporti saab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Väljund võib olla e-kirja kokkuvõte, CSV- või tabelifail, juhtpaneel või API kaudu edasi antav andmevoog. Vorm valitakse selle järgi, millise otsuse või töövoo jaoks andmeid kasutatakse.</p></div></details>
                         </div>
                     </section>
 
-                    <section class="prose-section" aria-labelledby="related">
-                        <h2 id="related">Vaata ka</h2>
-                        <div class="related-links">
-                            <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>Mida tsenseerimata küber-AI-ga turvatöös teha saab.</span></a>
-                            <a class="related-card" href="/ai-automatiseerimine/"><strong>AI automatiseerimine</strong><span>Ühenda hinnainfo teavituste, raporti ja muude äriprotsessidega.</span></a>
-                            <a class="related-card" href="/ai-chatbot/"><strong>Eestikeelne AI-chatbot</strong><span>Vasta veebikülastaja korduvatele küsimustele kinnitatud info põhjal.</span></a>
-                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
-                        </div>
-                    </section>
-
-                    <section class="service-cta">
-                        <h2>Kontrollime hinnajälgimise teostatavust</h2>
-                        <p>Saada näidisena mõned tooted, konkurendid ja soovitud kontrollisagedus. Vaatame tasuta üle, millised allikad on kasutatavad ning milline piloot annaks otsuseks vajaliku info.</p>
-                        <a class="btn btn--primary" href="/#contact">Kirjelda hinnajälgimise vajadust</a>
-                    </section>
+                    <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
+                        <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">Mida tsenseerimata küber-AI-ga turvatöös teha saab.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/ai-automatiseerimine/"><span class="related__title">AI automatiseerimine</span><span class="related__desc">Ühenda hinnainfo teavituste, raporti ja muude äriprotsessidega.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/ai-chatbot/"><span class="related__title">Eestikeelne AI-chatbot</span><span class="related__desc">Vasta veebikülastaja korduvatele küsimustele kinnitatud info põhjal.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/meist/"><span class="related__title">Tehisabilise tööpõhimõtted</span><span class="related__desc">Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        
+                    </ul></section>
                 </article>
-
-                <aside class="content-aside" aria-label="Sisukord">
-                    <nav class="toc-card" aria-label="Hinnajälgimise sisukord">
-                        <strong>Sellel lehel</strong>
-                        <a href="#workflow">Kuidas see töötab?</a>
-                        <a href="#comparison">Lahenduse valik</a>
-                        <a href="#matching">Tootevastendus</a>
-                        <a href="#sources">Allikad ja ligipääs</a>
-                        <a href="#outputs">Raportid ja väljund</a>
-                        <a href="#quality">Andmekvaliteet</a>
-                        <a href="#cost">Hinna kujunemine</a>
-                        <a href="#process">Kasutuselevõtt</a>
-                        <a href="#measurement">Mõõdikud</a>
-                        <a href="#faq">Küsimused</a>
-                    </nav>
-                </aside>
             </div>
-        </div>
+        </section>
+        <section class="band"><div class="wrap band__inner"><h2>Kontrollime hinnajälgimise teostatavust</h2><p>Saada näidisena mõned tooted, konkurendid ja soovitud kontrollisagedus. Vaatame tasuta üle, millised allikad on kasutatavad ning milline piloot annaks otsuseks vajaliku info.</p><a class="btn btn--white" href="/#contact">Kirjelda hinnajälgimise vajadust</a></div></section>
     </main>
 
     <!-- chrome:footer -->
@@ -322,7 +298,7 @@
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
             <nav aria-label="Teenuste lingid">
@@ -362,6 +338,6 @@
 </footer>
 <!-- /chrome:footer -->
 
-    <script src="/site.js?v=3a1bb970" defer></script>
+    <script src="/site.js?v=34e49d41" defer></script>
 </body>
 </html>

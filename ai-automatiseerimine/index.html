@@ -30,8 +30,8 @@
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=59ede12d">
-    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=a2bc2db8">
+    <link rel="stylesheet" href="/site.css?v=7f6e359c">
+    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=aaf03830">
 
     <script type="application/ld+json">
     {
@@ -112,7 +112,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/kuberaudit/">Küberaudit</a>
             <a href="/mudelid/">Mudelid ja API</a>
@@ -136,53 +136,46 @@
 <main id="main-content">
         <header class="page-head">
             <div class="wrap">
-                <nav aria-label="Asukoharada" class="breadcrumbs">
-                    <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">AI automatiseerimine</span>
-                </nav>
+                <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">AI automatiseerimine</li></ol></nav>
                 <h1>AI automatiseerimine, mis algab päris tööprotsessist</h1>
                 <p class="lead">Vähenda korduvat kopeerimist, ooteaega ja käsitsi suunamist. Kaardistame ühe äriprotsessi, ühendame vajalikud süsteemid ning mõõdame pilooti algtaseme vastu.</p>
-                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
+                <p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
-        <div class="section">
-            <div class="wrap">
-                <article class="prose" style="overflow-wrap:anywhere; min-width:0">
-                    <section class="callout" aria-labelledby="short-answer">
+        <section class="section">
+            <div class="wrap article">
+                <nav class="toc" aria-label="AI automatiseerimise sisukord"><strong>Sellel lehel</strong><ol><li><a href="#examples">Praktilised näited</a></li><li><a href="#fit">Sobivuse kontroll</a></li><li><a href="#calculator">Tasuvuskalkulaator</a></li><li><a href="#cost">Hinna kujunemine</a></li><li><a href="#process">Teostuse sammud</a></li><li><a href="#safety">Töökindlus ja andmed</a></li><li><a href="#maintenance">Hooldus</a></li><li><a href="#measurement">Mõõdikud</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+                <article class="prose">
+                    <section class="short-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis on AI automatiseerimine?</h2>
                         <p><strong>AI automatiseerimine</strong> on töövoog, kus kindlad sammud käivituvad automaatselt ja tehisintellekt aitab töödelda muutliku kujuga sisu—näiteks liigitada e-kirja, võtta dokumendist väljad või koostada mustandi. Töökindel lahendus ei anna kogu protsessi mudeli otsustada: reeglid, valideerimine, logid ja inimese kontroll jäävad sinna, kus eksimuse mõju on suur.</p>
                     </section>
 
-                    <section class="section section--tight" id="examples">
+                    <section id="examples">
                         <h2>Milliseid töövooge saab automatiseerida?</h2>
                         <p>Hea kandidaat on korduv ja piisavalt stabiilne. Sisend ei pea olema alati ühesugune, kuid meeskond peab oskama kirjeldada, mis on õige tulemus ja millal on vaja inimese otsust.</p>
-                        <div class="table-wrap" style="max-width:100%; min-width:0; padding:12px">
-                            <table class="data comparison-table">
+                        <div class="table-wrap table-wrap--stack">
+                            <table class="data">
                                 <thead>
-                                    <tr><th>Praegune töö</th><th>Võimalik automatsioon</th><th>Inimese kontroll</th></tr>
+                                    <tr><th scope="col">Praegune töö</th><th scope="col">Võimalik automatsioon</th><th scope="col">Inimese kontroll</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>Müügipäringud jõuavad eri kanalitest</td><td>Kogumine, liigitamine, CRM-i kirje ja vastutajale ülesanne</td><td>Ebaselge või suure väärtusega päringu kinnitamine</td></tr>
-                                    <tr><td>Arvetelt või dokumentidelt kopeeritakse välju</td><td>Väljade tuvastus, formaadikontroll ja edastus järgmisse süsteemi</td><td>Puuduva või vastuolulise info kontroll</td></tr>
-                                    <tr><td>Nädalaraport koostatakse mitmest tabelist</td><td>Andmete kogumine, arvutused, kokkuvõte ja saatmine</td><td>Erandlike muutuste selgitus</td></tr>
-                                    <tr><td>Kliendikirjad suunatakse käsitsi</td><td>Teema ja kiireloomulisuse tuvastus, mustand ning õige tiimi valik</td><td>Lõpliku vastuse või tundliku juhtumi kinnitamine</td></tr>
+                                    <tr><td data-label="Praegune töö">Müügipäringud jõuavad eri kanalitest</td><td data-label="Võimalik automatsioon">Kogumine, liigitamine, CRM-i kirje ja vastutajale ülesanne</td><td data-label="Inimese kontroll">Ebaselge või suure väärtusega päringu kinnitamine</td></tr>
+                                    <tr><td data-label="Praegune töö">Arvetelt või dokumentidelt kopeeritakse välju</td><td data-label="Võimalik automatsioon">Väljade tuvastus, formaadikontroll ja edastus järgmisse süsteemi</td><td data-label="Inimese kontroll">Puuduva või vastuolulise info kontroll</td></tr>
+                                    <tr><td data-label="Praegune töö">Nädalaraport koostatakse mitmest tabelist</td><td data-label="Võimalik automatsioon">Andmete kogumine, arvutused, kokkuvõte ja saatmine</td><td data-label="Inimese kontroll">Erandlike muutuste selgitus</td></tr>
+                                    <tr><td data-label="Praegune töö">Kliendikirjad suunatakse käsitsi</td><td data-label="Võimalik automatsioon">Teema ja kiireloomulisuse tuvastus, mustand ning õige tiimi valik</td><td data-label="Inimese kontroll">Lõpliku vastuse või tundliku juhtumi kinnitamine</td></tr>
                                 </tbody>
                             </table>
                         </div>
                         <p>Automatiseerida saab ka ilma AI-ta. Kui otsus põhineb kindlal väljal või lihtsal reeglil, on tavapärane automatsioon odavam ja paremini prognoositav. AI on kasulik siis, kui sisendiks on vabas vormis tekst, dokument või muu ebaühtlane sisu.</p>
                     </section>
 
-                    <section class="prose-section" id="fit">
+                    <section id="fit">
                         <h2>Milline protsess sobib esimeseks piloodiks?</h2>
-                        <div class="content-grid">
-                            <div class="info-card fit-card">
-                                <h3>Hea kandidaat</h3>
-                                <p>Tegevus kordub vähemalt igal nädalal, sisend on digitaalselt kättesaadav, sammudel on omanik ning tulemust saab mõõta aja, mahu, vea või ooteaja kaudu.</p>
-                            </div>
-                            <div class="info-card not-fit-card">
-                                <h3>Enne tuleb protsess korda teha</h3>
-                                <p>Reeglid muutuvad pidevalt, keegi ei vastuta tulemuse eest, andmetele puudub lubatud ligipääs või üks viga põhjustaks kontrollimatu kahju.</p>
-                            </div>
+                        <div class="limits">
+                            <div><h3>Hea kandidaat</h3><p>Tegevus kordub vähemalt igal nädalal, sisend on digitaalselt kättesaadav, sammudel on omanik ning tulemust saab mõõta aja, mahu, vea või ooteaja kaudu.</p></div>
+                            <div><h3>Enne tuleb protsess korda teha</h3><p>Reeglid muutuvad pidevalt, keegi ei vastuta tulemuse eest, andmetele puudub lubatud ligipääs või üks viga põhjustaks kontrollimatu kahju.</p></div>
                         </div>
                         <h3>Neli küsimust enne arendust</h3>
                         <ol>
@@ -194,7 +187,7 @@
                         <div class="callout"><strong>Praktiline rusikareegel:</strong> kui algtaset ei saa mõõta, ei saa ka automatiseerimise kasu ausalt tõestada.</div>
                     </section>
 
-                    <section class="prose-section" id="calculator">
+                    <section id="calculator">
                         <h2>Kui palju käsitööaega võib töövoog neelata?</h2>
                         <p>Sisesta ühe korduva ülesande ligikaudne maht. Kalkulaator näitab teoreetilist ajavõitu, kui valitud osa sammudest saab automatiseerida. See ei arvesta arendus-, litsentsi-, kvaliteedikontrolli ega hoolduskulu.</p>
                         <div class="calculator" id="roi-calculator">
@@ -228,7 +221,7 @@
                         </div>
                     </section>
 
-                    <section class="prose-section" id="cost">
+                    <section id="cost">
                         <h2>Millest AI automatiseerimise hind sõltub?</h2>
                         <p>Usaldusväärset projektihinda ei saa määrata ainult sõnade „AI automatsioon” järgi. Hind sõltub sellest, mitu süsteemi tuleb ühendada, kas neil on sobivad liidesed, kui muutlik on sisend ning kui palju kontrolli, logimist ja hooldust töövoog vajab.</p>
                         <div class="content-grid">
@@ -240,17 +233,17 @@
                         <p>Kaardistuse väljund on konkreetne piloodi ulatus: sisend, väljund, süsteemid, kontrollpunktid, mõõdikud ja eeldatav püsikulu. Alles selle põhjal saab võrrelda projekti hinda käsitöö tegeliku maksumusega.</p>
                     </section>
 
-                    <section class="prose-section" id="process">
+                    <section id="process">
                         <h2>Neli sammu kontrollitava piloodini</h2>
-                        <div class="step-grid">
-                            <div class="number-card"><span>01</span><h3>Kaardistus ja algtase</h3><p>Joonistame praeguse töövoo ning mõõdame mahu, aja, ooteaja ja tüüpilised vead.</p></div>
-                            <div class="number-card"><span>02</span><h3>Tehniline plaan</h3><p>Valime ühendused, ligipääsud, reeglid, AI-sammud, kontrollpunktid ja veakäsitluse.</p></div>
-                            <div class="number-card"><span>03</span><h3>Piiratud piloot</h3><p>Katsetame väikese andmemahu või ühe kasutusjuhuga, logime tulemused ning täpsustame erandid.</p></div>
-                            <div class="number-card"><span>04</span><h3>Mõõtmine ja üleandmine</h3><p>Võrdleme algtasemega, dokumenteerime halduse ja lepime kokku seire ning hoolduse.</p></div>
-                        </div>
-                    </section>
+                        <ol class="steps">
+                            <li><h3>Kaardistus ja algtase</h3><p>Joonistame praeguse töövoo ning mõõdame mahu, aja, ooteaja ja tüüpilised vead.</p></li>
+                            <li><h3>Tehniline plaan</h3><p>Valime ühendused, ligipääsud, reeglid, AI-sammud, kontrollpunktid ja veakäsitluse.</p></li>
+                            <li><h3>Piiratud piloot</h3><p>Katsetame väikese andmemahu või ühe kasutusjuhuga, logime tulemused ning täpsustame erandid.</p></li>
+                            <li><h3>Mõõtmine ja üleandmine</h3><p>Võrdleme algtasemega, dokumenteerime halduse ja lepime kokku seire ning hoolduse.</p></li>
+                        </ol>
+                        </section>
 
-                    <section class="prose-section" id="safety">
+                    <section id="safety">
                         <h2>Automatsioon peab ebaõnnestuma nähtavalt ja turvaliselt</h2>
                         <p>Vaikne viga on ohtlikum kui peatunud töövoog. Seetõttu määrame enne käivitamist, millised tulemused valideeritakse automaatselt, millised saadetakse inimesele ja kuidas probleemist teada antakse.</p>
                         <div class="content-grid">
@@ -261,9 +254,9 @@
                         </div>
                     </section>
 
-                    <section class="prose-section" id="maintenance">
+                    <section id="maintenance">
                         <h2>Mis võib pärast käivitamist muutuda?</h2>
-                        <p>Automatiseerimine ei ole ühekordne “seadista ja unusta” projekt. Töövoo ümber olevad süsteemid, väljad, õigused ja ärireeglid muutuvad. Hooldusvajadus sõltub ühenduste arvust, sisendi stabiilsusest ning sellest, kui kriitiline protsess ettevõttele on.</p>
+                        <p>Automatiseerimine ei ole ühekordne „seadista ja unusta“ projekt. Töövoo ümber olevad süsteemid, väljad, õigused ja ärireeglid muutuvad. Hooldusvajadus sõltub ühenduste arvust, sisendi stabiilsusest ning sellest, kui kriitiline protsess ettevõttele on.</p>
                         <div class="content-grid">
                             <div class="info-card"><h3>Liides või andmeväli muutub</h3><p>API versioon, tabeli veerg või vormi nimi võib muutuda. Kontroll peab eristama tühja tulemust õnnestunud, kuid nullväärtusega tulemusest.</p></div>
                             <div class="info-card"><h3>Ligipääs aegub</h3><p>Token, parool või kasutajaõigus vajab uuendamist. Omanik ja teavitustee tuleb määrata enne, kui ühendus katkeb.</p></div>
@@ -273,7 +266,7 @@
                         <p>Hooldusplaanis lepime kokku vähemalt vastutaja, katkestuse teavituse, logide kontrolli, ligipääsude uuendamise ja muudatuse testimise korra. Väikese piloodi üks eesmärk ongi mõõta, kui palju sellist püsitööd lahendus tegelikult vajab.</p>
                     </section>
 
-                    <section class="prose-section" id="measurement">
+                    <section id="measurement">
                         <h2>Mida pärast pilooti võrrelda?</h2>
                         <ul>
                             <li><strong>Ajakulu:</strong> käsitöö minutid ühe juhtumi ja kuu kohta.</li>
@@ -282,56 +275,34 @@
                             <li><strong>Töökindlus:</strong> õnnestunud käivitused, katkestused ja taastamise aeg.</li>
                             <li><strong>Kogukulu:</strong> arendus, kasutus, litsentsid, seire ja hooldus.</li>
                         </ul>
-                        <p>Üksnes “automatiseeritud tööde arv” ei näita väärtust. Kui automatsioon tekitab rohkem kontrolli või parandusi kui eemaldab, tuleb töövoogu muuta või piloot peatada.</p>
+                        <p>Üksnes „automatiseeritud tööde arv“ ei näita väärtust. Kui automatsioon tekitab rohkem kontrolli või parandusi kui eemaldab, tuleb töövoogu muuta või piloot peatada.</p>
                         <h3>Võrdle sama tüüpi perioode</h3>
                         <p>Enne-pärast võrdlus on usaldusväärsem siis, kui töömaht ja juhtumite keerukus on sarnased. Hooajalise protsessi puhul ei piisa ühest juhuslikust nädalast. Eralda ka automatsiooni enda tööajast inimese kontroll, parandused ja katkestuste lahendamine—muidu paistab sääst suurem, kui see tegelikult on.</p>
                         <p>Piloodi kokkuvõte peaks näitama nii kasu kui ka piire: millised juhud läbisid töövoo edukalt, millised saadeti inimesele, mis ebaõnnestus ja milline püsikulu kaasneb. Selle põhjal saab otsustada, kas lahendust laiendada, kitsendada või mitte jätkata.</p>
                     </section>
 
-                    <section class="prose-section" id="faq">
+                    <section id="faq">
                         <h2>Küsimused AI automatiseerimise kohta</h2>
-                        <div class="grid gap-4">
-                            <details class="faq-card"><summary><span>Mis vahe on tavalisel automatiseerimisel ja AI automatiseerimisel?</span><span aria-hidden="true">+</span></summary><p>Tavaline automatsioon järgib etteantud reegleid. AI-samm aitab töödelda muutliku kujuga sisu, näiteks liigitada e-kirja, võtta dokumendist väljad või koostada vastuse mustandi. Usaldusväärne töövoog kasutab mõlemat ning jätab kriitilise otsuse vajadusel inimesele.</p></details>
-                            <details class="faq-card"><summary><span>Millest AI automatiseerimise projekt algab?</span><span aria-hidden="true">+</span></summary><p>Projekt algab ühe protsessi kaardistusest: käivitaja, sisendid, sammud, erandid, vastutaja, praegune ajakulu ja soovitud tulemus. Nii saab enne arendust hinnata sobivust ning seada piloodile mõõdiku.</p></details>
-                            <details class="faq-card"><summary><span>Kas olemasolevad programmid tuleb välja vahetada?</span><span aria-hidden="true">+</span></summary><p>Sageli mitte. Automatiseerimiskiht saab olemasolevaid süsteeme ühendada API, veebivormi, e-posti, faili või muu lubatud liidese kaudu. Täpne võimalus sõltub kasutatavate tööriistade ligipääsudest.</p></details>
-                            <details class="faq-card"><summary><span>Kuidas AI automatiseerimise tasuvust mõõta?</span><span aria-hidden="true">+</span></summary><p>Fikseeri enne pilooti käsitöö aeg, maht, vigade arv ja ooteaeg. Pärast pilooti võrdle samu näitajaid ning arvesta arendus-, kasutus- ja hoolduskulu. Kalkulaatori tulemus on esmane hinnang, mitte tasuvuse lubadus.</p></details>
-                            <details class="faq-card"><summary><span>Kas automatiseerimine töötab täiesti ilma inimeseta?</span><span aria-hidden="true">+</span></summary><p>Mitte tingimata. Kõrge mõjuga otsused, ebakindlad vastused ja erandid tasub suunata inimesele. Eesmärk on eemaldada tarbetu käsitöö, mitte kaotada vajalik kontroll.</p></details>
+                        <div class="faq">
+                            <details><summary><h3>Mis vahe on tavalisel automatiseerimisel ja AI automatiseerimisel?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Tavaline automatsioon järgib etteantud reegleid. AI-samm aitab töödelda muutliku kujuga sisu, näiteks liigitada e-kirja, võtta dokumendist väljad või koostada vastuse mustandi. Usaldusväärne töövoog kasutab mõlemat ning jätab kriitilise otsuse vajadusel inimesele.</p></div></details>
+                            <details><summary><h3>Millest AI automatiseerimise projekt algab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Projekt algab ühe protsessi kaardistusest: käivitaja, sisendid, sammud, erandid, vastutaja, praegune ajakulu ja soovitud tulemus. Nii saab enne arendust hinnata sobivust ning seada piloodile mõõdiku.</p></div></details>
+                            <details><summary><h3>Kas olemasolevad programmid tuleb välja vahetada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Sageli mitte. Automatiseerimiskiht saab olemasolevaid süsteeme ühendada API, veebivormi, e-posti, faili või muu lubatud liidese kaudu. Täpne võimalus sõltub kasutatavate tööriistade ligipääsudest.</p></div></details>
+                            <details><summary><h3>Kuidas AI automatiseerimise tasuvust mõõta?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Fikseeri enne pilooti käsitöö aeg, maht, vigade arv ja ooteaeg. Pärast pilooti võrdle samu näitajaid ning arvesta arendus-, kasutus- ja hoolduskulu. Kalkulaatori tulemus on esmane hinnang, mitte tasuvuse lubadus.</p></div></details>
+                            <details><summary><h3>Kas automatiseerimine töötab täiesti ilma inimeseta?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Mitte tingimata. Kõrge mõjuga otsused, ebakindlad vastused ja erandid tasub suunata inimesele. Eesmärk on eemaldada tarbetu käsitöö, mitte kaotada vajalik kontroll.</p></div></details>
                         </div>
                     </section>
 
-                    <section class="prose-section" aria-labelledby="related">
-                        <h2 id="related">Vaata ka</h2>
-                        <div class="related-links">
-                            <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>12 praktilist kasutusjuhtu turvatöös – kontrollpunktid ja mõõdikud.</span></a>
-                            <a class="related-card" href="/ai-chatbot/"><strong>Eestikeelne AI-chatbot</strong><span>Kui korduv töö algab kliendi küsimusest või veebivestlusest.</span></a>
-                            <a class="related-card" href="/hinnajalgimine/"><strong>Konkurentide hinnajälgimine</strong><span>Kui sisendiks on regulaarselt muutuv turuinfo ja vaja on võrreldavat raportit.</span></a>
-                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja mida enne kaardistust ei luba.</span></a>
-                        </div>
-                    </section>
-
-                    <section class="service-cta">
-                        <h2>Kaardistame ühe töövoo tasuta</h2>
-                        <p>Saada praegused sammud kasvõi punktidena. Vastame konkreetsete täpsustavate küsimustega ja ütleme ausalt, kas siin on mõistlik automatiseerimise koht.</p>
-                        <a class="btn btn--primary" href="/#contact">Kirjelda oma töövoogu</a>
-                    </section>
+                    <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
+                        <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">12 praktilist kasutusjuhtu turvatöös – kontrollpunktid ja mõõdikud.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/ai-chatbot/"><span class="related__title">Eestikeelne AI-chatbot</span><span class="related__desc">Kui korduv töö algab kliendi küsimusest või veebivestlusest.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/hinnajalgimine/"><span class="related__title">Konkurentide hinnajälgimine</span><span class="related__desc">Kui sisendiks on regulaarselt muutuv turuinfo ja vaja on võrreldavat raportit.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/meist/"><span class="related__title">Tehisabilise tööpõhimõtted</span><span class="related__desc">Kes me oleme, kuidas sisu valmib ja mida enne kaardistust ei luba.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        
+                    </ul></section>
                 </article>
-
-                <aside class="content-aside" aria-label="Sisukord">
-                    <nav class="toc-card" aria-label="AI automatiseerimise sisukord">
-                        <strong>Sellel lehel</strong>
-                        <a href="#examples">Praktilised näited</a>
-                        <a href="#fit">Sobivuse kontroll</a>
-                        <a href="#calculator">Tasuvuskalkulaator</a>
-                        <a href="#cost">Hinna kujunemine</a>
-                        <a href="#process">Teostuse sammud</a>
-                        <a href="#safety">Töökindlus ja andmed</a>
-                        <a href="#maintenance">Hooldus</a>
-                        <a href="#measurement">Mõõdikud</a>
-                        <a href="#faq">Küsimused</a>
-                    </nav>
-                </aside>
             </div>
-        </div>
+        </section>
+        <section class="band"><div class="wrap band__inner"><h2>Kaardistame ühe töövoo tasuta</h2><p>Saada praegused sammud kasvõi punktidena. Vastame konkreetsete täpsustavate küsimustega ja ütleme ausalt, kas siin on mõistlik automatiseerimise koht.</p><a class="btn btn--white" href="/#contact">Kirjelda oma töövoogu</a></div></section>
     </main>
 
     <!-- chrome:footer -->
@@ -339,7 +310,7 @@
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
             <nav aria-label="Teenuste lingid">
@@ -379,7 +350,7 @@
 </footer>
 <!-- /chrome:footer -->
 
-    <script src="/site.js?v=3a1bb970" defer></script>
+    <script src="/site.js?v=34e49d41" defer></script>
     <script src="/assets/js/roi-calculator.js?v=b6149f8b" defer></script>
 
 </body>

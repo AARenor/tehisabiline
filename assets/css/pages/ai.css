@@ -1,0 +1,5 @@
+/* AI-teenuste lehed (/ai/, /ai/seo/, /idufirmadele/): lühivastus kohe lehe päise all. */
+.answer-first .short-answer { max-width: 46rem; padding-bottom: 0; border-bottom: 0; }
+.answer-first .short-answer > * + * { margin-top: .9rem; }
+.answer-first .short-answer h2 { font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); }
+.answer-first .short-answer + .facts { margin-top: clamp(2rem, 1.5rem + 2vw, 3rem); }

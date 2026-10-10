@@ -3,11 +3,17 @@
     "short_name": "Tehisabiline",
     "description": "Tsenseerimata küber-AI Eestis: API turvatööriistadele ja agendipõhised küberauditid Eesti ettevõtetele.",
     "lang": "et",
+    "dir": "ltr",
+    "id": "/",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
-    "background_color": "#fcfdfe",
-    "theme_color": "#00658d",
+    "background_color": "#ffffff",
+    "theme_color": "#0a62d0",
+    "categories": [
+        "business",
+        "security"
+    ],
     "icons": [
         {
             "src": "/assets/brand/favicon-16.png",

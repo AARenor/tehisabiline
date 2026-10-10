@@ -1,22 +1,36 @@
-# Public marketing content is available to search and answer engines.
+# Tehisabiline OÜ — https://tehisabiline.ee/
+# Public marketing content is open to search engines and AI answer/assistant agents.
+# Nothing is disallowed: pages, /assets/ (CSS, fonts, icons, images), llms.txt and llms-full.txt are all crawlable.
+# Retired pages carry a noindex meta tag instead of a Disallow, so crawlers can see it.
+# Machine-readable overview: https://tehisabiline.ee/llms.txt
+
 User-agent: *
 Allow: /
 
-User-agent: OAI-SearchBot
+# Search engines
+User-agent: Googlebot
 Allow: /
 
-User-agent: GPTBot
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# OpenAI
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: GPTBot
 Allow: /
 
-User-agent: Perplexity-User
-Allow: /
-
+# Anthropic
 User-agent: Claude-SearchBot
 Allow: /
 
@@ -26,7 +40,42 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (AI usage control token)
 User-agent: Google-Extended
+Allow: /
+
+# Apple (AI usage control token)
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# DuckDuckGo AI answers
+User-agent: DuckAssistBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Mistral AI
+User-agent: MistralAI-User
+Allow: /
+
+# You.com
+User-agent: YouBot
 Allow: /
 
 Sitemap: https://tehisabiline.ee/sitemap.xml

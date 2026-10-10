@@ -1,3 +1,4 @@
 Contact: mailto:tehisabiline@gmail.com
 Expires: 2027-10-01T00:00:00Z
 Preferred-Languages: et, en
+Canonical: https://tehisabiline.ee/.well-known/security.txt

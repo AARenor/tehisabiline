@@ -1,0 +1,46 @@
+/* Email-first contact block (#contact on /, /ai/, /ai/seo/, /idufirmadele/).
+   Left column = .contact__info (site.css); right column = .mailcard. */
+
+.contact__gets h3 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -.01em; margin-bottom: .9rem; }
+
+/* Card: one elevation per surface. White section → mist fill, tint section → hairline, blue band → shadow. */
+.mailcard {
+  display: grid; gap: 1.75rem; align-content: start;
+  background: var(--mist); border: 1px solid transparent; border-radius: var(--radius-l);
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  color: var(--text);
+}
+.section--tint .mailcard { background: var(--paper); border-color: var(--line); }
+.band .mailcard { background: var(--paper); box-shadow: var(--shadow-sheet); }
+
+/* Address + city: reads like the top of a business card. */
+.mailcard__id { display: grid; gap: .6rem; font-style: normal; }
+.mailcard__addr {
+  font-family: var(--font-display); font-weight: 650; color: var(--ink);
+  font-size: clamp(1.3rem, .85rem + 2.1vw, 2.25rem); line-height: 1.1; letter-spacing: -.025em;
+  user-select: all; -webkit-user-select: all; cursor: text;
+  overflow-wrap: anywhere;
+}
+.mailcard__addr::selection { background: var(--blue-soft); color: var(--blue-ink); }
+.mailcard__place { display: inline-flex; align-items: center; gap: .45rem; color: var(--muted); font-size: .975rem; }
+.mailcard__place .i { color: var(--blue); }
+
+.mailcard__cta { justify-self: stretch; }
+@media (min-width: 620px) { .mailcard__cta { justify-self: start; padding-inline: 1.75rem; } }
+
+/* What to put in the email: replaces the old form fields. */
+.mailcard__brief { display: grid; gap: .9rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.mailcard__brief h3 { font-size: 1.125rem; line-height: 1.3; letter-spacing: -.01em; }
+.mailcard__list { list-style: none; display: grid; }
+.mailcard__list li { display: grid; gap: .15rem; }
+.mailcard__list li + li { margin-top: .7rem; padding-top: .7rem; border-top: 1px solid var(--line); }
+.mailcard__list strong { font-weight: 600; color: var(--ink); }
+.mailcard__list span { color: var(--muted); font-size: .9375rem; }
+
+.mailcard__note { color: var(--muted); font-size: .9375rem; }
+
+/* On the blue band the card is a white sheet: undo the band's light text and focus colours inside it. */
+.band .mailcard p { color: var(--muted); font-size: .9375rem; max-width: none; }
+.band .mailcard p a { color: var(--blue); }
+.band .mailcard p a:hover { color: var(--blue-deep); }
+.band .mailcard :focus-visible { outline-color: var(--blue); }

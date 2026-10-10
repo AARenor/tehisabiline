@@ -1,10 +1,22 @@
-import {existsSync, readFileSync} from "node:fs";
+import {existsSync, readdirSync, readFileSync} from "node:fs";
 import {dirname, extname, join} from "node:path";
 import {fileURLToPath} from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://tehisabiline.ee";
 const today = new Date().toISOString().slice(0, 10);
+const contactEmail = "tehisabiline@gmail.com";
+const homepageNodeIds = [`${origin}/#organization`, `${origin}/#website`];
+const MIN_MAIN_INTERNAL_LINKS = 3;
+// Search engines and AI answer/assistant agents robots.txt must name with an explicit Allow.
+const allowedCrawlers = [
+    "Googlebot", "Bingbot", "Applebot", "DuckDuckBot",
+    "OAI-SearchBot", "GPTBot", "ChatGPT-User",
+    "PerplexityBot", "Perplexity-User",
+    "Claude-SearchBot", "Claude-User", "ClaudeBot",
+    "Google-Extended", "Applebot-Extended", "Amazonbot", "DuckAssistBot",
+    "Meta-ExternalAgent", "Meta-ExternalFetcher", "MistralAI-User", "YouBot"
+];
 const expectedPages = [
     {
         file: "index.html",
@@ -229,6 +241,62 @@ function validateIconSprite(html, label) {
     }
 }
 
+// Files Vercel serves (mirrors .vercelignore/.gitignore: dot-dirs, node_modules, tools, output are not deployed).
+const UNSERVED_DIRS = new Set(["node_modules", "tools", "output"]);
+function servedFiles(dir = root, out = []) {
+    for (const entry of readdirSync(dir, {withFileTypes: true})) {
+        if (entry.isDirectory()) {
+            if (entry.name.startsWith(".") || UNSERVED_DIRS.has(entry.name)) continue;
+            servedFiles(join(dir, entry.name), out);
+        } else {
+            out.push(join(dir, entry.name));
+        }
+    }
+    return out;
+}
+
+// Node ids a page's JSON-LD defines (objects with properties) and references (bare {"@id": ...}).
+function jsonLdIds(blocks) {
+    const defined = new Set();
+    const referenced = new Set();
+    const visit = (node) => {
+        if (Array.isArray(node)) return node.forEach(visit);
+        if (!node || typeof node !== "object") return;
+        const keys = Object.keys(node);
+        if (typeof node["@id"] === "string") (keys.length === 1 ? referenced : defined).add(node["@id"]);
+        for (const key of keys) if (key !== "@id") visit(node[key]);
+    };
+    for (const block of blocks) {
+        try {
+            visit(JSON.parse(block));
+        } catch {
+            // invalid JSON-LD is reported by the main schema loop
+        }
+    }
+    return {defined, referenced};
+}
+
+// Every {"@id": ...} reference must point at a node defined in the same page graph
+// or at the homepage Organization/WebSite nodes every page shares.
+function validateJsonLdReferences(blocks, label) {
+    const {defined, referenced} = jsonLdIds(blocks);
+    for (const id of referenced) {
+        assert(defined.has(id) || homepageNodeIds.includes(id), `${label}: JSON-LD reference {"@id": "${id}"} is not defined in this page graph and is not a shared homepage node (${homepageNodeIds.join(", ")}).`);
+    }
+}
+
+// Distinct other-page targets linked from inside <main>.
+function mainInternalLinkTargets(mainHtml, ownPath) {
+    const targets = new Set();
+    for (const match of mainHtml.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
+        const href = match[1];
+        if (!(href.startsWith("/") && !href.startsWith("//")) && !href.startsWith(`${origin}/`)) continue;
+        const pathname = new URL(href, origin).pathname;
+        if (pathname !== ownPath) targets.add(pathname);
+    }
+    return targets;
+}
+
 for (const page of expectedPages) {
     const label = page.file;
     const filePath = join(root, page.file);
@@ -362,6 +430,20 @@ for (const page of expectedPages) {
     assert(details.maxDepth <= 1, `${label}: FAQ disclosures must not be nested.`);
     assert(details.depth === 0 && details.minDepth === 0, `${label}: FAQ disclosure tags must be balanced.`);
     assert(!/api\.tehisabiline\.ee/i.test(html), `${label}: must not present the unavailable API hostname as live.`);
+
+    if (!page.noindex) {
+        const mains = [...html.matchAll(/<main\b[^>]*>/gi)].map((match) => match[0]);
+        assert(mains.length === 1 && attrValue(mains[0], "id") === "main-content", `${label}: expected exactly one <main id="main-content">, found ${mains.length} <main> element(s).`);
+        const mainHtml = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
+        assert(mainHtml !== undefined, `${label}: <main id="main-content"> is never closed with </main>; the footer and everything after it are inside the main landmark.`);
+        const skipLink = [...html.matchAll(/<a\b[^>]*>/gi)].map((match) => match[0]).find((tag) => attrValue(tag, "href") === "#main-content");
+        assert(Boolean(skipLink) && /\bskip-link\b/.test(attrValue(skipLink, "class")), `${label}: skip link <a class="skip-link" href="#main-content"> is missing.`);
+        if (mainHtml !== undefined) {
+            const targets = mainInternalLinkTargets(mainHtml, new URL(page.canonical).pathname);
+            assert(targets.size >= MIN_MAIN_INTERNAL_LINKS, `${label}: <main> links to only ${targets.size} other internal page(s) (${[...targets].join(", ") || "none"}); at least ${MIN_MAIN_INTERNAL_LINKS} are required for crawl paths and topical context.`);
+        }
+        validateJsonLdReferences(jsonLdBlocks, label);
+    }
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
@@ -423,20 +505,58 @@ for (const requiredFile of [
     "site.css",
     "site.js",
     "assets/icons.svg",
-    ".nojekyll"
+    ".nojekyll",
+    "humans.txt"
 ]) {
     assert(existsSync(join(root, requiredFile)), `${requiredFile} is missing.`);
 }
 
 const robots = readFileSync(join(root, "robots.txt"), "utf8");
-for (const crawler of ["OAI-SearchBot", "GPTBot", "ChatGPT-User", "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User", "ClaudeBot", "Google-Extended"]) {
-    assert(new RegExp(`User-agent:\\s*${escapeRegExp(crawler)}[\\s\\S]*?Allow:\\s*/(?:\\s|$)`, "i").test(robots), `robots.txt should explicitly allow ${crawler}.`);
+// Parse robots.txt into groups: consecutive User-agent lines followed by their rules.
+const robotsGroups = [];
+let robotsGroup = null;
+for (const rawLine of robots.split("\n")) {
+    const line = rawLine.replace(/#.*$/, "").trim();
+    const field = line.match(/^([A-Za-z-]+):\s*(.*)$/);
+    if (!field) continue;
+    const [, name, value] = field;
+    if (/^user-agent$/i.test(name)) {
+        if (!robotsGroup || robotsGroup.rules.length) robotsGroups.push(robotsGroup = {agents: [], rules: []});
+        robotsGroup.agents.push(value.toLowerCase());
+    } else if (/^(allow|disallow)$/i.test(name) && robotsGroup) {
+        robotsGroup.rules.push({type: name.toLowerCase(), value});
+    }
+}
+for (const crawler of allowedCrawlers) {
+    const group = robotsGroups.find((candidate) => candidate.agents.includes(crawler.toLowerCase()));
+    assert(Boolean(group?.rules.some((rule) => rule.type === "allow" && rule.value === "/")), `robots.txt should explicitly allow ${crawler} with its own "User-agent: ${crawler}" group and "Allow: /".`);
+}
+for (const group of robotsGroups) {
+    for (const rule of group.rules.filter((candidate) => candidate.type === "disallow" && candidate.value)) {
+        assert(false, `robots.txt must not disallow anything (found "Disallow: ${rule.value}" for ${group.agents.join(", ")}): blocked /assets/ breaks rendering, and retired pages rely on noindex, which crawlers only see when allowed to fetch.`);
+    }
 }
 assert(robots.includes(`Sitemap: ${origin}/sitemap.xml`), "robots.txt must point to the canonical sitemap.");
 
 const securityTxt = readFileSync(join(root, ".well-known/security.txt"), "utf8");
 const securityExpires = (securityTxt.match(/^Expires:\s*(\S+)/m) || [])[1] || "";
 assert(securityExpires > today, "security.txt Expires must be a future date.");
+const oneYearAhead = new Date(Date.now() + 366 * 86400000).toISOString();
+assert(!securityExpires || securityExpires <= oneYearAhead, `security.txt Expires (${securityExpires}) should be less than a year ahead (RFC 9116 §2.5.5).`);
+assert(new RegExp(`^Contact:\\s*mailto:${escapeRegExp(contactEmail)}\\s*$`, "m").test(securityTxt), `security.txt Contact must be mailto:${contactEmail}.`);
+assert(new RegExp(`^Canonical:\\s*${escapeRegExp(origin)}/\\.well-known/security\\.txt\\s*$`, "m").test(securityTxt), "security.txt Canonical must be its own https URL.");
+
+// Contact is email-only: no form markup or webhook endpoints may ship, and every mailto targets the public inbox.
+for (const file of servedFiles().filter((path) => /\.(html|js)$/i.test(path))) {
+    const label = file.slice(root.length + 1);
+    const text = readFileSync(file, "utf8");
+    assert(!/<form\b/i.test(text), `${label}: contains a <form>; contact is email-only (mailto:${contactEmail}).`);
+    assert(!/n8n/i.test(text), `${label}: references n8n; the contact-form webhook was removed and must not ship.`);
+    if (!label.endsWith(".html")) continue;
+    for (const match of text.matchAll(/mailto:([^"'?\s>]*)/gi)) {
+        assert(decodeURIComponent(match[1]).toLowerCase() === contactEmail, `${label}: mailto link targets "${match[1]}"; every mailto must be ${contactEmail}.`);
+    }
+}
 
 const sitemap = readFileSync(join(root, "sitemap.xml"), "utf8");
 const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((match) => ({
@@ -462,8 +582,17 @@ for (const {loc, lastmod} of sitemapEntries) {
 }
 
 const llms = readFileSync(join(root, "llms.txt"), "utf8");
+assert(/^\uFEFF?# \S/.test(llms), "llms.txt must start with an H1 naming the site (llmstxt.org).");
+assert(/^> \S/m.test(llms.split(/^## /m)[0]), "llms.txt must have a blockquote summary before the first H2 section (llmstxt.org).");
+const llmsLinks = [...llms.matchAll(/\]\((https?:\/\/[^)\s]+)\)/g)].map((match) => match[1]);
 for (const url of expectedUrls) {
-    assert(llms.includes(url), `llms.txt should link to ${url}.`);
+    assert(llmsLinks.includes(url), `llms.txt should link to ${url} as a markdown link [name](${url}).`);
+}
+for (const url of new Set((llms.match(/https:\/\/tehisabiline\.ee\/[^\s)]*/g) || []).map((raw) => raw.replace(/[.,;:]+$/, "")))) {
+    const pathname = new URL(url).pathname;
+    const known = expectedUrls.includes(url) || noindexUrls.includes(url) || pathname === "/llms-full.txt";
+    assert(known, `llms.txt mentions ${url}, which is neither an indexable sitemap URL, a known noindex page, nor llms-full.txt.`);
+    assert(localTargetExists(pathname), `llms.txt mentions ${url}, which does not resolve to a file in the repo.`);
 }
 assert(llms.includes(`${origin}/llms-full.txt`), "llms.txt should link to llms-full.txt.");
 
@@ -476,6 +605,34 @@ const llmsReviewed = llmsFull.match(/^Last materially reviewed:\s*(\S+)/m)?.[1] 
 const newestPageDate = [...pageModifiedDates.values()].sort().at(-1) || "";
 assert(/^\d{4}-\d{2}-\d{2}$/.test(llmsReviewed) && llmsReviewed <= today, "llms-full.txt review date must be a valid non-future YYYY-MM-DD date.");
 assert(llmsReviewed >= newestPageDate, "llms-full.txt review date must cover the newest indexable page update.");
+
+// "Facts to quote" in llms.txt / llms-full.txt must stay verifiable: every cited page still links the named source.
+const pageFileByUrl = new Map(expectedPages.map((page) => [page.canonical, page.file]));
+for (const [name, text] of [["llms.txt", llms], ["llms-full.txt", llmsFull]]) {
+    const factsSection = text.split(/^## Facts to quote\s*$/m)[1]?.split(/^## /m)[0];
+    assert(factsSection !== undefined, `${name} must keep its "## Facts to quote" section.`);
+    const factItems = (factsSection || "").split("\n").filter((line) => /^\s*-\s+/.test(line));
+    assert(factsSection === undefined || factItems.length > 0, `${name}: "## Facts to quote" has no list items.`);
+    for (const item of factItems) {
+        const urls = (item.match(/https:\/\/[^\s)]+/g) || []).map((raw) => raw.replace(/[.,;:]+$/, ""));
+        const source = urls.find((url) => !url.startsWith(`${origin}/`));
+        const citedOn = (item.split(/cited on/i)[1]?.match(/https:\/\/tehisabiline\.ee\/[^\s)]*/g) || []).map((raw) => raw.replace(/[.,;:]+$/, ""));
+        assert(Boolean(source) && citedOn.length > 0, `${name}: fact needs an external source URL and "cited on <page URL>": ${item.trim().slice(0, 90)}…`);
+        for (const pageUrl of citedOn) {
+            const file = pageFileByUrl.get(pageUrl);
+            assert(Boolean(file) && expectedUrls.includes(pageUrl), `${name}: fact is "cited on" ${pageUrl}, which is not an indexable page.`);
+            if (!file || !source) continue;
+            const html = readFileSync(join(root, file), "utf8");
+            assert(html.includes(`href="${source}"`), `${name}: fact source ${source} is no longer linked on ${pageUrl} (${file}); update the fact or restore the citation.`);
+        }
+    }
+}
+
+// Pages may reference the homepage Organization/WebSite nodes only while the homepage defines them.
+const homeDefinedIds = jsonLdIds(
+    [...homeHtml.matchAll(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)].map((match) => match[1])
+).defined;
+for (const id of homepageNodeIds) assert(homeDefinedIds.has(id), `index.html must define the shared JSON-LD node ${id} that other pages reference.`);
 
 const siteCss = readFileSync(join(root, "site.css"), "utf8");
 assert(!siteCss.includes("api.tehisabiline.ee"), "site.css must not preserve the unavailable API hostname, even in comments.");
@@ -511,6 +668,11 @@ try {
     assert(Array.isArray(manifest.icons) && manifest.icons.length >= 3, "Manifest should define all favicon sizes.");
     for (const icon of manifest.icons || []) {
         assert(localTargetExists(icon.src), `Manifest icon does not exist: ${icon.src}`);
+    }
+    assert(manifest.theme_color === "#0a62d0", `Manifest theme_color must be the brand blue #0a62d0, found ${manifest.theme_color}.`);
+    for (const page of expectedPages) {
+        const themeColor = metaValue(readFileSync(join(root, page.file), "utf8"), "theme-color");
+        assert(!themeColor || themeColor.toLowerCase() === manifest.theme_color, `${page.file}: meta theme-color ${themeColor} differs from manifest theme_color ${manifest.theme_color}.`);
     }
 } catch (error) {
     failures.push(`site.webmanifest is invalid JSON: ${error.message}`);

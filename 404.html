@@ -10,20 +10,92 @@
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=59ede12d">
+    <link rel="stylesheet" href="/site.css?v=7f6e359c">
 </head>
 <body>
-    <main class="section" id="main-content">
-        <div class="wrap wrap--narrow" style="min-height: 80vh; display: grid; gap: 1.5rem; align-content: center; justify-items: center; text-align: center;">
-            <h1>See link ei vii enam õigesse kohta</h1>
-            <p class="lead">Mine avalehele või vali teenus, mida otsisid.</p>
-            <nav class="cta-row" aria-label="Lehe valikud" style="justify-content: center;">
-                <a class="btn btn--primary" href="/">Avalehele</a>
-                <a class="btn btn--secondary" href="/kuberaudit/">Küberaudit</a>
-                <a class="btn btn--secondary" href="/mudelid/">Küber-AI mudelid</a>
-                <a class="btn btn--secondary" href="/kasutusjuhud/">Kasutusjuhud</a>
-            </nav>
-        </div>
+    <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+<!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/kuberaudit/">Küberaudit</a>
+            <a href="/mudelid/">Mudelid ja API</a>
+            <a href="/ai/">AI-teenused</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/kuberaudit/">Küberaudit</a>
+        <a href="/mudelid/">Mudelid ja API</a>
+        <a href="/ai/">AI-teenused</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+    <main id="main-content">
+        <section class="page-head">
+            <div class="wrap">
+                <h1>See link ei vii enam õigesse kohta</h1>
+                <p class="lead">Mine avalehele või vali teenus, mida otsisid.</p>
+                <nav class="cta-row" aria-label="Lehe valikud">
+                    <a class="btn btn--primary" href="/">Avalehele</a>
+                    <a class="btn btn--secondary" href="/kuberaudit/">Küberaudit</a>
+                    <a class="btn btn--secondary" href="/mudelid/">Küber-AI mudelid</a>
+                    <a class="btn btn--secondary" href="/kasutusjuhud/">Kasutusjuhud</a>
+                </nav>
+            </div>
+        </section>
     </main>
+<!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
+                <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
+            </div>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/kuberaudit/">Agendipõhine küberaudit</a></li>
+                    <li><a href="/mudelid/">Küber-AI mudelid ja API</a></li>
+                    <li><a href="/ai/">AI-teenused ettevõtetele</a></li>
+                    <li><a href="/idufirmadele/">AI idufirmale</a></li>
+                    <li><a href="/ai/seo/">AI SEO teenus</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-10">10. oktoobril 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+    <script src="/site.js?v=34e49d41" defer></script>
 </body>
 </html>

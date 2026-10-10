@@ -30,8 +30,8 @@
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=59ede12d">
-    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=a2bc2db8">
+    <link rel="stylesheet" href="/site.css?v=7f6e359c">
+    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=aaf03830">
 
     <script type="application/ld+json">
     {
@@ -112,7 +112,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/kuberaudit/">Küberaudit</a>
             <a href="/mudelid/">Mudelid ja API</a>
@@ -136,67 +136,60 @@
 <main id="main-content">
         <header class="page-head">
             <div class="wrap">
-                <nav aria-label="Asukoharada" class="breadcrumbs">
-                    <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Eestikeelne AI-chatbot</span>
-                </nav>
-                <h1>Eestikeelne AI-chatbot ehk vestlusrobot, mis teab oma piire</h1>
+                <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">Eestikeelne AI-chatbot</li></ol></nav>
+                <h1>Eestikeelne <span class="nowrap">AI-chatbot</span> ehk vestlusrobot, mis teab oma piire</h1>
                 <p class="lead">Anna veebikülastajale kiire vastus ettevõtte kinnitatud info põhjal, kogu vajalik taust ja suuna keeruline või tundlik küsimus inimesele.</p>
-                <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
+                <p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
-        <div class="section">
-            <div class="wrap">
-                <article class="prose" style="overflow-wrap:anywhere; min-width:0">
-                    <section class="callout" aria-labelledby="short-answer">
+        <section class="section">
+            <div class="wrap article">
+                <nav class="toc" aria-label="AI-chatboti sisukord"><strong>Sellel lehel</strong><ol><li><a href="#how-it-works">Kuidas see töötab?</a></li><li><a href="#use-cases">Kasutusjuhud</a></li><li><a href="#fit">Sobivuse kontroll</a></li><li><a href="#knowledge">Teadmistebaas</a></li><li><a href="#safety">Piirangud ja andmed</a></li><li><a href="#measurement">Mõõdikud</a></li><li><a href="#failure-modes">Levinud vead</a></li><li><a href="#cost">Hinna kujunemine</a></li><li><a href="#process">Kasutuselevõtt</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+                <article class="prose">
+                    <section class="short-answer" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis on veebilehe AI-chatbot?</h2>
                         <p><strong>Veebilehe AI-chatbot</strong> on vestlusliides, mis tuvastab külastaja küsimuse, otsib ettevõtte kinnitatud sisust sobiva tausta ja koostab selle põhjal vastuse. Hea chatbot ei püüa vastata kõigele: kui allikat pole, küsimus on tundlik või mudel pole piisavalt kindel, küsib ta täpsustust või annab vestluse inimesele üle.</p>
                     </section>
 
-                    <section class="section section--tight" id="how-it-works">
+                    <section id="how-it-works">
                         <h2>Kuidas AI-chatbot vastuse leiab?</h2>
                         <p>Üldine keelemudel oskab eesti keeles teksti koostada, kuid see ei tähenda, et ta teab sinu ettevõtte hindu, tingimusi või viimaseid muudatusi. Selleks seotakse bot hallatava teadmistebaasiga.</p>
-                        <div class="step-grid">
-                            <div class="number-card"><span>01</span><h3>Küsimus</h3><p>Bot tuvastab kasutaja eesmärgi ning küsib vajadusel ühe täpsustava küsimuse.</p></div>
-                            <div class="number-card"><span>02</span><h3>Sobiv allikas</h3><p>Süsteem otsib kinnitatud sisust kõige asjakohasemad lõigud, mitte ei tugine üksnes mudeli üldteadmisele.</p></div>
-                            <div class="number-card"><span>03</span><h3>Piiratud vastus</h3><p>Vastus koostatakse leitud konteksti, kokkulepitud tooni ja keelatud teemade reeglite järgi.</p></div>
-                            <div class="number-card"><span>04</span><h3>Järgmine samm</h3><p>Bot viitab lehele, küsib kontaktandmed või suunab juhtumi koos vestluse taustaga inimesele.</p></div>
-                        </div>
+                        <ol class="steps">
+                            <li><h3>Küsimus</h3><p>Bot tuvastab kasutaja eesmärgi ning küsib vajadusel ühe täpsustava küsimuse.</p></li>
+                            <li><h3>Sobiv allikas</h3><p>Süsteem otsib kinnitatud sisust kõige asjakohasemad lõigud, mitte ei tugine üksnes mudeli üldteadmisele.</p></li>
+                            <li><h3>Piiratud vastus</h3><p>Vastus koostatakse leitud konteksti, kokkulepitud tooni ja keelatud teemade reeglite järgi.</p></li>
+                            <li><h3>Järgmine samm</h3><p>Bot viitab lehele, küsib kontaktandmed või suunab juhtumi koos vestluse taustaga inimesele.</p></li>
+                        </ol>
                         <div class="callout"><strong>Oluline:</strong> teadmistebaas ei ole ühekordne failikaust. Teenuse, hinna või tingimuse muutumisel peab uuendama ka allikat, mille põhjal chatbot vastab.</div>
                     </section>
 
-                    <section class="prose-section" id="use-cases">
+                    <section id="use-cases">
                         <h2>Mida chatbot saab veebilehel teha?</h2>
-                        <div class="table-wrap" style="max-width:100%; min-width:0; padding:12px">
-                            <table class="data comparison-table">
-                                <thead><tr><th>Külastaja vajadus</th><th>Chatboti ülesanne</th><th>Soovitud järgmine samm</th></tr></thead>
+                        <div class="table-wrap table-wrap--stack">
+                            <table class="data">
+                                <thead><tr><th scope="col">Külastaja vajadus</th><th scope="col">Chatboti ülesanne</th><th scope="col">Soovitud järgmine samm</th></tr></thead>
                                 <tbody>
-                                    <tr><td>“Kas see teenus sobib meie ettevõttele?”</td><td>Küsib mahu ja olukorra kohta ning selgitab kinnitatud sobivuskriteeriume</td><td>Teenuseleht või kvalifitseeritud päring</td></tr>
-                                    <tr><td>“Kuidas tagastus töötab?”</td><td>Leiab kehtiva tingimuse ja vastab selle piirides</td><td>Õige juhend või klienditugi</td></tr>
-                                    <tr><td>“Soovin hinnapakkumist”</td><td>Kogub minimaalse vajaliku tausta ja kontaktandmed</td><td>CRM-i või e-postile struktureeritud päring</td></tr>
-                                    <tr><td>Ebamäärane või tundlik küsimus</td><td>Ei improviseeri; küsib täpsustust või peatab automaatvastuse</td><td>Inimene saab vestluse konteksti</td></tr>
+                                    <tr><td data-label="Külastaja vajadus">„Kas see teenus sobib meie ettevõttele?“</td><td data-label="Chatboti ülesanne">Küsib mahu ja olukorra kohta ning selgitab kinnitatud sobivuskriteeriume</td><td data-label="Soovitud järgmine samm">Teenuseleht või kvalifitseeritud päring</td></tr>
+                                    <tr><td data-label="Külastaja vajadus">„Kuidas tagastus töötab?“</td><td data-label="Chatboti ülesanne">Leiab kehtiva tingimuse ja vastab selle piirides</td><td data-label="Soovitud järgmine samm">Õige juhend või klienditugi</td></tr>
+                                    <tr><td data-label="Külastaja vajadus">„Soovin hinnapakkumist“</td><td data-label="Chatboti ülesanne">Kogub minimaalse vajaliku tausta ja kontaktandmed</td><td data-label="Soovitud järgmine samm">CRM-i või e-postile struktureeritud päring</td></tr>
+                                    <tr><td data-label="Külastaja vajadus">Ebamäärane või tundlik küsimus</td><td data-label="Chatboti ülesanne">Ei improviseeri; küsib täpsustust või peatab automaatvastuse</td><td data-label="Soovitud järgmine samm">Inimene saab vestluse konteksti</td></tr>
                                 </tbody>
                             </table>
                         </div>
-                        <p>Chatbot võib olla osa suuremast <a class="link-arrow" href="/ai-automatiseerimine/">AI automatiseerimise töövoost</a>: näiteks saab kvalifitseeritud päringu järel luua CRM-is kontakti, teavitada õiget müügiinimest ja saata kasutajale kokkuvõtte.</p>
+                        <p>Chatbot võib olla osa suuremast <a href="/ai-automatiseerimine/">AI automatiseerimise töövoost</a>: näiteks saab kvalifitseeritud päringu järel luua CRM-is kontakti, teavitada õiget müügiinimest ja saata kasutajale kokkuvõtte.</p>
                     </section>
 
-                    <section class="prose-section" id="fit">
-                        <h2>Millal on AI-chatbot mõistlik?</h2>
-                        <div class="content-grid">
-                            <div class="info-card fit-card">
-                                <h3>Hea sobivus</h3>
-                                <p>Korduvaid küsimusi on piisavalt, vastused leiduvad hallatavas sisus, veebiliiklust on mõõtmiseks ning külastajale on olemas selge järgmine samm.</p>
-                            </div>
-                            <div class="info-card not-fit-card">
-                                <h3>Halb sobivus</h3>
-                                <p>Küsimusi tuleb vähe, info muutub pidevalt ilma omanikuta, iga vastus nõuab eksperdi hinnangut või eksimuse mõju on ilma kontrollita liiga suur.</p>
-                            </div>
+                    <section id="fit">
+                        <h2>Millal on <span class="nowrap">AI-chatbot</span> mõistlik?</h2>
+                        <div class="limits">
+                            <div><h3>Hea sobivus</h3><p>Korduvaid küsimusi on piisavalt, vastused leiduvad hallatavas sisus, veebiliiklust on mõõtmiseks ning külastajale on olemas selge järgmine samm.</p></div>
+                            <div><h3>Halb sobivus</h3><p>Küsimusi tuleb vähe, info muutub pidevalt ilma omanikuta, iga vastus nõuab eksperdi hinnangut või eksimuse mõju on ilma kontrollita liiga suur.</p></div>
                         </div>
                         <p>Mõnikord lahendab probleemi paremini selgem navigatsioon, otsing või hästi kirjutatud KKK. Kaardistuse eesmärk on valida sobiv lahendus, mitte suruda iga veebilehe nurka vestlusakent.</p>
                     </section>
 
-                    <section class="prose-section" id="knowledge">
+                    <section id="knowledge">
                         <h2>Teadmistebaas määrab vastuse kvaliteedi</h2>
                         <p>Enne arendust kogume kokku allikad, mida bot tohib kasutada, ning määrame nende omaniku. Tavaliselt sobivad teenusekirjeldused, hinnastamise põhimõtted, tarne- ja tagastustingimused, kasutusjuhendid ning kontrollitud KKK.</p>
                         <div class="content-grid">
@@ -207,7 +200,7 @@
                         </div>
                     </section>
 
-                    <section class="prose-section source-list" id="safety">
+                    <section id="safety">
                         <h2>Kuidas vähendada vale vastuse ja liigse andmekogumise riski?</h2>
                         <ul>
                             <li><strong>Piira allikaid:</strong> ettevõtte faktid tulevad kinnitatud teadmistest, mitte mudeli vabast oletusest.</li>
@@ -216,11 +209,11 @@
                             <li><strong>Kogu minimaalselt:</strong> küsi ainult välju, mida päringu lahendamiseks päriselt vaja on, ning ütle kasutajale nende eesmärk.</li>
                             <li><strong>Vaata vestlusi valimina üle:</strong> kvaliteedikontroll aitab leida puuduvat sisu ja ohtlikke vastusemustreid.</li>
                         </ul>
-                        <p>Generatiivne AI võib ka hea seadistuse korral eksida. Seepärast ei luba me “100% õigeid vastuseid”; ehitame nähtavad piirid, kontrollpunktid ja taganemistee.</p>
+                        <p>Generatiivne AI võib ka hea seadistuse korral eksida. Seepärast ei luba me „100% õigeid vastuseid“; ehitame nähtavad piirid, kontrollpunktid ja taganemistee.</p>
                         <p>Veebikülastajale peab olema arusaadav, et ta suhtleb AI-süsteemiga. Vaata ajakohast raamistikku <a href="https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems">Euroopa Komisjoni AI läbipaistvusreeglite ülevaatest</a>. Praktilise kohaliku näitena kirjeldab <a href="https://www.aki.ee/uudised/aki-veebilehel-vastab-nuud-kusimustele-tehisarul-pohinev-burokratt">Andmekaitse Inspektsioon oma Bürokrati puhul</a> kontrollitud allikaid, isikuandmete vältimist, vastuste ülekontrollimist ja teed inimeseni. Täpne andmekaitse- ja õiguslik lahendus tuleb hinnata konkreetse kasutusjuhu järgi.</p>
                     </section>
 
-                    <section class="prose-section" id="measurement">
+                    <section id="measurement">
                         <h2>Chatboti edu ei võrdu vestluste arvuga</h2>
                         <p>Palju avatud vestlusi võib tähendada nii kasulikku teenust kui ka segavat vidinat. Piloodi jaoks lepime kokku mõõdikud, mis seostuvad kasutaja päris eesmärgiga.</p>
                         <div class="content-grid">
@@ -231,13 +224,13 @@
                         </div>
                     </section>
 
-                    <section class="prose-section" id="failure-modes">
+                    <section id="failure-modes">
                         <h2>Milline chatbot kasutajat ei aita?</h2>
                         <p>Halb chatbot avaneb pealetükkivalt, peidab tavalise kontakti, vastab ilma kontrollitava allikata ja sunnib kasutajat sama infot inimesele uuesti kirjutama. Samuti ei ole kasulik lahendus, mis mõõdab ainult vestluste arvu, kuid ei vaata vastuste õigsust ega kasutaja järgmist sammu.</p>
-                        <p>Piloodis kontrollime seetõttu lisaks “õnnelikule teele” ka kirjavigu, ebamääraseid küsimusi, vastuolulist sisu, puuduvaid fakte, keelatud teemasid ja inimesele üleandmist. Chatbot peab jääma üheks valikuks: e-post, telefon või tavapärane veebisisu ei tohiks selle taha kaduda.</p>
+                        <p>Piloodis kontrollime seetõttu lisaks „õnnelikule teele“ ka kirjavigu, ebamääraseid küsimusi, vastuolulist sisu, puuduvaid fakte, keelatud teemasid ja inimesele üleandmist. Chatbot peab jääma üheks valikuks: e-post, telefon või tavapärane veebisisu ei tohiks selle taha kaduda.</p>
                     </section>
 
-                    <section class="prose-section" id="cost">
+                    <section id="cost">
                         <h2>Millest AI-chatboti hind sõltub?</h2>
                         <p>Chatboti maksumust ei määra ainult vestlusakna kujundus. Suurim erinevus tekib teadmistebaasi mahust ja kvaliteedist, keeltest, integratsioonidest, andmekaitsenõuetest, testküsimuste hulgast ning sellest, kuidas vestlus inimesele üle antakse.</p>
                         <div class="content-grid">
@@ -249,7 +242,7 @@
                         <p>Kaardistuse järel saab hinnata piiratud pilooti: milliseid allikaid bot kasutab, millistele küsimustele vastab, mida kogub, millal peatub ja kuidas tulemust mõõdetakse.</p>
                     </section>
 
-                    <section class="prose-section" id="process">
+                    <section id="process">
                         <h2>Chatboti piloot samm-sammult</h2>
                         <ol>
                             <li><strong>Eesmärk:</strong> valime ühe sihtrühma ja ühe tulemuse, näiteks teenuse sobivuse selgitamise või müügipäringu kogumise.</li>
@@ -260,51 +253,28 @@
                         </ol>
                     </section>
 
-                    <section class="prose-section" id="faq">
+                    <section id="faq">
                         <h2>Küsimused eestikeelse AI-chatboti kohta</h2>
-                        <div class="grid gap-4">
-                            <details class="faq-card"><summary><span>Kas AI-chatbot oskab eesti keelt?</span><span aria-hidden="true">+</span></summary><p>Jah, tänapäevased keelemudelid suudavad eesti keeles küsimusi mõista ja vastuseid koostada. Kvaliteet tuleb siiski päris kasutajaküsimustega läbi testida ning terminoloogia, allikad ja piirangud ettevõtte jaoks seadistada.</p></details>
-                            <details class="faq-card"><summary><span>Kust chatbot vastused võtab?</span><span aria-hidden="true">+</span></summary><p>Chatbot otsib vastuseks sobiva lõigu ettevõtte kinnitatud teadmistebaasist, näiteks teenuselehtedelt, juhenditest või KKK-st, ning koostab vastuse selle konteksti põhjal. Kui piisavat allikat ei leita, peab bot seda ütlema või päringu inimesele suunama.</p></details>
-                            <details class="faq-card"><summary><span>Kas AI-chatbot võib anda vale vastuse?</span><span aria-hidden="true">+</span></summary><p>Jah, generatiivne AI võib eksida. Riski vähendavad piiratud teadmistebaas, vastuse allika näitamine, testküsimused, keelatud teemad, ebakindla vastuse katkestamine ja inimesele suunamine. Nullriski ei saa lubada.</p></details>
-                            <details class="faq-card"><summary><span>Kas chatbot saab koguda müügikontakte?</span><span aria-hidden="true">+</span></summary><p>Jah. Vestluses saab küsida kokkulepitud välju ja edastada need näiteks e-postile või CRM-i, kui kasutajale on selge, milliseid andmeid kogutakse ja milleks neid kasutatakse.</p></details>
-                            <details class="faq-card"><summary><span>Kuidas AI-chatboti tulemust mõõta?</span><span aria-hidden="true">+</span></summary><p>Vaata vastatud ja inimesele suunatud vestluste osakaalu, vastuse õigsust testvalimis, lahendamata küsimusi, kogutud kvalifitseeritud kontakte ning kasutaja teekonda pärast vestlust. Vestluste arv üksi ei näita kvaliteeti.</p></details>
+                        <div class="faq">
+                            <details><summary><h3>Kas AI-chatbot oskab eesti keelt?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Jah, tänapäevased keelemudelid suudavad eesti keeles küsimusi mõista ja vastuseid koostada. Kvaliteet tuleb siiski päris kasutajaküsimustega läbi testida ning terminoloogia, allikad ja piirangud ettevõtte jaoks seadistada.</p></div></details>
+                            <details><summary><h3>Kust chatbot vastused võtab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Chatbot otsib vastuseks sobiva lõigu ettevõtte kinnitatud teadmistebaasist, näiteks teenuselehtedelt, juhenditest või KKK-st, ning koostab vastuse selle konteksti põhjal. Kui piisavat allikat ei leita, peab bot seda ütlema või päringu inimesele suunama.</p></div></details>
+                            <details><summary><h3>Kas AI-chatbot võib anda vale vastuse?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Jah, generatiivne AI võib eksida. Riski vähendavad piiratud teadmistebaas, vastuse allika näitamine, testküsimused, keelatud teemad, ebakindla vastuse katkestamine ja inimesele suunamine. Nullriski ei saa lubada.</p></div></details>
+                            <details><summary><h3>Kas chatbot saab koguda müügikontakte?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Jah. Vestluses saab küsida kokkulepitud välju ja edastada need näiteks e-postile või CRM-i, kui kasutajale on selge, milliseid andmeid kogutakse ja milleks neid kasutatakse.</p></div></details>
+                            <details><summary><h3>Kuidas AI-chatboti tulemust mõõta?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Vaata vastatud ja inimesele suunatud vestluste osakaalu, vastuse õigsust testvalimis, lahendamata küsimusi, kogutud kvalifitseeritud kontakte ning kasutaja teekonda pärast vestlust. Vestluste arv üksi ei näita kvaliteeti.</p></div></details>
                         </div>
                     </section>
 
-                    <section class="prose-section" aria-labelledby="related">
-                        <h2 id="related">Vaata ka</h2>
-                        <div class="related-links">
-                            <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>Mida tsenseerimata küber-AI-ga turvatöös teha saab.</span></a>
-                            <a class="related-card" href="/ai-automatiseerimine/"><strong>AI automatiseerimine</strong><span>Ühenda chatboti järeltegevus CRM-i, teavituste ja muu töövooga.</span></a>
-                            <a class="related-card" href="/hinnajalgimine/"><strong>Konkurentide hinnajälgimine</strong><span>Kogu muutuv turuinfo kontrollitavaks andmevooks ja raportiks.</span></a>
-                            <a class="related-card" href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span></a>
-                        </div>
-                    </section>
-
-                    <section class="service-cta">
-                        <h2>Kas sinu korduvad küsimused sobivad chatbotile?</h2>
-                        <p>Saada 5–10 tüüpilist kliendiküsimust ja viide lehele, kust õige vastus praegu leitakse. Kaardistame tasuta, milline piloot oleks realistlik.</p>
-                        <a class="btn btn--primary" href="/#contact">Küsi chatboti kaardistust</a>
-                    </section>
+                    <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
+                        <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">Mida tsenseerimata küber-AI-ga turvatöös teha saab.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/ai-automatiseerimine/"><span class="related__title">AI automatiseerimine</span><span class="related__desc">Ühenda chatboti järeltegevus CRM-i, teavituste ja muu töövooga.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/hinnajalgimine/"><span class="related__title">Konkurentide hinnajälgimine</span><span class="related__desc">Kogu muutuv turuinfo kontrollitavaks andmevooks ja raportiks.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        <li><a href="/meist/"><span class="related__title">Tehisabilise tööpõhimõtted</span><span class="related__desc">Kes me oleme, kuidas sisu valmib ja milliseid lubadusi väldime.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                        
+                    </ul></section>
                 </article>
-
-                <aside class="content-aside" aria-label="Sisukord">
-                    <nav class="toc-card" aria-label="AI-chatboti sisukord">
-                        <strong>Sellel lehel</strong>
-                        <a href="#how-it-works">Kuidas see töötab?</a>
-                        <a href="#use-cases">Kasutusjuhud</a>
-                        <a href="#fit">Sobivuse kontroll</a>
-                        <a href="#knowledge">Teadmistebaas</a>
-                        <a href="#safety">Piirangud ja andmed</a>
-                        <a href="#measurement">Mõõdikud</a>
-                        <a href="#failure-modes">Levinud vead</a>
-                        <a href="#cost">Hinna kujunemine</a>
-                        <a href="#process">Kasutuselevõtt</a>
-                        <a href="#faq">Küsimused</a>
-                    </nav>
-                </aside>
             </div>
-        </div>
+        </section>
+        <section class="band"><div class="wrap band__inner"><h2>Kas sinu korduvad küsimused sobivad chatbotile?</h2><p>Saada 5–10 tüüpilist kliendiküsimust ja viide lehele, kust õige vastus praegu leitakse. Kaardistame tasuta, milline piloot oleks realistlik.</p><a class="btn btn--white" href="/#contact">Küsi chatboti kaardistust</a></div></section>
     </main>
 
     <!-- chrome:footer -->
@@ -312,7 +282,7 @@
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
             <nav aria-label="Teenuste lingid">
@@ -352,6 +322,6 @@
 </footer>
 <!-- /chrome:footer -->
 
-    <script src="/site.js?v=3a1bb970" defer></script>
+    <script src="/site.js?v=34e49d41" defer></script>
 </body>
 </html>

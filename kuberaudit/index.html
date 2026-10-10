@@ -32,8 +32,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
     <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=59ede12d">
-    <link rel="stylesheet" href="/assets/css/pages/kuberaudit.css?v=c84c4be9">
+    <link rel="stylesheet" href="/site.css?v=7f6e359c">
+    <link rel="stylesheet" href="/assets/css/pages/kuberaudit.css?v=73ebb5f5">
 
     <script type="application/ld+json">
     {
@@ -67,13 +67,15 @@
           "@id": "https://tehisabiline.ee/kuberaudit/#webpage",
           "url": "https://tehisabiline.ee/kuberaudit/",
           "name": "Küberaudit Eestis – agendipõhine turvaaudit | Tehisabiline",
-          "description": "Mis on küberaudit, mida agendipõhine küberaudit kontrollib, mis roll on inimesel ning milline näeb välja parandusplaan.",
+          "description": "Mis on agendipõhine küberaudit, kuidas see käib, mida see kontrollib, mis roll on inimesel ning milline näeb välja parandusplaan.",
           "datePublished": "2026-09-24",
-          "dateModified": "2026-09-30",
+          "dateModified": "2026-10-10",
           "inLanguage": "et",
           "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
           "about": {"@id": "https://tehisabiline.ee/kuberaudit/#service"},
           "author": {"@id": "https://tehisabiline.ee/#organization"},
+          "publisher": {"@id": "https://tehisabiline.ee/#organization"},
+          "mainEntity": {"@id": "https://tehisabiline.ee/kuberaudit/#service"},
           "breadcrumb": {"@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb"},
           "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png", "width": 1200, "height": 630}
         },
@@ -97,7 +99,7 @@
             {
               "@type": "Question",
               "name": "Mille poolest erineb see tavalisest auditist?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitöövõtetele."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitsi tehtavatele tegevustele."}
             },
             {
               "@type": "Question",
@@ -107,7 +109,7 @@
             {
               "@type": "Question",
               "name": "Kas audit lõhub midagi ära?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Testime ettevaatlikult leppelises mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel."}
+              "acceptedAnswer": {"@type": "Answer", "text": "Testime ettevaatlikult kokkulepitud mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel."}
             },
             {
               "@type": "Question",
@@ -132,7 +134,7 @@
             {
               "@type": "Question",
               "name": "Kas NIS2 mind puudutab?",
-              "acceptedAnswer": {"@type": "Answer", "text": "NIS2-e üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja nis2.ee juhistest."}
+              "acceptedAnswer": {"@type": "Answer", "text": "NIS2 direktiivi üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja nis2.ee juhistest."}
             },
             {
               "@type": "Question",
@@ -161,7 +163,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/kuberaudit/" aria-current="page">Küberaudit</a>
             <a href="/mudelid/">Mudelid ja API</a>
@@ -184,52 +186,59 @@
 <!-- /chrome:header -->
 
     <main id="main-content">
-        <header class="page-head audit-hero">
-            <div class="content-hero-inner">
-                <nav aria-label="Asukoharada" class="breadcrumbs">
-                    <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">Küberaudit</span>
-                </nav>
-                <div class="audit-hero-grid">
-                    <div class="audit-hero-copy">
-                        <p class="audit-kicker">Küberaudit Eesti ettevõttele</p>
-                        <h1>Küberaudit, millest jääb paranduste nimekiri</h1>
-                        <p class="hero-lead">Kontrollime sinu loal veebilehte, API-t ja AI-rakendust. Iga oluline leid vaadatakse käsitsi üle. Raport ütleb, mis teha kohe, mis nädalaga ja mis võib oodata.</p>
-                        <a class="audit-button" href="/#contact">Küsi tasuta kaardistust</a>
-                        <p class="updated-line">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Uuendatud <time datetime="2026-09-30">30. septembril 2026</time></p>
-                    </div>
-                    <aside class="audit-brief" aria-label="Auditi lähteandmed ja väljund">
-                        <p class="audit-brief-title">Auditi tööpaber</p>
-                        <dl>
-                            <div><dt>Sisend</dt><dd>Domeenid, testkeskkond ja kirjalik luba</dd></div>
-                            <div><dt>Kontroll</dt><dd>Veeb, API, ligipääsud ja AI-rakendus</dd></div>
-                            <div><dt>Väljund</dt><dd>Tõendid, parandused ja tööde järjekord</dd></div>
-                            <div><dt>Järelkontroll</dt><dd>Paranduste ülevaatus kokkulepitud mahus</dd></div>
-                        </dl>
-                    </aside>
+        <header class="page-head">
+            <div class="wrap audit-hero-grid">
+                <div class="audit-hero-copy">
+                    <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">Küberaudit</li></ol></nav>
+                    <h1>Küberaudit, mille tulemuseks on paranduste nimekiri</h1>
+                    <p class="lead">Kontrollime sinu loal veebilehte, API-t ja AI-rakendust. Iga oluline leid vaadatakse käsitsi üle. Raport ütleb, mis teha kohe, mis nädalaga ja mis võib oodata.</p>
+                    <div class="cta-row"><a class="btn btn--primary" href="/#contact">Küsi tasuta kaardistust</a></div>
+                    <p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Uuendatud <time datetime="2026-10-10">10. oktoobril 2026</time></p>
                 </div>
+                <aside class="audit-brief" aria-label="Auditi lähteandmed ja väljund">
+                <p class="audit-brief-title">Auditi tööpaber</p>
+                <dl>
+                    <div><dt>Sisend</dt><dd>Domeenid, testkeskkond ja kirjalik luba</dd></div>
+                    <div><dt>Kontroll</dt><dd>Veeb, API, ligipääsud ja AI-rakendus</dd></div>
+                    <div><dt>Väljund</dt><dd>Tõendid, parandused ja tööde järjekord</dd></div>
+                    <div><dt>Järelkontroll</dt><dd>Paranduste ülevaatus kokkulepitud mahus</dd></div>
+                </dl>
+                </aside>
             </div>
         </header>
 
-        <div class="content-main">
-            <div class="content-shell">
-                <article class="content-column audit-content">
-                    <section class="audit-opening" id="protsess" aria-labelledby="short-answer">
-                        <h2 id="short-answer">Kuidas töö käib?</h2>
-                        <p>Audit algab kokkulepitud ulatusest. Automaatsed kontrollid katavad suure pinna; inimene kontrollib leiud, eemaldab valehäired ja seab parandused järjekorda. Aktiivseid ründeteste teeme ainult kirjaliku loa alusel.</p>
+        <section class="section">
+            <div class="wrap article">
+                <nav class="toc" aria-label="Auditi sisukord"><strong>Sellel lehel</strong><ol><li><a href="#mis-on">Mis on küberaudit?</a></li><li><a href="#protsess">Kuidas töö käib?</a></li><li><a href="#sisu">Kontrollnimekiri</a></li><li><a href="#inimene">Inimese kontroll</a></li><li><a href="#numbrid">Miks just nüüd?</a></li><li><a href="#sobivus">Sobivus</a></li><li><a href="#kupsus">Küberküpsus</a></li><li><a href="#hind">Hind</a></li><li><a href="#tingimused">Tingimused</a></li><li><a href="#vordlus">Meetodite võrdlus</a></li><li><a href="#tellimine">Tellimine</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+                <article class="prose">
+                    <section class="short-answer" id="mis-on" aria-labelledby="short-answer">
+                        <h2 id="short-answer">Mis on agendipõhine küberaudit?</h2>
+                        <p>Agendipõhine küberaudit on Tallinnas tegutseva Tehisabiline OÜ turvakontroll: AI-agendid testivad sinu veebilehte, API-t, ligipääse ja AI-rakendust kirjaliku loa alusel ning kokkulepitud mahus. Iga olulise leiu kordab üle inimene ja valehäired raportisse ei lähe. Saad tõenditega raporti ja parandusplaani: mis teha kohe, mis nädalaga ja mis plaani korras. Ükski audit ei leia kõike, kuid see näitab, kust alustada.</p>
                     </section>
 
-                    <section class="audit-section" id="sisu">
+                    <section id="protsess">
+                        <h2>Kuidas küberaudit käib?</h2>
+                        <p>Audit algab kokkulepitud ulatusest. Automaatsed kontrollid katavad suure pinna; inimene kontrollib leiud, eemaldab valehäired ja seab parandused järjekorda. Aktiivseid ründeteste teeme ainult kirjaliku loa alusel.</p>
+                        <ol class="steps">
+                            <li><h3>Pinna kaardistus</h3><p>Paneme kirja domeenid, liidesed, ligipääsud ja täpse testimisloa.</p></li>
+                            <li><h3>Kontrollitud testid</h3><p>Kontrollime konfiguratsioone, autentimist, sisendeid ja võimalikke andmelekke teid kokkulepitud mahus.</p></li>
+                            <li><h3>Käsitsi ülevaatus</h3><p>Kordame olulised leiud üle. Valehäired raportisse ei lähe.</p></li>
+                            <li><h3>Parandusplaan</h3><p>Jaotame tööd kolme järjekorda: kohe, nädalaga ja plaani korras.</p></li>
+                        </ol>
+                    </section>
+
+                    <section id="sisu">
                         <h2>Mida küberaudit kontrollib?</h2>
-                        <div class="audit-table-wrap" role="region" aria-label="Küberauditi kontrollvaldkonnad" tabindex="0">
-                            <table class="data audit-table">
+                        <div class="table-wrap table-wrap--stack" role="region" aria-label="Küberauditi kontrollvaldkonnad" tabindex="0">
+                            <table class="data">
                                 <thead><tr><th scope="col">Valdkond</th><th scope="col">Mida kontrollime?</th><th scope="col">Mida saad?</th></tr></thead>
                                 <tbody>
-                                    <tr><td><strong>Uuendused</strong></td><td>Versioonid, teadaolevad haavatavused ja unustatud komponendid</td><td>Uuendamisplaan kiirusjärjekorras</td></tr>
-                                    <tr><td><strong>Ligipääsud</strong></td><td>Kontod, õigused, paroolid, 2FA ja vanad kasutajad</td><td>Koristamisplaan: kes jääb, kes kaob</td></tr>
-                                    <tr><td><strong>API-loogika</strong></td><td>Autentimine, õiguste kontroll ja päringulimiidid</td><td>Leitud loogikavead ja nende parandused</td></tr>
-                                    <tr><td><strong>HTTP-turve</strong></td><td>Turvapäised, HTTPS ning vormide ja liideste sisendikontroll</td><td>Puuduste loetelu koos näidislahendusega</td></tr>
-                                    <tr><td><strong>Süstiründed</strong></td><td>Prompt injection'i pinnad sinu AI-rakendustes</td><td>Ründetestide tulemus ja piirangute plaan</td></tr>
-                                    <tr><td><strong>Andmeleke</strong></td><td>Andmete väljaviimise võimalused ja logide kord</td><td>Lekketesti tulemus ja kõrvaldamise plaan</td></tr>
+                                    <tr><th scope="row">Uuendused</th><td data-label="Mida kontrollime?">Versioonid, teadaolevad haavatavused ja unustatud komponendid</td><td data-label="Mida saad?">Uuendamisplaan prioriteetide järjekorras</td></tr>
+                                    <tr><th scope="row">Ligipääsud</th><td data-label="Mida kontrollime?">Kontod, õigused, paroolid, 2FA ja vanad kasutajad</td><td data-label="Mida saad?">Koristamisplaan: kes jääb, kes kaob</td></tr>
+                                    <tr><th scope="row">API-loogika</th><td data-label="Mida kontrollime?">Autentimine, õiguste kontroll ja päringulimiidid</td><td data-label="Mida saad?">Leitud loogikavead ja nende parandused</td></tr>
+                                    <tr><th scope="row">HTTP-turve</th><td data-label="Mida kontrollime?">Turvapäised, HTTPS ning vormide ja liideste sisendikontroll</td><td data-label="Mida saad?">Puuduste loetelu koos näidislahendusega</td></tr>
+                                    <tr><th scope="row">Süstiründed</th><td data-label="Mida kontrollime?">Prompt injection’i pinnad sinu AI-rakendustes</td><td data-label="Mida saad?">Ründetestide tulemus ja piirangute plaan</td></tr>
+                                    <tr><th scope="row">Andmeleke</th><td data-label="Mida kontrollime?">Andmete väljaviimise võimalused ja logide kord</td><td data-label="Mida saad?">Lekketesti tulemus ja kõrvaldamise plaan</td></tr>
                                 </tbody>
                             </table>
                         </div>
@@ -237,70 +246,49 @@
                             <figcaption>Näidisleiu vorm · väljamõeldud olukord</figcaption>
                             <dl>
                                 <div><dt>Leid</dt><dd>Leht lubab end võõra veebilehe sisse laadida.</dd></div>
-                                <div><dt>Tõend</dt><dd>Puudub raamimist piirav Content-Security-Policy.</dd></div>
+                                <div><dt>Tõend</dt><dd>Puudub Content-Security-Policy, mis piiraks raamimist.</dd></div>
                                 <div><dt>Parandus</dt><dd>Lisa <code>frame-ancestors</code> reegel serveri seadistusse.</dd></div>
                                 <div><dt>Kontroll</dt><dd>Pärast parandust proovime sama laadimist uuesti.</dd></div>
                             </dl>
                         </figure>
                     </section>
 
-                    <section class="audit-section" id="inimene">
-                        <h2>Automaatika leiab. Inimene otsustab, mis loeb.</h2>
-                        <p>Kiire kontroll võib anda valehäireid või jätta ärilise tähenduse märkamata. Seepärast kinnitab inimene iga olulise leiu, hindab tegelikku mõju ja kirjutab paranduse arusaadavas keeles.</p>
-                        <ol class="audit-process">
-                            <li><span aria-hidden="true">1</span><div><h3>Pinna kaardistus</h3><p>Paneme kirja domeenid, liidesed, ligipääsud ja täpse testimisloa.</p></div></li>
-                            <li><span aria-hidden="true">2</span><div><h3>Kontrollitud testid</h3><p>Kontrollime konfiguratsioone, autentimist, sisendeid ja võimalikke andmelekke teid kokkulepitud mahus.</p></div></li>
-                            <li><span aria-hidden="true">3</span><div><h3>Käsitsi ülevaatus</h3><p>Kordame olulised leiud üle. Valehäired raportisse ei lähe.</p></div></li>
-                            <li><span aria-hidden="true">4</span><div><h3>Parandusplaan</h3><p>Jaotame tööd kolme järjekorda: kohe, nädalaga ja plaani korras.</p></div></li>
-                        </ol>
-                        <aside class="audit-note"><strong>Piir on selge.</strong> Auditeerime ainult sinu enda süsteeme kirjaliku loa alusel. Võõraid süsteeme me ei testi.</aside>
+                    <section id="inimene">
+                        <h2>Automaatika leiab. Inimene otsustab, mis on oluline.</h2>
+                        <p>Kiire kontroll võib anda valehäireid või jätta ärilise tähenduse märkamata. Seepärast kinnitab inimene iga olulise leiu, hindab tegelikku mõju ja kirjutab paranduse arusaadavas keeles. Sama põhimõte – AI kiirendab, inimene kinnitab – kehtib kõigis meie <a href="/kasutusjuhud/">küber-AI kasutusjuhtudes</a>.</p>
+                        <div class="callout"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#shield-check"/></svg><p><strong>Piir on selge.</strong> Auditeerime ainult sinu enda süsteeme kirjaliku loa alusel. Võõraid süsteeme me ei testi. Meie tööpõhimõtted on kirjas lehel <a href="/meist/">Meist</a>.</p></div>
                     </section>
 
-                    <section class="audit-section" id="numbrid">
+                    <section id="numbrid">
                         <h2>Miks audit on 2026. aastal eriti oluline?</h2>
                         <ul class="audit-list">
-                            <li><strong>4,99 miljonit dollarit.</strong> Nii suur on keskmine andmelekke maksumus maailmas – IBMi 2026. aasta aruanne kutsub seda seni suurimaks tulemuseks, 12% kasvu võrreldes aasta varasemaga. <a href="https://www.ibm.com/reports/data-breach">Allikas: IBM Cost of a Data Breach 2026</a></li>
-                            <li><strong>62% rikkumistest hõlmab inimtegurit.</strong> Üksinda valesti saadetud kiri, nõrk parool või tegemata uuendus – Verizoni 2026. aasta raporti andmel on inimfaktor endiselt kõige sagedasem kaasus. <a href="https://www.verizon.com/business/resources/reports/dbir/">Allikas: Verizon DBIR 2026</a></li>
-                            <li><strong>31% rikkumistest algab tarkvarahaavatavusest.</strong> Haavatavuste ärakasutamine möödus varastatud paroolidest kui number üks sisenemistee – täpselt see, mida audit uuenduste kontrollis kinni püüab. <a href="https://www.verizon.com/business/resources/reports/dbir/">Allikas: Verizon DBIR 2026</a></li>
+                            <li><strong>4,99&nbsp;miljonit dollarit</strong> on andmelekke keskmine maksumus maailmas, 12% rohkem kui aasta varem. IBMi 2026. aasta aruanne nimetab seda seni suurimaks tulemuseks. <a href="https://www.ibm.com/reports/data-breach">Allikas: IBM Cost of a Data Breach 2026</a></li>
+                            <li><strong>62% rikkumistest hõlmab inimtegurit.</strong> Näiteks valesti saadetud kiri, nõrk parool või tegemata uuendus – Verizoni 2026. aasta raporti andmel on inimtegur rikkumistes endiselt kõige sagedasem. <a href="https://www.verizon.com/business/resources/reports/dbir/">Allikas: Verizon DBIR 2026</a></li>
+                            <li><strong>31% rikkumistest algab tarkvarahaavatavuse ärakasutamisest.</strong> Haavatavuste ärakasutamine on nüüd sisenemistee number üks, varastatud paroolidest eespool – just seda püüab audit uuenduste kontrollis kinni. <a href="https://www.verizon.com/business/resources/reports/dbir/">Allikas: Verizon DBIR 2026</a></li>
                         </ul>
-                        <p>Rünnakud ei vali ainult suuri korporatsioone – väiksel ettevõttel on turvamees harva ja nõrkused võivad kuude kaupa avatud olla. Audit on odavam viis leida need enne, kui leiab need keegi teine.</p>
+                        <p>Rünnakud ei vali ainult suuri korporatsioone – väiksel ettevõttel on turvaspetsialist harva ja nõrkused võivad kuude kaupa avatud olla. Audit on odavam viis leida need enne, kui leiab need keegi teine.</p>
                     </section>
 
-                    <section class="audit-section" id="sobivus">
+                    <section id="sobivus">
                         <h2>Millal on audit mõistlik?</h2>
-                        <div class="audit-fit">
-                            <div>
-                                <h3>Auditist on kasu, kui</h3>
-                                <ul>
-                                    <li>veebileht võtab vastu tellimusi või isikuandmeid;</li>
-                                    <li>kasutad API-t, kliendiportaali või AI-rakendust;</li>
-                                    <li>haldaja või arenduspartner on vahetunud;</li>
-                                    <li>viimasest turvakontrollist on üle aasta.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3>Audit pole esimene samm, kui</h3>
-                                <ul>
-                                    <li>tegu on vormideta staatilise visiitkaardiga;</li>
-                                    <li>sama ulatus auditeeriti äsja;</li>
-                                    <li>ootad, et üks audit asendaks pidevat hooldust.</li>
-                                </ul>
-                            </div>
+                        <div class="limits">
+                            <div><h3>Auditist on kasu, kui</h3><ul class="checks"><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>veebileht võtab vastu tellimusi või isikuandmeid;</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>kasutad API-t, kliendiportaali või AI-rakendust;</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>haldaja või arenduspartner on vahetunud;</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>viimasest turvakontrollist on üle aasta.</span></li></ul></div>
+                            <div><h3>Audit pole esimene samm, kui</h3><ul class="crosses"><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span>tegu on vormideta staatilise visiitkaardiga;</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span>sama ulatus auditeeriti äsja;</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span>ootad, et üks audit asendaks pidevat hooldust.</span></li></ul></div>
                         </div>
                     </section>
 
-                    <section class="audit-section" id="kupsus">
+                    <section id="kupsus">
                         <h2>Mis tasemel on sinu küberküpsus?</h2>
                         <p>Küpsushinnang näitab, kas parandada tuleb üksik seadistus või tööviis tervikuna.</p>
-                        <ol class="audit-levels">
-                            <li><span>1</span><div><h3>Algeline</h3><p>Paroolid korduvad, varundust pole testitud ja uuendused on juhuslikud. Esmased parandused saab tavaliselt teha päevadega.</p></div></li>
-                            <li><span>2</span><div><h3>Arenev</h3><p>Alused on olemas, kuid lünklikud: kaheastmeline kinnitamine on osaline ja logisid ei vaadata regulaarselt.</p></div></li>
-                            <li><span>3</span><div><h3>Hallatud</h3><p>Protsessid toimivad. Vaja on sõltumatut kontrolli ja tõendit enne kindlustust, hanget või suuremat muudatust.</p></div></li>
-                            <li><span>4</span><div><h3>Optimeeritud</h3><p>Turve on mõõdetav ja pidev. Audit kinnitab seisu ning näitab, mida järgmisena automatiseerida.</p></div></li>
+                        <ol class="steps">
+                            <li><h3>Algeline</h3><p>Paroolid korduvad, varundust pole testitud ja uuendused on juhuslikud. Esmased parandused saab tavaliselt teha päevadega.</p></li>
+                            <li><h3>Arenev</h3><p>Alused on olemas, kuid lünklikud: kaheastmeline kinnitamine on osaline ja logisid ei vaadata regulaarselt.</p></li>
+                            <li><h3>Hallatud</h3><p>Protsessid toimivad. Vaja on sõltumatut kontrolli ja tõendit enne kindlustust, hanget või suuremat muudatust.</p></li>
+                            <li><h3>Optimeeritud</h3><p>Turve on mõõdetav ja pidev. Audit kinnitab seisu ning näitab, mida järgmisena automatiseerida.</p></li>
                         </ol>
                     </section>
 
-                    <section class="audit-section" id="hind">
+                    <section id="hind">
                         <h2>Millest hind sõltub?</h2>
                         <ul class="audit-list">
                             <li><strong>Ulatus.</strong> Mitu süsteemi on töös ja kas kontrollime veebi, AI-d või mõlemat.</li>
@@ -310,97 +298,75 @@
                         <p>Tasuta kaardistuse järel saad kirjaliku ulatuse ja hinna. Kui audit ei tasu ära, ütleme seda enne pakkumist.</p>
                     </section>
 
-                    <section class="audit-section" id="tingimused">
+                    <section id="tingimused">
                         <h2>Töö tingimused</h2>
                         <ul class="audit-list">
                             <li><strong>Kirjalik luba.</strong> Testime ainult kokkulepitud süsteeme, mahus ja ajal.</li>
                             <li><strong>Tõendid.</strong> Iga leid tuleb koos kontrollitava tõendi ja parandusettepanekuga.</li>
                             <li><strong>Järelkontroll.</strong> Paranduste ülevaatus kuulub pakkumises märgitud mahtu.</li>
-                            <li><strong>Konfidentsiaalsus.</strong> Sinu andmeid ei kasutata mudelite treenimiseks ega anta kolmandatele.</li>
+                            <li><strong>Konfidentsiaalsus.</strong> Sinu andmeid ei kasutata mudelite treenimiseks ega anta kolmandatele. Kuidas meie AI-mudelid andmeid käsitlevad, loe <a href="/mudelid/#vastavus">küber-AI mudelite lehelt</a>.</li>
                         </ul>
                     </section>
 
-                    <section class="audit-section" id="vordlus">
+                    <section id="vordlus">
                         <h2>Audit, pentest või skanner?</h2>
-                        <div class="audit-table-wrap" role="region" aria-label="Turvakontrollide võrdlus" tabindex="0">
-                            <table class="data audit-table audit-table-compare">
+                        <div class="table-wrap table-wrap--stack" role="region" aria-label="Turvakontrollide võrdlus" tabindex="0">
+                            <table class="data">
                                 <thead><tr><th scope="col">Meetod</th><th scope="col">Sobib siis, kui</th><th scope="col">Piirang</th></tr></thead>
                                 <tbody>
-                                    <tr><td><strong>Küberaudit</strong></td><td>Vajad tervikpilti ja paranduste järjekorda</td><td>Ei asenda pidevat seiret</td></tr>
-                                    <tr><td><strong>Käsitsi pentest</strong></td><td>Vajad ühe keeruka süsteemi süvakatset</td><td>Katab tavaliselt kitsama pinna</td></tr>
-                                    <tr><td><strong>Automaatne skanner</strong></td><td>Vajad odavat ja sagedast esmaseiret</td><td>Ei mõista äriloogikat ega ligipääsude tähendust</td></tr>
+                                    <tr><th scope="row">Küberaudit</th><td data-label="Sobib siis, kui">Vajad tervikpilti ja paranduste järjekorda</td><td data-label="Piirang">Ei asenda pidevat seiret</td></tr>
+                                    <tr><th scope="row">Käsitsi pentest</th><td data-label="Sobib siis, kui">Vajad ühe keeruka süsteemi süvakatset</td><td data-label="Piirang">Katab tavaliselt kitsama pinna</td></tr>
+                                    <tr><th scope="row">Automaatne skanner</th><td data-label="Sobib siis, kui">Vajad odavat ja sagedast esmaseiret</td><td data-label="Piirang">Ei mõista äriloogikat ega ligipääsude tähendust</td></tr>
                                 </tbody>
                             </table>
                         </div>
                     </section>
 
-                    <section class="audit-section" id="tellimine">
+                    <section id="tellimine">
                         <h2>Kuidas küberauditit tellida?</h2>
-                        <ol class="steps audit-process audit-process-order">
-                            <li><span aria-hidden="true">1</span><div><h3>Kaardistus</h3><p>Saadad domeenide arvu, süsteemide tüübi ja info testkeskkonna kohta. Meie ütleme, kas audit on mõistlik.</p></div></li>
-                            <li><span aria-hidden="true">2</span><div><h3>Pilootaudit</h3><p>Alustame ühest piiratud ulatusest ja töötame ainult kirjaliku loa piires.</p></div></li>
-                            <li><span aria-hidden="true">3</span><div><h3>Raport ja järelkontroll</h3><p>Saad tõendid ja parandusplaani. Kokkulepitud parandused kontrollime uuesti.</p></div></li>
+                        <ol class="steps">
+                            <li><h3>Kaardistus</h3><p>Saadad domeenide arvu, süsteemide tüübi ja info testkeskkonna kohta. Meie ütleme, kas audit on mõistlik.</p></li>
+                            <li><h3>Pilootaudit</h3><p>Alustame ühest piiratud ulatusest ja töötame ainult kirjaliku loa piires.</p></li>
+                            <li><h3>Raport ja järelkontroll</h3><p>Saad tõendid ja parandusplaani. Kokkulepitud parandused kontrollime uuesti.</p></li>
                         </ol>
-                        <a class="audit-button" href="/#contact">Küsi turvekaardistust</a>
+                        <div class="cta-row"><a class="btn btn--primary" href="/#contact">Küsi turvekaardistust</a></div>
                     </section>
 
-                    <section class="audit-section" id="faq">
+                    <section id="faq">
                         <h2>Küsimused küberauditi kohta</h2>
-                        <div class="faq audit-faq">
-                            <details><summary>Mis on küberaudit?</summary><p>Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süstikindlus ja andmeleke. Tulemuseks on parandusplaan tähtsuse järjekorras.</p></details>
-                            <details><summary>Mis vahe on küberauditil ja pentestil?</summary><p>Pentest proovib ühte sihtmärki aktiivselt murda. Küberaudit vaatab laiemalt konfiguratsioone, õigusi, varundust ja töökorraldust. Audit võib sisaldada kontrollitud ründeteste, kuid ainult sinu loal.</p></details>
-                            <details><summary>Kui tihti peaks küberauditit tegema?</summary><p>Vähemalt kord aastas ning pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu.</p></details>
-                            <details><summary>Kuidas agendipõhine audit käib?</summary><p>Automaatsed kontrollid otsivad nõrku kohti kokkulepitud ulatuses. Inimene kordab olulised leiud üle, eemaldab valehäired ja paneb parandused järjekorda.</p></details>
-                            <details><summary>Mille poolest erineb see tavalisest auditist?</summary><p>Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitöövõtetele.</p></details>
-                            <details><summary>Kas AI teeb otsuseid üksi?</summary><p>Ei. Tööriistad koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid vaadatakse enne raportit käsitsi üle.</p></details>
-                            <details><summary>Kas audit lõhub midagi ära?</summary><p>Testime ettevaatlikult leppelises mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel.</p></details>
-                            <details><summary>Millest auditi hind sõltub?</summary><p>Süsteemide arvust, kontrolli sügavusest, ligipääsudest ja järelkontrolli vajadusest. Tasuta kaardistuse järel saad selge pakkumise.</p></details>
-                            <details><summary>Mida te ei auditeeri?</summary><p>Võõraid süsteeme ilma omaniku kirjaliku loata. Loata testimine on välistatud.</p></details>
-                            <details><summary>Millal valida agendipõhine audit tavalise asemel?</summary><p>Kui vajad lühikese ajaga laia katvust. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini käsitsi pentest; ütleme kaardistuses ausalt, kumb on mõistlikum.</p></details>
-                            <details><summary>Kas tasuta skannerist ei piisa?</summary><p>Skanner leiab teadaolevaid haavatavusi, kuid ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. See sobib seireks, mitte tervikpildi saamiseks.</p></details>
-                            <details><summary>Kas NIS2 mind puudutab?</summary><p>NIS2-e üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja <a href="https://nis2.ee/">nis2.ee</a> juhistest. 2025. aastal vabastati alla 50 töötajaga mikro- ja väikeettevõtted täismahus E-ITS-i või ISO 27001 järgimisest; neile kehtivad <a href="https://eits.ria.ee/et/abimaterjalid/esmased-turvameetmed">esmased turvameetmed</a> (<a href="https://www.ria.ee/uudised/valitsus-leevendas-kuberturvalisuse-noudeid-vaikeettevotetele-ja-asutustele">RIA, 25.09.2025</a>). Avatud NIS2-toetuse tingimused leiad <a href="https://eis.ee/teenused/kuberturbe-tostmine-nis2/">EIS-i lehelt</a>.</p></details>
+                        <div class="faq">
+                            <details><summary><h3>Mis on küberaudit?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süstikindlus ja andmeleke. Tulemuseks on parandusplaan tähtsuse järjekorras.</p></div></details>
+                            <details><summary><h3>Mis vahe on küberauditil ja pentestil?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Pentest proovib ühte sihtmärki aktiivselt murda. Küberaudit vaatab laiemalt konfiguratsioone, õigusi, varundust ja töökorraldust. Audit võib sisaldada kontrollitud ründeteste, kuid ainult sinu loal.</p></div></details>
+                            <details><summary><h3>Kui tihti peaks küberauditit tegema?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Vähemalt kord aastas ning pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu.</p></div></details>
+                            <details><summary><h3>Kuidas agendipõhine audit käib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Automaatsed kontrollid otsivad nõrku kohti kokkulepitud ulatuses. Inimene kordab olulised leiud üle, eemaldab valehäired ja paneb parandused järjekorda.</p></div></details>
+                            <details><summary><h3>Mille poolest erineb see tavalisest auditist?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitsi tehtavatele tegevustele.</p></div></details>
+                            <details><summary><h3>Kas AI teeb otsuseid üksi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Ei. Tööriistad koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid vaadatakse enne raportit käsitsi üle.</p></div></details>
+                            <details><summary><h3>Kas audit lõhub midagi ära?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Testime ettevaatlikult kokkulepitud mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel.</p></div></details>
+                            <details><summary><h3>Millest auditi hind sõltub?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Süsteemide arvust, kontrolli sügavusest, ligipääsudest ja järelkontrolli vajadusest. Tasuta kaardistuse järel saad selge pakkumise.</p></div></details>
+                            <details><summary><h3>Mida te ei auditeeri?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Võõraid süsteeme ilma omaniku kirjaliku loata. Loata testimine on välistatud.</p></div></details>
+                            <details><summary><h3>Millal valida agendipõhine audit tavalise asemel?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Kui vajad lühikese ajaga laia katvust. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini käsitsi pentest; ütleme kaardistuses ausalt, kumb on mõistlikum.</p></div></details>
+                            <details><summary><h3>Kas tasuta skannerist ei piisa?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>Skanner leiab teadaolevaid haavatavusi, kuid ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. See sobib seireks, mitte tervikpildi saamiseks.</p></div></details>
+                            <details><summary><h3>Kas NIS2 mind puudutab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><div class="answer"><p>NIS2 direktiivi üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja <a href="https://nis2.ee/">nis2.ee</a> juhistest. 2025. aastal vabastati alla 50 töötajaga mikro- ja väikeettevõtted täismahus E-ITS-i või ISO 27001 järgimisest; neile kehtivad <a href="https://eits.ria.ee/et/abimaterjalid/esmased-turvameetmed">esmased turvameetmed</a> (<a href="https://www.ria.ee/uudised/valitsus-leevendas-kuberturvalisuse-noudeid-vaikeettevotetele-ja-asutustele">RIA, 25. septembril 2025</a>). Avatud NIS2-toetuse tingimused leiad <a href="https://eis.ee/teenused/kuberturbe-tostmine-nis2/">EIS-i lehelt</a>.</p></div></details>
                         </div>
-                        <p class="audit-more">Loe pikemalt: <a href="/nis2/">NIS2 ja Eesti ettevõte – juhend</a>.</p>
+                        <p class="note">Loe pikemalt: <a href="/nis2/">NIS2 ja Eesti ettevõte – juhend</a>.</p>
                     </section>
 
-                    <section class="audit-section" aria-labelledby="related">
-                        <h2 id="related">Vaata ka</h2>
-                        <nav class="audit-related-links" aria-label="Seotud lehed">
-                            <a href="/mudelid/"><strong>Küber-AI mudelid</strong><span>Mudelid turvatööle ja API arendajatele.</span></a>
-                            <a href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>12 praktilist kasutusjuhtu koos kontrollpunktide ja mõõdikutega.</span></a>
-                            <a href="/meist/"><strong>Tehisabilise tööpõhimõtted</strong><span>Kes me oleme, kuidas töötame ja milliseid lubadusi väldime.</span></a>
-                        </nav>
-                    </section>
-
-                    <section class="audit-contact">
-                        <div><h2>Alusta ulatuse kaardistusest</h2><p>Saada domeenide arv ja ütle, kas sul on testkeskkond. Vastame, kas audit sobib või on mõni lihtsam esimene samm.</p></div>
-                        <a class="audit-button" href="/#contact">Küsi turvekaardistust</a>
-                    </section>
+                    <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
+                      <li><a href="/nis2/"><span class="related__title">NIS2 ja Eesti ettevõte</span><span class="related__desc">Kellele küberturvalisuse seadus kohaldub, millised erandid on VKE-del ja millest alustada.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                      <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">12 kasutusjuhtu seaduslikus turvatöös – igaühel on kontrollpunkt ja mõõdik.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                      <li><a href="/mudelid/"><span class="related__title">Tsenseerimata küber-AI mudelid ja API</span><span class="related__desc">Küberturbele häälestatud mudelid ja OpenAI-ühilduv API turvatööriistade arendajatele (API pole veel avalik).</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+                    </ul></section>
                 </article>
-
-                <aside class="content-aside" aria-label="Sisukord">
-                    <nav class="audit-toc" aria-label="Auditi sisukord">
-                        <strong>Sellel lehel</strong>
-                        <a href="#protsess">Kuidas töö käib?</a>
-                        <a href="#sisu">Kontrollnimekiri</a>
-                        <a href="#inimene">Inimese kontroll</a>
-                        <a href="#sobivus">Sobivus</a>
-                        <a href="#kupsus">Küberküpsus</a>
-                        <a href="#hind">Hind</a>
-                        <a href="#tingimused">Tingimused</a>
-                        <a href="#vordlus">Meetodite võrdlus</a>
-                        <a href="#tellimine">Tellimine</a>
-                        <a href="#faq">Küsimused</a>
-                    </nav>
-                </aside>
             </div>
-        </div>
+        </section>
+        <section class="band"><div class="wrap band__inner"><h2>Alusta ulatuse kaardistusest</h2><p>Saada domeenide arv ja ütle, kas sul on testkeskkond. Vastame, kas audit sobib või on mõni lihtsam esimene samm.</p><a class="btn btn--white" href="/#contact">Küsi turvekaardistust</a></div></section>
+    </main>
     <!-- chrome:footer -->
 <footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
             <nav aria-label="Teenuste lingid">
@@ -434,13 +400,13 @@
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-09-30">30. septembril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-10">10. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>
 <!-- /chrome:footer -->
 
-    <script src="/site.js?v=3a1bb970" defer></script>
+    <script src="/site.js?v=34e49d41" defer></script>
 
 </body>
 </html>

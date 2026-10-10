@@ -9,6 +9,8 @@
 //      - dead asset files (unreferenced files over DEAD_KB)
 //      - internal-link equity (inbound counts, money-page minimums)
 //      - content freshness (dateModified older than STALE_DAYS)
+//      - orphan pages (indexable page files no other page links to, or missing from the sitemap)
+//      - sitemap lastmod drift (page dateModified differs from its sitemap <lastmod>)
 //      - deploy parity (.vercelignore must not exclude HTML-referenced assets)
 //   3. Writes a dated report to output/seo-loop/YYYY-MM-DD-HHMMSS.{md,json}
 //
@@ -232,6 +234,67 @@ for (const file of pageFiles) {
 if (stale.length) warnings.push(`Stale pages (>${STALE_DAYS}d without material update):\n- ` + [...new Set(stale)].join("\n- "));
 facts.stalePages = new Set(stale).size;
 
+// --- 2e2. orphan pages --------------------------------------------------------------
+// A page is orphaned when no *other* page links to it with <a href>; header/footer links count.
+function pageUrlForFile(file) {
+    const r = rel(file);
+    return origin + "/" + (r === "index.html" ? "" : r.replace(/index\.html$/, ""));
+}
+const anchorInbound = new Map();
+for (const file of pageFiles) {
+    if (file.endsWith("404.html")) continue;
+    const self = pageUrlForFile(file);
+    for (const m of read(file).matchAll(/<a\b[^>]*\bhref=["']([^"'#?]*)[^"']*["']/gi)) {
+        const href = m[1];
+        if (!href || /^(mailto:|tel:|javascript:|\/\/)/i.test(href)) continue;
+        let target;
+        try { target = new URL(href, self); } catch { continue; }
+        if (target.origin !== origin) continue;
+        const url = origin + (target.pathname.endsWith("/") ? target.pathname : target.pathname + "/");
+        if (url === self) continue;
+        if (!anchorInbound.has(url)) anchorInbound.set(url, new Set());
+        anchorInbound.get(url).add(rel(file));
+    }
+}
+const orphans = [];
+for (const file of pageFiles) {
+    if (file.endsWith("404.html")) continue;
+    const html = read(file);
+    if (/noindex/i.test(meta(html, "robots"))) continue; // retired pages are intentionally unlinked
+    const url = pageUrlForFile(file);
+    if (!anchorInbound.has(url)) orphans.push(`${rel(file)}: no other page links to ${url}`);
+    if (!sitemapUrls.includes(url)) orphans.push(`${rel(file)}: indexable page missing from sitemap.xml (${url})`);
+}
+if (orphans.length) warnings.push(`Orphan pages:\n- ` + orphans.join("\n- "));
+facts.orphanPages = orphans.length;
+
+// --- 2e3. sitemap lastmod drift -------------------------------------------------------
+const lastmods = new Map([...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => [
+    m[1].match(/<loc>([^<]+)<\/loc>/)?.[1] ?? "",
+    m[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] ?? ""
+]));
+const drift = [];
+for (const file of pageFiles) {
+    const url = pageUrlForFile(file);
+    if (!lastmods.has(url)) continue;
+    let modified = "";
+    for (const b of read(file).matchAll(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+        try {
+            const data = JSON.parse(b[1]);
+            const graph = Array.isArray(data["@graph"]) ? data["@graph"] : [data];
+            const page = graph.find((item) => ["WebPage", "AboutPage"].includes(item["@type"]) && item.dateModified);
+            if (page) modified = page.dateModified;
+        } catch { /* invalid JSON-LD is seo-check's job */ }
+    }
+    const lastmod = lastmods.get(url);
+    if (modified !== lastmod) {
+        const days = modified && lastmod ? Math.round((new Date(lastmod) - new Date(modified)) / 86400000) : "?";
+        drift.push(`${rel(file)}: dateModified ${modified || "(missing)"} vs sitemap lastmod ${lastmod || "(missing)"} (${days}d)`);
+    }
+}
+if (drift.length) warnings.push(`Sitemap lastmod drift (dateModified ≠ <lastmod>):\n- ` + drift.join("\n- "));
+facts.lastmodDrift = drift.length;
+
 // --- 2f. deploy parity (.vercelignore) --------------------------------------------
 let ignoreHits = [];
 if (existsSync(join(root, ".vercelignore"))) {
@@ -260,7 +323,7 @@ const status = failures.length ? "FAIL" : warnings.length ? "WARN" : "CLEAN";
 const md = `# SEO loop report — ${today} (${status})
 
 Hard gates (seo-check.mjs): **${facts.seoCheck}** · Deploy parity: **${facts.vercelParity}**
-Pages audited: ${facts.pagesAudited} · Heavy images: ${facts.heavyImages} · Dead assets: ${facts.deadAssets} · Stale pages: ${facts.stalePages}
+Pages audited: ${facts.pagesAudited} · Heavy images: ${facts.heavyImages} · Dead assets: ${facts.deadAssets} · Stale pages: ${facts.stalePages} · Orphan pages: ${facts.orphanPages} · Lastmod drift: ${facts.lastmodDrift}
 
 ## Inbound internal links
 ${Object.entries(facts.inbound).map(([u, n]) => `- ${u}: ${n}`).join("\n")}
