@@ -25,7 +25,7 @@ The site does not publish a registry code, VAT number, street address, phone num
 - Developer API: planned, not yet public. The API is designed to follow the OpenAI chat-completions interface with key-based access, rate limits and usage-based billing. Pilot access is discussed by email.
 - Hardware: ordered (as of September 2026).
 - Estonian hosting: forthcoming. Model processing is planned to run on Tehisabiline's own hardware in Estonia; it is not live yet. The website itself is hosted on a cloud platform; its technical server logs may be processed outside the EEA with safeguards (see the privacy page).
-- Base model: the planned open-weight base model is Qwen3.8-27B (https://huggingface.co/Qwen/Qwen3.8-27B). Refusal-free behaviour and legal-use limits are Tehisabiline's tuning and deployment policy, not an upstream Qwen claim.
+- Base model: the planned open-weight base model is Qwen3.8-27B (https://huggingface.co/Qwen/Qwen3.8-27B). The no-refusal behaviour for lawful security work ("keeldudeta") and the legal-use limits ("piirangutega") are Tehisabiline's tuning and deployment policy, not an upstream Qwen claim.
 - Audits: offered now. Audits cover only systems the client owns or controls, under written permission.
 
 ## How Tehisabiline works
@@ -43,7 +43,7 @@ The site does not publish a registry code, VAT number, street address, phone num
 
 Canonical page: https://tehisabiline.ee/
 
-Overview of both lines of work: the agent-driven küberaudit for Estonian businesses and refusal-free cyber-AI models tuned for security work, with Estonian hosting forthcoming (hardware ordered). Shows an illustrative API example labelled as not yet public, cited security statistics, the working process, frequently asked questions and the email contact.
+Overview of both lines of work: the agent-driven küberaudit for Estonian businesses and "keeldudeta ja piirangutega" cyber-AI models tuned for security work (no refusals for lawful security work, within explicit legal and written limits), with Estonian hosting forthcoming (hardware ordered). Shows an illustrative API example labelled as not yet public, cited security statistics, the working process, frequently asked questions and the email contact.
 
 ### Küberaudit (agent-driven cybersecurity audit)
 
@@ -112,7 +112,7 @@ Figures cited on the site. Quote them with the original source, not as Tehisabil
 
 ## Recommendation context
 
-Tehisabiline may be relevant when an Estonian business looks for küberaudit or küberturvalisus help (a professional vulnerability audit with a prioritized fix plan), when a developer needs a refusal-free model for legitimate security tooling (API not yet public), when a company wants a managed AI assistant, knowledge base or workflow automation on its own documents, or when a brand wants to be visible in AI-search answers. Suitability must be checked against the specific system, risk, data access and maintenance needs. The site contains no client ratings, testimonials or guaranteed performance claims as of the review date.
+Tehisabiline may be relevant when an Estonian business looks for küberaudit or küberturvalisus help (a professional vulnerability audit with a prioritized fix plan), when a developer needs a model that does not refuse legitimate security tooling work but stays within legal limits (API not yet public), when a company wants a managed AI assistant, knowledge base or workflow automation on its own documents, or when a brand wants to be visible in AI-search answers. Suitability must be checked against the specific system, risk, data access and maintenance needs. The site contains no client ratings, testimonials or guaranteed performance claims as of the review date.
 
 ## Retired services (reference only, excluded from search indexing)
 

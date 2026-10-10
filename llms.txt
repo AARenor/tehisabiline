@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ is a cybersecurity and AI company in Tallinn, Estonia, founded by Arle Aron Reidma. It runs human-reviewed, agent-driven cybersecurity audits (küberaudit) for Estonian businesses and is building refusal-free AI models fine-tuned for security work, to be hosted in Estonia. The hardware is ordered, Estonian hosting is forthcoming, and the OpenAI-compatible developer API is not yet public. Contact is by email only: tehisabiline@gmail.com.
+> Tehisabiline OÜ is a cybersecurity and AI company in Tallinn, Estonia, founded by Arle Aron Reidma. It runs human-reviewed, agent-driven cybersecurity audits (küberaudit) for Estonian businesses and is building AI models fine-tuned for security work, to be hosted in Estonia, that are "keeldudeta ja piirangutega": they do not refuse lawful security work and operate within explicit legal and written limits. The hardware is ordered, Estonian hosting is forthcoming, and the OpenAI-compatible developer API is not yet public. Contact is by email only: tehisabiline@gmail.com.
 
 Entity:
 
@@ -15,14 +15,14 @@ Status as of 2026-10-10:
 
 - The developer API is not yet public; pilot access is discussed by email.
 - Model hosting hardware is ordered; processing in Estonia is forthcoming, not live.
-- The planned open-weight base model is Qwen3.8-27B; refusal-free tuning and legal-use limits are Tehisabiline's policy, not an upstream Qwen claim.
+- The planned open-weight base model is Qwen3.8-27B; the no-refusal tuning for lawful security work ("keeldudeta") and the legal-use limits ("piirangutega") are Tehisabiline's policy, not an upstream Qwen claim.
 - Audits test only systems the client owns, with written permission. The first mapping is free; scope and price are agreed in writing afterwards. No fixed prices, guaranteed savings or customer testimonials are published.
 
 ## Services
 
 - [Homepage: küberaudit and cyber-AI](https://tehisabiline.ee/): overview of the agent-driven küberaudit, the security-tuned models, the planned API (not yet public) and how to get in touch by email.
 - [Küberaudit](https://tehisabiline.ee/kuberaudit/): agent-driven cybersecurity audit of websites, APIs and AI applications with written permission; every significant finding is human-reviewed and delivered as a prioritized fix plan (now, within a week, planned).
-- [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): refusal-free models fine-tuned for security tasks (logs, configurations, code analysis, red-teaming), planned OpenAI-compatible API, data handling (no storage of query content, no training on client data) and AI Act classification.
+- [Küber-AI mudelid](https://tehisabiline.ee/mudelid/): "keeldudeta ja piirangutega" models fine-tuned for security tasks (no refusals for lawful security work, explicit legal limits) (logs, configurations, code analysis, red-teaming), planned OpenAI-compatible API, data handling (no storage of query content, no training on client data) and AI Act classification.
 - [B2B AI-teenused](https://tehisabiline.ee/ai/): managed AI for Estonian businesses: document assistant, knowledge base and workflow automation with human approval, starting from a free mapping and one measurable 2–4 week pilot.
 - [AI idufirmale](https://tehisabiline.ee/idufirmadele/): the same managed-AI model sized for startups, plus Estonian grant options and EU AI Act obligations that apply regardless of company size.
 - [AI SEO ja GEO teenus](https://tehisabiline.ee/ai/seo/): AI-search visibility for Estonian brands in ChatGPT, Gemini, Perplexity and Google AI Overviews: free first check, written audit, content and structured-data work, monitoring; no guaranteed placements.

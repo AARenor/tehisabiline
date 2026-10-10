@@ -448,7 +448,7 @@ for (const page of expectedPages) {
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
 const homeH1 = stripHtml(homeHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
-assert(homeH1.includes("Küberaudit") && homeH1.includes("küber-AI"), "Homepage H1 must name both küberaudit and küber-AI.");
+assert(homeH1.includes("Küberaudit") && homeH1.includes("küber-AI") && /keeldudeta ja piirangutega/i.test(homeH1), "Homepage H1 must name küberaudit and keeldudeta ja piirangutega küber-AI.");
 assert(homeHtml.includes("API pole veel avalik"), "Homepage API example must say that the API is not yet public.");
 for (const serviceUrl of expectedUrls.slice(1)) {
     const pathname = new URL(serviceUrl).pathname;
@@ -484,7 +484,7 @@ assert(modelsHtml.includes("API pole veel avalik"), "Models API example must say
 for (const file of ["index.html", "mudelid/index.html", "kasutusjuhud/index.html"]) {
     const html = readFileSync(join(root, file), "utf8");
     assert(html.includes("Qwen3.8-27B"), `${file}: must use the verified Qwen3.8-27B model name.`);
-    assert(!/Qwen 27B tsenseerimata lineup/i.test(html), `${file}: must not use the stale vague Qwen 27B lineup wording.`);
+    assert(!/Qwen 27B [\p{L}-]+ lineup/iu.test(html), `${file}: must not use the stale vague Qwen 27B lineup wording.`);
 }
 
 const auditHtml = readFileSync(join(root, "kuberaudit/index.html"), "utf8");
