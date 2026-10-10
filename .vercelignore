@@ -2,7 +2,5 @@ node_modules/
 tools/
 package.json
 package-lock.json
-tailwind.config.js
-assets/css/tailwind-input.css
 output/
 .opencode/

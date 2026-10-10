@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lehte ei leitud | Tehisabiline</title>
     <meta name="robots" content="noindex, follow">
-    <meta name="theme-color" content="#00658d">
+    <meta name="theme-color" content="#0a62d0">
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=d629a402">
-    <link rel="stylesheet" href="/index.css?v=a7aba025">
+    <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=59ede12d">
 </head>
 <body>
-    <main class="hero-dynamic-bg relative flex min-h-screen items-center justify-center px-6 text-center">
-        <div class="relative z-10 max-w-3xl space-y-7">
-            <p class="eyebrow">404 · Lehte ei leitud</p>
-            <h1 class="font-headline font-bold leading-none text-deep-navy">See link ei vii enam õigesse kohta</h1>
-            <p class="mx-auto max-w-xl text-lg text-on-surface-variant">Mine avalehele või vali teenus, mida otsisid.</p>
-            <div class="flex flex-col items-center justify-center gap-3 flex-wrap sm:flex-row">
-                <a class="btn-premium rounded-full px-8 py-4 text-xs font-bold" href="/">Avalehele</a>
-                <a class="secondary-button rounded-full px-8 py-4 text-xs font-bold" href="/kuberaudit/">Küberaudit</a>
-                <a class="secondary-button rounded-full px-8 py-4 text-xs font-bold" href="/mudelid/">Küber-AI mudelid</a>
-                <a class="secondary-button rounded-full px-8 py-4 text-xs font-bold" href="/kasutusjuhud/">Kasutusjuhud</a>
-            </div>
+    <main class="section" id="main-content">
+        <div class="wrap wrap--narrow" style="min-height: 80vh; display: grid; gap: 1.5rem; align-content: center; justify-items: center; text-align: center;">
+            <h1>See link ei vii enam õigesse kohta</h1>
+            <p class="lead">Mine avalehele või vali teenus, mida otsisid.</p>
+            <nav class="cta-row" aria-label="Lehe valikud" style="justify-content: center;">
+                <a class="btn btn--primary" href="/">Avalehele</a>
+                <a class="btn btn--secondary" href="/kuberaudit/">Küberaudit</a>
+                <a class="btn btn--secondary" href="/mudelid/">Küber-AI mudelid</a>
+                <a class="btn btn--secondary" href="/kasutusjuhud/">Kasutusjuhud</a>
+            </nav>
         </div>
     </main>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="et">
+<html lang="et">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <meta name="description" content="AI ja tööprotsesside automatiseerimine Eesti ettevõttele: praktilised näited, hinna kujunemine, tasuvuskalkulaator ja mõõdetav piloot.">
     <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
-    <meta name="theme-color" content="#00658d">
+    <meta name="theme-color" content="#0a62d0">
     <link rel="canonical" href="https://tehisabiline.ee/ai-automatiseerimine/">
 
     <meta property="og:type" content="website">
@@ -28,8 +28,10 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png">
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=d629a402">
-    <link rel="stylesheet" href="/index.css?v=a7aba025">
+    <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=59ede12d">
+    <link rel="stylesheet" href="/assets/css/pages/retired.css?v=a2bc2db8">
 
     <script type="application/ld+json">
     {
@@ -107,57 +109,55 @@
 <body>
     <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
 
-    <header class="fixed top-0 w-full z-50 border-b border-white/20" id="navbar">
-        <nav aria-label="Põhinavigatsioon" class="flex justify-between items-center max-w-7xl mx-auto px-6 h-14">
-            <a href="/" class="flex items-center gap-2.5" aria-label="Tehisabiline – avaleht">
-                <img alt="Tehisabiline logo" width="64" height="64" class="w-7 h-7 object-contain" src="/assets/brand/favicon.png">
-                <span class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">Tehisabiline</span>
-            </a>
-            <div class="hidden lg:flex items-center space-x-7">
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" aria-current="page" href="/mudelid/">Mudelid</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/kuberaudit/">Auditid</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest" href="/meist/">Meist</a>
-                <a class="btn-premium px-7 py-3 rounded-full text-[10px] font-bold" href="/#contact">Tasuta kaardistus</a>
-            </div>
-            <button class="lg:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="nav-menu-icon" aria-hidden="true">☰</span>
-            </button>
+    <!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/kuberaudit/">Küberaudit</a>
+            <a href="/mudelid/">Mudelid ja API</a>
+            <a href="/ai/">AI-teenused</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
         </nav>
-        <div class="lg:hidden hidden flex-col items-center pb-8 pt-4 mobile-nav-bg" id="mobile-menu">
-            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" aria-current="page" href="/mudelid/">Mudelid</a>
-            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/kuberaudit/">Auditid</a>
-            <a class="nav-link font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
-            <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="/#contact">Tasuta kaardistus</a>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <header class="content-hero">
-            <div class="content-hero-inner">
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/kuberaudit/">Küberaudit</a>
+        <a href="/mudelid/">Mudelid ja API</a>
+        <a href="/ai/">AI-teenused</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+<main id="main-content">
+        <header class="page-head">
+            <div class="wrap">
                 <nav aria-label="Asukoharada" class="breadcrumbs">
                     <a href="/">Avaleht</a><span aria-hidden="true">/</span><span aria-current="page">AI automatiseerimine</span>
                 </nav>
-                <p class="eyebrow">Töövood ja integratsioonid</p>
                 <h1>AI automatiseerimine, mis algab päris tööprotsessist</h1>
-                <p class="hero-lead">Vähenda korduvat kopeerimist, ooteaega ja käsitsi suunamist. Kaardistame ühe äriprotsessi, ühendame vajalikud süsteemid ning mõõdame pilooti algtaseme vastu.</p>
+                <p class="lead">Vähenda korduvat kopeerimist, ooteaega ja käsitsi suunamist. Kaardistame ühe äriprotsessi, ühendame vajalikud süsteemid ning mõõdame pilooti algtaseme vastu.</p>
                 <p class="updated-line mt-7">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></p>
             </div>
         </header>
 
-        <div class="content-main">
-            <div class="content-shell">
-                <article class="content-column">
-                    <section class="lead-answer" aria-labelledby="short-answer">
+        <div class="section">
+            <div class="wrap">
+                <article class="prose" style="overflow-wrap:anywhere; min-width:0">
+                    <section class="callout" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis on AI automatiseerimine?</h2>
                         <p><strong>AI automatiseerimine</strong> on töövoog, kus kindlad sammud käivituvad automaatselt ja tehisintellekt aitab töödelda muutliku kujuga sisu—näiteks liigitada e-kirja, võtta dokumendist väljad või koostada mustandi. Töökindel lahendus ei anna kogu protsessi mudeli otsustada: reeglid, valideerimine, logid ja inimese kontroll jäävad sinna, kus eksimuse mõju on suur.</p>
                     </section>
 
-                    <section class="prose-section" id="examples">
-                        <p class="eyebrow">Praktilised näited</p>
+                    <section class="section section--tight" id="examples">
                         <h2>Milliseid töövooge saab automatiseerida?</h2>
                         <p>Hea kandidaat on korduv ja piisavalt stabiilne. Sisend ei pea olema alati ühesugune, kuid meeskond peab oskama kirjeldada, mis on õige tulemus ja millal on vaja inimese otsust.</p>
-                        <div class="table-wrap">
-                            <table class="comparison-table">
+                        <div class="table-wrap" style="max-width:100%; min-width:0; padding:12px">
+                            <table class="data comparison-table">
                                 <thead>
                                     <tr><th>Praegune töö</th><th>Võimalik automatsioon</th><th>Inimese kontroll</th></tr>
                                 </thead>
@@ -173,7 +173,6 @@
                     </section>
 
                     <section class="prose-section" id="fit">
-                        <p class="eyebrow">Sobivuse kontroll</p>
                         <h2>Milline protsess sobib esimeseks piloodiks?</h2>
                         <div class="content-grid">
                             <div class="info-card fit-card">
@@ -196,7 +195,6 @@
                     </section>
 
                     <section class="prose-section" id="calculator">
-                        <p class="eyebrow">Esmane tasuvushinnang</p>
                         <h2>Kui palju käsitööaega võib töövoog neelata?</h2>
                         <p>Sisesta ühe korduva ülesande ligikaudne maht. Kalkulaator näitab teoreetilist ajavõitu, kui valitud osa sammudest saab automatiseerida. See ei arvesta arendus-, litsentsi-, kvaliteedikontrolli ega hoolduskulu.</p>
                         <div class="calculator" id="roi-calculator">
@@ -231,7 +229,6 @@
                     </section>
 
                     <section class="prose-section" id="cost">
-                        <p class="eyebrow">Hinna kujunemine</p>
                         <h2>Millest AI automatiseerimise hind sõltub?</h2>
                         <p>Usaldusväärset projektihinda ei saa määrata ainult sõnade „AI automatsioon” järgi. Hind sõltub sellest, mitu süsteemi tuleb ühendada, kas neil on sobivad liidesed, kui muutlik on sisend ning kui palju kontrolli, logimist ja hooldust töövoog vajab.</p>
                         <div class="content-grid">
@@ -244,7 +241,6 @@
                     </section>
 
                     <section class="prose-section" id="process">
-                        <p class="eyebrow">Teostus</p>
                         <h2>Neli sammu kontrollitava piloodini</h2>
                         <div class="step-grid">
                             <div class="number-card"><span>01</span><h3>Kaardistus ja algtase</h3><p>Joonistame praeguse töövoo ning mõõdame mahu, aja, ooteaja ja tüüpilised vead.</p></div>
@@ -255,7 +251,6 @@
                     </section>
 
                     <section class="prose-section" id="safety">
-                        <p class="eyebrow">Töökindlus ja andmed</p>
                         <h2>Automatsioon peab ebaõnnestuma nähtavalt ja turvaliselt</h2>
                         <p>Vaikne viga on ohtlikum kui peatunud töövoog. Seetõttu määrame enne käivitamist, millised tulemused valideeritakse automaatselt, millised saadetakse inimesele ja kuidas probleemist teada antakse.</p>
                         <div class="content-grid">
@@ -267,7 +262,6 @@
                     </section>
 
                     <section class="prose-section" id="maintenance">
-                        <p class="eyebrow">Hooldus</p>
                         <h2>Mis võib pärast käivitamist muutuda?</h2>
                         <p>Automatiseerimine ei ole ühekordne “seadista ja unusta” projekt. Töövoo ümber olevad süsteemid, väljad, õigused ja ärireeglid muutuvad. Hooldusvajadus sõltub ühenduste arvust, sisendi stabiilsusest ning sellest, kui kriitiline protsess ettevõttele on.</p>
                         <div class="content-grid">
@@ -280,7 +274,6 @@
                     </section>
 
                     <section class="prose-section" id="measurement">
-                        <p class="eyebrow">Mõõdikud</p>
                         <h2>Mida pärast pilooti võrrelda?</h2>
                         <ul>
                             <li><strong>Ajakulu:</strong> käsitöö minutid ühe juhtumi ja kuu kohta.</li>
@@ -296,7 +289,6 @@
                     </section>
 
                     <section class="prose-section" id="faq">
-                        <p class="eyebrow">KKK</p>
                         <h2>Küsimused AI automatiseerimise kohta</h2>
                         <div class="grid gap-4">
                             <details class="faq-card"><summary><span>Mis vahe on tavalisel automatiseerimisel ja AI automatiseerimisel?</span><span aria-hidden="true">+</span></summary><p>Tavaline automatsioon järgib etteantud reegleid. AI-samm aitab töödelda muutliku kujuga sisu, näiteks liigitada e-kirja, võtta dokumendist väljad või koostada vastuse mustandi. Usaldusväärne töövoog kasutab mõlemat ning jätab kriitilise otsuse vajadusel inimesele.</p></details>
@@ -308,7 +300,6 @@
                     </section>
 
                     <section class="prose-section" aria-labelledby="related">
-                        <p class="eyebrow">Seotud lahendused</p>
                         <h2 id="related">Vaata ka</h2>
                         <div class="related-links">
                             <a class="related-card" href="/kasutusjuhud/"><strong>Küber-AI kasutusjuhud</strong><span>12 praktilist kasutusjuhtu turvatöös – kontrollpunktid ja mõõdikud.</span></a>
@@ -321,7 +312,7 @@
                     <section class="service-cta">
                         <h2>Kaardistame ühe töövoo tasuta</h2>
                         <p>Saada praegused sammud kasvõi punktidena. Vastame konkreetsete täpsustavate küsimustega ja ütleme ausalt, kas siin on mõistlik automatiseerimise koht.</p>
-                        <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold" href="/#contact">Kirjelda oma töövoogu</a>
+                        <a class="btn btn--primary" href="/#contact">Kirjelda oma töövoogu</a>
                     </section>
                 </article>
 
@@ -343,21 +334,53 @@
         </div>
     </main>
 
-    <footer class="w-full py-16 bg-deep-navy text-white">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                <div class="col-span-1 md:col-span-2 space-y-5">
-                    <div class="flex items-center gap-3"><img alt="Tehisabiline logo" width="64" height="64" class="w-9 h-9 footer-logo" src="/assets/brand/favicon.png"><span class="text-2xl font-bold font-headline uppercase">Tehisabiline OÜ</span></div>
-                    <p class="text-white/75 max-w-md">Praktilised ja kontrollitavad AI-lahendused Eesti ettevõtetele.</p>
-                </div>
-                <div class="space-y-5"><p class="footer-heading">Teenused</p><nav aria-label="Teenuste lingid" class="flex flex-col gap-3"><a href="/ai-automatiseerimine/">AI automatiseerimine</a><a href="/ai-chatbot/">AI-chatbot</a><a href="/hinnajalgimine/">Hinnajälgimine</a><a href="/mudelid/">Küber-AI mudelid</a><a href="/kuberaudit/">Küberaudit</a></nav></div>
-                <div class="space-y-5"><p class="footer-heading">Tehisabiline</p><nav aria-label="Ettevõtte lingid" class="flex flex-col gap-3"><a href="/meist/">Meist ja põhimõtted</a><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a><a href="/privaatsus/">Privaatsus ja küpsised</a><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a><a href="/llms.txt">AI-süsteemidele</a></nav></div>
+    <!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div>
+                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
-            <div class="pt-7 border-t border-white/15 text-white/65 text-xs uppercase tracking-[0.16em]">© 2026 Tehisabiline OÜ · Tallinn, Eesti</div>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/kuberaudit/">Agendipõhine küberaudit</a></li>
+                    <li><a href="/mudelid/">Küber-AI mudelid ja API</a></li>
+                    <li><a href="/ai/">AI-teenused ettevõtetele</a></li>
+                    <li><a href="/idufirmadele/">AI idufirmale</a></li>
+                    <li><a href="/ai/seo/">AI SEO teenus</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-08-12">12. augustil 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
 
-    <script src="/index.js?v=dee08d58" defer></script>
+    <script src="/site.js?v=3a1bb970" defer></script>
     <script src="/assets/js/roi-calculator.js?v=b6149f8b" defer></script>
+
 </body>
 </html>

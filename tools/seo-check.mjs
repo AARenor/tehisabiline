@@ -221,24 +221,11 @@ function validateFontPreloads(html, label) {
     }
 }
 
-// Ligatures present in assets/fonts/material-symbols-outlined.woff2 (subset of
-// Google's Material Symbols Outlined). Any icon name used in HTML must be in
-// this list, otherwise it renders as raw text. Regenerate the subset if a new
-// icon is needed.
-const COVERED_ICONS = new Set([
-    "add", "arrow_forward", "bolt", "business_center", "check_circle",
-    "check_circle_filled", "check_circle_outline", "clear", "close", "database",
-    "email", "fact_check", "fmd_good", "forum", "language", "library_books",
-    "location_on", "location_pin", "mail", "mail_outline", "markunread", "menu",
-    "new_releases", "place", "question_answer", "rocket_launch", "room",
-    "search", "speed", "task_alt", "verified",
-]);
-function validateMaterialIcons(html, label) {
-    const names = [...html.matchAll(/material-symbols-outlined[^>]*>([^<]+)</gi)]
-        .map((m) => m[1].trim())
-        .filter(Boolean);
-    for (const name of names) {
-        assert(COVERED_ICONS.has(name), `${label}: icon "${name}" is not in the icon font subset and would render as raw text.`);
+// Every inline icon must point at a symbol that exists in the SVG sprite.
+const spriteIds = new Set([...readFileSync(join(root, "assets/icons.svg"), "utf8").matchAll(/<symbol id="([^"]+)"/g)].map((m) => m[1]));
+function validateIconSprite(html, label) {
+    for (const m of html.matchAll(/<use\s+href="\/assets\/icons\.svg#([^"]+)"/g)) {
+        assert(spriteIds.has(m[1]), `${label}: icon "${m[1]}" is missing from assets/icons.svg.`);
     }
 }
 
@@ -361,7 +348,8 @@ for (const page of expectedPages) {
 
     validateLocalReferences(html, label);
     validateFontPreloads(html, label);
-    validateMaterialIcons(html, label);
+    validateIconSprite(html, label);
+    assert(!/material-symbols-outlined|cdn\.tailwindcss|tailwind\.min\.css/i.test(html), label + ": legacy icon font or Tailwind reference found.");
     assert(html.includes("mailto:tehisabiline@gmail.com"), label + ": contact email must be present.");
     assert(html.includes("/privaatsus/"), label + ": privacy link must be present.");
     assert(!html.includes("http://"), label + ": insecure http reference found.");
@@ -418,11 +406,7 @@ for (const file of ["index.html", "mudelid/index.html", "kasutusjuhud/index.html
 }
 
 const auditHtml = readFileSync(join(root, "kuberaudit/index.html"), "utf8");
-assert(/<body\b[^>]*class=["'][^"']*\baudit-page\b/i.test(auditHtml), "Küberaudit must use its report-style page design.");
-assert(auditHtml.includes('href="/kuberaudit/kuberaudit.css'), "Küberaudit must load its page-specific stylesheet.");
-for (const genericClass of ["eyebrow", "content-grid", "info-card", "step-grid", "number-card", "faq-card", "related-card", "service-cta"]) {
-    assert(!new RegExp(`class=["'][^"']*\\b${genericClass}\\b`, "i").test(auditHtml), `Küberaudit must not use the generic ${genericClass} pattern.`);
-}
+assert(auditHtml.includes('href="/assets/css/pages/kuberaudit.css'), "Küberaudit must load its page-specific stylesheet.");
 
 for (const requiredFile of [
     "robots.txt",
@@ -436,7 +420,9 @@ for (const requiredFile of [
     ".well-known/security.txt",
     "assets/brand/tehisabiline-og.png",
     "assets/brand/logo-512.png",
-    "assets/css/tailwind.min.css",
+    "site.css",
+    "site.js",
+    "assets/icons.svg",
     ".nojekyll"
 ]) {
     assert(existsSync(join(root, requiredFile)), `${requiredFile} is missing.`);
@@ -491,8 +477,8 @@ const newestPageDate = [...pageModifiedDates.values()].sort().at(-1) || "";
 assert(/^\d{4}-\d{2}-\d{2}$/.test(llmsReviewed) && llmsReviewed <= today, "llms-full.txt review date must be a valid non-future YYYY-MM-DD date.");
 assert(llmsReviewed >= newestPageDate, "llms-full.txt review date must cover the newest indexable page update.");
 
-const homepageCss = readFileSync(join(root, "homepage.css"), "utf8");
-assert(!homepageCss.includes("api.tehisabiline.ee"), "homepage.css must not preserve the unavailable API hostname, even in comments.");
+const siteCss = readFileSync(join(root, "site.css"), "utf8");
+assert(!siteCss.includes("api.tehisabiline.ee"), "site.css must not preserve the unavailable API hostname, even in comments.");
 
 const indexNowKey = readFileSync(join(root, "5f126675c51465984e48a3d63ec60940.txt"), "utf8").trim();
 assert(indexNowKey === "5f126675c51465984e48a3d63ec60940", "IndexNow key file content must match its filename.");

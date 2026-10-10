@@ -1,6 +1,6 @@
 // Appends content-hash query (?v=xxxxxxxx) to local CSS/JS asset references
 // in every HTML file, so returning visitors never get stale cached assets.
-// Run after CSS rebuilds:  npm run build:css && node tools/version-assets.mjs
+// Run after editing CSS/JS:  npm run build:assets
 // Safe for seo-check: resolveLocalPath() strips query strings before resolving.
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
@@ -10,13 +10,12 @@ const root = new URL("..", import.meta.url).pathname;
 
 // Source asset files whose content is hashed (paths as referenced from site root).
 const assets = [
-    "/assets/css/tailwind.min.css",
-    "/index.css",
-    "/homepage.css",
-    "/kuberaudit/kuberaudit.css",
-    "/index.js",
-    "/homepage.js",
+    "/site.css",
+    "/site.js",
     "/assets/js/roi-calculator.js",
+    ...readdirSync(join(root, "assets/css/pages"), { withFileTypes: true })
+        .filter((entry) => entry.isFile() && entry.name.endsWith(".css"))
+        .map((entry) => `/assets/css/pages/${entry.name}`),
 ];
 
 function hashOf(relativePath) {

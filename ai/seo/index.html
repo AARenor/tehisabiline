@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="et">
-<head>
+<html lang="et">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI SEO ja GEO teenus | Tehisabiline</title>
     <meta name="description" content="AI SEO teenus: audit, sisu ja jälgimine, et sinu bränd ilmuks ChatGPT, Gemini, Perplexity ja Google AI vastustes. Tasuta esmane nähtavuse kontroll.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
-    <meta name="theme-color" content="#00658d">
+    <meta name="theme-color" content="#0a62d0">
     <link rel="canonical" href="https://tehisabiline.ee/ai/seo/">
 
     <meta property="og:type" content="website">
@@ -30,16 +30,11 @@
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
-    <link rel="stylesheet" href="/assets/css/tailwind.min.css?v=d629a402">
-    <link rel="preload" href="/assets/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/cormorant-garamond-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/index.css?v=a7aba025">
-    <link rel="stylesheet" href="/homepage.css?v=b73b832d">
+    <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=59ede12d">
 
-    <noscript><style>.reveal,.hero-word-reveal,.hero-word{opacity:1 !important;transform:none !important;filter:none !important;}</style></noscript>
 
     <script type="application/ld+json">
     {
@@ -119,495 +114,328 @@
       ]
     }
     </script>
-</head>
+</head></head>
 <body>
-    <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
-
-    <header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-2xl border-b border-white/20" id="navbar">
-        <nav aria-label="Põhinavigatsioon" class="flex justify-between items-center max-w-7xl mx-auto px-6 h-14">
-            <a href="#hero" class="flex items-center gap-2.5" aria-label="Tehisabiline – AI SEO lehe algus">
-                <img alt="Tehisabiline logo" width="64" height="64" class="w-7 h-7 object-contain drop-shadow-sm" src="/assets/brand/favicon.png">
-                <div class="text-lg font-bold tracking-tighter font-headline uppercase navbar-brand">
-                    Tehisabiline
-                </div>
-            </a>
-            <div class="hidden lg:flex items-center space-x-8">
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#teenused">Teenused</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#kuidas">Kuidas</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#taktikad">Taktikad</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#hind">Hind</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="#faq">KKK</a>
-                <a class="nav-link transition-colors font-medium text-xs uppercase tracking-widest leading-none" href="/meist/">Meist</a>
-                <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Tasuta kontroll</a>
-            </div>
-            <button class="lg:hidden nav-link" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-            </button>
+<a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+<!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/kuberaudit/">Küberaudit</a>
+            <a href="/mudelid/">Mudelid ja API</a>
+            <a href="/ai/">AI-teenused</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
         </nav>
-        <div class="lg:hidden hidden flex-col items-center gap-0 pb-8 pt-4 backdrop-blur-2xl transition-all duration-300 mobile-nav-bg" id="mobile-menu">
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#teenused">Teenused</a>
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#kuidas">Kuidas</a>
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#taktikad">Taktikad</a>
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#hind">Hind</a>
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="#faq">KKK</a>
-            <a class="nav-link transition-colors font-medium text-sm uppercase tracking-widest py-4 px-6 w-full text-center" href="/meist/">Meist</a>
-            <a class="btn-premium px-8 py-4 rounded-full text-xs font-bold mt-2" href="#contact">Tasuta kontroll</a>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/kuberaudit/">Küberaudit</a>
+        <a href="/mudelid/">Mudelid ja API</a>
+        <a href="/ai/">AI-teenused</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+<main id="main-content">
+<section class="page-head" id="hero">
+  <div class="wrap">
+    <ul class="breadcrumbs"><li><a href="/">Avaleht</a></li><li><a href="/ai/">AI-teenused</a></li><li aria-current="page">AI SEO</li></ul>
+    <div class="split split--wide-left split--center">
+      <div>
+        <h1>Sinu bränd AI-otsingus. Seal, kus kliendid juba küsivad.</h1>
+        <p class="lead">AI SEO ja GEO teenus: audit, sisu ja jälgimine, et sinu ettevõte mainituks ChatGPT, Gemini, Perplexity ja Google AI vastustes – ilma garanteeritud kohtadeta, mõõdetava tulemusega.</p>
+        <div class="cta-row"><a class="btn btn--primary" href="#contact">Tasuta nähtavuse kontroll</a><a class="btn btn--secondary" href="#taktikad">Millised taktikad töötavad</a></div>
+        <p class="page-head__meta">Tasuta esmakontroll · Kirjalik audit · Mõõdetav nähtavus</p>
+      </div>
+      <div class="scope" role="list">
+        <div class="scope__row" role="listitem"><strong>ChatGPT · Gemini · Perplexity</strong></div>
+        <div class="scope__row" role="listitem"><strong>Google AI Overviewsi audit</strong></div>
+        <div class="scope__row" role="listitem"><strong>Ainult ausad, valged taktikad</strong></div>
+        <div class="scope__row" role="listitem"><strong>Esmakontroll kohe, audit paari nädalaga</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="probleem">
+  <div class="wrap split split--wide-left">
+    <div class="stack">
+      <h2>Klikid kaovad, vastused jäävad</h2>
+      <p>Google kuvab AI Overviewse järjest rohkemates vastustes ja lõikab otselinkide klikke: Seeri 2025. aasta uuring näitas 61% langust klikimääras (1,76% → 0,61%), Ahrefsi 300&nbsp;000 märksõna analüüs 34,5% langust ning osa päringuid lõppeb nulliklikiga kuni 83%. Samal ajal klõpsab vaid ligi 19% kasutajatest AI Overviewsis viidatud allikatele.</p>
+      <p>Kui sinu bränd ei ole seal, kus vastus sünnib, oled sa nähtamatu ka siis, kui oled Googles teisel kohal. Praktilisi näiteid nähtavuse töökohtadest leiad <a href="/kasutusjuhud/">küber-AI kasutusjuhudest</a>.</p>
+    </div>
+    <div>
+      <ul class="stats" aria-label="AI-otsingu uuringute tulemused">
+        <li><span class="num">61%</span><p>langus klikimääras Seeri 2025. aasta uuringus (1,76% → 0,61%).</p></li>
+        <li><span class="num">34,5%</span><p>klikkide langus Ahrefsi 300&nbsp;000 märksõna analüüsis.</p></li>
+        <li><span class="num"><small>kuni&nbsp;</small>83%</span><p>päringutest lõppeb nulliklikiga.</p></li>
+        <li><span class="num"><small>ligi&nbsp;</small>19%</span><p>kasutajatest klõpsab AI Overviewsis viidatud allikatele.</p></li>
+      </ul>
+      <p class="note" style="margin-top:1rem">Uuringute metoodikad ja valimid erinevad. Need arvud kirjeldavad konkreetseid analüüse, mitte sinu saidile garanteeritud tulemust.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="teenused">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Kolm tööd, üks mõõdik</h2>
+      <p>Kõik teenused lõpevad samas kohas: kas sinu bränd ilmub vastustes või mitte – ja mida järgmiseks teha.</p>
+    </div>
+    <article class="service">
+      <div class="service__body">
+        <h3>AI-nähtavuse audit</h3>
+        <p>Mõõdame, kus ja kuidas sinu bränd praegu vastusmootorites esineb, millised konkurendid seal mainitakse ja millised allikad neid toidavad. Väljund on kirjalik audit prioriseeritud parandustega – mitte sadaleheküljeline PDF ilma järjekorrata.</p>
+      </div>
+      <div class="scope" role="list">
+        <div class="scope__row" role="listitem"><strong>Brändi mainimised 4 süsteemis</strong></div>
+        <div class="scope__row" role="listitem"><strong>Konkurentide võrdlus samadel küsimustel</strong></div>
+        <div class="scope__row" role="listitem"><strong>Parandused tähtsuse järjekorras</strong></div>
+      </div>
+    </article>
+    <article class="service service--flip">
+      <div class="service__body">
+        <h3>Sisu ja tehniline alus</h3>
+        <p>Seame paika selle, mida vastusmootorid tegelikult loevad: selged vastused küsimustele, allikad ja tsitaadid, struktureeritud andmed, järjepidev brändi-üksus kogu veebis. Töö käib sinu olemasoleva sisu peal – uut sisu ei toodeta ilma, mida sa päriselt vajad.</p>
+      </div>
+      <div class="scope" role="list">
+        <div class="scope__row" role="listitem"><strong>Küsimus-vastus struktuur ja skeemad</strong></div>
+        <div class="scope__row" role="listitem"><strong>Tsiteeritavad tsitaadid ja statistika</strong></div>
+        <div class="scope__row" role="listitem"><strong>Brändi-üksuse järjepidevus kogu veebis</strong></div>
+      </div>
+    </article>
+    <article class="service">
+      <div class="service__body">
+        <h3>Jälgimine ja hooldus</h3>
+        <p>Küsimuste komplekt käib regulaarselt läbi ja tulemus uueneb: mainimised, allikaviited, osakaal konkurentide suhtes. Kui number ei liigu, vaatame koos, miks – ja kas jätkata. Sul on alati õigus töö peatada.</p>
+      </div>
+      <div class="scope" role="list">
+        <div class="scope__row" role="listitem"><strong>Enne ja pärast võrdlus tabelis</strong></div>
+        <div class="scope__row" role="listitem"><strong>Uute teemade ja küsimuste lisamine</strong></div>
+        <div class="scope__row" role="listitem"><strong>Selge seis ka siis, kui see ei meeldi</strong></div>
+      </div>
+    </article>
+    <p>AI SEO on üks osa <a href="/ai/">hallatud AI-teenustest</a> – samas valikus pakume ka <a href="/idufirmadele/">AI-d idufirmadele</a>.</p>
+  </div>
+</section>
+
+<section class="section section--tint" id="kuidas">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Esmakontrollist jälgimiseni</h2>
+      <p>Kolm sammu, iga sammuga selge otsus – ka otsus lõpetada.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Tasuta esmakontroll</h3><p>Valime 10–15 küsimust, mida sinu kliendid päriselt AI-lt küsivad, ja vaatame, kas sinu bränd seal praegu üldse esineb. Tulemus on konkreetne: olemas, osaliselt või mitte – koos põhjendusega.</p></li>
+      <li><h3>Audit ja töö</h3><p>Kirjalik audit hinna ja tähtajaga enne tööd. Seejärel rakendame parandused: sisustruktuur, skeemad, tsitaadid, brändi-üksus, kolmanda osapoole allikad. Kõik on dokumenteeritud.</p></li>
+      <li><h3>Jälgimine</h3><p>Küsimused käivad regulaarselt läbi, raport näitab muutust. Kui brändi mainitavus ei kasva, analüüsime takistust ja pakume välja järgmise sammu – või lõpetame ausalt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="taktikad">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Mis töötab. Ja mis mitte.</h2>
+      <p>Enamik 2026. aastal müüdavast AI-SEO-st on tõendamata. Meie teeme seda, millel on tõendid taga.</p>
+    </div>
+    <div class="limits">
+      <div>
+        <h3>Töötavad taktikad</h3>
+        <ul class="checks">
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span><strong>Tsiteeritav sisu:</strong> Princetoni GEO-uuring leidis, et usaldusväärse statistika, tsitaatide ja allikaviidete lisamine tõstis nähtavust kuni ~40%.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span><strong>Tugev tehniline vundament:</strong> Google'i ametlik AI-optimeerimise juhend kirjutab otse, et AEO ja GEO on SEO – kvaliteetne sisu, selged pealkirjad, struktureeritud andmed.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span><strong>Brändi-üksuse järjepidevus:</strong> sama nimi, kirjeldus ja allikad kogu veebis, teadmistepaneelis ja kataloogides – fragmenteerunud brändi nimetavad mudelid tagasihoidlikult.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span><strong>Kolmanda osapoole allikad:</strong> analüüs 21&nbsp;000 brändimainimise põhjal näitas, et 85% AI-otsingu nähtavusest tuleb väljastpoolt sinu lehte – kataloogid, meedia, arvustused.</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ei tööta (ega me ei tee)</h3>
+        <ul class="crosses">
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span><strong>Garanteeritud kohad:</strong> keegi ei tea, kuidas mudel homme valib. Lubadus „esimesel kohal ChatGPTs“ on müük, mitte töö.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span><strong>Massiivne AI-sisu tootmine:</strong> kogus ilma kvaliteedi ja autori pädevuseta ei ole tsiteeritav ja võib hoopis kahjustada.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span><strong>Võltsväärtused:</strong> võltsarvustused, ostetud tsitaadid, petturlikud kataloogid. Keelatud ja jälgitav – me ei puuduta.</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg><span><strong>Imevõtmed:</strong> üks fail nimega llms.txt või üks skeem ei muuda midagi, kui sisu ja usaldus on puudu.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="mootmine">
+  <div class="wrap split">
+    <h2>Mõõdame mainimisi, mitte lootusi</h2>
+    <p>Iga aruanne vastab kolmele küsimusele: kas sinu bränd ilmus vastustes, kas ta ilmus sagedamini kui eelmisel korral ja kas konkurendid ilmusid sinust rohkem. Mõõdikud on alati samad, et võrdlus püsiks aus. AI-süsteemidele ja inimestele loetav ülevaade sinu ettevõttest on juba <a href="/llms.txt">meie lehel olemas</a> – sinu lehele paneme paika samasuguse.</p>
+  </div>
+</section>
+
+<section class="section" id="hind">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Selge hind, enne tööd</h2>
+      <p>Turuorientiir: Eestis algab ühekordne SEO audit ligikaudu 300–800 eurost ja kuupõhine teenus 300–1500 eurost kuus. Meie oma hind selgub mahust – kirjalikult enne algust.</p>
+    </div>
+    <div class="table-wrap table-wrap--stack">
+      <table class="data">
+        <thead><tr><th scope="col">Samm</th><th scope="col">Mida saad</th><th scope="col">Hind</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Samm 1<br>Esmakontroll</th><td data-label="Mida saad">10–15 sinu kliendi päris küsimust, vastused neljast süsteemist ja aus seis: oled sa üldse nähtav? Kui ei, siis miks.</td><td data-label="Hind">Tasuta</td></tr>
+          <tr><th scope="row">Samm 2 · enamik algab siit<br>Audit + töö</th><td data-label="Mida saad">Kirjalik audit prioriseeritud parandustega ning sisu- ja tehnilise aluse rakendamine. Maht ja hind kirjas enne algust, üllatusi arvel pole.</td><td data-label="Hind">Fikseeritud</td></tr>
+          <tr><th scope="row">Samm 3<br>Jälgimine</th><td data-label="Mida saad">Regulaarne mõõtmine, raport ja sisuline hooldus. Määrab hinna kanalite ja küsimuste arv; lõpetada saab igal ajal.</td><td data-label="Hind">Kuutasu</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="piirid">
+  <div class="wrap">
+    <div class="section__head"><h2>Ausad piirid enne lepingut</h2></div>
+    <div class="grid grid--3">
+      <div class="stack" style="--stack:.6rem"><h3>Ei garanteeritud kohti</h3><p>Vastusmootorid muudavad oma mudelit pidevalt ja valivad allikaid ise. Me tõstame tõenäosust ja mõõdame muutust – kohta me ei müü.</p></div>
+      <div class="stack" style="--stack:.6rem"><h3>Ei musti skeeme</h3><p>Ostetud tsitaadid, võltsarvustused ja petturlikud kataloogid on keelatud ja jälgitavad. Kõik töö on valge mütsi põhimõttel – seetõttu on see aeglasem, aga püsiv.</p></div>
+      <div class="stack" style="--stack:.6rem"><h3>Ei garanteeritud säästu</h3><p>Me ei luba protsentuaalset liiklust ega müügi kasvu enne, kui sinu olukord on läbi vaadatud. Number sünnib esmakontrollist – ja ta on aus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <div class="section__head">
+      <h2>Korduma kippuvad küsimused</h2>
+      <p>AI SEO ja GEO – mis see on, kuidas mõõta ja mida see ei luba.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary><h3>Mis on AI SEO?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">AI SEO (tuntud ka kui GEO – generative engine optimization või AEO – answer engine optimization) on optimeerimine selleks, et sinu bränd ilmuks ChatGPT, Gemini, Perplexity ja Google AI vastustes ning saaks neis mainitud ja tsiteeritud. Google ise kirjutab oma ametlikus AI-optimeerimise juhendis, et AEO ja GEO on sisuliselt sama SEO – uus on ainult väljund, kuhu pead jõudma.</p>
+      </details>
+      <details>
+        <summary><h3>Kuidas AI-otsingus nähtavust mõõdetakse?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">Koostame teema- ja küsimuste komplekti, mida sinu kliendid päriselt küsivad, ning mõõdame regulaarselt, kas ja kus sinu bränd vastustes esineb: brändi mainimised, allikaviited ja osakaal võrreldes konkurentidega ChatGPTs, Gemini's, Perplexity's ja Google AI Overviewsis. Tulemus on selge tabel enne ja pärast – mitte aimdus.</p>
+      </details>
+      <details>
+        <summary><h3>Kas saate garanteerida kohad ChatGPTs?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">Ei ja keegi ei tohiks seda garanteerida. Vastusmootorid valivad allikaid ise ja muudavad oma mudelit pidevalt. Meie töö tõstab sinu sisu ja brändi mainitavuse tõenäosust tõestatud taktikatega ning mõõdab muutust ausalt – ka siis, kui number ei liigu. Garanteeritud kohta ostmist me ei paku.</p>
+      </details>
+      <details>
+        <summary><h3>Kas AI SEO asendab tavalist SEO-d?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">Ei asenda, vaid ehitab selle peale. Google ja teised vastusmootorid valivad allikaid samadest kvaliteetsetest, hästi struktureeritud ja usaldusväärsetest lehtedest. Kui tehniline vundament on korras, on AI-optimeerimine järgmine kiht: selged vastused, allikad, tsitaadid ja struktureeritud andmed.</p>
+      </details>
+      <details>
+        <summary><h3>Kui kiiresti tulemusi näeb?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">Esmane nähtavuse kontroll on kohe, kirjalik audit valmib kokkulepitud tähtajaks. Sisu- ja struktuurimuudatused hakkavad mõjuma nädalate jooksul, sest mudelid indekseerivad muudatusi oma rütmis. Tähtaegu ei müüa garantiina – iga samm on mõõdetav ja sul on õigus töö peatada.</p>
+      </details>
+      <details>
+        <summary><h3>Kui palju AI SEO maksab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+        <p class="answer">Esmakontroll on tasuta. Auditi ja sisutöö saad kirjaliku hinnaga enne töö algust – maht fikseeritakse, üllatusi arvel pole. Pidev jälgimine ja sisuline hooldus käivad kuutasuna, mille määrab mahu ja kanalite arv. Täpne pakkumine selgub pärast esmakontrolli, mitte enne.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="band__inner contact" style="justify-items:stretch;padding-block:clamp(3.5rem,2.5rem + 4vw,6rem)">
+      <div class="contact__info">
+        <h2>Kas sinu bränd on üldse nähtav?</h2>
+        <p>Tasuta esmakontroll annab vastuse viie minutiga: ilmub sinu nimi ChatGPT ja Google AI vastustes või mitte. Kui ei, siis miks – ja mis aitaks. Vaatame, kas sind leitakse: kirjuta oma ettevõtte ja valdkond – koostame esmase küsimuste komplekti ja anname tasuta ülevaate, kas sinu bränd AI-otsingus üldse esineb. Vaata ka <a href="/ai/" style="color:#fff">muid AI-teenuseid</a> ja <a href="/meist/#konsultatsioon" style="color:#fff">AI konsultatsiooni</a>.</p>
+        <ul class="contact__lines">
+          <li><svg class="i i--l" aria-hidden="true"><use href="/assets/icons.svg#mail"/></svg><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+          <li><svg class="i i--l" aria-hidden="true"><use href="/assets/icons.svg#map-pin"/></svg>Tallinn, Eesti</li>
+        </ul>
+        <div>
+          <h3 style="font-size:1.125rem;margin-bottom:.9rem">Mida saad vastu</h3>
+          <ul class="checks">
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Tasuta esmakontroll 10–15 küsimusega</li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Aus seis – ka siis, kui nähtavust pole</li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Selge hind ja maht enne tööd</li>
+          </ul>
         </div>
-    </header>
+      </div>
+      <form class="form" id="contact-form" novalidate>
+                      <div class="hp" aria-hidden="true">
+                          <label for="website">Veebileht</label>
+                          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                      </div>
+                      <div class="form__row form__row--2">
+                          <div class="field">
+                              <label for="name">Nimi</label>
+                              <input id="name" name="name" placeholder="Sinu nimi" required type="text" autocomplete="name" maxlength="100">
+                          </div>
+                          <div class="field">
+                              <label for="email">E-post</label>
+                              <input id="email" name="email" placeholder="sina@ettevote.ee" required type="email" autocomplete="email" maxlength="254" spellcheck="false">
+                          </div>
+                      </div>
+                      <div class="field">
+                          <label for="company">Ettevõte</label>
+                          <input id="company" name="company" placeholder="Ettevõtte nimi" type="text" autocomplete="organization" maxlength="100">
+                      </div>
+                      <div class="field">
+                          <label for="message">Sõnum</label>
+                          <textarea id="message" name="message" placeholder="Nt: soovin API-võtit turvatööriista jaoks / tahan agendipõhist auditit" required rows="4" maxlength="5000"></textarea>
+                      </div>
+                      <button class="btn btn--primary btn--block" type="submit">Saada päring</button>
+                      <p class="form__note">Vormi andmeid kasutame ainult päringule vastamiseks. Vaata <a href="/privaatsus/">privaatsustingimusi</a>.</p>
+                      <div id="form-success" role="status" class="form__status form__status--ok" hidden>Sõnum edukalt saadetud! Võtame peagi ühendust.</div>
+                      <div id="form-error" role="alert" class="form__status form__status--err" hidden>Sõnumi saatmine ebaõnnestus. Kontrolli väljad ja proovi hetke pärast uuesti.</div>
+                  </form>
+    </div>
+  </div>
+</section>
+</main>
 
-    <main id="main-content">
-        <!-- Hero -->
-        <section class="hero-dynamic-bg relative flex items-center justify-center pt-24 md:pt-32 pb-20 md:pb-28" id="hero">
-            <div class="max-w-5xl mx-auto px-4 text-center relative z-10 space-y-6 md:space-y-8">
-                <h1 class="text-[4.5rem] md:text-[5.25rem] lg:text-[7rem] font-bold tracking-tight leading-[1] text-deep-navy font-headline hero-word-reveal hero-reveal-1 text-balance break-words">
-                    Sinu bränd AI-otsingus.<br><span class="gradient-text italic">Seal, kus kliendid juba küsivad.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-light hero-word-reveal hero-reveal-2">
-                    AI SEO ja GEO teenus: audit, sisu ja jälgimine, et sinu ettevõte mainituks ChatGPT, Gemini, Perplexity ja Google AI vastustes – ilma garanteeritud kohtadeta, mõõdetava tulemusega.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 hero-word-reveal hero-reveal-3">
-                    <a class="btn-premium px-10 py-4 rounded-full text-xs font-bold shadow-xl shadow-primary/10 magnetic group relative overflow-hidden" href="#contact">
-                        <span class="relative z-10">Tasuta nähtavuse kontroll</span>
-                        <span class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></span>
-                    </a>
-                    <a class="px-10 py-4 rounded-full text-xs font-bold text-deep-navy bg-white/50 border border-deep-navy/10 hover:bg-white/80 hover:border-deep-navy/20 transition-all relative overflow-hidden group" href="#taktikad">
-                        <span class="relative z-10">Millised taktikad töötavad</span>
-                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                    </a>
-                </div>
-                <p class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant/60 hero-word-reveal hero-reveal-3">
-                    Tasuta esmakontroll · Kirjalik audit · Mõõdetav nähtavus
-                </p>
-            </div>
-        </section>
 
-        <!-- Trust strip -->
-        <section class="py-16 bg-white relative border-y border-slate-100">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="space-y-3 reveal">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">search</span>
-                        </div>
-                        <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">ChatGPT · Gemini · Perplexity</p>
-                    </div>
-                    <div class="space-y-3 reveal">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">fact_check</span>
-                        </div>
-                        <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Google AI Overviewsi audit</p>
-                    </div>
-                    <div class="space-y-3 reveal">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">verified</span>
-                        </div>
-                        <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Ainult ausad, valged taktikad</p>
-                    </div>
-                    <div class="space-y-3 reveal">
-                        <div class="w-12 h-12 mx-auto rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-2xl" aria-hidden="true">speed</span>
-                        </div>
-                        <p class="text-xs uppercase tracking-[0.15em] font-bold text-on-surface-variant/70">Esmakontroll kohe, audit paari nädalaga</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problem -->
-        <section class="py-16 bg-surface" id="probleem">
-            <div class="max-w-3xl mx-auto px-6 text-center space-y-5 reveal">
-                <h2 class="text-4xl md:text-5xl font-headline font-light tracking-tight text-deep-navy">Klikid <span class="italic">kaovad</span>, vastused jäävad</h2>
-                <p class="text-lg text-on-surface-variant font-light leading-relaxed">Google kuvab AI Overviewse järjest rohkemates vastustes ja lõikab otselinkide klikke: Seeri 2025. aasta uuring näitas 61% langust klikiarmäärus (1,76% → 0,61%), Ahrefsi 300 000 märksõna analüüs 34,5% langust ning osa päringuid lõppeb nulliklikiga kuni 83%. Samal ajal klõpsab vaid ligi 19% kasutajatest AI Overviewsis viidatud allikatele. Kui sinu bränd ei ole seal, kus vastus sünnib, oled sa nähtamatu ka siis, kui oled Googles teisel kohal. Praktilisi näiteid nähtavuse töökohtadest leiad <a class="text-primary font-bold underline underline-offset-4" href="/kasutusjuhud/">küber-AI kasutusjuhudest</a>.</p>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section class="py-24 bg-white relative border-b border-slate-100" id="teenused">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-14 max-w-3xl mx-auto space-y-5 reveal">
-                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Kolm tööd, <span class="italic">üks mõõdik</span></h2>
-                    <p class="text-xl text-on-surface-variant font-light">Kõik teenused lõpevad samas kohas: kas sinu bränd ilmub vastustes või mitte – ja mida järgmiseks teha.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-card rounded-4xl p-8 space-y-6 reveal">
-                        <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-3xl" aria-hidden="true">search</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">AI-nähtavuse audit</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Mõõdame, kus ja kuidas sinu bränd praegu vastusmootorites esineb, millised konkurendid seal mainitakse ja millised allikad neid toidavad. Väljund on kirjalik audit prioriseeritud parandustega – mitte sadaleheküljeline PDF ilma järjekorrata.</p>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Brändi mainimised 4 süsteemis</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Konkurentide võrdlus samadel küsimustel</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Parandused tähtsuse järjekorras</span></li>
-                        </ul>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-6 reveal">
-                        <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-3xl" aria-hidden="true">library_books</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Sisu ja tehniline alus</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Seame paika selle, mida vastusmootorid tegelikult loevad: selged vastused küsimustele, allikad ja tsitaadid, struktureeritud andmed, järjepidev brändi-üksus kogu veebis. Töö käib sinu olemasoleva sisu peal – uut sisse ei toodeta ilma sisuta, mida sa päriselt vajad.</p>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Küsimus-vastus struktuur ja skeemad</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Tsiteeritavad tsitaadid ja statistika</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Brändi-üksuse järjepidevus kogu veebis</span></li>
-                        </ul>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-6 reveal">
-                        <div class="w-14 h-14 rounded-full bg-sky-50 flex items-center justify-center text-primary border border-sky-100">
-                            <span class="material-symbols-outlined text-3xl" aria-hidden="true">fact_check</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Jälgimine ja hooldus</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Küsimuste komplekt käib regulaarselt läbi ja tulemus uueneb: mainimised, allikaviited, osakaal konkurentide suhtes. Kui number ei liigu, vaatame koos, miks – ja kas jätkata. Sul on alati õigus töö peatada.</p>
-                        <ul class="space-y-3 text-sm">
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Enne ja pärast võrdlus tabelis</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Uute teemade ja küsimuste lisamine</span></li>
-                            <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span><span class="text-on-surface-variant">Selge seis ka siis, kui see ei meeldi</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="text-center text-sm text-on-surface-variant/70 font-light mt-10 reveal">AI SEO on üks osa <a class="text-primary font-bold underline underline-offset-4" href="/ai/">hallatud AI-teenustest</a> – samas subsectionis pakume ka <a class="text-primary font-bold underline underline-offset-4" href="/idufirmadele/">AI-d idufirmadele</a>.</p>
-            </div>
-        </section>
-
-        <!-- Process -->
-        <section class="py-24 bg-surface" id="kuidas">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-14 max-w-3xl mx-auto space-y-5 reveal">
-                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Esmakontrollist <span class="italic">jälgimiseni</span></h2>
-                    <p class="text-xl text-on-surface-variant font-light">Kolm sammu, iga sammuga selge otsus – ka otsus lõpetada.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <div class="text-6xl font-headline font-black text-primary/20">01</div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Tasuta esmakontroll</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Valime 10–15 küsimust, mida sinu kliendid päriselt AI-lt küsivad, ja vaatame, kas sinu bränd seal praegu üldse esineb. Tulemus on konkreetne: olemas, osaliselt või mitte – koos põhjendusega.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <div class="text-6xl font-headline font-black text-primary/20">02</div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Audit ja töö</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Kirjalik audit hinna ja tähtajaga enne tööd. Seejärel rakendame parandused: sisustruktuur, skeemad, tsitaadid, brändi-üksus, kolmanda osapoole allikad. Kõik on dokumenteeritud.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <div class="text-6xl font-headline font-black text-primary/20">03</div>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Jälgimine</h3>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Küsimused käivad regulaarselt läbi, raport näitab muutust. Kui brändi mainitavus ei kasva, analüüsime takistust ja pakume välja järgmise sammu – või lõpetame ausalt.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tactics that work / don't -->
-        <section class="py-24 bg-white border-b border-slate-100" id="taktikad">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-14 max-w-3xl mx-auto space-y-5 reveal">
-                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Mis töötab. <span class="italic">Ja mis mitte.</span></h2>
-                    <p class="text-xl text-on-surface-variant font-light">Enamik 2026. aastal müüdavast AI-SEO-st on tõendamata. Meie teeme seda, millel on tõendid taga.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">check_circle</span>
-                            <h3 class="text-2xl font-headline font-bold text-deep-navy">Töötavad taktikad</h3>
-                        </div>
-                        <ul class="space-y-4 text-on-surface-variant font-light">
-                            <li><strong class="text-deep-navy">Tsiteeritav sisu:</strong> Princetoni GEO-uuring leidis, et usaldusväärse statistika, tsitaatide ja allikaviidete lisamine tõstis nähtavust kuni ~40%.</li>
-                            <li><strong class="text-deep-navy">Tugev tehniline vundament:</strong> Google'i ametlik AI-optimeerimise juhend kirjutab otse, et AEO ja GEO on SEO – kvaliteetne sisu, selged pealkirjad, struktureeritud andmed.</li>
-                            <li><strong class="text-deep-navy">Brändi-üksuse järjepidevus:</strong> sama nimi, kirjeldus ja allikad kogu veebis, teadmistepaneelis ja kataloogides – fragmenteerunud brändi nimetavad mudelid tagasihoidlikult.</li>
-                            <li><strong class="text-deep-navy">Kolmanda osapoole allikad:</strong> analüüs 21 000 brändimainimise põhjal näitas, et 85% AI-otsingu nähtavusest tuleb väljastpoolt sinu lehte – kataloogid, meedia, arvustused.</li>
-                        </ul>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-3xl text-on-surface-variant" aria-hidden="true">close</span>
-                            <h3 class="text-2xl font-headline font-bold text-deep-navy">Ei tööta (ega me ei tee)</h3>
-                        </div>
-                        <ul class="space-y-4 text-on-surface-variant font-light">
-                            <li><strong class="text-deep-navy">Garanteeritud kohad:</strong> keegi ei tea, kuidas mudel homme valib. Lubadus "esimesel kohal ChatGPTs" on müük, mitte töö.</li>
-                            <li><strong class="text-deep-navy">Massiivne AI-sisu tootmine:</strong> kogus ilma kvaliteedi ja autori pädevuseta ei ole tsiteeritav ja võib hoopis kahjustada.</li>
-                            <li><strong class="text-deep-navy">Võltsväärtused:</strong> võltsarvustused, ostetud tsitaadid, petturlikud kataloogid. Keelatud ja jälgitav – me ei puuduta.</li>
-                            <li><strong class="text-deep-navy">Imevõtmed:</strong> üks fail nimega llms.txt või üks skeem ei muuda midagi, kui sisu ja usaldus on puudu.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Measurement -->
-        <section class="py-16 bg-surface" id="mootmine">
-            <div class="max-w-3xl mx-auto px-6 text-center space-y-5 reveal">
-                <h2 class="text-4xl md:text-5xl font-headline font-light tracking-tight text-deep-navy">Mõõdame <span class="italic">mainimisi, mitte lootusi</span></h2>
-                <p class="text-lg text-on-surface-variant font-light leading-relaxed">Iga aruanne vastab kolmele küsimusele: kas sinu bränd ilmus vastustes, kas ta ilmus sagedamini kui eelmisel korral ja kas konkurendid ilmusid sinust rohkem. Mõõdikud on alati samad, et võrdlus püsiks aus. AI-süsteemidele ja inimestele loetav ülevaade sinu ettevõttest on juba <a class="text-primary font-bold underline underline-offset-4" href="/llms.txt">meie lehel olemas</a> – sinu lehele paneme paika samasuguse.</p>
-            </div>
-        </section>
-
-        <!-- Pricing -->
-        <section class="py-24 bg-white border-b border-slate-100" id="hind">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-14 max-w-3xl mx-auto space-y-5 reveal">
-                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Selge hind, <span class="italic">enne tööd</span></h2>
-                    <p class="text-xl text-on-surface-variant font-light">Turuorientiir: Eestis algab ühekordne SEO audit ligikaudu 300–800 eurost ja kuupõhine teenus 300–1500 eurost kuus. Meie oma hind selgub mahust – kirjalikult enne algust.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Samm 1</p>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Esmakontroll</h3>
-                        <div class="text-4xl font-headline font-black text-deep-navy">Tasuta</div>
-                        <p class="text-on-surface-variant leading-relaxed font-light">10–15 sinu kliendi päris küsimust, vastused neljast süsteemist ja aus seis: oled sa üldse nähtav? Kui ei, siis miks.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-5 ring-2 ring-primary reveal">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Samm 2 · enamik algab siit</p>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Audit + töö</h3>
-                        <div class="text-4xl font-headline font-black text-deep-navy">Fikseeritud</div>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Kirjalik audit prioriseeritud parandustega ning sisu- ja tehnilise aluse rakendamine. Maht ja hind kirjas enne algust, üllatusi arvel pole.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-5 reveal">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.25em] text-primary">Samm 3</p>
-                        <h3 class="text-2xl font-headline font-bold text-deep-navy">Jälgimine</h3>
-                        <div class="text-4xl font-headline font-black text-deep-navy">Kuutasu</div>
-                        <p class="text-on-surface-variant leading-relaxed font-light">Regulaarne mõõtmine, raport ja sisuline hooldus. Määrab hinna kanalite ja küsimuste arv; lõpetada saab igal ajal.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Boundaries -->
-        <section class="py-24 bg-surface" id="piirid">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-14 max-w-3xl mx-auto space-y-5 reveal">
-                    <h2 class="text-5xl md:text-6xl font-headline font-light tracking-tight text-deep-navy">Ausad piirid <span class="italic">enne lepingut</span></h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-card rounded-4xl p-8 space-y-4 reveal">
-                        <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">close</span>
-                        <h3 class="text-xl font-headline font-bold text-deep-navy">Ei garanteeritud kohti</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed font-light">Vastusmootorid muudavad oma mudelit pidevalt ja valivad allikaid ise. Me tõstame tõenäosust ja mõõdame muutust – kohta me ei müü.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-4 reveal">
-                        <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">close</span>
-                        <h3 class="text-xl font-headline font-bold text-deep-navy">Ei musti skeeme</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed font-light">Ostetud tsitaadid, võltsarvustused ja petturlikud kataloogid on keelatud ja jälgitavad. Kõik töö on valge mürgi põhimõttel – seetõttu on see aeglasem, aga püsiv.</p>
-                    </div>
-                    <div class="premium-card rounded-4xl p-8 space-y-4 reveal">
-                        <span class="material-symbols-outlined text-3xl text-primary" aria-hidden="true">close</span>
-                        <h3 class="text-xl font-headline font-bold text-deep-navy">Ei garanteeritud säästu</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed font-light">Me ei luba protsentuaalset liiklust ega müügi kasvu enne, kui sinu olukord on läbi vaadatud. Number sünnib esmakontrollist – ja ta on aus.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="py-32 bg-white relative" id="faq">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-24 max-w-3xl mx-auto space-y-6 reveal">
-                    <h2 class="text-5xl md:text-7xl font-medium text-deep-navy">Korduma kippuvad küsimused</h2>
-                    <div class="h-1 w-20 bg-primary mx-auto"></div>
-                    <p class="text-xl text-on-surface-variant font-light">
-                        AI SEO ja GEO – mis see on, kuidas mõõta ja mida see ei luba.
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Mis on AI SEO?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            AI SEO (tuntud ka kui GEO – generative engine optimization või AEO – answer engine optimization) on optimeerimine selleks, et sinu bränd ilmuks ChatGPT, Gemini, Perplexity ja Google AI vastustes ning saaks neis mainitud ja tsiteeritud. Google ise kirjutab oma ametlikus AI-optimeerimise juhendis, et AEO ja GEO on sisuliselt sama SEO – uus on ainult väljund, kuhu pead jõudma.
-                        </p>
-                    </details>
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kuidas AI-otsingus nähtavust mõõdetakse?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            Koostame teema- ja küsimuste komplekti, mida sinu kliendid päriselt küsivad, ning mõõdame regulaarselt, kas ja kus sinu bränd vastustes esineb: brändi mainimised, allikaviited ja osakaal võrreldes konkurentidega ChatGPTs, Gemini's, Perplexity's ja Google AI Overviewsis. Tulemus on selge tabel enne ja pärast – mitse aimdus.
-                        </p>
-                    </details>
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas saate garanteerida kohad ChatGPTs?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            Ei ja keegi ei tohiks seda garanteerida. Vastusmootorid valivad allikaid ise ja muudavad oma mudelit pidevalt. Meie töö tõstab sinu sisu ja brändi mainitavuse tõenäosust tõestatud taktikatega ning mõõdab muutust ausalt – ka siis, kui number ei liigu. Garanteeritud kohta ostmist me ei paku.
-                        </p>
-                    </details>
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kas AI SEO asendab tavalist SEO-d?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            Ei asenda, vaid ehitab selle peale. Google ja teised vastusmootorid valivad allikaid samadest kvaliteetsetest, hästi struktureeritud ja usaldusväärsetest lehtedest. Kui tehniline vundament on korras, on AI-optimeerimine järgmine kiht: selged vastused, allikad, tsitaadid ja struktureeritud andmed.
-                        </p>
-                    </details>
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui kiiresti tulemusi näeb?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            Esmane nähtavuse kontroll on kohe, kirjalik audit valmib kokkulepitud tähtajaks. Sisu- ja struktuurimuudatused hakkavad mõjuma nädalate jooksul, sest mudelid indekseerivad muudatusi oma rütmis. Tähtaegu ei müüa garantiina – iga samm on mõõdetav ja sul on õigus töö peatada.
-                        </p>
-                    </details>
-                    <details class="premium-card rounded-3xl p-8 group reveal">
-                        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-                            <h3 class="text-xl font-headline font-bold text-deep-navy leading-snug pr-4">Kui palju AI SEO maksab?</h3>
-                            <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0 transition-transform group-open:rotate-45" aria-hidden="true">add</span>
-                        </summary>
-                        <p class="mt-6 text-on-surface-variant leading-relaxed font-light">
-                            Esmakontroll on tasuta. Auditi ja sisutöö saad kirjaliku hinnaga enne töö algust – maht fikseeritakse, üllatusi arvel pole. Pidev jälgimine ja sisuline hooldus käivad kuutasuna, mille määrab mahu ja kanalite arv. Täpne pakkumine selgub pärast esmakontrolli, mitte enne.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- Light CTA -->
-        <section class="py-32 bg-surface relative overflow-hidden reveal">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(0,174,239,0.10),_transparent_50%)]"></div>
-            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 space-y-12">
-                <h2 class="text-5xl md:text-7xl font-headline font-black text-deep-navy leading-tight">Kas sinu bränd on <span class="italic text-primary">üldse nähtav?</span></h2>
-                <p class="text-xl text-on-surface-variant font-light max-w-2xl mx-auto">Tasuta esmakontroll annab vastuse viie minutiga: ilmub sinu nimi ChatGPT ja Google AI vastustes või mitte. Kui ei, siis miks – ja mis aitaks.</p>
-                <a class="btn-premium inline-block px-12 py-5 rounded-full text-xs font-bold tracking-widest uppercase shadow-2xl hover:-translate-y-1 transition-all duration-500" href="#contact">
-                    Küsi tasuta esmakontrolli
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="py-32 bg-white" id="contact">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-                <div class="space-y-12 reveal">
-                    <h2 class="text-6xl font-headline font-black text-deep-navy leading-tight">Vaatame, <span class="italic">kas sind leitakse</span></h2>
-                    <p class="text-xl text-on-surface-variant font-light leading-relaxed">
-                        Kirjuta oma ettevõtte ja valdkond – koostame esmase küsimuste komplekti ja anname tasuta ülevaate, kas sinu bränd AI-otsingus üldse esineb. Vaata ka <a class="text-primary font-bold underline underline-offset-4" href="/ai/">muid AI-teenuseid</a> ja <a class="text-primary font-bold underline underline-offset-4" href="/meist/#konsultatsioon">AI konsultatsiooni</a>.
-                    </p>
-                    <div class="space-y-10">
-                        <div class="flex items-center gap-8 group">
-                            <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                                <span class="material-symbols-outlined text-xl" aria-hidden="true">mail</span>
-                            </div>
-                            <a href="mailto:tehisabiline@gmail.com" class="text-xl font-headline font-bold text-deep-navy">tehisabiline@gmail.com</a>
-                        </div>
-                        <div class="flex items-center gap-8 group">
-                            <div class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                                <span class="material-symbols-outlined text-xl" aria-hidden="true">location_on</span>
-                            </div>
-                            <span class="text-xl font-headline font-bold text-deep-navy">Tallinn, Eesti</span>
-                        </div>
-                    </div>
-                    <div class="space-y-6 pt-8 border-t border-outline-variant">
-                        <h3 class="text-sm font-bold uppercase tracking-[0.2em] text-on-surface-variant/60">Mida saad vastu</h3>
-                        <div class="flex items-center gap-4">
-                            <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>
-                            <span class="text-sm font-medium text-on-surface-variant">Tasuta esmakontroll 10–15 küsimusega</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>
-                            <span class="text-sm font-medium text-on-surface-variant">Aus seis – ka siis, kui nähtavust pole</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="material-symbols-outlined text-primary text-xl" aria-hidden="true">check_circle</span>
-                            <span class="text-sm font-medium text-on-surface-variant">Selge hind ja maht enne tööd</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="premium-card p-12 rounded-4xl relative overflow-hidden reveal">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-                    <form class="space-y-8 relative z-10" id="contact-form">
-                        <div class="hidden" aria-hidden="true">
-                            <label for="website">Veebileht</label>
-                            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="space-y-3">
-                                <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="name">Nimi</label>
-                                <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="name" name="name" placeholder="Teie nimi" required type="text" autocomplete="name" maxlength="100">
-                            </div>
-                            <div class="space-y-3">
-                                <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="email">Email</label>
-                                <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="email" name="email" placeholder="teie@email.com" required type="email" autocomplete="email" maxlength="254">
-                            </div>
-                        </div>
-                        <div class="space-y-3">
-                            <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="company">Ettevõte</label>
-                            <input class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="company" name="company" placeholder="Ettevõtte nimi" type="text" autocomplete="organization" maxlength="100">
-                        </div>
-                        <div class="space-y-3">
-                            <label class="text-sm font-bold uppercase tracking-widest text-on-surface-variant/70 ml-1" for="message">Sõnum</label>
-                            <textarea class="w-full bg-transparent border-0 border-b border-outline focus:border-primary focus:ring-0 transition-all py-3 px-1 text-sm font-light" id="message" name="message" placeholder="Nt: soovime teada, kas meid mainitakse ChatGPT vastustes" required rows="3" maxlength="5000"></textarea>
-                        </div>
-                        <button class="w-full btn-premium py-6 rounded-full font-bold text-sm mt-8" type="submit">
-                            Saada päring
-                        </button>
-                        <p class="text-center text-xs text-on-surface-variant/60 font-light">Vormi andmeid kasutame ainult päringule vastamiseks. Vaata <a class="underline hover:text-primary" href="/privaatsus/">privaatsustingimusi</a>.</p>
-                        <div id="form-success" role="status" class="hidden text-center py-6 bg-primary/5 border border-primary/10 rounded-2xl text-primary font-bold text-sm">
-                            Sõnum edukalt saadetud! Võtame peagi ühendust.
-                        </div>
-                        <div id="form-error" role="alert" class="hidden text-center py-6 bg-red-50 border border-red-100 rounded-2xl text-red-600 font-bold text-sm">
-                            Sõnumi saatmine ebaõnnestus. Proovi hetke pärast uuesti.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="w-full py-24 bg-white text-on-surface border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
-                <div class="col-span-1 md:col-span-2 space-y-8">
-                    <div class="flex items-center gap-4">
-                        <img alt="Tehisabiline logo" width="64" height="64" class="w-10 h-10 object-contain" src="/assets/brand/favicon.png">
-                        <div class="text-2xl font-bold tracking-tighter font-headline uppercase text-deep-navy">Tehisabiline OÜ</div>
-                    </div>
-                    <p class="text-on-surface-variant text-lg font-light leading-relaxed max-w-sm">
-                        Hallatud AI-teenused Eesti ettevõtetele: assistent, teadmistebaas, automatiseerimine ja AI-otsingu nähtavus.
-                    </p>
-                </div>
-                <div class="space-y-8">
-                    <p class="font-bold text-deep-navy uppercase text-sm tracking-[0.3em]">Teenused</p>
-                    <nav aria-label="Teenuste lingid" class="flex flex-col space-y-4">
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/ai/">AI-teenused ettevõtetele</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/idufirmadele/">AI idufirmale</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/mudelid/">Küber-AI mudelid</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/kuberaudit/">Agendipõhine küberaudit</a>
-                    </nav>
-                </div>
-                <div class="space-y-8">
-                    <p class="font-bold text-deep-navy uppercase text-sm tracking-[0.3em]">Tehisabiline</p>
-                    <nav aria-label="Ettevõtte lingid" class="flex flex-col space-y-4">
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/meist/">Meist ja põhimõtted</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/privaatsus/">Privaatsus ja küpsised</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/kasutusjuhud/">Küber-AI kasutusjuhud</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a>
-                        <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-light tracking-wide" href="/llms.txt">AI-süsteemidele</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6 text-on-surface-variant text-xs font-bold uppercase tracking-[0.2em]">
-                <div>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</div>
-                <div>Viimati sisuliselt uuendatud <time datetime="2026-10-07">7. oktoobril 2026</time></div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Sticky CTA -->
-    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/40 backdrop-blur-2xl border-t border-white/20 py-4 px-6 hidden" id="sticky-cta">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
+<!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
             <div>
-                <strong class="text-deep-navy text-sm">Nähtavus AI-otsingus.</strong>
-                <span class="text-on-surface-variant text-xs ml-2">Esmakontroll on tasuta.</span>
+                <a class="brand" href="/" aria-label="Tehisabiline – avaleht"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span></a>
+                <p>Tsenseerimata küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
             </div>
-            <a class="btn-premium px-8 py-3 rounded-full text-[10px] font-bold" href="#contact">Küsi kontrolli</a>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/kuberaudit/">Agendipõhine küberaudit</a></li>
+                    <li><a href="/mudelid/">Küber-AI mudelid ja API</a></li>
+                    <li><a href="/ai/">AI-teenused ettevõtetele</a></li>
+                    <li><a href="/idufirmadele/">AI idufirmale</a></li>
+                    <li><a href="/ai/seo/">AI SEO teenus</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-07">7. oktoobril 2026</time></span>
         </div>
     </div>
-
-    <script src="/homepage.js?v=1cec4002" defer></script>
+</footer>
+<!-- /chrome:footer -->
+<script src="/site.js?v=3a1bb970" defer></script>
 </body>
 </html>

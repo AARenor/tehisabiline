@@ -8,11 +8,10 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Projekt ei vaj
 
 ## Arendus
 
-Paigalda sõltuvused ja genereeri Tailwind CSS:
+Sõltuvusi pole (puhas HTML/CSS/JS). Pärast päise/jaluse (`tools/chrome.mjs`) või CSS/JS muutmist:
 
 ```bash
-npm install
-npm run build:css
+npm run build:assets   # laiendab jagatud päise/jaluse ja lisab varadele sisuräsi (?v=…)
 ```
 
 SEO kontroll:
@@ -30,9 +29,10 @@ npm run submit:indexnow https://tehisabiline.ee/nis2/
 
 Peamised failid:
 
-- `index.html`, `index.js`, `index.css` — avaleht
+- `index.html` — avaleht; `site.css`, `site.js` — ühine disainisüsteem ja skript (Bricolage Grotesque + Hanken Grotesk + JetBrains Mono, iseseisvalt majutatud)
+- `assets/icons.svg` — SVG ikoonide sprite; `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
+- `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes)
 - alamkataloogid — staatilised sisulehed
-- `tailwind.config.js` — Tailwind konfiguratsioon
 - `tools/seo-check.mjs` — indexeeritavate lehtede kontroll
 - `vercel.json` — Vercel deploy seadistus
 

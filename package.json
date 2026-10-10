@@ -8,12 +8,9 @@
         "url": "https://github.com/AARenor/tehisabiline.git"
     },
     "scripts": {
-        "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind-input.css -o assets/css/tailwind.min.css --minify",
-        "build:assets": "npm run build:css && node tools/version-assets.mjs",
+        "build:chrome": "node tools/chrome.mjs",
+        "build:assets": "node tools/chrome.mjs && node tools/version-assets.mjs",
         "test:seo": "node tools/seo-check.mjs",
         "submit:indexnow": "node tools/submit-indexnow.mjs"
-    },
-    "devDependencies": {
-        "tailwindcss": "3.4.17"
     }
 }

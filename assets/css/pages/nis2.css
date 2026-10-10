@@ -1,0 +1,4 @@
+/* Keep the article grid constrained by the viewport; the wide data table scrolls within its own wrapper. */
+.article > * { min-width: 0; }
+.prose { min-width: 0; }
+.table-wrap { max-width: 100%; }

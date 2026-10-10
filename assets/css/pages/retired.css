@@ -1,0 +1,49 @@
+/* Retired (noindex) pages: legacy article classes mapped onto the design system. */
+.updated-line { margin-top: 1.5rem; font-size: .9rem; color: var(--muted); }
+.prose-section { margin-top: 3rem; }
+.prose-section > h2 { margin-bottom: 1rem; }
+.prose-section > * + * { margin-top: 1rem; }
+
+.content-grid, .step-grid, .related-links { display: grid; gap: 1rem; margin-top: 1.25rem; }
+@media (min-width: 700px) { .content-grid, .step-grid, .related-links { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.info-card, .number-card, .related-card, .toc-card, .service-cta {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.4rem;
+}
+.info-card h3, .number-card h3 { font-size: 1.15rem; margin-bottom: .5rem; letter-spacing: -.015em; }
+.info-card p, .number-card p { color: var(--text); font-size: 1rem; }
+.fit-card { background: var(--green-bg); border-color: transparent; }
+.not-fit-card { background: var(--red-bg); border-color: transparent; }
+.number-card { display: grid; gap: .25rem; }
+.number-card > span { order: 3; margin-top: .75rem; font-family: var(--font-mono); font-size: .8rem; color: var(--muted); }
+
+.related-card { display: grid; gap: .25rem; text-decoration: none; color: var(--text); transition: border-color .15s, background-color .15s; }
+.related-card strong { color: var(--ink); font-family: var(--font-display); font-size: 1.1rem; letter-spacing: -.015em; }
+.related-card:hover { border-color: var(--blue); background: var(--blue-wash); color: var(--text); }
+
+.faq-card { border-bottom: 1px solid var(--line); }
+.faq-card summary { display: flex; justify-content: space-between; gap: 1.5rem; padding: 1.1rem 0; cursor: pointer; list-style: none; font-weight: 600; color: var(--ink); }
+.faq-card summary::-webkit-details-marker { display: none; }
+.faq-card summary span[aria-hidden] { color: var(--blue); font-size: 1.4rem; line-height: 1; transition: transform .3s var(--ease-out); }
+.faq-card[open] summary span[aria-hidden] { transform: rotate(45deg); }
+.faq-card p { padding-bottom: 1.25rem; }
+.gap-4 { display: grid; gap: 0; border-top: 1px solid var(--line); }
+
+.service-cta { background: var(--blue-wash); border-color: transparent; padding: 1.75rem; display: grid; gap: 1rem; justify-items: start; }
+.toc-card { margin-top: 3rem; }
+.toc-card ul, .toc-card ol { padding-left: 1.2rem; display: grid; gap: .4rem; }
+
+.comparison-table th, .comparison-table td { min-width: 9rem; }
+.calculator { margin-top: 1.25rem; background: var(--mist); border-radius: var(--radius-l); padding: clamp(1.25rem, 1rem + 1.2vw, 2rem); display: grid; gap: 1.5rem; }
+.calculator-grid { display: grid; gap: 1rem; }
+@media (min-width: 700px) { .calculator-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.calculator-field { display: grid; gap: .4rem; }
+.calculator-field label { font-weight: 600; color: var(--ink); font-size: .95rem; }
+.calculator-field input { width: 100%; padding: .75rem .9rem; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--paper); font-size: 1rem; caret-color: var(--blue); }
+.calculator-field input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(10, 98, 208, .16); }
+.calculator-result { display: grid; gap: 1rem; }
+@media (min-width: 700px) { .calculator-result { grid-template-columns: 1fr 1fr; } }
+.calculator-result > div { background: var(--paper); border-radius: var(--radius); padding: 1rem 1.25rem; display: grid; gap: .25rem; }
+.calculator-result span { color: var(--muted); font-size: .9rem; }
+.calculator-result output { font-family: var(--font-display); font-weight: 700; font-size: 1.75rem; color: var(--blue); font-variant-numeric: tabular-nums; }
+.calculator-note { font-size: .9rem; color: var(--muted); }

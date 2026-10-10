@@ -4,44 +4,47 @@
     <meta charset="utf-8">
     <meta name="robots" content="noindex">
     <style>
+        @font-face { font-family: "Bricolage Grotesque"; font-weight: 200 800; src: url("../assets/fonts/bricolage-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+2000-206F, U+20AC; }
+        @font-face { font-family: "Bricolage Grotesque"; font-weight: 200 800; src: url("../assets/fonts/bricolage-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02FF; }
+        @font-face { font-family: "Hanken Grotesk"; font-weight: 100 900; src: url("../assets/fonts/hanken-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+2000-206F, U+20AC; }
+        @font-face { font-family: "Hanken Grotesk"; font-weight: 100 900; src: url("../assets/fonts/hanken-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02FF; }
         * { box-sizing: border-box; }
         html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
         body {
-            position: relative;
-            display: grid;
-            align-items: center;
-            padding: 74px 86px;
-            color: #001e2d;
-            background:
-                radial-gradient(circle at 14% 20%, rgba(0,174,239,.34), transparent 32%),
-                radial-gradient(circle at 86% 80%, rgba(43,105,88,.2), transparent 34%),
-                linear-gradient(145deg, #eef9fd 0%, #fbfdfe 55%, #e9f4f2 100%);
-            font-family: Inter, Arial, sans-serif;
+            display: grid; grid-template-columns: 1fr 470px; gap: 56px; align-items: center; padding: 0 72px;
+            color: #08204a; font-family: "Hanken Grotesk", sans-serif;
+            background: radial-gradient(760px 460px at 92% -6%, rgba(23,168,236,.22), transparent 62%), linear-gradient(180deg, #eef5ff, #ffffff);
         }
-        body::before {
-            position: absolute;
-            inset: 0;
-            content: "";
-            opacity: .65;
-            background-image: linear-gradient(rgba(0,30,45,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,30,45,.04) 1px, transparent 1px);
-            background-size: 42px 42px;
-            mask-image: linear-gradient(to bottom, #000, transparent 90%);
-        }
-        main { position: relative; z-index: 1; max-width: 980px; }
-        .brand { display: flex; align-items: center; gap: 18px; margin-bottom: 62px; font-size: 25px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
-        .brand img { width: 58px; height: 58px; object-fit: contain; }
-        h1 { max-width: 900px; margin: 0; font-family: Georgia, serif; font-size: 88px; line-height: .98; letter-spacing: -.045em; }
-        h1 em { color: #00658d; }
-        p { max-width: 870px; margin: 35px 0 0; color: #3f5665; font-size: 26px; line-height: 1.35; }
-        .url { position: absolute; right: 86px; bottom: 62px; color: #00658d; font-size: 20px; font-weight: 800; letter-spacing: .08em; }
+        .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 44px; font: 700 30px "Bricolage Grotesque"; letter-spacing: -.03em; }
+        .brand img { width: 44px; height: 44px; border-radius: 10px; }
+        h1 { margin: 0; font: 700 74px/1.02 "Bricolage Grotesque", sans-serif; letter-spacing: -.03em; }
+        h1 span { display: block; }
+        p { margin: 30px 0 0; max-width: 560px; color: #2f4262; font-size: 26px; line-height: 1.4; }
+        .url { position: absolute; left: 72px; bottom: 44px; color: #0a62d0; font-size: 22px; font-weight: 700; }
+        .sheet { background: #fff; border-radius: 20px; box-shadow: 0 2px 4px rgba(8,32,74,.06), 0 34px 70px -30px rgba(10,70,160,.38); overflow: hidden; }
+        .sheet header { display: flex; justify-content: space-between; align-items: center; padding: 22px 26px; border-bottom: 1px solid #d9e4f2; font: 650 23px "Bricolage Grotesque"; }
+        .chip { padding: 4px 13px; border-radius: 99px; font: 600 16px "Hanken Grotesk"; background: #dce9fb; color: #06336f; }
+        .row { display: flex; justify-content: space-between; align-items: center; padding: 20px 26px; border-bottom: 1px solid #d9e4f2; font-size: 21px; font-weight: 600; }
+        .row .chip.red { background: #fdecee; color: #b3202f; }
+        .row .chip.amber { background: #fff3dd; color: #8a4a00; }
+        .row .chip.green { background: #e5f6ee; color: #0b6a49; }
+        .foot { padding: 20px 26px; font-size: 18px; color: #4d6180; }
     </style>
 </head>
 <body>
     <main>
         <div class="brand"><img src="../assets/brand/favicon.png" alt="">Tehisabiline</div>
-        <h1>Tsenseerimata AI <em>küberturveks</em></h1>
-        <p>Tsenseerimata mudelid Eestis · API turvatööriistadele · agentparvedega auditid</p>
+        <h1><span>Küberaudit.</span><span>Tsenseerimata</span><span>küber-AI.</span></h1>
+        <p>API turvatööriistadele. Agendipõhised auditid inimese kontrolliga. Eestist.</p>
     </main>
     <div class="url">tehisabiline.ee</div>
+    <div class="sheet">
+        <header>Küberauditi kokkuvõte <span class="chip">Näide</span></header>
+        <div class="row">Uuendamata pluginad <span class="chip red">Kohe</span></div>
+        <div class="row">Nõrk admin-parool, 2FA puudub <span class="chip amber">7 päeva</span></div>
+        <div class="row">HTTP turvapäised puuduvad <span class="chip amber">7 päeva</span></div>
+        <div class="row">Varundus kontrollimata <span class="chip green">Plaani</span></div>
+        <div class="foot">Iga olulise leiu vaatas üle inimene</div>
+    </div>
 </body>
 </html>
