@@ -8,7 +8,7 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { extname, join, relative } from "node:path";
 
 const root = new URL("..", import.meta.url).pathname;
-const SKIP = new Set(["node_modules", ".git", ".vercel", ".opencode", "output", ".playwright-cli", "docs"]);
+const SKIP = new Set(["node_modules", ".git", ".vercel", ".opencode", ".impeccable", "output", ".playwright-cli", "docs"]);
 
 const MONTHS = ["jaanuaril", "veebruaril", "märtsil", "aprillil", "mail", "juunil", "juulil", "augustil", "septembril", "oktoobril", "novembril", "detsembril"];
 const longDate = (iso) => {
@@ -34,12 +34,12 @@ function header(path) {
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             ${NAV.map(link).join("\n            ")}
         </nav>
-        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus</a>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus${icon("arrow-right", "i i--go")}</a>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu">${icon("menu", "i i--open")}${icon("x", "i i--close")}</button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
         ${NAV.map(link).join("\n        ")}
-        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus${icon("arrow-right", "i i--go")}</a>
     </nav>
 </header>`;
 }

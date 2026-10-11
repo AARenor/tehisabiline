@@ -13,6 +13,8 @@ const assets = [
     "/site.css",
     "/site.js",
     "/assets/js/roi-calculator.js",
+    "/assets/js/hero-demo.js",
+    "/assets/icons.svg",
     ...readdirSync(join(root, "assets/css/pages"), { withFileTypes: true })
         .filter((entry) => entry.isFile() && entry.name.endsWith(".css"))
         .map((entry) => `/assets/css/pages/${entry.name}`),
@@ -27,7 +29,7 @@ const versions = new Map(assets.map((path) => [path, hashOf(path)]));
 
 function collectHtml(dir, out = []) {
     for (const entry of readdirSync(dir)) {
-        if (entry === "node_modules" || entry === ".git" || entry === ".vercel" || entry === ".opencode" || entry === "output" || entry === ".playwright-cli") continue;
+        if (entry === "node_modules" || entry === ".git" || entry === ".vercel" || entry === ".opencode" || entry === ".impeccable" || entry === "docs" || entry === "output" || entry === ".playwright-cli") continue;
         const full = join(dir, entry);
         if (statSync(full).isDirectory()) collectHtml(full, out);
         else if (extname(entry) === ".html") out.push(full);
@@ -41,9 +43,9 @@ for (const file of collectHtml(root)) {
     let fileChanged = false;
     for (const [path, hash] of versions) {
         const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        // Match href="/path" or href="/path?v=old" (same for src=), inside link/script tags only.
-        const pattern = new RegExp(`((?:href|src)=["'])${escaped}(?:\\?v=[a-f0-9]{8})?(["'])`, "g");
-        const next = html.replace(pattern, `$1${path}?v=${hash}$2`);
+        // Preserve SVG symbol fragments while replacing the content-hash query.
+        const pattern = new RegExp(`((?:href|src)=["'])${escaped}(?:\\?v=[a-f0-9]{8})?(#[^"']*)?(["'])`, "g");
+        const next = html.replace(pattern, `$1${path}?v=${hash}$2$3`);
         if (next !== html) {
             html = next;
             fileChanged = true;

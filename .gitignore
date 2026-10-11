@@ -6,3 +6,7 @@ output/
 .vercel
 .opencode/
 AGENTS.md
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/decision-*.json

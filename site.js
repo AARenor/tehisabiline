@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("nav-toggle");
     const menu = document.getElementById("mobile-menu");
 
-    const updateHeader = () => header?.classList.toggle("scrolled", window.scrollY > 8);
+    // .is-top lets the header go transparent over the ribbon; without JS it stays opaque.
+    const updateHeader = () => {
+        const scrolled = window.scrollY > 8;
+        header?.classList.toggle("scrolled", scrolled);
+        header?.classList.toggle("is-top", !scrolled);
+    };
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
 

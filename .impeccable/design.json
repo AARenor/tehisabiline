@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-11T00:00:00.000Z",
+  "title": "Design System: Tehisabiline",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Erk brändisinine", "canonical": "#0857f8", "tonalRamp": ["#00124c", "#002487", "#0636c0", "#0857f8", "#2f8cff", "#8ed0f8", "#dce7ff", "#f5f8ff"] },
+      "ink": { "role": "neutral", "displayName": "Tume tint", "canonical": "#090c24", "tonalRamp": ["#090c24", "#171a32", "#25283f", "#33364d", "#41445b", "#505269", "#6c6e83", "#898a9a"] },
+      "paper": { "role": "neutral", "displayName": "Puhas valge", "canonical": "#ffffff", "tonalRamp": ["#242424", "#3c3c3c", "#555555", "#6e6e6e", "#878787", "#a0a0a0", "#c0c0c0", "#ffffff"] },
+      "mist": { "role": "neutral", "displayName": "Hele udu", "canonical": "#f5f8ff", "tonalRamp": ["#171c2a", "#2d3342", "#444a59", "#5c6271", "#747a8a", "#8e94a4", "#bbc1d2", "#f5f8ff"] },
+      "red": { "role": "tertiary", "displayName": "Prioriteedipunane", "canonical": "#c21f31", "tonalRamp": ["#42040b", "#650914", "#8d1422", "#c21f31", "#d94f5c", "#e8878e", "#f7c5c7", "#fdebed"] },
+      "amber": { "role": "secondary", "displayName": "Prioriteedi merevaik", "canonical": "#934700", "tonalRamp": ["#351700", "#572b00", "#754000", "#934700", "#ad641e", "#c7874d", "#e7bd8a", "#fff1d6"] },
+      "green": { "role": "secondary", "displayName": "Staatusroheline", "canonical": "#0b6a49", "tonalRamp": ["#00261a", "#00422d", "#07563c", "#0b6a49", "#328b69", "#65ad8c", "#a5d7be", "#e3f5ec"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Host Grotesk pealkiri", "purpose": "Lehe- ja sektsioonipealkirjad." },
+      "body": { "displayName": "Hanken Grotesk tekst", "purpose": "Põhitekst, nupud ja pikem lugemine." },
+      "label": { "displayName": "Väike silt", "purpose": "Kompaktsed meta- ja prioriteedisildid." }
+    },
+    "shadows": [
+      { "name": "sheet", "value": "0 1px 2px rgba(9, 12, 36, .05), 0 26px 52px -24px rgba(8, 52, 170, .26)", "purpose": "Suuremate hõljuvate pindade sügavus." },
+      { "name": "pop", "value": "0 1px 2px rgba(9, 12, 36, .06), 0 12px 28px -14px rgba(8, 52, 170, .3)", "purpose": "Väiksemad esile tõstetud pinnad." },
+      { "name": "cta", "value": "0 1px 2px rgba(9, 12, 36, .14), 0 10px 24px -10px rgba(8, 87, 248, .62)", "purpose": "Sinine esmane tegevusnupp." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Lühikesed oleku- ja esiletõstmise üleminekud." },
+      { "name": "hero-demo", "value": "One-shot sequence settles after 4100ms; replay on demand; reduced motion starts at final state.", "purpose": "Avalehe demonstratsioon; mitte üldine lehemuster." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce; no travel or entrance animation, short opacity/color feedback only.", "purpose": "Austab kasutaja liikumise-eelistust." }
+    ],
+    "breakpoints": [
+      { "name": "split", "value": "900px" },
+      { "name": "desktop-header", "value": "980px" },
+      { "name": "grid-3", "value": "1000px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Sinine esmane tegevus, valge tekst ja pehme varju rõhk.",
+      "html": "<button class=\"ds-btn-primary\">Tasuta kaardistus</button>",
+      "css": ".ds-btn-primary{min-height:52px;padding:.8rem 1.5rem;border:1px solid transparent;border-radius:10px;background:var(--blue);color:#fff;font:600 1.0625rem/1.2 var(--font-text);box-shadow:var(--shadow-cta);cursor:pointer;transition:background-color .18s,transform .18s var(--ease-out)}.ds-btn-primary:hover{background:var(--blue-deep)}.ds-btn-primary:active{background:var(--blue-ink);transform:translateY(1px)}.ds-btn-primary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Valge alternatiivne tegevus õrna sinise servaga.",
+      "html": "<button class=\"ds-btn-secondary\">Küsi API-võtit</button>",
+      "css": ".ds-btn-secondary{min-height:52px;padding:.8rem 1.5rem;border:1px solid #c9d8f5;border-radius:10px;background:#fff;color:var(--blue);font:600 1.0625rem/1.2 var(--font-text);cursor:pointer;transition:background-color .18s,border-color .18s,color .18s}.ds-btn-secondary:hover{border-color:var(--blue);color:var(--blue-deep);background:var(--blue-wash)}.ds-btn-secondary:active{background:var(--blue-soft)}.ds-btn-secondary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Hele navigeerimisriba, aktiivne link sinise joonega.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Põhinavigatsioon\"><a href=\"#\" aria-current=\"page\">Küberaudit</a><a href=\"#\">Mudelid ja API</a></nav>",
+      "css": ".ds-nav{display:flex;gap:.15rem;align-items:center;font:500 1.0625rem/1.4 var(--font-text)}.ds-nav a{position:relative;padding:.55rem .9rem;border-radius:10px;color:#1c2440;text-decoration:none;transition:color .15s,background-color .15s}.ds-nav a:hover{color:var(--blue);background:rgba(8,87,248,.07)}.ds-nav a[aria-current=page]{color:var(--blue)}.ds-nav a[aria-current=page]:after{content:'';position:absolute;left:.9rem;right:.9rem;bottom:.15rem;height:2px;border-radius:2px;background:var(--blue)}.ds-nav a:focus-visible{outline:2px solid var(--blue);outline-offset:0}"
+    },
+    {
+      "name": "Mobile Navigation Toggle",
+      "kind": "button",
+      "refersTo": "navigation",
+      "description": "Valge ruudukujuline mobiilimenüü juhtnupp; avatud olekus sinine rõhk.",
+      "html": "<button class=\"ds-nav-toggle\" aria-expanded=\"false\" aria-label=\"Ava menüü\">☰</button>",
+      "css": ".ds-nav-toggle{display:inline-grid;place-items:center;width:46px;height:46px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.9);color:var(--ink);font:600 1.25rem/1 var(--font-text);cursor:pointer}.ds-nav-toggle:hover{border-color:var(--line-strong);background:#fff}.ds-nav-toggle[aria-expanded=true]{border-color:var(--blue);color:var(--blue);background:var(--blue-wash)}.ds-nav-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}"
+    },
+    {
+      "name": "Priority Chip",
+      "kind": "chip",
+      "refersTo": "chip-priority",
+      "description": "Väike pill prioriteedi või staatuse märkimiseks.",
+      "html": "<span class=\"ds-chip\">Kohe</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;justify-content:center;padding:.22rem .7rem;border-radius:999px;background:var(--blue-soft);color:var(--blue-ink);font:600 .8125rem/1.4 var(--font-text);white-space:nowrap}.ds-chip--red{background:var(--red-bg);color:var(--red)}.ds-chip--amber{background:var(--amber-bg);color:var(--amber)}.ds-chip--green{background:var(--green-bg);color:var(--green)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Valge, selge joonega sisend ja sinine fookusrõngas.",
+      "html": "<label class=\"ds-field\">E-post<input type=\"email\" placeholder=\"nimi@ettevote.ee\"></label>",
+      "css": ".ds-field{display:grid;gap:.4rem;color:var(--ink);font:600 .95rem/1.4 var(--font-text)}.ds-field input{width:100%;min-height:48px;padding:.75rem .9rem;border:1px solid var(--line-strong);border-radius:10px;background:var(--paper);color:var(--text);font:400 1rem/1.4 var(--font-text);transition:border-color .15s,box-shadow .15s}.ds-field input:hover{border-color:#8faee6}.ds-field input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(8,87,248,.16)}"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Valge sisupind peene joone ja mõõduka raadiusega.",
+      "html": "<article class=\"ds-card\"><h3>Inimese ülevaatus</h3><p>Iga oluline leid vaadatakse enne raportit üle.</p></article>",
+      "css": ".ds-card{padding:1.5rem;border:1px solid var(--line);border-radius:16px;background:var(--paper);color:var(--text);font:400 1.0625rem/1.6 var(--font-text)}.ds-card h3{margin:0 0 .75rem;color:var(--ink);font:700 1.3rem/1.15 var(--font-display);letter-spacing:-.02em}.ds-card p{margin:0;color:var(--muted)}"
+    },
+    {
+      "name": "Hero Demo Panel",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Avalehe ühekordse pilvekeeldumise ja piirangutega vastuse demonstratsiooni pind.",
+      "html": "<section class=\"ds-demo\" aria-label=\"Näidisvestlus\"><div class=\"ds-demo-prompt\">Kas minu API lubab volitamata ligipääsu?<button class=\"ds-demo-send\" type=\"button\" aria-label=\"Saada küsimus\"><svg class=\"ds-demo-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15M13 5l7 7-7 7\"/></svg></button></div><div class=\"ds-demo-answers\"><article class=\"ds-demo-card ds-cloud\"><strong>Pilve-AI</strong><p>Ma ei saa haavatavusi aidata.</p></article><article class=\"ds-demo-card ds-ours\"><strong>Tehisabiline</strong><p>Testi ainult oma süsteemi kirjaliku loaga.</p><span class=\"ds-chip\">Kohe</span></article></div></section>",
+      "css": ".ds-demo{display:grid;gap:1rem;padding:clamp(.85rem,.55rem + 1vw,1.6rem);border:1px solid rgba(255,255,255,.65);border-radius:22px;background:rgba(255,255,255,.64);box-shadow:var(--shadow-sheet);backdrop-filter:blur(12px)}.ds-demo-prompt{display:flex;align-items:center;gap:.85rem;padding:.5rem .5rem .5rem 1rem;border-radius:14px;background:#fff;color:var(--ink);font:500 1rem/1.35 var(--font-text);box-shadow:0 1px 2px rgba(9,12,36,.06),0 8px 20px -14px rgba(9,12,36,.25)}.ds-demo-send{display:grid;place-items:center;flex:none;width:52px;height:46px;border:0;border-radius:10px;background:var(--blue);color:#fff;cursor:pointer}.ds-demo-icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.ds-demo-send:hover{background:var(--blue-deep)}.ds-demo-send:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.ds-demo-answers{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1fr);gap:.8rem}.ds-demo-card{display:grid;align-content:start;gap:.85rem;padding:1rem;border-radius:14px;font:400 .975rem/1.45 var(--font-text)}.ds-cloud{background:rgba(225,232,244,.62);color:#4d5874}.ds-ours{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(8,87,248,.55),0 14px 30px -20px rgba(8,52,170,.5)}@media(max-width:559px){.ds-demo-answers{grid-template-columns:1fr}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Selge sinine töölaud",
+    "overview": "Tehisabiline ühendab tuttava tänapäevase AI-teenuse veebilehe selge, rahuliku lugemiskeskkonnaga. Valge pind ja tume tekst hoiavad pika eestikeelse sisu loetavana; erk sinine märgib tegevusi ja olulisemaid seoseid. Host Grotesk annab pealkirjadele iseloomu, Hanken Grotesk hoiab põhiteksti avatud ja loetavana.\n\nÜhine raamistik teenindab ettevõtteid, arendajaid, huvilisi ja rahastajaid: lihtne selgitus ees, tehniline tõendus järgmise sammuna. T-logo ja sinine on püsivad identiteedivalikud.",
+    "keyCharacteristics": ["Valge lugemispind ja selge sinine aktsent", "Suured tihedad pealkirjad, rahulik põhitekst", "Peened piirjooned ja mõõdukas pinnakõrgendus", "Liikumine on piiratud, kasutaja eelistust arvestav"],
+    "rules": [
+      { "name": "The Blue-For-Action Rule", "body": "Hoia tugev brändisinine tegevustel ja tähenduslikel esiletõstmistel; suurte lugemispindade taust jääb heledaks.", "section": "colors" },
+      { "name": "The Two-Font Rule", "body": "Kasuta Host Groteski pealkirjades ja Hanken Groteski tekstis; JetBrains Mono jääb koodinäidetele.", "section": "typography" }
+    ],
+    "dos": ["Do hoia lugemispinnad heledad ning kasuta sinist selgelt eristatavate tegevuste ja fookuse jaoks.", "Do säilita Host Grotesk / Hanken Grotesk rollijaotus ning olemasolevad skaleeruvad suurused.", "Do järgi laiuseid 900/980/1000px vastavalt paigutuse, päise ja kolmeveerulise võrgu vajadusele.", "Do säilita klaviatuurifookus ja `prefers-reduced-motion` toetus."],
+    "donts": ["Don't kasuta süsteemi üldise alusena tumedat hacker-teemat, rohelist koodiekraani ega loetavust vähendavat tumedat pinda.", "Don't paiguta mobiilivaates dekoratiivset ribbonit päise või pealkirja taha.", "Don't pane hero-demo näidet lõputult korduma: see on ühekordne sissejuhatus, mille saab soovi korral uuesti käivitada."]
+  }
+}

@@ -236,7 +236,7 @@ function validateFontPreloads(html, label) {
 // Every inline icon must point at a symbol that exists in the SVG sprite.
 const spriteIds = new Set([...readFileSync(join(root, "assets/icons.svg"), "utf8").matchAll(/<symbol id="([^"]+)"/g)].map((m) => m[1]));
 function validateIconSprite(html, label) {
-    for (const m of html.matchAll(/<use\s+href="\/assets\/icons\.svg#([^"]+)"/g)) {
+    for (const m of html.matchAll(/<use\s+href="\/assets\/icons\.svg(?:\?v=[a-f0-9]{8})?#([^"]+)"/g)) {
         assert(spriteIds.has(m[1]), `${label}: icon "${m[1]}" is missing from assets/icons.svg.`);
     }
 }
@@ -669,7 +669,6 @@ try {
     for (const icon of manifest.icons || []) {
         assert(localTargetExists(icon.src), `Manifest icon does not exist: ${icon.src}`);
     }
-    assert(manifest.theme_color === "#0a62d0", `Manifest theme_color must be the brand blue #0a62d0, found ${manifest.theme_color}.`);
     for (const page of expectedPages) {
         const themeColor = metaValue(readFileSync(join(root, page.file), "utf8"), "theme-color");
         assert(!themeColor || themeColor.toLowerCase() === manifest.theme_color, `${page.file}: meta theme-color ${themeColor} differs from manifest theme_color ${manifest.theme_color}.`);

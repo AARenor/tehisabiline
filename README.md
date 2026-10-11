@@ -29,8 +29,12 @@ npm run submit:indexnow https://tehisabiline.ee/nis2/
 
 Peamised failid:
 
-- `index.html` — avaleht; `site.css`, `site.js` — ühine disainisüsteem ja skript (Bricolage Grotesque + Hanken Grotesk + JetBrains Mono, iseseisvalt majutatud)
-- `assets/icons.svg` — SVG ikoonide sprite; `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
+- `index.html` — avaleht; `site.css`, `site.js` — ühine disainisüsteem ja skript (Host Grotesk + Hanken Grotesk + JetBrains Mono, iseseisvalt majutatud)
+- `assets/js/hero-demo.js` — avalehe demo (pilve-AI keeldub, Tehisabiline vastab, leiud ilmuvad üks kord); ilma JS-ita on kõik kohe nähtav
+- `assets/plates/ribbon.*` — sinine valguslint (PNG originaal + AVIF/WebP 900/1500 px); kasutavad hero, alamlehtede päis ja kontaktiriba
+- `assets/icons.svg` — SVG ikoonide sprite (Lucide); `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
+- `tools/og-card.html` — `assets/brand/tehisabiline-og.png` allikas (renderda 1200×630 ja salvesta selle faili peale)
+- `PRODUCT.md`, `DESIGN.md`, `.impeccable/` — toote- ja disainiotsused arendajatele (ei lähe Vercelisse, vt `.vercelignore`)
 - `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes)
 - alamkataloogid — staatilised sisulehed
 - `tools/seo-check.mjs` — indexeeritavate lehtede kontroll

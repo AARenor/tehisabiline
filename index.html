@@ -7,7 +7,7 @@
     <meta name="description" content="Küberaudit ning keeldudeta ja piirangutega küber-AI Eestis: agendipõhine audit inimese ülevaatusega, turvatööks häälestatud mudelid, planeeritav API.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
-    <meta name="theme-color" content="#0a62d0">
+    <meta name="theme-color" content="#0857f8">
     <link rel="canonical" href="https://tehisabiline.ee/">
 
     <meta property="og:type" content="website">
@@ -32,9 +32,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
     <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-    <link rel="preload" href="/assets/fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=7f6e359c">
+    <link rel="stylesheet" href="/site.css?v=1c1b70d6">
     <link rel="stylesheet" href="/assets/css/pages/contact.css?v=407ab6eb">
 
     <script type="application/ld+json">
@@ -358,8 +358,8 @@
             <a href="/nis2/">NIS2</a>
             <a href="/meist/">Meist</a>
         </nav>
-        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg></button>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
         <a href="/kuberaudit/">Küberaudit</a>
@@ -367,7 +367,7 @@
         <a href="/ai/">AI-teenused</a>
         <a href="/nis2/">NIS2</a>
         <a href="/meist/">Meist</a>
-        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
     </nav>
 </header>
 <!-- /chrome:header -->
@@ -375,70 +375,54 @@
 <main id="main-content">
 
 <section class="hero" id="hero">
-    <div class="wrap hero__grid">
-        <div>
-            <h1><span>Küberaudit.</span> <span>Keeldudeta ja piirangutega küber-AI.</span> <span>Eestis tulekul.</span></h1>
-            <p class="hero__lead">Küberturbele häälestatud AI-mudelid meie riistvaral tulekul. API turvatööriistadele. Agendipõhised auditid – inimese kontrolliga.</p>
-            <div class="cta-row">
-                <a class="btn btn--primary" href="#contact">Küsi API-võtit</a>
-                <a class="btn btn--secondary" href="#kuberaudit">Vaata küberauditit</a>
-            </div>
-            <ul class="hero__status">
-                <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Riistvara tellitud</li>
-                <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Tasuta kaardistus</li>
-                <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Eesti keeles</li>
-            </ul>
-        </div>
-
-        <div class="hero__visual">
-        <figure class="report" aria-label="Näide küberauditi kokkuvõttest">
-            <div class="report__head">
-                <span class="report__title">Küberauditi kokkuvõte</span>
-                <span class="chip">Näide</span>
-            </div>
-            <div class="report__sub">Näidisandmed, tehtud kirjaliku loa alusel</div>
-            <ol class="report__list">
-                <li class="finding">
-                    <strong>Uuendamata pluginad</strong>
-                    <span class="fix">Uuenda ja eemalda kasutamata pluginad</span>
-                    <span class="chip chip--red">Kohe</span>
-                </li>
-                <li class="finding">
-                    <strong>Nõrk admin-parool, 2FA puudub</strong>
-                    <span class="fix">Vaheta parool, lülita kaheastmeline kinnitus sisse</span>
-                    <span class="chip chip--amber">7&nbsp;päeva</span>
-                </li>
-                <li class="finding">
-                    <strong>HTTP turvapäised puuduvad</strong>
-                    <span class="fix">Lisa CSP ja HSTS päised</span>
-                    <span class="chip chip--amber">7&nbsp;päeva</span>
-                </li>
-                <li class="finding">
-                    <strong>Varundus kontrollimata</strong>
-                    <span class="fix">Proovi andmete taastamist ja pane see kalendrisse</span>
-                    <span class="chip chip--green">Plaani</span>
-                </li>
-            </ol>
-            <div class="report__foot">
-                <span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#badge-check"/></svg>Iga olulise leiu vaatas üle inimene</span>
-                <em>Korduskontroll hinnas</em>
-            </div>
-        </figure>
-        <div class="hero__chat" aria-hidden="true">
-            <p class="chat__msg chat__msg--cloud"><b>Pilve-AI</b>„Ma ei saa turvatestimisega aidata.“</p>
-            <p class="chat__msg chat__msg--ours"><b>Tehisabiline</b>Süsteem on sinu, luba kirjas – alustame paroolidest.</p>
-        </div>
-        </div>
-    </div>
-</section>
-
-<section class="section--tight" aria-label="Põhitõed">
     <div class="wrap">
-        <ul class="facts">
-            <li><strong>Oma riistvara Eestis</strong><span>Riistvara on tellitud, majutus tulekul Eestis.</span></li>
-            <li><strong>Keeldudeta ja piirangutega</strong><span>Seaduslik turvatöö saab vastuse, ebaseaduslik mitte.</span></li>
-            <li><strong>API arendajatele</strong><span>OpenAI-ühilduv otspunkt, võtmepõhine ligipääs.</span></li>
-            <li><strong>Agendid ja inimese kontroll</strong><span>Iga oluline leid läbib inimese ülevaatuse.</span></li>
+        <div class="hero__grid">
+            <div>
+                <h1><span>Küberaudit.</span> <span class="hero__accent">Keeldudeta ja piirangutega <span class="nowrap">küber-AI.</span></span></h1>
+                <p class="hero__lead">Agendid testivad nagu ründaja, inimene vaatab iga leiu üle.</p>
+                <div class="cta-row">
+                    <a class="btn btn--primary btn--lg" href="#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                    <a class="btn btn--secondary btn--lg" href="#api">Küsi API-võtit</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <picture class="hero__ribbon">
+                    <source type="image/avif" srcset="/assets/plates/ribbon-900.avif 900w, /assets/plates/ribbon-1500.avif 1500w" sizes="(min-width: 980px) 62vw, 150vw">
+                    <source type="image/webp" srcset="/assets/plates/ribbon-900.webp 900w, /assets/plates/ribbon-1500.webp 1500w" sizes="(min-width: 980px) 62vw, 150vw">
+                    <img src="/assets/plates/ribbon.png" width="1500" height="1500" alt="" decoding="async" fetchpriority="high">
+                </picture>
+                <figure class="demo" id="demo" aria-label="Näide: sama turvaküsimus pilve-AI-le ja Tehisabilisele">
+                    <div class="demo__prompt">
+                        <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#sparkles"/></svg>
+                        <p class="demo__q">Kas minu e-poe sisselogimine peab rünnakule vastu?</p>
+                        <button class="demo__send" type="button" aria-label="Näita näidet uuesti"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></button>
+                    </div>
+                    <div class="demo__answers">
+                        <div class="demo__card demo__card--cloud">
+                            <p class="demo__who"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#cloud"/></svg>Pilve-AI</p>
+                            <p class="demo__bubble" data-step="cloud"><span class="demo__typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="demo__text">Ma ei saa turvatestimisega aidata.</span></p>
+                            <p class="demo__note">Näide. Päris audit algab kirjalikust loast.</p>
+                        </div>
+                        <div class="demo__card demo__card--ours">
+                            <p class="demo__who"><img src="/assets/brand/favicon.png" width="64" height="64" alt="">Tehisabiline</p>
+                            <p class="demo__bubble" data-step="ours"><span class="demo__typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="demo__text">Süsteem on sinu ja luba on kirjas, alustame paroolist ja 2FA-st.</span></p>
+                            <ul class="demo__findings" aria-label="Näidisleiud">
+                                <li class="demo__finding" data-step="f1"><span class="chip chip--red">Kohe</span><span>2FA puudub administraatoritel</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                                <li class="demo__finding" data-step="f2"><span class="chip chip--amber">7&nbsp;päeva</span><span>Paroolikatsete piirang liiga leebe</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                                <li class="demo__finding" data-step="f3"><span class="chip">Plaani</span><span>Sisselogimise logimine üle vaadata</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                            </ul>
+                            <p class="demo__check" data-step="check"><span class="demo__dot" aria-hidden="true"><svg class="i"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg></span>Inimene vaatab iga leiu üle</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <ul class="hero__facts" aria-label="Põhitõed">
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#server"/></svg><strong>Oma riistvara Eestis</strong><span>Riistvara tellitud, majutus tulekul</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#box"/></svg><strong>OpenAI-ühilduv API</strong><span>Võtmepõhine ligipääs, pilootfaas</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#shield-check"/></svg><strong>Andmeid ei treenita edasi</strong><span>Sisendit töötleme ainult vastuseks</span></li>
         </ul>
     </div>
 </section>
@@ -451,7 +435,7 @@
             <p>Enamik Eesti ettevõtteid ei tea, kui hästi nende küberturvalisus päriselt vastu peab: uuendamata pluginad, nõrgad paroolid, puuduv kaheastmeline kinnitamine ja kontrollimata varundus on tüüpilised leiud.</p>
             <p><strong>Küberaudit</strong> on sinu süsteemide küberturvalisuse süsteemne kontroll. Meie <a href="/kuberaudit/">agendipõhine küberaudit</a> vaatab üle sinu veebilehe ja AI-rakenduse ning annab parandusplaani tähtsuse järjekorras – tavakeeles, koos korduskontrolliga.</p>
             <p>Kas sind puudutab ka Eesti küberturvalisuse seadus? Enamasti mitte otse – vaata <a href="/nis2/">NIS2 juhendit Eesti ettevõttele</a>.</p>
-            <p><a class="link-arrow" href="/kuberaudit/">Loe küberauditist <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></p>
+            <p><a class="link-arrow" href="/kuberaudit/">Loe küberauditist <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></p>
         </div>
         <div>
             <p class="note" style="margin-bottom:.75rem">Taust avalikest allikatest:</p>
@@ -518,14 +502,14 @@
                 <h3>Küberturbele häälestatud mudelid</h3>
                 <p>Keeldudeta ja piirangutega AI-mudelid, mis on peenhäälestatud küberturbe ülesannetele: haavatavused, logid, konfiguratsioonid, ründetestid. Avatud kaaludega alusmudel on <strong><a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a></strong>; keeldudeta turvakäitumise ja seadusliku töö piirangud häälestame meie. Riistvara on tellitud, majutus tulekul Eestis.</p>
                 <ul class="checks">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Peenhäälestatud küberturbele, mitte üldjutule</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Keeldudeta seadusliku turvatöö puhul</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Avatud kaaludega mudelid mootoriks</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Eesti riistvara tulekul, eesti- ja ingliskeelne tugi</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Peenhäälestatud küberturbele, mitte üldjutule</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Keeldudeta seadusliku turvatöö puhul</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Avatud kaaludega mudelid mootoriks</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Eesti riistvara tulekul, eesti- ja ingliskeelne tugi</li>
                 </ul>
                 <div class="cta-row">
                     <a class="btn btn--primary" href="#contact">Küsi ligipääsu</a>
-                    <a class="link-arrow" href="/mudelid/">Loe mudelitest <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/mudelid/">Loe mudelitest <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
                 </div>
             </div>
             <div class="service__visual">
@@ -546,15 +530,15 @@
                 <h3>API turvatööriistadele</h3>
                 <p>Ehitad skannerit, monitooringut või raportite koostajat? Ühenda meie mudelid otse: OpenAI-ga ühilduv otspunkt, võtmepõhine ligipääs ja kasutuspõhine arveldus. Pilootfaasis avame ligipääsu taotluse alusel.</p>
                 <ul class="checks">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>OpenAI-ühilduv – kood töötab paari reaga</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Võti, limiidid ja läbipaistev arveldus</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Logideta režiim valikuna</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Sihtrühm: arendajad ja kübertiimid</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Sinu andmeid ei treenita edasi</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>OpenAI-ühilduv – kood töötab paari reaga</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Võti, limiidid ja läbipaistev arveldus</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Logideta režiim valikuna</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Sihtrühm: arendajad ja kübertiimid</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Sinu andmeid ei treenita edasi</li>
                 </ul>
                 <div class="cta-row">
                     <a class="btn btn--primary" href="#contact">Küsi API-võtit</a>
-                    <a class="link-arrow" href="#vordlus">Miks mitte tavaline AI? <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="#vordlus">Miks mitte tavaline AI? <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
                 </div>
             </div>
             <div class="service__visual">
@@ -575,13 +559,13 @@
                 <h3>Agendipõhised auditid</h3>
                 <p><strong>Agendipõhine audit</strong> tähendab, et meie agendid otsivad haavatavusi nagu ründaja – sinu kirjalikul loal ja kokkulepitud piirides – ning iga olulise leiu vaatab enne raportit üle inimene. Uuendused, ligipääsud, süstikindlus, parandusplaan tähtsuse järjekorras.</p>
                 <ul class="checks">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Agendipõhine test nagu ründaja, sinu loal</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Iga leid inimese ülevaatusega</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Parandusplaan ja korduskontroll</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Agendipõhine test nagu ründaja, sinu loal</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Iga leid inimese ülevaatusega</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Parandusplaan ja korduskontroll</li>
                 </ul>
                 <div class="cta-row">
                     <a class="btn btn--primary" href="#contact">Telli audit</a>
-                    <a class="link-arrow" href="/kuberaudit/">Loe küberauditist <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/kuberaudit/">Loe küberauditist <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
                 </div>
             </div>
             <div class="service__visual">
@@ -601,13 +585,13 @@
                 <p>Hallatud AI-assistent, teadmistebaas ja automatiseerimine sinu andmetel: seome tehisintellekti dokumentide, töövoogude ja ligipääsuõigustega ning hooldame ise. Alustame tasuta kaardistusest ja ühest mõõdetavast piloodist.</p>
                 <p>Väiksele meeskonnale on eraldi <a href="/idufirmadele/">hallatud AI-teenus idufirmadele</a>. Kui tahad, et sinu ettevõtet mainitaks ChatGPT, Gemini ja Google AI vastustes, vaata <a href="/ai/seo/">AI SEO teenust</a>.</p>
                 <ul class="checks">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Assistent sinu dokumentide põhjal</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Teadmistebaas, mis uueneb ise</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Automatiseerimine inimese kinnitusega</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Assistent sinu dokumentide põhjal</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Teadmistebaas, mis uueneb ise</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Automatiseerimine inimese kinnitusega</li>
                 </ul>
                 <div class="cta-row">
                     <a class="btn btn--primary" href="#contact">Küsi kaardistust</a>
-                    <a class="link-arrow" href="/ai/">Loe AI-teenustest <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/ai/">Loe AI-teenustest <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
                 </div>
             </div>
             <div class="service__visual">
@@ -702,19 +686,19 @@
             <div>
                 <h3>Mida me teeme</h3>
                 <ul class="checks">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Ehitame küber-AI mudeleid oma riistvaral Eestis (riistvara tellitud).</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Pakume API-t arendajatele, kes ehitavad turvatööriistu.</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Auditeerime sinu süsteeme agendipõhiselt kirjaliku loa alusel.</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg>Anname iga leiu parandusplaanina, mida saab kontrollida.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Ehitame küber-AI mudeleid oma riistvaral Eestis (riistvara tellitud).</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Pakume API-t arendajatele, kes ehitavad turvatööriistu.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Auditeerime sinu süsteeme agendipõhiselt kirjaliku loa alusel.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Anname iga leiu parandusplaanina, mida saab kontrollida.</li>
                 </ul>
             </div>
             <div>
                 <h3>Mida me ei tee</h3>
                 <ul class="crosses">
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg>Ei aita ebaseadusliku tegevusega, sh võõraste süsteemide ründamisega.</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg>Ei testi süsteeme ilma omaniku kirjaliku loata.</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg>Ei mööda paroolidest, maksumüüridest ega ligipääsukontrollidest.</li>
-                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg>Ei luba 100% turvalisust ega veatut AI-d – sellist asja pole olemas.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei aita ebaseadusliku tegevusega, sh võõraste süsteemide ründamisega.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei testi süsteeme ilma omaniku kirjaliku loata.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei mööda paroolidest, maksumüüridest ega ligipääsukontrollidest.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei luba 100% turvalisust ega veatut AI-d – sellist asja pole olemas.</li>
                 </ul>
             </div>
         </div>
@@ -729,47 +713,47 @@
         </div>
         <div class="faq">
             <details>
-                <summary><h3>Mida tähendab keeldudeta ja piirangutega AI?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Mida tähendab keeldudeta ja piirangutega AI?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu meelevaldselt seaduslikust turvatööst, mille puhul pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Piirangutega tähendab, et ebaseaduslik tegevus on endiselt välistatud ning iga töö käib omaniku kirjaliku loa ja kirjalike piiride järgi.</p>
             </details>
             <details>
-                <summary><h3>Mis on tehisaru?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Mis on tehisaru?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Tehisaru on tehisintellekti kõnekeelne lühend. Sellel lehel tähendab see sama: keelemudelid ja AI-agendid ning nende turvaline kasutamine Eesti ettevõtetes.</p>
             </details>
             <details>
-                <summary><h3>Kus mudelid töötama hakkavad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kus mudelid töötama hakkavad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Mudelid hakkavad töötama meie enda riistvaral Eestis (riistvara tellitud) ega hakka sõltuma suurettevõtte pilvest. Päringud ei hakka liikuma Ameerika serveritesse ning reeglid paneme paika meie koos sinuga, mitte võõra platvormi järgi.</p>
             </details>
             <details>
-                <summary><h3>Milleks mudelid häälestatud on?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Milleks mudelid häälestatud on?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Küberturbe ülesannetele: haavatavused, logid, konfiguratsioonid, ründetestid. Alusmudel on avatud kaaludega Qwen3.8-27B. Täpsed mõõdikud lepime kokku piloodis.</p>
             </details>
             <details>
-                <summary><h3>Kellele API mõeldud on?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kellele API mõeldud on?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Arendajatele, kes ehitavad turvatööriistu: skannereid, monitooringut, raportite koostajaid. Otspunkt ühildub OpenAI liidesega, ligipääs on võtmepõhine ja arveldus kasutuspõhine. API pole veel avalik – pilootfaasis avame ligipääsu taotluse alusel. Sinu päringuid ei kasutata mudelite treenimiseks.</p>
             </details>
             <details>
-                <summary><h3>Mis on küberaudit?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Mis on küberaudit?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Küberaudit on sinu süsteemide küberturvalisuse süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süstikindlus ja andmeleke. Meie küberaudit on agendipõhine, iga olulise leiu vaatab üle inimene ja töö lõppeb parandusplaaniga tähtsuse järjekorras. Loe lähemalt <a href="/kuberaudit/">agendipõhise küberauditi lehelt</a>.</p>
             </details>
             <details>
-                <summary><h3>Kuidas agendipõhine audit käib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kuidas agendipõhine audit käib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja ning iga oluline leid läbib inimese ülevaatuse. Tulemus on parandusplaan tähtsuse järjekorras koos korduskontrolliga.</p>
             </details>
             <details>
-                <summary><h3>Kui palju see maksab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kui palju see maksab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise kirjas.</p>
             </details>
             <details>
-                <summary><h3>Mida te ei tee?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Mida te ei tee?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Ei aita ebaseadusliku tegevusega, ei testi võõraid süsteeme ilma omaniku kirjaliku loata ega mööda paroolidest ja ligipääsukontrollidest. Iga töö algab kirjalikest piiridest.</p>
             </details>
             <details>
-                <summary><h3>Kas NIS2 mind puudutab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kas NIS2 mind puudutab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Tõenäoliselt mitte otse: seadus kohustab suuri ja elutähtsaid tegijaid. Aga esmased meetmed kasvatavad iga ettevõtte vastupidavust. Loe <a href="/nis2/">NIS2 juhendit Eesti ettevõttele</a>.</p>
             </details>
             <details>
-                <summary><h3>Kas pakute AI konsultatsiooni ettevõttele?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary>
+                <summary><h3>Kas pakute AI konsultatsiooni ettevõttele?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
                 <p class="answer">Jah – Tallinnas ja üle Eesti: AI-agent, AI teadmistebaas ettevõtte dokumentidest ja automatiseerimine, alati ühest mõõdetavast piloodist. Loe lähemalt: <a href="/meist/#konsultatsioon">AI konsultatsioon</a>.</p>
             </details>
         </div>
@@ -777,9 +761,9 @@
 </section>
 
 <section class="section section--tight section--tint" aria-labelledby="loe-edasi"><div class="wrap faq-layout related"><h2 id="loe-edasi">Loe edasi</h2><ul class="related__list">
-  <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">12 kasutusjuhtu turvatöös, igaüks koos kontrollpunkti ja mõõdikuga.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
-  <li><a href="/nis2/"><span class="related__title">NIS2 ja Eesti ettevõte</span><span class="related__desc">Kellele küberturvalisuse seadus kohaldub, millised erandid on VKE-del ja millest alustada.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
-  <li><a href="/meist/"><span class="related__title">Meist ja tööpõhimõtted</span><span class="related__desc">Kes on Tehisabiline OÜ, kuidas töötame ja milliseid lubadusi me ei anna.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a></li>
+  <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">12 kasutusjuhtu turvatöös, igaüks koos kontrollpunkti ja mõõdikuga.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/nis2/"><span class="related__title">NIS2 ja Eesti ettevõte</span><span class="related__desc">Kellele küberturvalisuse seadus kohaldub, millised erandid on VKE-del ja millest alustada.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/meist/"><span class="related__title">Meist ja tööpõhimõtted</span><span class="related__desc">Kes on Tehisabiline OÜ, kuidas töötame ja milliseid lubadusi me ei anna.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
 </ul></div></section>
 
 <section class="band" id="contact">
@@ -791,18 +775,18 @@
                 <div class="contact__gets">
                     <h3>Mida saad vastu</h3>
                     <ul class="checks">
-                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>Tasuta esmane kaardistus</span></li>
-                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>Aus sobivuse hinnang – ka eitav</span></li>
-                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#check"/></svg><span>Selge hind ja ajakava kirjas</span></li>
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Tasuta esmane kaardistus</span></li>
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Aus sobivuse hinnang – ka eitav</span></li>
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Selge hind ja ajakava kirjas</span></li>
                     </ul>
                 </div>
             </div>
             <div class="mailcard">
                 <address class="mailcard__id">
                     <span class="mailcard__addr" translate="no">tehisabiline<wbr>@gmail.com</span>
-                    <span class="mailcard__place"><svg class="i i--s" aria-hidden="true"><use href="/assets/icons.svg#map-pin"/></svg>Tallinn, Eesti</span>
+                    <span class="mailcard__place"><svg class="i i--s" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#map-pin"/></svg>Tallinn, Eesti</span>
                 </address>
-                <a class="btn btn--primary mailcard__cta" href="mailto:tehisabiline@gmail.com?subject=Tasuta%20kaardistus%20%E2%80%93%20k%C3%BCberaudit%20v%C3%B5i%20k%C3%BCber-AI%20API&amp;body=Tere%21%0D%0A%0D%0ANimi%20ja%20ettev%C3%B5te%3A%20%0D%0AS%C3%BCsteem%20v%C3%B5i%20vajadus%3A%20%0D%0ASoovitud%20t%C3%A4htaeg%3A%20%0D%0A%0D%0A"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#mail"/></svg>Kirjuta e-kirjaga</a>
+                <a class="btn btn--primary mailcard__cta" href="mailto:tehisabiline@gmail.com?subject=Tasuta%20kaardistus%20%E2%80%93%20k%C3%BCberaudit%20v%C3%B5i%20k%C3%BCber-AI%20API&amp;body=Tere%21%0D%0A%0D%0ANimi%20ja%20ettev%C3%B5te%3A%20%0D%0AS%C3%BCsteem%20v%C3%B5i%20vajadus%3A%20%0D%0ASoovitud%20t%C3%A4htaeg%3A%20%0D%0A%0D%0A"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#mail"/></svg>Kirjuta e-kirjaga</a>
                 <div class="mailcard__brief">
                     <h3>Mida kirjas kirjeldada</h3>
                     <ul class="mailcard__list">
@@ -864,6 +848,7 @@
 </footer>
 <!-- /chrome:footer -->
 
-<script src="/site.js?v=34e49d41" defer></script>
+<script src="/site.js?v=038d2eaf" defer></script>
+<script src="/assets/js/hero-demo.js?v=1b6082fd" defer></script>
 </body>
 </html>
