@@ -4,3 +4,11 @@ package.json
 package-lock.json
 output/
 .opencode/
+AGENTS.md
+docs/
+.github/
+.playwright-cli/
+.superpowers/
+.impeccable/
+PRODUCT.md
+DESIGN.md
