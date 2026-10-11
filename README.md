@@ -37,3 +37,11 @@ Peamised failid:
 - `vercel.json` — Vercel deploy seadistus
 
 Kohalikuks eelvaateks võib kasutada näiteks `python3 -m http.server 4173` projekti juurkaustas.
+
+## Avalehe tutvustusvideo
+
+EffectCrafti 24-sekundiline video asub `assets/video/` kaustas (WebM, MP4 ja WebP-poster).
+Avaleht kasutab brauseri enda juhtnuppe, `preload="none"` ja fikseeritud kuvasuhet.
+Video ei käivitu automaatselt ega asenda indekseeritavat teksti; kirjeldus on HTML-is.
+VideoObject-metaandmed viitavad samadele avalikele video- ja posterifailidele.
+Failide muutmisel lisa versioon URL-i, et vältida eelmise versiooni brauserivahemälu.
