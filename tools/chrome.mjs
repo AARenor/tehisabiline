@@ -77,6 +77,7 @@ function footer(date) {
                 <ul>
                     <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
                     <li>Tallinn, Eesti</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
                     <li><a href="/#contact">Tasuta kaardistus</a></li>
                 </ul>
             </div>
