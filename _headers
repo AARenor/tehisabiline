@@ -1,0 +1,25 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), midi=(), gyroscope=(), magnetometer=(), accelerometer=()
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/assets/brand/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/assets/css/pages/*
+  Cache-Control: public, max-age=31536000, immutable
+/site.css
+  Cache-Control: public, max-age=31536000, immutable
+/site.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/roi-calculator.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/js/hero-demo.js
+  Cache-Control: public, max-age=31536000, immutable
+/assets/plates/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/assets/icons.svg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
