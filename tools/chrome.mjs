@@ -19,9 +19,8 @@ const longDate = (iso) => {
 const icon = (name, cls = "i") => `<svg class="${cls}" aria-hidden="true"><use href="/assets/icons.svg#${name}"/></svg>`;
 
 const NAV = [
-    ["/kuberaudit/", "Küberaudit"],
-    ["/mudelid/", "Mudelid ja API"],
-    ["/ai/", "AI-teenused"],
+    ["/pentestimine/", "Küberaudit / pentest"],
+    ["/mudelid/", "Küber-AI API"],
     ["/nis2/", "NIS2"],
     ["/meist/", "Meist"],
 ];
@@ -30,7 +29,7 @@ function header(path) {
     const link = ([href, label]) => `<a href="${href}"${path === href ? ' aria-current="page"' : ""}>${label}</a>`;
     return `<header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             ${NAV.map(link).join("\n            ")}
         </nav>
@@ -49,24 +48,24 @@ function footer(date) {
     <div class="wrap">
         <div class="site-footer__grid">
             <div>
-                <a class="brand" href="/"><img src="/assets/brand/favicon.png" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
-                <p>Keeldudeta ja piirangutega küber-AI mudelid Eestisse tulekul. API turvatööriistadele. Agendipõhised auditid.</p>
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
+                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
             </div>
             <nav aria-label="Teenuste lingid">
                 <p class="site-footer__title">Teenused</p>
                 <ul>
-                    <li><a href="/kuberaudit/">Agendipõhine küberaudit</a></li>
-                    <li><a href="/mudelid/">Küber-AI mudelid ja API</a></li>
-                    <li><a href="/ai/">AI-teenused ettevõtetele</a></li>
-                    <li><a href="/idufirmadele/">AI idufirmale</a></li>
-                    <li><a href="/ai/seo/">AI SEO teenus</a></li>
+                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
                 </ul>
             </nav>
             <nav aria-label="Ettevõtte lingid">
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kuberaudit/">Küberauditi ulatus</a></li>
                     <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
                     <li><a href="/nis2/">NIS2 juhend</a></li>
                     <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
                     <li><a href="/llms.txt">AI-süsteemidele</a></li>
@@ -101,6 +100,10 @@ function collect(dir, out = []) {
 }
 
 const region = (name) => new RegExp(`<!-- chrome:${name} -->[\\s\\S]*?<!-- /chrome:${name} -->`);
+const WIDGET = `<!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->`;
 
 const only = process.argv.slice(2).map((p) => join(process.cwd(), p));
 let touched = 0;
@@ -114,9 +117,14 @@ for (const file of only.length ? only : collect(root)) {
         html.match(/"dateModified":\s*"(\d{4}-\d{2}-\d{2})"/)?.[1];
     if (!date) throw new Error(`${file}: no footer date or dateModified found`);
 
-    const next = html
+    let next = html
         .replace(region("header"), () => `<!-- chrome:header -->\n${header(rel)}\n<!-- /chrome:header -->`)
         .replace(region("footer"), () => `<!-- chrome:footer -->\n${footer(date)}\n<!-- /chrome:footer -->`);
+    if (region("widget").test(next)) {
+        next = next.replace(region("widget"), () => WIDGET);
+    } else if (next.includes("</body>")) {
+        next = next.replace("</body>", () => `${WIDGET}\n</body>`);
+    }
     if (next !== html) {
         writeFileSync(file, next);
         touched++;

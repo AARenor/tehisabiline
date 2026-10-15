@@ -33,9 +33,9 @@ const STALE_DAYS = 180;
 const HEAVY_IMG_KB = 200;
 const DEAD_KB = 50;
 const LAZY_MIN_WIDTH = 400;
-const MONEY_PAGES = ["/mudelid/", "/kuberaudit/"];
+const MONEY_PAGES = ["/pentestimine/", "/mudelid/", "/kuberaudit/"];
 const MONEY_MIN_INBOUND = 5;
-const SKIP_DIRS = new Set([".git", ".opencode", ".playwright-cli", ".vercel", "node_modules", "output", "tools"]);
+const SKIP_DIRS = new Set([".git", ".opencode", ".playwright-cli", ".vercel", "docs", "node_modules", "output", "tools"]);
 
 const warnings = [];
 const failures = [];
@@ -61,8 +61,17 @@ function meta(html, key) {
     return m?.[0].match(/content=["']([^"']*)["']/i)?.[1] ?? "";
 }
 
+let sitemap = "";
+try {
+    sitemap = read(join(root, "sitemap.xml"));
+} catch (e) {
+    failures.push(`cannot read sitemap.xml: ${e.message}`);
+}
+const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+// Inspect published HTML independently of the sitemap so an omitted public page
+// is still detected as an orphan. Private docs are excluded by walk().
 const allFiles = walk(root);
-const pageFiles = allFiles.filter((p) => p.endsWith("index.html") || p.endsWith("404.html"));
+const pageFiles = allFiles.filter((file) => file.endsWith("index.html") || file.endsWith("404.html"));
 
 // --- 1. hard gates -----------------------------------------------------------
 try {
@@ -74,13 +83,6 @@ try {
 }
 
 // --- 2a. title/description lengths ------------------------------------------
-let sitemap = "";
-try {
-    sitemap = read(join(root, "sitemap.xml"));
-} catch (e) {
-    failures.push(`cannot read sitemap.xml: ${e.message}`);
-}
-const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 let audited = 0;
 for (const file of pageFiles) {
     const html = read(file);
@@ -167,20 +169,27 @@ for (const file of pageFiles) {
             if (kb > HEAVY_IMG_KB) heavy.push(`${src.slice(1)}: ${kb}KB`);
         }
     };
-    for (const m of html.matchAll(/<(img|source)\b[^>]*>/gi)) {
-        const tag = m[0];
-        const src = tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] ?? "";
-        weigh(src);
-        for (const mm of tag.matchAll(/srcset=["']([^"']+)["']/gi)) {
-            for (const entry of mm[1].split(",")) {
-                const u = entry.trim().split(/\s+/)[0];
-                if (u) weigh(u);
-            }
+    for (const m of html.matchAll(/<picture\b[^>]*>([\s\S]*?)<\/picture>|<img\b[^>]*>/gi)) {
+        const picture = m[0].startsWith("<picture");
+        const markup = m[0];
+        const img = picture ? markup.match(/<img\b[^>]*>/i)?.[0] ?? "" : markup;
+        if (!img) continue;
+        const sourceTags = picture ? [...markup.matchAll(/<source\b[^>]*>/gi)].map((match) => match[0]) : [];
+        const sourceUrls = sourceTags.flatMap((tag) => {
+            const srcset = tag.match(/\bsrcset=["']([^"']+)["']/i)?.[1] ?? "";
+            return srcset.split(",").map((entry) => entry.trim().split(/\s+/)[0]).filter(Boolean);
+        });
+        const fallbackSrc = img.match(/\bsrc=["']([^"']+)["']/i)?.[1] ?? "";
+        // Picture sources are candidates; the fallback is requested only if no source matches.
+        for (const src of sourceUrls.length ? sourceUrls : [fallbackSrc]) weigh(src);
+        const displayedSrc = sourceUrls[0] ?? fallbackSrc;
+        if (!displayedSrc.startsWith("/assets/")) continue;
+        const width = parseInt(img.match(/\bwidth=["'](\d+)["']/i)?.[1] ?? "0", 10);
+        const isPriority = /\bfetchpriority=["']high["']/i.test(img) || /\bfetchpriority=["']high["']/i.test(markup);
+        const isLazy = /\bloading=["']lazy["']/i.test(img);
+        if (width >= LAZY_MIN_WIDTH && !isLazy && !isPriority) {
+            noLazy.push(`${rel(file)}: large content img missing loading=lazy (${displayedSrc})`);
         }
-        if (!/^<img\b/i.test(tag)) continue;
-        if (!src.startsWith("/assets/")) continue;
-        const w = parseInt(tag.match(/\bwidth=["'](\d+)["']/i)?.[1] ?? "0", 10);
-        if (w >= LAZY_MIN_WIDTH && !/\bloading=["']lazy["']/i.test(tag)) noLazy.push(`${rel(file)}: large img missing loading=lazy (${src})`);
     }
 }
 if (heavy.length) warnings.push(`Heavy images (>${HEAVY_IMG_KB}KB):\n- ` + heavy.join("\n- "));

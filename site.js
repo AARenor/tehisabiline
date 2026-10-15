@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         toggle.addEventListener("click", () => setMenu(toggle.getAttribute("aria-expanded") !== "true"));
         menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+        document.addEventListener("pointerdown", (event) => {
+            if (!header?.contains(event.target)) setMenu(false);
+        });
+        header?.addEventListener("focusout", () => {
+            queueMicrotask(() => {
+                if (!header.contains(document.activeElement)) setMenu(false);
+            });
+        });
         document.addEventListener("keydown", (event) => {
             if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
                 setMenu(false);

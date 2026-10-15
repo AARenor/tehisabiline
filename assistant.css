@@ -1,0 +1,508 @@
+/* Tehisabiline veebiassistent — /assistant.css
+   Kasutab saidi disainitókeneid (:root muutujad site.css-ist).
+   Klassieesliide: .ta- (tehisabiline assistant) */
+
+.ta-launcher {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue, #0857f8), var(--blue-deep, #0645d6));
+  box-shadow: var(--shadow-cta, 0 10px 24px -10px rgba(8, 87, 248, 0.62));
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.ta-launcher:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+.ta-launcher:focus-visible {
+  outline: 2px solid var(--blue, #0857f8);
+  outline-offset: 3px;
+}
+.ta-launcher svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.ta-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 92px;
+  z-index: 91;
+  width: min(408px, calc(100vw - 32px));
+  max-height: min(680px, calc(100dvh - 132px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--paper, #fff);
+  border: 1px solid var(--line, #e1e8f4);
+  border-radius: var(--radius-xl, 22px);
+  box-shadow: var(--shadow-sheet, 0 26px 52px -24px rgba(8, 52, 170, 0.26));
+  color: var(--text, #2c3552);
+  font-family: var(--font-text, "Hanken Grotesk", system-ui, sans-serif);
+}
+.ta-panel[hidden],
+.ta-panel [hidden] {
+  display: none !important;
+}
+.ta-panel.ta-enter {
+  animation: ta-in 0.22s ease;
+}
+@keyframes ta-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ta-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  background: var(--blue-wash, #eef4ff);
+  border-bottom: 1px solid var(--line, #e1e8f4);
+}
+.ta-mark {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--font-display, "Host Grotesk", sans-serif);
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--blue, #0857f8), var(--navy, #0b1538));
+}
+.ta-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  flex: 1;
+}
+.ta-title strong {
+  font-family: var(--font-display, "Host Grotesk", sans-serif);
+  font-size: 0.95rem;
+  color: var(--ink, #090c24);
+  line-height: 1.2;
+}
+.ta-title span {
+  font-size: 0.78rem;
+  color: var(--muted, #56617f);
+}
+.ta-close {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--muted, #56617f);
+  background: transparent;
+}
+.ta-close:hover {
+  background: var(--mist-2, #e9f0fe);
+  color: var(--ink, #090c24);
+}
+.ta-close:focus-visible {
+  outline: 2px solid var(--blue, #0857f8);
+  outline-offset: 2px;
+}
+.ta-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ta-log {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 14px;
+  background: var(--mist, #f5f8ff);
+}
+
+.ta-msg {
+  max-width: 86%;
+  padding: 10px 13px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  word-break: break-word;
+}
+.ta-msg--bot {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid var(--line, #e1e8f4);
+  border-bottom-left-radius: 6px;
+}
+.ta-msg--user {
+  align-self: flex-end;
+  background: var(--blue, #0857f8);
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+.ta-msg a {
+  color: var(--blue-deep, #0645d6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ta-msg--user a {
+  color: var(--blue-soft, #dce7ff);
+}
+.ta-msg strong {
+  font-weight: 650;
+}
+
+.ta-src {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.ta-src a {
+  font-size: 0.76rem;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong, #c7d3e8);
+  background: var(--blue-wash, #eef4ff);
+  color: var(--blue-ink, #0a2f8f);
+  text-decoration: none;
+}
+.ta-src a:hover {
+  border-color: var(--blue, #0857f8);
+}
+
+.ta-typing {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  min-height: 1.2em;
+}
+.ta-typing i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted, #56617f);
+  opacity: 0.35;
+  animation: ta-blink 1.2s infinite;
+}
+.ta-typing i:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.ta-typing i:nth-child(3) {
+  animation-delay: 0.36s;
+}
+@keyframes ta-blink {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+    transform: none;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+}
+
+.ta-notice {
+  align-self: center;
+  max-width: 92%;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted, #56617f);
+}
+.ta-notice a {
+  color: var(--blue-deep, #0645d6);
+}
+
+.ta-compose {
+  border-top: 1px solid var(--line, #e1e8f4);
+  background: #fff;
+  padding: 10px 12px 8px;
+}
+.ta-inputrow {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+.ta-input {
+  flex: 1;
+  resize: none;
+  min-height: 44px;
+  max-height: 120px;
+  padding: 11px 12px;
+  border: 1px solid var(--line-strong, #c7d3e8);
+  border-radius: 12px;
+  font: 400 0.95rem/1.4 var(--font-text, "Hanken Grotesk", system-ui, sans-serif);
+  color: var(--ink, #090c24);
+  background: #fff;
+}
+.ta-input:focus {
+  outline: none;
+  border-color: var(--blue, #0857f8);
+  box-shadow: 0 0 0 4px rgba(8, 87, 248, 0.12);
+}
+.ta-send {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #fff;
+  background: var(--blue, #0857f8);
+}
+.ta-send:hover {
+  background: var(--blue-deep, #0645d6);
+}
+.ta-send:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.ta-send:focus-visible {
+  outline: 2px solid var(--blue, #0857f8);
+  outline-offset: 2px;
+}
+.ta-send svg {
+  width: 20px;
+  height: 20px;
+}
+.ta-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 2px 2px;
+  font-size: 0.74rem;
+  color: var(--muted, #56617f);
+}
+.ta-foot a,
+.ta-foot button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--blue-deep, #0645d6);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ta-foot a:focus-visible,
+.ta-foot button:focus-visible {
+  outline: 2px solid var(--blue, #0857f8);
+  outline-offset: 2px;
+}
+
+.ta-lead {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 14px;
+  background: var(--mist, #f5f8ff);
+  display: grid;
+  gap: 11px;
+  align-content: start;
+}
+.ta-lead label {
+  display: grid;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink, #090c24);
+}
+.ta-lead input,
+.ta-lead textarea {
+  padding: 11px 12px;
+  border: 1px solid var(--line-strong, #c7d3e8);
+  border-radius: 12px;
+  font: 400 0.95rem/1.4 var(--font-text, "Hanken Grotesk", system-ui, sans-serif);
+  color: var(--ink, #090c24);
+  background: #fff;
+  min-height: 46px;
+}
+.ta-lead textarea {
+  resize: vertical;
+  min-height: 74px;
+}
+.ta-lead input:focus,
+.ta-lead textarea:focus {
+  outline: none;
+  border-color: var(--blue, #0857f8);
+  box-shadow: 0 0 0 4px rgba(8, 87, 248, 0.12);
+}
+.ta-lead .ta-consent {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--muted, #56617f);
+}
+.ta-lead .ta-consent input {
+  min-height: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--blue, #0857f8);
+}
+.ta-lead .ta-consent a {
+  color: var(--blue-deep, #0645d6);
+}
+.ta-submit {
+  min-height: 48px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font: 600 1rem var(--font-display, "Host Grotesk", sans-serif);
+  background: var(--blue, #0857f8);
+  box-shadow: var(--shadow-cta, 0 10px 24px -10px rgba(8, 87, 248, 0.62));
+}
+.ta-submit:hover {
+  background: var(--blue-deep, #0645d6);
+}
+.ta-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+}
+.ta-submit:focus-visible,
+.ta-back:focus-visible {
+  outline: 2px solid var(--blue, #0857f8);
+  outline-offset: 2px;
+}
+.ta-back {
+  border: 0;
+  background: none;
+  padding: 4px 0;
+  justify-self: start;
+  cursor: pointer;
+  color: var(--blue-deep, #0645d6);
+  font: 500 0.86rem var(--font-text, sans-serif);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.ta-err {
+  font-size: 0.82rem;
+  color: var(--red, #c21f31);
+}
+.ta-hint {
+  font-size: 0.78rem;
+  color: var(--muted, #56617f);
+}
+.ta-success {
+  flex: 1;
+  display: grid;
+  gap: 10px;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 26px 18px;
+  background: var(--mist, #f5f8ff);
+}
+.ta-success .ta-ok {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green-bg, #e3f5ec);
+  color: var(--green, #0b6a49);
+}
+.ta-success .ta-ok svg {
+  width: 26px;
+  height: 26px;
+}
+.ta-success strong {
+  font-family: var(--font-display, "Host Grotesk", sans-serif);
+  font-size: 1.05rem;
+  color: var(--ink, #090c24);
+}
+.ta-success p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted, #56617f);
+  max-width: 28ch;
+}
+.ta-success button {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font: 600 0.95rem var(--font-display, "Host Grotesk", sans-serif);
+  background: var(--blue, #0857f8);
+}
+
+.ta-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 599px) {
+  .ta-launcher {
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+  }
+  .ta-panel {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    max-height: 84dvh;
+    border-radius: var(--radius-xl, 22px) var(--radius-xl, 22px) 0 0;
+    border-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ta-panel.ta-enter {
+    animation: none;
+  }
+  .ta-launcher {
+    transition: none;
+  }
+  .ta-typing i {
+    animation: none;
+    opacity: 0.6;
+  }
+}
+
+@media print {
+  .ta-launcher,
+  .ta-panel {
+    display: none !important;
+  }
+}

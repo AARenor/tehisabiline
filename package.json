@@ -9,6 +9,7 @@
     },
     "scripts": {
         "build:chrome": "node tools/chrome.mjs",
+        "build:brand": "node tools/render-brand.mjs && npm run build:assets",
         "build:assets": "node tools/chrome.mjs && node tools/version-assets.mjs",
         "test:seo": "node tools/seo-check.mjs",
         "submit:indexnow": "node tools/submit-indexnow.mjs"

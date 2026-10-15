@@ -1,7 +1,7 @@
 # Tehisabiline OÜ — https://tehisabiline.ee/
-# Public marketing content is open to search engines and AI answer/assistant agents.
-# Nothing is disallowed: pages, /assets/ (CSS, fonts, icons, images), llms.txt and llms-full.txt are all crawlable.
-# Retired pages carry a noindex meta tag instead of a Disallow, so crawlers can see it.
+# Public pages are available to search engines and AI answer/assistant agents.
+# Nothing is disallowed: pages, /assets/ (CSS, fonts, icons, images), llms.txt and llms-full.txt are crawlable.
+# Retired AI-service pages have been moved out of the published website.
 # Machine-readable overview: https://tehisabiline.ee/llms.txt
 
 User-agent: *

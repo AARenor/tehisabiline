@@ -1,4 +1,4 @@
-// Homepage hero demo: the question is sent, the cloud AI refuses, Tehisabiline answers and the
+// Homepage technical example: the question is sent, the cloud AI refuses, Tehisabiline answers and the
 // findings land, once. Every step is visible without this script; with reduced motion it only
 // replays on request (opacity only, see site.css). The send button replays the sequence.
 document.addEventListener("DOMContentLoaded", () => {

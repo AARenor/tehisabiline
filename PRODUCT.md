@@ -17,11 +17,14 @@ Confirmed by the owner (2026-10-11): the site serves four audiences at once.
 
 ## Product Purpose
 
-Tehisabiline OÜ (Tallinn, Estonia) offers:
+Tehisabiline OÜ (Tallinn, Estonia) offers only two services (owner, 2026-10-12):
 
-- agent-driven cyber audits ("agendipõhine küberaudit") with human review of every significant finding;
-- a cyber-tuned AI model and API, "keeldudeta ja piirangutega küber-AI", for legitimate security work, to be hosted on its own hardware in Estonia (hardware ordered, hosting coming);
-- managed AI services for companies (assistant on own documents, self-updating knowledge base, automation with human approval, AI SEO/GEO), including an offer for startups.
+- agent-driven cyber audits and pentesting ("küberaudit ja pentestimine") with written permission and human review of every significant finding;
+- a cyber-tuned, OpenAI-compatible model API for legitimate security work, to be hosted on its own hardware in Estonia (hardware ordered, hosting coming; API access by application in the pilot).
+
+Managed AI services, assistants, knowledge bases, automation, startup packages and SEO/GEO are deferred to a separate future website. Their source content is retained privately under `docs/future-ai-site/`, excluded from publishing and public discovery.
+
+Owner priority (2026-10-12): pentesting is the primary search and homepage emphasis. `/pentestimine/` is the commercial landing page; `/api-turvatestimine/` and `/veebirakenduse-turvatestimine/` are distinct educational guides. `/kuberaudit/` stays focused on broader security posture. The existing-system API testing guide is not the planned model API product at `/mudelid/`. Terminology includes pentestimine, pentest, läbitungimistest, pentesting and penetration testing, with substantive visible explanations rather than keyword stuffing or duplicate synonym pages.
 
 Success: qualified email inquiries, API access requests, and credibility with funders.
 
@@ -48,7 +51,7 @@ Success: qualified email inquiries, API access requests, and credibility with fu
 ## Brand Commitments
 
 - Name: Tehisabiline / Tehisabiline OÜ. Logo: the "T" mark — keep (owner, 2026-10-11).
-- Standing visual preference (owner, 2026-10-11): a familiar modern AI landing page, executed at Stripe's craft level, made "natuke huvitavam" through one move: a live demo in the hero (a cloud AI refuses, Tehisabiline answers, audit findings appear once and stop; never an endless loop). The owner rejected exotic metaphor worlds for this site.
+- Current homepage priority (owner, 2026-10-12): a larger, beautiful, prominent opening must name BOTH main offerings: cybersecurity audit/pentesting as one service family, and keeldudeta cyber-AI API as the other. Never substitute separate giant "Pentestimine" and "Küberaudit" labels for the two-offer headline or demote the API to a hidden note. Keep distinct calls to action, legal-use boundaries and explicit API development status. The interactive refusal-versus-answer demo belongs in the first viewport beside the headline; it plays once, can be replayed and respects reduced motion. Homepage copy must stay short and non-repetitive (owner, 2026-10-12): one clear two-offer message; long explanations, statistics and comparisons live on subpages. Preserve the blue/white identity and stable mobile navigation.
 - Blue stays the brand colour (owner, 2026-10-11).
 - Voice: plain Estonian, honest about limits ("Ausad piirid"), no hype, no promise of 100% security.
 - Must not feel like: hacker clichés (black screens, green code, hooded figures), dark or hard-to-read pages, excessive motion (owner, 2026-10-11).

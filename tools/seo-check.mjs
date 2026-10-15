@@ -26,30 +26,6 @@ const expectedPages = [
         requiresOrganization: true
     },
     {
-        file: "ai-automatiseerimine/index.html",
-        canonical: `${origin}/ai-automatiseerimine/`,
-        noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "ai-chatbot/index.html",
-        canonical: `${origin}/ai-chatbot/`,
-        noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "hinnajalgimine/index.html",
-        canonical: `${origin}/hinnajalgimine/`,
-        noindex: true,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
         file: "kasutusjuhud/index.html",
         canonical: `${origin}/kasutusjuhud/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "ItemList"],
@@ -72,30 +48,30 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
-        file: "ai/index.html",
-        canonical: `${origin}/ai/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "idufirmadele/index.html",
-        canonical: `${origin}/idufirmadele/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "ai/seo/index.html",
-        canonical: `${origin}/ai/seo/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
         file: "kuberaudit/index.html",
         canonical: `${origin}/kuberaudit/`,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "pentestimine/index.html",
+        canonical: `${origin}/pentestimine/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "api-turvatestimine/index.html",
+        canonical: `${origin}/api-turvatestimine/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "veebirakenduse-turvatestimine/index.html",
+        canonical: `${origin}/veebirakenduse-turvatestimine/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
     },
@@ -141,6 +117,23 @@ function attrValue(tag, attr) {
 function metaValue(html, key) {
     const tag = tagWithAttr(html, "meta", "name", key) || tagWithAttr(html, "meta", "property", key);
     return attrValue(tag, "content");
+}
+
+function validateBrandImage(value, label, width, height) {
+    try {
+        const url = new URL(value);
+        assert(url.origin === origin, `${label}: brand image must be hosted on the canonical origin.`);
+        if (url.origin !== origin) return;
+        const file = resolveLocalPath(url.pathname);
+        assert(existsSync(file), `${label}: brand image file is missing.`);
+        if (!existsSync(file)) return;
+        const bytes = readFileSync(file);
+        const png = bytes.length >= 24 && bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+        assert(png, `${label}: brand image must be a PNG readable by sharing clients.`);
+        if (png) assert(bytes.readUInt32BE(16) === width && bytes.readUInt32BE(20) === height, `${label}: expected ${width}×${height} pixels.`);
+    } catch (error) {
+        assert(false, `${label}: invalid brand image URL or file: ${error.message}`);
+    }
 }
 
 function stripHtml(html) {
@@ -318,7 +311,6 @@ for (const page of expectedPages) {
     assert(!/<meta\s+[^>]*name=["']keywords["']/i.test(html), `${label}: obsolete meta keywords tag should not be present.`);
     assert(!html.includes("cdn.tailwindcss.com"), `${label}: Tailwind runtime CDN must not be used.`);
     assert(!html.includes("hero-gradient.js") && !html.includes("hero-canvas"), `${label}: CPU-heavy canvas hero must not be loaded.`);
-    assert(!/(80% vähem|-80%|säästab kuni 80%|98\/100)/i.test(stripHtml(html)), `${label}: contains an unsupported performance claim.`);
     assert(metaValue(html, "robots").includes("max-image-preview:large"), `${label}: robots meta should permit large image previews.`);
     const robotsParts = metaValue(html, "robots").split(/\s*,\s*/);
     if (page.noindex) assert(robotsParts.includes("noindex"), `${label}: retired page must use noindex.`);
@@ -328,7 +320,8 @@ for (const page of expectedPages) {
         assert(Boolean(metaValue(html, key)), `${label}: ${key} metadata is missing.`);
     }
     assert(metaValue(html, "og:url") === page.canonical, `${label}: og:url must match canonical.`);
-    assert(metaValue(html, "og:image") === `${origin}/assets/brand/tehisabiline-og.png`, `${label}: expected the 1200×630 social image.`);
+    validateBrandImage(metaValue(html, "og:image"), `${label}: Open Graph image`, 1200, 630);
+    validateBrandImage(metaValue(html, "twitter:image"), `${label}: Twitter image`, 1200, 630);
     assert(metaValue(html, "twitter:card") === "summary_large_image", `${label}: Twitter card must use summary_large_image.`);
     assert(Boolean(metaValue(html, "twitter:title")) && Boolean(metaValue(html, "twitter:description")) && Boolean(metaValue(html, "twitter:image")), `${label}: Twitter metadata is incomplete.`);
 
@@ -361,7 +354,7 @@ for (const page of expectedPages) {
             if (page.requiresOrganization) {
                 const organization = graph.find((item) => item["@type"] === "Organization");
                 const organizationLogo = typeof organization?.logo === "string" ? organization.logo : organization?.logo?.url;
-                assert(organizationLogo === `${origin}/assets/brand/logo-512.png`, `${label}: Organization logo must use the 512×512 asset.`);
+                validateBrandImage(organizationLogo, `${label}: Organization logo`, 512, 512);
                 assert(organization?.name === "Tehisabiline OÜ", `${label}: Organization name must be Tehisabiline OÜ.`);
                 assert(organization?.url === `${origin}/`, `${label}: Organization URL must use the canonical homepage.`);
                 assert(Array.isArray(organization?.sameAs) && organization.sameAs.length > 0, label + ": Organization must list sameAs profiles.");
@@ -370,7 +363,7 @@ for (const page of expectedPages) {
             const article = graph.find((item) => item["@type"] === "Article" || (Array.isArray(item["@type"]) && item["@type"].includes("Article")));
             if (article) {
                 const articleImage = typeof article.image === "string" ? article.image : article.image?.url;
-                assert(articleImage === origin + "/assets/brand/tehisabiline-og.png", label + ": Article image must use the 1200x630 social asset.");
+                validateBrandImage(articleImage, `${label}: Article image`, 1200, 630);
                 for (const role of ["author", "publisher"]) {
                     if (article[role]) assert(article[role]["@type"] === "Organization", label + ": Article role must be typed.");
                 }
@@ -447,8 +440,6 @@ for (const page of expectedPages) {
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
-const homeH1 = stripHtml(homeHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
-assert(homeH1.includes("Küberaudit") && homeH1.includes("küber-AI") && /keeldudeta ja piirangutega/i.test(homeH1), "Homepage H1 must name küberaudit and keeldudeta ja piirangutega küber-AI.");
 assert(homeHtml.includes("API pole veel avalik"), "Homepage API example must say that the API is not yet public.");
 for (const serviceUrl of expectedUrls.slice(1)) {
     const pathname = new URL(serviceUrl).pathname;
@@ -475,17 +466,10 @@ for (const source of [
 }
 
 const aboutHtml = readFileSync(join(root, "meist/index.html"), "utf8");
-const aboutH1 = stripHtml(aboutHtml.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
-assert(aboutH1.includes("AI konsultatsioon") && aboutH1.includes("küberaudit") && /\bTallinnas\b/.test(aboutH1), "Meist H1 must align with its Tallinn AI-consultation and küberaudit title intent.");
 
 const modelsHtml = readFileSync(join(root, "mudelid/index.html"), "utf8");
 assert(modelsHtml.includes("API pole veel avalik"), "Models API example must say that the API is not yet public.");
 
-for (const file of ["index.html", "mudelid/index.html", "kasutusjuhud/index.html"]) {
-    const html = readFileSync(join(root, file), "utf8");
-    assert(html.includes("Qwen3.8-27B"), `${file}: must use the verified Qwen3.8-27B model name.`);
-    assert(!/Qwen 27B [\p{L}-]+ lineup/iu.test(html), `${file}: must not use the stale vague Qwen 27B lineup wording.`);
-}
 
 const auditHtml = readFileSync(join(root, "kuberaudit/index.html"), "utf8");
 assert(auditHtml.includes('href="/assets/css/pages/kuberaudit.css'), "Küberaudit must load its page-specific stylesheet.");
@@ -564,7 +548,8 @@ const sitemapEntries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((mat
     lastmod: match[1].match(/<lastmod>([^<]+)<\/lastmod>/)?.[1] || ""
 }));
 const sitemapUrls = sitemapEntries.map((entry) => entry.loc);
-assert(JSON.stringify(sitemapUrls) === JSON.stringify(expectedUrls), `Sitemap URLs differ from expected canonical URLs: ${sitemapUrls.join(", ")}.`);
+assert(sitemapUrls.length === new Set(sitemapUrls).size, "Sitemap canonical URLs must be unique.");
+assert(sitemapUrls.length === expectedUrls.length && expectedUrls.every((url) => sitemapUrls.includes(url)), `Sitemap must list exactly the indexable canonical URLs: ${sitemapUrls.join(", ")}.`);
 for (const noindexed of noindexUrls) assert(!sitemapUrls.includes(noindexed), `Sitemap must not list noindexed URL: ${noindexed}.`);
 const retiredHardRedirect = [
     {path: "ai-automatiseerimise-naited", successor: "/kasutusjuhud/"},

@@ -4,6 +4,7 @@ node_modules/
 .DS_Store
 output/
 .vercel
+.wrangler/
 .opencode/
 AGENTS.md
 .impeccable/build/

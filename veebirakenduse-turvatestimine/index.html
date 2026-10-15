@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veebirakenduse turvatestimine | Tehisabiline</title>
+    <meta name="description" content="Veebirakenduse pentest kontrollib sisselogimist, rolle, seansse ja e-poe töövooge. Vaata, mida ette valmistada ja mida raportist oodata.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="Tehisabiline OÜ">
+    <meta name="theme-color" content="#0857f8">
+    <link rel="canonical" href="https://tehisabiline.ee/veebirakenduse-turvatestimine/">
+    <meta property="og:type" content="article"><meta property="og:locale" content="et_EE"><meta property="og:site_name" content="Tehisabiline"><meta property="og:title" content="Veebirakenduse turvatestimine | Tehisabiline"><meta property="og:description" content="Mida veebirakenduse pentestis kontrollida, kuidas testiks valmistuda ja miks skannerist üksi ei piisa."><meta property="og:url" content="https://tehisabiline.ee/veebirakenduse-turvatestimine/"><meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Veebirakenduse turvatestimise juhend – Tehisabiline">
+    <meta name="article:published_time" content="2026-10-12"><meta name="article:modified_time" content="2026-10-12"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Veebirakenduse turvatestimine | Tehisabiline"><meta name="twitter:description" content="Mida veebirakenduse pentestis kontrollida, kuidas testiks valmistuda ja miks skannerist üksi ei piisa."><meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <link rel="manifest" href="/site.webmanifest"><link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47"><link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=703dfa31"><link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=1578d58e"><link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/site.css?v=a0f76a5d">
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@graph":[
+        {"@type":"Organization","@id":"https://tehisabiline.ee/#organization","name":"Tehisabiline OÜ","url":"https://tehisabiline.ee/","email":"tehisabiline@gmail.com"},
+        {"@type":"WebSite","@id":"https://tehisabiline.ee/#website","url":"https://tehisabiline.ee/","name":"Tehisabiline","inLanguage":"et","publisher":{"@id":"https://tehisabiline.ee/#organization"}},
+        {"@type":"WebPage","@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#webpage","url":"https://tehisabiline.ee/veebirakenduse-turvatestimine/","name":"Veebirakenduse turvatestimine | Tehisabiline","description":"Veebirakenduse pentesti ulatus, ettevalmistus, ohutud näidisandmed, raport ja kordustest.","datePublished":"2026-10-12","dateModified":"2026-10-12","inLanguage":"et","isPartOf":{"@id":"https://tehisabiline.ee/#website"},"breadcrumb":{"@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#breadcrumb"},"mainEntity":{"@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#article"}},
+        {"@type":"Article","@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#article","headline":"Veebirakenduse turvatestimine: mis jääb skannerist märkamata?","description":"Praktiline juhend veebirakenduse pentesti ulatuse, ettevalmistuse, testimise piiride ja raporti kohta.","image":"https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97","datePublished":"2026-10-12","dateModified":"2026-10-12","inLanguage":"et","mainEntityOfPage":{"@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#webpage"},"author":{"@type":"Organization","@id":"https://tehisabiline.ee/#organization","name":"Tehisabiline OÜ"},"publisher":{"@type":"Organization","@id":"https://tehisabiline.ee/#organization","name":"Tehisabiline OÜ"}},
+        {"@type":"BreadcrumbList","@id":"https://tehisabiline.ee/veebirakenduse-turvatestimine/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Avaleht","item":"https://tehisabiline.ee/"},{"@type":"ListItem","position":2,"name":"Veebirakenduse turvatestimine","item":"https://tehisabiline.ee/veebirakenduse-turvatestimine/"}]}
+      ]
+    }
+    </script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+<!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/pentestimine/">Küberaudit / pentest</a>
+            <a href="/mudelid/">Küber-AI API</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/pentestimine/">Küberaudit / pentest</a>
+        <a href="/mudelid/">Küber-AI API</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg#arrow-right"/></svg></a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+<main id="main-content">
+<header class="page-head"><div class="wrap"><nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">Veebirakenduse turvatestimine</li></ol></nav><h1>Veebirakenduse turvatestimine: mis jääb skannerist märkamata?</h1><p class="lead">Veebirakenduse pentest vaatab, kas päris kasutaja saab rakendust kasutada viisil, mida omanik ei kavandanud. E-poes tähendab see näiteks kliendiandmete, tellimuste ja haldusõiguste kaitset, mitte ainult kodulehe tehniliste päiste kontrolli.</p><p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati uuendatud <time datetime="2026-10-12">12. oktoobril 2026</time></p></div></header>
+<section class="section"><div class="wrap article">
+<nav class="toc" aria-label="Sisukord"><strong>Sellel lehel</strong><ol><li><a href="#mida-testida">Mida testida?</a></li><li><a href="#riskid">XSS, SQL-süst ja CSRF</a></li><li><a href="#ettevalmistus">Ettevalmistuse kontrollnimekiri</a></li><li><a href="#meetodid">Skanner, pentest ja audit</a></li><li><a href="#naide">Ohutu testnäide ja piirid</a></li><li><a href="#tulemus">Raport ja kordustest</a></li><li><a href="#allikad">Allikad</a></li></ol></nav>
+<div class="prose">
+<section class="short-answer" aria-labelledby="short-answer"><h2 id="short-answer">Mida veebirakenduse turvatestimine näitab?</h2><p>Veebirakenduse pentest (inglise keeles <em>web application penetration testing</em>) hindab kokkulepitud rakenduse voogusid ja ligipääse: sisselogimist, kasutajarolle, seansse, sisendeid ja äriloogikat. Testija ühendab automatiseeritud kontrollid käsitsi tehtud kasutusvoogude ja õiguste kontrolliga. Tulemus kehtib kokkulepitud ulatuses ega tõenda, et rakenduses vigu pole.</p></section>
+<section id="mida-testida"><h2>Mida veebirakenduse pentestis kontrollida?</h2><p>Veebileht ei ole ainult brauseris nähtav kasutajaliides. Brauser ja frontend saadavad päringuid backendile, mis peab ise kontrollima identiteeti ja õigusi. Nuppu peita või URL-i kasutajale mitte näidata ei piisa, kui server lubab sama toimingu päringuga siiski teha. Seepärast tuleb vaadata kogu kokkulepitud rakenduse konteksti.</p><ul><li><strong>Sisselogimine ja konto taastamine:</strong> kas autentimine, parooli muutmine ja väljalogimine toimivad ootuspäraselt?</li><li><strong>Rollid ja objektide ligipääs:</strong> kas tavakasutaja näeb ainult enda tellimusi ja andmeid, administraator aga ainult talle määratud õigustega?</li><li><strong>Seansid:</strong> kas seansi identifikaator vahetub sisselogimisel, aegub ja kaotab kehtivuse väljalogimisel?</li><li><strong>Sisend ja konfiguratsioon:</strong> kuidas käsitletakse vorme, faile ja erimärke; kas rakendus avaldab tarbetut tehnilist infot või ebaturvalisi seadistusi?</li><li><strong>Äriloogika:</strong> kas samme saab vahele jätta, toimingut korrata või muuta teise konto kontekstis?</li></ul><p>E-poe puhul võib ulatus hõlmata registreerumist, ostukorvi, tellimuse vaatamist ja tühistamist, kupongi kasutamist ning haldusvaadet. Pane kirja, millised kliendi- ja haldajarollid, domeenid ning keskkonnad on sees. API eraldi ulatuse juhendi leiad <a href="/api-turvatestimine/">API turvatestimise juhendist</a>.</p><p>Testimine on mõistlik enne avalikku käivitamist ning pärast olulist muudatust, näiteks uut sisselogimisviisi, maksevoogu, rollisüsteemi või suuremat versiooniuuendust. See ei asenda arenduse käigus tehtavat turvalist koodi- ja konfiguratsioonitööd.</p></section>
+<section id="riskid">
+  <h2>Mille poolest erinevad XSS, SQL-süst ja CSRF?</h2>
+  <ul>
+    <li><strong>XSS</strong> (<em>cross-site scripting</em>) on olukord, kus rakendus lubab ebausaldusväärsel sisul muutuda kasutaja brauseris käivitatavaks skriptiks. Sisendi valideerimine, kontekstipõhine väljundi kodeerimine ja rakenduse käitumine vajavad eri kontrollpunkte.</li>
+    <li><strong>SQL-süst</strong> (<em>SQL injection</em>) tekib, kui ebausaldusväärne sisend mõjutab andmebaasipäringu struktuuri. Oluline on kontrollida sisendi käsitlemist ja päringu koostamist; pelgalt vormi piirangust brauseris ei piisa.</li>
+    <li><strong>CSRF</strong> (<em>cross-site request forgery</em>) puhul võib väline leht panna kasutaja brauseri saatma autentitud toimingu, mida kasutaja ei kavatsenud teha. See erineb XSS-ist ja nõuab rakenduse toimingute ning seansikaitse eraldi hindamist.</li>
+  </ul>
+  <p><a href="https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/07-Input_Validation_Testing/">OWASP WSTG 4.2 sisendite testimise jaotis</a> käsitleb XSS-i ja SQL-süsti; <a href="https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/06-Session_Management_Testing/">seansihalduse jaotis</a> sisaldab CSRF-i. Need on riskide selgitused, mitte vaikimisi lubatud ründed ega kogu metoodika katmise lubadus. Kontrollid ja ohutud näidisandmed valitakse kirjaliku ulatuse järgi.</p>
+</section>
+<section id="ettevalmistus"><h2>Ettevalmistuse kontrollnimekiri</h2><p>Hea ulatus vähendab kõrvalmõjusid ning aitab kontrollida sinu ärile olulisi kasutusvooge. Enne töö algust leppige kirjalikult kokku siht, ajavahemik, lubatud tegevused, välistused ja kontaktisik katkestuse korral.</p><ul><li><strong>Testkeskkond:</strong> võimalusel tootmisele sarnane testkeskkond, mille versioon ja domeenid on teada. Tootmise testimisel leppige eriti täpselt kokku piirid ja ohutu ajavahemik.</li><li><strong>Kontod ja rollid:</strong> looge testkontod tavakasutajale, teisele kasutajale ja vajadusel haldajale. Ärge saatke päris kasutajate paroole.</li><li><strong>Sünteetilised andmed:</strong> tehke näidistellimused. Maksevoogude jaoks kasutage makseteenuse testkeskkonda, mitte päris kaardinumbreid ega päris ostu.</li><li><strong>Isikuandmed:</strong> eemaldage või maskeerige mittevajalik pärisandmestik; määrake tundliku leiu turvalise jagamise viis.</li><li><strong>Piirid ja sõltuvused:</strong> nimetage välistatud domeenid, kolmandate osapoolte teenused, keelatud toimingud ning koormus- ja kättesaadavustestide piirangud. Teenust häirivat tegevust ei tehta vaikimisi.</li><li><strong>Taaste:</strong> määrake tehniline kontakt, varukoopia või taastamisplaan ning viis testimise peatamiseks.</li></ul><p>Siht, mahud, ajakava, load ja kordustest kinnitatakse kirjalikult. Tallinnas tegutseva Tehisabiline OÜ teenust kirjeldab <a href="/pentestimine/">pentestimise leht</a>; laiemat hindamist <a href="/kuberaudit/">küberauditi ulatus</a>.</p></section>
+<section id="meetodid"><h2>Veebilehe skanner, pentest või audit?</h2><div class="table-wrap table-wrap--stack" role="region" aria-label="Veebirakenduse turvakontrollide võrdlus" tabindex="0"><table class="data"><thead><tr><th scope="col">Meetod</th><th scope="col">Mida annab?</th><th scope="col">Mida üksi ei kata?</th></tr></thead><tbody><tr><th scope="row">Veebiskanner</th><td data-label="Mida annab?">Automatiseeritud päringutega leiab osa tuntud mustritest, päise- ja konfiguratsiooniprobleemidest ning teadaolevatest nõrkustest.</td><td data-label="Mida üksi ei kata?">Ei mõista usaldusväärselt ärireegleid ega tõenda kasutajatevaheliste piiride õigsust. Võib anda valehäireid või vigu märkamata jätta.</td></tr><tr><th scope="row">Autenditud pentest</th><td data-label="Mida annab?">Testija kasutab kokkulepitud kontosid ja kontrollib käsitsi rakenduse vooge, rollide eraldamist ja valitud tehnilisi riske.</td><td data-label="Mida üksi ei kata?">Kehtib kokkulepitud ulatuse ja aja kohta; ei tõenda kõigi vigade puudumist.</td></tr><tr><th scope="row">Küberaudit</th><td data-label="Mida annab?">Laiem ülevaade kokkulepitud tehnilistest ja korralduslikest kontrollidest ning parandusprioriteetidest.</td><td data-label="Mida üksi ei kata?">Ei tähenda kõigi süsteemide aktiivset ründetestimist; ulatus lepitakse eraldi kokku.</td></tr></tbody></table></div><p>Skanner sobib korduvaks esmakontrolliks; pentest lisab kasutajakonteksti ja inimese tõlgenduse. <a href="/kuberaudit/">Küberaudit</a> sobib, kui vajad rakendusest laiemat turvaseisu ja parandusplaani.</p></section>
+<section id="naide"><h2>Ohutu näide: tellimuse vaatamine</h2><p>Testkeskkonnas on kaks sünteetilist tavakasutajat, A ja B, kummalgi näidistellimus. Omaniku loaga testija logib sisse kontoga A ja kontrollib A enda tellimuse vaatamist. Seejärel kontrollib ta kokkulepitud mahus, kas A saab vaadata B näidistellimust.</p><p><strong>Oodatud tulemus:</strong> server keeldub B tellimuse andmeid väljastamast, kuigi päring on autentitud. Tõendisse märgitakse roll, päring ja saladustest puhastatud vastus; päris isikuandmeid ei kopeerita. Kui ligipääs avaneb, peatatakse edasine andmete uurimine ja leid edastatakse kokkulepitud kontaktile. Ka haldustoimingute rollipiire kontrollitakse ainult kokkulepitud sünteetiliste objektidega.</p><p>Näide on väljamõeldud õiguste kontroll, mitte luba testida päris klientide andmeid, makseid või muid süsteeme. Ulatuseta katseid ei tehta.</p></section>
+<section id="tulemus"><h2>Mida raportist ja kordustestist oodata?</h2><p>Kasulik raport seob leiu mõjutatud voo ja riskiga, kirjeldab kontrollitud tingimusi ning annab paranduse soovituse. Olulised leiud vaatab üle inimene, kes hindab nende tegelikkust ja mõju; üks automaatne skannerihoiatus pole veel kinnitatud haavatavus. Pärast parandusi saab eraldi kokku leppida kordustesti, mis kontrollib konkreetsete leidude lahendamist.</p><p>Testi tulemus on aja- ja ulatuspiiranguga hinnang. See ei taga turvalisust ega hõlma automaatselt iga kasutaja, keskkonna, sõltuvuse või OWASP kontrolli täielikku katvust. Testi ulatus, hind, ajavahemik, load ja kordustest lepitakse kirjalikult kokku.</p></section>
+<section id="allikad"><h2>Allikad ja raamistik</h2><p><a href="https://wstg.owasp.org/v4.2/2-Introduction/">OWASP Web Security Testing Guide 4.2 sissejuhatus</a> selgitab ulatuse ja piirangute tähtsust ning seda, miks skannerist üksi ei piisa; <a href="https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/">WSTG 4.2 testikategooriad</a> hõlmavad muu hulgas autentimist, autoriseerimist, seansse, sisendit, konfiguratsiooni ja äriloogikat. Juhend aitab planeerida kontrolle, kuid konkreetse töö ulatus määratakse eraldi ega tähenda automaatset täielikku WSTG vastavust.</p><p>Kas vajad rakenduse üldise turvatesti asemel API-spetsiifilist vaadet? Loe <a href="/api-turvatestimine/">API turvatestimise juhendit</a>. Teenuse ulatuse arutamiseks kirjuta <a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a> või tutvu <a href="/meist/">Tehisabiline OÜ-ga</a>.</p></section>
+<section class="related" aria-labelledby="related"><h2 id="related">Seotud teemad</h2><ul class="related__list"><li><a href="/pentestimine/"><span class="related__title">Pentestimine</span><span class="related__desc">Kokkulepitud ulatusega turvatestimise teenus.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/api-turvatestimine/"><span class="related__title">API turvatestimine</span><span class="related__desc">API-dele keskenduv testimise juhend.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/kuberaudit/"><span class="related__title">Küberaudit</span><span class="related__desc">Laiem turvaseisu ülevaade ja parandusplaan.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li></ul></section>
+</div></div></section>
+<section class="band"><div class="wrap band__inner"><h2>Arutame sinu rakenduse ulatuse läbi</h2><p>Kirjelda veebirakendust, kasutajarolle ja testkeskkonda. Lepime enne töö algust kirjalikult kokku sihi, loa ja piirid.</p><a class="btn btn--white" href="/#contact">Võta ühendust</a></div></section>
+</main>
+<!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div>
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
+                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
+            </div>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kuberaudit/">Küberauditi ulatus</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-12">12. oktoobril 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+<script src="/site.js?v=a750108a" defer></script>
+<!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->
+</body>
+</html>

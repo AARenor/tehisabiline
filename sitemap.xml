@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://tehisabiline.ee/</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/kasutusjuhud/</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/meist/</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-12</lastmod>
+        <image:image>
+            <image:loc>https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg</image:loc>
+        </image:image>
     </url>
     <url>
         <loc>https://tehisabiline.ee/mudelid/</loc>
-        <lastmod>2026-10-10</lastmod>
-    </url>
-    <url>
-        <loc>https://tehisabiline.ee/ai/</loc>
-        <lastmod>2026-10-10</lastmod>
-    </url>
-    <url>
-        <loc>https://tehisabiline.ee/idufirmadele/</loc>
-        <lastmod>2026-10-10</lastmod>
-    </url>
-    <url>
-        <loc>https://tehisabiline.ee/ai/seo/</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/kuberaudit/</loc>
-        <lastmod>2026-10-10</lastmod>
+        <lastmod>2026-10-12</lastmod>
     </url>
     <url>
         <loc>https://tehisabiline.ee/nis2/</loc>
@@ -39,5 +30,17 @@
     <url>
         <loc>https://tehisabiline.ee/privaatsus/</loc>
         <lastmod>2026-10-10</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/pentestimine/</loc>
+        <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/api-turvatestimine/</loc>
+        <lastmod>2026-10-12</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/veebirakenduse-turvatestimine/</loc>
+        <lastmod>2026-10-12</lastmod>
     </url>
 </urlset>

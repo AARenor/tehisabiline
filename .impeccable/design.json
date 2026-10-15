@@ -3,6 +3,34 @@
   "generatedAt": "2026-10-11T00:00:00.000Z",
   "title": "Design System: Tehisabiline",
   "extensions": {
+    "homepageOffer": {
+      "headingMaxSize": "5.2rem desktop / 3rem phone; cybersecurity audit/pentest family plus blue keeldudeta AI API at 0.8em",
+      "securityOffer": "Cybersecurity audit and pentesting are one service family: human-reviewed important findings, report and prioritized remediation.",
+      "developerOffer": "Keeldudeta cyber-AI API is the other main offering, present in the headline and own CTA; explicitly in development and not public.",
+      "offerCards": { "selector": ".offer", "background": "#ffffff", "border": "1px solid #e1e8f4", "radius": "16px" },
+      "interactiveDemo": { "selector": "#demo", "placement": "hero beside headline", "playback": "once on load, replay button, reduced-motion shows settled state" },
+      "hiddenKeywordText": false
+    },
+    "mobileHeader": {
+      "maxWidth": "979px",
+      "height": "77px plus safe-area-inset-top",
+      "background": "#ffffff",
+      "logoSize": "44px",
+      "menuTargetSize": "46px",
+      "menuPlacement": "Absolute panel below the sticky bar; no document reflow",
+      "phoneActions": "Full width below 600px",
+      "pageSpacing": "Normal-flow hero and page head, 1.75rem top padding"
+    },
+    "brandAssets": {
+      "reviewed": "2026-10-12",
+      "mark": "assets/brand/logo.svg",
+      "smallMark": "assets/brand/favicon.svg",
+      "background": "#0857f8",
+      "foreground": "#ffffff",
+      "geometry": "White geometric T with separate upper-right terminal and diagonal cuts on a rounded blue square; small variant aligns to a 16px grid.",
+      "socialImage": { "source": "tools/og-card.html", "width": 1200, "height": 630, "composition": "White copy area, blue oversized-monogram panel, large service text and domain." },
+      "maskableIcon": { "source": "assets/brand/icon-maskable-512.png", "size": 512, "safeRadius": "40% of width" }
+    },
     "colorMeta": {
       "primary": { "role": "primary", "displayName": "Erk brändisinine", "canonical": "#0857f8", "tonalRamp": ["#00124c", "#002487", "#0636c0", "#0857f8", "#2f8cff", "#8ed0f8", "#dce7ff", "#f5f8ff"] },
       "ink": { "role": "neutral", "displayName": "Tume tint", "canonical": "#090c24", "tonalRamp": ["#090c24", "#171a32", "#25283f", "#33364d", "#41445b", "#505269", "#6c6e83", "#898a9a"] },

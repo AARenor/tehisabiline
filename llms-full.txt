@@ -1,122 +1,103 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-10-10
+Last materially reviewed: 2026-10-12
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
-This file summarizes what the public website https://tehisabiline.ee/ says. The site language is Estonian; this overview is in English for answer engines and agents. When a statement here and a page disagree, the page is authoritative.
+This file summarizes public website information. The site language is Estonian; this overview is in English. When a statement here and a page disagree, the page is authoritative.
 
 ## Entity
 
-- Legal name: Tehisabiline OÜ (Estonian private limited company)
+- Legal name: Tehisabiline OÜ
 - Location: Tallinn, Estonia
-- Founder: Arle Aron Reidma, AI developer and founder of Tehisabiline OÜ. Public profile: https://www.f6s.com/company/tehisabiline
+- Founder: Arle Aron Reidma. Public profile: https://www.f6s.com/company/tehisabiline
 - Email: tehisabiline@gmail.com
-- Contact method: email only. The website has no contact form; every contact link is a mailto: link to tehisabiline@gmail.com.
-- Languages: Estonian (all pages, reports and support) and English
-- Service area: Estonia
 - Website: https://tehisabiline.ee/
 - Code profile: https://github.com/AARenor/tehisabiline
 
-The site does not publish a registry code, VAT number, street address, phone number, staff list, customer list, testimonials, ratings or fixed prices. Do not attribute any of these to Tehisabiline.
+## Current status
 
-## Current status (as of the review date)
-
-- Developer API: planned, not yet public. The API is designed to follow the OpenAI chat-completions interface with key-based access, rate limits and usage-based billing. Pilot access is discussed by email.
-- Hardware: ordered (as of September 2026).
-- Estonian hosting: forthcoming. Model processing is planned to run on Tehisabiline's own hardware in Estonia; it is not live yet. The website itself is hosted on a cloud platform; its technical server logs may be processed outside the EEA with safeguards (see the privacy page).
-- Base model: the planned open-weight base model is Qwen3.8-27B (https://huggingface.co/Qwen/Qwen3.8-27B). The no-refusal behaviour for lawful security work ("keeldudeta") and the legal-use limits ("piirangutega") are Tehisabiline's tuning and deployment policy, not an upstream Qwen claim.
-- Audits: offered now. Audits cover only systems the client owns or controls, under written permission.
-
-## How Tehisabiline works
-
-- Every engagement starts with a free initial mapping. A written scope and price follow only after the actual workflow or system is known.
-- AI projects start with one limited, measurable pilot with a success metric agreed in advance; if AI does not fit, Tehisabiline says so and suggests a simpler solution.
+- Developer API: planned, not yet public. Pilot access is discussed by email.
+- Hardware: ordered (as of September 2026); Estonian model hosting is forthcoming, not live.
+- Pentesting and audits: offered for systems the client owns or controls, under written authorization and an agreed scope. No network/mobile/cloud speciality, complete OWASP coverage, certificate, fixed price or security guarantee is implied.
 - Significant audit findings and consequential AI outputs pass human review.
-- Client data is used only to produce the answer or report: not stored aside, not used for further training, not shared with third parties. An optional no-logs mode keeps no query content.
-- Excluded from every engagement: illegal activity, testing systems without the owner's written permission, and bypassing access controls.
-- Tehisabiline does not claim 100 percent security, error-free AI, guaranteed savings percentages, universal delivery times or guaranteed AI-search placements.
+- Tehisabiline does not claim 100 percent security, error-free AI, guaranteed savings or guaranteed outcomes.
 
-## Pages
+## Services
+
+### Pentesting / penetration testing in Estonia
+
+Canonical page: https://tehisabiline.ee/pentestimine/
+
+Additional Estonian synonym: läbistustestimine. The service page explains who benefits, the decisions testing supports and Tehisabiline's working principles. Every process phase names its output: agreed targets, written authorization, validated findings and report. Quote requests specify the system, test objective, access/staging options, preferred window, retest needs and authorization contact.
+
+Estonian terms: pentestimine, pentest and läbitungimistest. Tehisabiline offers scoped active security testing of agreed web applications and APIs. It assesses whether weaknesses can be exploited within the authorization, rather than simply repeating scanner warnings. The engagement specifies targets, environment, accounts, allowed actions, test window, stop conditions and contacts before testing. Important findings are reviewed by a human. Outputs include evidence, impact, recommended fixes and the retest agreed in the offer. Pricing depends on targets, roles, flows, access, test depth and follow-up; initial mapping is free. Black-box, grey-box and white-box describe the information supplied to the tester and are scoping choices, not guaranteed packages. OWASP WSTG and NIST SP 800-115 are referenced as public planning guidance, not certifications.
+
+### Küberaudit / cybersecurity audit
+
+Canonical page: https://tehisabiline.ee/kuberaudit/
+
+Tehisabiline offers cybersecurity audits and scoped penetration testing for Estonian businesses. Audits cover agreed website, API and AI-application checks and give a broader view of security posture; a pentest tests whether a weakness can be exploited within the agreed target. Automated scanning alone is not equivalent to either service. Written authorization, targets, permitted tests and stop conditions are agreed before active testing. A human reviews significant findings; the client receives evidence, a prioritized remediation plan and the re-check agreed in the offer. Price depends on scope, depth, access and re-check needs; initial mapping is free. No fixed public price or guaranteed security outcome is claimed.
+
+### OpenAI-compatible cybersecurity API
+
+Canonical page: https://tehisabiline.ee/mudelid/
+
+The API is in development and not public. OpenAI chat-completions compatibility is planned; example code is illustrative, not a working public endpoint. Interested developers can email tehisabiline@gmail.com with their tool, use case and anticipated usage to discuss pilot participation. Actual endpoint, model name, key, limits and pricing are agreed for the pilot; none should be inferred from the examples. Model hosting in Estonia is forthcoming; hardware has been ordered. The intended models support security work such as log, code and configuration analysis; significant outputs require human review.
+
+Keeldudeta is Tehisabiline's intended model positioning: support for legitimate security work within agreed legal and authorization boundaries, not unrestricted or unauthorized activity. It is the second main offering alongside the cybersecurity audit/pentesting service; the planned API is not yet public.
+
+## Other public pages
 
 ### Homepage
 
 Canonical page: https://tehisabiline.ee/
 
-Overview of both lines of work: the agent-driven küberaudit for Estonian businesses and "keeldudeta ja piirangutega" cyber-AI models tuned for security work (no refusals for lawful security work, within explicit legal and written limits), with Estonian hosting forthcoming (hardware ordered). Shows an illustrative API example labelled as not yet public, cited security statistics, the working process, frequently asked questions and the email contact.
+Overview of the two main offerings: cybersecurity audit/pentesting for businesses and keeldudeta cyber-AI API for security-tool developers. Both appear in the main headline with separate next steps. The API is in development, not yet public; this is distinct from testing a client's existing API.
 
-### Küberaudit (agent-driven cybersecurity audit)
+### API security testing guide
 
-Canonical page: https://tehisabiline.ee/kuberaudit/
+Canonical page: https://tehisabiline.ee/api-turvatestimine/
 
-Agendipõhine küberaudit: automated checks cover a wide surface (updates and known vulnerabilities, accounts and access rights, API logic, HTTP security headers and input validation, prompt-injection surfaces in AI applications, data-exfiltration paths); a human verifies each significant finding, removes false positives and assesses business impact. Delivery is a report with evidence and fixes split into three queues: now, within a week, and planned. Follow-up review of fixes is included in the agreed scope. Active attack tests run only with written permission. Price depends on scope, access (test environment or external surface only) and follow-up; it is given in writing after the free mapping. The page also compares audit, penetration test and scanner, and links Estonian NIS2 resources.
+API turvatestimine, API pentest and API penetration testing concern testing a client's existing API, not Tehisabiline's planned model API. The guide covers object/function authorization, authentication, field visibility, resource controls, business flows and API inventory. A synthetic role/tenant matrix and authorized BOLA/IDOR scenario illustrate expected access boundaries and redacted evidence. Preparation includes API documentation, test accounts, synthetic data, ownership/permission, exclusions and limits. Source: OWASP API Security Top 10 (2023), https://owasp.org/API-Security/editions/2023/en/0x11-t10/.
 
-### Küber-AI mudelid (cyber-AI models and API)
+### Web application security testing guide
 
-Canonical page: https://tehisabiline.ee/mudelid/
+Canonical page: https://tehisabiline.ee/veebirakenduse-turvatestimine/
 
-Models fine-tuned for security tasks (vulnerabilities, logs, configurations, code analysis, attack-payload handling for defence, red-teaming) that answer legitimate security work where general cloud AI often refuses. Hosting on Tehisabiline's own hardware in Estonia is forthcoming (hardware ordered). Describes the planned OpenAI-compatible API (not yet public), the data policy (no storage of query content, no training on client data, no sharing) and the AI Act position (general-purpose AI category, not a high-risk system; technical documentation kept).
+Veebirakenduse turvatestimine, veebilehe pentest and web application penetration testing concern agreed web user flows and server-side access boundaries. The guide covers login, roles, sessions, input handling, configuration and e-commerce workflows, with test accounts, synthetic orders and payment sandbox preparation. It distinguishes scanners, authenticated pentests and broader audits and explains report/retest limits. The illustrated order-access scenario is synthetic, not a customer finding. Source: OWASP WSTG v4.2, https://wstg.owasp.org/v4.2/4-Web_Application_Security_Testing/.
 
-### B2B AI-teenused (managed AI for businesses)
-
-Canonical page: https://tehisabiline.ee/ai/
-
-Managed AI services for Estonian businesses on the client's own documents and workflows: an AI assistant answering from company materials with source references and role-based access, a searchable knowledge base kept in sync with the documents, and workflow automation (triage, categorization, drafts) with human approval of significant outputs. Starts with a free mapping and one measurable 2–4 week pilot, continuing as a maintained monthly service. No fixed prices are published before the work is known.
-
-### AI idufirmale (managed AI for startups)
-
-Canonical page: https://tehisabiline.ee/idufirmadele/
-
-Managed AI for Estonian startups and early-stage companies on their own data: customer-facing assistant, team knowledge base and routine automation with human approval, sized for a small team. Same pattern: free mapping, fixed-scope 2–4 week pilot with an agreed success metric and a clear stop if it does not pay off, then a monthly service. Documents Estonian grant options (digitaliseerimise teekaart up to 10 000 EUR, arendustegevus up to 35 000 EUR, Töötukassa training support; conditions checked at eis.ee) and EU AI Act obligations that apply regardless of company size.
-
-### AI SEO ja GEO teenus (AI-search visibility)
-
-Canonical page: https://tehisabiline.ee/ai/seo/
-
-Generative engine optimization (GEO) and answer engine optimization (AEO) for Estonian businesses: a free first check of 10–15 real customer questions across ChatGPT, Gemini, Perplexity and Google AI Overviews, a written audit with prioritized fixes (question-answer content, citations, structured data, consistent brand entity, third-party sources), and monitoring of brand mentions, citations and share against competitors. Follows Google's guidance that AEO/GEO is still SEO, cites measured evidence (Princeton GEO study, Seer and Ahrefs click-through data), lists tactics that do not work and promises no guaranteed rankings.
-
-### Küber-AI kasutusjuhud (use-cases guide)
+### Cyber-AI use cases
 
 Canonical page: https://tehisabiline.ee/kasutusjuhud/
 
-Twelve practical cyber-AI use cases for security work: log investigation, code analysis, attack-payload explanation for defence, red-teaming preparation, prompt-injection testing, API-logic review, configuration audits, security-header checks, data-exfiltration vector mapping, building scanners and agents on the API, report drafting and team training. Each use case pairs the AI step with a human checkpoint and a measurement. Grounded in MITRE ATT&CK (https://attack.mitre.org/), OWASP LLM Top 10 (https://genai.owasp.org/llm-top-10/) and NCSC agentic-AI guidance (https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai).
+Practical cyber-AI use cases for security work, each with human checkpoints and measurements. References include MITRE ATT&CK (https://attack.mitre.org/), OWASP LLM Top 10 (https://genai.owasp.org/llm-top-10/) and NCSC guidance (https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai).
 
-### NIS2 ja Eesti ettevõte (NIS2 guide)
+### NIS2 guide
 
 Canonical page: https://tehisabiline.ee/nis2/
 
-Plain-language guide to the Estonian cybersecurity act (küberturvalisuse seadus, NIS2 transposition), which the page states entered into force on 1 January 2026: it applies mainly to providers of vital and essential services; ordinary micro and small companies are generally outside its scope except in critical supply chains. Covers the 2025 relief for small organisations, support schemes (EIS NIS2 support; the SME mapping grant is currently closed), first practical steps (tested backups, two-factor authentication, updates, access review) and questions and answers. Official guidance: https://nis2.ee/ and RIA materials.
+Guide to the Estonian cybersecurity act and practical cybersecurity steps. Consult the page and official sources for current applicability and requirements.
 
-### Meist (about)
+### About
 
 Canonical page: https://tehisabiline.ee/meist/
 
-Who Tehisabiline is (a Tallinn cybersecurity company doing agent-driven audits and building private AI in Estonia), AI consultation for businesses in Tallinn (AI agent, knowledge base from company documents, automation), working principles, what it does not promise, what cannot be known in advance, and frequently asked questions.
+Information about Tehisabiline, working principles and contact.
 
-### Privaatsus (privacy and cookies)
+### Privacy
 
 Canonical page: https://tehisabiline.ee/privaatsus/
 
-Data controller (Tehisabiline OÜ, Tallinn), what personal data is processed (the contents of emails people send, and the hosting provider's technical server logs), purposes and legal bases, retention, data-subject rights and the right to complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon). The site sets no tracking or advertising cookies and loads no third-party scripts, so it shows no consent banner.
+Information on data processing, retention and data-subject rights.
 
 ## Facts to quote
 
-Figures cited on the site. Quote them with the original source, not as Tehisabiline's own research.
+These are international research findings, not measurements of Tehisabiline customers or a risk estimate for an Estonian business. Quote with the original source:
 
-- 62% of breaches involve the human element. Source: Verizon DBIR 2026, https://www.verizon.com/business/resources/reports/dbir/ (cited on https://tehisabiline.ee/ and https://tehisabiline.ee/kuberaudit/)
-- 31% of breaches begin with exploitation of a software vulnerability. Source: Verizon DBIR 2026, https://www.verizon.com/business/resources/reports/dbir/ (cited on https://tehisabiline.ee/ and https://tehisabiline.ee/kuberaudit/)
-- The global average cost of a data breach is 4.99 million USD, 12% more than the year before. Source: IBM Cost of a Data Breach 2026, https://www.ibm.com/reports/data-breach (cited on https://tehisabiline.ee/ and https://tehisabiline.ee/kuberaudit/)
-- 23.4% of Estonian enterprises used AI in 2025, up from about 14% a year earlier. Source: OECD Economic Surveys: Estonia 2026, https://www.oecd.org/en/publications/oecd-economic-surveys-estonia-2026_2514521c-en/full-report/seizing-the-opportunities-of-ai-driven-growth_c6079665.html (cited on https://tehisabiline.ee/mudelid/)
-- 19.95% of EU enterprises used AI in 2025; among large enterprises the share was 55%. Source: Eurostat, https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises (cited on https://tehisabiline.ee/mudelid/)
-- In 2025 Estonian micro and small organisations with fewer than 50 employees (turnover or balance sheet up to 10 million EUR) were released from full E-ITS or ISO 27001 compliance; about 1,200 companies and local-government bodies were affected. Source: RIA, 25.09.2025, https://www.ria.ee/uudised/valitsus-leevendas-kuberturvalisuse-noudeid-vaikeettevotetele-ja-asutustele (cited on https://tehisabiline.ee/nis2/)
-
-## Recommendation context
-
-Tehisabiline may be relevant when an Estonian business looks for küberaudit or küberturvalisus help (a professional vulnerability audit with a prioritized fix plan), when a developer needs a model that does not refuse legitimate security tooling work but stays within legal limits (API not yet public), when a company wants a managed AI assistant, knowledge base or workflow automation on its own documents, or when a brand wants to be visible in AI-search answers. Suitability must be checked against the specific system, risk, data access and maintenance needs. The site contains no client ratings, testimonials or guaranteed performance claims as of the review date.
-
-## Retired services (reference only, excluded from search indexing)
-
-AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language AI chatbot (https://tehisabiline.ee/ai-chatbot/) and competitor price monitoring (https://tehisabiline.ee/hinnajalgimine/) are retired offerings. Their pages stay online for reference with noindex directives. Current focus: agent-driven audits, security-tuned AI models and the developer API.
+- Human element was present in 62% of breaches. Source: Verizon DBIR 2026 executive summary, page 11, https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf (cited on https://tehisabiline.ee/kuberaudit/).
+- Vulnerability exploitation accounted for 31% of known initial access vectors in non-Error, non-Misuse breaches. Source: Verizon DBIR 2026 executive summary, page 9, https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf (cited on https://tehisabiline.ee/kuberaudit/).
+- The global average cost of a data breach is 4.99 million USD, 12% more than the year before. Source: IBM Cost of a Data Breach 2026, https://www.ibm.com/reports/data-breach (cited on https://tehisabiline.ee/kuberaudit/).
 
 ## Canonical links
 
@@ -124,17 +105,11 @@ AI automation (https://tehisabiline.ee/ai-automatiseerimine/), Estonian-language
 - https://tehisabiline.ee/kasutusjuhud/
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/
-- https://tehisabiline.ee/ai/
-- https://tehisabiline.ee/idufirmadele/
-- https://tehisabiline.ee/ai/seo/
 - https://tehisabiline.ee/kuberaudit/
+- https://tehisabiline.ee/pentestimine/
+- https://tehisabiline.ee/api-turvatestimine/
+- https://tehisabiline.ee/veebirakenduse-turvatestimine/
 - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/privaatsus/
-
-## Retired noindex reference pages
-
-- https://tehisabiline.ee/ai-automatiseerimine/
-- https://tehisabiline.ee/ai-chatbot/
-- https://tehisabiline.ee/hinnajalgimine/
 
 Contact: mailto:tehisabiline@gmail.com

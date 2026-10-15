@@ -96,20 +96,27 @@ components:
     padding: ".75rem .9rem"
     height: "48px"
 ---
-Sisu joondub kesksele, kuni 1296px laiusele raamile; külgvahe muutub `clamp(1.25rem, 4vw, 2.5rem)` järgi. Tavasektsioonide vertikaalvahe skaleerub 4.5rem-ist 8.5rem-ini. Kaheveeruline sisu algab 900px juures, päise desktop-olek 980px juures ja kolmeveerulised võrgud 1000px juures. Päis on kergelt läbikumav valge; desktopis muutub see läbipaistvaks lehe ülaservas. Väiksematel laiustel virnastuvad veerud; väiksel ekraanil säilivad tekstile valge pind ja selge rütm. Avalehe dekoratiivne ribbon jääb mobiilis demoakna taha, mitte päise ega pealkirja alla; alamlehtede päiseribbon peidetakse kuni 899px-ni.
+Sisu joondub kesksele, kuni 1296px laiusele raamile; külgvahe muutub `clamp(1.25rem, 4vw, 2.5rem)` järgi. Tavasektsioonide vertikaalvahe skaleerub 4.5rem-ist 8.5rem-ini. Kaheveeruline sisu algab 900px juures, päise desktop-olek 980px juures ja kolmeveerulised võrgud 1000px juures. Desktopi päiserida on 88px pluss piirjoon; päis on kergelt läbikumav valge ning lehe ülaservas läbipaistev. Kuni 979px laiustel on päis tahke valge, kõrgusega 77px pluss turvaala: 44px logo ja 46px menüünupp on samal real. Menüü avaneb absoluutse paneelina päise all ega nihuta sisu; hero ja alamlehe päis ei kasuta mobiilis negatiivset ülaserva. Kuni 599px laiustel on põhitegevused täislaiused. Avalehe jõuline kaherealine pealkiri on telefonis kuni 3rem, desktopis kuni 5.2rem. Väiksematel laiustel virnastuvad veerud. Avalehe dekoratiivne ribbon jääb mobiilis eraldi API paneeli taha; alamlehtede päiseribbon peidetakse kuni 899px-ni.
 # Design System: Tehisabiline
 
 ## Overview
 
 **Creative North Star: "Selge sinine töölaud"**
 
-Tehisabiline ühendab tuttava tänapäevase AI-teenuse veebilehe selge, rahuliku lugemiskeskkonnaga. Valge pind ja tume tekst hoiavad pika eestikeelse sisu loetavana; erk sinine märgib tegevusi ja olulisemaid seoseid. Host Grotesk annab pealkirjadele iseloomu, Hanken Grotesk hoiab põhiteksti avatud ja loetavana.
+Tehisabilise küberturbeveeb kasutab selget, rahulikku lugemiskeskkonda. Valge pind ja tume tekst hoiavad eestikeelse sisu loetavana; erk sinine märgib tegevusi. Host Grotesk annab pealkirjadele iseloomu, Hanken Grotesk hoiab põhiteksti avatud. Avalehe esimene vaade selgitab kompaktselt, mida testitakse ja millise väljundi klient saab; arenduses olev mudeli-API on selgelt eraldi pakkumine.
 
 Ühine raamistik teenindab ettevõtteid, arendajaid, huvilisi ja rahastajaid: lihtne selgitus ees, tehniline tõendus järgmise sammuna. T-logo ja sinine on püsivad identiteedivalikud. **Key Characteristics:**
 - Valge lugemispind ja selge sinine aktsent
-- Suured tihedad pealkirjad, rahulik põhitekst
+- Selge teenuse- ja väljundikirjeldus enne tehnilist selgitust; kompaktne avalehe pealkiri
 - Peened piirjooned ja mõõdukas pinnakõrgendus
 - Liikumine on piiratud, kasutaja eelistust arvestav
+
+### Brand assets
+
+2026-10-12: T-monogramm on geomeetriline valge märk brändisinisel (`#0857f8`) ümardatud ruudul. Eraldi parempoolne ülemine terminal ja kaks diagonaalset lõiget annavad märgile oma silueti. Algallikas on `assets/brand/logo.svg`; 16/32 px favicon kasutab eraldi pikslivõrgule joondatud `favicon.svg` varianti. Päises ja jaluses kasutatakse skaleeritavat SVG-d, mitte väikese favicon'i suurendust.
+
+OG-pilt on 1200×630 px: vasakul valge tekstipind ja Host Groteski teenusepealkiri, paremal brändisinine pind suure T-märgiga. Ettevõtte nimi, teenused ja domeen jäävad loetavaks ka 300 px laiusel eelvaatel. Väikesed kasutajaliidese demod ei kuulu jagamispilti. Apple'i ja rakenduse ikoonidel on täistaust; maskable-ikooni märk jääb keskse turvaringjoone sisse.
+
 
 ## Colors
 
@@ -191,8 +198,10 @@ Kuju on pehme, kuid mitte pillikujuline: korduvad raadiused 8, 12, 16 ja 22px; n
 ### Navigation
 - **Style:** päis on kergelt läbikumav valge, sticky ning desktopis võib ainult avalehe ülaservas olla läbipaistev. T-logo ja nimi jäävad vasakule; praegune link saab sinise rõhu. Mobiilis muutub menüü avatavaks valgeks loendiks.
 
-### Hero Demonstration
-Avalehe demonstratsiooniaken on selle pinna erilahendus, mitte kõigi lehtede nõue: üks küsimus näitab pilve vastusest keeldumist, Tehisabilise vastust, leide ja inimese ülevaatust. Esitus käivitub ühe korra ning settib lõppseisu; kordusnupp käivitab selle uuesti. Vähendatud liikumise eelistusel jäetakse alguses kohe lõppseis nähtavale.
+### Homepage Offer and Technical Example
+Avalehe H1 esitleb kaht põhiteenust: „Küberaudit ja pentestimine.” ning sinise rõhuga „Keeldudeta AI API.”. Esimene teenus on kuni 5.2rem desktopis ja 3rem telefonis, sinine API osa 0.8em sama skaala suhtes. Küberaudit ja pentestimine kuuluvad ühte teenuseperre, mitte ei asenda API-t teise põhiteenusena. Mõlemal pakkumisel on oma järgmine samm ning API arendusstaatus on nähtav ka sissejuhatuses; API ei tohi seguneda kliendi API turvatestimise teenusega.
+
+Interaktiivne demonstratsiooniaken (`#demo`) asub hero esimeses vaates pealkirja kõrval, ribboni peal. Üks küsimus näitab pilve vastusest keeldumist, Tehisabilise vastust, näidisleide ja inimese ülevaatust. Esitus käivitub ühe korra ja settib lõppseisu; kordusnupp käivitab selle uuesti. Vähendatud liikumise eelistusel jäetakse kohe lõppseis nähtavale. Allpool jaotises `#teenused` on kaks võrdset pakkumiskaarti (`.offer`: valge pind, 1px piirjoon, 16px radius) – küberaudit/pentestimine ja keeldudeta küber-AI API koos nähtava märkega „API pole veel avalik”. Avaleht on lühike: pikemad selgitused, võrdlused ja numbrid asuvad alamlehtedel (`/pentestimine/`, `/kuberaudit/`, `/mudelid/`).
 
 ## Do's and Don'ts
 
