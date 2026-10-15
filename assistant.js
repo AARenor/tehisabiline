@@ -6,6 +6,7 @@
 
   var API = "https://ai.tehisabiline.ee";
   var EMAIL = "tehisabiline@gmail.com";
+  var EMAIL_RE = new RegExp(EMAIL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g");
   var MAX_CHARS = 2000;
   var MAX_SEND_TURNS = 8;
 
@@ -26,7 +27,10 @@
         sources: "Allikad:",
         error:
           "Vabandust, assistent ei vasta hetkel. Kirjuta palun " + EMAIL + ".",
-        rate: "Liiga palju sõnumeid. Proovi tunni pärast uuesti.",
+        rate:
+          "Liiga palju sõnumeid. Proovi tunni pärast uuesti või kirjuta " +
+          EMAIL +
+          ".",
         leadTitle: "Jäta kontakt",
         leadName: "Nimi",
         leadEmail: "E-post",
@@ -61,7 +65,7 @@
         typing: "Assistant is typing…",
         sources: "Sources:",
         error: "Sorry, the assistant is unavailable right now. Please email " + EMAIL + ".",
-        rate: "Too many messages. Try again in an hour.",
+        rate: "Too many messages. Try again in an hour or email " + EMAIL + ".",
         leadTitle: "Leave your contact",
         leadName: "Name",
         leadEmail: "Email",
@@ -160,9 +164,12 @@
     return "";
   }
 
-  // Turvaline kerge markdown: **paks**, [tekst](url), paljas tehisabiline.ee link.
+  // Turvaline kerge markdown: **paks**, [tekst](url), paljas tehisabiline.ee link, e-post -> mailto.
   function fmt(raw) {
     var out = esc(raw);
+    out = out.replace(EMAIL_RE, function (m) {
+      return '<a href="mailto:' + m + '">' + m + "</a>";
+    });
     out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, text, url) {
       var href = safeUrl(url.replace(/&amp;/g, "&"));
       return href ? '<a href="' + href + '">' + text + "</a>" : text;
@@ -225,7 +232,7 @@
   }
 
   function failNotice(message) {
-    addNotice(message + ' — <a href="mailto:' + EMAIL + '">' + EMAIL + "</a>");
+    addNotice(message);
   }
 
   function send() {
@@ -275,6 +282,14 @@
     var sources = [];
     var firstDelta = false;
 
+    function finalize() {
+      bubble.innerHTML = fmt(raw);
+      transcript.push({ role: "assistant", content: raw });
+      history.push({ role: "assistant", content: raw });
+      addSources(bubble, sources);
+      scrollLog();
+    }
+
     function handle(evt) {
       if (evt.delta) {
         if (!firstDelta) {
@@ -287,17 +302,13 @@
       } else if (evt.sources) {
         sources = evt.sources;
       } else if (evt.error) {
-        if (!raw) {
-          bubble.remove();
-          failNotice(L.error);
-        }
+        if (raw) finalize();
+        else bubble.remove();
+        failNotice(L.error);
+        setStreaming(false);
       } else if (evt.done) {
         if (raw) {
-          bubble.innerHTML = fmt(raw);
-          transcript.push({ role: "assistant", content: raw });
-          history.push({ role: "assistant", content: raw });
-          addSources(bubble, sources);
-          scrollLog();
+          finalize();
         } else {
           bubble.remove();
           failNotice(L.error);
@@ -310,10 +321,9 @@
       return reader.read().then(function (r) {
         if (r.done) {
           if (streaming) {
-            if (!raw) {
-              bubble.remove();
-              failNotice(L.error);
-            }
+            if (raw) finalize();
+            else bubble.remove();
+            failNotice(L.error);
             setStreaming(false);
           }
           return;
@@ -409,12 +419,15 @@
         message: message,
         page: location.href,
         quote_requested: quote,
+        consent: consent,
+        consent_at: new Date().toISOString(),
         transcript: transcript.slice(-20),
       }),
     })
       .then(function (res) {
         btn.disabled = false;
         if (res.status === 429) return leadError(L.leadRate);
+        if (res.status === 400) return leadError(L.leadErrEmail);
         if (!res.ok) return leadError(L.leadFail);
         leadView.hidden = true;
         successView.hidden = false;
