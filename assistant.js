@@ -167,7 +167,10 @@
   // Turvaline kerge markdown: **paks**, [tekst](url), paljas tehisabiline.ee link, e-post -> mailto.
   function fmt(raw) {
     var out = esc(raw);
-    out = out.replace(EMAIL_RE, function (m) {
+    out = out.replace(EMAIL_RE, function (m, off) {
+      // Jäta vahele, kui e-post on juba osa mailto-URL-ist (nt [Kirjuta](mailto:...)),
+      // nii et markdown-lingi samm saab selle ise korrektselt linkida.
+      if (out.slice(Math.max(0, off - 7), off).toLowerCase() === "mailto:") return m;
       return '<a href="mailto:' + m + '">' + m + "</a>";
     });
     out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, text, url) {
