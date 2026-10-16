@@ -124,6 +124,7 @@
     '    <input id="ta-name" type="text" autocomplete="name" maxlength="200">',
     '    <label for="ta-email">' + L.leadEmail + '</label>',
     '    <input id="ta-email" type="email" autocomplete="email" maxlength="200">',
+    '    <input id="ta-website" name="website" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" aria-hidden="true">',
     '    <label for="ta-msg">' + L.leadMsg + "</label>",
     '    <textarea id="ta-msg" rows="3" maxlength="2000"></textarea>',
     '    <label class="ta-consent"><input id="ta-quote" type="checkbox"><span>' + L.leadQuote + "</span></label>",
@@ -402,6 +403,7 @@
     var message = document.getElementById("ta-msg").value.trim();
     var quote = document.getElementById("ta-quote").checked;
     var consent = document.getElementById("ta-consent").checked;
+    var honeypot = document.getElementById("ta-website").value.trim();
     var err = document.getElementById("ta-lead-err");
 
     err.hidden = true;
@@ -425,6 +427,7 @@
         consent: consent,
         consent_at: new Date().toISOString(),
         transcript: transcript.slice(-20),
+        website: honeypot,
       }),
     })
       .then(function (res) {
