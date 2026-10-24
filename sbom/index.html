@@ -201,6 +201,23 @@
           }
         }
       ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tehisabiline.ee/sbom/#checker",
+      "name": "SBOM-i CSV kontroll",
+      "url": "https://tehisabiline.ee/sbom/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      }
     }
   ]
 }
@@ -259,6 +276,7 @@
 
                 <section id="eesti"><h2>Eesti ja tarnijad</h2><p>Eesti ettevõtte jaoks on SBOM kõige otsesemalt seotud CRA ja NIS2 tarneahela nõuetega. Kui oled tarkvara- või seadmetootja, küsi oma komponentide tarnijatelt masinloetavat loendit ja teavita neid haavatavustest, mida ise leiad. Kui oled teenuseosutaja, küsi SBOM-i oma kriitilistelt tarkvaratarnijatelt ning kontrolli, kas nende tugiperiood ja teatamisprotsess vastavad sinu riskile.</p><p>SBOM-i ei tohiks nõuda kõigilt tarnijatelt ühesuguse detailsusega. Riskipõhine lähenemine on mõistlikum: kriitilistelt komponentidelt nõua masinloetavat loendit ja VEX-i, vähem kriitilistelt vähemalt versioonide ja haavatavuste teavitamise protsessi.</p><p>Loe lisaks: <a href="/cra/">CRA juhend</a>, <a href="/nis2/">NIS2 juhend</a> ja <a href="/artiklid/nis2-tarneahel/">NIS2 tarneahela artikkel</a>.</p></section>
 
+                <section id="kontroll"><h2>Kontrolli SBOM-i CSV-d</h2><p>Laadi allalaaditav töömall või oma sama veerustruktuuriga fail. Kontrollime kohustuslikke välju, identifikaatoreid, korduvaid komponente ja näidisväärtusi. Fail ei lahku sinu brauserist.</p><form class="nis2-check" data-sbom-check data-local-check novalidate><label for="sbom-file">Vali SBOM-i CSV-fail</label><input id="sbom-file" type="file" accept=".csv,text/csv" data-sbom-file><button class="btn" type="submit">Kontrolli faili</button><div class="nis2-check__result" data-sbom-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">Kontroll on orienteeruv ega asenda SBOM-i kvaliteedi auditit. <a href="/assets/downloads/cra-sbom-mall.csv">Laadi CSV-mall</a>.</p></section>
                 <section id="faq"><h2>Küsimused SBOM-i kohta</h2><div class="faq">
                     <details><summary><h3>Kas SBOM on CRA järgi kohustuslik?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">CRA nõuab, et tootja tuvastaks ja dokumenteeriks toote komponendid, sealhulgas koostaks tarkvara koostisosade loendi. See on osa haavatavuste haldamise ja tehnilise dokumentatsiooni nõudest, mitte eraldi sertifikaat. Konkreetse vormingu ja detailsuse osas tuleb lähtuda kehtivast määrusest, harmoneeritud standarditest ja turujärelevalve ootustest.</p></details>
                     <details><summary><h3>Kas SBOM tõestab, et tarkvara on turvaline?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Ei. SBOM näitab, millised komponendid ja versioonid tootes on. See aitab haavatavusi jälgida ja tarnijaid küsitleda, kuid ei tõesta, et komponendid on turvalised või et tootes ei ole muid vigu.</p></details>
@@ -344,5 +362,6 @@
 <link rel="stylesheet" href="/assistant.css">
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
+<script src="/assets/js/sbom-check.js" defer></script>
 </body>
 </html>

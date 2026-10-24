@@ -244,6 +244,23 @@
           }
         }
       ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://tehisabiline.ee/en/sbom/#checker",
+      "name": "SBOM CSV checker",
+      "url": "https://tehisabiline.ee/en/sbom/",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      }
     }
   ]
 }
@@ -298,6 +315,7 @@
       <section id="process"><h2>A workable SBOM process</h2><ol><li><strong>Generate:</strong> produce the SBOM in the build pipeline, not after release.</li><li><strong>Enrich:</strong> add supplier, identifiers, licenses and dependency relationships.</li><li><strong>Store:</strong> keep each version with the product release and build metadata.</li><li><strong>Match:</strong> compare components with vulnerability feeds and advisories.</li><li><strong>Triage:</strong> assign an owner, exploitability and remediation deadline.</li><li><strong>Update:</strong> regenerate when a component changes; keep the old version for traceability.</li><li><strong>Share:</strong> provide the agreed extract to customers or authorities under contract.</li></ol></section>
       <section id="vulns"><h2>Vulnerability matching in practice</h2><p>A CVE feed alone is not enough. You need a component-to-advisory mapping, a triage decision and evidence of the fix. Track:</p><ul><li>Affected product and version range.</li><li>Exploitability and exposure in your configuration.</li><li>Severity and business impact.</li><li>Remediation, workaround and release version.</li><li>Customer communication and disclosure timing.</li></ul><p>For actively exploited vulnerabilities, CRA reporting deadlines apply. Keep the SBOM and the incident record linked.</p></section>
       <section id="evidence"><h2>What to show a customer or regulator</h2><ul><li>SBOM for the exact release, with a timestamp.</li><li>Component identifiers and supplier contacts.</li><li>Vulnerability policy, triage records and remediation SLAs.</li><li>Evidence of the fix and the new SBOM version.</li><li>Support-period statement and update mechanism.</li><li>Disclosure and incident-reporting records.</li></ul><p>Our <a href="/sbom/" lang="et">Estonian SBOM guide</a> includes a CSV template. A penetration test supports the technical evidence but does not replace the inventory.</p></section>
+      <section id="check"><h2>Check an SBOM CSV</h2><p>Upload the downloadable template or a file with the same headers. The checker looks for required fields, identifiers, duplicate component versions and placeholder values. The file stays in your browser.</p><form class="nis2-check" data-sbom-check data-local-check novalidate><label for="sbom-file-en">Choose an SBOM CSV file</label><input id="sbom-file-en" type="file" accept=".csv,text/csv" data-sbom-file><button class="btn" type="submit">Check the file</button><div class="nis2-check__result" data-sbom-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">The check is indicative and does not replace an SBOM quality audit.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
         <details><summary><h3>Is an SBOM mandatory under the CRA?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The CRA requires manufacturers to identify and document components and vulnerabilities. An SBOM is the practical way to meet that duty; the regulation does not prescribe one file format.</p></details>
         <details><summary><h3>Which SBOM format should I use?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">SPDX and CycloneDX are the most common machine-readable formats. Choose what your tooling and customers can consume, and keep the mapping to internal component IDs.</p></details>
@@ -385,5 +403,6 @@
 <link rel="stylesheet" href="/assistant.css">
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
+<script src="/assets/js/sbom-check.js" defer></script>
 </body>
 </html>
