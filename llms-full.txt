@@ -39,6 +39,12 @@ Canonical page: https://tehisabiline.ee/pentestimine/naidisraport/
 
 A clearly synthetic sample report showing what a buyer should expect: tested scope and limitations, PTES/OWASP-based methodology, three findings with masked evidence and impact, a remediation plan ordered by immediate/7-day/planned, and retest conditions. All names, domains and findings are fictitious; it is not a client report and does not claim a real engagement.
 
+### AI application security testing
+
+Canonical page: https://tehisabiline.ee/ai-turvatestimine/
+
+Scoped security testing of LLM, RAG and agent applications: direct and indirect prompt injection, retrieval/tenant leakage, tool permissions and excessive agency, output handling, API/key abuse and third-party model supply chain. The page states limits: probabilistic behaviour, sample-based coverage, no AI Act conformity certificate and no testing of a model provider without permission. AI Act Article 15 and NIS2 are framed as evidence and governance context, not as a guarantee.
+
 ### Küberaudit / cybersecurity audit
 
 Canonical page: https://tehisabiline.ee/kuberaudit/
@@ -132,6 +138,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
+- https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
 - https://tehisabiline.ee/api-turvatestimine/

@@ -21,6 +21,7 @@ Status reviewed on 2026-10-24:
 - [Homepage](https://tehisabiline.ee/): overview of authorized pentesting, broader audits and the separate developer API.
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/): primary penetration-testing service page for agreed website/application and API targets; written authorization, scope, test preparation, report, pricing factors and agreed retest.
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/): synthetic sample report structure with scope, methodology, three evidence-backed findings, remediation priorities and retest; clearly not a client report.
+- [AI turvatestimine](https://tehisabiline.ee/ai-turvatestimine/): scoped testing of LLM/RAG/agent applications for prompt injection, retrieval leakage, tool permissions, output handling and API abuse; limits and AI Act/NIS2 context.
 - [Küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review, human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
 
