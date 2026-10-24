@@ -10,7 +10,7 @@ Entity:
 - Email: tehisabiline@gmail.com
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
 
-Status reviewed on 2026-10-12:
+Status reviewed on 2026-10-24:
 
 - The developer API is not yet public; pilot access is discussed by email.
 - Model hosting hardware is ordered; processing in Estonia is forthcoming, not live.
@@ -29,7 +29,7 @@ Status reviewed on 2026-10-12:
 - [Veebirakenduse turvatestimine](https://tehisabiline.ee/veebirakenduse-turvatestimine/): web application penetration testing, website/e-commerce user flows, sessions, test accounts, scanner limitations and retesting.
 
 - [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): practical cyber-AI use cases grounded in cited security guidance.
-- [NIS2 ja Eesti ettevõte](https://tehisabiline.ee/nis2/): guide to cybersecurity requirements in Estonia.
+- [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/): scope, ten minimum measures, incident reporting deadlines and fines in Estonia.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
 - [Privaatsus](https://tehisabiline.ee/privaatsus/): privacy information.
 
@@ -39,6 +39,8 @@ These are international research findings, not measurements of Tehisabiline cust
 
 - [Verizon DBIR 2026 executive summary](https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf): human element was present in 62% of breaches (page 11); vulnerability exploitation accounted for 31% of known initial access vectors in non-Error, non-Misuse breaches (page 9), cited on https://tehisabiline.ee/kuberaudit/.
 - [IBM Cost of a Data Breach 2026](https://www.ibm.com/reports/data-breach): global average breach cost of 4.99 million USD, 12% higher than the year before (cited on https://tehisabiline.ee/kuberaudit/).
+- [RIA on the expanded Estonian cybersecurity act](https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus): the act has applied since 1 January 2026; about 3,000 entities were added, bringing the total to roughly 6,500; fines reach 10 million EUR or 2% of worldwide turnover for essential entities and 7 million EUR or 1.4% for important entities (cited on https://tehisabiline.ee/nis2/).
+- [Directive (EU) 2022/2555, Article 23](https://eur-lex.europa.eu/eli/dir/2022/2555/oj): significant incidents require an early warning within 24 hours, an incident notification within 72 hours and a final report within one month (cited on https://tehisabiline.ee/nis2/).
 
 ## Optional
 

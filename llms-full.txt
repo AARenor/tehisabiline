@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-10-16
+Last materially reviewed: 2026-10-24
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -77,7 +77,7 @@ Practical cyber-AI use cases for security work, each with human checkpoints and 
 
 Canonical page: https://tehisabiline.ee/nis2/
 
-Guide to the Estonian cybersecurity act and practical cybersecurity steps. Consult the page and official sources for current applicability and requirements.
+Guide to the Estonian cybersecurity act and practical cybersecurity steps. The act has applied since 1 January 2026; RIA reports about 3,000 additional entities, bringing the total to roughly 6,500. In scope for the full regime are essential and important entities; ordinary micro and small enterprises are generally outside it. NIS2's minimum measures cover risk analysis and policy, incident handling, business continuity and backup, supply-chain security, secure acquisition and vulnerability handling, effectiveness testing, cryptography, access control and MFA, training, and management accountability. Significant incidents require an early warning within 24 hours, a notification within 72 hours and a final report within one month (Directive (EU) 2022/2555, Article 23; https://eur-lex.europa.eu/eli/dir/2022/2555/oj). Fines can reach 10 million EUR or 2% of worldwide annual turnover for essential entities and 7 million EUR or 1.4% for important entities (RIA, 2 January 2026; https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus). Consult the page and official sources for current applicability and requirements.
 
 ### About
 
