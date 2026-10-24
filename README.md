@@ -19,6 +19,7 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 - [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/)
 - [Cybersecurity audit in Estonia (EN)](https://tehisabiline.ee/en/security-audit/)
 - [ISO 27001 in Estonia (EN)](https://tehisabiline.ee/en/iso-27001/)
+- [Press and media kit (EN)](https://tehisabiline.ee/en/press/)
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
 - [NIS2 kontrollnimekiri PDF-ina](https://tehisabiline.ee/assets/downloads/nis2-kontrollnimekiri.pdf)
