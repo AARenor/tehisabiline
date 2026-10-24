@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tehisabiline artiklid</title>
+    <link>https://tehisabiline.ee/artiklid/</link>
+    <description>Küberturvalisuse, NIS2, CRA, DORA ja AI Acti praktilised artiklid.</description>
+    <language>et</language>
+    <atom:link href="https://tehisabiline.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Varunduse taastetest: kas varukoopia töötab?</title>
+      <link>https://tehisabiline.ee/artiklid/varunduse-taastetest/</link>
+      <guid isPermaLink="true">https://tehisabiline.ee/artiklid/varunduse-taastetest/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Varunduse taastetest: RPO, RTO, testi ulatus, 90-minuti plaan, mõõdikud ja tõendid, mida NIS2 audit küsib.</description>
+    </item>
+    <item>
+      <title>NIS2 tarneahel: kuidas tarnijaid hinnata</title>
+      <link>https://tehisabiline.ee/artiklid/nis2-tarneahel/</link>
+      <guid isPermaLink="true">https://tehisabiline.ee/artiklid/nis2-tarneahel/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>NIS2 tarneahela turve: tarnijate tiering, due diligence, lepingutingimused, pidev seire ja tõendid, mida audit küsib.</description>
+    </item>
+    <item>
+      <title>NIS2 juhatuse kohustused: mida otsustada</title>
+      <link>https://tehisabiline.ee/artiklid/nis2-juhatus/</link>
+      <guid isPermaLink="true">https://tehisabiline.ee/artiklid/nis2-juhatus/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>NIS2 juhatuse kohustused: mida juhtorgan kinnitab, milliseid tõendeid küsida, päevakord ja 90 päeva plaan.</description>
+    </item>
+    <item>
+      <title>MFA juurutamine: plaan, meetodid ja lõksud</title>
+      <link>https://tehisabiline.ee/artiklid/mfa-juurutamine/</link>
+      <guid isPermaLink="true">https://tehisabiline.ee/artiklid/mfa-juurutamine/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.</description>
+    </item>
+    <item>
+      <title>Küberriskide register: mida sinna panna</title>
+      <link>https://tehisabiline.ee/artiklid/kuberriskide-register/</link>
+      <guid isPermaLink="true">https://tehisabiline.ee/artiklid/kuberriskide-register/</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Küberriskide register: veerud, hindamise skaala, ravi, jääkrisk, tõendid ja 30/60/90 plaan. Lae CSV mall.</description>
+    </item>
+  </channel>
+</rss>
