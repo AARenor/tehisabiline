@@ -72,6 +72,8 @@ Status reviewed on 2026-10-25:
 
 - [Sektorid](https://tehisabiline.ee/sektorid/): NIS2 energeetikas ja tervishoius, DORA finantssektoris.
 
+- [NIS2 logistikas](https://tehisabiline.ee/sektorid/logistika/): tarneahel, jälgitavus, tarnijad ja intsidendid.
+
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.

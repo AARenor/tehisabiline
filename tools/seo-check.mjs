@@ -425,6 +425,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "sektorid/logistika/index.html",
+        canonical: `${origin}/sektorid/logistika/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "sektorid/tervishoid/index.html",
         canonical: `${origin}/sektorid/tervishoid/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],

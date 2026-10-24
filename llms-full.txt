@@ -322,6 +322,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/nis2/trahvid/
 - https://tehisabiline.ee/nis2/registreerimine/
 - https://tehisabiline.ee/sektorid/finants/
+- https://tehisabiline.ee/sektorid/logistika/
 - https://tehisabiline.ee/sektorid/tervishoid/
 - https://tehisabiline.ee/sektorid/
 - https://tehisabiline.ee/sektorid/energeetika/
