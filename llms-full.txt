@@ -289,6 +289,7 @@ ISO/IEC 27001 is a voluntary international standard for an information-security 
 - https://tehisabiline.ee/nis2/kontrollnimekiri/
 - https://tehisabiline.ee/nis2/intsidendist-teatamine/
 - https://tehisabiline.ee/nis2/trahvid/
+- https://tehisabiline.ee/nis2/registreerimine/
 - https://tehisabiline.ee/privaatsus/
 - https://tehisabiline.ee/sonastik/
 
