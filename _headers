@@ -40,3 +40,6 @@
 /feed.xml
   Content-Type: application/rss+xml; charset=utf-8
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/feed.json
+  Content-Type: application/feed+json; charset=utf-8
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

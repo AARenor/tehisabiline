@@ -1,0 +1,45 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Tehisabiline artiklid",
+  "home_page_url": "https://tehisabiline.ee/artiklid/",
+  "feed_url": "https://tehisabiline.ee/feed.json",
+  "description": "Küberturvalisuse, NIS2, CRA, DORA ja AI Acti praktilised artiklid.",
+  "language": "et",
+  "items": [
+    {
+      "id": "https://tehisabiline.ee/artiklid/kuberriskide-register/",
+      "url": "https://tehisabiline.ee/artiklid/kuberriskide-register/",
+      "title": "Küberriskide register: mida sinna panna",
+      "content_text": "Küberriskide register: veerud, hindamise skaala, ravi, jääkrisk, tõendid ja 30/60/90 plaan. Lae CSV mall.",
+      "date_published": "2026-10-24T00:00:00+00:00"
+    },
+    {
+      "id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/",
+      "url": "https://tehisabiline.ee/artiklid/mfa-juurutamine/",
+      "title": "MFA juurutamine: plaan, meetodid ja lõksud",
+      "content_text": "MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.",
+      "date_published": "2026-10-24T00:00:00+00:00"
+    },
+    {
+      "id": "https://tehisabiline.ee/artiklid/nis2-juhatus/",
+      "url": "https://tehisabiline.ee/artiklid/nis2-juhatus/",
+      "title": "NIS2 juhatuse kohustused: mida otsustada",
+      "content_text": "NIS2 juhatuse kohustused: mida juhtorgan kinnitab, milliseid tõendeid küsida, päevakord ja 90 päeva plaan.",
+      "date_published": "2026-10-24T00:00:00+00:00"
+    },
+    {
+      "id": "https://tehisabiline.ee/artiklid/nis2-tarneahel/",
+      "url": "https://tehisabiline.ee/artiklid/nis2-tarneahel/",
+      "title": "NIS2 tarneahel: kuidas tarnijaid hinnata",
+      "content_text": "NIS2 tarneahela turve: tarnijate tiering, due diligence, lepingutingimused, pidev seire ja tõendid, mida audit küsib.",
+      "date_published": "2026-10-24T00:00:00+00:00"
+    },
+    {
+      "id": "https://tehisabiline.ee/artiklid/varunduse-taastetest/",
+      "url": "https://tehisabiline.ee/artiklid/varunduse-taastetest/",
+      "title": "Varunduse taastetest: kas varukoopia töötab?",
+      "content_text": "Varunduse taastetest: RPO, RTO, testi ulatus, 90-minuti plaan, mõõdikud ja tõendid, mida NIS2 audit küsib.",
+      "date_published": "2026-10-24T00:00:00+00:00"
+    }
+  ]
+}
