@@ -231,6 +231,11 @@ The CRA requires manufacturers to identify and document product components and v
 Canonical page: https://tehisabiline.ee/en/e-its/
 E-ITS is the Estonian information-security framework maintained under RIA. It provides a measure catalogue, a selection method and an audit model. The 2026 version removed preliminary and interim audits and moved to a three-year main audit cycle. E-ITS can support NIS2 evidence but does not by itself prove NIS2 compliance.
 
+## Penetration testing in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/pentesting/
+Authorised penetration testing for web applications, APIs, cloud and AI integrations. Testing starts only after a written scope and rules of engagement. Deliverables include a findings report with evidence, severity and remediation guidance, plus a retest where agreed. Automated scanners support the work; a person validates every material finding.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -251,6 +256,7 @@ E-ITS is the Estonian information-security framework maintained under RIA. It pr
 - https://tehisabiline.ee/en/ai-act/
 - https://tehisabiline.ee/en/sbom/
 - https://tehisabiline.ee/en/e-its/
+- https://tehisabiline.ee/en/pentesting/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
