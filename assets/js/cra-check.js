@@ -6,7 +6,7 @@
 
   const render = (title, body) => {
     result.hidden = false;
-    result.innerHTML = `<p><strong>${title}</strong></p><p>${body}</p><p class="nis2-check__note">See on orienteeruv kontroll, mitte õiguslik hinnang. Lõpliku kohaldumise ja erandite ulatuse kinnitab jurist või pädev asutus.</p>`;
+    result.innerHTML = `<p><strong>${title}</strong></p><p>${body}</p><p><a href="/#contact">Küsi CRA ulatuse kaardistust</a> · <a href="/sbom/">Vaata SBOM-i juhendit</a></p><p class="nis2-check__note">See on orienteeruv kontroll, mitte õiguslik hinnang. Lõpliku kohaldumise ja erandite ulatuse kinnitab jurist või pädev asutus.</p>`;
     requestAnimationFrame(() => result.focus());
   };
 
