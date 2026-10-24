@@ -1,2 +1,3 @@
-﻿Kirje ID;IKT-teenus;Teenuseosutaja;Registrikood;Alltöövõtja;Toetatav funktsioon;Kriitilisus;Andmete asukoht;Lepingu algus;Lepingu lõpp;Väljumisplaan;Riskitase;Omanik;Tõend;Märkused
-DORA-001;Pilvehosting;NÄIDIS OÜ;12345678;;Kliendiportaal;Kriitiline;EL;2026-01-01;2027-12-31;Jah;Kõrge;IT-juht;Leping ja due diligence;Kustuta see näidisrida
+Kirje ID;IKT-teenus;Teenuse tüüp;Teenuseosutaja;Registrikood või LEI;Alltöövõtja;Toetatav funktsioon;Kriitiline või oluline;Andmete asukoht;Lepingu algus;Lepingu lõpp;Väljumisplaan;Riskitase;Omanik;Tõend;Märkused
+DORA-001;Pilvehosting;Pilveteenus;NÄIDIS OÜ;12345678;NÄIDIS-ALLTÖÖVÕTJA OÜ;Kliendiportaal;Kriitiline;EL;2026-01-01;2027-12-31;Jah;Kõrge;IT-juht;Leping ja due diligence;Kustuta see näidisrida
+DORA-002;E-posti turvavärav;Turvateenus;NÄIDIS TEENUS OÜ;87654321;;E-post;Oluline;EL;2026-03-01;2028-02-28;Jah;Keskmine;IT-juht;Leping ja teenustaseme aruanne;Kustuta see näidisrida

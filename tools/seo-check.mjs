@@ -104,6 +104,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "dora/teaberegister/index.html",
+        canonical: `${origin}/dora/teaberegister/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "artiklid/index.html",
         canonical: `${origin}/artiklid/`,
         schemaTypes: ["CollectionPage", "BreadcrumbList", "ItemList"],
@@ -497,9 +504,14 @@ for (const page of expectedPages) {
             if (article) {
                 const articleImage = typeof article.image === "string" ? article.image : article.image?.url;
                 validateBrandImage(articleImage, `${label}: Article image`, 1200, 630);
-                for (const role of ["author", "publisher"]) {
-                    if (article[role]) assert(article[role]["@type"] === "Organization", label + ": Article role must be typed.");
+                if (article.author) {
+                    assert(["Person", "Organization"].includes(article.author["@type"]), label + ": Article author must be a typed Person or Organization.");
+                    if (article.author["@type"] === "Person") {
+                        assert(article.author.name === "Arle Aron Reidma", label + ": Article Person author must be named.");
+                        assert(article.author.url === `${origin}/meist/#autor`, label + ": Article Person author must link to the author profile.");
+                    }
                 }
+                if (article.publisher) assert(article.publisher["@type"] === "Organization", label + ": Article publisher must be a typed Organization.");
                 assert(metaValue(html, "og:type") === "article", label + ": Article pages must declare og:type article.");
                 assert(html.includes("article:published_time") && html.includes("article:modified_time"), label + ": Article pages must expose publish dates.");
                 assert(metaValue(html, "article:modified_time") === article.dateModified, label + ": social modified date must match schema.");

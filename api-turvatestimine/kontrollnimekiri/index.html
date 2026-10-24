@@ -34,68 +34,158 @@
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=2608db2b">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Article",
+      "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#article",
+      "url": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/",
+      "headline": "API pentesti kontrollnimekiri",
+      "description": "Praktiline kontrollnimekiri API turvatestimise ettevalmistamiseks ja läbiviimiseks: ulatus, testkontod, OWASP API Top 10, tõendid ja kordustest.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "citation": [
+        "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+        "https://wstg.owasp.org/v4.2/2-Introduction/",
+        "https://csrc.nist.gov/pubs/sp/800/115/final"
+      ],
+      "author": {
+        "@type": "Person",
+        "@id": "https://tehisabiline.ee/#founder",
+        "name": "Arle Aron Reidma",
+        "url": "https://tehisabiline.ee/meist/#autor"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      },
+      "about": [
         {
-          "@type": "Article",
-          "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#article",
-          "url": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/",
-          "headline": "API pentesti kontrollnimekiri",
-          "description": "Praktiline kontrollnimekiri API turvatestimise ettevalmistamiseks ja läbiviimiseks: ulatus, testkontod, OWASP API Top 10, tõendid ja kordustest.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "citation": [
-            "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
-            "https://wstg.owasp.org/v4.2/2-Introduction/",
-            "https://csrc.nist.gov/pubs/sp/800/115/final"
-          ],
-          "author": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization", "name": "Tehisabiline OÜ", "logo": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca", "width": 512, "height": 512}},
-          "image": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97", "width": 1200, "height": 630},
-          "about": [{"@type": "Thing", "name": "API turvatestimine"}, {"@type": "Thing", "name": "API pentest"}, {"@type": "Thing", "name": "OWASP API Security Top 10"}]
+          "@type": "Thing",
+          "name": "API turvatestimine"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#webpage",
-          "url": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/",
-          "name": "API pentesti kontrollnimekiri | Tehisabiline",
-          "description": "API pentesti kontrollnimekiri: ulatus, testkontod, OWASP API Top 10 kontrollid, tõendid ja kordustest.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
-          "about": {"@id": "https://tehisabiline.ee/#organization"},
-          "mainEntity": {"@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#article"},
-          "author": {"@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"},
-          "breadcrumb": {"@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#breadcrumb"}
+          "@type": "Thing",
+          "name": "API pentest"
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#faq",
-          "isPartOf": {"@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#webpage"},
-          "inLanguage": "et",
-          "mainEntity": [
-            {"@type": "Question", "name": "Mida API pentesti kontrollnimekiri sisaldab?", "acceptedAnswer": {"@type": "Answer", "text": "Kolme osa: ettevalmistus enne testi, OWASP API Top 10 kontrollid koos tõenditega ja kordustesti nimekiri. Iga punkti juures on kirjas, mida testija vajab ja mida raportist oodata."}},
-            {"@type": "Question", "name": "Mitu testkontot on API pentestiks vaja?", "acceptedAnswer": {"@type": "Answer", "text": "Vähemalt kaks erineva rolli või kliendi kontot. Kui süsteemis on rohkem rolle või tenante, tuleb iga olulise kombinatsiooni jaoks anda eraldi testkonto."}},
-            {"@type": "Question", "name": "Kas API pentest vajab OpenAPI kirjeldust?", "acceptedAnswer": {"@type": "Answer", "text": "See ei ole kohustuslik, kuid OpenAPI või Postmani kogu muudab ulatuse ja otspunktide katvuse kontrollitavaks ning vähendab testimüra."}},
-            {"@type": "Question", "name": "Kuidas hinnata API pentesti tulemust?", "acceptedAnswer": {"@type": "Answer", "text": "Vaata kinnitatud leidude mõju, tõendeid ja parandussoovitusi, mitte ainult leidude arvu. Oluline on, kas leid on korratav ja kas parandus on kontrollitav kordustestiga."}}
-          ]
+          "@type": "Thing",
+          "name": "OWASP API Security Top 10"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#webpage",
+      "url": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/",
+      "name": "API pentesti kontrollnimekiri | Tehisabiline",
+      "description": "API pentesti kontrollnimekiri: ulatus, testkontod, OWASP API Top 10 kontrollid, tõendid ja kordustest.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#article"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#breadcrumb"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#webpage"
+      },
+      "inLanguage": "et",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mida API pentesti kontrollnimekiri sisaldab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kolme osa: ettevalmistus enne testi, OWASP API Top 10 kontrollid koos tõenditega ja kordustesti nimekiri. Iga punkti juures on kirjas, mida testija vajab ja mida raportist oodata."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
-            {"@type": "ListItem", "position": 2, "name": "API turvatestimine", "item": "https://tehisabiline.ee/api-turvatestimine/"},
-            {"@type": "ListItem", "position": 3, "name": "Kontrollnimekiri", "item": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/"}
-          ]
+          "@type": "Question",
+          "name": "Mitu testkontot on API pentestiks vaja?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vähemalt kaks erineva rolli või kliendi kontot. Kui süsteemis on rohkem rolle või tenante, tuleb iga olulise kombinatsiooni jaoks anda eraldi testkonto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas API pentest vajab OpenAPI kirjeldust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "See ei ole kohustuslik, kuid OpenAPI või Postmani kogu muudab ulatuse ja otspunktide katvuse kontrollitavaks ning vähendab testimüra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kuidas hinnata API pentesti tulemust?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vaata kinnitatud leidude mõju, tõendeid ja parandussoovitusi, mitte ainult leidude arvu. Oluline on, kas leid on korratav ja kas parandus on kontrollitav kordustestiga."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "API turvatestimine",
+          "item": "https://tehisabiline.ee/api-turvatestimine/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Kontrollnimekiri",
+          "item": "https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -185,6 +275,8 @@
                     <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
                     <li><a href="/nis2/">NIS2 juhend</a></li>
                     <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
+                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
+                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
                     <li><a href="/ai-act/">AI Act Eestis</a></li>
                     <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>

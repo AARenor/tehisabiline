@@ -161,7 +161,13 @@ Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber 
 
 Canonical page: https://tehisabiline.ee/ai-act/
 
-Guide to the EU AI Act in Estonian: provider and deployer roles, prohibited/high-risk/limited/minimal risk, the amended timeline (including the 2026 omnibus delay of high-risk deadlines), TTJA's future market-surveillance role, Article 15 accuracy/robustness/cybersecurity expectations and the limits of scoped AI security testing. It is explanatory, not legal advice.
+Guide to the EU AI Act in Estonian: provider and deployer roles, prohibited/high-risk/limited/minimal risk, the amended timeline (including the 2026 omnibus delay of high-risk deadlines), TTJA's future market-surveillance role, Article 15 accuracy/robustness/cybersecurity expectations, a browser-only risk-class self-check and the limits of scoped AI security testing. It is explanatory, not legal advice.
+
+### DORA register of information
+
+Canonical page: https://tehisabiline.ee/dora/teaberegister/
+
+Practical guide to the DORA Article 28(3) register: the contractual and dependency fields, critical/important function mapping, data locations, subcontractors, exit plans and evidence. It explains that the downloadable CSV is an internal working template, not the official ITS (EU) 2024/2956 submission format, and describes the Estonian submission channel and checks before submission.
 
 ### ISO/IEC 27001
 
@@ -191,6 +197,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/regulatsioonid/
 - https://tehisabiline.ee/ai-act/
 - https://tehisabiline.ee/iso-27001/
+- https://tehisabiline.ee/dora/teaberegister/
 - https://tehisabiline.ee/artiklid/
 - https://tehisabiline.ee/artiklid/varunduse-taastetest/
 - https://tehisabiline.ee/artiklid/nis2-tarneahel/

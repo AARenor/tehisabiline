@@ -34,7 +34,8 @@
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=2608db2b">
     <link rel="stylesheet" href="/assets/css/pages/sonastik.css?v=be1fc28c">
-    <script type="application/ld+json">{
+    <script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -45,6 +46,36 @@
       "inLanguage": "et",
       "url": "https://tehisabiline.ee/sonastik/",
       "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "AI Act",
+          "description": "Euroopa Liidu tehisintellekti määrus, mis seab riskipõhised nõuded AI-süsteemidele.",
+          "url": "https://tehisabiline.ee/sonastik/#ai-act"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Auditeerimine",
+          "description": "Sõltumatu ja dokumenteeritud hindamine, kus tõendite põhjal kontrollitakse vastavust kriteeriumidele.",
+          "url": "https://tehisabiline.ee/sonastik/#auditeerimine"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "DORA",
+          "description": "ELi määrus finantssektori IKT-riskide ja digitaalse tegevuskerksuse kohta.",
+          "url": "https://tehisabiline.ee/sonastik/#dora"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Penetratsioonitestimine",
+          "description": "Pentestimise ehk läbistustestimise sünonüüm: kontrollitakse, kas nõrkust saab päriselt ära kasutada.",
+          "url": "https://tehisabiline.ee/sonastik/#penetratsioonitestimine"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "TLPT",
+          "description": "Ohuteabel põhinev läbistustestimine, mida DORA kontekstis nõutakse määratud ettevõtjatele.",
+          "url": "https://tehisabiline.ee/sonastik/#tlpt"
+        },
         {
           "@type": "DefinedTerm",
           "name": "NIS2",
@@ -254,8 +285,10 @@
         "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
       ],
       "author": {
-        "@type": "Organization",
-        "@id": "https://tehisabiline.ee/#organization"
+        "@type": "Person",
+        "@id": "https://tehisabiline.ee/#founder",
+        "name": "Arle Aron Reidma",
+        "url": "https://tehisabiline.ee/meist/#autor"
       },
       "publisher": {
         "@type": "Organization",
@@ -356,7 +389,8 @@
       ]
     }
   ]
-}</script>
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -481,6 +515,8 @@
                     <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
                     <li><a href="/nis2/">NIS2 juhend</a></li>
                     <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
+                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
+                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
                     <li><a href="/ai-act/">AI Act Eestis</a></li>
                     <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
