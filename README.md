@@ -6,6 +6,15 @@ Company website of Tehisabiline OÜ (Tallinn, Estonia): cybersecurity audits (in
 
 AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenused on küberauditid ja kübertööriistade API; üldised hallatud AI-teenused ning SEO/GEO teenused ei kuulu enam veebisaidi pakkumisse.
 
+## Public resources
+
+- [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
+- [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
+- [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/)
+- [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/)
+- [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/)
+- [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/)
+
 ## Arendus
 
 Sõltuvusi pole (puhas HTML/CSS/JS). Pärast päise/jaluse (`tools/chrome.mjs`) või CSS/JS muutmist:

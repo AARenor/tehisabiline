@@ -1,0 +1,57 @@
+NIS2 INTSIDENDITEATE MALL
+=========================
+
+Kasuta seda malli oma ettevõtte intsidendi dokumenteerimiseks. Ära saada
+täidetud malli avalikku kanalisse. Enne teatise esitamist eemalda paroolid,
+API-võtmed, tokenid ja isikuandmed, mida ei ole teatamiseks vaja.
+
+1. VARAJANE HOIATUS (24 tunni jooksul)
+--------------------------------------
+Teatav üksus:
+Intsidendi ID:
+Avastamise aeg (UTC):
+Esialgne kirjeldus (faktid, ilma oletusteta):
+Kahtlus pahatahtlikust tegevusest (jah / ei / teadmata):
+Mõjutatud teenus(ed) ja süsteem(id):
+Esialgne mõju (katkestus, andmed, kliendid, rahaline risk):
+Piiriülene mõju (jah / ei / teadmata):
+Esialgsed indikaatorid (IoC, logiviide):
+Võetud meetmed:
+Ööpäevaringne kontakt:
+
+2. TÄPSUSTAV TEADE (72 tunni jooksul)
+--------------------------------------
+Intsidendi ID:
+Hinnang tõsidusele (oluline / ei ole oluline / selgub):
+Mõjutatud teenused ja süsteemid:
+Esialgne juurpõhjus:
+Leevendusmeetmed ja nende seis:
+Andmete ja isikuandmete mõju:
+Teavitused teistele osapooltele (kellele, millal):
+Järgmised sammud ja tähtaeg:
+
+3. LÕPPARUANNE (ühe kuu jooksul)
+---------------------------------
+Intsidendi ID:
+Üksikasjalik kirjeldus:
+Ohu liik:
+Juurpõhjus:
+Mõju (teenus, andmed, kliendid, rahaline, maine):
+Piiriülene mõju:
+Võetud meetmed ja nende tõhusus:
+Korduva esinemise vältimise meetmed:
+Õppetunnid ja protsessi muudatused:
+Lisatud tõendid (failinimed, mitte sisu):
+
+KONTROLL ENNE ESITAMIST
+-----------------------
+[ ] Kuupäevad on UTC-s ja kellaajad kontrollitud
+[ ] Paroolid, tokenid ja isikuandmed on eemaldatud
+[ ] Mõju on kirjeldatud faktide, mitte oletustega
+[ ] Kontakt vastab ka väljaspool tööaega
+[ ] Teatis on seotud intsidendi ID-ga
+[ ] Isikuandmete rikkest teatamine AKI-le on hinnatud
+
+Allikas: https://tehisabiline.ee/nis2/intsidendist-teatamine/
+See mall on abivahend, mitte õiguslik nõuanne. Kohustused ja tähtajad
+kontrolli RIA ja kehtiva õiguse järgi.
