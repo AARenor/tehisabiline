@@ -60,6 +60,7 @@ Status reviewed on 2026-10-24:
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/): scope, a four-question applicability self-check, ten minimum measures, incident reporting deadlines and fines in Estonia; covers the current KüTS redaction of 16.10.2026 and near-miss reporting.
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/): ten measures with the evidence auditors ask for, quick wins and typical gaps.
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/): significant-incident criteria, the 24/72/1-month reports and the Estonian reporting channel.
+- [NIS2 trahvid](https://tehisabiline.ee/nis2/trahvid/): maximum fines, supervisory factors, management liability and evidence that reduces risk.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
