@@ -280,6 +280,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/ai-act/
 - https://tehisabiline.ee/en/
 - https://tehisabiline.ee/en/regulations/
+- https://tehisabiline.ee/en/nis2/audit/
 - https://tehisabiline.ee/en/nis2/incident-reporting/
 - https://tehisabiline.ee/en/nis2/fines/
 - https://tehisabiline.ee/en/nis2/registration/

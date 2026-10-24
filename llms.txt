@@ -33,6 +33,7 @@ Status reviewed on 2026-10-25:
 - [NIS2 registration in Estonia (EN)](https://tehisabiline.ee/en/nis2/registration/): RIA steps, three-month and 14-day deadlines, preparation and a calculator.
 - [NIS2 fines in Estonia (EN)](https://tehisabiline.ee/en/nis2/fines/): caps, supervisory assessment, management liability and a calculator.
 - [NIS2 incident reporting in Estonia (EN)](https://tehisabiline.ee/en/nis2/incident-reporting/): 24-hour early warning, 72-hour notification, one-month report and common mistakes.
+- [NIS2 audit in Estonia (EN)](https://tehisabiline.ee/en/nis2/audit/): scope, ten duties, evidence and common gaps.
 - [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/): English guide to KüTS scope, RIA registration and change deadlines, incident-reporting deadlines, the ten duties, a fine calculator and audit evidence.
 - [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/): English guide to Cyber Resilience Act product scope, manufacturer duties, a reporting-deadline calculator and SBOM evidence.
 - [DORA audit (EN)](https://tehisabiline.ee/en/dora/audit/): scope, evidence, register/TLPT boundaries and common gaps.
