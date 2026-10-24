@@ -1,0 +1,43 @@
+@media print {
+    .site-header,
+    .site-footer,
+    .band,
+    .related,
+    .toc,
+    .skip-link,
+    .breadcrumbs,
+    .page-head__meta {
+        display: none !important;
+    }
+
+    .page-head {
+        padding: 0 0 8mm;
+    }
+
+    .prose {
+        max-width: none;
+    }
+
+    .faq details {
+        border: 0;
+        padding: 0;
+        margin: 0 0 4mm;
+    }
+
+    .faq summary svg {
+        display: none;
+    }
+
+    .faq summary h3 {
+        display: inline;
+        font-size: 11pt;
+    }
+
+    .data {
+        font-size: 9pt;
+    }
+}
+
+    a[href$=".pdf"] {
+        display: none !important;
+    }
