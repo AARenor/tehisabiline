@@ -342,6 +342,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "koolitus/index.html",
+        canonical: `${origin}/koolitus/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresOrganization: true
+    },
+    {
         file: "nis2/kontrollnimekiri/index.html",
         canonical: `${origin}/nis2/kontrollnimekiri/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
@@ -351,6 +358,13 @@ const expectedPages = [
     {
         file: "nis2/intsidendist-teatamine/index.html",
         canonical: `${origin}/nis2/intsidendist-teatamine/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "nis2/toetus/index.html",
+        canonical: `${origin}/nis2/toetus/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true

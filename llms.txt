@@ -56,6 +56,10 @@ Status reviewed on 2026-10-25:
 
 - [English home](https://tehisabiline.ee/en/): cybersecurity audit, penetration testing and NIS2/CRA evidence in Estonia.
 
+- [Küberturvalisus koolitus](https://tehisabiline.ee/koolitus/): NIS2 ja E-ITS koolitus juhtkonnale ja töötajatele, formaadid, sisu ja tabletop.
+
+- [NIS2 toetus](https://tehisabiline.ee/nis2/toetus/): EIS toetuse summad, abikõlblikud kulud, taotlemine ja tüüpilised vead.
+
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.

@@ -311,8 +311,10 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
 - https://tehisabiline.ee/veebirakenduse-turvatestimine/
 - https://tehisabiline.ee/nis2/
+- https://tehisabiline.ee/koolitus/
 - https://tehisabiline.ee/nis2/kontrollnimekiri/
 - https://tehisabiline.ee/nis2/intsidendist-teatamine/
+- https://tehisabiline.ee/nis2/toetus/
 - https://tehisabiline.ee/nis2/trahvid/
 - https://tehisabiline.ee/nis2/registreerimine/
 - https://tehisabiline.ee/nis2/audit/
