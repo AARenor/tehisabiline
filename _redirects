@@ -1,6 +1,9 @@
 /privaat-ai  /mudelid/  301
 /privaat-ai/  /mudelid/  301
 /privaat-ai/*  /mudelid/  301
+/ai/turvatestimine  /ai-turvatestimine/  301
+/ai/turvatestimine/  /ai-turvatestimine/  301
+/ai/turvatestimine/*  /ai-turvatestimine/  301
 /ai  https://arle.top/  301
 /ai/  https://arle.top/  301
 /ai/*  https://arle.top/:splat  301
