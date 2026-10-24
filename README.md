@@ -17,6 +17,7 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/) ([PDF](https://tehisabiline.ee/assets/downloads/pentesti-raporti-naidis.pdf))
 - [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/)
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/)
+- [Viitamine ja allikad](https://tehisabiline.ee/viitamine/)
 
 ## Arendus
 

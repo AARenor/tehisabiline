@@ -41,6 +41,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "viitamine/index.html",
+        canonical: `${origin}/viitamine/`,
+        schemaTypes: ["CollectionPage", "ItemList", "BreadcrumbList"],
+        dateType: "CollectionPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "mudelid/index.html",
         canonical: `${origin}/mudelid/`,
         schemaTypes: ["Service", "WebPage", "BreadcrumbList"],

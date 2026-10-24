@@ -46,6 +46,7 @@ Status reviewed on 2026-10-24:
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/): significant-incident criteria, the 24/72/1-month reports and the Estonian reporting channel.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
+- [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
 - [Privaatsus](https://tehisabiline.ee/privaatsus/): privacy information.
 
 ## Facts to quote

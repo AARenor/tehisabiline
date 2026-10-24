@@ -291,7 +291,7 @@ for (const file of pageFiles) {
         try {
             const data = JSON.parse(b[1]);
             const graph = Array.isArray(data["@graph"]) ? data["@graph"] : [data];
-            const page = graph.find((item) => ["WebPage", "AboutPage"].includes(item["@type"]) && item.dateModified);
+            const page = graph.find((item) => ["WebPage", "AboutPage", "CollectionPage"].includes(item["@type"]) && item.dateModified);
             if (page) modified = page.dateModified;
         } catch { /* invalid JSON-LD is seo-check's job */ }
     }

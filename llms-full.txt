@@ -139,6 +139,12 @@ Canonical page: https://tehisabiline.ee/meist/
 
 Information about Tehisabiline, working principles and contact.
 
+### Citation and public resources
+
+Canonical page: https://tehisabiline.ee/viitamine/
+
+Citation-ready page for journalists and partners: company description, canonical resource URLs, Estonian and English citation formats, public data and correction policy. Links to the NIS2 guide and checklist, DORA guide and register template, E-ITS guide, synthetic pentest report and glossary.
+
 ### Privacy
 
 Canonical page: https://tehisabiline.ee/privaatsus/
@@ -158,6 +164,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/
 - https://tehisabiline.ee/kasutusjuhud/
 - https://tehisabiline.ee/meist/
+- https://tehisabiline.ee/viitamine/
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/e-its/

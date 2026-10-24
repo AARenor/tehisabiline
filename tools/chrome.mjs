@@ -62,6 +62,7 @@ function footer(date) {
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
                     <li><a href="/kuberaudit/">Küberauditi ulatus</a></li>
                     <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
                     <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
