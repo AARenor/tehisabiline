@@ -308,7 +308,7 @@
   </header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#registration">Registration</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
+      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#registration">Registration</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
     </ol></nav>
     <article class="prose">
       <section class="short-answer" id="short-answer"><h2>NIS2 in Estonia: short answer</h2>
@@ -339,6 +339,16 @@
           <tr><th scope="row">3. Is the service covered regardless of size?</th><td>Trust services, DNS, top-level domains, electronic communications and certain public-administration entities.</td><td>May apply even to a smaller provider.</td></tr>
         </tbody></table></div>
         <p class="nis2-check__note">This is a readiness screen, not a legal opinion. Group structures, exceptions and sector definitions can change the result.</p>
+        <h3 id="self-check-en">Short NIS2 scope check</h3>
+        <p>Answer four questions. The check runs only in your browser; nothing is uploaded.</p>
+        <form class="nis2-check" data-nis2-check-en data-local-check>
+          <fieldset><legend>1. Are you a public-sector body or do you carry out public tasks?</legend><label><input type="radio" name="public" value="yes" required> Yes</label><label><input type="radio" name="public" value="no"> No</label></fieldset>
+          <fieldset><legend>2. Is your main activity in a sector listed in NIS2 Annex I or II?</legend><label><input type="radio" name="sector" value="yes" required> Yes</label><label><input type="radio" name="sector" value="no"> No</label><label><input type="radio" name="sector" value="unsure"> Not sure</label></fieldset>
+          <fieldset><legend>3. Are you at least medium-sized, including partner and linked enterprises?</legend><p class="nis2-check__hint">At least 50 staff, or turnover or balance sheet above €10 million.</p><label><input type="radio" name="size" value="yes" required> Yes</label><label><input type="radio" name="size" value="no"> No</label></fieldset>
+          <fieldset><legend>4. Do you provide a service covered regardless of size?</legend><p class="nis2-check__hint">For example DNS, top-level domains, electronic communications, cloud, managed ICT services or trust services.</p><label><input type="radio" name="special" value="yes" required> Yes</label><label><input type="radio" name="special" value="no"> No</label><label><input type="radio" name="special" value="unsure"> Not sure</label></fieldset>
+          <div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Check scope</button><button class="btn btn--ghost" type="reset">Reset</button></div>
+          <div class="nis2-check__result" data-nis2-result-en tabindex="-1" aria-live="polite" hidden></div>
+        </form>
       </section>
 
       <section id="registration"><h2>RIA registration</h2>
@@ -466,6 +476,7 @@
 <!-- /chrome:footer -->
 <!-- chrome:widget -->
 <link rel="stylesheet" href="/assistant.css">
+<script src="/assets/js/nis2-check-en.js" defer></script>
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
 </body>
