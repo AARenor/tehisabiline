@@ -4,7 +4,7 @@ import {fileURLToPath} from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://tehisabiline.ee";
-const today = new Date().toISOString().slice(0, 10);
+const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Tallinn", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 const contactEmail = "tehisabiline@gmail.com";
 const homepageNodeIds = [`${origin}/#organization`, `${origin}/#website`];
 const MIN_MAIN_INTERNAL_LINKS = 3;
