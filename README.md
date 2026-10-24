@@ -10,8 +10,10 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
+- [NIS2 kontrollnimekiri PDF-ina](https://tehisabiline.ee/assets/downloads/nis2-kontrollnimekiri.pdf)
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/)
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/)
+- [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/) ([PDF](https://tehisabiline.ee/assets/downloads/pentesti-raporti-naidis.pdf))
 - [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/)
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/)
 
