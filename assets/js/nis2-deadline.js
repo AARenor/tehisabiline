@@ -22,7 +22,7 @@
       return;
     }
 
-    out.innerHTML = `<p><strong>Avastamine:</strong> ${fmt.format(detected)}</p><ul><li><strong>Varajane hoiatus (24 h):</strong> ${fmt.format(addHours(detected, 24))}</li><li><strong>Teade (72 h):</strong> ${fmt.format(addHours(detected, 72))}</li><li><strong>Lõpparuanne (1 kuu):</strong> ${fmt.format(addMonth(detected))}</li></ul><p class="nis2-check__note">Kontrolli RIA kehtivat kanalit ja nõudeid. Kalkulaator arvutab kohalikus ajavööndis ega asenda intsidendiprotseduuri.</p>`;
+    out.innerHTML = `<p><strong>Avastamine:</strong> ${fmt.format(detected)}</p><ul><li><strong>Varajane hoiatus (24 h):</strong> ${fmt.format(addHours(detected, 24))}</li><li><strong>Teade (72 h):</strong> ${fmt.format(addHours(detected, 72))}</li><li><strong>Lõpparuanne (1 kuu):</strong> ${fmt.format(addMonth(detected))}</li></ul><p class="nis2-check__note">Kontrolli RIA kehtivat kanalit ja nõudeid. Arvutus kasutab absoluutseid tunde; suveaja üleminekul võib kohalik kellaaeg nihkuda. Kalkulaator ei asenda intsidendiprotseduuri.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });
