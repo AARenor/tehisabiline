@@ -104,6 +104,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "sonastik/index.html",
+        canonical: `${origin}/sonastik/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "DefinedTermSet"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "privaatsus/index.html",
         canonical: `${origin}/privaatsus/`,
         schemaTypes: ["WebPage", "BreadcrumbList"],

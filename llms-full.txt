@@ -93,6 +93,12 @@ Canonical page: https://tehisabiline.ee/nis2/intsidendist-teatamine/
 
 Significant-incident criteria, the three NIS2 reports (early warning within 24 hours, notification within 72 hours, final report within one month), what to include, the Estonian reporting channel and the separate GDPR breach notification.
 
+### Glossary
+
+Canonical page: https://tehisabiline.ee/sonastik/
+
+Alphabetical glossary of cybersecurity terms in Estonian: NIS2, significant incident, vulnerability, pentest, cyber audit, PTES, OWASP WSTG, OWASP API Top 10, BOLA, IDOR, BOPLA, BFLA, SSRF, XSS, SQL injection, CSRF, RCE, CVE, CVSS, MFA, RTO/RPO, SIEM, WAF and bug bounty.
+
 ### About
 
 Canonical page: https://tehisabiline.ee/meist/
@@ -128,5 +134,6 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/nis2/kontrollnimekiri/
 - https://tehisabiline.ee/nis2/intsidendist-teatamine/
 - https://tehisabiline.ee/privaatsus/
+- https://tehisabiline.ee/sonastik/
 
 Contact: mailto:tehisabiline@gmail.com

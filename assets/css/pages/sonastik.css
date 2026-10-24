@@ -1,0 +1,31 @@
+/* Küberturbe sõnastik — term/definition grid. */
+.glossary {
+    display: grid;
+    grid-template-columns: minmax(150px, 220px) 1fr;
+    gap: 0.9rem 1.6rem;
+    margin: 1.2rem 0 2rem;
+    padding: 0;
+}
+
+.glossary dt {
+    margin: 0;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.35;
+    scroll-margin-top: calc(var(--header-h, 88px) + 1rem);
+}
+
+.glossary dd {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.glossary dt:target {
+    color: var(--primary);
+}
+
+@media (max-width: 640px) {
+    .glossary { grid-template-columns: 1fr; gap: 0.25rem; }
+    .glossary dd { margin-bottom: 0.9rem; }
+}
