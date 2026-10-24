@@ -418,10 +418,24 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "sektorid/finants/index.html",
+        canonical: `${origin}/sektorid/finants/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "sektorid/tervishoid/index.html",
         canonical: `${origin}/sektorid/tervishoid/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "sektorid/index.html",
+        canonical: `${origin}/sektorid/`,
+        schemaTypes: ["CollectionPage", "ItemList", "BreadcrumbList"],
+        dateType: "CollectionPage",
         requiresPublishedDate: true
     },
     {
