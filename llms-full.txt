@@ -259,6 +259,12 @@ A scoped cybersecurity audit reviews identity and access, configuration, cloud, 
 Canonical page: https://tehisabiline.ee/en/iso-27001/
 ISO/IEC 27001 is a voluntary international standard for an information-security management system. Certification is issued by an accredited certification body after a two-stage audit and annual surveillance. It does not by itself prove NIS2, E-ITS or DORA compliance, but it can support the evidence base.
 
+## Press and media kit (EN)
+
+Canonical page: https://tehisabiline.ee/en/press/
+
+Company facts, boilerplate, founder profile, brand assets, citation formats and media contact for Tehisabiline OÜ. It states that the company offers scoped audits and penetration testing under written authorization, and that the cybersecurity API is in development and not public.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
