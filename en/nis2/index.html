@@ -308,7 +308,7 @@
   </header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#registration">Registration</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#deadline-calculator">Deadline calculator</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
+      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#registration">Registration</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#deadline-calculator">Deadline calculator</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#fine-calculator">Fine calculator</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
     </ol></nav>
     <article class="prose">
       <section class="short-answer" id="short-answer"><h2>NIS2 in Estonia: short answer</h2>
@@ -384,6 +384,7 @@
         <p>The bigger operational risk is often downtime, data loss and lost customer trust. A fine is not automatic; the supervisor weighs severity, duration, impact and cooperation. It is also not the only cost of a weak incident process.</p>
       </section>
 
+      <section id="fine-calculator"><h2>NIS2 maximum fine calculator</h2><p>Choose the entity type and enter worldwide annual turnover. The calculator shows the mathematical ceiling, not a predicted fine. Nothing leaves the browser.</p><form class="nis2-check" data-nis2-fine-en data-local-check><fieldset><legend>Entity type</legend><label><input type="radio" name="type" value="essential" required> Essential entity</label><label><input type="radio" name="type" value="important"> Important entity</label></fieldset><fieldset><legend>Worldwide annual turnover</legend><label for="nis2-turnover-en">Annual turnover in euros</label><input id="nis2-turnover-en" name="turnover" type="number" min="0" step="1000" inputmode="numeric" required></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate ceiling</button><button class="btn btn--ghost" type="reset">Reset</button></div><div class="nis2-check__result" data-nis2-fine-en-result tabindex="-1" aria-live="polite" hidden></div></form></section>
       <section id="plan"><h2>30-day readiness plan</h2>
         <ol><li><strong>Days 1–3:</strong> confirm scope, group size and registration status; name an accountable owner.</li><li><strong>Days 4–7:</strong> build or refresh the asset and risk register; identify the top five scenarios.</li><li><strong>Days 8–14:</strong> test backup restore, MFA, privileged access and the incident contact route.</li><li><strong>Days 15–21:</strong> collect supplier and technical evidence; fix the highest-risk gaps.</li><li><strong>Days 22–30:</strong> run a tabletop incident exercise, record board decisions and schedule the next test.</li></ol>
         <p>Need a second pair of eyes? <a href="/#contact">Request a scoping call</a> or start with the <a href="/nis2/kontrollnimekiri/" lang="et">checklist</a>.</p>
@@ -480,6 +481,7 @@
 <link rel="stylesheet" href="/assistant.css">
 <script src="/assets/js/nis2-check-en.js" defer></script>
 <script src="/assets/js/nis2-deadline-en.js" defer></script>
+<script src="/assets/js/nis2-fine-en.js" defer></script>
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
 </body>
