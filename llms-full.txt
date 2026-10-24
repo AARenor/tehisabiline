@@ -33,6 +33,12 @@ Additional Estonian synonym: läbistustestimine. The service page explains who b
 
 Estonian terms: pentestimine, pentest and läbitungimistest. Tehisabiline offers scoped active security testing of agreed web applications and APIs. It assesses whether weaknesses can be exploited within the authorization, rather than simply repeating scanner warnings. The engagement specifies targets, environment, accounts, allowed actions, test window, stop conditions and contacts before testing. Important findings are reviewed by a human. Outputs include evidence, impact, recommended fixes and the retest agreed in the offer. Pricing depends on targets, roles, flows, access, test depth and follow-up; initial mapping is free. Black-box, grey-box and white-box describe the information supplied to the tester and are scoping choices, not guaranteed packages. OWASP WSTG and NIST SP 800-115 are referenced as public planning guidance, not certifications.
 
+### Pentesti raporti näidis
+
+Canonical page: https://tehisabiline.ee/pentestimine/naidisraport/
+
+A clearly synthetic sample report showing what a buyer should expect: tested scope and limitations, PTES/OWASP-based methodology, three findings with masked evidence and impact, a remediation plan ordered by immediate/7-day/planned, and retest conditions. All names, domains and findings are fictitious; it is not a client report and does not claim a real engagement.
+
 ### Küberaudit / cybersecurity audit
 
 Canonical page: https://tehisabiline.ee/kuberaudit/
@@ -127,6 +133,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/pentestimine/
+- https://tehisabiline.ee/pentestimine/naidisraport/
 - https://tehisabiline.ee/api-turvatestimine/
 - https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
 - https://tehisabiline.ee/veebirakenduse-turvatestimine/

@@ -62,6 +62,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "pentestimine/naidisraport/index.html",
+        canonical: `${origin}/pentestimine/naidisraport/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "api-turvatestimine/index.html",
         canonical: `${origin}/api-turvatestimine/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
