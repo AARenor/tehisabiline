@@ -69,6 +69,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "dora/index.html",
+        canonical: `${origin}/dora/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "e-its/index.html",
         canonical: `${origin}/e-its/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],

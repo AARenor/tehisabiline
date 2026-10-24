@@ -45,6 +45,10 @@ Canonical page: https://tehisabiline.ee/tlpt/
 
 Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE implementation (Finantsinspektsioon guidance in force 15.09.2026): designated entities, TCT-EE coordination, threat intelligence, red/blue team exercise, attestation and confidentiality. It distinguishes TLPT from a normal pentest and states that Tehisabiline does not present itself as a TIBER-EE tester.
 
+### DORA guide
+
+Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing), Finantsinspektsioon supervision, the incident-reporting channel change from email to the central bank/authority portal on 1 November 2026, the Article 28(3) register of information and its annual submission, TLPT under Articles 26–27 via TIBER-EE, differences from NIS2 and E-ITS, and a 30/60/90-day readiness plan. It states that DORA has no certificate and is not limited to pentesting.
+
 ### E-ITS (Estonian information security standard)
 
 Canonical page: https://tehisabiline.ee/e-its/
@@ -152,6 +156,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/e-its/
 - https://tehisabiline.ee/tlpt/
+- https://tehisabiline.ee/dora/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
