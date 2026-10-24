@@ -5,7 +5,7 @@
   if (!form || !out) return;
 
   const link = (href, text) => `<a href="${href}">${text}</a>`;
-  const actions = `<p class="nis2-check__actions">${link("/en/nis2/", "NIS2 guide")} · ${link("/nis2/registreerimine/", "Registration guide (ET)")} · ${link("/en/nis2/#reporting", "Incident reporting")}</p>`;
+  const actions = `<p class="nis2-check__actions">${link("/en/nis2/", "NIS2 guide")} · ${link("/en/nis2/#registration", "Registration")} · ${link("/en/nis2/#reporting", "Incident reporting")}</p>`;
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
