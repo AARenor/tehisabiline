@@ -62,6 +62,7 @@ Status reviewed on 2026-10-24:
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/): significant-incident criteria, the 24/72/1-month reports and the Estonian reporting channel.
 - [NIS2 trahvid](https://tehisabiline.ee/nis2/trahvid/): maximum fines, supervisory factors, management liability and evidence that reduces risk.
 - [NIS2 registreerimine](https://tehisabiline.ee/nis2/registreerimine/): who must notify RIA, what to prepare, deadlines, changes and common mistakes.
+- [NIS2 audit](https://tehisabiline.ee/nis2/audit/): scope, evidence, process, report contents and the difference from a penetration test.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.

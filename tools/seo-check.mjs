@@ -326,6 +326,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "nis2/audit/index.html",
+        canonical: `${origin}/nis2/audit/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "et",
+        requiresPublishedDate: true
+    },
+    {
         file: "sonastik/index.html",
         canonical: `${origin}/sonastik/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "DefinedTermSet"],
