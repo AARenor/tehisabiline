@@ -39,6 +39,12 @@ Canonical page: https://tehisabiline.ee/pentestimine/naidisraport/
 
 A clearly synthetic sample report showing what a buyer should expect: tested scope and limitations, PTES/OWASP-based methodology, three findings with masked evidence and impact, a remediation plan ordered by immediate/7-day/planned, and retest conditions. All names, domains and findings are fictitious; it is not a client report and does not claim a real engagement.
 
+### E-ITS (Estonian information security standard)
+
+Canonical page: https://tehisabiline.ee/e-its/
+
+Explains the RIA-administered Estonian standard aligned with ISO/IEC 27001: public-sector duty, voluntary company use, baseline measures for KüTS service providers, E-ITS audit versus ISO 27001 certification, the 2026 version and a six-step evidence preparation path. It explicitly states that an E-ITS audit is not a pentest or an ISO certificate.
+
 ### AI application security testing
 
 Canonical page: https://tehisabiline.ee/ai-turvatestimine/
@@ -138,6 +144,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
+- https://tehisabiline.ee/e-its/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
