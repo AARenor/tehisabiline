@@ -309,7 +309,7 @@
   </div></header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Product scope</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#categories">Product categories</a></li><li><a href="#duties">Manufacturer duties</a></li><li><a href="#reporting">Reporting</a></li><li><a href="#sbom">SBOM evidence</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
+      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Product scope</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#categories">Product categories</a></li><li><a href="#duties">Manufacturer duties</a></li><li><a href="#reporting">Reporting</a></li><li><a href="#deadline-calculator">Reporting deadline calculator</a></li><li><a href="#sbom">SBOM evidence</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
     </ol></nav>
     <article class="prose">
       <section class="short-answer" id="short-answer"><h2>CRA in Estonia: short answer</h2>
@@ -359,6 +359,7 @@
         <p>Manufacturers report actively exploited vulnerabilities and severe incidents through the EU single reporting platform. Keep the evidence: timeline, affected versions, exploitation indicators, customer communication and the update that fixed the issue.</p>
       </section>
 
+      <section id="deadline-calculator"><h2>CRA reporting deadline calculator</h2><p>Choose the event type and enter the detection time. The calculator shows the 24-hour and 72-hour reports and the final-report logic. Nothing leaves your browser.</p><form class="nis2-check" data-cra-deadline-en data-local-check><fieldset><legend>Event type</legend><label><input type="radio" name="cra-type" value="vulnerability" required> Actively exploited vulnerability</label><label><input type="radio" name="cra-type" value="incident"> Severe incident</label></fieldset><fieldset><legend>Detection time</legend><label for="cra-detected-en">Date and time</label><input id="cra-detected-en" name="detected" type="datetime-local" required></fieldset><fieldset data-cra-fix-wrap hidden><legend>Corrective measure availability</legend><label for="cra-fix-en">Date and time</label><input id="cra-fix-en" name="fix" type="datetime-local"></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate deadlines</button><button class="btn btn--ghost" type="reset">Reset</button></div><div class="nis2-check__result" data-cra-deadline-en-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">Micro and small enterprises have a limited exemption from the 24-hour fine, not from the reporting duty. Check CRA Article 14 and ENISA SRP guidance.</p></section>
       <section id="sbom"><h2>SBOM and the evidence pack</h2>
         <p>An SBOM is not a PDF attachment produced once. It is a maintained inventory that lets you answer: which component and version is in which product, which supplier owns it, and which vulnerability affects it.</p>
         <ul><li><strong>Inventory:</strong> direct and transitive components, versions and suppliers.</li><li><strong>Vulnerability matching:</strong> CVE/advisory feed, triage owner and remediation SLA.</li><li><strong>Release linkage:</strong> SBOM version tied to a product release and build.</li><li><strong>Update process:</strong> how a component change updates the SBOM and triggers testing.</li><li><strong>Customer evidence:</strong> a machine-readable extract where appropriate, plus a clear support and disclosure contact.</li></ul>
@@ -461,6 +462,7 @@
 <!-- chrome:widget -->
 <link rel="stylesheet" href="/assistant.css">
 <script src="/assets/js/cra-check-en.js" defer></script>
+<script src="/assets/js/cra-deadline-en.js" defer></script>
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
 </body>
