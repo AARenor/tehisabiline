@@ -18,6 +18,10 @@
 /ai-automatiseerimine/*  https://arle.top/ai-automatiseerimine/:splat  301
 /index.html  /  301
 
+/en/ai-consulting/  /en/  301
+
+/ai-automatiseerimine-ettevottele/  /  301
+
 # Internal repository files must never be served (defence in depth; deploy excludes them)
 /AGENTS.md  /  301
 /PRODUCT.md  /  301
