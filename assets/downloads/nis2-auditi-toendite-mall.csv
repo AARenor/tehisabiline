@@ -1,0 +1,11 @@
+Meede;Nõue;Tõend;Omanik;Testi kirjeldus;Testi kuupäev;Tulemus;Puudus;Parandus;Tähtaeg;Staatus
+1;Riskianalüüs ja turvapoliitika;Kinnitatud riskiregister ja poliitika;Küberturbe juht;Vali 3 riski ja kontrolli ravi ning jääkriski; ; ; ; ; ;
+2;Intsidentide käsitlemine;Intsidendiprotseduur ja kontaktid;IT-juht;Simuleeri intsident ja kontrolli 24/72 tunni rada; ; ; ; ; ;
+3;Toimepidevus ja varundus;Varundusplaan ja taastetesti raport;IT-juht;Kontrolli viimast taastetesti ja RPO/RTO vastavust; ; ; ; ; ;
+4;Tarneahela turve;Kriitiliste tarnijate nimekiri ja lepingud;Hanked;Vali 3 tarnijat ja kontrolli due diligence't; ; ; ; ; ;
+5;Turvaline arendus ja haavatavused;Haavatavuste protsess ja parandusajad;Arendusjuht;Kontrolli 5 haavatavuse parandamise tõendit; ; ; ; ; ;
+6;Tõhususe testimine;Testiplaan ja viimased tulemused;Turvajuht;Kontrolli, kas testid katavad kriitilised süsteemid; ; ; ; ; ;
+7;Küberhügieen ja koolitus;Koolituskava ja osalemise tõendid;Personal;Kontrolli koolituse katvust ja värskust; ; ; ; ; ;
+8;Krüpteerimine;Krüpteerimise poliitika ja kasutuspõhimõtted;IT-juht;Kontrolli andmete liikumist ja krüpteerimist; ; ; ; ; ;
+9;Ligipääsukontroll;Privileegide maatriks ja ülevaatuse tõendid;IT-juht;Vali 5 kontot ja kontrolli õigusi; ; ; ; ; ;
+10;MFA ja turvaline side;MFA katvus ja erisused;IT-juht;Kontrolli kriitiliste kontode MFA-d; ; ; ; ; ;
