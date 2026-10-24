@@ -22,7 +22,7 @@ Tehisabiline OÜ (Tallinn, Estonia) offers only two services (owner, 2026-10-12)
 - agent-driven cyber audits and pentesting ("küberaudit ja pentestimine") with written permission and human review of every significant finding;
 - a cyber-tuned, OpenAI-compatible model API for legitimate security work, to be hosted on its own hardware in Estonia (hardware ordered, hosting coming; API access by application in the pilot).
 
-Managed AI services, assistants, knowledge bases, automation, startup packages and SEO/GEO are deferred to a separate future website. Their source content is retained privately under `docs/future-ai-site/`, excluded from publishing and public discovery.
+Managed AI services, assistants, knowledge bases, automation and startup packages now live on the separate site `https://arle.top/` (launched 2026-10-24); SEO/GEO remains out of scope. Their source content is retained under `docs/future-ai-site/` and the public AI pages are maintained in the `arle-top` repository. On tehisabiline.ee, the old `/ai/`, `/ai-chatbot/` and `/ai-automatiseerimine/` URLs permanently redirect to the matching arle.top pages.
 
 Owner priority (2026-10-12): pentesting is the primary search and homepage emphasis. `/pentestimine/` is the commercial landing page; `/api-turvatestimine/` and `/veebirakenduse-turvatestimine/` are distinct educational guides. `/kuberaudit/` stays focused on broader security posture. The existing-system API testing guide is not the planned model API product at `/mudelid/`. Terminology includes pentestimine, pentest, läbitungimistest, pentesting and penetration testing, with substantive visible explanations rather than keyword stuffing or duplicate synonym pages.
 

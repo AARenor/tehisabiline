@@ -4,7 +4,7 @@ Live: https://tehisabiline.ee/
 
 Company website of Tehisabiline OÜ (Tallinn, Estonia): cybersecurity audits (including penetration testing with written authorization) and a cyber-AI API for security tooling. Static HTML/CSS/JS, no backend.
 
-AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenused on küberauditid ja kübertööriistade API; üldised hallatud AI-teenused ning SEO/GEO teenused ei kuulu enam veebisaidi pakkumisse.
+AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenused on küberauditid ja kübertööriistade API; üldised hallatud AI-teenused on eraldi saidil `https://arle.top/`. SEO/GEO teenused ei kuulu veebisaidi pakkumisse.
 
 ## Public resources
 
@@ -94,7 +94,7 @@ Peamised failid:
 - `tools/deploy.sh` — Cloudflare Pages'i deploy (avaldab ainult avalikud failid; nõuab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat)
 - `vercel.json`, `.vercelignore` — varasema Verceli seadistuse jäänuk, mida deploy ei kasuta
 
-Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. `docs/` ja `tools/` ei lähe avalikku deploy'sse (`tools/deploy.sh`).
+Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. Üldised AI-teenused avaldatakse eraldi saidil `https://arle.top/`; tehisabiline.ee AI-URLid suunatakse sinna 301-ga. `docs/` ja `tools/` ei lähe avalikku deploy'sse (`tools/deploy.sh`).
 
 Kohalikuks eelvaateks võib kasutada näiteks `python3 -m http.server 4173` projekti juurkaustas.
 
