@@ -211,6 +211,11 @@ Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 
 Canonical page: https://tehisabiline.ee/en/cra/
 The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia. Reporting obligations apply from 11 September 2026; the main product obligations apply from 11 December 2027. Manufacturers must document components and vulnerabilities (an SBOM), handle vulnerabilities, state a support period of at least five years unless the expected lifetime is shorter, complete conformity assessment and keep technical documentation.
 
+## DORA in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/dora/
+DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entities must maintain an ICT risk framework, a register of information covering contractual arrangements with ICT third-party providers, contractual safeguards, incident reporting and resilience testing. Certain significant entities must carry out threat-led penetration testing (TLPT) at least every three years.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -227,6 +232,7 @@ The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia
 - https://tehisabiline.ee/en/regulations/
 - https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/en/cra/
+- https://tehisabiline.ee/en/dora/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
