@@ -162,6 +162,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/iso-27001/index.html",
+        canonical: `${origin}/en/iso-27001/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
         file: "ai-act/index.html",
         canonical: `${origin}/ai-act/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],

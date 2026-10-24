@@ -37,6 +37,7 @@ Status reviewed on 2026-10-24:
 - [E-ITS in Estonia (EN)](https://tehisabiline.ee/en/e-its/): scope, 2026 changes, audit evidence and the NIS2 relationship.
 - [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/): scope, authorisation, report and retest for web, API, cloud and AI.
 - [Cybersecurity audit in Estonia (EN)](https://tehisabiline.ee/en/security-audit/): scope, evidence review and remediation planning.
+- [ISO 27001 in Estonia (EN)](https://tehisabiline.ee/en/iso-27001/): certification steps, audit evidence and NIS2/E-ITS comparison.
 - [SBOM ehk tarkvara koostisosade loend](https://tehisabiline.ee/sbom/): CRA and NIS2 supply-chain context, required fields, SPDX/CycloneDX formats, lifecycle, common mistakes and a CSV template.
 - [CRA ehk Cyber Resilience Act](https://tehisabiline.ee/cra/): scope, manufacturer duties, support period, 11 September 2026 reporting deadlines, conformity assessment, the 11 December 2027 transition and a browser-only scope check.
 - [ISO 27001 Eestis](https://tehisabiline.ee/iso-27001/): certification stages, the 93 Annex A controls, evidence an auditor asks for, accreditation, and how ISO/IEC 27001 differs from E-ITS and NIS2. It explicitly states that Tehisabiline is not a certification body.
