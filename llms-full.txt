@@ -127,6 +127,18 @@ Canonical page: https://tehisabiline.ee/nis2/intsidendist-teatamine/
 
 Significant-incident criteria, the three NIS2 reports (early warning within 24 hours, notification within 72 hours, final report within one month), what to include, the Estonian reporting channel, near-miss reporting (voluntary) and the separate GDPR breach notification.
 
+Canonical page: https://tehisabiline.ee/nis2/registreerimine/
+
+Practical registration guide: who must notify RIA, what to prepare before starting, the eesti.ee form, the three-month deadline for a new entity, the two-week change-notification rule, saving proof and common mistakes. It states that registration is not a certificate of compliance.
+
+Canonical page: https://tehisabiline.ee/nis2/audit/
+
+NIS2 audit guide: scope across management, risk, the ten measures, supply chain and incidents; an evidence table; interviews, sampling and testing; report contents including findings, evidence, impact, priorities and management response; and the difference from a penetration test. NIS2 does not prescribe one mandatory certificate or audit form.
+
+Canonical page: https://tehisabiline.ee/nis2/trahvid/
+
+NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The pages explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance.
+
 ### Glossary
 
 Canonical page: https://tehisabiline.ee/sonastik/
