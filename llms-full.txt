@@ -138,7 +138,7 @@ NIS2 audit guide: scope across management, risk, the ten measures, supply chain 
 
 Canonical page: https://tehisabiline.ee/nis2/trahvid/
 
-NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The page explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance.
+NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The page explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance, and includes a browser-only calculator for the mathematical fine ceiling.
 
 ### Glossary
 
