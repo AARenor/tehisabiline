@@ -34,87 +34,323 @@
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=a0f76a5d">
     <link rel="stylesheet" href="/assets/css/pages/sonastik.css?v=be1fc28c">
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "DefinedTermSet",
+      "@id": "https://tehisabiline.ee/sonastik/#termset",
+      "name": "Küberturbe sõnastik",
+      "description": "Küberturbetestimise, auditi ja NIS2 põhimõisted eesti keeles.",
+      "inLanguage": "et",
+      "url": "https://tehisabiline.ee/sonastik/",
+      "hasDefinedTerm": [
         {
-          "@type": "DefinedTermSet",
-          "@id": "https://tehisabiline.ee/sonastik/#termset",
-          "name": "Küberturbe sõnastik",
-          "description": "Küberturbetestimise, auditi ja NIS2 põhimõisted eesti keeles.",
-          "inLanguage": "et",
-          "url": "https://tehisabiline.ee/sonastik/",
-          "hasDefinedTerm": [
-            {"@type": "DefinedTerm", "name": "NIS2", "description": "Euroopa Liidu küberturvalisuse direktiiv, mille Eesti võttis üle küberturvalisuse seadusega.", "url": "https://tehisabiline.ee/sonastik/#nis2"},
-            {"@type": "DefinedTerm", "name": "KüTS", "description": "Eesti küberturvalisuse seadus, millega võeti üle NIS2 direktiiv.", "url": "https://tehisabiline.ee/sonastik/#kuts"},
-            {"@type": "DefinedTerm", "name": "Oluline küberintsident", "description": "NIS2 tähenduses sündmus, millel on tõsine mõju teenusele, rahaline kahju või oluline mõju teistele isikutele.", "url": "https://tehisabiline.ee/sonastik/#oluline-intsident"},
-            {"@type": "DefinedTerm", "name": "Haavatavus", "description": "Nõrkus süsteemis, rakenduses või protsessis, mida saab ära kasutada turvaeesmärgi rikkumiseks.", "url": "https://tehisabiline.ee/sonastik/#haavatavus"},
-            {"@type": "DefinedTerm", "name": "Pentest", "description": "Kokkulepitud ulatuses ja kirjalikul loal tehtav ründesimulatsioon, mille eesmärk on tõendada nõrkuste ärakasutatavust.", "url": "https://tehisabiline.ee/sonastik/#pentest"},
-            {"@type": "DefinedTerm", "name": "Läbistustestimine", "description": "Pentesti eestikeelne sünonüüm; sama tegevus, erinev nimetus.", "url": "https://tehisabiline.ee/sonastik/#labistustestimine"},
-            {"@type": "DefinedTerm", "name": "Küberaudit", "description": "Laiem turvaseisu ülevaade, mis hindab protsesse, seadistusi ja kontrolle ning annab prioriteetse parandusplaani.", "url": "https://tehisabiline.ee/sonastik/#kuberaudit"},
-            {"@type": "DefinedTerm", "name": "PTES", "description": "Penetration Testing Execution Standard: rahvusvaheline pentesti töövoogude raamistik.", "url": "https://tehisabiline.ee/sonastik/#ptes"},
-            {"@type": "DefinedTerm", "name": "OWASP WSTG", "description": "OWASP Web Security Testing Guide: veebirakenduse turvatestimise kontrollide juhend.", "url": "https://tehisabiline.ee/sonastik/#wstg"},
-            {"@type": "DefinedTerm", "name": "OWASP API Top 10", "description": "Kümme levinumat API turvariski kirjeldav OWASP-i loend, sealhulgas BOLA ja BFLA.", "url": "https://tehisabiline.ee/sonastik/#api-top10"},
-            {"@type": "DefinedTerm", "name": "BOLA", "description": "Broken Object Level Authorization: API ei kontrolli, kas päringu tegija tohib viidatud objekti kasutada.", "url": "https://tehisabiline.ee/sonastik/#bola"},
-            {"@type": "DefinedTerm", "name": "IDOR", "description": "Insecure Direct Object Reference: otsene objekti viide, mille õigusi ei kontrollita; BOLA üks avaldumisviise.", "url": "https://tehisabiline.ee/sonastik/#idor"},
-            {"@type": "DefinedTerm", "name": "BOPLA", "description": "Broken Object Property Level Authorization: väljade tasemel õiguste puudujääk, näiteks rolli või hinna muutmine.", "url": "https://tehisabiline.ee/sonastik/#bopla"},
-            {"@type": "DefinedTerm", "name": "BFLA", "description": "Broken Function Level Authorization: funktsiooni tasemel õiguste puudujääk, näiteks admin-otspunkti kasutamine tavakasutaja poolt.", "url": "https://tehisabiline.ee/sonastik/#bfla"},
-            {"@type": "DefinedTerm", "name": "SSRF", "description": "Server-Side Request Forgery: server teeb päringu kasutaja antud aadressile, avades ligipääsu sisemistele ressurssidele.", "url": "https://tehisabiline.ee/sonastik/#ssrf"},
-            {"@type": "DefinedTerm", "name": "XSS", "description": "Cross-Site Scripting: süstitud skript käivitub teise kasutaja brauseris.", "url": "https://tehisabiline.ee/sonastik/#xss"},
-            {"@type": "DefinedTerm", "name": "SQL-süst", "description": "SQL injection: kasutaja sisend mõjutab SQL-päringu loogikat ja võib avada andmeid või muuta neid.", "url": "https://tehisabiline.ee/sonastik/#sql"},
-            {"@type": "DefinedTerm", "name": "CSRF", "description": "Cross-Site Request Forgery: võltsitud päring kasutab ohvri olemasolevat sessiooni.", "url": "https://tehisabiline.ee/sonastik/#csrf"},
-            {"@type": "DefinedTerm", "name": "RCE", "description": "Remote Code Execution: ründaja saab sihtsüsteemis käivitada oma koodi.", "url": "https://tehisabiline.ee/sonastik/#rce"},
-            {"@type": "DefinedTerm", "name": "CVE", "description": "Common Vulnerabilities and Exposures: avalik identifikaator konkreetsele haavatavusele.", "url": "https://tehisabiline.ee/sonastik/#cve"},
-            {"@type": "DefinedTerm", "name": "CVSS", "description": "Common Vulnerability Scoring System: haavatavuse tõsiduse skoor, mis ei arvesta sinu keskkonna konteksti.", "url": "https://tehisabiline.ee/sonastik/#cvss"},
-            {"@type": "DefinedTerm", "name": "MFA", "description": "Mitmefaktoriline autentimine: lisaks paroolile nõutakse teist tõendit, näiteks rakendust või turvavõtit.", "url": "https://tehisabiline.ee/sonastik/#mfa"},
-            {"@type": "DefinedTerm", "name": "RTO ja RPO", "description": "Taastamisaeg ja andmekao piir: kui kaua tohib teenus olla maas ja kui palju andmeid tohib kaduda.", "url": "https://tehisabiline.ee/sonastik/#rto-rpo"},
-            {"@type": "DefinedTerm", "name": "SIEM", "description": "Security Information and Event Management: logide kogumise, korrelatsiooni ja häirete süsteem.", "url": "https://tehisabiline.ee/sonastik/#siem"},
-            {"@type": "DefinedTerm", "name": "WAF", "description": "Web Application Firewall: veebiliikluse filter, mis võib blokeerida osa rünnakuid, kuid ei asenda parandusi.", "url": "https://tehisabiline.ee/sonastik/#waf"},
-            {"@type": "DefinedTerm", "name": "Bug bounty", "description": "Avalik programm, kus turvauurijad saavad leidude eest tasu; ei asenda kokkulepitud ulatusega pentesti.", "url": "https://tehisabiline.ee/sonastik/#bug-bounty"}
-          ]
+          "@type": "DefinedTerm",
+          "name": "NIS2",
+          "description": "Euroopa Liidu küberturvalisuse direktiiv, mille Eesti võttis üle küberturvalisuse seadusega.",
+          "url": "https://tehisabiline.ee/sonastik/#nis2"
         },
         {
-          "@type": "Article",
-          "@id": "https://tehisabiline.ee/sonastik/#article",
-          "url": "https://tehisabiline.ee/sonastik/",
-          "headline": "Küberturbe sõnastik: põhimõisted selgelt",
-          "description": "Küberturbetestimise, auditi ja NIS2 põhimõisted eesti keeles koos viidetega juhenditele.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "citation": ["https://owasp.org/API-Security/editions/2023/en/0x11-t10/", "https://wstg.owasp.org/v4.2/2-Introduction/", "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"],
-          "author": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization", "name": "Tehisabiline OÜ", "logo": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca", "width": 512, "height": 512}},
-          "image": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97", "width": 1200, "height": 630}
+          "@type": "DefinedTerm",
+          "name": "KüTS",
+          "description": "Eesti küberturvalisuse seadus, millega võeti üle NIS2 direktiiv.",
+          "url": "https://tehisabiline.ee/sonastik/#kuts"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/sonastik/#webpage",
-          "url": "https://tehisabiline.ee/sonastik/",
-          "name": "Küberturbe sõnastik: põhimõisted selgelt | Tehisabiline",
-          "description": "Küberturbe sõnastik lihtsas eesti keeles: pentest, BOLA, IDOR, XSS, SQL-süst, NIS2, MFA, RTO ja teised mõisted.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
-          "about": {"@id": "https://tehisabiline.ee/#organization"},
-          "mainEntity": {"@id": "https://tehisabiline.ee/sonastik/#termset"},
-          "author": {"@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"},
-          "breadcrumb": {"@id": "https://tehisabiline.ee/sonastik/#breadcrumb"}
+          "@type": "DefinedTerm",
+          "name": "Oluline küberintsident",
+          "description": "NIS2 tähenduses sündmus, millel on tõsine mõju teenusele, rahaline kahju või oluline mõju teistele isikutele.",
+          "url": "https://tehisabiline.ee/sonastik/#oluline-intsident"
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://tehisabiline.ee/sonastik/#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
-            {"@type": "ListItem", "position": 2, "name": "Sõnastik", "item": "https://tehisabiline.ee/sonastik/"}
-          ]
+          "@type": "DefinedTerm",
+          "name": "Haavatavus",
+          "description": "Nõrkus süsteemis, rakenduses või protsessis, mida saab ära kasutada turvaeesmärgi rikkumiseks.",
+          "url": "https://tehisabiline.ee/sonastik/#haavatavus"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Pentest",
+          "description": "Kokkulepitud ulatuses ja kirjalikul loal tehtav ründesimulatsioon, mille eesmärk on tõendada nõrkuste ärakasutatavust.",
+          "url": "https://tehisabiline.ee/sonastik/#pentest"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Läbistustestimine",
+          "description": "Pentesti eestikeelne sünonüüm; sama tegevus, erinev nimetus.",
+          "url": "https://tehisabiline.ee/sonastik/#labistustestimine"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Küberaudit",
+          "description": "Laiem turvaseisu ülevaade, mis hindab protsesse, seadistusi ja kontrolle ning annab prioriteetse parandusplaani.",
+          "url": "https://tehisabiline.ee/sonastik/#kuberaudit"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "PTES",
+          "description": "Penetration Testing Execution Standard: rahvusvaheline pentesti töövoogude raamistik.",
+          "url": "https://tehisabiline.ee/sonastik/#ptes"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "OWASP WSTG",
+          "description": "OWASP Web Security Testing Guide: veebirakenduse turvatestimise kontrollide juhend.",
+          "url": "https://tehisabiline.ee/sonastik/#wstg"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "OWASP API Top 10",
+          "description": "Kümme levinumat API turvariski kirjeldav OWASP-i loend, sealhulgas BOLA ja BFLA.",
+          "url": "https://tehisabiline.ee/sonastik/#api-top10"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "BOLA",
+          "description": "Broken Object Level Authorization: API ei kontrolli, kas päringu tegija tohib viidatud objekti kasutada.",
+          "url": "https://tehisabiline.ee/sonastik/#bola"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "IDOR",
+          "description": "Insecure Direct Object Reference: otsene objekti viide, mille õigusi ei kontrollita; BOLA üks avaldumisviise.",
+          "url": "https://tehisabiline.ee/sonastik/#idor"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "BOPLA",
+          "description": "Broken Object Property Level Authorization: väljade tasemel õiguste puudujääk, näiteks rolli või hinna muutmine.",
+          "url": "https://tehisabiline.ee/sonastik/#bopla"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "BFLA",
+          "description": "Broken Function Level Authorization: funktsiooni tasemel õiguste puudujääk, näiteks admin-otspunkti kasutamine tavakasutaja poolt.",
+          "url": "https://tehisabiline.ee/sonastik/#bfla"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "SSRF",
+          "description": "Server-Side Request Forgery: server teeb päringu kasutaja antud aadressile, avades ligipääsu sisemistele ressurssidele.",
+          "url": "https://tehisabiline.ee/sonastik/#ssrf"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "XSS",
+          "description": "Cross-Site Scripting: süstitud skript käivitub teise kasutaja brauseris.",
+          "url": "https://tehisabiline.ee/sonastik/#xss"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "SQL-süst",
+          "description": "SQL injection: kasutaja sisend mõjutab SQL-päringu loogikat ja võib avada andmeid või muuta neid.",
+          "url": "https://tehisabiline.ee/sonastik/#sql"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "CSRF",
+          "description": "Cross-Site Request Forgery: võltsitud päring kasutab ohvri olemasolevat sessiooni.",
+          "url": "https://tehisabiline.ee/sonastik/#csrf"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "RCE",
+          "description": "Remote Code Execution: ründaja saab sihtsüsteemis käivitada oma koodi.",
+          "url": "https://tehisabiline.ee/sonastik/#rce"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "CVE",
+          "description": "Common Vulnerabilities and Exposures: avalik identifikaator konkreetsele haavatavusele.",
+          "url": "https://tehisabiline.ee/sonastik/#cve"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "CVSS",
+          "description": "Common Vulnerability Scoring System: haavatavuse tõsiduse skoor, mis ei arvesta sinu keskkonna konteksti.",
+          "url": "https://tehisabiline.ee/sonastik/#cvss"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "MFA",
+          "description": "Mitmefaktoriline autentimine: lisaks paroolile nõutakse teist tõendit, näiteks rakendust või turvavõtit.",
+          "url": "https://tehisabiline.ee/sonastik/#mfa"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "RTO ja RPO",
+          "description": "Taastamisaeg ja andmekao piir: kui kaua tohib teenus olla maas ja kui palju andmeid tohib kaduda.",
+          "url": "https://tehisabiline.ee/sonastik/#rto-rpo"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "SIEM",
+          "description": "Security Information and Event Management: logide kogumise, korrelatsiooni ja häirete süsteem.",
+          "url": "https://tehisabiline.ee/sonastik/#siem"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "WAF",
+          "description": "Web Application Firewall: veebiliikluse filter, mis võib blokeerida osa rünnakuid, kuid ei asenda parandusi.",
+          "url": "https://tehisabiline.ee/sonastik/#waf"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Bug bounty",
+          "description": "Avalik programm, kus turvauurijad saavad leidude eest tasu; ei asenda kokkulepitud ulatusega pentesti.",
+          "url": "https://tehisabiline.ee/sonastik/#bug-bounty"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Küberhügieen",
+          "description": "Igapäevased põhiharjumused ja -meetmed: uuendused, varundus, tugevad paroolid, MFA ja ettevaatlik linkide avamine.",
+          "url": "https://tehisabiline.ee/sonastik/#kuberhugieen"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Nõrkuse skaneerimine",
+          "description": "Automaatne kontroll tuntud haavatavuste ja seadistuste vastu; annab hoiatusi, kuid ei tõenda ärakasutatavust.",
+          "url": "https://tehisabiline.ee/sonastik/#norkuse-skaneerimine"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Red team",
+          "description": "Laiem vastase simulatsioon, mis testib ka tuvastust ja reageerimist, mitte ainult tehnilist haavatavust.",
+          "url": "https://tehisabiline.ee/sonastik/#red-team"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Blue team",
+          "description": "Kaitse- ja reageerimismeeskond, kes tuvastab, piirab ja taastab intsidente.",
+          "url": "https://tehisabiline.ee/sonastik/#blue-team"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Zero trust",
+          "description": "Lähenemine, kus iga päringut kontrollitakse, mitte ei usaldata automaatselt võrgu asukoha tõttu.",
+          "url": "https://tehisabiline.ee/sonastik/#zero-trust"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://tehisabiline.ee/sonastik/#article",
+      "url": "https://tehisabiline.ee/sonastik/",
+      "headline": "Küberturbe sõnastik: põhimõisted selgelt",
+      "description": "Küberturbetestimise, auditi ja NIS2 põhimõisted eesti keeles koos viidetega juhenditele.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "citation": [
+        "https://owasp.org/API-Security/editions/2023/en/0x11-t10/",
+        "https://wstg.owasp.org/v4.2/2-Introduction/",
+        "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/sonastik/#webpage",
+      "url": "https://tehisabiline.ee/sonastik/",
+      "name": "Küberturbe sõnastik: põhimõisted selgelt | Tehisabiline",
+      "description": "Küberturbe sõnastik lihtsas eesti keeles: pentest, BOLA, IDOR, XSS, SQL-süst, NIS2, MFA, RTO ja teised mõisted.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/sonastik/#termset"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/sonastik/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/sonastik/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sõnastik",
+          "item": "https://tehisabiline.ee/sonastik/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/sonastik/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/sonastik/#webpage"
+      },
+      "inLanguage": "et",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mis vahe on pentestil ja küberauditil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pentest kontrollib, kas konkreetses süsteemis saab nõrkust kokkulepitud piirides päriselt ära kasutada. Küberaudit vaatab laiemat turvaseisu, protsesse ja seadistusi ning annab prioriteetse parandusplaani."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas BOLA ja IDOR on sama?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IDOR on üks BOLA avaldumisviise. BOLA kirjeldab puudulikku objektipõhist õiguskontrolli; IDOR viitab olukorrale, kus objektile pääseb ligi identifikaatorit muutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas CVSS skoor määrab parandamise järjekorra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. CVSS kirjeldab üldist tõsidust, kuid järjekord sõltub süsteemi mõjust, ärakasutatavusest ja andmetest."
+          }
         }
       ]
     }
-    </script>
+  ]
+}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -169,6 +405,8 @@
 
         <section id="i"><h2>I–P</h2><dl class="glossary">
           <dt id="idor">IDOR</dt><dd>Insecure Direct Object Reference – otsene objekti viide, mille õigusi ei kontrollita. BOLA üks avaldumisviise; näiteks teise kliendi arve avamine ID-d muutes.</dd>
+          <dt id="kuberhugieen">Küberhügieen</dt><dd>Igapäevased põhiharjumused ja -meetmed: uuendused, varundus, tugevad paroolid, MFA ja ettevaatlik linkide avamine. Odavaim viis riski vähendada.</dd>
+          <dt id="norkuse-skaneerimine">Nõrkuse skaneerimine</dt><dd>Automaatne kontroll tuntud haavatavuste ja seadistuste vastu. Annab hoiatusi, kuid ei tõenda ärakasutatavust ega asenda pentesti.</dd>
           <dt id="kuberaudit">Küberaudit</dt><dd>Laiem turvaseisu ülevaade, mis hindab protsesse, seadistusi ja kontrolle ning annab prioriteetse parandusplaani. Erineb pentestist, mis keskendub konkreetse süsteemi ärakasutatavusele. <a href="/kuberaudit/">Loe lähemalt</a>.</dd>
           <dt id="kuts">KüTS</dt><dd>Eesti küberturvalisuse seadus, millega võeti üle NIS2 direktiiv. Kohustused ja tähtajad leiad <a href="/nis2/">NIS2 juhendist</a>.</dd>
           <dt id="labistustestimine">Läbistustestimine</dt><dd>Pentesti eestikeelne sünonüüm. Sama tegevus, erinev nimetus; täpne ulatus ja luba kinnitatakse alati eraldi. <a href="/pentestimine/">Pentestimise leht</a>.</dd>
@@ -181,12 +419,15 @@
 
         <section id="q"><h2>Q–Z</h2><dl class="glossary">
           <dt id="rce">RCE</dt><dd>Remote Code Execution – ründaja saab sihtsüsteemis käivitada oma koodi. Kriitiline leid, mis vajab kiiret piiramist ja parandust.</dd>
+          <dt id="red-team">Red team</dt><dd>Laiem vastase simulatsioon, mis võib hõlmata inimest, protsesse ja tehnikat ning testida ka tuvastust ja reageerimist. Ulatus on tavalisest pentestist laiem.</dd>
+          <dt id="blue-team">Blue team</dt><dd>Kaitse- ja reageerimismeeskond, kes tuvastab, piirab ja taastab intsidente. Punase ja sinise meeskonna harjutus aitab mõlemat parandada.</dd>
           <dt id="rto-rpo">RTO ja RPO</dt><dd>Taastamisaeg (RTO) ja andmekao piir (RPO): kui kaua tohib teenus olla maas ja kui palju andmeid tohib kaduda. Mõõdetakse taastetestiga, mitte plaanist lugedes.</dd>
           <dt id="siem">SIEM</dt><dd>Security Information and Event Management – logide kogumise, korrelatsiooni ja häirete süsteem. Toetab intsidentide tuvastamist, kuid ei asenda protsessi.</dd>
           <dt id="sql">SQL-süst</dt><dd>SQL injection – kasutaja sisend mõjutab SQL-päringu loogikat ning võib avada, muuta või kustutada andmeid. Paraneb parameetriliste päringute ja sisendi valideerimisega.</dd>
           <dt id="ssrf">SSRF</dt><dd>Server-Side Request Forgery – server teeb päringu kasutaja antud aadressile, avades ligipääsu sisemistele ressurssidele. Kontrollitakse lubatud sihtkohtade ja võrgu piirangutega.</dd>
           <dt id="waf">WAF</dt><dd>Web Application Firewall – veebiliikluse filter, mis võib blokeerida osa rünnakuid, kuid ei asenda haavatavuse parandust. WAF-i taha peidetud viga jääb alles.</dd>
           <dt id="wstg">OWASP WSTG</dt><dd>OWASP Web Security Testing Guide – veebirakenduse turvatestimise kontrollide juhend. Kasutame seda veebirakenduse testide alusena. <a href="/veebirakenduse-turvatestimine/">Veebirakenduse juhend</a>.</dd>
+          <dt id="zero-trust">Zero trust</dt><dd>Lähenemine, kus iga päringut kontrollitakse, mitte ei usaldata automaatselt võrgu asukoha tõttu. Ei tähenda toote ostmist, vaid projekteerimispõhimõtet.</dd>
           <dt id="xss">XSS</dt><dd>Cross-Site Scripting – süstitud skript käivitub teise kasutaja brauseris. Võib varastada sessiooni või muuta lehe sisu.</dd>
         </dl></section>
 
