@@ -216,6 +216,11 @@ The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia
 Canonical page: https://tehisabiline.ee/en/dora/
 DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entities must maintain an ICT risk framework, a register of information covering contractual arrangements with ICT third-party providers, contractual safeguards, incident reporting and resilience testing. Certain significant entities must carry out threat-led penetration testing (TLPT) at least every three years.
 
+## AI Act in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/ai-act/
+The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in stages. Prohibitions and AI literacy apply from 2 February 2025; general-purpose AI obligations from 2 August 2025; high-risk Annex III obligations from 2 August 2026; and Annex I product rules from 2 August 2027. Providers and deployers need an AI inventory, role and risk classification, technical documentation, human-oversight evidence, logging and post-market monitoring.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -233,6 +238,7 @@ DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entitie
 - https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/en/cra/
 - https://tehisabiline.ee/en/dora/
+- https://tehisabiline.ee/en/ai-act/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
