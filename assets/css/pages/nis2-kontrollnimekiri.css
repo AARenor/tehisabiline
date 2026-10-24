@@ -123,3 +123,24 @@
 .checklist__reset, .checklist__print { display: none; }
     .checklist__item { break-inside: avoid; border-color: #999; }
 }
+
+@media print {
+    .site-header,
+    .site-footer,
+    .band,
+    .related,
+    .toc,
+    .skip-link,
+    .checklist__bar,
+    .checklist__hint {
+        display: none !important;
+    }
+    .page-head {
+        padding-top: 0;
+    }
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.75em;
+        color: #555;
+    }
+}
