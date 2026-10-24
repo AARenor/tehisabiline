@@ -37,248 +37,276 @@
     <link rel="stylesheet" href="/site.css?v=a0f76a5d">
     <link rel="stylesheet" href="/assets/css/pages/contact.css?v=407ab6eb">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Organization",
+      "@id": "https://tehisabiline.ee/#organization",
+      "name": "Tehisabiline OÜ",
+      "legalName": "Tehisabiline OÜ",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Registrikood",
+        "value": "17607255",
+        "url": "https://ariregister.rik.ee/est/company/17607255"
+      },
+      "foundingDate": "2026-09-24",
+      "alternateName": "Tehisabiline",
+      "url": "https://tehisabiline.ee/",
+      "sameAs": [
+        "https://github.com/AARenor/tehisabiline",
+        "https://www.f6s.com/company/tehisabiline"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+      "email": "tehisabiline@gmail.com",
+      "founder": {
+        "@id": "https://tehisabiline.ee/#founder"
+      },
+      "description": "Tallinnas tegutsev ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tallinn",
+        "addressCountry": "EE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "tehisabiline@gmail.com",
+        "availableLanguage": [
+          "et",
+          "en"
+        ]
+      },
+      "knowsAbout": [
+        "Küberturbe AI-mudelid",
+        "Keeldudeta ja piirangutega küber-AI",
+        "AI rakendusliidesed",
+        "Agendipõhine küberturve",
+        "Haavatavuste auditid",
+        "Küberauditid",
+        "Küberturvalisus",
+        "Pentestimine",
+        "Läbistustestimine",
+        "API turvatestimine",
+        "Veebirakenduse turvatestimine",
+        "NIS2",
+        "E-ITS",
+        "TLPT",
+        "DORA",
+        "AI Act",
+        "RAG-i turvatestimine",
+        "Prompt injection"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tehisabiline.ee/#founder",
+      "name": "Arle Aron Reidma",
+      "jobTitle": "Asutaja",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+        "contentUrl": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+        "name": "Arle Aron Reidma",
+        "caption": "Arle Aron Reidma, Tehisabiline OÜ asutaja ja AI-arendaja",
+        "width": 800,
+        "height": 800
+      },
+      "worksFor": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/arlearonreidma/",
+        "https://cerebralvalley.ai/u/AAR1",
+        "https://github.com/arlearonreidma",
+        "https://www.f6s.com/company/tehisabiline"
+      ],
+      "knowsAbout": [
+        "Tehisintellekt",
+        "AI-mudelite peenhäälestus",
+        "Küberturvalisus"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tehisabiline.ee/#website",
+      "url": "https://tehisabiline.ee/",
+      "name": "Tehisabiline",
+      "inLanguage": "et",
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "description": "Tehisabilise kaks põhiteenust: küberaudit ja pentestimine ettevõttele ning keeldudeta küber-AI API arendajale. API on arenduses, mitte veel avalik."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/#webpage",
+      "url": "https://tehisabiline.ee/",
+      "name": "Küberaudit ja keeldudeta AI API | Tehisabiline",
+      "description": "Küberaudit ja pentestimine Eesti ettevõttele ning keeldudeta küber-AI API arendajale. Inimese kinnitatud leiud ja parandusplaan; API on arenduses.",
+      "dateModified": "2026-10-12",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/mudelid/#service",
+      "url": "https://tehisabiline.ee/mudelid/",
+      "name": "Kavandatav OpenAI-ühilduv küberturbe API",
+      "serviceType": "Arenduses olev OpenAI-ühilduv API turvatööriistade arendajatele",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "description": "Planeeritav OpenAI-ühilduv otspunkt võtmepõhise ligipääsu ja kasutuspõhise arveldusega. API pole veel avalik; pilootfaasis avame ligipääsu taotluse alusel."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/kuberaudit/#service",
+      "url": "https://tehisabiline.ee/kuberaudit/",
+      "name": "Küberaudit Eestis",
+      "serviceType": "Inimese ülevaatusega agendipõhine küberaudit",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "description": "Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja, iga oluline leid läbib inimese ülevaatuse ja tulemus on parandusplaan tähtsuse järjekorras koos korduskontrolliga."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/pentestimine/#service",
+      "url": "https://tehisabiline.ee/pentestimine/",
+      "name": "Pentestimine Eestis",
+      "alternateName": [
+        "Pentest",
+        "Pentesting",
+        "Läbistustestimine",
+        "Läbitungimistest",
+        "Penetration testing"
+      ],
+      "serviceType": "Kokkulepitud ulatusega veebirakenduse ja API läbistustestimine",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "description": "Veebirakenduste ja API-de pentest kokkulepitud ulatuses ning omaniku kirjalikul loal. Olulised leiud vaatab üle inimene; tulemus on tõendid, parandusplaan ja kokkulepitud kordustest."
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tehisabiline.ee/#protsess",
+      "name": "Kuidas alustada: kolm sammu tööle",
+      "description": "Tasuta kaardistus, pakkumine ja luba, üleandmine.",
+      "step": [
         {
-          "@type": "Organization",
-          "@id": "https://tehisabiline.ee/#organization",
-          "name": "Tehisabiline OÜ",
-          "legalName": "Tehisabiline OÜ",
-          "identifier": {"@type": "PropertyValue", "propertyID": "Registrikood", "value": "17607255", "url": "https://ariregister.rik.ee/est/company/17607255"},
-          "foundingDate": "2026-09-24",
-          "alternateName": "Tehisabiline",
-          "url": "https://tehisabiline.ee/",
-          "sameAs": [
-            "https://github.com/AARenor/tehisabiline",
-            "https://www.f6s.com/company/tehisabiline"
-          ],
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
-            "width": 512,
-            "height": 512
-          },
-          "image": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
-          "email": "tehisabiline@gmail.com",
-          "founder": {
-            "@id": "https://tehisabiline.ee/#founder"
-          },
-          "description": "Tallinnas tegutsev ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Tallinn",
-            "addressCountry": "EE"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Estonia"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "sales",
-            "email": "tehisabiline@gmail.com",
-            "availableLanguage": [
-              "et",
-              "en"
-            ]
-          },
-          "knowsAbout": [
-            "Küberturbe AI-mudelid",
-            "Keeldudeta ja piirangutega küber-AI",
-            "AI rakendusliidesed",
-            "Agendipõhine küberturve",
-            "Haavatavuste auditid",
-            "Küberauditid",
-            "Küberturvalisus",
-            "Pentestimine",
-            "Läbistustestimine",
-            "API turvatestimine",
-            "Veebirakenduse turvatestimine",
-            "NIS2"
-          ]
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Tasuta kaardistus",
+          "text": "Kirjelda e-kirjas, mida vajad. Ütleme ausalt, kas see tasub ära."
         },
         {
-          "@type": "Person",
-          "@id": "https://tehisabiline.ee/#founder",
-          "name": "Arle Aron Reidma",
-          "jobTitle": "Asutaja",
-          "image": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg", "contentUrl": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg", "name": "Arle Aron Reidma", "caption": "Arle Aron Reidma, Tehisabiline OÜ asutaja ja AI-arendaja", "width": 800, "height": 800},
-          "worksFor": {
-            "@id": "https://tehisabiline.ee/#organization"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/arlearonreidma/",
-            "https://cerebralvalley.ai/u/AAR1",
-            "https://github.com/arlearonreidma",
-            "https://www.f6s.com/company/tehisabiline"
-          ],
-          "knowsAbout": [
-            "Tehisintellekt",
-            "AI-mudelite peenhäälestus",
-            "Küberturvalisus"
-          ]
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Pakkumine ja luba",
+          "text": "Pentesti puhul lepime kirjalikult kokku sihtmärgid ja piirid, API puhul pilooti."
         },
         {
-          "@type": "WebSite",
-          "@id": "https://tehisabiline.ee/#website",
-          "url": "https://tehisabiline.ee/",
-          "name": "Tehisabiline",
-          "inLanguage": "et",
-          "publisher": {
-            "@id": "https://tehisabiline.ee/#organization"
-          },
-          "description": "Tehisabilise kaks põhiteenust: küberaudit ja pentestimine ettevõttele ning keeldudeta küber-AI API arendajale. API on arenduses, mitte veel avalik."
-        },
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Üleandmine",
+          "text": "Saad raporti ja parandusplaani või pilootligipääsu."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/#faq",
+      "mainEntity": [
         {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/#webpage",
-          "url": "https://tehisabiline.ee/",
-          "name": "Küberaudit ja keeldudeta AI API | Tehisabiline",
-          "description": "Küberaudit ja pentestimine Eesti ettevõttele ning keeldudeta küber-AI API arendajale. Inimese kinnitatud leiud ja parandusplaan; API on arenduses.",
-          "dateModified": "2026-10-12",
-          "inLanguage": "et",
-          "isPartOf": {
-            "@id": "https://tehisabiline.ee/#website"
-          },
-          "about": {
-            "@id": "https://tehisabiline.ee/#organization"
-          },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
-            "width": 1200,
-            "height": 630
-          },
-          "publisher": {
-            "@id": "https://tehisabiline.ee/#organization"
+          "@type": "Question",
+          "name": "Mida tähendab keeldudeta ja piirangutega AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst, millest pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Piirangutega tähendab, et ebaseaduslik tegevus on välistatud ning iga töö käib omaniku kirjaliku loa järgi."
           }
         },
         {
-          "@type": "Service",
-          "@id": "https://tehisabiline.ee/mudelid/#service",
-          "url": "https://tehisabiline.ee/mudelid/",
-          "name": "Kavandatav OpenAI-ühilduv küberturbe API",
-          "serviceType": "Arenduses olev OpenAI-ühilduv API turvatööriistade arendajatele",
-          "provider": {
-            "@id": "https://tehisabiline.ee/#organization"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Estonia"
-          },
-          "description": "Planeeritav OpenAI-ühilduv otspunkt võtmepõhise ligipääsu ja kasutuspõhise arveldusega. API pole veel avalik; pilootfaasis avame ligipääsu taotluse alusel."
+          "@type": "Question",
+          "name": "Kas API on juba avalik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. OpenAI-ühilduv API on arenduses ja avalikku otspunkti veel pole. Piloodis osalemiseks kirjuta tehisabiline@gmail.com ning kirjelda turvatööriista ja kasutusjuhtu."
+          }
         },
         {
-          "@type": "Service",
-          "@id": "https://tehisabiline.ee/kuberaudit/#service",
-          "url": "https://tehisabiline.ee/kuberaudit/",
-          "name": "Küberaudit Eestis",
-          "serviceType": "Inimese ülevaatusega agendipõhine küberaudit",
-          "provider": {
-            "@id": "https://tehisabiline.ee/#organization"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Estonia"
-          },
-          "description": "Agendid testivad sinu süsteeme sinu kirjaliku loa alusel nagu ründaja, iga oluline leid läbib inimese ülevaatuse ja tulemus on parandusplaan tähtsuse järjekorras koos korduskontrolliga."
+          "@type": "Question",
+          "name": "Mis on küberaudit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised ja sisendikontroll. Meie küberaudit on agendipõhine, iga olulise leiu vaatab üle inimene ja töö lõppeb parandusplaaniga tähtsuse järjekorras."
+          }
         },
         {
-          "@type": "Service",
-          "@id": "https://tehisabiline.ee/pentestimine/#service",
-          "url": "https://tehisabiline.ee/pentestimine/",
-          "name": "Pentestimine Eestis",
-          "alternateName": ["Pentest", "Pentesting", "Läbistustestimine", "Läbitungimistest", "Penetration testing"],
-          "serviceType": "Kokkulepitud ulatusega veebirakenduse ja API läbistustestimine",
-          "provider": {"@id": "https://tehisabiline.ee/#organization"},
-          "areaServed": {"@type": "Country", "name": "Estonia"},
-          "description": "Veebirakenduste ja API-de pentest kokkulepitud ulatuses ning omaniku kirjalikul loal. Olulised leiud vaatab üle inimene; tulemus on tõendid, parandusplaan ja kokkulepitud kordustest."
+          "@type": "Question",
+          "name": "Kas pakute pentestimist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, kokkulepitud ulatuses ja süsteemi omaniku kirjaliku loa alusel. Pentestimine ehk läbitungimistest kontrollib, kas nõrkust saab päriselt ära kasutada. Tulemuseks on tõendid, parandusplaan ja kokkulepitud korduskontroll."
+          }
         },
         {
-          "@type": "HowTo",
-          "@id": "https://tehisabiline.ee/#protsess",
-          "name": "Kuidas alustada: kolm sammu tööle",
-          "description": "Tasuta kaardistus, pakkumine ja luba, üleandmine.",
-          "step": [
-            {
-              "@type": "HowToStep",
-              "position": 1,
-              "name": "Tasuta kaardistus",
-              "text": "Kirjelda e-kirjas, mida vajad. Ütleme ausalt, kas see tasub ära."
-            },
-            {
-              "@type": "HowToStep",
-              "position": 2,
-              "name": "Pakkumine ja luba",
-              "text": "Pentesti puhul lepime kirjalikult kokku sihtmärgid ja piirid, API puhul pilooti."
-            },
-            {
-              "@type": "HowToStep",
-              "position": 3,
-              "name": "Üleandmine",
-              "text": "Saad raporti ja parandusplaani või pilootligipääsu."
-            }
-          ]
+          "@type": "Question",
+          "name": "Kui palju see maksab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise kirjas."
+          }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://tehisabiline.ee/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Mida tähendab keeldudeta ja piirangutega AI?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst, millest pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Piirangutega tähendab, et ebaseaduslik tegevus on välistatud ning iga töö käib omaniku kirjaliku loa järgi."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kas API on juba avalik?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ei. OpenAI-ühilduv API on arenduses ja avalikku otspunkti veel pole. Piloodis osalemiseks kirjuta tehisabiline@gmail.com ning kirjelda turvatööriista ja kasutusjuhtu."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Mis on küberaudit?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised ja sisendikontroll. Meie küberaudit on agendipõhine, iga olulise leiu vaatab üle inimene ja töö lõppeb parandusplaaniga tähtsuse järjekorras."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kas pakute pentestimist?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Jah, kokkulepitud ulatuses ja süsteemi omaniku kirjaliku loa alusel. Pentestimine ehk läbitungimistest kontrollib, kas nõrkust saab päriselt ära kasutada. Tulemuseks on tõendid, parandusplaan ja kokkulepitud korduskontroll."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kui palju see maksab?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise kirjas."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kas NIS2 mind puudutab?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tõenäoliselt mitte otse: seadus kohustab suuri ja elutähtsaid tegijaid. Aga esmased meetmed kasvatavad iga ettevõtte vastupidavust."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Kas NIS2 mind puudutab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tõenäoliselt mitte otse: seadus kohustab suuri ja elutähtsaid tegijaid. Aga esmased meetmed kasvatavad iga ettevõtte vastupidavust."
+          }
         }
       ]
     }
-    </script>
+  ]
+}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
