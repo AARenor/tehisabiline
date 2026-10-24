@@ -296,7 +296,7 @@ table { border-collapse: collapse; }
   content: ""; position: absolute; z-index: -1; top: 0; right: 0; pointer-events: none;
   width: clamp(380px, 46vw, 860px); aspect-ratio: 1;
   background: url("/assets/plates/ribbon-900.webp") right top / contain no-repeat;
-  background-image: image-set("/assets/plates/ribbon-900.avif" 1x type("image/avif"), "/assets/plates/ribbon-1500.avif" 2x type("image/avif"), "/assets/plates/ribbon-900.webp" 1x type("image/webp"), "/assets/plates/ribbon-1500.webp" 2x type("image/webp"));
+  background-image: image-set("/assets/plates/ribbon-900.avif" 1x type("image/avif"), "/assets/plates/ribbon-1500.avif?v=9804a10f" 2x type("image/avif"), "/assets/plates/ribbon-900.webp" 1x type("image/webp"), "/assets/plates/ribbon-1500.webp?v=d43ebfbe" 2x type("image/webp"));
   mix-blend-mode: multiply; opacity: .55;
 }
 @media (max-width: 899px) { .page-head::before { display: none; } }
