@@ -33,6 +33,14 @@
         const value = done.size;
         if (count) count.textContent = String(value);
         if (fill) fill.style.width = `${Math.round((value / total) * 100)}%`;
+        const hint = root.querySelector("[data-progress-hint]");
+        if (hint) {
+            hint.textContent = value <= 3
+                ? "Alusta kolmest kiirest võidust: varunduse taastetest, MFA ja ligipääsud."
+                : value <= 7
+                    ? "Põhi on paigas. Järgmiseks tõendid ja juhtkonna ülevaatus."
+                    : "Tugev baas. Kontrolli, et tõendid oleksid ajakohased ja testitud.";
+        }
         if (bar) bar.hidden = false;
         write(done);
     };

@@ -46,6 +46,13 @@
     white-space: nowrap;
 }
 
+.checklist__hint {
+    flex-basis: 100%;
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
 .checklist__reset, .checklist__print {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-s);
@@ -106,6 +113,13 @@
 }
 
 @media print {
-    .checklist__bar, .checklist__reset, .checklist__print { display: none; }
+    .checklist__bar, .checklist__hint {
+    flex-basis: 100%;
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.checklist__reset, .checklist__print { display: none; }
     .checklist__item { break-inside: avoid; border-color: #999; }
 }
