@@ -16,6 +16,8 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 - [AI Act in Estonia (EN)](https://tehisabiline.ee/en/ai-act/)
 - [SBOM for CRA (EN)](https://tehisabiline.ee/en/sbom/)
 - [E-ITS in Estonia (EN)](https://tehisabiline.ee/en/e-its/)
+- [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/)
+- [Cybersecurity audit in Estonia (EN)](https://tehisabiline.ee/en/security-audit/)
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
 - [NIS2 kontrollnimekiri PDF-ina](https://tehisabiline.ee/assets/downloads/nis2-kontrollnimekiri.pdf)
