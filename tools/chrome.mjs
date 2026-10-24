@@ -26,7 +26,7 @@ const NAV = [
 ];
 
 function header(path) {
-    const link = ([href, label]) => `<a href="${href}"${path === href ? ' aria-current="page"' : ""}>${label}</a>`;
+    const link = ([href, label]) => `<a href="${href}"${path === href || path.startsWith(href) ? ' aria-current="page"' : ""}>${label}</a>`;
     return `<header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
         <a class="brand" href="/"><img src="/assets/brand/logo.svg" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>

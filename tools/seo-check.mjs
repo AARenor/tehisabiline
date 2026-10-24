@@ -83,6 +83,20 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "nis2/kontrollnimekiri/index.html",
+        canonical: `${origin}/nis2/kontrollnimekiri/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "nis2/intsidendist-teatamine/index.html",
+        canonical: `${origin}/nis2/intsidendist-teatamine/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "privaatsus/index.html",
         canonical: `${origin}/privaatsus/`,
         schemaTypes: ["WebPage", "BreadcrumbList"],
