@@ -33,82 +33,198 @@
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=a0f76a5d">
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Article",
+      "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#article",
+      "url": "https://tehisabiline.ee/nis2/intsidendist-teatamine/",
+      "headline": "NIS2 intsidendist teatamine: 24 tundi, 72 tundi ja üks kuu",
+      "description": "Praktiline juhend NIS2 intsidendist teatamiseks: olulise intsidendi määratlus, kolm teatist, sisu, kanal ja vastutus.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "citation": [
+        "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+        "https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus",
+        "https://raport.cert.ee/",
+        "https://www.aki.ee/"
+      ],
+      "author": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      },
+      "about": [
         {
-          "@type": "Article",
-          "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#article",
-          "url": "https://tehisabiline.ee/nis2/intsidendist-teatamine/",
-          "headline": "NIS2 intsidendist teatamine: 24 tundi, 72 tundi ja üks kuu",
-          "description": "Praktiline juhend NIS2 intsidendist teatamiseks: olulise intsidendi määratlus, kolm teatist, sisu, kanal ja vastutus.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "citation": [
-            "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
-            "https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus",
-            "https://raport.cert.ee/",
-            "https://www.aki.ee/"
-          ],
-          "author": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization", "name": "Tehisabiline OÜ", "logo": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca", "width": 512, "height": 512}},
-          "image": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97", "width": 1200, "height": 630},
-          "about": [{"@type": "Thing", "name": "NIS2"}, {"@type": "Thing", "name": "Küberintsident"}, {"@type": "Thing", "name": "Intsidendist teatamine"}]
+          "@type": "Thing",
+          "name": "NIS2"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#webpage",
-          "url": "https://tehisabiline.ee/nis2/intsidendist-teatamine/",
-          "name": "NIS2 intsidendist teatamine: 24/72/1 kuu | Tehisabiline",
-          "description": "NIS2 intsidendist teatamine samm-sammult: varajane hoiatus 24 tunni, teade 72 tunni ja lõpparuanne ühe kuu jooksul.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
-          "about": {"@id": "https://tehisabiline.ee/#organization"},
-          "mainEntity": {"@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#article"},
-          "author": {"@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"},
-          "breadcrumb": {"@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#breadcrumb"}
+          "@type": "Thing",
+          "name": "Küberintsident"
         },
         {
-          "@type": "HowTo",
-          "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#howto",
-          "name": "NIS2 intsidendist teatamine",
-          "inLanguage": "et",
-          "step": [
-            {"@type": "HowToStep", "position": 1, "name": "Varajane hoiatus", "text": "Teata kahtlusest ja esialgsest mõjust 24 tunni jooksul."},
-            {"@type": "HowToStep", "position": 2, "name": "Täpsustav teade", "text": "Esita hinnang tõsidusele, mõjutatud teenustele ja leevendusmeetmetele 72 tunni jooksul."},
-            {"@type": "HowToStep", "position": 3, "name": "Lõpparuanne", "text": "Kirjelda juurpõhjus, mõju ja meetmed ühe kuu jooksul."}
-          ]
+          "@type": "Thing",
+          "name": "Intsidendist teatamine"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#webpage",
+      "url": "https://tehisabiline.ee/nis2/intsidendist-teatamine/",
+      "name": "NIS2 intsidendist teatamine: 24/72/1 kuu | Tehisabiline",
+      "description": "NIS2 intsidendist teatamine samm-sammult: varajane hoiatus 24 tunni, teade 72 tunni ja lõpparuanne ühe kuu jooksul.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#article"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#breadcrumb"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#howto",
+      "name": "NIS2 intsidendist teatamine",
+      "inLanguage": "et",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Varajane hoiatus",
+          "text": "Teata kahtlusest ja esialgsest mõjust 24 tunni jooksul."
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#faq",
-          "isPartOf": {"@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#webpage"},
-          "inLanguage": "et",
-          "mainEntity": [
-            {"@type": "Question", "name": "Mis on NIS2 oluline küberintsident?", "acceptedAnswer": {"@type": "Answer", "text": "Oluline intsident põhjustab tõsise teenusekatkestuse või rahalise kahju või mõjutab teisi isikuid olulise materiaalse või mittemateriaalse kahjuga. Lõpliku hinnangu annab kohustuslane oma protsessi järgi."}},
-            {"@type": "Question", "name": "Kui kiiresti tuleb intsidendist teatada?", "acceptedAnswer": {"@type": "Answer", "text": "Varajane hoiatus 24 tunni jooksul, täpsustav teade 72 tunni jooksul ja lõpparuanne ühe kuu jooksul. Eestis esitatakse teated RIA-le."}},
-            {"@type": "Question", "name": "Kuhu NIS2 intsidendist teatada?", "acceptedAnswer": {"@type": "Answer", "text": "Eestis Riigi Infosüsteemi Ametile, kasutades CERT-EE teatamiskeskkonda. Isikuandmetega seotud rikkest tuleb lisaks teatada Andmekaitse Inspektsioonile."}},
-            {"@type": "Question", "name": "Kas intsidendist tuleb teatada ka siis, kui see on juba lahendatud?", "acceptedAnswer": {"@type": "Answer", "text": "Jah, kui intsident vastab olulise intsidendi kriteeriumidele. Lõpparuanne kirjeldab juurpõhjust, mõju ja võetud meetmeid ka pärast lahendamist."}},
-            {"@type": "Question", "name": "Kas kliente ja partnereid tuleb eraldi teavitada?", "acceptedAnswer": {"@type": "Answer", "text": "NIS2 kohustus puudutab järelevalveasutuse teavitamist. Klientide teavitamine sõltub lepingutest, andmekaitse nõuetest ja mõjust teenusele; see tuleks plaani eelnevalt kirja panna."}}
-          ]
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Täpsustav teade",
+          "text": "Esita hinnang tõsidusele, mõjutatud teenustele ja leevendusmeetmetele 72 tunni jooksul."
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
-            {"@type": "ListItem", "position": 2, "name": "NIS2 juhend", "item": "https://tehisabiline.ee/nis2/"},
-            {"@type": "ListItem", "position": 3, "name": "Intsidendist teatamine", "item": "https://tehisabiline.ee/nis2/intsidendist-teatamine/"}
-          ]
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Lõpparuanne",
+          "text": "Kirjelda juurpõhjus, mõju ja meetmed ühe kuu jooksul."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#webpage"
+      },
+      "inLanguage": "et",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mis on NIS2 oluline küberintsident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oluline intsident põhjustab tõsise teenusekatkestuse või rahalise kahju või mõjutab teisi isikuid olulise materiaalse või mittemateriaalse kahjuga. Lõpliku hinnangu annab kohustuslane oma protsessi järgi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui kiiresti tuleb intsidendist teatada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varajane hoiatus 24 tunni jooksul, täpsustav teade 72 tunni jooksul ja lõpparuanne ühe kuu jooksul. Eestis esitatakse teated RIA-le."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kuhu NIS2 intsidendist teatada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eestis Riigi Infosüsteemi Ametile, kasutades CERT-EE teatamiskeskkonda. Isikuandmetega seotud rikkest tuleb lisaks teatada Andmekaitse Inspektsioonile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas intsidendist tuleb teatada ka siis, kui see on juba lahendatud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, kui intsident vastab olulise intsidendi kriteeriumidele. Lõpparuanne kirjeldab juurpõhjust, mõju ja võetud meetmeid ka pärast lahendamist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas kliente ja partnereid tuleb eraldi teavitada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NIS2 kohustus puudutab järelevalveasutuse teavitamist. Klientide teavitamine sõltub lepingutest, andmekaitse nõuetest ja mõjust teenusele; see tuleks plaani eelnevalt kirja panna."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas napilt toimumata jäänud intsidendist tuleb teatada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sellest teatamine on vabatahtlik. Kui sündmus oleks võinud kahjustada andmeid või teenust, kuid õnnestus ära hoida, võib sellest RIA-le teatada. Kui mõju vastab olulise intsidendi kriteeriumidele, kehtib tavaline teatamiskohustus."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/nis2/intsidendist-teatamine/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "NIS2 juhend",
+          "item": "https://tehisabiline.ee/nis2/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Intsidendist teatamine",
+          "item": "https://tehisabiline.ee/nis2/intsidendist-teatamine/"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -149,8 +265,9 @@
       <article class="prose">
         <section class="short-answer" id="short-answer"><h2>Lühidalt</h2><p>NIS2 raamistik nõuab olulisest küberintsidendist teatamist kolmes etapis: <strong>varajane hoiatus 24 tunni</strong>, <strong>täpsustav teade 72 tunni</strong> ja <strong>lõpparuanne ühe kuu</strong> jooksul (<a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj">direktiiv 2022/2555, artikkel 23</a>). Eestis esitatakse teated Riigi Infosüsteemi Ametile. Teatamine ei asenda intsidendi käsitlemist ega isikuandmete rikkest teatamist Andmekaitse Inspektsioonile.</p></section>
 
-        <section id="oluline"><h2>Mis on oluline küberintsident?</h2><p>NIS2 mõttes on intsident sündmus, mis kahjustab infosüsteemi või teenuse turvalisust. <strong>Oluline</strong> on see, kui sündmus põhjustab tõsise teenusekatkestuse või rahalise kahju või mõjutab teisi isikuid olulise materiaalse või mittemateriaalse kahjuga. Piiri ei määra ainult tehniline tõsidus, vaid mõju teenusele ja teistele osapooltele.</p><ul><li><strong>Teenusekatkestus:</strong> kriitiline teenus ei ole kättesaadav või on oluliselt aeglustunud.</li><li><strong>Rahalise kahju risk:</strong> otsene kulu, kahjustatud tehingud või vajalik erakorraline töö.</li><li><strong>Mõju teistele:</strong> kliendid, partnerid või tarneahel kannatavad tuvastatava kahju.</li><li><strong>Korduvus ja ulatus:</strong> sama nõrkuse korduv kasutamine või mitme süsteemi haaramine.</li></ul><p>Kahtluse korral ära oota lõplikku tõendit: varajane hoiatus on mõeldud just ebakindla olukorra jaoks. Otsuse tegemiseks pea plaani, kes hindab tõsidust ja kes teatab.</p></section>
+        <section id="oluline"><h2>Mis on oluline küberintsident?</h2><p>NIS2 mõttes on intsident sündmus, mis kahjustab andmete või teenuse kättesaadavust, autentsust, terviklust või konfidentsiaalsust. <strong>Oluline</strong> on see, kui sündmus põhjustab tõsise teenusekatkestuse või rahalise kahju või mõjutab teisi isikuid olulise materiaalse või mittemateriaalse kahjuga. Piiri ei määra ainult tehniline tõsidus, vaid mõju teenusele ja teistele osapooltele.</p><ul><li><strong>Teenusekatkestus:</strong> kriitiline teenus ei ole kättesaadav või on oluliselt aeglustunud.</li><li><strong>Rahalise kahju risk:</strong> otsene kulu, kahjustatud tehingud või vajalik erakorraline töö.</li><li><strong>Mõju teistele:</strong> kliendid, partnerid või tarneahel kannatavad tuvastatava kahju.</li><li><strong>Korduvus ja ulatus:</strong> sama nõrkuse korduv kasutamine või mitme süsteemi haaramine.</li></ul><p>Kahtluse korral ära oota lõplikku tõendit: varajane hoiatus on mõeldud just ebakindla olukorra jaoks. Otsuse tegemiseks pea plaani, kes hindab tõsidust ja kes teatab.</p></section>
 
+        <section id="napilt"><h2>Napilt toimumata jäänud küberintsident</h2><p>16.10.2026 jõustunud muudatusega lisandus mõiste <strong>napilt toimumata jäänud küberintsident</strong>: sündmus, mis oleks võinud kahjustada andmete või teenuse kättesaadavust, autentsust, terviklust või konfidentsiaalsust, kuid mis õnnestus ära hoida või ei tekkinud.</p><p>Sellest teatamine on <strong>vabatahtlik</strong>: küberturvalisuse seaduse §&nbsp;8<sup>1</sup> järgi võib teenuseosutaja või muu isik RIA-le napilt toimumata jäänud intsidendist teatada. Kui sündmus vastab siiski olulise intsidendi kriteeriumidele, kehtib tavaline 24 tunni / 72 tunni / ühe kuu kohustus.</p></section>
         <section id="kolm"><h2>Kolm teatist</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Etapp</th><th scope="col">Tähtaeg</th><th scope="col">Sisu</th></tr></thead><tbody><tr><th scope="row">Varajane hoiatus</th><td data-label="Tähtaeg">24 tundi</td><td data-label="Sisu">Kahtlus pahatahtlikust tegevusest, esialgne mõju ja piiriülesus; võimalusel esialgsed indikaatorid.</td></tr><tr><th scope="row">Täpsustav teade</th><td data-label="Tähtaeg">72 tundi</td><td data-label="Sisu">Hinnang tõsidusele, mõjutatud teenused ja süsteemid, esialgne juurpõhjus, leevendusmeetmed.</td></tr><tr><th scope="row">Lõpparuanne</th><td data-label="Tähtaeg">1 kuu</td><td data-label="Sisu">Üksikasjalik kirjeldus, ohu liik, juurpõhjus, mõju, meetmed ja piiriülene mõju.</td></tr></tbody></table></div><p>Vahepealset teavet võib järelevalveasutus küsida ka teatiste vahel. Hoia intsidendi logi ühes kohas, et iga etapp ei algaks nullist.</p></section>
 
         <section id="sisu"><h2>Mida teatada?</h2><ul><li><strong>Mis juhtus:</strong> lühike faktiline kirjeldus ilma oletusteta.</li><li><strong>Millal:</strong> avastamise aeg ja esialgne toimumisaeg.</li><li><strong>Mõju:</strong> katkestus, andmed, kliendid, rahaline risk, piiriülene mõju.</li><li><strong>Ulatus:</strong> mõjutatud teenused, süsteemid ja tarneahela osad.</li><li><strong>Indikaatorid:</strong> IoC-d, logiviited ja maskeeritud tõendid; ära saada paroole ega isikuandmeid.</li><li><strong>Meetmed:</strong> mis on peatatud, isoleeritud või parandatud.</li><li><strong>Kontakt:</strong> kes vastab täpsustavatele küsimustele ööpäevaringselt.</li></ul><p>Kasuta ühtset malli ja hoia versioonid. Teatise koostamine ei tohiks sõltuda ühest inimesest, kes parajasti kohal on.</p>
@@ -159,7 +276,7 @@
         <section id="valmistumine"><h2>Kuidas valmistuda?</h2><ol><li><strong>Kirjuta intsidendiplaan:</strong> tuvastamine, piiramine, kõrvaldamine, taastamine ja õppetunnid.</li><li><strong>Määra rollid:</strong> intsidendi juht, tehniline kontakt, juriidiline ja kommunikatsiooni kontakt.</li><li><strong>Hoia kontaktid:</strong> RIA/CERT-EE, Andmekaitse Inspektsioon, IKT-tarnijad ja kindlustus.</li><li><strong>Valmista mallid:</strong> kolm teatist, sisemine teavitus ja klienditeavitus.</li><li><strong>Testi:</strong> korralda lauaõppus ja kontrolli, kas 24 tunni otsus on tehtav.</li><li><strong>Säilita logid:</strong> kinnita Logi säilitamise aeg ja kättesaadavus ka siis, kui süsteem on maas.</li></ol></section>
 
         <section id="ajatelg"><h2>24 tunni ajatelg</h2><ol><li><strong>T+0 – avastamine:</strong> fikseeri aeg, allikas ja esmased sümptomid; ära muuda tõendeid.</li><li><strong>T+1h – hindamine:</strong> kas tegu on olulise intsidendiga, kes otsustab ja kes teatab?</li><li><strong>T+4h – piiramine:</strong> isoleeri mõjutatud osad, säilita logid ja teavita sisemisi osapooli.</li><li><strong>T+12h – mustand:</strong> koosta varajane hoiatus, kontrolli faktid ja eemalda saladused.</li><li><strong>T+24h – esitamine:</strong> saada teade RIA-le, salvesta kinnitus ja ajatempel.</li></ol><p>Ajatelg on näidis, mitte kohustuslik protsess. Kui intsident avastatakse hiljem, loeb avastamise aeg, mitte esialgne kahtlus.</p></section>
-        <section id="otsustus"><h2>Otsustuspuu: kas teatada?</h2><ul><li><strong>Kas teenus oli oluliselt katkestatud või aeglustunud?</strong> Jah → teatamise tõenäosus kõrge.</li><li><strong>Kas andmed või raha olid ohus?</strong> Jah → hinda mõju ja teata.</li><li><strong>Kas mõju ulatub klientide või partneriteni?</strong> Jah → teata ja kaalu nende teavitamist.</li><li><strong>Kas tegu oli üksiku ebaõnnestunud katsega ilma mõjuta?</strong> Dokumenteeri; vabatahtlik teavitus on siiski võimalik.</li></ul><p>Kahtluse korral saada varajane hoiatus – selle eesmärk ongi ebakindel olukord. Hilisem täpsustus parandab pilti, puuduv teavitus mitte.</p></section>
+        <section id="otsustus"><h2>Otsustuspuu: kas teatada?</h2><ul><li><strong>Kas teenus oli oluliselt katkestatud või aeglustunud?</strong> Jah → teatamise tõenäosus kõrge.</li><li><strong>Kas andmed või raha olid ohus?</strong> Jah → hinda mõju ja teata.</li><li><strong>Kas mõju ulatub klientide või partneriteni?</strong> Jah → teata ja kaalu nende teavitamist.</li><li><strong>Kas tegu oli üksiku ebaõnnestunud katsega ilma mõjuta?</strong> Dokumenteeri; kui sündmus jäi napilt toimumata, saad sellest vabatahtlikult teatada.</li></ul><p>Kahtluse korral saada varajane hoiatus – selle eesmärk ongi ebakindel olukord. Hilisem täpsustus parandab pilti, puuduv teavitus mitte.</p></section>
         <section id="kuhu"><h2>Kuhu ja kellele?</h2><p>Eestis teavitab kohustuslane Riigi Infosüsteemi Ametit, kasutades CERT-EE teatamiskeskkonda (<a href="https://raport.cert.ee/">raport.cert.ee</a>). Isikuandmetega seotud rikkest tuleb lisaks teatada Andmekaitse Inspektsioonile 72 tunni jooksul (<a href="https://www.aki.ee/">AKI</a>). Klientide ja partnerite teavitamine sõltub lepingutest ja mõjust; pane see plaani eelnevalt kirja, mitte ära otsusta kriisi ajal.</p><p>Kui sinu ettevõte ei ole NIS2 kohustuslane, saab CERT-EE-le intsidendist siiski teatada. See aitab kaasa olukorrapildile ega asenda muid kohustusi.</p></section>
 
         <section id="faq"><h2>Küsimused teatamise kohta</h2><div class="faq">
@@ -167,6 +284,7 @@
           <details><summary><h3>Kui kiiresti tuleb intsidendist teatada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Varajane hoiatus 24 tunni jooksul, täpsustav teade 72 tunni jooksul ja lõpparuanne ühe kuu jooksul. Eestis esitatakse teated RIA-le.</p></details>
           <details><summary><h3>Kuhu NIS2 intsidendist teatada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Eestis Riigi Infosüsteemi Ametile, kasutades CERT-EE teatamiskeskkonda. Isikuandmetega seotud rikkest tuleb lisaks teatada Andmekaitse Inspektsioonile.</p></details>
           <details><summary><h3>Kas intsidendist tuleb teatada ka siis, kui see on juba lahendatud?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Jah, kui intsident vastab olulise intsidendi kriteeriumidele. Lõpparuanne kirjeldab juurpõhjust, mõju ja võetud meetmeid ka pärast lahendamist.</p></details>
+          <details><summary><h3>Kas napilt toimumata jäänud intsidendist tuleb teatada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Sellest teatamine on vabatahtlik. Kui sündmus oleks võinud kahjustada andmeid või teenust, kuid õnnestus ära hoida, võib sellest RIA-le teatada, et parandada olukorrapilti. Kui mõju siiski vastab olulise intsidendi kriteeriumidele, kehtib tavaline teatamiskohustus.</p></details>
           <details><summary><h3>Kas kliente ja partnereid tuleb eraldi teavitada?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">NIS2 kohustus puudutab järelevalveasutuse teavitamist. Klientide teavitamine sõltub lepingutest, andmekaitse nõuetest ja mõjust teenusele; see tuleks plaani eelnevalt kirja panna.</p></details>
         </div></section>
 
