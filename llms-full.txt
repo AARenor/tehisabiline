@@ -125,7 +125,7 @@ Ten-measure NIS2 checklist with the evidence an auditor asks for, a quick win an
 
 Canonical page: https://tehisabiline.ee/nis2/intsidendist-teatamine/
 
-Significant-incident criteria, the three NIS2 reports (early warning within 24 hours, notification within 72 hours, final report within one month), what to include, the Estonian reporting channel, near-miss reporting (voluntary) and the separate GDPR breach notification.
+Significant-incident criteria, the three NIS2 reports (early warning within 24 hours, notification within 72 hours, final report within one month), what to include, the Estonian reporting channel, near-miss reporting (voluntary), the separate GDPR breach notification and a browser-only deadline calculator.
 
 Canonical page: https://tehisabiline.ee/nis2/registreerimine/
 
@@ -137,7 +137,7 @@ NIS2 audit guide: scope across management, risk, the ten measures, supply chain 
 
 Canonical page: https://tehisabiline.ee/nis2/trahvid/
 
-NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The pages explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance.
+NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The page explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance.
 
 ### Glossary
 
