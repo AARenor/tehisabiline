@@ -155,7 +155,7 @@ Information on data processing, retention and data-subject rights.
 
 Canonical page: https://tehisabiline.ee/regulatsioonid/
 
-Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber Resilience Act. It covers who each framework applies to, the main obligations, current Estonian deadlines and authorities, how the frameworks overlap, the evidence an audit asks for and a practical starting order.
+Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber Resilience Act. It covers who each framework applies to, the main obligations, current Estonian deadlines and authorities, how the frameworks overlap, the evidence an audit asks for and a practical starting order. A downloadable CSV compares scope, obligations, deadlines, authorities and official sources.
 
 ### AI Act
 
