@@ -61,6 +61,12 @@ npm run submit:indexnow
 npm run submit:indexnow https://tehisabiline.ee/nis2/
 ```
 
+Deploy Cloudflare Pagesi (vajab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat; avaldab ainult avalikud failid):
+
+```bash
+bash tools/deploy.sh
+```
+
 Peamised failid:
 
 - `index.html` — avaleht; `site.css`, `site.js` — ühine disainisüsteem ja skript (Host Grotesk + Hanken Grotesk + JetBrains Mono, iseseisvalt majutatud)
@@ -69,13 +75,14 @@ Peamised failid:
 - `assets/icons.svg` — SVG ikoonide sprite (Lucide); `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
 - `assets/brand/logo.svg`, `assets/brand/favicon.svg` — vektorlogo ja väikese ikooni pikslivõrgule joondatud algallikas
 - `tools/logo-card.html`, `tools/og-card.html`, `tools/render-brand.mjs` — ikoonide ja lingi-eelvaate korratav renderdamine
-- `PRODUCT.md`, `DESIGN.md`, `.impeccable/` — toote- ja disainiotsused arendajatele (ei lähe Vercelisse, vt `.vercelignore`)
+- `PRODUCT.md`, `DESIGN.md`, `.impeccable/` — toote- ja disainiotsused arendajatele (ei lähe avalikku deploy'sse)
 - `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes)
 - alamkataloogid — staatilised sisulehed
 - `tools/seo-check.mjs` — indexeeritavate lehtede kontroll
-- `vercel.json` — Vercel deploy seadistus
+- `tools/deploy.sh` — Cloudflare Pages'i deploy (avaldab ainult avalikud failid; nõuab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat)
+- `vercel.json`, `.vercelignore` — varasema Verceli seadistuse jäänuk, mida deploy ei kasuta
 
-Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. `docs/` on Verceli deployst välja jäetud.
+Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. `docs/` ja `tools/` ei lähe avalikku deploy'sse (`tools/deploy.sh`).
 
 Kohalikuks eelvaateks võib kasutada näiteks `python3 -m http.server 4173` projekti juurkaustas.
 
