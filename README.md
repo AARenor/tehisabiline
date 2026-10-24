@@ -9,9 +9,17 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 ## Public resources
 
 - [Küberturvalisuse regulatsioonide kaart](https://tehisabiline.ee/regulatsioonid/) ([CSV](https://tehisabiline.ee/assets/downloads/kyberturvalisuse-regulatsioonid-2026.csv), [ICS kalender](https://tehisabiline.ee/assets/downloads/regulatsioonide-tahtajad.ics))
+- [English home](https://tehisabiline.ee/en/)
+- [Küberturvalisuse koolitus](https://tehisabiline.ee/koolitus/)
+- [NIS2 toetus](https://tehisabiline.ee/nis2/toetus/)
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/)
+- [NIS2 registration in Estonia (EN)](https://tehisabiline.ee/en/nis2/registration/)
+- [NIS2 fines in Estonia (EN)](https://tehisabiline.ee/en/nis2/fines/)
+- [NIS2 incident reporting in Estonia (EN)](https://tehisabiline.ee/en/nis2/incident-reporting/)
 - [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/)
 - [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/)
+- [DORA register of information (EN)](https://tehisabiline.ee/en/dora/register/)
+- [DORA audit in Estonia (EN)](https://tehisabiline.ee/en/dora/audit/)
 - [DORA in Estonia (EN)](https://tehisabiline.ee/en/dora/)
 - [AI Act in Estonia (EN)](https://tehisabiline.ee/en/ai-act/)
 - [SBOM for CRA (EN)](https://tehisabiline.ee/en/sbom/)
