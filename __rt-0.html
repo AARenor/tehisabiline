@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Küberaudit, turvaaudit, pentest ja NIS2 | Tehisabiline</title>
+    <meta name="description" content="Küberaudit, turvaaudit, pentestimine ja NIS2 tõendid Eesti ettevõttele. Inimese kinnitatud leiud ja parandusplaan; keeldudeta küber-AI API arendajale.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tehisabiline OÜ">
+    <meta name="theme-color" content="#0857f8">
+    <link rel="canonical" href="https://tehisabiline.ee/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="et_EE">
+    <meta property="og:site_name" content="Tehisabiline">
+    <meta property="og:title" content="Küberaudit, turvaaudit, pentest ja NIS2 | Tehisabiline">
+    <meta property="og:description" content="Küberaudit, turvaaudit, pentestimine ja NIS2 tõendid Eesti ettevõttele. Inimese kinnitatud leiud ja parandusplaan; keeldudeta küber-AI API arendajale.">
+    <meta property="og:url" content="https://tehisabiline.ee/">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <meta property="og:image:secure_url" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Tehisabiline – pentestimine, küberaudit ja API turvatööriistadele">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Küberaudit, turvaaudit, pentest ja NIS2 | Tehisabiline">
+    <meta name="twitter:description" content="Küberaudit, turvaaudit, pentestimine ja NIS2 tõendid Eesti ettevõttele. Inimese kinnitatud leiud ja parandusplaan; keeldudeta küber-AI API arendajale.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <meta name="twitter:image:alt" content="Tehisabiline – pentestimine, küberaudit ja API turvatööriistadele">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=1578d58e">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=703dfa31">
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=4f26b2fc">
+    <link rel="stylesheet" href="/assets/css/pages/contact.css?v=407ab6eb">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tehisabiline.ee/#organization",
+      "name": "Tehisabiline OÜ",
+      "legalName": "Tehisabiline OÜ",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Registrikood",
+        "value": "17607255",
+        "url": "https://ariregister.rik.ee/est/company/17607255"
+      },
+      "foundingDate": "2026-09-24",
+      "alternateName": "Tehisabiline",
+      "url": "https://tehisabiline.ee/",
+      "sameAs": [
+        "https://github.com/AARenor/tehisabiline",
+        "https://www.f6s.com/company/tehisabiline"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+      "email": "tehisabiline@gmail.com",
+      "founder": {
+        "@id": "https://tehisabiline.ee/#founder"
+      },
+      "description": "Tallinnas tegutsev ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tallinn",
+        "addressCountry": "EE"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "tehisabiline@gmail.com",
+        "availableLanguage": [
+          "et",
+          "en"
+        ]
+      },
+      "knowsAbout": [
+        "Küberturbe AI-mudelid",
+        "Keeldudeta ja piirangutega küber-AI",
+        "AI rakendusliidesed",
+        "Agendipõhine küberturve",
+        "Haavatavuste auditid",
+        "Küberauditid",
+        "Küberturvalisus",
+        "Pentestimine",
+        "Läbistustestimine",
+        "API turvatestimine",
+        "Veebirakenduse turvatestimine",
+        "NIS2",
+        "E-ITS",
+        "TLPT",
+        "DORA",
+        "DORA teaberegister",
+        "ISO/IEC 27001",
+        "Cyber Resilience Act",
+        "SBOM",
+        "AI Act",
+        "RAG-i turvatestimine",
+        "Prompt injection"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://tehisabiline.ee/#founder",
+      "name": "Arle Aron Reidma",
+      "jobTitle": "Asutaja",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+        "contentUrl": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+        "name": "Arle Aron Reidma",
+        "caption": "Arle Aron Reidma, Tehisabiline OÜ asutaja ja AI-arendaja",
+        "width": 800,
+        "height": 800
+      },
+      "worksFor": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/arlearonreidma/",
+        "https://cerebralvalley.ai/u/AAR1",
+        "https://github.com/arlearonreidma",
+        "https://www.f6s.com/company/tehisabiline"
+      ],
+      "knowsAbout": [
+        "Tehisintellekt",
+        "AI-mudelite peenhäälestus",
+        "Küberturvalisus",
+        "NIS2",
+        "E-ITS",
+        "Cyber Resilience Act (CRA)",
+        "SBOM",
+        "DORA",
+        "AI Act",
+        "Pentestimine",
+        "Turvaaudit"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tehisabiline.ee/#website",
+      "url": "https://tehisabiline.ee/",
+      "name": "Tehisabiline",
+      "inLanguage": [
+        "et",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "description": "Tehisabilise kaks põhiteenust: küberaudit ja pentestimine ettevõttele ning keeldudeta küber-AI API arendajale. API on arenduses, mitte veel avalik."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/#webpage",
+      "url": "https://tehisabiline.ee/",
+      "name": "Küberaudit, turvaaudit, pentest ja NIS2 | Tehisabiline",
+      "description": "Küberaudit, turvaaudit, pentestimine ja NIS2 tõendid Eesti ettevõttele. Inimese kinnitatud leiud ja parandusplaan; keeldudeta küber-AI API arendajale.",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/mudelid/#service",
+      "url": "https://tehisabiline.ee/mudelid/",
+      "name": "Kavandatav OpenAI-ühilduv küberturbe API",
+      "serviceType": "Arenduses olev OpenAI-ühilduv API turvatööriistade arendajatele",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Estonia"
+        },
+        {
+          "@type": "City",
+          "name": "Tallinn"
+        }
+      ],
+      "description": "Planeeritav OpenAI-ühilduv otspunkt võtmepõhise ligipääsu ja kasutuspõhise arveldusega. API pole veel avalik; pilootfaasis avame ligipääsu taotluse alusel.",
+      "availableLanguage": [
+        "Estonian",
+        "English"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/kuberaudit/#service",
+      "url": "https://tehisabiline.ee/kuberaudit/",
+      "name": "Küberaudit Eestis",
+      "alternateName": [
+        "Turvaaudit",
+        "IT turvaaudit",
+        "Küberturbe audit",
+        "Infoturbe audit"
+      ],
+      "serviceType": "Inimese ülevaatusega agendipõhine küberaudit",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Estonia"
+        },
+        {
+          "@type": "City",
+          "name": "Tallinn"
+        }
+      ],
+      "description": "Turvaaudit ehk küberaudit: agendid testivad sinu süsteeme sinu kirjaliku loa alusel, iga oluline leid läbib inimese ülevaatuse ja tulemus on parandusplaan tähtsuse järjekorras koos korduskontrolliga.",
+      "availableLanguage": [
+        "Estonian",
+        "English"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/pentestimine/#service",
+      "url": "https://tehisabiline.ee/pentestimine/",
+      "name": "Pentestimine Eestis",
+      "alternateName": [
+        "Pentest",
+        "Pentesting",
+        "Läbistustestimine",
+        "Läbitungimistest",
+        "Penetration testing"
+      ],
+      "serviceType": "Kokkulepitud ulatusega veebirakenduse ja API läbistustestimine",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Estonia"
+        },
+        {
+          "@type": "City",
+          "name": "Tallinn"
+        }
+      ],
+      "description": "Veebirakenduste ja API-de pentest kokkulepitud ulatuses ning omaniku kirjalikul loal. Olulised leiud vaatab üle inimene; tulemus on tõendid, parandusplaan ja kokkulepitud kordustest.",
+      "availableLanguage": [
+        "Estonian",
+        "English"
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tehisabiline.ee/#protsess",
+      "name": "Kuidas alustada: kolm sammu tööle",
+      "description": "Tasuta kaardistus, pakkumine ja luba, üleandmine.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Tasuta kaardistus",
+          "text": "Kirjelda e-kirjas, mida vajad. Ütleme ausalt, kas see tasub ära."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Pakkumine ja luba",
+          "text": "Pentesti puhul lepime kirjalikult kokku sihtmärgid ja piirid, API puhul pilooti."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Üleandmine",
+          "text": "Saad raporti ja parandusplaani või pilootligipääsu."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mida tähendab keeldudeta ja piirangutega AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst, millest pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Piirangutega tähendab, et ebaseaduslik tegevus on välistatud ning iga töö käib omaniku kirjaliku loa järgi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas API on juba avalik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. OpenAI-ühilduv API on arenduses ja avalikku otspunkti veel pole. Piloodis osalemiseks kirjuta tehisabiline@gmail.com ning kirjelda turvatööriista ja kasutusjuhtu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mis on turvaaudit või küberaudit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turvaaudit ehk küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised ja sisendikontroll. Meie turvaaudit on agendipõhine, iga olulise leiu vaatab üle inimene ja töö lõppeb parandusplaaniga tähtsuse järjekorras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas pakute pentestimist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, kokkulepitud ulatuses ja süsteemi omaniku kirjaliku loa alusel. Pentestimine ehk läbitungimistest kontrollib, kas nõrkust saab päriselt ära kasutada. Tulemuseks on tõendid, parandusplaan ja kokkulepitud korduskontroll."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui palju see maksab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise kirjas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas NIS2 mind puudutab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tõenäoliselt mitte otse: seadus kohustab suuri ja elutähtsaid tegijaid. Aga esmased meetmed kasvatavad iga ettevõtte vastupidavust."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>.hero__ribbon img{animation-play-state:paused !important}</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+
+<!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/pentestimine/">Küberaudit / pentest</a>
+            <a href="/mudelid/">Küber-AI API</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/pentestimine/">Küberaudit / pentest</a>
+        <a href="/mudelid/">Küber-AI API</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+
+<main id="main-content">
+
+<section class="hero" id="hero">
+    <div class="wrap">
+        <div class="hero__grid">
+            <div>
+                <h1><span>Küberaudit ja pentestimine.</span><span class="hero__service-accent">Keeldudeta AI API.</span></h1>
+                <p class="hero__lead">Testime sinu veebirakendust ja API-t kirjaliku loa alusel; iga olulise leiu kinnitab inimene. Arendajale ehitame küber-AI API, mis ei keeldu seaduslikust turvatööst. API on arenduses.</p>
+                <div class="cta-row">
+                    <a class="btn btn--primary" href="/pentestimine/#tellimine">Küsi turvatesti pakkumist<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                    <a class="btn btn--secondary" href="/mudelid/">Vaata küber-AI API-t</a>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <picture class="hero__ribbon">
+                    <source type="image/avif" srcset="/assets/plates/ribbon-900.avif 900w, /assets/plates/ribbon-1500.avif 1500w" sizes="(min-width: 980px) 62vw, 150vw">
+                    <source type="image/webp" srcset="/assets/plates/ribbon-900.webp 900w, /assets/plates/ribbon-1500.webp 1500w" sizes="(min-width: 980px) 62vw, 150vw">
+                    <img src="/assets/plates/ribbon.png" width="1500" height="1500" alt="" decoding="async" fetchpriority="high">
+                </picture>
+                <figure class="demo" id="demo" aria-label="Näide: sama turvaküsimus pilve-AI-le ja Tehisabilisele">
+                    <div class="demo__prompt">
+                        <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#sparkles"/></svg>
+                        <p class="demo__q">Kas minu e-poe sisselogimine peab rünnakule vastu?</p>
+                        <button class="demo__send" type="button" aria-label="Näita näidet uuesti"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></button>
+                    </div>
+                    <div class="demo__answers">
+                        <div class="demo__card demo__card--cloud">
+                            <p class="demo__who"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#cloud"/></svg>Pilve-AI</p>
+                            <p class="demo__bubble" data-step="cloud"><span class="demo__typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="demo__text">Ma ei saa turvatestimisega aidata.</span></p>
+                            <p class="demo__note">Näide. Päris audit algab kirjalikust loast.</p>
+                        </div>
+                        <div class="demo__card demo__card--ours">
+                            <p class="demo__who"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt="">Tehisabiline</p>
+                            <p class="demo__bubble" data-step="ours"><span class="demo__typing" aria-hidden="true"><i></i><i></i><i></i></span><span class="demo__text">Süsteem on sinu ja luba on kirjas, alustame paroolist ja 2FA-st.</span></p>
+                            <ul class="demo__findings" aria-label="Näidisleiud">
+                                <li class="demo__finding" data-step="f1"><span class="chip chip--red">Kohe</span><span>2FA puudub administraatoritel</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                                <li class="demo__finding" data-step="f2"><span class="chip chip--amber">7&nbsp;päeva</span><span>Paroolikatsete piirang liiga leebe</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                                <li class="demo__finding" data-step="f3"><span class="chip">Plaani</span><span>Sisselogimise logimine üle vaadata</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#chevron-right"/></svg></li>
+                            </ul>
+                            <p class="demo__check" data-step="check"><span class="demo__dot" aria-hidden="true"><svg class="i"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg></span>Inimene vaatab iga leiu üle</p>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <ul class="hero__facts" aria-label="Põhitõed">
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#shield-check"/></svg><strong>Kirjalik testimisluba</strong><span>Kokkulepitud süsteemid ja piirid</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><strong>Inimese kinnitatud leiud</strong><span>Oluline leid ei jää skannerihoiatuseks</span></li>
+            <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#clipboard-check"/></svg><strong>Paranduste järjekord</strong><span>Tõendid ja järgmised sammud</span></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="section" id="teenused">
+    <div class="wrap">
+        <div class="section__head">
+            <h2>Mida me pakume</h2>
+            <p>Turvatest sinu süsteemile ja küber-AI API sinu tööriistale.</p>
+        </div>
+        <div class="offers">
+            <article class="offer" id="kuberaudit">
+                <h3>Küberaudit ja pentestimine</h3>
+                <p><strong>Pentestimine</strong> ehk läbistustestimine (<em>penetration testing</em>) kontrollib sinu veebirakendust või API-t nagu ründaja, aga ainult sinu kirjalikul loal.</p>
+                <ul class="checks">
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Inimene vaatab iga olulise leiu üle</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Tulemus: tõendid ja parandusplaan tähtsuse järjekorras</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Kordustest kokkuleppel</li>
+                </ul>
+                <div class="cta-row">
+                    <a class="btn btn--primary" href="/pentestimine/#tellimine">Küsi pentesti pakkumist</a>
+                    <a class="link-arrow" href="/pentestimine/">Pentestimine <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/kuberaudit/">Turvaaudit ja küberaudit <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/pentestimine/naidisraport/">Raporti näidis <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                    <a class="link-arrow" href="/ai-turvatestimine/">AI turvatestimine <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                </div>
+            </article>
+            <article class="offer" id="api">
+                <h3>Keeldudeta küber-AI API</h3>
+                <p>OpenAI-ühilduv API turvatööriistade arendajale: logid, kood ja konfiguratsioonid. <strong>API pole veel avalik</strong> – piloodis osalemist saab küsida e-kirjaga.</p>
+                <ul class="checks">
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Mõeldud skanneritele, monitooringule ja raportitele</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Ei keeldu seaduslikust turvatööst</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Sinu päringuid ei kasutata mudelite treenimiseks</li>
+                </ul>
+                <div class="cta-row">
+                    <a class="btn btn--secondary" href="#contact">Küsi API pilooti</a>
+                    <a class="link-arrow" href="/mudelid/">Küber-AI API <svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section section--tint" id="tahtajad"><div class="wrap"><h2>Küberturvalisuse tähtajad 2026–2028</h2><p>Regulatsioonid ei muutu korraga. CRA teatamiskohustus kehtib juba alates 11. septembrist 2026, AI Acti läbipaistvus- ja keelunõuded täienevad 2. detsembril 2026 ning CRA põhinõuded jõustuvad 11. detsembril 2027. Kontrolli, milline neist puudutab sinu teenust või toodet.</p><ul class="related__list"><li><a href="/cra/"><span class="related__title">CRA: teatamine ja 2027. aasta põhinõuded</span><span class="related__desc">Tooted, SBOM, CE-märgis ja kohaldumise enesekontroll.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/ai-act/"><span class="related__title">AI Act: riskiklassid ja tähtajad</span><span class="related__desc">Keelud, suur risk, läbipaistvus ja TTJA järelevalve.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/regulatsioonid/"><span class="related__title">Regulatsioonide kaart ja kalender</span><span class="related__desc">NIS2, DORA, E-ITS, ISO 27001, AI Act ja CRA ühes vaates.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/sbom/"><span class="related__title">SBOM: tarkvara koostis</span><span class="related__desc">Komponendid, formaadid ja haavatavuste jälgimine.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li></ul><p><a href="/assets/downloads/regulatsioonide-tahtajad.ics">Laadi tähtajad kalendrisse (.ics)</a></p></div></section>
+
+<section class="section section--tint" id="protsess">
+    <div class="wrap">
+        <div class="section__head">
+            <h2>Kuidas alustada</h2>
+        </div>
+        <ol class="steps">
+            <li>
+                <h3>Tasuta kaardistus</h3>
+                <p>Kirjelda e-kirjas, mida vajad. Ütleme ausalt, kas see tasub ära.</p>
+            </li>
+            <li>
+                <h3>Pakkumine ja luba</h3>
+                <p>Pentesti puhul lepime kirjalikult kokku sihtmärgid ja piirid, API puhul pilooti.</p>
+            </li>
+            <li>
+                <h3>Üleandmine</h3>
+                <p>Saad raporti ja parandusplaani või pilootligipääsu.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section" id="piirid">
+    <div class="wrap">
+        <div class="section__head">
+            <h2>Ausad piirid</h2>
+            <p>Keeldudeta ei tähenda piirideta.</p>
+        </div>
+        <div class="limits">
+            <div>
+                <h3>Mida me teeme</h3>
+                <ul class="checks">
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Testime sinu süsteeme kirjaliku loa alusel.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Anname iga leiu parandusplaanina, mida saab kontrollida.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg>Arendame API-t turvatööriistade ehitajatele.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Mida me ei tee</h3>
+                <ul class="crosses">
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei aita ebaseadusliku tegevuse ega võõraste süsteemide ründamisega.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei testi süsteeme ilma omaniku kirjaliku loata.</li>
+                    <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg>Ei luba 100% turvalisust.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--tint" id="faq">
+    <div class="wrap faq-layout">
+        <div class="section__head">
+            <h2>Korduma kippuvad küsimused</h2>
+        </div>
+        <div class="faq">
+            <details>
+                <summary><h3>Mida tähendab keeldudeta ja piirangutega AI?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst, millest pilveteenused tihti keelduvad – näiteks oma süsteemi turvatestimise juhendamisest. Piirangutega tähendab, et ebaseaduslik tegevus on välistatud ning iga töö käib omaniku kirjaliku loa järgi.</p>
+            </details>
+            <details>
+                <summary><h3>Kas API on juba avalik?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">Ei. OpenAI-ühilduv API on arenduses ja avalikku otspunkti veel pole. Piloodis osalemiseks kirjuta <a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a> ning kirjelda turvatööriista ja kasutusjuhtu.</p>
+            </details>
+            <details>
+                <summary><h3>Mis on turvaaudit või küberaudit?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">Turvaaudit ehk küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised ja sisendikontroll. Meie turvaaudit on agendipõhine, iga olulise leiu vaatab üle inimene ja töö lõppeb parandusplaaniga tähtsuse järjekorras. Loe lähemalt <a href="/kuberaudit/">turvaauditi ja küberauditi lehelt</a>.</p>
+            </details>
+            <details>
+                <summary><h3>Kas pakute pentestimist?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">Jah, kokkulepitud ulatuses ja süsteemi omaniku kirjaliku loa alusel. Pentestimine ehk läbitungimistest kontrollib, kas nõrkust saab päriselt ära kasutada. Tulemuseks on tõendid, parandusplaan ja kokkulepitud korduskontroll. <a href="/pentestimine/">Loe pentestimisest Eestis</a>.</p>
+            </details>
+            <details>
+                <summary><h3>Kui palju see maksab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">API puhul sõltub hind kasutusmahust, auditi puhul süsteemide arvust ja sügavusest. Tasuta kaardistuse järel saad selge pakkumise kirjas.</p>
+            </details>
+            <details>
+                <summary><h3>Kas NIS2 mind puudutab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary>
+                <p class="answer">Tõenäoliselt mitte otse: seadus kohustab suuri ja elutähtsaid tegijaid. Aga esmased meetmed kasvatavad iga ettevõtte vastupidavust. Loe <a href="/nis2/">NIS2 juhendit Eesti ettevõttele</a>.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="section section--tight" aria-labelledby="loe-edasi"><div class="wrap faq-layout related"><h2 id="loe-edasi">Loe edasi</h2><ul class="related__list">
+  <li><a href="/regulatsioonid/"><span class="related__title">Küberturvalisuse regulatsioonid</span><span class="related__desc">NIS2, DORA, E-ITS, ISO 27001, AI Act ja CRA ühes kaardis.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/ai-act/"><span class="related__title">AI Act Eestis</span><span class="related__desc">Riskiklassid, tähtajad, TTJA järelevalve ja testimise piirid.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/dora/teaberegister/"><span class="related__title">DORA teaberegister</span><span class="related__desc">Töömall, väljad ja kontroll enne esitamist.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/iso-27001/"><span class="related__title">ISO 27001 Eestis</span><span class="related__desc">Sertifitseerimisauditi etapid, 93 meedet ja tõendid.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/cra/"><span class="related__title">Cyber Resilience Act</span><span class="related__desc">Toodete nõuded, teatamine ja üleminek 2027. aastaks.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/sbom/"><span class="related__title">SBOM ja tarkvara koostis</span><span class="related__desc">Komponendid, formaadid, elutsükkel ja tüüpilised vead.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/en/regulations/"><span class="related__title">Estonia cybersecurity regulations (EN)</span><span class="related__desc">English overview of NIS2, DORA, E-ITS, AI Act and CRA.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/api-turvatestimine/kontrollnimekiri/"><span class="related__title">API pentesti kontrollnimekiri</span><span class="related__desc">Ulatus, testkontod, OWASP API Top 10 ja tõendid.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/api-turvatestimine/"><span class="related__title">API turvatestimine ja API pentest</span><span class="related__desc">Ligipääsuõigused, autentimine, BOLA ja testimiseks vajalikud sisendid.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/veebirakenduse-turvatestimine/"><span class="related__title">Veebirakenduse turvatestimine</span><span class="related__desc">Veebilehe ja e-poe pentesti ulatus, testkontod, sessioonid ja kasutajate töövood.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/kasutusjuhud/"><span class="related__title">Küber-AI kasutusjuhud</span><span class="related__desc">12 kasutusjuhtu turvatöös, igaüks koos kontrollpunkti ja mõõdikuga.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/nis2/"><span class="related__title">NIS2 ja Eesti ettevõte</span><span class="related__desc">Kellele küberturvalisuse seadus kohaldub, millised erandid on VKE-del ja millest alustada.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/nis2/kontrollnimekiri/"><span class="related__title">NIS2 kontrollnimekiri</span><span class="related__desc">Kümme meedet, auditeerija küsitav tõend ja kiired võidud.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/nis2/intsidendist-teatamine/"><span class="related__title">NIS2 intsidendist teatamine</span><span class="related__desc">24 tundi, 72 tundi ja üks kuu: mida teatada ja kuhu.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/tlpt/"><span class="related__title">TLPT ja TIBER-EE</span><span class="related__desc">DORA ohuteabel põhinev läbistustestimine ja ettevalmistus.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/dora/"><span class="related__title">DORA nõuded Eestis</span><span class="related__desc">Viis sammast, teaberegister ja TLPT finantssektoris.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/artiklid/"><span class="related__title">Artiklid ja praktilised juhendid</span><span class="related__desc">Varunduse taastetest, NIS2 tarneahel ja MFA juurutamine.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/artiklid/varunduse-taastetest/"><span class="related__title">Varunduse taastetest</span><span class="related__desc">RPO/RTO, testi plaan ja tõendid, mida audit küsib.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/artiklid/nis2-tarneahel/"><span class="related__title">NIS2 tarneahela turve</span><span class="related__desc">Tarnijate tiering, lepingud ja pidev seire.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/artiklid/mfa-juurutamine/"><span class="related__title">MFA juurutamine</span><span class="related__desc">Meetodid, legacy-süsteemid ja mõõdikud.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/artiklid/nis2-juhatus/"><span class="related__title">NIS2 juhatuse kohustused</span><span class="related__desc">Mida juhtorgan kinnitab ja milliseid tõendeid küsib.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/artiklid/kuberriskide-register/"><span class="related__title">Küberriskide register</span><span class="related__desc">Riskid, omanikud, ravi ja allalaaditav CSV mall.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/e-its/"><span class="related__title">E-ITS</span><span class="related__desc">Eesti infoturbestandard, audit ja ettevalmistus.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/sonastik/"><span class="related__title">Küberturbe sõnastik</span><span class="related__desc">Pentest, BOLA, XSS, NIS2 ja teised mõisted lühidalt.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+  <li><a href="/meist/"><span class="related__title">Meist ja tööpõhimõtted</span><span class="related__desc">Kes on Tehisabiline OÜ, kuidas töötame ja milliseid lubadusi me ei anna.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+</ul></div></section>
+
+<section class="band" id="contact">
+    <div class="wrap">
+        <div class="band__inner contact" style="justify-items:stretch;padding-block:clamp(3.5rem,2.5rem + 4vw,6rem)">
+            <div class="contact__info">
+                <h2>Pentest, küberaudit või API pilooti?</h2>
+                <p>Kirjuta, mida vajad. Ütleme ausalt, kas see sulle midagi annab.</p>
+                <div class="contact__gets">
+                    <h3>Mida saad vastu</h3>
+                    <ul class="checks">
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Tasuta esmane kaardistus</span></li>
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Aus sobivuse hinnang – ka eitav</span></li>
+                        <li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span>Selge hind ja ajakava kirjas</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mailcard">
+                <address class="mailcard__id">
+                    <span class="mailcard__addr" translate="no">tehisabiline<wbr>@gmail.com</span>
+                    <span class="mailcard__place"><svg class="i i--s" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#map-pin"/></svg>Tallinn, Eesti</span>
+                </address>
+                <a class="btn btn--primary mailcard__cta" href="mailto:tehisabiline@gmail.com?subject=Tasuta%20kaardistus%20%E2%80%93%20k%C3%BCberaudit%20v%C3%B5i%20k%C3%BCber-AI%20API&amp;body=Tere%21%0D%0A%0D%0ANimi%20ja%20ettev%C3%B5te%3A%20%0D%0AS%C3%BCsteem%20v%C3%B5i%20vajadus%3A%20%0D%0ASoovitud%20t%C3%A4htaeg%3A%20%0D%0A%0D%0A"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#mail"/></svg>Kirjuta e-kirjaga</a>
+                <div class="mailcard__brief">
+                    <h3>Mida kirjas kirjeldada</h3>
+                    <ul class="mailcard__list">
+                        <li><strong>Nimi ja ettevõte</strong></li>
+                        <li><strong>Süsteem või vajadus</strong><span>nt API-võti turvatööriistale või agendipõhine audit</span></li>
+                        <li><strong>Soovitud tähtaeg</strong></li>
+                    </ul>
+                </div>
+                <p class="mailcard__note">Kirja sisu kasutame ainult päringule vastamiseks. Vaata <a href="/privaatsus/">privaatsustingimusi</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div>
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
+                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
+            </div>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
+                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
+                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
+                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
+                    <li><a href="/ai-act/">AI Act Eestis</a></li>
+                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
+                    <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
+                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
+                    <li><a href="/en/nis2/" hreflang="en" lang="en">NIS2 in Estonia (EN)</a></li>
+                    <li><a href="/e-its/">E-ITS ja audit</a></li>
+                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
+                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
+                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
+                    <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
+                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-24">24. oktoobril 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+
+<script src="/site.js?v=a750108a" defer></script>
+<script src="/assets/js/hero-demo.js?v=67005b62" defer></script>
+<!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->
+</body>
+</html>

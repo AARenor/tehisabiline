@@ -201,6 +201,11 @@ These are international research findings, not measurements of Tehisabiline cust
 - Vulnerability exploitation accounted for 31% of known initial access vectors in non-Error, non-Misuse breaches. Source: Verizon DBIR 2026 executive summary, page 9, https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf (cited on https://tehisabiline.ee/kuberaudit/).
 - The global average cost of a data breach is 4.99 million USD, 12% more than the year before. Source: IBM Cost of a Data Breach 2026, https://www.ibm.com/reports/data-breach (cited on https://tehisabiline.ee/kuberaudit/).
 
+## NIS2 in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/nis2/
+Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities in scope on that date had to submit activity data to RIA by 31 March 2026. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, testing, hygiene, cryptography, access control and multi-factor authentication. Incident reports: early warning within 24 hours, notification within 72 hours, final report within one month.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -215,6 +220,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/regulatsioonid/
 - https://tehisabiline.ee/ai-act/
 - https://tehisabiline.ee/en/regulations/
+- https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
