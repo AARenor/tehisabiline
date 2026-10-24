@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ offers human-reviewed cybersecurity audits/pentesting for businesses, managed AI services for Estonian companies (assistant, knowledge base, chatbot and workflow automation), and a keeldudeta cyber-AI API for security-tool developers. Pentesting also means läbistustestimine or läbitungimistest. The OpenAI-compatible API is in development and not yet public; intended use is lawful security work, not unrestricted activity. Contact: tehisabiline@gmail.com.
+> Tehisabiline OÜ has two main offerings: human-reviewed cybersecurity audits/pentesting for businesses, and a keeldudeta cyber-AI API for security-tool developers. Pentesting also means läbistustestimine or läbitungimistest. The OpenAI-compatible API is in development and not yet public; intended use is lawful security work, not unrestricted activity. Contact: tehisabiline@gmail.com.
 
 Entity:
 
@@ -18,10 +18,7 @@ Status reviewed on 2026-10-24:
 
 ## Services
 
-- [Homepage](https://tehisabiline.ee/): overview of authorized pentesting, broader audits, managed AI services and the separate developer API.
-- [AI-teenused ettevõttele](https://tehisabiline.ee/ai/): managed AI assistant, knowledge base and workflow automation on the company's own documents; source citations, role-based access, human review and a measured pilot.
-- [Eestikeelne AI-chatbot](https://tehisabiline.ee/ai-chatbot/): Estonian-language website chatbot/vestlusrobot, knowledge-base grounding, escalation to a human, privacy, metrics, pricing factors and launch steps.
-- [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine/): AI and workflow automation for Estonian companies, practical examples, suitability check, ROI calculator, reliability, maintenance and measurement.
+- [Homepage](https://tehisabiline.ee/): overview of authorized pentesting, broader audits and the separate developer API.
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/): primary penetration-testing service page for agreed website/application and API targets; written authorization, scope, test preparation, report, pricing factors and agreed retest.
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/): synthetic sample report structure with scope, methodology, three evidence-backed findings, remediation priorities and retest; clearly not a client report.
 - [AI turvatestimine](https://tehisabiline.ee/ai-turvatestimine/): scoped testing of LLM/RAG/agent applications for prompt injection, retrieval leakage, tool permissions, output handling and API abuse; limits and AI Act/NIS2 context.

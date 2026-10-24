@@ -21,7 +21,6 @@ const icon = (name, cls = "i") => `<svg class="${cls}" aria-hidden="true"><use h
 const NAV = [
     ["/pentestimine/", "Küberaudit / pentest"],
     ["/mudelid/", "Küber-AI API"],
-    ["/ai/", "AI-teenused"],
     ["/nis2/", "NIS2"],
     ["/meist/", "Meist"],
 ];
@@ -57,9 +56,6 @@ function footer(date) {
                 <ul>
                     <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
                     <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
-                    <li><a href="/ai/">AI-teenused ettevõttele</a></li>
-                    <li><a href="/ai-chatbot/">Eestikeelne AI-chatbot</a></li>
-                    <li><a href="/ai-automatiseerimine/">AI automatiseerimine</a></li>
                 </ul>
             </nav>
             <nav aria-label="Ettevõtte lingid">
@@ -74,8 +70,6 @@ function footer(date) {
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
                     <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
                     <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
-                    <li><a href="/dora/">DORA nõuded</a></li>
-                    <li><a href="/artiklid/">Artiklid ja juhendid</a></li>
                     <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
                     <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
