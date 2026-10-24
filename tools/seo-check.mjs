@@ -113,6 +113,22 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/nis2/registration/index.html",
+        canonical: `${origin}/en/nis2/registration/`,
+        lang: "en",
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/nis2/fines/index.html",
+        canonical: `${origin}/en/nis2/fines/`,
+        lang: "en",
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "en/nis2/index.html",
         canonical: `${origin}/en/nis2/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage", "Service"],
