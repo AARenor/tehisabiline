@@ -10,7 +10,11 @@
   var MAX_CHARS = 2000;
   var MAX_SEND_TURNS = 8;
 
-  var ET = (navigator.language || "").toLowerCase().indexOf("et") === 0;
+  // Keel järgib lehe keelt: eestikeelsetel lehtedel eesti, /en/ lehtedel inglise.
+  var PAGE_LANG = (document.documentElement.lang || "").toLowerCase();
+  var ET = PAGE_LANG
+    ? PAGE_LANG.indexOf("et") === 0
+    : (navigator.language || "").toLowerCase().indexOf("et") === 0;
   var L = ET
     ? {
         open: "Ava AI-assistent",
@@ -255,6 +259,7 @@
     var payload = {
       messages: history.slice(-MAX_SEND_TURNS),
       stream: true,
+      lang: ET ? "et" : "en",
     };
 
     fetch(API + "/api/chat", {
