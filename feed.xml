@@ -6,6 +6,8 @@
     <description>Küberturvalisuse, NIS2, CRA, DORA ja AI Acti praktilised artiklid.</description>
     <language>et</language>
     <atom:link href="https://tehisabiline.ee/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <ttl>60</ttl>
     <item>
       <title>Varunduse taastetest: kas varukoopia töötab?</title>
       <link>https://tehisabiline.ee/artiklid/varunduse-taastetest/</link>
