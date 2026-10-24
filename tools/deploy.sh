@@ -1,18 +1,32 @@
 #!/usr/bin/env bash
-# Deploy the public static site to Cloudflare Pages.
+# Deploy the committed public static site to Cloudflare Pages.
 # Publishes only site files: repo docs, tooling, agent notes and Git metadata stay private.
 # Requires CLOUDFLARE_API_TOKEN (and CLOUDFLARE_ACCOUNT_ID) in the environment.
 set -euo pipefail
 
 cd "$(git rev-parse --show-toplevel)"
 
+src=$(mktemp -d)
 tmp=$(mktemp -d)
-trap 'rm -rf "$tmp"' EXIT
+trap 'rm -rf "$src" "$tmp"' EXIT
 
-git ls-files -z \
-    | grep -zvE '^(docs|tools|output|\.github|\.impeccable)/' \
-    | grep -zvE '^(AGENTS|PRODUCT|DESIGN|README)\.md$|^(package(-lock)?\.json|vercel\.json|\.vercelignore|\.gitignore)$' \
-    | rsync -a --from0 --files-from=- . "$tmp/"
+git archive HEAD | tar -x -C "$src"
+rsync -a \
+    --exclude='/docs/' \
+    --exclude='/tools/' \
+    --exclude='/output/' \
+    --exclude='/.github/' \
+    --exclude='/.impeccable/' \
+    --exclude='/AGENTS.md' \
+    --exclude='/PRODUCT.md' \
+    --exclude='/DESIGN.md' \
+    --exclude='/README.md' \
+    --exclude='/package.json' \
+    --exclude='/package-lock.json' \
+    --exclude='/vercel.json' \
+    --exclude='/.vercelignore' \
+    --exclude='/.gitignore' \
+    "$src/" "$tmp/"
 
 count=$(find "$tmp" -type f | wc -l)
 test "$count" -gt 0 || { echo "deploy: empty publish set" >&2; exit 1; }
