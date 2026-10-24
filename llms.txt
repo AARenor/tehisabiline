@@ -38,8 +38,6 @@ Status reviewed on 2026-10-24:
 - [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/): scope, authorisation, report and retest for web, API, cloud and AI.
 - [Cybersecurity audit in Estonia (EN)](https://tehisabiline.ee/en/security-audit/): scope, evidence review and remediation planning.
 - [ISO 27001 in Estonia (EN)](https://tehisabiline.ee/en/iso-27001/): certification steps, audit evidence and NIS2/E-ITS comparison.
-- [Conversational AI consultancy (EN)](https://tehisabiline.ee/en/ai-consulting/): scoping, RAG assistants, evaluation and security review.
-- [AI automatiseerimine](https://tehisabiline.ee/ai-automatiseerimine-ettevottele/): protsessi kaardistus, andmed, prototüüp ja tootmisküpsus.
 - [SBOM ehk tarkvara koostisosade loend](https://tehisabiline.ee/sbom/): CRA and NIS2 supply-chain context, required fields, SPDX/CycloneDX formats, lifecycle, common mistakes and a CSV template.
 - [CRA ehk Cyber Resilience Act](https://tehisabiline.ee/cra/): scope, manufacturer duties, support period, 11 September 2026 reporting deadlines, conformity assessment, the 11 December 2027 transition and a browser-only scope check.
 - [ISO 27001 Eestis](https://tehisabiline.ee/iso-27001/): certification stages, the 93 Annex A controls, evidence an auditor asks for, accreditation, and how ISO/IEC 27001 differs from E-ITS and NIS2. It explicitly states that Tehisabiline is not a certification body.
@@ -49,7 +47,6 @@ Status reviewed on 2026-10-24:
 - [MFA juurutamine](https://tehisabiline.ee/artiklid/mfa-juurutamine/): method comparison, critical accounts, legacy systems, break-glass, metrics and a 30/60/90 plan.
 - [NIS2 juhatuse kohustused](https://tehisabiline.ee/artiklid/nis2-juhatus/): what the management body approves, evidence to request, a 45–60 minute board agenda and a 90-day plan.
 - [Küberriskide register](https://tehisabiline.ee/artiklid/kuberriskide-register/): register columns, a 5×5 scale, treatment and residual risk, evidence, a CSV template and a 30/60/90 plan.
-- [AI teadmistebaas](https://tehisabiline.ee/artiklid/ai-teadmistebaas/): RAG sources, permissions, evaluation, freshness, maintenance and a practical checklist.
 - [Turvaaudit ja küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review under the Estonian terms turvaaudit, küberaudit, IT turvaaudit, küberturbe audit and infoturbe audit; human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
 

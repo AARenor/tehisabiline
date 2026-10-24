@@ -170,22 +170,6 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
-        file: "en/ai-consulting/index.html",
-        canonical: `${origin}/en/ai-consulting/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
-        lang: "en",
-        requiresPublishedDate: true
-    },
-    {
-        file: "ai-automatiseerimine-ettevottele/index.html",
-        canonical: `${origin}/ai-automatiseerimine-ettevottele/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
-        lang: "et",
-        requiresPublishedDate: true
-    },
-    {
         file: "ai-act/index.html",
         canonical: `${origin}/ai-act/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
@@ -260,14 +244,6 @@ const expectedPages = [
         canonical: `${origin}/artiklid/kuberriskide-register/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "artiklid/ai-teadmistebaas/index.html",
-        canonical: `${origin}/artiklid/ai-teadmistebaas/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
-        lang: "et",
         requiresPublishedDate: true
     },
     {

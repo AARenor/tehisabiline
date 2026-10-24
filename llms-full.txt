@@ -246,16 +246,6 @@ A scoped cybersecurity audit reviews identity and access, configuration, cloud, 
 Canonical page: https://tehisabiline.ee/en/iso-27001/
 ISO/IEC 27001 is a voluntary international standard for an information-security management system. Certification is issued by an accredited certification body after a two-stage audit and annual surveillance. It does not by itself prove NIS2, E-ITS or DORA compliance, but it can support the evidence base.
 
-## Conversational AI consultancy (EN)
-
-Canonical page: https://tehisabiline.ee/en/ai-consulting/
-We help teams scope, build and evaluate conversational assistants: retrieval-augmented generation, tool use, permissions, test sets and security review. The work is model-agnostic and ends with documentation and a handover, not a demo that nobody can operate.
-
-## AI automatiseerimine (ET)
-
-Canonical page: https://tehisabiline.ee/ai-automatiseerimine-ettevottele/
-AI automatiseerimine Eesti ettevõtetele: korduva protsessi kaardistus, andmevoog ja õigused, kitsas prototüüp, testkogum ning tootmisküpsuse kontroll. Eesmärk on protsess, mida meeskond suudab ise hallata, mitte demo.
-
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -279,8 +269,6 @@ AI automatiseerimine Eesti ettevõtetele: korduva protsessi kaardistus, andmevoo
 - https://tehisabiline.ee/en/pentesting/
 - https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/en/iso-27001/
-- https://tehisabiline.ee/en/ai-consulting/
-- https://tehisabiline.ee/ai-automatiseerimine-ettevottele/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
@@ -291,7 +279,6 @@ AI automatiseerimine Eesti ettevõtetele: korduva protsessi kaardistus, andmevoo
 - https://tehisabiline.ee/artiklid/mfa-juurutamine/
 - https://tehisabiline.ee/artiklid/nis2-juhatus/
 - https://tehisabiline.ee/artiklid/kuberriskide-register/
-- https://tehisabiline.ee/artiklid/ai-teadmistebaas/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
