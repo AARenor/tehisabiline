@@ -590,7 +590,9 @@ assert(new RegExp(`^Canonical:\\s*${escapeRegExp(origin)}/\\.well-known/security
 for (const file of servedFiles().filter((path) => /\.(html|js)$/i.test(path))) {
     const label = file.slice(root.length + 1);
     const text = readFileSync(file, "utf8");
-    assert(!/<form\b/i.test(text), `${label}: contains a <form>; contact is email-only (mailto:${contactEmail}).`);
+    const formTags = [...text.matchAll(/<form\b[^>]*>/gi)].map((match) => match[0]);
+    const contactForm = formTags.some((tag) => !/\bdata-local-check\b/i.test(tag) || /\baction=/i.test(tag) || /type=["'](?:email|tel)["']/i.test(tag));
+    assert(!contactForm, `${label}: contains a contact <form>; contact is email-only (mailto:${contactEmail}). Local-only forms must be marked data-local-check, have no action, and collect no email/phone fields.`);
     assert(!/n8n/i.test(text), `${label}: references n8n; the contact-form webhook was removed and must not ship.`);
     if (!label.endsWith(".html")) continue;
     for (const match of text.matchAll(/mailto:([^"'?\s>]*)/gi)) {

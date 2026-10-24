@@ -14,6 +14,7 @@ const assets = [
     "/site.js",
     "/assets/js/roi-calculator.js",
     "/assets/js/hero-demo.js",
+    "/assets/js/nis2-check.js",
     "/assets/icons.svg",
     ...readdirSync(join(root, "assets/brand"))
         .filter((name) => /\.(png|svg)$/.test(name))

@@ -744,3 +744,16 @@ table.data thead .ours { background: var(--blue); color: #fff; }
   table.data:has(tr > :nth-child(3)) { min-width: 0; }
   .article { display: block; }
 }
+
+/* NIS2 applicability self-check */
+.nis2-check { display: grid; gap: 1rem; margin: 1.5rem 0; }
+.nis2-check fieldset { margin: 0; padding: 1rem 1.15rem; border: 1px solid var(--line); border-radius: 12px; background: var(--mist); }
+.nis2-check legend { padding: 0 .35rem; font-weight: 650; color: var(--ink); }
+.nis2-check__hint { margin: .25rem 0 .5rem; color: var(--muted); font-size: .9375rem; }
+.nis2-check label { display: flex; align-items: center; gap: .55rem; min-height: 2rem; margin: .35rem 0; cursor: pointer; }
+.nis2-check input[type="radio"] { width: 1.15rem; height: 1.15rem; margin: 0; accent-color: var(--blue); }
+.nis2-check__result { margin-top: 1.25rem; padding: 1rem 1.15rem; border-left: 4px solid var(--blue); border-radius: 8px; background: var(--blue-wash); }
+.nis2-check__result[hidden] { display: none; }
+.nis2-check__result > * + * { margin-top: .65rem; }
+.nis2-check__note { color: var(--muted); font-size: .9375rem; }
+.nis2-check__actions { font-weight: 550; }

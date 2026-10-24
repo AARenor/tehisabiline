@@ -22,7 +22,7 @@ Status reviewed on 2026-10-24:
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/): primary penetration-testing service page for agreed website/application and API targets; written authorization, scope, test preparation, report, pricing factors and agreed retest.
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/): synthetic sample report structure with scope, methodology, three evidence-backed findings, remediation priorities and retest; clearly not a client report.
 - [AI turvatestimine](https://tehisabiline.ee/ai-turvatestimine/): scoped testing of LLM/RAG/agent applications for prompt injection, retrieval leakage, tool permissions, output handling and API abuse; limits and AI Act/NIS2 context.
-- [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard, who must apply it, E-ITS audit vs ISO 27001 certification, 2026 version and evidence preparation.
+- [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard, who must apply it, E-ITS audit vs ISO 27001 certification, 2026 changes (no direct ISO 27001 alignment), the new audit cycle and evidence preparation.
 - [TLPT ja TIBER-EE](https://tehisabiline.ee/tlpt/): DORA threat-led penetration testing in Estonia, who is designated, TIBER-EE roles, attestation versus certification and preparation.
 - [Küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review, human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
@@ -34,7 +34,7 @@ Status reviewed on 2026-10-24:
 - [Veebirakenduse turvatestimine](https://tehisabiline.ee/veebirakenduse-turvatestimine/): web application penetration testing, website/e-commerce user flows, sessions, test accounts, scanner limitations and retesting.
 
 - [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): practical cyber-AI use cases grounded in cited security guidance.
-- [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/): scope, ten minimum measures, incident reporting deadlines and fines in Estonia; covers the current KüTS redaction of 16.10.2026 and near-miss reporting.
+- [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/): scope, a four-question applicability self-check, ten minimum measures, incident reporting deadlines and fines in Estonia; covers the current KüTS redaction of 16.10.2026 and near-miss reporting.
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/): ten measures with the evidence auditors ask for, quick wins and typical gaps.
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/): significant-incident criteria, the 24/72/1-month reports and the Estonian reporting channel.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
