@@ -10,6 +10,11 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 
 - [Küberturvalisuse regulatsioonide kaart](https://tehisabiline.ee/regulatsioonid/) ([CSV](https://tehisabiline.ee/assets/downloads/kyberturvalisuse-regulatsioonid-2026.csv), [ICS kalender](https://tehisabiline.ee/assets/downloads/regulatsioonide-tahtajad.ics))
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/)
+- [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/)
+- [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/)
+- [DORA in Estonia (EN)](https://tehisabiline.ee/en/dora/)
+- [AI Act in Estonia (EN)](https://tehisabiline.ee/en/ai-act/)
+- [SBOM for CRA (EN)](https://tehisabiline.ee/en/sbom/)
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
 - [NIS2 kontrollnimekiri PDF-ina](https://tehisabiline.ee/assets/downloads/nis2-kontrollnimekiri.pdf)
