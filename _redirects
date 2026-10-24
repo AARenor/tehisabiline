@@ -9,3 +9,16 @@
 /ai-automatiseerimine/  /kasutusjuhud/  301
 /ai-automatiseerimine/*  /kasutusjuhud/  301
 /index.html  /  301
+
+# Internal repository files must never be served (defence in depth; deploy excludes them)
+/AGENTS.md  /  301
+/PRODUCT.md  /  301
+/DESIGN.md  /  301
+/README.md  /  301
+/package.json  /  301
+/vercel.json  /  301
+/docs/*  /  301
+/tools/*  /  301
+/output/*  /  301
+/.github/*  /  301
+/.impeccable/*  /  301
