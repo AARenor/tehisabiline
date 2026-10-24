@@ -221,6 +221,11 @@ DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entitie
 Canonical page: https://tehisabiline.ee/en/ai-act/
 The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in stages. Prohibitions and AI literacy apply from 2 February 2025; general-purpose AI obligations from 2 August 2025; high-risk Annex III obligations from 2 August 2026; and Annex I product rules from 2 August 2027. Providers and deployers need an AI inventory, role and risk classification, technical documentation, human-oversight evidence, logging and post-market monitoring.
 
+## SBOM for CRA (EN)
+
+Canonical page: https://tehisabiline.ee/en/sbom/
+The CRA requires manufacturers to identify and document product components and vulnerabilities. A useful SBOM is tied to a release, covers transitive dependencies, includes component identifiers and is linked to a triage and remediation process. SPDX and CycloneDX are common machine-readable formats; the CRA does not prescribe one format.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -239,6 +244,7 @@ The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and a
 - https://tehisabiline.ee/en/cra/
 - https://tehisabiline.ee/en/dora/
 - https://tehisabiline.ee/en/ai-act/
+- https://tehisabiline.ee/en/sbom/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/

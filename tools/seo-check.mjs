@@ -130,6 +130,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/sbom/index.html",
+        canonical: `${origin}/en/sbom/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
         file: "ai-act/index.html",
         canonical: `${origin}/ai-act/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
