@@ -151,6 +151,24 @@ Canonical page: https://tehisabiline.ee/privaatsus/
 
 Information on data processing, retention and data-subject rights.
 
+### Regulation map
+
+Canonical page: https://tehisabiline.ee/regulatsioonid/
+
+Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber Resilience Act. It covers who each framework applies to, the main obligations, current Estonian deadlines and authorities, how the frameworks overlap, the evidence an audit asks for and a practical starting order.
+
+### AI Act
+
+Canonical page: https://tehisabiline.ee/ai-act/
+
+Guide to the EU AI Act in Estonian: provider and deployer roles, prohibited/high-risk/limited/minimal risk, the amended timeline (including the 2026 omnibus delay of high-risk deadlines), TTJA's future market-surveillance role, Article 15 accuracy/robustness/cybersecurity expectations and the limits of scoped AI security testing. It is explanatory, not legal advice.
+
+### ISO/IEC 27001
+
+Canonical page: https://tehisabiline.ee/iso-27001/
+
+Guide to ISO/IEC 27001:2022 in the Estonian context: what an ISMS is, the 93 Annex A controls in four themes, Stage 1/Stage 2 certification, surveillance and recertification, the evidence an auditor asks for, accreditation by EAK, and the difference from E-ITS and NIS2. It states that Tehisabiline is not an accredited certification body.
+
 ## Facts to quote
 
 These are international research findings, not measurements of Tehisabiline customers or a risk estimate for an Estonian business. Quote with the original source:
@@ -170,6 +188,9 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/e-its/
 - https://tehisabiline.ee/tlpt/
 - https://tehisabiline.ee/dora/
+- https://tehisabiline.ee/regulatsioonid/
+- https://tehisabiline.ee/ai-act/
+- https://tehisabiline.ee/iso-27001/
 - https://tehisabiline.ee/artiklid/
 - https://tehisabiline.ee/artiklid/varunduse-taastetest/
 - https://tehisabiline.ee/artiklid/nis2-tarneahel/

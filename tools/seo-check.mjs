@@ -83,6 +83,27 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "regulatsioonid/index.html",
+        canonical: `${origin}/regulatsioonid/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "ai-act/index.html",
+        canonical: `${origin}/ai-act/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "iso-27001/index.html",
+        canonical: `${origin}/iso-27001/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "artiklid/index.html",
         canonical: `${origin}/artiklid/`,
         schemaTypes: ["CollectionPage", "BreadcrumbList", "ItemList"],

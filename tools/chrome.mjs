@@ -68,6 +68,9 @@ function footer(date) {
                     <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
                     <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
                     <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
+                    <li><a href="/ai-act/">AI Act Eestis</a></li>
+                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
                     <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
                     <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>

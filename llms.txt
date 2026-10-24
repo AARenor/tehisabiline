@@ -25,6 +25,9 @@ Status reviewed on 2026-10-24:
 - [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard, who must apply it, E-ITS audit vs ISO 27001 certification, 2026 changes (no direct ISO 27001 alignment), the new audit cycle and evidence preparation.
 - [TLPT ja TIBER-EE](https://tehisabiline.ee/tlpt/): DORA threat-led penetration testing in Estonia, who is designated, TIBER-EE roles, attestation versus certification and preparation.
 - [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope, five pillars, Estonian incident-reporting channel (email until 31.10.2026, portal from 01.11.2026), register of information, a downloadable register template, TLPT/TIBER-EE and a 30/60/90-day readiness plan.
+- [Küberturvalisuse regulatsioonid Eestis](https://tehisabiline.ee/regulatsioonid/): one map of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA: who they cover, what they require, how they overlap and which evidence an audit asks for.
+- [AI Act Eestis](https://tehisabiline.ee/ai-act/): the EU AI Act in Estonian: risk classes, current deadlines after the 2026 amendment, TTJA supervision, Article 15 security expectations and what scoped AI testing can and cannot prove.
+- [ISO 27001 Eestis](https://tehisabiline.ee/iso-27001/): certification stages, the 93 Annex A controls, evidence an auditor asks for, accreditation, and how ISO/IEC 27001 differs from E-ITS and NIS2. It explicitly states that Tehisabiline is not a certification body.
 - [Artiklid](https://tehisabiline.ee/artiklid/): practical guides on backup restore testing, NIS2 supply-chain security and MFA rollout.
 - [Varunduse taastetest](https://tehisabiline.ee/artiklid/varunduse-taastetest/): RPO/RTO, test scope, four test levels, a 90-minute plan and the evidence NIS2 auditors ask for.
 - [NIS2 tarneahela turve](https://tehisabiline.ee/artiklid/nis2-tarneahel/): supplier tiering, due diligence, contract clauses, ongoing review and evidence.
