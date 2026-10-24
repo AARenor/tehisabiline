@@ -1,0 +1,11 @@
+Category,Question,Why it matters,Evidence to request
+Scope,Which services and data does the supplier process for us?,Defines the contractual and incident boundary,Service description and data map
+Access,How does the supplier authenticate its staff and administrators?,Weak access is a common path to supply-chain incidents,MFA policy and role list
+Incidents,How and when will the supplier notify us of an incident?,You need time to meet your own NIS2 deadlines,Incident clause and contact route
+Subcontractors,Which subcontractors support the service and where are they located?,Hidden subcontractors change the risk,Subcontractor list and locations
+Continuity,Has the supplier tested restore and continuity for this service?,A plan without a test is not evidence,Restore test result and RTO/RPO
+Vulnerabilities,How are vulnerabilities tracked and fixed?,Known exploited flaws are a priority,Severity SLAs and recent remediation
+Data,Where is data stored and how is it protected?,Data location and encryption affect legal and operational risk,Data-location statement and encryption controls
+Exit,What happens at contract end or supplier failure?,Exit decides whether the service is substitutable,Exit plan and export format
+Assurance,Which independent assurance or certification exists?,Certificates support but do not replace verification,Scope statement and report date
+Review,When was the supplier last reviewed and by whom?,Evidence must be current and owned,Review date and owner
