@@ -42,6 +42,7 @@
         input.checked = saved.has(input.dataset.check);
         input.addEventListener("change", render);
     });
+    root.querySelector("[data-progress-print]")?.addEventListener("click", () => window.print());
     reset?.addEventListener("click", () => {
         checks.forEach((input) => {
             input.checked = false;

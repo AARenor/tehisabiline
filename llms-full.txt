@@ -73,6 +73,12 @@ Canonical page: https://tehisabiline.ee/kasutusjuhud/
 
 Practical cyber-AI use cases for security work, each with human checkpoints and measurements. References include MITRE ATT&CK (https://attack.mitre.org/), OWASP LLM Top 10 (https://genai.owasp.org/llm-top-10/) and NCSC guidance (https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai).
 
+### API pentest checklist
+
+Canonical page: https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
+
+Preparation checklist (scope, OpenAPI, test accounts, limits, contacts, backup), the OWASP API Security Top 10 (2023) checks with the evidence expected in the report, an access matrix example and the retest scope.
+
 ### NIS2 guide
 
 Canonical page: https://tehisabiline.ee/nis2/
@@ -116,6 +122,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/api-turvatestimine/
+- https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
 - https://tehisabiline.ee/veebirakenduse-turvatestimine/
 - https://tehisabiline.ee/nis2/
 - https://tehisabiline.ee/nis2/kontrollnimekiri/

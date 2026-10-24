@@ -26,6 +26,7 @@ Status reviewed on 2026-10-24:
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.
+- [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/): scope, test accounts, OWASP API Top 10 checks, evidence and retest.
 - [Veebirakenduse turvatestimine](https://tehisabiline.ee/veebirakenduse-turvatestimine/): web application penetration testing, website/e-commerce user flows, sessions, test accounts, scanner limitations and retesting.
 
 - [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): practical cyber-AI use cases grounded in cited security guidance.

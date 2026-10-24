@@ -69,6 +69,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "api-turvatestimine/kontrollnimekiri/index.html",
+        canonical: `${origin}/api-turvatestimine/kontrollnimekiri/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "veebirakenduse-turvatestimine/index.html",
         canonical: `${origin}/veebirakenduse-turvatestimine/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList"],
