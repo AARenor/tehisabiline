@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Küberturbe sõnastik: põhimõisted selgelt | Tehisabiline</title>
-    <meta name="description" content="Küberturbe sõnastik lihtsas eesti keeles: pentest, BOLA, IDOR, XSS, SQL-süst, NIS2, MFA, RTO ja teised mõisted, mida auditi ja testimise juures kohtad.">
+    <title>Küberturbe sõnastik: turvaaudit ja pentest | Tehisabiline</title>
+    <meta name="description" content="Küberturbe sõnastik lihtsas eesti keeles: turvaaudit, küberaudit, pentest, BOLA, NIS2, MFA ja teised mõisted, mida auditi juures kohtad.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
     <meta name="theme-color" content="#0857f8">
@@ -12,8 +12,8 @@
     <meta property="og:type" content="article">
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
-    <meta property="og:title" content="Küberturbe sõnastik: põhimõisted selgelt | Tehisabiline">
-    <meta property="og:description" content="Pentest, BOLA, IDOR, XSS, SQL-süst, NIS2, MFA, RTO ja teised mõisted, mida auditi ja testimise juures kohtad.">
+    <meta property="og:title" content="Küberturbe sõnastik: turvaaudit ja pentest | Tehisabiline">
+    <meta property="og:description" content="Turvaaudit, küberaudit, pentest, BOLA, NIS2, MFA ja teised mõisted, mida auditi juures kohtad.">
     <meta property="og:url" content="https://tehisabiline.ee/sonastik/">
     <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
     <meta property="og:image:width" content="1200">
@@ -22,8 +22,8 @@
     <meta name="article:published_time" content="2026-10-24">
     <meta name="article:modified_time" content="2026-10-24">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Küberturbe sõnastik: põhimõisted selgelt | Tehisabiline">
-    <meta name="twitter:description" content="Pentest, BOLA, IDOR, XSS, SQL-süst, NIS2, MFA, RTO ja teised mõisted, mida auditi ja testimise juures kohtad.">
+    <meta name="twitter:title" content="Küberturbe sõnastik: turvaaudit ja pentest | Tehisabiline">
+    <meta name="twitter:description" content="Turvaaudit, küberaudit, pentest, BOLA, NIS2, MFA ja teised mõisted, mida auditi juures kohtad.">
     <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
@@ -80,6 +80,12 @@
           "name": "Läbistustestimine",
           "description": "Pentesti eestikeelne sünonüüm; sama tegevus, erinev nimetus.",
           "url": "https://tehisabiline.ee/sonastik/#labistustestimine"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Turvaaudit",
+          "description": "Süsteemne ülevaade organisatsiooni või IT-süsteemi turvaseisust; eesti keeles kasutatakse sageli sünonüümina küberauditi, IT turvaauditi või infoturbe auditi kõrval.",
+          "url": "https://tehisabiline.ee/sonastik/#turvaaudit"
         },
         {
           "@type": "DefinedTerm",
@@ -407,6 +413,7 @@
           <dt id="idor">IDOR</dt><dd>Insecure Direct Object Reference – otsene objekti viide, mille õigusi ei kontrollita. BOLA üks avaldumisviise; näiteks teise kliendi arve avamine ID-d muutes.</dd>
           <dt id="kuberhugieen">Küberhügieen</dt><dd>Igapäevased põhiharjumused ja -meetmed: uuendused, varundus, tugevad paroolid, MFA ja ettevaatlik linkide avamine. Odavaim viis riski vähendada.</dd>
           <dt id="norkuse-skaneerimine">Nõrkuse skaneerimine</dt><dd>Automaatne kontroll tuntud haavatavuste ja seadistuste vastu. Annab hoiatusi, kuid ei tõenda ärakasutatavust ega asenda pentesti.</dd>
+          <dt id="turvaaudit">Turvaaudit</dt><dd>Süsteemne ülevaade organisatsiooni või IT-süsteemi turvaseisust: ligipääsud, seadistused, uuendused, varundus ja töökorraldus. Eesti keeles kasutatakse sageli sünonüümina <a href="#kuberaudit">küberauditi</a>, IT turvaauditi või infoturbe auditi kõrval. <a href="/kuberaudit/">Turvaauditi ja küberauditi juhend</a>.</dd>
           <dt id="kuberaudit">Küberaudit</dt><dd>Laiem turvaseisu ülevaade, mis hindab protsesse, seadistusi ja kontrolle ning annab prioriteetse parandusplaani. Erineb pentestist, mis keskendub konkreetse süsteemi ärakasutatavusele. <a href="/kuberaudit/">Loe lähemalt</a>.</dd>
           <dt id="kuts">KüTS</dt><dd>Eesti küberturvalisuse seadus, millega võeti üle NIS2 direktiiv. Kohustused ja tähtajad leiad <a href="/nis2/">NIS2 juhendist</a>.</dd>
           <dt id="labistustestimine">Läbistustestimine</dt><dd>Pentesti eestikeelne sünonüüm. Sama tegevus, erinev nimetus; täpne ulatus ja luba kinnitatakse alati eraldi. <a href="/pentestimine/">Pentestimise leht</a>.</dd>
@@ -463,7 +470,7 @@
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
                     <li><a href="/viitamine/">Viitamine ja allikad</a></li>
-                    <li><a href="/kuberaudit/">Küberauditi ulatus</a></li>
+                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
                     <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
                     <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
                     <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>

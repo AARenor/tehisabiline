@@ -67,11 +67,11 @@ Canonical page: https://tehisabiline.ee/ai-turvatestimine/
 
 Scoped security testing of LLM, RAG and agent applications: direct and indirect prompt injection, retrieval/tenant leakage, tool permissions and excessive agency, output handling, API/key abuse and third-party model supply chain. The page states limits: probabilistic behaviour, sample-based coverage, no AI Act conformity certificate and no testing of a model provider without permission. AI Act Article 15 and NIS2 are framed as evidence and governance context, not as a guarantee.
 
-### Küberaudit / cybersecurity audit
+### Turvaaudit / küberaudit / cybersecurity audit
 
 Canonical page: https://tehisabiline.ee/kuberaudit/
 
-Tehisabiline offers cybersecurity audits and scoped penetration testing for Estonian businesses. Audits cover agreed website, API and AI-application checks and give a broader view of security posture; a pentest tests whether a weakness can be exploited within the agreed target. Automated scanning alone is not equivalent to either service. Written authorization, targets, permitted tests and stop conditions are agreed before active testing. A human reviews significant findings; the client receives evidence, a prioritized remediation plan and the re-check agreed in the offer. Price depends on scope, depth, access and re-check needs; initial mapping is free. No fixed public price or guaranteed security outcome is claimed.
+Tehisabiline offers cybersecurity audits and scoped penetration testing for Estonian businesses. The same service is described in Estonian as turvaaudit, küberaudit, IT turvaaudit, küberturbe audit or infoturbe audit; the page distinguishes broad security-posture review from penetration testing and certification. Audits cover agreed website, API and AI-application checks and give a broader view of security posture; a pentest tests whether a weakness can be exploited within the agreed target. Automated scanning alone is not equivalent to either service. Written authorization, targets, permitted tests and stop conditions are agreed before active testing. A human reviews significant findings; the client receives evidence, a prioritized remediation plan and the re-check agreed in the offer. Price depends on scope, depth, access and re-check needs; initial mapping is free. No fixed public price or guaranteed security outcome is claimed.
 
 ### OpenAI-compatible cybersecurity API
 
