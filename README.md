@@ -8,11 +8,18 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 
 ## Public resources
 
+- [Küberturvalisuse regulatsioonide kaart](https://tehisabiline.ee/regulatsioonid/) ([CSV](https://tehisabiline.ee/assets/downloads/kyberturvalisuse-regulatsioonid-2026.csv), [ICS kalender](https://tehisabiline.ee/assets/downloads/regulatsioonide-tahtajad.ics))
+- [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/)
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/)
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/)
 - [NIS2 kontrollnimekiri PDF-ina](https://tehisabiline.ee/assets/downloads/nis2-kontrollnimekiri.pdf)
 - [NIS2 kohaldamismemo mall (DOCX)](https://tehisabiline.ee/assets/downloads/nis2-kohaldamismemo-mall.docx)
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/)
+- [DORA teaberegister](https://tehisabiline.ee/dora/teaberegister/)
+- [Cyber Resilience Act](https://tehisabiline.ee/cra/)
+- [SBOM ja tarkvara koostis](https://tehisabiline.ee/sbom/)
+- [AI Act Eestis](https://tehisabiline.ee/ai-act/)
+- [ISO/IEC 27001 Eestis](https://tehisabiline.ee/iso-27001/)
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/)
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/) ([PDF](https://tehisabiline.ee/assets/downloads/pentesti-raporti-naidis.pdf))
 - [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/)
