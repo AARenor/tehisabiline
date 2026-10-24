@@ -236,6 +236,11 @@ E-ITS is the Estonian information-security framework maintained under RIA. It pr
 Canonical page: https://tehisabiline.ee/en/pentesting/
 Authorised penetration testing for web applications, APIs, cloud and AI integrations. Testing starts only after a written scope and rules of engagement. Deliverables include a findings report with evidence, severity and remediation guidance, plus a retest where agreed. Automated scanners support the work; a person validates every material finding.
 
+## Cybersecurity audit in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/security-audit/
+A scoped cybersecurity audit reviews identity and access, configuration, cloud, suppliers, incident readiness and the evidence behind security claims. It is distinct from penetration testing, which attempts controlled exploitation of a specific scope. Deliverables include findings, a management summary and a prioritised remediation plan.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -257,6 +262,7 @@ Authorised penetration testing for web applications, APIs, cloud and AI integrat
 - https://tehisabiline.ee/en/sbom/
 - https://tehisabiline.ee/en/e-its/
 - https://tehisabiline.ee/en/pentesting/
+- https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
