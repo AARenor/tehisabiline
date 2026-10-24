@@ -29,6 +29,8 @@ Status reviewed on 2026-10-24:
 - [Varunduse taastetest](https://tehisabiline.ee/artiklid/varunduse-taastetest/): RPO/RTO, test scope, four test levels, a 90-minute plan and the evidence NIS2 auditors ask for.
 - [NIS2 tarneahela turve](https://tehisabiline.ee/artiklid/nis2-tarneahel/): supplier tiering, due diligence, contract clauses, ongoing review and evidence.
 - [MFA juurutamine](https://tehisabiline.ee/artiklid/mfa-juurutamine/): method comparison, critical accounts, legacy systems, break-glass, metrics and a 30/60/90 plan.
+- [NIS2 juhatuse kohustused](https://tehisabiline.ee/artiklid/nis2-juhatus/): what the management body approves, evidence to request, a 45–60 minute board agenda and a 90-day plan.
+- [Küberriskide register](https://tehisabiline.ee/artiklid/kuberriskide-register/): register columns, a 5×5 scale, treatment and residual risk, evidence, a CSV template and a 30/60/90 plan.
 - [Küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review, human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
 

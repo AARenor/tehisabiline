@@ -104,6 +104,20 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "artiklid/nis2-juhatus/index.html",
+        canonical: `${origin}/artiklid/nis2-juhatus/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "artiklid/kuberriskide-register/index.html",
+        canonical: `${origin}/artiklid/kuberriskide-register/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "e-its/index.html",
         canonical: `${origin}/e-its/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],

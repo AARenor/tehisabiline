@@ -53,6 +53,8 @@ Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT
 
 Hub with practical guides. The backup restore-test article covers RPO/RTO, test scope and levels, a 90-minute test plan, metrics and NIS2 evidence. The NIS2 supply-chain article covers supplier tiering, due diligence, contract clauses, ongoing review and evidence. The MFA rollout article compares FIDO2/passkeys, TOTP, push and SMS, prioritises critical accounts, handles legacy systems and break-glass access, defines coverage metrics and gives a 30/60/90-day plan.
 
+The NIS2 board-duties article covers the management body’s approval and oversight role, the evidence it should see, a 45–60 minute agenda, questions to ask and a 90-day plan. The cyber risk-register article covers register columns, a 5×5 assessment, treatment and residual risk, evidence, a downloadable CSV template and a 30/60/90-day plan.
+
 ### E-ITS (Estonian information security standard)
 
 Canonical page: https://tehisabiline.ee/e-its/
@@ -165,6 +167,8 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/artiklid/varunduse-taastetest/
 - https://tehisabiline.ee/artiklid/nis2-tarneahel/
 - https://tehisabiline.ee/artiklid/mfa-juurutamine/
+- https://tehisabiline.ee/artiklid/nis2-juhatus/
+- https://tehisabiline.ee/artiklid/kuberriskide-register/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
