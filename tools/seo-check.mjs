@@ -97,6 +97,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "cra/index.html",
+        canonical: `${origin}/cra/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "iso-27001/index.html",
         canonical: `${origin}/iso-27001/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],

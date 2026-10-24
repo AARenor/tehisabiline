@@ -157,6 +157,12 @@ Canonical page: https://tehisabiline.ee/regulatsioonid/
 
 Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber Resilience Act. It covers who each framework applies to, the main obligations, current Estonian deadlines and authorities, how the frameworks overlap, the evidence an audit asks for and a practical starting order. A downloadable CSV compares scope, obligations, deadlines, authorities and official sources.
 
+### Cyber Resilience Act
+
+Canonical page: https://tehisabiline.ee/cra/
+
+Guide to Regulation (EU) 2024/2847 in Estonian: products with digital elements, manufacturer and importer duties, support period of at least five years, SBOM and vulnerability handling, the 11 September 2026 reporting deadlines, conformity assessment and CE marking, and the 11 December 2027 transition. It explains how CRA differs from NIS2 and ISO 27001 and why a pentest alone does not prove conformity.
+
 ### AI Act
 
 Canonical page: https://tehisabiline.ee/ai-act/
@@ -196,6 +202,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/dora/
 - https://tehisabiline.ee/regulatsioonid/
 - https://tehisabiline.ee/ai-act/
+- https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
 - https://tehisabiline.ee/dora/teaberegister/
 - https://tehisabiline.ee/artiklid/
