@@ -41,6 +41,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "saidikaart/index.html",
+        canonical: `${origin}/saidikaart/`,
+        schemaTypes: ["CollectionPage", "ItemList", "BreadcrumbList"],
+        dateType: "CollectionPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "viitamine/index.html",
         canonical: `${origin}/viitamine/`,
         schemaTypes: ["CollectionPage", "ItemList", "BreadcrumbList"],
@@ -90,6 +97,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/index.html",
+        canonical: `${origin}/en/`,
+        lang: "en",
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresOrganization: true
+    },
+    {
         file: "en/regulations/index.html",
         canonical: `${origin}/en/regulations/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
@@ -111,6 +126,22 @@ const expectedPages = [
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage", "Service"],
         dateType: "WebPage",
         lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/dora/audit/index.html",
+        canonical: `${origin}/en/dora/audit/`,
+        lang: "en",
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/dora/register/index.html",
+        canonical: `${origin}/en/dora/register/`,
+        lang: "en",
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
         requiresPublishedDate: true
     },
     {
@@ -201,6 +232,13 @@ const expectedPages = [
     {
         file: "iso-27001/index.html",
         canonical: `${origin}/iso-27001/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "dora/audit/index.html",
+        canonical: `${origin}/dora/audit/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true

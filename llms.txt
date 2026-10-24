@@ -25,12 +25,15 @@ Status reviewed on 2026-10-25:
 - [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard, who must apply it, E-ITS audit vs ISO 27001 certification, 2026 changes (no direct ISO 27001 alignment), the new audit cycle and evidence preparation.
 - [TLPT ja TIBER-EE](https://tehisabiline.ee/tlpt/): DORA threat-led penetration testing in Estonia, who is designated, TIBER-EE roles, attestation versus certification and preparation.
 - [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope, five pillars, Estonian incident-reporting channel (email until 31.10.2026, portal from 01.11.2026), register of information, a downloadable register template, TLPT/TIBER-EE and a 30/60/90-day readiness plan.
+- [DORA audit](https://tehisabiline.ee/dora/audit/): scope, evidence and report for an ICT-risk audit; register and TLPT boundaries, common gaps and board evidence.
 - [DORA teaberegister](https://tehisabiline.ee/dora/teaberegister/): what the Article 28(3) register must show, how to fill it, common errors, the difference between a working CSV and the official ITS 2024/2956 template, the Estonian submission channel and a browser-only CSV checker.
 - [Küberturvalisuse regulatsioonid Eestis](https://tehisabiline.ee/regulatsioonid/): one map of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA: who they cover, what they require, how they overlap and which evidence an audit asks for. Includes a downloadable comparison CSV.
 - [AI Act Eestis](https://tehisabiline.ee/ai-act/): the EU AI Act in Estonian: risk classes, current deadlines after the 2026 amendment, TTJA supervision, Article 15 security expectations, a browser-only risk-class self-check and what scoped AI testing can and cannot prove.
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/): English overview of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA, including deadlines and evidence.
 - [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/): English guide to KüTS scope, RIA registration and change deadlines, incident-reporting deadlines, the ten duties, a fine calculator and audit evidence.
 - [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/): English guide to Cyber Resilience Act product scope, manufacturer duties, a reporting-deadline calculator and SBOM evidence.
+- [DORA audit (EN)](https://tehisabiline.ee/en/dora/audit/): scope, evidence, register/TLPT boundaries and common gaps.
+- [DORA register of information (EN)](https://tehisabiline.ee/en/dora/register/): Article 28(3) fields, ITS template, working CSV, common errors and Estonian submission context.
 - [DORA in Estonia (EN)](https://tehisabiline.ee/en/dora/): English guide to the register of information, ICT contracts, incident reporting and TLPT.
 - [AI Act in Estonia (EN)](https://tehisabiline.ee/en/ai-act/): English guide to risk classes, deadlines, GPAI duties and evidence.
 - [SBOM for CRA (EN)](https://tehisabiline.ee/en/sbom/): minimum fields, SPDX/CycloneDX, vulnerability matching and release evidence.
@@ -51,6 +54,8 @@ Status reviewed on 2026-10-25:
 - [Turvaaudit ja küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review under the Estonian terms turvaaudit, küberaudit, IT turvaaudit, küberturbe audit and infoturbe audit; human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
 
+- [English home](https://tehisabiline.ee/en/): cybersecurity audit, penetration testing and NIS2/CRA evidence in Estonia.
+
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.
@@ -66,6 +71,7 @@ Status reviewed on 2026-10-25:
 - [NIS2 audit](https://tehisabiline.ee/nis2/audit/): scope, evidence, process, report contents and the difference from a penetration test.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
+- [Kõik lehed](https://tehisabiline.ee/saidikaart/): teenused, regulatsioonid, artiklid ja inglisekeelsed juhendid.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
 - [Privaatsus](https://tehisabiline.ee/privaatsus/): privacy information.
 

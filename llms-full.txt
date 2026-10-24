@@ -278,9 +278,12 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/dora/
 - https://tehisabiline.ee/regulatsioonid/
 - https://tehisabiline.ee/ai-act/
+- https://tehisabiline.ee/en/
 - https://tehisabiline.ee/en/regulations/
 - https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/en/cra/
+- https://tehisabiline.ee/en/dora/audit/
+- https://tehisabiline.ee/en/dora/register/
 - https://tehisabiline.ee/en/dora/
 - https://tehisabiline.ee/en/ai-act/
 - https://tehisabiline.ee/en/sbom/
@@ -288,10 +291,12 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/en/pentesting/
 - https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/en/iso-27001/
+- https://tehisabiline.ee/saidikaart/
 - https://tehisabiline.ee/en/press/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
+- https://tehisabiline.ee/dora/audit/
 - https://tehisabiline.ee/dora/teaberegister/
 - https://tehisabiline.ee/artiklid/
 - https://tehisabiline.ee/artiklid/varunduse-taastetest/

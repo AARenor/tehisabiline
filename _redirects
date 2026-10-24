@@ -16,8 +16,6 @@
 /ai-automatiseerimine  https://arle.top/ai-automatiseerimine/  301
 /ai-automatiseerimine/  https://arle.top/ai-automatiseerimine/  301
 /ai-automatiseerimine/*  https://arle.top/ai-automatiseerimine/:splat  301
-/en  /en/regulations/  301
-/en/  /en/regulations/  301
 /index.html  /  301
 
 # Internal repository files must never be served (defence in depth; deploy excludes them)
