@@ -49,6 +49,10 @@ Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE i
 
 Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing), Finantsinspektsioon supervision, the incident-reporting channel change from email to the central bank/authority portal on 1 November 2026, the Article 28(3) register of information and its annual submission, a downloadable CSV register template, TLPT under Articles 26–27 via TIBER-EE, differences from NIS2 and E-ITS, and a 30/60/90-day readiness plan. It states that DORA has no certificate and is not limited to pentesting.
 
+### Articles
+
+Hub with practical guides. The backup restore-test article covers RPO/RTO, test scope and levels, a 90-minute test plan, metrics and NIS2 evidence. The NIS2 supply-chain article covers supplier tiering, due diligence, contract clauses, ongoing review and evidence. The MFA rollout article compares FIDO2/passkeys, TOTP, push and SMS, prioritises critical accounts, handles legacy systems and break-glass access, defines coverage metrics and gives a 30/60/90-day plan.
+
 ### E-ITS (Estonian information security standard)
 
 Canonical page: https://tehisabiline.ee/e-its/
@@ -157,6 +161,10 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/e-its/
 - https://tehisabiline.ee/tlpt/
 - https://tehisabiline.ee/dora/
+- https://tehisabiline.ee/artiklid/
+- https://tehisabiline.ee/artiklid/varunduse-taastetest/
+- https://tehisabiline.ee/artiklid/nis2-tarneahel/
+- https://tehisabiline.ee/artiklid/mfa-juurutamine/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/

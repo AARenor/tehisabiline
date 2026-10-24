@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MFA juurutamine: plaan, meetodid ja lõksud | Tehisabiline</title>
+    <meta name="description" content="MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tehisabiline OÜ">
+    <meta name="theme-color" content="#0857f8">
+    <link rel="canonical" href="https://tehisabiline.ee/artiklid/mfa-juurutamine/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="et_EE">
+    <meta property="og:site_name" content="Tehisabiline">
+    <meta property="og:title" content="MFA juurutamine: plaan, meetodid ja lõksud | Tehisabiline">
+    <meta property="og:description" content="MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.">
+    <meta property="og:url" content="https://tehisabiline.ee/artiklid/mfa-juurutamine/">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="MFA juurutamine: plaan, meetodid ja lõksud – Tehisabiline">
+    <meta name="article:published_time" content="2026-10-24">
+    <meta name="article:modified_time" content="2026-10-24">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MFA juurutamine: plaan, meetodid ja lõksud | Tehisabiline">
+    <meta name="twitter:description" content="MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=703dfa31">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=1578d58e">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=2608db2b">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#article",
+      "url": "https://tehisabiline.ee/artiklid/mfa-juurutamine/",
+      "headline": "MFA juurutamine: plaan, meetodid ja lõksud",
+      "description": "MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+          "width": 512,
+          "height": 512
+        }
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntityOfPage": {
+        "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#webpage"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "MFA"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mitmefaktoriline autentimine"
+        },
+        {
+          "@type": "Thing",
+          "name": "NIS2"
+        }
+      ],
+      "citation": [
+        "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555",
+        "https://www.cisa.gov/MFA",
+        "https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf",
+        "https://pages.nist.gov/800-63-4/sp800-63b.html"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#webpage",
+      "url": "https://tehisabiline.ee/artiklid/mfa-juurutamine/",
+      "name": "MFA juurutamine: plaan, meetodid ja lõksud | Tehisabiline",
+      "description": "MFA juurutamine ettevõttes: meetodite valik, kriitilised kontod, legacy-süsteemid, break-glass, mõõdikud ja 30/60/90 plaan.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#article"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artiklid",
+          "item": "https://tehisabiline.ee/artiklid/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MFA juurutamine: plaan, meetodid ja lõksud",
+          "item": "https://tehisabiline.ee/artiklid/mfa-juurutamine/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/artiklid/mfa-juurutamine/#webpage"
+      },
+      "inLanguage": "et",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kas SMS-MFA on parem kui ainult parool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, kuid see ei ole phishing-resistant. SMS on parem kui ainult parool, kuid SIM-swap ja phishing võivad selle mööda minna. Kriitiliste kontode jaoks eelista FIDO2/WebAuthn või passkey't."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas NIS2 nõuab MFA-d kõigile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NIS2 nimetab MFA-d või pidevat autentimist ühe meetmena, mida kasutada seal, kus see on asjakohane. See ei tähenda, et iga konto ilma erandita peab olema MFA-ga, kuid kriitilised ligipääsud vajavad riskipõhist põhjendust ja tõendit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mida teha teenuskontodega, mis ei toeta MFA-d?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Piira võrgu- ja IP-ligipääsu, kasuta vahendajat või eraldi kontot, logi kasutust ja sea tähtaeg asendamiseks. Ära jäta MFA-ta kontot avalikku internetti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kuidas mõõta MFA juurutamise õnnestumist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vaata katvust kriitiliste kontode lõikes, registreeritud varufaktoreid, erandite arvu ja tähtaegu, taastamispiletite mahtu ning blokeeritud või kahtlaste autentimiskatsete trendi."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
+<!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <nav class="site-nav" aria-label="Põhinavigatsioon">
+            <a href="/pentestimine/">Küberaudit / pentest</a>
+            <a href="/mudelid/">Küber-AI API</a>
+            <a href="/nis2/">NIS2</a>
+            <a href="/meist/">Meist</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Ava menüü" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
+        <a href="/pentestimine/">Küberaudit / pentest</a>
+        <a href="/mudelid/">Küber-AI API</a>
+        <a href="/nis2/">NIS2</a>
+        <a href="/meist/">Meist</a>
+        <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+
+<main id="main-content">
+  <header class="page-head">
+    <div class="wrap">
+      <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li><a href="/artiklid/">Artiklid</a></li><li aria-current="page">MFA juurutamine</li></ol></nav>
+      <h1>MFA juurutamine: plaan, meetodid ja lõksud</h1>
+      <p class="lead">Mitmefaktoriline autentimine on üks odavamaid ja mõjusamaid turvameetmeid. Ebaõnnestunud juurutamine tekitab aga töötajate vastuseisu, lõhub legacy-protsessid ja jätab alles ainult formaalse katvuse.</p>
+      <p class="page-head__meta">Koostanud <a href="/meist/">Tehisabiline OÜ</a> · Viimati sisuliselt uuendatud <time datetime="2026-10-24">24. oktoobril 2026</time></p>
+    </div>
+  </header>
+  <section class="section"><div class="wrap article">
+    <nav class="toc" aria-label="Artikli sisukord"><strong>Sellel lehel</strong><ol><li><a href="#lyhidalt">Lühidalt</a></li><li><a href="#mida">Mida MFA lahendab</a></li><li><a href="#meetodid">Meetodid</a></li><li><a href="#prioriteedid">Kust alustada</a></li><li><a href="#juurutamine">Juurutamine</a></li><li><a href="#legacy">Legacy ja break-glass</a></li><li><a href="#moodikud">Mõõdikud</a></li><li><a href="#vead">Levinud vead</a></li><li><a href="#plaan">30/60/90</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+    <article class="prose">
+      <section class="short-answer" id="lyhidalt"><h2>Lühidalt</h2><p><strong>MFA</strong> ehk mitmefaktoriline autentimine nõuab vähemalt kahte eri tüüpi tõendit: midagi, mida tead (parool), midagi, mis on sinuga (telefon, turvavõti) või midagi, mis oled (biomeetria). Parooli üksi ei tohiks pidada piisavaks kriitiliste süsteemide jaoks.</p><p>NIS2 artikli 21 kohaselt tuleb MFA-d või pidevat autentimist kasutada seal, kus see on asjakohane. Praktikas tähendab see riskipõhist prioriseerimist, mitte kõigi kontode korraga ümberlülitamist. Kõige parem tulemus tuleb siis, kui MFA on kasutajale lihtne ja administraatorile jälgitav.</p></section>
+
+      <section id="mida"><h2>Mida MFA lahendab ja mida mitte</h2><p>MFA raskendab paroolide varastamist, credential stuffing'ut ja suurt osa andmepüügist. See ei kõrvalda nõrkusi rakenduse loogikas, liigsetes õigustes ega sessioonide varastamises. Kui ründaja saab pärast autentimist sessiooniküpsise, ei pruugi MFA teda peatada.</p><p>Seetõttu tuleb MFA siduda ligipääsukontrolli, seadmehügieeni, logimise ja õiguste regulaarse ülevaatusega. MFA on üks kiht, mitte kogu turvalisus.</p></section>
+
+      <section id="meetodid"><h2>Meetodid: mis on tugev ja mis ainult mugav</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Meetod</th><th scope="col">Tugevus</th><th scope="col">Nõrkus</th></tr></thead><tbody><tr><th scope="row">FIDO2 / WebAuthn turvavõti</th><td data-label="Tugevus">Andmepüügi suhtes vastupidav; seotud õige saidiga</td><td data-label="Nõrkus">Vajab füüsilist võtit ja varuvõtit; logistika</td></tr><tr><th scope="row">Passkey</th><td data-label="Tugevus">Kasutajasõbralik ja andmepüügi suhtes vastupidav</td><td data-label="Nõrkus">Seadme/platvormi toe erinevused; taastamise kord</td></tr><tr><th scope="row">TOTP rakendus</th><td data-label="Tugevus">Lai tugi, ei vaja SMS-i</td><td data-label="Nõrkus">Koodi saab reelda; phishing on võimalik</td></tr><tr><th scope="row">Push-teavitus</th><td data-label="Tugevus">Mugav, kiire kinnitamine</td><td data-label="Nõrkus">MFA fatigue; vajab number matching'ut ja konteksti</td></tr><tr><th scope="row">SMS</th><td data-label="Tugevus">Kiire kasutuselevõtt</td><td data-label="Nõrkus">SIM-swap, operaatori risk, phishing; mitte phishing-resistant</td></tr></tbody></table></div><p>CISA soovitab liikuda phishing-resistant MFA, eelkõige FIDO/WebAuthn lahenduste poole. Kui SMS on ainus võimalus, kasuta seda üleminekuna, mitte lõpplahendusena.</p></section>
+
+      <section id="prioriteedid"><h2>Kust alustada</h2><ol><li><strong>Administraatorid ja juurdepääs taristule:</strong> identiteedihaldus, pilvekonsoolid, virtuaalmasinate haldus, võrguseadmed.</li><li><strong>E-post ja failijagamine:</strong> konto kompromiteerimine annab ründajale kõige rohkem võimalusi.</li><li><strong>Kaugjuurdepääs ja VPN:</strong> avalikust internetist ligipääsetavad teenused.</li><li><strong>Ärikriitilised rakendused:</strong> finants-, personali- ja kliendiandmed.</li><li><strong>Ülejäänud töötajad:</strong> järk-järgult, koos tuge ja kommunikatsiooniga.</li></ol><p>Kui kõik korraga ei ole võimalik, dokumenteeri erandid ja nende risk. „Meil on MFA“ ei ole tõend, kui kriitilised admin-kontod on endiselt parooli taga.</p></section>
+
+      <section id="juurutamine"><h2>Juurutamise sammud</h2><ol><li><strong>Inventuur:</strong> millised identiteedipakkujad, rakendused ja kohalikud kontod on olemas; kes pääseb kuhu.</li><li><strong>Poliitika:</strong> kes peab MFA-d kasutama, millised meetodid on lubatud ja kuidas taastamine käib.</li><li><strong>Piloot:</strong> alusta IT-tiimist ja väikesest rühmast; kogu tagasiside enne laiemat laine.</li><li><strong>Enrollment:</strong> registreeri vähemalt kaks faktorit; väldi olukorda, kus ainus seade on telefon.</li><li><strong>Legacy:</strong> leia rakendused, mis ei toeta MFA-d; kasuta vahendajat, IP-piirangut või asenda rakendus.</li><li><strong>Break-glass:</strong> hoia turvaliselt eraldatud ja testitud taastamiskontot, mille kasutamine logitakse ja üle vaadatakse.</li></ol></section>
+
+      <section id="legacy"><h2>Legacy-süsteemid ja break-glass</h2><p>Kõige rohkem probleeme tekitavad vanad rakendused, mis eeldavad ainult parooli, ja teenuskontod, millel ei saa MFA-d kasutada. Ära jäta neid „ajutiselt“ avatuks. Kasuta võrgu piirangut, vahendajat, eraldi kontot ja lühemat sessiooni; kirjuta üles risk ja tähtaeg.</p><p>Break-glass-konto on vajalik, kuid see peab olema eraldatud, tugeva parooli ja füüsilise kaitsega, kasutus logitud ning regulaarselt testitud. Kui break-glass on tavaline admin-konto, ei ole see break-glass.</p></section>
+
+      <section id="moodikud"><h2>Mõõdikud, mis näitavad tegelikku seisu</h2><ul><li><strong>Katvus:</strong> MFA-ga kaitstud kontode osakaal, eraldi admin- ja teenuskontode lõikes.</li><li><strong>Registreeritud faktorid:</strong> mitu kasutajat on registreerinud teise faktori ja kui paljudel on ainult üks seade.</li><li><strong>Erandid:</strong> MFA-ta kontod, nende omanik, põhjus ja tähtaeg.</li><li><strong>Toetus:</strong> kui palju pileteid ja kui kaua kulub taastamisele.</li><li><strong>Ründed:</strong> blokeeritud MFA-katsed, push-fatigue ja kahtlased sisselogimised.</li></ul><p>Ära mõõda ainult „MFA on sisse lülitatud“. Mõõda, kas kriitilised kontod on kaitstud ja kas erandid on teadlikud.</p></section>
+
+      <section id="vead"><h2>Levinud vead</h2><ul><li><strong>Ainult SMS:</strong> parem kui mitte midagi, kuid mitte phishing-resistant.</li><li><strong>Push ilma number matching'uta:</strong> MFA fatigue võib viia kinnitamiseni.</li><li><strong>Üks faktor kõigile:</strong> telefon kaob või vahetub; puudub varufaktor.</li><li><strong>Jagatud admin-kontod:</strong> MFA ei ütle, kes tegelikult tegutses.</li><li><strong>Break-glass igapäevakasutuses:</strong> erand muutub tavapäraseks.</li><li><strong>Puudub logimine:</strong> intsidenti ei saa hiljem tõendada.</li></ul></section>
+
+      <section id="plaan"><h2>30/60/90 päeva plaan</h2><ol><li><strong>0–30 päeva:</strong> kaardista identiteedid ja kriitilised kontod; kirjuta MFA-poliitika ja taastamise kord; vali pilootrühm.</li><li><strong>31–60 päeva:</strong> käivita piloot, registreeri varufaktorid, lahenda legacy-erandid ja koolita tugi.</li><li><strong>61–90 päeva:</strong> laienda lainete kaupa, mõõda katvust ja erandeid, testi break-glass'i ning uuenda riskiregistrit.</li></ol></section>
+
+      <section id="faq"><h2>Küsimused MFA kohta</h2><div class="faq">
+        <details><summary><h3>Kas SMS-MFA on parem kui ainult parool?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Jah, kuid see ei ole phishing-resistant. SMS on parem kui ainult parool, kuid SIM-swap ja phishing võivad selle mööda minna. Kriitiliste kontode jaoks eelista FIDO2/WebAuthn või passkey't.</p></details>
+        <details><summary><h3>Kas NIS2 nõuab MFA-d kõigile?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">NIS2 nimetab MFA-d või pidevat autentimist ühe meetmena, mida kasutada seal, kus see on asjakohane. See ei tähenda, et iga konto ilma erandita peab olema MFA-ga, kuid kriitilised ligipääsud vajavad riskipõhist põhjendust ja tõendit.</p></details>
+        <details><summary><h3>Mida teha teenuskontodega, mis ei toeta MFA-d?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Piira võrgu- ja IP-ligipääsu, kasuta vahendajat või eraldi kontot, logi kasutust ja sea tähtaeg asendamiseks. Ära jäta MFA-ta kontot avalikku internetti.</p></details>
+        <details><summary><h3>Kuidas mõõta MFA juurutamise õnnestumist?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Vaata katvust kriitiliste kontode lõikes, registreeritud varufaktoreid, erandite arvu ja tähtaegu, taastamispiletite mahtu ning blokeeritud või kahtlaste autentimiskatsete trendi. Ainult sisselülitamise fakt ei näita tegelikku kaitset.</p></details>
+      </div></section>
+
+      <section id="allikad"><h2>Allikad</h2><ul><li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555">NIS2 direktiiv (EL) 2022/2555</a>, artikkel 21.</li><li><a href="https://www.cisa.gov/MFA">CISA: More than a Password</a>.</li><li><a href="https://www.cisa.gov/sites/default/files/2023-01/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf">CISA: Implementing Phishing-Resistant MFA</a>.</li><li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html">NIST SP 800-63B: Digital Identity Guidelines</a>.</li></ul><p>See artikkel on selgitav, mitte õigus- ega tootenõu. Kohustuse ulatuse ja tehnilise lahenduse kinnitab sinu riskipõhine otsus.</p></section>
+
+      <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
+        <li><a href="/nis2/kontrollnimekiri/"><span class="related__title">NIS2 kontrollnimekiri</span><span class="related__desc">Kümme meedet ja tõendid, mida audit küsib.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+        <li><a href="/nis2/"><span class="related__title">NIS2 nõuded Eestis</span><span class="related__desc">Kohaldumine, registreerimine ja juhtkonna vastutus.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+        <li><a href="/artiklid/"><span class="related__title">Kõik artiklid</span><span class="related__desc">Praktilised juhendid NIS2 ja küberkaitse teemal.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+      </ul></section>
+    </article>
+  </div></section>
+  <section class="band"><div class="wrap band__inner"><h2>Kas MFA katvus on tegelikult piisav?</h2><p>Kontrollime kriitilised kontod, erandid ja taastamise korra. Ütleme ausalt, mis puudub.</p><a class="btn btn--white" href="/#contact">Küsi kaardistust</a></div></section>
+</main>
+<!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div>
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
+                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
+            </div>
+            <nav aria-label="Teenuste lingid">
+                <p class="site-footer__title">Teenused</p>
+                <ul>
+                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Ettevõtte lingid">
+                <p class="site-footer__title">Teave</p>
+                <ul>
+                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/kuberaudit/">Küberauditi ulatus</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
+                    <li><a href="/nis2/">NIS2 juhend</a></li>
+                    <li><a href="/e-its/">E-ITS ja audit</a></li>
+                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
+                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li><li><a href="/dora/">DORA nõuded</a></li><li><a href="/artiklid/">Artiklid ja juhendid</a></li>
+                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
+                    <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
+                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
+                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
+                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Tallinn, Eesti</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-24">24. oktoobril 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+<script src="/site.js?v=a750108a" defer></script>
+<!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->
+</body>
+</html>

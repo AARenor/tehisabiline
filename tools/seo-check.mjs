@@ -76,6 +76,34 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "artiklid/index.html",
+        canonical: `${origin}/artiklid/`,
+        schemaTypes: ["CollectionPage", "BreadcrumbList", "ItemList"],
+        dateType: "CollectionPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "artiklid/varunduse-taastetest/index.html",
+        canonical: `${origin}/artiklid/varunduse-taastetest/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "artiklid/nis2-tarneahel/index.html",
+        canonical: `${origin}/artiklid/nis2-tarneahel/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "artiklid/mfa-juurutamine/index.html",
+        canonical: `${origin}/artiklid/mfa-juurutamine/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "e-its/index.html",
         canonical: `${origin}/e-its/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
