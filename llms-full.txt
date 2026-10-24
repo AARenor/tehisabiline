@@ -39,6 +39,12 @@ Canonical page: https://tehisabiline.ee/pentestimine/naidisraport/
 
 A clearly synthetic sample report showing what a buyer should expect: tested scope and limitations, PTES/OWASP-based methodology, three findings with masked evidence and impact, a remediation plan ordered by immediate/7-day/planned, and retest conditions. All names, domains and findings are fictitious; it is not a client report and does not claim a real engagement.
 
+### TLPT / TIBER-EE
+
+Canonical page: https://tehisabiline.ee/tlpt/
+
+Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE implementation (Finantsinspektsioon guidance in force 15.09.2026): designated entities, TCT-EE coordination, threat intelligence, red/blue team exercise, attestation and confidentiality. It distinguishes TLPT from a normal pentest and states that Tehisabiline does not present itself as a TIBER-EE tester.
+
 ### E-ITS (Estonian information security standard)
 
 Canonical page: https://tehisabiline.ee/e-its/
@@ -145,6 +151,7 @@ These are international research findings, not measurements of Tehisabiline cust
 - https://tehisabiline.ee/mudelid/
 - https://tehisabiline.ee/kuberaudit/
 - https://tehisabiline.ee/e-its/
+- https://tehisabiline.ee/tlpt/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/
