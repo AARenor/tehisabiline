@@ -309,7 +309,7 @@
   </div></header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Product scope</a></li><li><a href="#categories">Product categories</a></li><li><a href="#duties">Manufacturer duties</a></li><li><a href="#reporting">Reporting</a></li><li><a href="#sbom">SBOM evidence</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
+      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Product scope</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#categories">Product categories</a></li><li><a href="#duties">Manufacturer duties</a></li><li><a href="#reporting">Reporting</a></li><li><a href="#sbom">SBOM evidence</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
     </ol></nav>
     <article class="prose">
       <section class="short-answer" id="short-answer"><h2>CRA in Estonia: short answer</h2>
@@ -322,6 +322,16 @@
         <p>Three questions decide most cases:</p>
         <ol><li><strong>Is it a product with digital elements?</strong> Hardware, software or a component whose intended or reasonably foreseeable use includes a direct or indirect logical or physical connection to a device or network.</li><li><strong>Is it made available on the EU market?</strong> This includes selling, licensing, free distribution as part of a commercial model and remote data processing that is necessary for a product function.</li><li><strong>Is it a commercial activity?</strong> A price is not required. Monetisation through support, services or data can be enough. Open-source software developed outside a commercial activity is generally outside scope, but commercial integration can change that.</li></ol>
         <p>Examples include routers, cameras, smart devices, operating systems, applications, firmware, industrial controllers and separately sold software components. A medical device, motor vehicle or another product covered by a more specific EU rule may sit outside the CRA where that rule provides the same or a higher level of protection.</p>
+        <h3 id="self-check-en">Short CRA scope check</h3>
+        <p>Answer four questions. The check runs only in your browser; nothing is uploaded.</p>
+        <form class="nis2-check" data-cra-check-en data-local-check>
+          <fieldset><legend>1. Is the product made available commercially on the EU market?</legend><label><input type="radio" name="scope" value="yes" required> Yes</label><label><input type="radio" name="scope" value="no"> No</label></fieldset>
+          <fieldset><legend>2. Does it have digital elements and a direct or indirect connection to a device or network?</legend><p class="nis2-check__hint">For example software, a smart device, router, camera or a separately sold component that communicates over a network.</p><label><input type="radio" name="digital" value="yes" required> Yes</label><label><input type="radio" name="digital" value="no"> No</label></fieldset>
+          <fieldset><legend>3. Is the product covered by a different EU sector rule that fully addresses the same risks?</legend><label><input type="radio" name="excluded" value="yes" required> Yes</label><label><input type="radio" name="excluded" value="no"> No</label><label><input type="radio" name="excluded" value="unsure"> Not sure</label></fieldset>
+          <fieldset><legend>4. Are you the manufacturer placing it on the market under your own name or brand?</legend><label><input type="radio" name="manufacturer" value="yes" required> Yes</label><label><input type="radio" name="manufacturer" value="no"> No</label></fieldset>
+          <div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Check scope</button><button class="btn btn--ghost" type="reset">Reset</button></div>
+          <div class="nis2-check__result" data-cra-check-en-result tabindex="-1" aria-live="polite" hidden></div>
+        </form>
       </section>
 
       <section id="categories"><h2>Default, important and critical products</h2>
@@ -449,6 +459,7 @@
 <!-- /chrome:footer -->
 <!-- chrome:widget -->
 <link rel="stylesheet" href="/assistant.css">
+<script src="/assets/js/cra-check-en.js" defer></script>
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
 </body>
