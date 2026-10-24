@@ -24,7 +24,7 @@
             body = "Kontrolli RIA juhisest, kas sinu asutus või ülesanne on hõlmatud ja kas pead end teenuseosutajana registreerima.";
         } else if (data.eriline === "jah") {
             title = "See teenus võib olla kohustuslane ka väiksema suurusega.";
-            body = "DNS, pilve, andmevahetuse, IKT-halduse ja usaldusteenuste puhul ei pruugi suuruslävend otsustada. Kontrolli teenuse täpset määratlust NIS2 lisast.";
+            body = "DNS-i, domeeniregistri, sidevõrgu, pilve, andmevahetuse, IKT-halduse ja usaldusteenuste puhul ei pruugi suuruslävend otsustada. Kontrolli teenuse täpset määratlust NIS2 lisast.";
         } else if (data.sektor === "jah" && data.suurus === "jah") {
             title = "NIS2 kohaldub tõenäoliselt.";
             body = "Sektor ja suurus viitavad kohustuslasele. Järgmised sammud on registreerimine, riskianalüüs ja kümne meetme tõendid.";
