@@ -251,6 +251,11 @@ ISO/IEC 27001 is a voluntary international standard for an information-security 
 Canonical page: https://tehisabiline.ee/en/ai-consulting/
 We help teams scope, build and evaluate conversational assistants: retrieval-augmented generation, tool use, permissions, test sets and security review. The work is model-agnostic and ends with documentation and a handover, not a demo that nobody can operate.
 
+## AI automatiseerimine (ET)
+
+Canonical page: https://tehisabiline.ee/ai-automatiseerimine/
+AI automatiseerimine Eesti ettevõtetele: korduva protsessi kaardistus, andmevoog ja õigused, kitsas prototüüp, testkogum ning tootmisküpsuse kontroll. Eesmärk on protsess, mida meeskond suudab ise hallata, mitte demo.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -275,6 +280,7 @@ We help teams scope, build and evaluate conversational assistants: retrieval-aug
 - https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/en/iso-27001/
 - https://tehisabiline.ee/en/ai-consulting/
+- https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/

@@ -35,7 +35,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=058dc2d9">
+    <link rel="stylesheet" href="/site.css?v=7777a83b">
     <link rel="stylesheet" href="/assets/css/pages/kuberaudit.css?v=73ebb5f5">
 
     <script type="application/ld+json">
@@ -397,7 +397,7 @@
                                     <tr><th scope="row">Andmeleke</th><td data-label="Mida kontrollime?">Andmete väljaviimise võimalused ja logide kord</td><td data-label="Mida saad?">Lekketesti tulemus ja kõrvaldamise plaan</td></tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </section>
                         <figure class="audit-finding">
                             <figcaption>Näidisleiu vorm · väljamõeldud olukord</figcaption>
                             <dl>
@@ -470,7 +470,7 @@
                         <h2>Audit, pentest või automaatne skannimine?</h2>
                         <p>Küberaudit annab laiema ülevaate süsteemide seadetest ja töökorraldusest. Pentest on aktiivne, sihitud katse kokkulepitud süsteemist turvanõrkusi leida, mitte automaatne skannimine ega üldine audit. Enne pentesti määrame kirjalikult sihtmärgid, ajavahemiku, lubatud testid ja katkestamise tingimused; testime ainult süsteeme, milleks omanik on loa andnud. Automaatne skanner aitab teadaolevaid vigu leida, kuid ei tõenda äriloogika turvalisust.</p>
                         <p>Aktiivse testimise ulatuse, ettevalmistuse ja raporti kohta loe <a href="/pentestimine/">pentestimise teenuselehelt</a>. Arendajale on eraldi <a href="/api-turvatestimine/">API turvatestimise juhend</a> ja <a href="/veebirakenduse-turvatestimine/">veebirakenduse pentesti juhend</a>.</p>
-                        <div class="table-wrap table-wrap--stack" role="region" aria-label="Turvakontrollide võrdlus" tabindex="0">
+                        <section class="table-wrap table-wrap--stack" aria-label="Turvakontrollide võrdlus" tabindex="0">
                             <table class="data">
                                 <thead><tr><th scope="col">Meetod</th><th scope="col">Sobib siis, kui</th><th scope="col">Piirang</th></tr></thead>
                                 <tbody>
@@ -479,7 +479,7 @@
                                     <tr><th scope="row">Automaatne skanner</th><td data-label="Sobib siis, kui">Vajad teadaolevate probleemide sagedast esmaseiret</td><td data-label="Piirang">Ei mõista äriloogikat ega ligipääsude tähendust</td></tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </section>
                     </section>
 
                     <section id="auditi-tellimine">
@@ -503,7 +503,7 @@
                             <li><strong>Füüsiline turvalisus ja personaliprotsessid</strong>, välja arvatud kokkulepitud ulatuses.</li>
                         </ul>
                     </section>
-                    <section id="standardid"><h2>Standardid: E-ITS, ISO 27001, ISKE ja NIST CSF</h2><p>Auditi raamistik valitakse selle järgi, mida tõendada tuleb – seadus, klient, juhtkond või sertifitseerimine. Ükski raamistik ei asenda teist automaatselt.</p><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Raamistik</th><th scope="col">Mida annab</th><th scope="col">Mida ei anna</th></tr></thead><tbody><tr><th scope="row">E-ITS</th><td data-label="Mida annab"><a href="/e-its/">Eesti infoturbestandard</a>: riskipõhised meetmed, infoturbe kataloog ja küpsustasemed; kasutusel avalikus sektoris ja kriitilises taristus</td><td data-label="Mida ei anna">Ei ole automaatselt ISO 27001 sertifikaat</td></tr><tr><th scope="row">ISO/IEC 27001</th><td data-label="Mida annab">Rahvusvaheline infoturbe juhtimissüsteemi standard; sertifitseeritav akrediteeritud asutuse poolt</td><td data-label="Mida ei anna">Sertifikaat ei tõenda iga tehnilise kontrolli toimimist ega asenda pentesti</td></tr><tr><th scope="row">ISKE</th><td data-label="Mida annab">Riigi infosüsteemide turvameetmete süsteem kolme turvatasemega; avaliku sektori baseline</td><td data-label="Mida ei anna">Ei ole mõeldud ärisektori üldiseks sertifikaadiks</td></tr><tr><th scope="row">NIST CSF</th><td data-label="Mida annab">Riskijuhtimise raamistik (identifitseeri, kaitse, tuvasta, reageeri, taasta)</td><td data-label="Mida ei anna">Ei ole sertifitseeritav ega õiguslik nõue</td></tr><tr><th scope="row">NIS2 / KüTS</th><td data-label="Mida annab">Õiguslik kohustus ja auditeeritavad tõendid; seob riskijuhtimise, teatamise ja juhtkonna vastutuse</td><td data-label="Mida ei anna">Ei ole „NIS2 sertifikaat“; vastavust hinnatakse meetmete ja tõendite kaudu</td></tr></tbody></table></section><p>Finantssektoril võivad lisanduda DORA ja TLPT nõuded; neid ei kata tavaline küberaudit. Kui sertifitseerimine on eesmärk, tuleb sertifitseerija valida eraldi – meie ei väljasta sertifikaate.</p></section>
+                    <section id="standardid"><h2>Standardid: E-ITS, ISO 27001, ISKE ja NIST CSF</h2><p>Auditi raamistik valitakse selle järgi, mida tõendada tuleb – seadus, klient, juhtkond või sertifitseerimine. Ükski raamistik ei asenda teist automaatselt.</p><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Raamistik</th><th scope="col">Mida annab</th><th scope="col">Mida ei anna</th></tr></thead><tbody><tr><th scope="row">E-ITS</th><td data-label="Mida annab"><a href="/e-its/">Eesti infoturbestandard</a>: riskipõhised meetmed, infoturbe kataloog ja küpsustasemed; kasutusel avalikus sektoris ja kriitilises taristus</td><td data-label="Mida ei anna">Ei ole automaatselt ISO 27001 sertifikaat</td></tr><tr><th scope="row">ISO/IEC 27001</th><td data-label="Mida annab">Rahvusvaheline infoturbe juhtimissüsteemi standard; sertifitseeritav akrediteeritud asutuse poolt</td><td data-label="Mida ei anna">Sertifikaat ei tõenda iga tehnilise kontrolli toimimist ega asenda pentesti</td></tr><tr><th scope="row">ISKE</th><td data-label="Mida annab">Riigi infosüsteemide turvameetmete süsteem kolme turvatasemega; avaliku sektori baseline</td><td data-label="Mida ei anna">Ei ole mõeldud ärisektori üldiseks sertifikaadiks</td></tr><tr><th scope="row">NIST CSF</th><td data-label="Mida annab">Riskijuhtimise raamistik (identifitseeri, kaitse, tuvasta, reageeri, taasta)</td><td data-label="Mida ei anna">Ei ole sertifitseeritav ega õiguslik nõue</td></tr><tr><th scope="row">NIS2 / KüTS</th><td data-label="Mida annab">Õiguslik kohustus ja auditeeritavad tõendid; seob riskijuhtimise, teatamise ja juhtkonna vastutuse</td><td data-label="Mida ei anna">Ei ole „NIS2 sertifikaat“; vastavust hinnatakse meetmete ja tõendite kaudu</td></tr></tbody></table></div><p>Finantssektoril võivad lisanduda DORA ja TLPT nõuded; neid ei kata tavaline küberaudit. Kui sertifitseerimine on eesmärk, tuleb sertifitseerija valida eraldi – meie ei väljasta sertifikaate.</p></section>
         <section id="raport"><h2>Auditi raport: mida tellija saab</h2><p>Raport peab toetama otsust, mitte ainult loetlema puudusi. Hea raport sisaldab:</p><ul><li><strong>Juhtkokkuvõte:</strong> kolm kõige olulisemat riski ja otsus, mida juhtkonnalt oodatakse.</li><li><strong>Skoop ja piirangud:</strong> mida testiti, mida mitte ja millistel eeldustel.</li><li><strong>Metoodika:</strong> raamistik, käsitsi ja automaatse töö osakaal, valimi loogika.</li><li><strong>Leiud tõenditega:</strong> mõju, korratavus, viide tõendile ja parandussoovitus.</li><li><strong>Küpsus- või riskihinnang:</strong> kriteeriumid, mitte ainult üldsõnaline hinne.</li><li><strong>Parandusplaan:</strong> vastutaja, tähtaeg ja järjekord mõju järgi.</li><li><strong>Järelkontroll:</strong> mida ja millal uuesti kontrollitakse.</li></ul><p>Raporti struktuuri näidis on <a href="/pentestimine/naidisraport/">pentesti näidisraportis</a>; see aitab võrrelda pakkumusi ka siis, kui tehniline sisu erineb.</p><p><strong>Mida pakkujalt küsida:</strong> kes tööd teeb ja kas ta on sõltumatu; milline on metoodika; kas saab näha maskeeritud näidisraportit; kuidas kaitstakse andmeid ja sõlmitakse NDA; kas parandusi kontrollitakse; mis on raporti tähtaeg ja mis ei kuulu hinda.</p></section>
         <section id="tellimine">
                         <h2>Auditi tellimise checklist</h2>

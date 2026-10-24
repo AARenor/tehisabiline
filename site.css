@@ -769,3 +769,5 @@ table.data thead .ours { background: var(--blue); color: #fff; }
 .nis2-check__result > * + * { margin-top: .65rem; }
 .nis2-check__note { color: var(--muted); font-size: .9375rem; }
 .nis2-check__actions { font-weight: 550; }
+
+.contact--stretch{justify-items:stretch;padding-block:clamp(3.5rem,2.5rem + 4vw,6rem)}
