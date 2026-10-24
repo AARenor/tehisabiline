@@ -308,7 +308,7 @@
   </header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#registration">Registration</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#deadline-calculator">Deadline calculator</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#fine-calculator">Fine calculator</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
+      <li><a href="#short-answer">Short answer</a></li><li><a href="#scope">Does it apply?</a></li><li><a href="#self-check-en">Self-check</a></li><li><a href="#registration">Registration</a></li><li><a href="#registration-deadline">Registration deadline calculator</a></li><li><a href="#duties">Ten duties</a></li><li><a href="#reporting">Incident reporting</a></li><li><a href="#deadline-calculator">Deadline calculator</a></li><li><a href="#audit">Audit evidence</a></li><li><a href="#penalties">Fines</a></li><li><a href="#fine-calculator">Fine calculator</a></li><li><a href="#plan">30-day plan</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li>
     </ol></nav>
     <article class="prose">
       <section class="short-answer" id="short-answer"><h2>NIS2 in Estonia: short answer</h2>
@@ -373,6 +373,7 @@
       </section>
 
       <section id="deadline-calculator"><h2>Incident reporting deadline calculator</h2><p>Enter the time the incident was detected. The calculator shows the 24-hour, 72-hour and one-month deadlines in your local time. Nothing leaves the browser.</p><form class="nis2-check" data-nis2-deadline-en data-local-check><fieldset><legend>Incident detection time</legend><label for="nis2-detected-en">Date and time</label><input id="nis2-detected-en" name="detected" type="datetime-local" required></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate deadlines</button><button class="btn btn--ghost" type="reset">Reset</button></div><div class="nis2-check__result" data-nis2-deadline-en-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">If you detect an incident late, the detection time is what matters. When in doubt, send the early warning immediately and refine it later.</p></section>
+      <section id="registration-deadline"><h2>NIS2 registration deadline calculator</h2><p>Enter the start of the activity or a register-data change. The calculator shows the three-month and two-week deadlines. Nothing leaves your browser.</p><form class="nis2-check" data-nis2-reg-deadline-en data-local-check><fieldset><legend>Activity start or obligation</legend><label for="nis2-reg-start-en">Date</label><input id="nis2-reg-start-en" name="start" type="date"></fieldset><fieldset><legend>Change in register data</legend><label for="nis2-reg-change-en">Change date</label><input id="nis2-reg-change-en" name="change" type="date"></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate deadlines</button><button class="btn btn--ghost" type="reset">Reset</button></div><div class="nis2-check__result" data-nis2-reg-deadline-en-result tabindex="-1" aria-live="polite" hidden></div></form></section>
       <section id="audit"><h2>What audit evidence looks like</h2>
         <p>NIS2 does not create a single mandatory audit certificate. Supervisors and customers can ask you to show that the measures operate. A credible evidence pack usually contains:</p>
         <ul><li><strong>Risk register:</strong> assets, threats, likelihood, impact, treatment and owner.</li><li><strong>Management decision:</strong> board minutes, approved risk appetite, budget and remediation deadlines.</li><li><strong>Technical evidence:</strong> configuration, access reviews, MFA, backup restore tests, logging and vulnerability handling.</li><li><strong>Supplier evidence:</strong> due diligence, contractual security requirements and review notes.</li><li><strong>Incident evidence:</strong> exercise reports, reporting records and lessons learned.</li><li><strong>Training evidence:</strong> attendance, content and phishing-exercise results.</li></ul>
@@ -482,6 +483,7 @@
 <script src="/assets/js/nis2-check-en.js" defer></script>
 <script src="/assets/js/nis2-deadline-en.js" defer></script>
 <script src="/assets/js/nis2-fine-en.js?v=1" defer></script>
+<script src="/assets/js/nis2-registration-deadline-en.js?v=1" defer></script>
 <script src="/assistant.js" defer></script>
 <!-- /chrome:widget -->
 </body>
