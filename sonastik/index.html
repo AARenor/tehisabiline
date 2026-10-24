@@ -267,6 +267,48 @@
           "name": "Zero trust",
           "description": "Lähenemine, kus iga päringut kontrollitakse, mitte ei usaldata automaatselt võrgu asukoha tõttu.",
           "url": "https://tehisabiline.ee/sonastik/#zero-trust"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "CRA",
+          "description": "Cyber Resilience Act: ELi määrus digielementidega toodete küberturvalisuse kohta; nõuab riskianalüüsi, haavatavuste haldust, teatamist, CE-märgist ja tugiperioodi.",
+          "url": "https://tehisabiline.ee/sonastik/#cra"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "CE-märgis",
+          "description": "Toote vastavuse märgis; CRA kontekstis näitab vastavushindamise läbimist, mitte haavatavuste puudumist.",
+          "url": "https://tehisabiline.ee/sonastik/#ce-margis"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "DORA teaberegister",
+          "description": "Finantsettevõtja register IKT-lepingute, tarnijate, funktsioonide ja väljumisriskide kohta.",
+          "url": "https://tehisabiline.ee/sonastik/#dora-teaberegister"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "E-ITS",
+          "description": "Eesti infoturbestandard; 2026. aasta versioon rõhutab riskipõhist meetmevalikut ja küpsust.",
+          "url": "https://tehisabiline.ee/sonastik/#e-its"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "ISO/IEC 27001",
+          "description": "Rahvusvaheline infoturbe juhtimissüsteemi standard; sertifitseerimine on vabatahtlik.",
+          "url": "https://tehisabiline.ee/sonastik/#iso-27001"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "SBOM",
+          "description": "Software Bill of Materials: tarkvara koostisosade loend; toetab haavatavuste jälgimist, kuid ei tõesta turvalisust.",
+          "url": "https://tehisabiline.ee/sonastik/#sbom"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Vastavushindamine",
+          "description": "Protsess, millega kontrollitakse toote vastavust õiguslikele nõuetele; CRA puhul sisemine või teavitatud asutuse hindamine.",
+          "url": "https://tehisabiline.ee/sonastik/#vastavushindamine"
         }
       ]
     },
@@ -433,8 +475,12 @@
 
         <section id="a"><h2>A–H</h2><dl class="glossary">
           <dt id="ai-act">AI Act</dt><dd>Euroopa tehisintellekti seadus ehk AI määrus. Kõrge riskiga süsteemidele seab see muu hulgas täpsuse, vastupidavuse ja küberturvalisuse nõude, kuid ei sätesta ühte konkreetset testimeetodit. <a href="/ai-turvatestimine/#ai-act">AI Act ja AI-turvatestimine</a>.</dd>
+          <dt id="cra">CRA</dt><dd>Cyber Resilience Act – ELi määrus digielementidega toodete küberturvalisuse kohta. Nõuab riskianalüüsi, haavatavuste haldust, teatamist, CE-märgist ja tugiperioodi. <a href="/cra/">CRA juhend</a>.</dd>
+          <dt id="ce-margis">CE-märgis</dt><dd>Toote vastavuse märgis. CRA kontekstis näitab, et tootja on läbinud nõutud vastavushindamise; see ei tõenda, et tootes ei ole ühtegi haavatavust.</dd>
           <dt id="auditeerimine">Auditeerimine</dt><dd>Sõltumatu ja dokumenteeritud hindamine, kus tõendite põhjal kontrollitakse vastavust kokkulepitud kriteeriumidele. E-ITS auditeerimine ei ole pentest ega anna ISO 27001 sertifikaati. <a href="/e-its/#audit">E-ITS auditeerimine</a>.</dd>
           <dt id="dora">DORA</dt><dd>Digital Operational Resilience Act – ELi määrus finantssektori IKT-riskide juhtimise, intsidentidest teatamise, teaberegistri ja tegevuskerksuse testimise kohta. <a href="/dora/">DORA rakendamine Eestis</a>.</dd>
+          <dt id="dora-teaberegister">DORA teaberegister</dt><dd>Finantsettevõtja register IKT-lepingute, tarnijate, funktsioonide ja väljumisriskide kohta. Vorm ja esitamise kord tuleb Finantsinspektsiooni juhisest. <a href="/dora/teaberegister/">DORA teaberegistri juhend</a>.</dd>
+          <dt id="e-its">E-ITS</dt><dd>Eesti infoturbestandard, mille 2026. aasta versioon rõhutab riskipõhist meetmevalikut ja küpsust. Avalikke ülesandeid täitvatele organisatsioonidele oluline; ettevõttele vabatahtlik. <a href="/e-its/">E-ITS ja audit</a>.</dd>
           <dt id="api-top10">OWASP API Top 10</dt><dd>Kümme levinumat API turvariski kirjeldav OWASP-i loend. See on riskikategooriate kaart, mitte kohustuslik testipakett. Täpsemalt <a href="/api-turvatestimine/">API turvatestimise juhendis</a>.</dd>
           <dt id="bfla">BFLA</dt><dd>Broken Function Level Authorization – funktsiooni tasemel õiguste puudujääk. Näiteks tavakasutaja pääseb admin-otspunktile, sest rolli ei kontrollita serveris.</dd>
           <dt id="bola">BOLA</dt><dd>Broken Object Level Authorization – API ei kontrolli, kas päringu tegija tohib viidatud objekti kasutada. Üks levinumaid API riske; kontrollitakse kahe testkonto ja objektiviitega.</dd>
@@ -448,6 +494,7 @@
 
         <section id="i"><h2>I–P</h2><dl class="glossary">
           <dt id="idor">IDOR</dt><dd>Insecure Direct Object Reference – otsene objekti viide, mille õigusi ei kontrollita. BOLA üks avaldumisviise; näiteks teise kliendi arve avamine ID-d muutes.</dd>
+          <dt id="iso-27001">ISO/IEC 27001</dt><dd>Rahvusvaheline infoturbe juhtimissüsteemi standard. Sertifitseerimine on vabatahtlik ning sertifikaadi väljastab akrediteeritud asutus, mitte konsultant ega pentestija. <a href="/iso-27001/">ISO 27001 Eestis</a>.</dd>
           <dt id="kuberhugieen">Küberhügieen</dt><dd>Igapäevased põhiharjumused ja -meetmed: uuendused, varundus, tugevad paroolid, MFA ja ettevaatlik linkide avamine. Odavaim viis riski vähendada.</dd>
           <dt id="norkuse-skaneerimine">Nõrkuse skaneerimine</dt><dd>Automaatne kontroll tuntud haavatavuste ja seadistuste vastu. Annab hoiatusi, kuid ei tõenda ärakasutatavust ega asenda pentesti.</dd>
           <dt id="tlpt">TLPT</dt><dd>Threat-Led Penetration Testing – ohuteabel põhinev läbistustestimine, millega kontrollitakse kriitiliste funktsioonide vastupidavust eesmärgistatud ründele. DORA kontekstis ei nõuta seda kõigilt. <a href="/tlpt/">TLPT ja TIBER-EE</a>.</dd>
@@ -468,8 +515,10 @@
           <dt id="red-team">Red team</dt><dd>Laiem vastase simulatsioon, mis võib hõlmata inimest, protsesse ja tehnikat ning testida ka tuvastust ja reageerimist. Ulatus on tavalisest pentestist laiem.</dd>
           <dt id="blue-team">Blue team</dt><dd>Kaitse- ja reageerimismeeskond, kes tuvastab, piirab ja taastab intsidente. Punase ja sinise meeskonna harjutus aitab mõlemat parandada.</dd>
           <dt id="rto-rpo">RTO ja RPO</dt><dd>Taastamisaeg (RTO) ja andmekao piir (RPO): kui kaua tohib teenus olla maas ja kui palju andmeid tohib kaduda. Mõõdetakse taastetestiga, mitte plaanist lugedes.</dd>
+          <dt id="sbom">SBOM</dt><dd>Software Bill of Materials – tarkvara koostisosade loend koos versioonide ja tarnijatega. CRA kontekstis aitab see jälgida haavatavusi ja vastata turujärelevalve küsimustele, kuid ei tõesta ise turvalisust. <a href="/sbom/">SBOM-i juhend</a>.</dd>
           <dt id="siem">SIEM</dt><dd>Security Information and Event Management – logide kogumise, korrelatsiooni ja häirete süsteem. Toetab intsidentide tuvastamist, kuid ei asenda protsessi.</dd>
           <dt id="sql">SQL-süst</dt><dd>SQL injection – kasutaja sisend mõjutab SQL-päringu loogikat ning võib avada, muuta või kustutada andmeid. Paraneb parameetriliste päringute ja sisendi valideerimisega.</dd>
+          <dt id="vastavushindamine">Vastavushindamine</dt><dd>Protsess, millega kontrollitakse toote vastavust õiguslikele nõuetele. CRA puhul võib see olla tootja sisemine kontroll või teavitatud asutuse hindamine, sõltuvalt tooteklassist. <a href="/cra/#vastavushindamine">CRA vastavushindamine</a>.</dd>
           <dt id="ssrf">SSRF</dt><dd>Server-Side Request Forgery – server teeb päringu kasutaja antud aadressile, avades ligipääsu sisemistele ressurssidele. Kontrollitakse lubatud sihtkohtade ja võrgu piirangutega.</dd>
           <dt id="waf">WAF</dt><dd>Web Application Firewall – veebiliikluse filter, mis võib blokeerida osa rünnakuid, kuid ei asenda haavatavuse parandust. WAF-i taha peidetud viga jääb alles.</dd>
           <dt id="wstg">OWASP WSTG</dt><dd>OWASP Web Security Testing Guide – veebirakenduse turvatestimise kontrollide juhend. Kasutame seda veebirakenduse testide alusena. <a href="/veebirakenduse-turvatestimine/">Veebirakenduse juhend</a>.</dd>
@@ -520,6 +569,8 @@
                     <li><a href="/ai-act/">AI Act Eestis</a></li>
                     <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
+                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
                     <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
                     <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>

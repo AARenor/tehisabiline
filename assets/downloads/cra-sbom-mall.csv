@@ -1,0 +1,3 @@
+Komponendi nimi;Versioon;Tarnija;Identifikaator (purl/CPE);Litsents;Otsene või kaudne;Allikas;Räsi;Teadaolevad haavatavused;VEX staatus;Omanik;Märkused
+NÄIDIS: openssl;3.2.1;OpenSSL Project;pkg:generic/openssl@3.2.1;Apache-2.0;Otsene;build.gradle;sha256:asenda-päris-räsiga;Kontrolli OSV/CVE andmebaasist;Ei ole teada;IT-juht;Asenda näidisrida tegeliku komponendiga
+NÄIDIS: log4j-core;2.17.2;Apache Software Foundation;pkg:maven/org.apache.logging.log4j/log4j-core@2.17.2;Apache-2.0;Kaudne;Maven dependency tree;sha256:asenda-päris-räsiga;Kontrolli OSV/CVE andmebaasist;Parandatud;IT-juht;Näidis: kontrolli tegelikku versiooni

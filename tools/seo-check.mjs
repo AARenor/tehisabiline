@@ -90,8 +90,23 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/regulations/index.html",
+        canonical: `${origin}/en/regulations/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
         file: "ai-act/index.html",
         canonical: `${origin}/ai-act/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "sbom/index.html",
+        canonical: `${origin}/sbom/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true
@@ -450,7 +465,7 @@ for (const page of expectedPages) {
     const h1s = [...html.matchAll(/<h1\b[^>]*>/gi)];
     const lang = html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)?.[1] || "";
 
-    assert(lang === "et", `${label}: html lang must be et.`);
+    assert(lang === (page.lang || "et"), `${label}: html lang must be ${page.lang || "et"}.`);
     assert(Boolean(title), `${label}: title is missing.`);
     assert(Boolean(description), `${label}: meta description is missing.`);
     assert(canonical === page.canonical, `${label}: canonical must be ${page.canonical}.`);

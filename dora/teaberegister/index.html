@@ -33,6 +33,7 @@
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=2608db2b">
+    <script src="/assets/js/dora-csv-check.js" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -140,7 +141,7 @@
 
                 <section id="esitamine"><h2>Esitamine Eestis</h2><p>Eestis teeb DORA järelevalvet Finantsinspektsioon. Teaberegistri esitamise kanal ja tähtajad võivad muutuda; alates 1. novembrist 2026 suunatakse teatamine Eesti Panga ja Finantsinspektsiooni andmekogumisportaali. Kontrolli enne esitamist kehtivat kanalit ja failinõudeid.</p><p>2027. aasta alguses kogutakse registreid seisuga 31.12.2026. See ei tähenda, et register tuleks koostada alles detsembris: andmed peavad olema ajakohased ja kinnitatud kogu aasta jooksul.</p></section>
 
-                <section id="kontroll"><h2>Kontroll enne esitamist</h2><ul><li>Kas iga kirje viitab ärifunktsioonile ja kriitilisusele?</li><li>Kas kõik alltöövõtjad ja andmete asukohad on kirjas?</li><li>Kas lepingu algus, lõpp ja lõpetamise tingimused on kontrollitud?</li><li>Kas väljumisplaan on realistlik ja testitud?</li><li>Kas tõendid on lingitud või viidatud?</li><li>Kas register on kinnitatud ning sellel on omanik ja varuomanik?</li></ul></section>
+                <section id="kontroll"><h2>Kontroll enne esitamist</h2><ul><li>Kas iga kirje viitab ärifunktsioonile ja kriitilisusele?</li><li>Kas kõik alltöövõtjad ja andmete asukohad on kirjas?</li><li>Kas lepingu algus, lõpp ja lõpetamise tingimused on kontrollitud?</li><li>Kas väljumisplaan on realistlik ja testitud?</li><li>Kas tõendid on lingitud või viidatud?</li><li>Kas register on kinnitatud ning sellel on omanik ja varuomanik?</li></ul><h3>Kontrolli oma CSV-d</h3><p>Laadi töömall või oma sama veerustruktuuriga fail. Kontrollime kohustuslikke välju, kuupäevade vormingut ja korduvaid kirje ID-sid. Fail ei lahku sinu brauserist.</p><div class="nis2-check"><label for="dora-file">Vali DORA registri CSV-fail</label><input id="dora-file" type="file" accept=".csv,text/csv" data-dora-file><div class="cta-row"><button class="btn btn--primary" type="button" data-dora-check>Kontrolli faili</button></div><p class="nis2-check__result" data-dora-result role="status" aria-live="polite" tabindex="-1" hidden></p></div></section>
 
                 <section id="faq"><h2>Küsimused DORA teaberegistri kohta</h2><div class="faq">
                     <details><summary><h3>Mis on DORA teaberegister?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">DORA teaberegister on finantsettevõtja register kõigist IKT-teenuste lepingutest ja nende osutajatest. See peab näitama, millist funktsiooni teenus toetab, kas funktsioon on kriitiline või oluline, kus andmeid hoitakse ja millised on lepingu- ning väljumisriskid.</p></details>
@@ -189,6 +190,8 @@
                     <li><a href="/ai-act/">AI Act Eestis</a></li>
                     <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
+                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
                     <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
                     <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>

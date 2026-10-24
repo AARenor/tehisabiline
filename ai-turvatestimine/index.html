@@ -34,59 +34,134 @@
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="/site.css?v=2608db2b">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/ai-turvatestimine/#service",
+      "name": "AI turvatestimine",
+      "serviceType": "AI application security testing",
+      "url": "https://tehisabiline.ee/ai-turvatestimine/",
+      "description": "Kokkulepitud ulatuses AI-rakenduste turvatestimine: prompt injection, RAG-i andmeleke, agentide õigused, väljundite käsitlemine ja API-pinnad.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ"
+      },
+      "areaServed": [
         {
-          "@type": "Service",
-          "@id": "https://tehisabiline.ee/ai-turvatestimine/#service",
+          "@type": "Country",
+          "name": "Estonia"
+        },
+        {
+          "@type": "City",
+          "name": "Tallinn"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://tehisabiline.ee/ai-turvatestimine/#faq"
+      },
+      "category": "Cybersecurity testing",
+      "availableLanguage": [
+        "Estonian",
+        "English"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/ai-turvatestimine/#webpage",
+      "url": "https://tehisabiline.ee/ai-turvatestimine/",
+      "name": "AI turvatestimine: LLM, RAG ja AI Act | Tehisabiline",
+      "description": "AI turvatestimine ja tehisintellekti seadus: LLM-i ja RAG-i riskid, prompt injection, agentide õigused ning AI Acti nõuded. Selge ulatus, tõendid ja parandusplaan.",
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/ai-turvatestimine/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/ai-turvatestimine/#breadcrumb"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/ai-turvatestimine/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/ai-turvatestimine/#webpage"
+      },
+      "inLanguage": "et",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kas AI turvatestimine on sama mis tavaline pentest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. Tavaline pentest keskendub võrgu-, veebi- ja API-pindadele; AI-test lisab promptide, RAG-i, agentide tööriistade ja mudeliväljundite käitumise. Paljud AI-rakendused vajavad mõlemat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas prompt injection'i saab täielikult ära hoida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. Testimine vähendab riski ja leiab konkreetseid võimalusi, kuid LLM-i käitumine on tõenäosuslik ning mudelid ja sisendid muutuvad. Vaja on mitmekihilist kaitset ja pidevat seiret."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas AI Act ehk tehisintellekti seadus nõuab AI-turvatesti?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Acti artikkel 15 nõuab kõrge riskiga süsteemidelt täpsust, vastupidavust ja küberturvalisust, kuid ei sätesta ühte konkreetset testimeetodit. Testimine aitab tõendeid koguda, kuid ei asenda vastavushindamist ega anna sertifikaati."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mida AI-test ei tõesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "See ei tõesta, et rakendus on kõigi promptide suhtes turvaline, ega anna täielikku vastavusgarantiid. Test katab kokkulepitud stsenaariumid ja annab tõendid leitud riskide kohta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui kaua AI-turvatest kestab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kestus sõltub sihtmärkide arvust, juurdepääsust, kasutusjuhtudest ja kordustestist. Esialgne kaardistus on tasuta; täpne maht ja hind lepitakse kokku enne tööd."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/ai-turvatestimine/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
           "name": "AI turvatestimine",
-          "serviceType": "AI application security testing",
-          "url": "https://tehisabiline.ee/ai-turvatestimine/",
-          "description": "Kokkulepitud ulatuses AI-rakenduste turvatestimine: prompt injection, RAG-i andmeleke, agentide õigused, väljundite käsitlemine ja API-pinnad.",
-          "provider": {"@type": "Organization", "@id": "https://tehisabiline.ee/#organization", "name": "Tehisabiline OÜ"},
-          "areaServed": {"@type": "Country", "name": "Estonia"},
-          "availableChannel": {"@type": "ServiceChannel", "serviceUrl": "https://tehisabiline.ee/ai-turvatestimine/#faq"},
-          "category": "Cybersecurity testing"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/ai-turvatestimine/#webpage",
-          "url": "https://tehisabiline.ee/ai-turvatestimine/",
-          "name": "AI turvatestimine: LLM, RAG ja AI Act | Tehisabiline",
-          "description": "AI turvatestimine ja tehisintellekti seadus: LLM-i ja RAG-i riskid, prompt injection, agentide õigused ning AI Acti nõuded. Selge ulatus, tõendid ja parandusplaan.",
-          "datePublished": "2026-10-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
-          "about": {"@id": "https://tehisabiline.ee/#organization"},
-          "mainEntity": {"@id": "https://tehisabiline.ee/ai-turvatestimine/#service"},
-          "breadcrumb": {"@id": "https://tehisabiline.ee/ai-turvatestimine/#breadcrumb"}
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://tehisabiline.ee/ai-turvatestimine/#faq",
-          "isPartOf": {"@id": "https://tehisabiline.ee/ai-turvatestimine/#webpage"},
-          "inLanguage": "et",
-          "mainEntity": [
-            {"@type": "Question", "name": "Kas AI turvatestimine on sama mis tavaline pentest?", "acceptedAnswer": {"@type": "Answer", "text": "Ei. Tavaline pentest keskendub võrgu-, veebi- ja API-pindadele; AI-test lisab promptide, RAG-i, agentide tööriistade ja mudeliväljundite käitumise. Paljud AI-rakendused vajavad mõlemat."}},
-            {"@type": "Question", "name": "Kas prompt injection'i saab täielikult ära hoida?", "acceptedAnswer": {"@type": "Answer", "text": "Ei. Testimine vähendab riski ja leiab konkreetseid võimalusi, kuid LLM-i käitumine on tõenäosuslik ning mudelid ja sisendid muutuvad. Vaja on mitmekihilist kaitset ja pidevat seiret."}},
-            {"@type": "Question", "name": "Kas AI Act ehk tehisintellekti seadus nõuab AI-turvatesti?", "acceptedAnswer": {"@type": "Answer", "text": "AI Acti artikkel 15 nõuab kõrge riskiga süsteemidelt täpsust, vastupidavust ja küberturvalisust, kuid ei sätesta ühte konkreetset testimeetodit. Testimine aitab tõendeid koguda, kuid ei asenda vastavushindamist ega anna sertifikaati."}},
-            {"@type": "Question", "name": "Mida AI-test ei tõesta?", "acceptedAnswer": {"@type": "Answer", "text": "See ei tõesta, et rakendus on kõigi promptide suhtes turvaline, ega anna täielikku vastavusgarantiid. Test katab kokkulepitud stsenaariumid ja annab tõendid leitud riskide kohta."}},
-            {"@type": "Question", "name": "Kui kaua AI-turvatest kestab?", "acceptedAnswer": {"@type": "Answer", "text": "Kestus sõltub sihtmärkide arvust, juurdepääsust, kasutusjuhtudest ja kordustestist. Esialgne kaardistus on tasuta; täpne maht ja hind lepitakse kokku enne tööd."}}
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://tehisabiline.ee/ai-turvatestimine/#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
-            {"@type": "ListItem", "position": 2, "name": "AI turvatestimine", "item": "https://tehisabiline.ee/ai-turvatestimine/"}
-          ]
+          "item": "https://tehisabiline.ee/ai-turvatestimine/"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -192,6 +267,8 @@
                     <li><a href="/ai-act/">AI Act Eestis</a></li>
                     <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
                     <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
+                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
                     <li><a href="/e-its/">E-ITS ja audit</a></li>
                     <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
                     <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
