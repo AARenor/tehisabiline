@@ -291,6 +291,7 @@ AI automatiseerimine Eesti ettevõtetele: korduva protsessi kaardistus, andmevoo
 - https://tehisabiline.ee/artiklid/mfa-juurutamine/
 - https://tehisabiline.ee/artiklid/nis2-juhatus/
 - https://tehisabiline.ee/artiklid/kuberriskide-register/
+- https://tehisabiline.ee/artiklid/ai-teadmistebaas/
 - https://tehisabiline.ee/ai-turvatestimine/
 - https://tehisabiline.ee/pentestimine/
 - https://tehisabiline.ee/pentestimine/naidisraport/

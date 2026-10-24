@@ -263,6 +263,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "artiklid/ai-teadmistebaas/index.html",
+        canonical: `${origin}/artiklid/ai-teadmistebaas/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "et",
+        requiresPublishedDate: true
+    },
+    {
         file: "e-its/index.html",
         canonical: `${origin}/e-its/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
