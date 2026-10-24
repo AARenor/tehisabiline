@@ -222,7 +222,7 @@ Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 
 ## CRA in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/cra/
-The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia. Reporting obligations apply from 11 September 2026; the main product obligations apply from 11 December 2027. Manufacturers must document components and vulnerabilities (an SBOM), handle vulnerabilities, state a support period of at least five years unless the expected lifetime is shorter, complete conformity assessment and keep technical documentation.
+The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia. Reporting obligations apply from 11 September 2026; the main product obligations apply from 11 December 2027. Manufacturers must document components and vulnerabilities (an SBOM), handle vulnerabilities, state a support period of at least five years unless the expected lifetime is shorter, complete conformity assessment and keep technical documentation. CRA reporting uses an early warning within 24 hours, a notification within 72 hours and a final report after a corrective measure or one month after notification; the Estonian CRA page includes a browser-only deadline calculator.
 
 ## DORA in Estonia (EN)
 
