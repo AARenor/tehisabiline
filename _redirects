@@ -1,18 +1,9 @@
 /privaat-ai  /mudelid/  301
 /privaat-ai/  /mudelid/  301
 /privaat-ai/*  /mudelid/  301
-/ai  /mudelid/  301
-/ai/  /mudelid/  301
-/ai/*  /mudelid/  301
-/ai-chatbot  /  301
-/ai-chatbot/  /  301
-/ai-chatbot/*  /  301
 /ai-automatiseerimise-naited  /kasutusjuhud/  301
 /ai-automatiseerimise-naited/  /kasutusjuhud/  301
 /ai-automatiseerimise-naited/*  /kasutusjuhud/  301
-/ai-automatiseerimine  /kasutusjuhud/  301
-/ai-automatiseerimine/  /kasutusjuhud/  301
-/ai-automatiseerimine/*  /kasutusjuhud/  301
 /index.html  /  301
 
 # Internal repository files must never be served (defence in depth; deploy excludes them)

@@ -26,6 +26,27 @@ const expectedPages = [
         requiresOrganization: true
     },
     {
+        file: "ai/index.html",
+        canonical: `${origin}/ai/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "ai-chatbot/index.html",
+        canonical: `${origin}/ai-chatbot/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "ai-automatiseerimine/index.html",
+        canonical: `${origin}/ai-automatiseerimine/`,
+        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "kasutusjuhud/index.html",
         canonical: `${origin}/kasutusjuhud/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "ItemList"],

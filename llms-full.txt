@@ -25,6 +25,24 @@ This file summarizes public website information. The site language is Estonian; 
 
 ## Services
 
+### AI-teenused ettevõttele
+
+Canonical page: https://tehisabiline.ee/ai/
+
+Managed AI services for Estonian companies: an assistant that answers from company documents with source citations, a searchable knowledge base, and workflow automation with human approval. The offer starts with a free mapping and a measured 2–4 week pilot. Data stays with the customer; prompts are not used to train models; critical output is reviewed by a person. The page explains assistant, knowledge base and automation, fit, data handling, pricing logic, limits and FAQ.
+
+### Eestikeelne AI-chatbot
+
+Canonical page: https://tehisabiline.ee/ai-chatbot/
+
+Estonian-language website chatbot (vestlusrobot) grounded in an approved knowledge base. It answers common questions, shows sources, asks for clarification, hands sensitive or uncertain cases to a human and can pass qualified leads to email or CRM. The page covers use cases, fit, knowledge-base maintenance, privacy, failure modes, metrics, pricing factors and launch.
+
+### AI automatiseerimine
+
+Canonical page: https://tehisabiline.ee/ai-automatiseerimine/
+
+Practical AI and workflow automation: request triage, document field extraction, recurring reports and customer-message routing. Deterministic steps stay rules-based; AI handles variable text or documents; validation, logs and human checkpoints remain explicit. The page includes examples, a suitability check, ROI calculator, pricing factors, implementation steps, reliability, maintenance and metrics.
+
 ### Pentesting / penetration testing in Estonia
 
 Canonical page: https://tehisabiline.ee/pentestimine/
@@ -156,6 +174,9 @@ These are international research findings, not measurements of Tehisabiline cust
 ## Canonical links
 
 - https://tehisabiline.ee/
+- https://tehisabiline.ee/ai/
+- https://tehisabiline.ee/ai-chatbot/
+- https://tehisabiline.ee/ai-automatiseerimine/
 - https://tehisabiline.ee/kasutusjuhud/
 - https://tehisabiline.ee/meist/
 - https://tehisabiline.ee/mudelid/

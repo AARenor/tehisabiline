@@ -17,12 +17,13 @@ Confirmed by the owner (2026-10-11): the site serves four audiences at once.
 
 ## Product Purpose
 
-Tehisabiline OÜ (Tallinn, Estonia) offers only two services (owner, 2026-10-12):
+Tehisabiline OÜ (Tallinn, Estonia) offers three service families (owner update, 2026-10-24):
 
 - agent-driven cyber audits and pentesting ("küberaudit ja pentestimine") with written permission and human review of every significant finding;
-- a cyber-tuned, OpenAI-compatible model API for legitimate security work, to be hosted on its own hardware in Estonia (hardware ordered, hosting coming; API access by application in the pilot).
+- a cyber-tuned, OpenAI-compatible model API for legitimate security work, to be hosted on its own hardware in Estonia (hardware ordered, hosting coming; API access by application in the pilot);
+- managed AI services for Estonian companies: an assistant grounded in company documents, a knowledge base, an Estonian-language website chatbot and workflow automation, with human review of consequential output.
 
-Managed AI services, assistants, knowledge bases, automation, startup packages and SEO/GEO are deferred to a separate future website. Their source content is retained privately under `docs/future-ai-site/`, excluded from publishing and public discovery.
+Managed AI services, assistants, knowledge bases, automation, startup packages and SEO/GEO were previously deferred to a separate future website. On 2026-10-24 the owner asked for search visibility beyond the cyber keywords; `/ai/`, `/ai-chatbot/` and `/ai-automatiseerimine/` were restored from the archive as public, indexable service pages. SEO/GEO remains out of scope. Their source content is retained under `docs/future-ai-site/`.
 
 Owner priority (2026-10-12): pentesting is the primary search and homepage emphasis. `/pentestimine/` is the commercial landing page; `/api-turvatestimine/` and `/veebirakenduse-turvatestimine/` are distinct educational guides. `/kuberaudit/` stays focused on broader security posture. The existing-system API testing guide is not the planned model API product at `/mudelid/`. Terminology includes pentestimine, pentest, läbitungimistest, pentesting and penetration testing, with substantive visible explanations rather than keyword stuffing or duplicate synonym pages.
 
