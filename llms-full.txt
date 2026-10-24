@@ -47,7 +47,7 @@ Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE i
 
 ### DORA guide
 
-Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing), Finantsinspektsioon supervision, the incident-reporting channel change from email to the central bank/authority portal on 1 November 2026, the Article 28(3) register of information and its annual submission, TLPT under Articles 26–27 via TIBER-EE, differences from NIS2 and E-ITS, and a 30/60/90-day readiness plan. It states that DORA has no certificate and is not limited to pentesting.
+Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing), Finantsinspektsioon supervision, the incident-reporting channel change from email to the central bank/authority portal on 1 November 2026, the Article 28(3) register of information and its annual submission, a downloadable CSV register template, TLPT under Articles 26–27 via TIBER-EE, differences from NIS2 and E-ITS, and a 30/60/90-day readiness plan. It states that DORA has no certificate and is not limited to pentesting.
 
 ### E-ITS (Estonian information security standard)
 
