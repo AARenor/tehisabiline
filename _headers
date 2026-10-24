@@ -28,6 +28,8 @@
   Cache-Control: public, max-age=31536000, immutable
 /assets/js/hero-demo.js
   Cache-Control: public, max-age=31536000, immutable
+/assets/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 /assets/plates/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 /assets/icons.svg
