@@ -35,127 +35,232 @@
     <link rel="stylesheet" href="/site.css?v=a0f76a5d">
     <link rel="stylesheet" href="/assets/css/pages/kuberaudit.css?v=73ebb5f5">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Service",
+      "@id": "https://tehisabiline.ee/kuberaudit/#service",
+      "url": "https://tehisabiline.ee/kuberaudit/",
+      "name": "Küberaudit Eestis",
+      "serviceType": "Inimese ülevaatusega agendipõhine küberaudit",
+      "description": "Küberaudit Eesti ettevõttele: kokkulepitud süsteeme kontrollitakse kirjaliku loa alusel. Aktiivse pentesti ulatus lepitakse eraldi kokku; olulised leiud vaatab inimene üle ning raport sisaldab prioriteetset parandusplaani.",
+      "provider": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Estonia"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Eesti ettevõtted"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://tehisabiline.ee/kuberaudit/#protsess",
+      "name": "Kuidas küberaudit käib",
+      "description": "Agendipõhise küberauditi neli sammu kirjaliku loa alusel.",
+      "step": [
         {
-          "@type": "Service",
-          "@id": "https://tehisabiline.ee/kuberaudit/#service",
-          "url": "https://tehisabiline.ee/kuberaudit/",
-          "name": "Küberaudit Eestis",
-          "serviceType": "Inimese ülevaatusega agendipõhine küberaudit",
-          "description": "Küberaudit Eesti ettevõttele: kokkulepitud süsteeme kontrollitakse kirjaliku loa alusel. Aktiivse pentesti ulatus lepitakse eraldi kokku; olulised leiud vaatab inimene üle ning raport sisaldab prioriteetset parandusplaani.",
-          "provider": {"@id": "https://tehisabiline.ee/#organization"},
-          "areaServed": {"@type": "Country", "name": "Estonia"},
-          "audience": {"@type": "BusinessAudience", "audienceType": "Eesti ettevõtted"}
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Pinna kaardistus",
+          "text": "Paneme kirja domeenid, liidesed, ligipääsud ja täpse testimisloa."
         },
         {
-          "@type": "HowTo",
-          "@id": "https://tehisabiline.ee/kuberaudit/#protsess",
-          "name": "Kuidas küberaudit käib",
-          "description": "Agendipõhise küberauditi neli sammu kirjaliku loa alusel.",
-          "step": [
-            {"@type": "HowToStep", "position": 1, "name": "Pinna kaardistus", "text": "Paneme kirja domeenid, liidesed, ligipääsud ja täpse testimisloa."},
-            {"@type": "HowToStep", "position": 2, "name": "Kontrollitud testid", "text": "Kontrollime konfiguratsioone, autentimist, sisendeid ja võimalikke andmelekke teid kokkulepitud mahus."},
-            {"@type": "HowToStep", "position": 3, "name": "Käsitsi ülevaatus", "text": "Kordame olulised leiud üle. Valehäired raportisse ei lähe."},
-            {"@type": "HowToStep", "position": 4, "name": "Parandusplaan", "text": "Jaotame tööd kolme järjekorda: kohe, nädalaga ja plaani korras."}
-          ]
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Kontrollitud testid",
+          "text": "Kontrollime konfiguratsioone, autentimist, sisendeid ja võimalikke andmelekke teid kokkulepitud mahus."
         },
         {
-          "@type": "WebPage",
-          "@id": "https://tehisabiline.ee/kuberaudit/#webpage",
-          "url": "https://tehisabiline.ee/kuberaudit/",
-          "name": "Küberaudit Eestis: turvaaudit | Tehisabiline",
-          "description": "Küberaudit Eesti ettevõttele: laiem turvaseisu ülevaade, kontrollitavad süsteemid, inimese ülevaatus ning parandusplaan.",
-          "datePublished": "2026-09-24",
-          "dateModified": "2026-10-24",
-          "inLanguage": "et",
-          "isPartOf": {"@id": "https://tehisabiline.ee/#website"},
-          "about": {"@id": "https://tehisabiline.ee/kuberaudit/#service"},
-          "author": {"@id": "https://tehisabiline.ee/#organization"},
-          "publisher": {"@id": "https://tehisabiline.ee/#organization"},
-          "mainEntity": {"@id": "https://tehisabiline.ee/kuberaudit/#service"},
-          "breadcrumb": {"@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb"},
-          "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97", "width": 1200, "height": 630}
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Käsitsi ülevaatus",
+          "text": "Kordame olulised leiud üle. Valehäired raportisse ei lähe."
         },
         {
-          "@type": "BreadcrumbList",
-          "@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://tehisabiline.ee/"},
-            {"@type": "ListItem", "position": 2, "name": "Küberaudit ja pentest", "item": "https://tehisabiline.ee/kuberaudit/"}
-          ]
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Parandusplaan",
+          "text": "Jaotame tööd kolme järjekorda: kohe, nädalaga ja plaani korras."
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/kuberaudit/#webpage",
+      "url": "https://tehisabiline.ee/kuberaudit/",
+      "name": "Küberaudit Eestis: turvaaudit | Tehisabiline",
+      "description": "Küberaudit Eesti ettevõttele: laiem turvaseisu ülevaade, kontrollitavad süsteemid, inimese ülevaatus ning parandusplaan.",
+      "datePublished": "2026-09-24",
+      "dateModified": "2026-10-24",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/kuberaudit/#service"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/kuberaudit/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png?v=7dd26d97",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/kuberaudit/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://tehisabiline.ee/"
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://tehisabiline.ee/kuberaudit/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Kuidas agendipõhine audit käib?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Automaatsed kontrollid otsivad nõrku kohti kokkulepitud ulatuses. Inimene kordab olulised leiud üle, eemaldab valehäired ja paneb parandused järjekorda."}
-            },
-            {
-              "@type": "Question",
-              "name": "Mille poolest erineb see tavalisest auditist?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitsi tehtavatele tegevustele."}
-            },
-            {
-              "@type": "Question",
-              "name": "Kas AI teeb otsuseid üksi?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Ei. Tööriistad koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid vaadatakse enne raportit käsitsi üle."}
-            },
-            {
-              "@type": "Question",
-              "name": "Kas audit lõhub midagi ära?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Testime ettevaatlikult kokkulepitud mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel."}
-            },
-            {
-              "@type": "Question",
-              "name": "Millest auditi hind sõltub?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Süsteemide arvust, kontrolli sügavusest, ligipääsudest ja järelkontrolli vajadusest. Tasuta kaardistuse järel saad selge pakkumise."}
-            },
-            {
-              "@type": "Question",
-              "name": "Mida te ei auditeeri?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Võõraid süsteeme ilma omaniku kirjaliku loata. Loata testimine on välistatud."}
-            },
-            {
-              "@type": "Question",
-              "name": "Millal valida agendipõhine audit tavalise asemel?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Kui vajad lühikese ajaga laia katvust. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini käsitsi pentest; ütleme kaardistuses ausalt, kumb on mõistlikum."}
-            },
-            {
-              "@type": "Question",
-              "name": "Kas tasuta skannerist ei piisa?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Skanner leiab teadaolevaid haavatavusi, kuid ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. See sobib seireks, mitte tervikpildi saamiseks."}
-            },
-            {
-              "@type": "Question",
-              "name": "Kas NIS2 mind puudutab?",
-              "acceptedAnswer": {"@type": "Answer", "text": "NIS2 direktiivi üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja nis2.ee juhistest."}
-            },
-            {
-              "@type": "Question",
-              "name": "Mis on küberaudit?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süsteemikindlus ja andmeleke. Tulemuseks on parandusplaan tähtsuse järjekorras."}
-            },
-            {
-              "@type": "Question",
-              "name": "Mis vahe on küberauditil ja pentestil?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Pentest proovib ühte sihtmärki aktiivselt murda. Küberaudit vaatab laiemalt konfiguratsioone, õigusi, varundust ja töökorraldust. Audit võib sisaldada kontrollitud ründeteste, kuid ainult sinu loal."}
-            },
-            {
-              "@type": "Question",
-              "name": "Kui tihti peaks küberauditit tegema?",
-              "acceptedAnswer": {"@type": "Answer", "text": "Vähemalt kord aastas ning pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu."}
-            }
-          ]
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Küberaudit ja pentest",
+          "item": "https://tehisabiline.ee/kuberaudit/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/kuberaudit/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kuidas agendipõhine audit käib?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Automaatsed kontrollid otsivad nõrku kohti kokkulepitud ulatuses. Inimene kordab olulised leiud üle, eemaldab valehäired ja paneb parandused järjekorda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mille poolest erineb see tavalisest auditist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Automatiseeritud töö katab korraga rohkem pinda. Inimene saab kulutada aja leidude kontrollimisele ja paranduste hindamisele, mitte korduvatele käsitsi tehtavatele tegevustele."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas AI teeb otsuseid üksi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. Tööriistad koguvad tõendeid ja pakuvad hinnanguid, kuid iga oluline leid vaadatakse enne raportit käsitsi üle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas audit lõhub midagi ära?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Testime ettevaatlikult kokkulepitud mahus ega muuda andmeid. Muutvaid tegevusi teeme ainult eraldi kirjalikul kokkuleppel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Millest auditi hind sõltub?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Süsteemide arvust, kontrolli sügavusest, ligipääsudest ja järelkontrolli vajadusest. Tasuta kaardistuse järel saad selge pakkumise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mida te ei auditeeri?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Võõraid süsteeme ilma omaniku kirjaliku loata. Loata testimine on välistatud."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Millal valida agendipõhine audit tavalise asemel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kui vajad lühikese ajaga laia katvust. Keeruka erisüsteemi süvaanalüüsiks võib sobida paremini käsitsi pentest; ütleme kaardistuses ausalt, kumb on mõistlikum."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas tasuta skannerist ei piisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skanner leiab teadaolevaid haavatavusi, kuid ei hinda äriloogikat, ligipääsude tegelikku tähendust ega paranduste järjekorda. See sobib seireks, mitte tervikpildi saamiseks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas NIS2 mind puudutab?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NIS2 direktiivi üle võttev Eesti küberturvalisuse seadus jõustus 1. jaanuaril 2026 ja kohaldub reeglina elutähtsate ning oluliste teenuste osutajatele. Tavaline mikro- ja väikeettevõte sinna ei kuulu. Kontrolli täpset kohaldumist RIA ja nis2.ee juhistest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mis on küberaudit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süsteemikindlus ja andmeleke. Tulemuseks on parandusplaan tähtsuse järjekorras."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mis vahe on küberauditil ja pentestil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pentest proovib ühte sihtmärki aktiivselt murda. Küberaudit vaatab laiemalt konfiguratsioone, õigusi, varundust ja töökorraldust. Audit võib sisaldada kontrollitud ründeteste, kuid ainult sinu loal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui tihti peaks küberauditit tegema?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vähemalt kord aastas ning pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas küberaudit annab ISO 27001 sertifikaadi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ei. ISO 27001 sertifikaadi väljastab akrediteeritud sertifitseerimisasutus pärast sertifitseerimisauditit. Tavaline küberaudit aitab tõendeid ja puudujääke ette valmistada, kuid ei asenda sertifitseerimist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas valida E-ITS või ISO 27001?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "See sõltub kohustusest ja klientidest. E-ITS on Eesti infoturbestandard, mida kasutatakse avalikus sektoris ja kriitilises taristus; ISO 27001 on rahvusvaheliselt tuntud sertifitseeritav juhtimissüsteem. Mõlemad saab siduda NIS2 tõenditega, kuid kumbki ei asenda teist automaatselt."
+          }
         }
       ]
     }
-    </script>
+  ]
+}</script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Liigu põhisisu juurde</a>
@@ -207,7 +312,7 @@
 
         <section class="section">
             <div class="wrap article">
-                <nav class="toc" aria-label="Auditi sisukord"><strong>Sellel lehel</strong><ol><li><a href="#mis-on">Mis on küberaudit?</a></li><li><a href="#protsess">Kuidas töö käib?</a></li><li><a href="#sisu">Kontrollnimekiri</a></li><li><a href="#inimene">Inimese kontroll</a></li><li><a href="#numbrid">Miks just nüüd?</a></li><li><a href="#sobivus">Sobivus</a></li><li><a href="#kupsus">Küberküpsus</a></li><li><a href="#hind">Hind</a></li><li><a href="#tingimused">Tingimused</a></li><li><a href="#pentestimine">Audit, pentest või skanner?</a></li><li><a href="#tellimine">Tellimine</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
+                <nav class="toc" aria-label="Auditi sisukord"><strong>Sellel lehel</strong><ol><li><a href="#mis-on">Mis on küberaudit?</a></li><li><a href="#protsess">Kuidas töö käib?</a></li><li><a href="#skoop">Skoop</a></li><li><a href="#sisu">Kontrollnimekiri</a></li><li><a href="#standardid">Standardid</a></li><li><a href="#raport">Raport</a></li><li><a href="#inimene">Inimese kontroll</a></li><li><a href="#numbrid">Miks just nüüd?</a></li><li><a href="#sobivus">Sobivus</a></li><li><a href="#kupsus">Küberküpsus</a></li><li><a href="#hind">Hind</a></li><li><a href="#tingimused">Tingimused</a></li><li><a href="#pentestimine">Audit, pentest või skanner?</a></li><li><a href="#tellimine">Tellimine</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
                 <article class="prose">
                     <section class="short-answer" id="mis-on" aria-labelledby="short-answer">
                         <h2 id="short-answer">Mis vahe on küberauditil ja pentestil?</h2>
@@ -225,7 +330,8 @@
                         </ol>
                     </section>
 
-                    <section id="sisu">
+                    <section id="skoop"><h2>Küberturbeauditi skoop: organisatsioon, pilv ja tarneahel</h2><p>Küberaudit ei ole ainult rakenduse konfiguratsiooni kontrolöör. Organisatsiooni tasandil vaadatakse, kas juhtimine, ligipääsud, varundus ja tarneahel toetavad teenuse toimepidevust. Täpne skoop lepitakse enne tööd kirjalikult kokku.</p><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Valdkond</th><th scope="col">Mida vaadatakse</th><th scope="col">Tõend, mida küsime</th></tr></thead><tbody><tr><th scope="row">Identiteet ja pilv</th><td data-label="Mida vaadatakse">M365/Google Workspace, SSO, MFA, admin-rollid, külalisligipääs</td><td data-label="Tõend">Rollide loetelu, tenant'i seadistus, MFA-poliitika</td></tr><tr><th scope="row">Võrk ja segmenteerimine</th><td data-label="Mida vaadatakse">VLAN-id, VPN, tulemüürid, avalikult nähtavad teenused</td><td data-label="Tõend">Reeglistik, portide skaneering, arhitektuuriskeem</td></tr><tr><th scope="row">Varundus ja taaste</th><td data-label="Mida vaadatakse">RPO/RTO, taastetestid, varunduse ligipääs ja immutability</td><td data-label="Tõend">Taastelogi, varundusgraafik, rollide eraldus</td></tr><tr><th scope="row">Tarneahel</th><td data-label="Mida vaadatakse">Kriitilised tarnijad, nende ligipääs ja intsidendikohustused</td><td data-label="Tõend">Tarnijate loetelu, lepingud, DPAd, teavitustähtajad</td></tr><tr><th scope="row">Seire ja logimine</th><td data-label="Mida vaadatakse">Logide säilitus, hoiatuste reeglid, kella sünkroonimine</td><td data-label="Tõend">Näidisalarmid, logi säilitusaeg, eskaleerimise kord</td></tr><tr><th scope="row">Füüsiline turve</th><td data-label="Mida vaadatakse">Serveriruum, UPS, lukud, kaamerad; pilves teenusepakkuja atesteeringud</td><td data-label="Tõend">Juurdepääsulogid, hoolduslepingud, pilvepakkuja aruanded</td></tr><tr><th scope="row">Rakendus ja API</th><td data-label="Mida vaadatakse">Autentimine, õiguskontroll, sisendid, HTTP-turve, AI-pinnad</td><td data-label="Tõend">Testkontod, päringud, leiud ja paranduskontroll</td></tr><tr><th scope="row">Intsidendivalmidus</th><td data-label="Mida vaadatakse">Plaan, rollid, kontaktid, lauaõppus, tõendite säilitamine</td><td data-label="Tõend">Plaani versioon, õppuse raport, kontaktide ajakohasus</td></tr></tbody></table></div><p>Kui mõni valdkond jääb ulatusest välja, märgitakse see raportisse piiranguna. See hoiab ära vale mulje täielikust vastavusest.</p></section>
+        <section id="sisu">
                         <h2>Mida küberaudit kontrollib?</h2>
                         <div class="table-wrap table-wrap--stack" role="region" aria-label="Küberauditi kontrollvaldkonnad" tabindex="0">
                             <table class="data">
@@ -343,7 +449,9 @@
                             <li><strong>Füüsiline turvalisus ja personaliprotsessid</strong>, välja arvatud kokkulepitud ulatuses.</li>
                         </ul>
                     </section>
-                    <section id="tellimine">
+                    <section id="standardid"><h2>Standardid: E-ITS, ISO 27001, ISKE ja NIST CSF</h2><p>Auditi raamistik valitakse selle järgi, mida tõendada tuleb – seadus, klient, juhtkond või sertifitseerimine. Ükski raamistik ei asenda teist automaatselt.</p><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Raamistik</th><th scope="col">Mida annab</th><th scope="col">Mida ei anna</th></tr></thead><tbody><tr><th scope="row">E-ITS</th><td data-label="Mida annab">Eesti infoturbestandard: juhtimisnõuded, basemudel ja küpsustasemed; kasutusel avalikus sektoris ja kriitilises taristus</td><td data-label="Mida ei anna">Ei ole automaatselt ISO 27001 sertifikaat</td></tr><tr><th scope="row">ISO/IEC 27001</th><td data-label="Mida annab">Rahvusvaheline infoturbe juhtimissüsteemi standard; sertifitseeritav akrediteeritud asutuse poolt</td><td data-label="Mida ei anna">Sertifikaat ei tõenda iga tehnilise kontrolli toimimist ega asenda pentesti</td></tr><tr><th scope="row">ISKE</th><td data-label="Mida annab">Riigi infosüsteemide turvameetmete süsteem kolme turvatasemega; avaliku sektori baseline</td><td data-label="Mida ei anna">Ei ole mõeldud ärisektori üldiseks sertifikaadiks</td></tr><tr><th scope="row">NIST CSF</th><td data-label="Mida annab">Riskijuhtimise raamistik (identifitseeri, kaitse, tuvasta, reageeri, taasta)</td><td data-label="Mida ei anna">Ei ole sertifitseeritav ega õiguslik nõue</td></tr><tr><th scope="row">NIS2 / KüTS</th><td data-label="Mida annab">Õiguslik kohustus ja auditeeritavad tõendid; seob riskijuhtimise, teatamise ja juhtkonna vastutuse</td><td data-label="Mida ei anna">Ei ole „NIS2 sertifikaat“; vastavust hinnatakse meetmete ja tõendite kaudu</td></tr></tbody></table></div><p>Finantssektoril võivad lisanduda DORA ja TLPT nõuded; neid ei kata tavaline küberaudit. Kui sertifitseerimine on eesmärk, tuleb sertifitseerija valida eraldi – meie ei väljasta sertifikaate.</p></section>
+        <section id="raport"><h2>Auditi raport: mida tellija saab</h2><p>Raport peab toetama otsust, mitte ainult loetlema puudusi. Hea raport sisaldab:</p><ul><li><strong>Juhtkokkuvõte:</strong> kolm kõige olulisemat riski ja otsus, mida juhtkonnalt oodatakse.</li><li><strong>Skoop ja piirangud:</strong> mida testiti, mida mitte ja millistel eeldustel.</li><li><strong>Metoodika:</strong> raamistik, käsitsi ja automaatse töö osakaal, valimi loogika.</li><li><strong>Leiud tõenditega:</strong> mõju, korratavus, viide tõendile ja parandussoovitus.</li><li><strong>Küpsus- või riskihinnang:</strong> kriteeriumid, mitte ainult üldsõnaline hinne.</li><li><strong>Parandusplaan:</strong> vastutaja, tähtaeg ja järjekord mõju järgi.</li><li><strong>Järelkontroll:</strong> mida ja millal uuesti kontrollitakse.</li></ul><p>Raporti struktuuri näidis on <a href="/pentestimine/naidisraport/">pentesti näidisraportis</a>; see aitab võrrelda pakkumusi ka siis, kui tehniline sisu erineb.</p><p><strong>Mida pakkujalt küsida:</strong> kes tööd teeb ja kas ta on sõltumatu; milline on metoodika; kas saab näha maskeeritud näidisraportit; kuidas kaitstakse andmeid ja sõlmitakse NDA; kas parandusi kontrollitakse; mis on raporti tähtaeg ja mis ei kuulu hinda.</p></section>
+        <section id="tellimine">
                         <h2>Auditi tellimise checklist</h2>
                         <p>Enne päringut kogu need andmed. Mida täpsem sisend, seda konkreetsem pakkumine ja lühem eeltöö.</p>
                         <ol>
@@ -360,6 +468,8 @@
                         <h2>Küsimused küberauditi kohta</h2>
                         <div class="faq">
                             <details><summary><h3>Mis on küberaudit?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>Küberaudit on süsteemne kontroll: uuendused, ligipääsud, varundus, turvapäised, sisendikontroll ning AI-rakenduste puhul süsteemikindlus ja andmeleke. Tulemuseks on parandusplaan tähtsuse järjekorras.</p></div></details>
+                            <details><summary><h3>Kas küberaudit annab ISO 27001 sertifikaadi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>Ei. ISO 27001 sertifikaadi väljastab akrediteeritud sertifitseerimisasutus pärast sertifitseerimisauditit. Tavaline küberaudit aitab tõendeid ja puudujääke ette valmistada, kuid ei asenda sertifitseerimist.</p></div></details>
+                            <details><summary><h3>Kas valida E-ITS või ISO 27001?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>See sõltub kohustusest ja klientidest. E-ITS on Eesti infoturbestandard, mida kasutatakse avalikus sektoris ja kriitilises taristus; ISO 27001 on rahvusvaheliselt tuntud sertifitseeritav juhtimissüsteem. Mõlemad saab siduda NIS2 tõenditega, kuid kumbki ei asenda teist automaatselt.</p></div></details>
                             <details><summary><h3>Mis vahe on küberauditil ja pentestil?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>Pentest proovib ühte sihtmärki aktiivselt murda. Küberaudit vaatab laiemalt konfiguratsioone, õigusi, varundust ja töökorraldust. Audit võib sisaldada kontrollitud ründeteste, kuid ainult sinu loal.</p></div></details>
                             <details><summary><h3>Kui tihti peaks küberauditit tegema?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>Vähemalt kord aastas ning pärast suuremaid muudatusi: uue e-poe või kliendiportaali avamist, haldaja vahetust või AI-rakenduse kasutuselevõttu.</p></div></details>
                             <details><summary><h3>Kuidas agendipõhine audit käib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><p>Automaatsed kontrollid otsivad nõrku kohti kokkulepitud ulatuses. Inimene kordab olulised leiud üle, eemaldab valehäired ja paneb parandused järjekorda.</p></div></details>
