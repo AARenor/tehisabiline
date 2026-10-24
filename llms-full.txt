@@ -226,6 +226,11 @@ The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and a
 Canonical page: https://tehisabiline.ee/en/sbom/
 The CRA requires manufacturers to identify and document product components and vulnerabilities. A useful SBOM is tied to a release, covers transitive dependencies, includes component identifiers and is linked to a triage and remediation process. SPDX and CycloneDX are common machine-readable formats; the CRA does not prescribe one format.
 
+## E-ITS in Estonia (EN)
+
+Canonical page: https://tehisabiline.ee/en/e-its/
+E-ITS is the Estonian information-security framework maintained under RIA. It provides a measure catalogue, a selection method and an audit model. The 2026 version removed preliminary and interim audits and moved to a three-year main audit cycle. E-ITS can support NIS2 evidence but does not by itself prove NIS2 compliance.
+
 ## Canonical links
 
 - https://tehisabiline.ee/
@@ -245,6 +250,7 @@ The CRA requires manufacturers to identify and document product components and v
 - https://tehisabiline.ee/en/dora/
 - https://tehisabiline.ee/en/ai-act/
 - https://tehisabiline.ee/en/sbom/
+- https://tehisabiline.ee/en/e-its/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
