@@ -66,6 +66,8 @@ Status reviewed on 2026-10-25:
 
 - [NIS2 energeetikas](https://tehisabiline.ee/sektorid/energeetika/): OT-riskid, tarneahel, intsidendid ja audititõendid.
 
+- [NIS2 tervishoius](https://tehisabiline.ee/sektorid/tervishoid/): patsiendiohutus, meditsiiniseadmed, tarneahel ja intsidendid.
+
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.

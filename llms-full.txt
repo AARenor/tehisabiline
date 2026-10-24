@@ -321,6 +321,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/nis2/toetus/
 - https://tehisabiline.ee/nis2/trahvid/
 - https://tehisabiline.ee/nis2/registreerimine/
+- https://tehisabiline.ee/sektorid/tervishoid/
 - https://tehisabiline.ee/sektorid/energeetika/
 - https://tehisabiline.ee/nis2/audit/
 - https://tehisabiline.ee/privaatsus/
