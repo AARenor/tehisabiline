@@ -9,6 +9,7 @@ Entity:
 - Founder: Arle Aron Reidma (public profile: https://www.f6s.com/company/tehisabiline)
 - Email: tehisabiline@gmail.com
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
+- Entity map (JSON): https://tehisabiline.ee/entitymap.json — canonical organization, founder, services, topic vocabulary and the page-to-cluster map
 
 Status reviewed on 2026-10-25:
 

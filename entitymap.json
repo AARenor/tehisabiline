@@ -1,0 +1,616 @@
+{
+  "$comment": "Canonical entity map for tehisabiline.ee. Enforced by tools/entitymap.mjs (run standalone or via npm run test:seo). Pages may repeat these values and must reference the same @id; they must not introduce a contradicting Organization, Person, Service or Topic node. Asset URLs are compared without their ?v= cache-buster.",
+  "version": 1,
+  "updated": "2026-10-25",
+  "origin": "https://tehisabiline.ee",
+  "organization": {
+    "@type": "Organization",
+    "@id": "https://tehisabiline.ee/#organization",
+    "name": "Tehisabiline OÜ",
+    "legalName": "Tehisabiline OÜ",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "Registrikood",
+      "value": "17607255",
+      "url": "https://ariregister.rik.ee/est/company/17607255"
+    },
+    "foundingDate": "2026-09-24",
+    "alternateName": "Tehisabiline",
+    "url": "https://tehisabiline.ee/",
+    "sameAs": [
+      "https://github.com/AARenor/tehisabiline",
+      "https://www.f6s.com/company/tehisabiline"
+    ],
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tehisabiline.ee/assets/brand/logo-512.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": "https://tehisabiline.ee/assets/brand/tehisabiline-og.png",
+    "email": "tehisabiline@gmail.com",
+    "founder": {
+      "@id": "https://tehisabiline.ee/#founder"
+    },
+    "description": "Tallinnas tegutsev ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tallinn",
+      "addressCountry": "EE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Estonia"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "tehisabiline@gmail.com",
+      "availableLanguage": [
+        "et",
+        "en"
+      ]
+    },
+    "knowsAbout": [
+      "Küberturbe AI-mudelid",
+      "Keeldudeta ja piirangutega küber-AI",
+      "AI rakendusliidesed",
+      "Agendipõhine küberturve",
+      "Haavatavuste auditid",
+      "Küberauditid",
+      "Küberturvalisus",
+      "Pentestimine",
+      "Läbistustestimine",
+      "API turvatestimine",
+      "Veebirakenduse turvatestimine",
+      "NIS2",
+      "E-ITS",
+      "TLPT",
+      "DORA",
+      "DORA teaberegister",
+      "ISO/IEC 27001",
+      "Cyber Resilience Act",
+      "SBOM",
+      "AI Act",
+      "RAG-i turvatestimine",
+      "Prompt injection",
+      "NIS2 registreerimine",
+      "NIS2 audit",
+      "NIS2 intsidendist teatamine",
+      "NIS2 trahvid",
+      "DORA audit",
+      "Küberturvalisuse koolitus",
+      "NIS2 toetus"
+    ],
+    "contactPointVariants": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "media",
+        "email": "tehisabiline@gmail.com",
+        "availableLanguage": [
+          "en",
+          "et"
+        ]
+      }
+    ]
+  },
+  "person": {
+    "@type": "Person",
+    "@id": "https://tehisabiline.ee/#founder",
+    "name": "Arle Aron Reidma",
+    "jobTitle": "Asutaja",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+      "contentUrl": "https://tehisabiline.ee/assets/images/arle-aron-reidma-800.jpg",
+      "name": "Arle Aron Reidma",
+      "caption": "Arle Aron Reidma, Tehisabiline OÜ asutaja ja AI-arendaja",
+      "width": 800,
+      "height": 800
+    },
+    "worksFor": {
+      "@id": "https://tehisabiline.ee/#organization"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/arlearonreidma/",
+      "https://cerebralvalley.ai/u/AAR1",
+      "https://github.com/arlearonreidma",
+      "https://www.f6s.com/company/tehisabiline"
+    ],
+    "knowsAbout": [
+      "AI Act",
+      "AI security",
+      "AI-mudelite peenhäälestus",
+      "API security",
+      "API turvalisus",
+      "Cyber Resilience Act",
+      "Cyber Resilience Act (CRA)",
+      "Cybersecurity Act",
+      "Cybersecurity audit",
+      "DORA",
+      "DORA audit",
+      "DORA teaberegister",
+      "E-ITS",
+      "ISO 27001",
+      "ISO/IEC 27001",
+      "KüTS",
+      "Küberaudit",
+      "Küberturbe auditid ja pentestid",
+      "Küberturbe tööriistade API",
+      "Küberturvalisus",
+      "Küberturvalisuse koolitus",
+      "NIS2",
+      "NIS2 audit",
+      "NIS2 intsidendist teatamine",
+      "NIS2 registreerimine",
+      "NIS2 toetus",
+      "NIS2 trahvid",
+      "Penetration testing",
+      "Pentestimine",
+      "RIA registration",
+      "SBOM",
+      "Security audit",
+      "Tehisintellekt",
+      "Turvaaudit"
+    ],
+    "description": "Founder of Tehisabiline OÜ. Works on cybersecurity audits, scoped penetration testing and cyber-AI APIs for security tooling.",
+    "url": "https://tehisabiline.ee/meist/",
+    "urlAliases": [
+      "https://tehisabiline.ee/meist/#autor"
+    ],
+    "jobTitleAliases": [
+      "Founder"
+    ],
+    "knowsLanguage": [
+      "et",
+      "en"
+    ]
+  },
+  "services": [
+    {
+      "id": "pentestimine",
+      "name": "Pentestimine ja läbistustestimine",
+      "url": "/pentestimine/",
+      "serviceType": "Penetration testing",
+      "audience": "Estonian companies"
+    },
+    {
+      "id": "kuberaudit",
+      "name": "Küberaudit ja turvaaudit",
+      "url": "/kuberaudit/",
+      "serviceType": "Cybersecurity audit",
+      "audience": "Estonian companies"
+    },
+    {
+      "id": "api-turvatestimine",
+      "name": "API turvatestimine",
+      "url": "/api-turvatestimine/",
+      "serviceType": "API security testing",
+      "audience": "Product and platform teams"
+    },
+    {
+      "id": "ai-turvatestimine",
+      "name": "AI turvatestimine",
+      "url": "/ai-turvatestimine/",
+      "serviceType": "AI application security testing",
+      "audience": "Teams shipping LLM, RAG and agent features"
+    },
+    {
+      "id": "ai-api",
+      "name": "Keeldudeta küber-AI API",
+      "url": "/mudelid/",
+      "serviceType": "OpenAI-compatible model API (pilot, not public)",
+      "audience": "Security tooling developers"
+    }
+  ],
+  "topics": [
+    {
+      "id": "nis2",
+      "label": "NIS2",
+      "sameAs": [
+        "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      ],
+      "hub": "/nis2/",
+      "knowsAbout": [
+        "NIS2"
+      ]
+    },
+    {
+      "id": "nis2-registration",
+      "label": "NIS2 registreerimine",
+      "hub": "/nis2/registreerimine/",
+      "knowsAbout": [
+        "NIS2 registreerimine"
+      ]
+    },
+    {
+      "id": "nis2-fines",
+      "label": "NIS2 trahvid",
+      "hub": "/nis2/trahvid/",
+      "knowsAbout": [
+        "NIS2 trahvid"
+      ]
+    },
+    {
+      "id": "nis2-incidents",
+      "label": "NIS2 intsidendist teatamine",
+      "hub": "/nis2/intsidendist-teatamine/",
+      "knowsAbout": [
+        "NIS2 intsidendist teatamine"
+      ]
+    },
+    {
+      "id": "nis2-audit",
+      "label": "NIS2 audit",
+      "hub": "/nis2/audit/",
+      "knowsAbout": [
+        "NIS2 audit"
+      ]
+    },
+    {
+      "id": "nis2-grant",
+      "label": "NIS2 toetus",
+      "hub": "/nis2/toetus/",
+      "knowsAbout": [
+        "NIS2 toetus"
+      ]
+    },
+    {
+      "id": "dora",
+      "label": "DORA",
+      "sameAs": [
+        "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+      ],
+      "hub": "/dora/",
+      "knowsAbout": [
+        "DORA"
+      ]
+    },
+    {
+      "id": "dora-register",
+      "label": "DORA teaberegister",
+      "sameAs": [
+        "https://eur-lex.europa.eu/eli/reg_impl/2024/2956/oj/eng"
+      ],
+      "hub": "/dora/teaberegister/",
+      "knowsAbout": [
+        "DORA teaberegister"
+      ]
+    },
+    {
+      "id": "dora-audit",
+      "label": "DORA audit",
+      "hub": "/dora/audit/",
+      "knowsAbout": [
+        "DORA audit"
+      ]
+    },
+    {
+      "id": "tlpt",
+      "label": "TLPT ja TIBER-EE",
+      "sameAs": [
+        "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html"
+      ],
+      "hub": "/tlpt/",
+      "knowsAbout": [
+        "TLPT"
+      ]
+    },
+    {
+      "id": "e-its",
+      "label": "E-ITS",
+      "sameAs": [
+        "https://eits.ria.ee/et/versioon/2026/eits"
+      ],
+      "hub": "/e-its/",
+      "knowsAbout": [
+        "E-ITS"
+      ]
+    },
+    {
+      "id": "iso-27001",
+      "label": "ISO/IEC 27001",
+      "sameAs": [
+        "https://www.iso.org/standard/27001"
+      ],
+      "hub": "/iso-27001/",
+      "knowsAbout": [
+        "ISO/IEC 27001"
+      ]
+    },
+    {
+      "id": "cra",
+      "label": "Cyber Resilience Act",
+      "sameAs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+      ],
+      "hub": "/cra/",
+      "knowsAbout": [
+        "Cyber Resilience Act"
+      ]
+    },
+    {
+      "id": "sbom",
+      "label": "SBOM",
+      "sameAs": [
+        "https://www.cisa.gov/sbom"
+      ],
+      "hub": "/sbom/",
+      "knowsAbout": [
+        "SBOM"
+      ]
+    },
+    {
+      "id": "ai-act",
+      "label": "AI Act",
+      "sameAs": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      ],
+      "hub": "/ai-act/",
+      "knowsAbout": [
+        "AI Act"
+      ]
+    },
+    {
+      "id": "ai-testing",
+      "label": "AI rakenduste turvatestimine",
+      "hub": "/ai-turvatestimine/",
+      "knowsAbout": [
+        "RAG-i turvatestimine",
+        "Prompt injection"
+      ]
+    },
+    {
+      "id": "ai-models",
+      "label": "Küber-AI mudelid ja API",
+      "hub": "/mudelid/",
+      "knowsAbout": [
+        "Küberturbe AI-mudelid",
+        "Keeldudeta ja piirangutega küber-AI",
+        "AI rakendusliidesed"
+      ]
+    },
+    {
+      "id": "audit",
+      "label": "Küberaudit",
+      "hub": "/kuberaudit/",
+      "knowsAbout": [
+        "Agendipõhine küberturve",
+        "Haavatavuste auditid",
+        "Küberauditid",
+        "Küberturvalisus"
+      ]
+    },
+    {
+      "id": "pentest",
+      "label": "Pentestimine",
+      "hub": "/pentestimine/",
+      "knowsAbout": [
+        "Pentestimine",
+        "Läbistustestimine"
+      ]
+    },
+    {
+      "id": "api-testing",
+      "label": "API turvatestimine",
+      "hub": "/api-turvatestimine/",
+      "knowsAbout": [
+        "API turvatestimine"
+      ]
+    },
+    {
+      "id": "web-testing",
+      "label": "Veebirakenduse turvatestimine",
+      "hub": "/veebirakenduse-turvatestimine/",
+      "knowsAbout": [
+        "Veebirakenduse turvatestimine"
+      ]
+    },
+    {
+      "id": "training",
+      "label": "Küberturvalisuse koolitus",
+      "hub": "/koolitus/",
+      "knowsAbout": [
+        "Küberturvalisuse koolitus"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "id": "home",
+      "label": "Avaleht",
+      "hub": "/",
+      "pages": [
+        "/"
+      ]
+    },
+    {
+      "id": "audit",
+      "label": "Audit ja pentest (kommerts)",
+      "hub": "/pentestimine/",
+      "pages": [
+        "/pentestimine/",
+        "/pentestimine/naidisraport/",
+        "/kuberaudit/",
+        "/api-turvatestimine/",
+        "/api-turvatestimine/kontrollnimekiri/",
+        "/veebirakenduse-turvatestimine/",
+        "/ai-turvatestimine/",
+        "/koolitus/"
+      ]
+    },
+    {
+      "id": "nis2",
+      "label": "NIS2 / KüTS",
+      "hub": "/nis2/",
+      "pages": [
+        "/nis2/",
+        "/nis2/kontrollnimekiri/",
+        "/nis2/registreerimine/",
+        "/nis2/trahvid/",
+        "/nis2/intsidendist-teatamine/",
+        "/nis2/audit/",
+        "/nis2/toetus/"
+      ]
+    },
+    {
+      "id": "dora",
+      "label": "DORA ja finantssektori TLPT",
+      "hub": "/dora/",
+      "pages": [
+        "/dora/",
+        "/dora/audit/",
+        "/dora/teaberegister/",
+        "/tlpt/"
+      ]
+    },
+    {
+      "id": "frameworks",
+      "label": "Standardid ja tootenõuded",
+      "hub": "/regulatsioonid/",
+      "pages": [
+        "/regulatsioonid/",
+        "/e-its/",
+        "/iso-27001/",
+        "/sbom/",
+        "/cra/",
+        "/ai-act/"
+      ]
+    },
+    {
+      "id": "sectors",
+      "label": "Sektorivaated",
+      "hub": "/sektorid/",
+      "pages": [
+        "/sektorid/",
+        "/sektorid/energeetika/",
+        "/sektorid/tervishoid/",
+        "/sektorid/logistika/",
+        "/sektorid/finants/"
+      ]
+    },
+    {
+      "id": "articles",
+      "label": "Artiklid ja juhendid",
+      "hub": "/artiklid/",
+      "pages": [
+        "/artiklid/",
+        "/artiklid/varunduse-taastetest/",
+        "/artiklid/nis2-tarneahel/",
+        "/artiklid/mfa-juurutamine/",
+        "/artiklid/nis2-juhatus/",
+        "/artiklid/kuberriskide-register/"
+      ]
+    },
+    {
+      "id": "en",
+      "label": "English",
+      "hub": "/en/",
+      "pages": [
+        "/en/",
+        "/en/press/",
+        "/en/regulations/",
+        "/en/nis2/",
+        "/en/nis2/registration/",
+        "/en/nis2/fines/",
+        "/en/nis2/incident-reporting/",
+        "/en/nis2/audit/",
+        "/en/cra/",
+        "/en/dora/",
+        "/en/dora/audit/",
+        "/en/dora/register/",
+        "/en/ai-act/",
+        "/en/sbom/",
+        "/en/e-its/",
+        "/en/pentesting/",
+        "/en/security-audit/",
+        "/en/iso-27001/"
+      ]
+    },
+    {
+      "id": "trust",
+      "label": "Usaldus ja viitamine",
+      "hub": "/meist/",
+      "pages": [
+        "/meist/",
+        "/viitamine/",
+        "/sonastik/",
+        "/kasutusjuhud/",
+        "/privaatsus/",
+        "/saidikaart/"
+      ]
+    },
+    {
+      "id": "product",
+      "label": "Küber-AI API toode",
+      "hub": "/mudelid/",
+      "pages": [
+        "/mudelid/"
+      ]
+    }
+  ],
+  "pages": {
+    "/": "home",
+    "/kasutusjuhud/": "trust",
+    "/meist/": "trust",
+    "/viitamine/": "trust",
+    "/sonastik/": "trust",
+    "/privaatsus/": "trust",
+    "/saidikaart/": "trust",
+    "/mudelid/": "product",
+    "/pentestimine/": "audit",
+    "/pentestimine/naidisraport/": "audit",
+    "/kuberaudit/": "audit",
+    "/api-turvatestimine/": "audit",
+    "/api-turvatestimine/kontrollnimekiri/": "audit",
+    "/veebirakenduse-turvatestimine/": "audit",
+    "/ai-turvatestimine/": "audit",
+    "/koolitus/": "audit",
+    "/nis2/": "nis2",
+    "/nis2/kontrollnimekiri/": "nis2",
+    "/nis2/registreerimine/": "nis2",
+    "/nis2/trahvid/": "nis2",
+    "/nis2/intsidendist-teatamine/": "nis2",
+    "/nis2/audit/": "nis2",
+    "/nis2/toetus/": "nis2",
+    "/dora/": "dora",
+    "/dora/audit/": "dora",
+    "/dora/teaberegister/": "dora",
+    "/tlpt/": "dora",
+    "/regulatsioonid/": "frameworks",
+    "/e-its/": "frameworks",
+    "/iso-27001/": "frameworks",
+    "/sbom/": "frameworks",
+    "/cra/": "frameworks",
+    "/ai-act/": "frameworks",
+    "/sektorid/": "sectors",
+    "/sektorid/energeetika/": "sectors",
+    "/sektorid/tervishoid/": "sectors",
+    "/sektorid/logistika/": "sectors",
+    "/sektorid/finants/": "sectors",
+    "/artiklid/": "articles",
+    "/artiklid/varunduse-taastetest/": "articles",
+    "/artiklid/nis2-tarneahel/": "articles",
+    "/artiklid/mfa-juurutamine/": "articles",
+    "/artiklid/nis2-juhatus/": "articles",
+    "/artiklid/kuberriskide-register/": "articles",
+    "/en/": "en",
+    "/en/press/": "en",
+    "/en/regulations/": "en",
+    "/en/nis2/": "en",
+    "/en/nis2/registration/": "en",
+    "/en/nis2/fines/": "en",
+    "/en/nis2/incident-reporting/": "en",
+    "/en/nis2/audit/": "en",
+    "/en/cra/": "en",
+    "/en/dora/": "en",
+    "/en/dora/audit/": "en",
+    "/en/dora/register/": "en",
+    "/en/ai-act/": "en",
+    "/en/sbom/": "en",
+    "/en/e-its/": "en",
+    "/en/pentesting/": "en",
+    "/en/security-audit/": "en",
+    "/en/iso-27001/": "en"
+  }
+}

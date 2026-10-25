@@ -1,6 +1,8 @@
 import {existsSync, readdirSync, readFileSync} from "node:fs";
 import {dirname, extname, join} from "node:path";
 import {fileURLToPath} from "node:url";
+import {validateEntityMap} from "./entitymap.mjs";
+import {validateInfoGain} from "./info-gain.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const origin = "https://tehisabiline.ee";
@@ -967,7 +969,7 @@ for (const url of expectedUrls) {
 }
 for (const url of new Set((llms.match(/https:\/\/tehisabiline\.ee\/[^\s)]*/g) || []).map((raw) => raw.replace(/[.,;:]+$/, "")))) {
     const pathname = new URL(url).pathname;
-    const known = expectedUrls.includes(url) || noindexUrls.includes(url) || pathname === "/llms-full.txt";
+    const known = expectedUrls.includes(url) || noindexUrls.includes(url) || pathname === "/llms-full.txt" || pathname === "/entitymap.json";
     assert(known, `llms.txt mentions ${url}, which is neither an indexable sitemap URL, a known noindex page, nor llms-full.txt.`);
     assert(localTargetExists(pathname), `llms.txt mentions ${url}, which does not resolve to a file in the repo.`);
 }
@@ -1053,6 +1055,11 @@ try {
 } catch (error) {
     failures.push(`site.webmanifest is invalid JSON: ${error.message}`);
 }
+
+// Canonical entity map: the Organization/Person/Topic nodes must agree with entitymap.json everywhere.
+for (const problem of validateEntityMap(root)) failures.push(problem);
+// Information gain: every declared unique asset must still exist on its page.
+for (const problem of validateInfoGain(root)) failures.push(problem);
 
 if (failures.length) {
     console.error(`SEO check failed with ${failures.length} issue(s):`);

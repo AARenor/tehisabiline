@@ -12,6 +12,8 @@
         "build:brand": "node tools/render-brand.mjs && npm run build:assets",
         "build:assets": "node tools/chrome.mjs && node tools/version-assets.mjs",
         "test:seo": "node tools/seo-check.mjs",
+        "check:entitymap": "node tools/entitymap.mjs",
+        "check:info-gain": "node tools/info-gain.mjs",
         "submit:indexnow": "node tools/submit-indexnow.mjs"
     }
 }
