@@ -16,6 +16,9 @@
 /ai-automatiseerimine  https://arle.top/ai-automatiseerimine/  301
 /ai-automatiseerimine/  https://arle.top/ai-automatiseerimine/  301
 /ai-automatiseerimine/*  https://arle.top/ai-automatiseerimine/:splat  301
+/at-automatiseerimine  https://arle.top/ai-automatiseerimine/  301
+/at-automatiseerimine/  https://arle.top/ai-automatiseerimine/  301
+/at-automatiseerimine/*  https://arle.top/ai-automatiseerimine/  301
 /index.html  /  301
 
 /en/ai-consulting/  /en/  301
