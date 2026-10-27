@@ -21,6 +21,9 @@
 /at-automatiseerimine/*  https://arle.top/ai-automatiseerimine/  301
 /index.html  /  301
 
+# Retired download: the NIS2 audit evidence template is an Excel workbook since 2026-10-27.
+/assets/downloads/nis2-auditi-toendite-mall.csv  /assets/downloads/nis2-auditi-toendite-mall.xlsx  301
+
 /en/ai-consulting/  /en/  301
 
 /ai-automatiseerimine-ettevottele/  /  301
