@@ -142,6 +142,14 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Where can I download a DORA register of information template?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tehisabiline publishes a free CSV template with the Article 28(3) fields: provider, registry code or LEI, subcontractor, supported function, critical or important flag, data location, contract start and end, exit plan, risk level, owner and evidence. It is a working file for collecting the data, not the official ITS 2024/2956 submission format."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Is the DORA register of information the same as the ITS template?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -171,6 +179,35 @@
             "@type": "Answer",
             "text": "No. The register is one evidence artifact. DORA also requires governance, ICT risk management, incident processes, resilience testing and contractual safeguards."
           }
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "name": "DORA register of information template (CSV)",
+      "description": "Working CSV template for the DORA Article 28(3) register of information: provider, registry code or LEI, subcontractor, supported function, critical or important flag, data location, contract start and end, exit plan, risk level, owner and evidence, with two sample rows.",
+      "url": "https://tehisabiline.ee/en/dora/register/",
+      "datePublished": "2026-10-27",
+      "dateModified": "2026-10-27",
+      "inLanguage": "en",
+      "creator": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "isAccessibleForFree": true,
+      "keywords": [
+        "DORA",
+        "register of information",
+        "ITS 2024/2956",
+        "Article 28(3)",
+        "ICT third-party risk"
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "dora-register-of-information-template.csv",
+          "contentUrl": "https://tehisabiline.ee/assets/downloads/dora-register-of-information-template.csv",
+          "encodingFormat": "text/csv",
+          "description": "Sixteen columns covering the Article 28(3) fields, UTF-8 with semicolon separators, two deletable sample rows."
         }
       ]
     }
@@ -215,11 +252,12 @@
     <article class="prose">
       <section class="short-answer" id="short"><h2>Short answer</h2><p><strong>Article 28(3) of DORA</strong> requires a register of information on all contractual arrangements for ICT services provided by third-party service providers. The register must show the provider, the contract, the function supported, the data and systems involved, the exit strategy and the risk. The <strong>ITS 2024/2956 template</strong> is the supervisory format; a working CSV is only an internal collection tool.</p></section>
       <section id="fields"><h2>What the register must show</h2><ul><li><strong>Provider:</strong> legal name, identifier, country, group and chain of subcontractors.</li><li><strong>Contract:</strong> reference, start and end, renewal, termination and governing law.</li><li><strong>Function:</strong> the business or ICT function supported and whether it is critical or important.</li><li><strong>Data:</strong> personal data, confidential data and data location.</li><li><strong>Systems:</strong> the systems and processes that depend on the service.</li><li><strong>Risk:</strong> concentration, substitutability, exit plan and supervisory relevance.</li></ul></section>
-      <section id="template"><h2>Working template and official format</h2><p>Use a controlled working file to collect evidence, then map it to the official ITS template before submission. A working CSV is useful because contracts, owners and systems change; the official file is the reporting artifact.</p><p><a class="btn btn--primary" href="/assets/downloads/dora-teaberegister-mall.csv" download>Download the working CSV</a></p><p>For the Estonian submission context and the difference between the working CSV and the official ITS template, see <a href="/en/dora/">DORA in Estonia</a> and the <a href="/dora/teaberegister/" lang="et">Estonian register guide</a>.</p></section>
+      <section id="template"><h2>Working template and official format</h2><p>Use a controlled working file to collect evidence, then map it to the official ITS template before submission. A working CSV is useful because contracts, owners and systems change; the official file is the reporting artifact.</p><p><a class="btn btn--primary" href="/assets/downloads/dora-register-of-information-template.csv" download>Download the register of information template (CSV)</a></p><p>The template carries the Article 28(3) fields a supervisor asks for — provider, subcontractor, supported function, criticality, data location, contract dates, exit plan, risk level, owner and evidence — with two sample rows to delete. For the Estonian submission context and the difference between the working CSV and the official ITS template, see <a href="/en/dora/">DORA in Estonia</a> and the <a href="/dora/teaberegister/" lang="et">Estonian register guide</a>.</p></section>
       <section id="fill"><h2>How to fill it</h2><ol><li><strong>Start from contracts, not a spreadsheet.</strong> Collect signed contracts, statements of work and change orders.</li><li><strong>Assign one owner per row.</strong> The business owner confirms the function; legal confirms the contract; security confirms data and access.</li><li><strong>Map subcontractors.</strong> Do not hide a critical subcontractor inside a provider row.</li><li><strong>Record the exit plan.</strong> A register without substitutability and exit evidence is incomplete.</li><li><strong>Review before reporting.</strong> Reconcile rows with the contract register and the incident/asset inventories.</li></ol></section>
       <section id="errors"><h2>Common errors</h2><ul><li>Treating the CSV as the official submission.</li><li>One row per provider instead of one row per contractual arrangement.</li><li>Missing subcontractors or data locations.</li><li>Marking every service as non-critical to avoid scrutiny.</li><li>No named owner, review date or evidence link.</li><li>Copying last year's register without checking changes.</li></ul></section>
       <section id="submission"><h2>Submission in Estonia</h2><p>In Estonia the register is submitted to Finantsinspektsioon through its data-collection portal, following <a href="https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-regulatsioonid/dora-maarusest-ja-nouetest-eesti-finantssektoris-tegutsevatele-ettevotetele" rel="noopener">FI’s current instructions</a>. This is separate from serious ICT incident reporting, whose channel changes on 1 November 2026: email is accepted until 31 October 2026, the portal is the route from 1 November 2026.</p><p>Article 28(3) requires an annual report with summary data, including the number of new arrangements; the full register is provided on the supervisor’s request. Finantsinspektsioon separately collects a year-end register, with the 2027 collection using the position at 31 December 2026. Confirm the current format and deadline before sending.</p><p>For the reporting data model, see EBA’s <a href="https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application" rel="noopener">DORA register of information resources</a>.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
+        <details><summary><h3>Where can I download a DORA register of information template?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Tehisabiline publishes a free CSV template with the Article 28(3) fields: provider, registry code or LEI, subcontractor, supported function, critical or important flag, data location, contract start and end, exit plan, risk level, owner and evidence. It is a working file for collecting the data, not the official ITS 2024/2956 submission format. <a href="/assets/downloads/dora-register-of-information-template.csv" download>Download the CSV template</a>.</p></details>
         <details><summary><h3>Is the DORA register of information the same as the ITS template?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The register is the substantive record required by Article 28(3). The ITS 2024/2956 template is the supervisory format used to submit that record. A working CSV helps you collect the data, but it does not replace the official template.</p></details>
         <details><summary><h3>Who must maintain the register?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Financial entities in scope of DORA must maintain a register of information on all contractual arrangements for ICT services provided by third-party service providers.</p></details>
         <details><summary><h3>How often should it be updated?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Keep it current as contracts, providers and functions change. Article 28(3) requires an annual report with summary data, including the number of new arrangements, and the full register on the supervisor's request. Finantsinspektsioon collects a year-end register separately; the 2027 collection uses the position at 31 December 2026.</p></details>

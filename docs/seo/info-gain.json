@@ -18,7 +18,7 @@
     "/dora/teaberegister/": { "asset": "Brauseripõhine CSV-kontrollija", "type": "calculator", "proof": "/assets/js/dora-csv-check.js" },
     "/dora/audit/": { "asset": "DORA auditi tõendite tabel (CSV)", "type": "template", "proof": "/assets/downloads/dora-audit-evidence.csv" },
     "/en/dora/audit/": { "asset": "DORA audit evidence table (CSV)", "type": "template", "proof": "/assets/downloads/dora-audit-evidence.csv" },
-    "/en/dora/register/": { "asset": "Register of information template (CSV)", "type": "template", "proof": "/assets/downloads/dora-teaberegister-mall.csv" },
+    "/en/dora/register/": { "asset": "Register of information template (CSV, English fields)", "type": "template", "proof": "/assets/downloads/dora-register-of-information-template.csv" },
     "/regulatsioonid/": { "asset": "Kuue raamistiku võrdlustabel (CSV), kontrollitud 27.10.2026", "type": "dataset", "proof": "/assets/downloads/kyberturvalisuse-regulatsioonid-2026.csv" },
     "/ai-act/": { "asset": "AI Act riskiklassi enesekontroll", "type": "calculator", "proof": "/assets/js/ai-act-check.js" },
     "/en/ai-act/": { "asset": "AI Act risk-class self-check", "type": "calculator", "proof": "/assets/js/ai-act-check-en.js" },

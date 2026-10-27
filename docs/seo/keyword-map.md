@@ -37,6 +37,18 @@
 | andmeturbe audit | adjacent | `/kuberaudit/` | only where scope actually covers data security |
 | turvakontroll | ambiguous/physical | none | do not target |
 
+## GSC update 2026-10-27
+
+Impressions moved from ~10/day to 154/day on 26 October when the English section was indexed (see `gsc-2026-10-27.md`). Observed query → page facts that override the map above:
+
+| Keyword / phrase | Impressions (7 d) | Position | Page that ranked | Action taken |
+| --- | --- | --- | --- | --- |
+| nis2 audit / nis 2 audit / audit nis2 | 15 | 10–29 | `/en/nis2/audit/` | `/nis2/audit/` gained `#teenus` service section + price FAQ so the Estonian page matches vendor intent |
+| nis2 eesti | 4 | 21–27 | `/nis2/` | hub unchanged; authority is the limit, not on-page |
+| nis2 dokument | 1 | 1.0 | `/nis2/` (via `/koolitus/` 301) | `#dokumendid` document map added to `/nis2/` |
+| dora register of information template | 1 | 57 | `/en/dora/register/` | English CSV template + Dataset markup |
+| cyber security audit | 1 | 70 | `/en/security-audit/` | not targeted; supporting page only |
+
 ## Rules
 
 - One page per intent. Do not create `/turvaaudit/` as a doorway duplicate of `/kuberaudit/`.
