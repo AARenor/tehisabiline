@@ -11,7 +11,7 @@ Entity:
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
 - Entity map (JSON): https://tehisabiline.ee/entitymap.json — canonical organization, founder, services, topic vocabulary and the page-to-cluster map
 
-Status reviewed on 2026-10-25:
+Status reviewed on 2026-10-27:
 
 - The developer API is not yet public; pilot access is discussed by email.
 - Model hosting hardware is ordered; processing in Estonia is forthcoming, not live.

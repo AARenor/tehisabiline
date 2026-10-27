@@ -10,6 +10,11 @@ const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Tallinn", yea
 const contactEmail = "tehisabiline@gmail.com";
 const homepageNodeIds = [`${origin}/#organization`, `${origin}/#website`];
 const MIN_MAIN_INTERNAL_LINKS = 3;
+const BRAND_FALLBACK_OG = "/assets/brand/tehisabiline-og.png";
+// Indexable pages allowed to share the brand fallback card; every page should own a card.
+const brandFallbackPages = new Set();
+// Owned profiles do not count as independent sources for Article citations.
+const OWNED_LINK_HOSTS = new Set(["linkedin.com", "f6s.com"]);
 // Search engines and AI answer/assistant agents robots.txt must name with an explicit Allow.
 const allowedCrawlers = [
     "Googlebot", "Bingbot", "Applebot", "DuckDuckBot",
@@ -483,6 +488,14 @@ const failures = [];
 const seenTitles = new Map();
 const seenDescriptions = new Map();
 const pageModifiedDates = new Map();
+const seenOgImages = new Map();
+
+// Page HTML is visited by several checks; keep one copy per file.
+const htmlCache = new Map();
+function pageHtml(rel) {
+    if (!htmlCache.has(rel)) htmlCache.set(rel, readFileSync(join(root, rel), "utf8"));
+    return htmlCache.get(rel);
+}
 
 function assert(condition, message) {
     if (!condition) failures.push(message);
@@ -677,13 +690,62 @@ function mainInternalLinkTargets(mainHtml, ownPath) {
     return targets;
 }
 
+// Link tags declaring an alternate language, in document order.
+function hreflangAlternates(html) {
+    return [...html.matchAll(/<link\b[^>]*>/gi)]
+        .map((match) => match[0])
+        .filter((tag) => attrValue(tag, "rel").split(/\s+/).includes("alternate") && Boolean(attrValue(tag, "hreflang")))
+        .map((tag) => ({lang: attrValue(tag, "hreflang").toLowerCase(), href: attrValue(tag, "href")}));
+}
+
+// One alternate set per page: unique languages, one x-default, self-reference, and mutual targets.
+function validateHreflang(html, label, canonical) {
+    const alternates = hreflangAlternates(html);
+    if (!alternates.length) return;
+    const languages = new Set();
+    for (const alternate of alternates) {
+        assert(Boolean(alternate.href), `${label}: hreflang "${alternate.lang}" alternate is missing its href.`);
+        assert(!languages.has(alternate.lang), `${label}: hreflang "${alternate.lang}" is declared twice.`);
+        languages.add(alternate.lang);
+    }
+    const defaults = alternates.filter((alternate) => alternate.lang === "x-default");
+    assert(defaults.length === 1, `${label}: hreflang must declare exactly one x-default alternate, found ${defaults.length}.`);
+    assert(alternates.some((alternate) => alternate.href === canonical), `${label}: hreflang set must include a self-reference to ${canonical}.`);
+    for (const alternate of alternates) {
+        if (alternate.lang === "x-default") continue;
+        const target = expectedPages.find((candidate) => candidate.canonical === alternate.href);
+        if (!target) continue;
+        const backLinks = hreflangAlternates(pageHtml(target.file));
+        assert(backLinks.some((back) => back.lang !== "x-default" && back.href === canonical), `${label}: hreflang "${alternate.lang}" points at ${alternate.href}, which declares no alternate back to ${canonical}.`);
+    }
+}
+
+// Distinct external sources a page links, minus the canonical origin and owned profiles.
+function externalSources(html) {
+    const sources = new Set();
+    for (const match of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
+        if (!/^https:\/\//i.test(match[1])) continue;
+        let url;
+        try {
+            url = new URL(match[1]);
+        } catch {
+            continue;
+        }
+        const host = url.hostname.replace(/^www\./, "").toLowerCase();
+        if (url.origin === origin || OWNED_LINK_HOSTS.has(host)) continue;
+        if (host === "github.com" && url.pathname.toLowerCase().startsWith("/aarenor")) continue;
+        sources.add(host + url.pathname.replace(/\/$/, ""));
+    }
+    return sources;
+}
+
 for (const page of expectedPages) {
     const label = page.file;
     const filePath = join(root, page.file);
     assert(existsSync(filePath), `${label}: page file is missing.`);
     if (!existsSync(filePath)) continue;
 
-    const html = readFileSync(filePath, "utf8");
+    const html = pageHtml(page.file);
     const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim() || "";
     const description = metaValue(html, "description");
     const canonical = attrValue(tagWithAttr(html, "link", "rel", "canonical"), "href");
@@ -708,6 +770,21 @@ for (const page of expectedPages) {
     }
     assert(metaValue(html, "og:url") === page.canonical, `${label}: og:url must match canonical.`);
     validateBrandImage(metaValue(html, "og:image"), `${label}: Open Graph image`, 1200, 630);
+    const ogImage = metaValue(html, "og:image");
+    let ogImagePath = "";
+    try {
+        if (ogImage) ogImagePath = new URL(ogImage, origin).pathname;
+    } catch {
+        ogImagePath = "";
+    }
+    if (!page.noindex) {
+        assert(ogImagePath.startsWith("/assets/brand/"), `${label}: og:image must point at a file inside /assets/brand/, found ${ogImage || "none"}.`);
+        assert(Boolean(ogImagePath) && existsSync(resolveLocalPath(ogImagePath)), `${label}: og:image file is missing: ${ogImagePath || ogImage}.`);
+        const usesFallback = ogImagePath === BRAND_FALLBACK_OG;
+        assert(!usesFallback || brandFallbackPages.has(label), `${label}: og:image uses the shared brand fallback ${BRAND_FALLBACK_OG}; give the page its own /assets/brand/ card or allowlist it.`);
+        seenOgImages.set(ogImagePath, [...(seenOgImages.get(ogImagePath) || []), label]);
+    }
+    validateHreflang(html, label, canonical);
     validateBrandImage(metaValue(html, "twitter:image"), `${label}: Twitter image`, 1200, 630);
     assert(metaValue(html, "twitter:card") === "summary_large_image", `${label}: Twitter card must use summary_large_image.`);
     assert(Boolean(metaValue(html, "twitter:title")) && Boolean(metaValue(html, "twitter:description")) && Boolean(metaValue(html, "twitter:image")), `${label}: Twitter metadata is incomplete.`);
@@ -728,6 +805,7 @@ for (const page of expectedPages) {
 
     const jsonLdBlocks = [...html.matchAll(/<script\s+[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
         .map((match) => match[1].trim());
+    const linkedSources = externalSources(html);
     assert(jsonLdBlocks.length > 0, `${label}: JSON-LD is missing.`);
     for (const block of jsonLdBlocks) {
         try {
@@ -763,6 +841,10 @@ for (const page of expectedPages) {
                 assert(html.includes("article:published_time") && html.includes("article:modified_time"), label + ": Article pages must expose publish dates.");
                 assert(metaValue(html, "article:modified_time") === article.dateModified, label + ": social modified date must match schema.");
                 assert(metaValue(html, "article:published_time") === article.datePublished, label + ": social publish date must match schema.");
+                if (linkedSources.size >= 2) {
+                    const citations = Array.isArray(article.citation) ? article.citation : [];
+                    assert(citations.length > 0 && citations.every((entry) => typeof entry === "string" && entry.trim().length > 0), `${label}: Article links ${linkedSources.size} external sources, so its JSON-LD must carry a non-empty "citation" array.`);
+                }
             }
 
             const faqPage = graph.find((item) => item["@type"] === "FAQPage" || (Array.isArray(item["@type"]) && item["@type"].includes("FAQPage")));
@@ -829,6 +911,13 @@ for (const page of expectedPages) {
         }
         validateJsonLdReferences(jsonLdBlocks, label);
     }
+}
+
+// A card is a page's own asset: sharing one weakens both previews.
+for (const [ogPath, owners] of seenOgImages) {
+    if (owners.length < 2) continue;
+    if (ogPath === BRAND_FALLBACK_OG && owners.every((owner) => brandFallbackPages.has(owner))) continue;
+    assert(false, `og:image ${ogPath} is shared by ${owners.join(", ")}; every indexable page needs its own card.`);
 }
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");

@@ -116,8 +116,10 @@ Peamised failid:
 - `assets/icons.svg` — SVG ikoonide sprite (Lucide); `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
 - `assets/brand/logo.svg`, `assets/brand/favicon.svg` — vektorlogo ja väikese ikooni pikslivõrgule joondatud algallikas
 - `tools/logo-card.html`, `tools/og-card.html`, `tools/render-brand.mjs` — ikoonide ja lingi-eelvaate korratav renderdamine
+- `tools/render-og.mjs` — iga avaldatud lehe jaoks 1200×630 lingi-eelvaate kaart (`assets/brand/og-<slug>.png`) ja `og:image`/`twitter:image`/JSON-LD pildiviite uuendamine; jooksuta pärast sisumuudatusi (`node tools/render-og.mjs --force`) ja seejärel `npm run build:assets`
+- `tools/build-nis2-evidence-xlsx.py` — `/nis2/audit/` allalaaditava tõendite registri (XLSX) algallikas; `python3 tools/build-nis2-evidence-xlsx.py`
 - `PRODUCT.md`, `DESIGN.md`, `.impeccable/` — toote- ja disainiotsused arendajatele (ei lähe avalikku deploy'sse)
-- `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes)
+- `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes). `chrome:widget` plokk hoiab alles lehe enda kalkulaatoriskriptid (`/assets/js/*`), ainult assistendi CSS/JS osa kirjutatakse üle
 - alamkataloogid — staatilised sisulehed
 - `tools/seo-check.mjs` — indexeeritavate lehtede kontroll
 - `tools/deploy.sh` — Cloudflare Pages'i deploy (avaldab ainult avalikud failid; nõuab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat)
