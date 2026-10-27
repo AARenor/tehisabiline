@@ -920,6 +920,12 @@ for (const [ogPath, owners] of seenOgImages) {
     assert(false, `og:image ${ogPath} is shared by ${owners.join(", ")}; every indexable page needs its own card.`);
 }
 
+// Every public download must be discoverable from the one page that inventories them.
+const citationPage = pageHtml("viitamine/index.html");
+for (const name of readdirSync(join(root, "assets/downloads")).sort()) {
+    assert(citationPage.includes(`/assets/downloads/${name}`), `/viitamine/ must list assets/downloads/${name}; the page that inventories every template otherwise silently loses one.`);
+}
+
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
 assert(homeHtml.includes("API pole veel avalik"), "Homepage API example must say that the API is not yet public.");
 for (const serviceUrl of expectedUrls.slice(1)) {
