@@ -6,8 +6,21 @@
 
   const fmt = new Intl.DateTimeFormat("en-GB", { dateStyle: "medium", timeStyle: "short" });
   const addHours = (date, hours) => new Date(date.getTime() + hours * 60 * 60 * 1000);
-  const addDays = (date, days) => new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
-  const addMonth = (date) => { const next = new Date(date); next.setMonth(next.getMonth() + 1); return next; };
+  const addDays = (date, days) => {
+    const next = new Date(date);
+    next.setDate(next.getDate() + days);
+    return next;
+  };
+  // Calendar-month addition with end-of-month clamping: 31 Jan + 1 month = 28/29 Feb, not 2/3 Mar.
+  const addMonth = (date) => {
+    const next = new Date(date);
+    const day = next.getDate();
+    next.setDate(1);
+    next.setMonth(next.getMonth() + 1);
+    const lastDay = new Date(next.getFullYear(), next.getMonth() + 1, 0).getDate();
+    next.setDate(Math.min(day, lastDay));
+    return next;
+  };
   const typeSelect = form.querySelector("[name=cra-type]");
   const fixWrap = form.querySelector("[data-cra-fix-wrap]");
 
@@ -37,7 +50,7 @@
     } else {
       final = addMonth(notification); finalLabel = "one month after the main notification";
     }
-    out.innerHTML = `<p><strong>Detected:</strong> ${fmt.format(detected)}</p><ul><li><strong>Early warning (24 h):</strong> ${fmt.format(warning)}</li><li><strong>Notification (72 h):</strong> ${fmt.format(notification)}</li><li><strong>Final report:</strong> ${final ? fmt.format(final) : finalLabel}${final ? ` — ${finalLabel}` : ""}</li></ul><p class="nis2-check__note">Check the ENISA SRP, your CSIRT guidance and CRA Article 14. The calculator uses absolute hours; local clock time can shift at daylight-saving changes. It does not replace the reporting process.</p>`;
+    out.innerHTML = `<p><strong>Detected:</strong> ${fmt.format(detected)}</p><ul><li><strong>Early warning (24 h):</strong> ${fmt.format(warning)}</li><li><strong>Notification (72 h):</strong> ${fmt.format(notification)}</li><li><strong>Final report:</strong> ${final ? fmt.format(final) : finalLabel}${final ? ` — ${finalLabel}` : ""}</li></ul><p class="nis2-check__note">Check the ENISA SRP, your CSIRT guidance and CRA Article 14. "One month" means a calendar month: when the same day does not exist, the deadline falls on the last day of that month. Local clock time can shift at daylight-saving changes. It does not replace the reporting process.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });

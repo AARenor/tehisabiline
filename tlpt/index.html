@@ -22,7 +22,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline — TLPT ja TIBER-EE: mida DORA nõuab">
     <meta name="article:published_time" content="2026-10-24">
-    <meta name="article:modified_time" content="2026-10-24">
+    <meta name="article:modified_time" content="2026-10-27">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="TLPT ja TIBER-EE: mida DORA nõuab | Tehisabiline">
     <meta name="twitter:description" content="Keda TLPT kohustab, kuidas TIBER-EE toimib ja mis vahe on sellel tavalisest pentestist.">
@@ -35,7 +35,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=52056b57">
+    <link rel="stylesheet" href="/site.css?v=0453a9db">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,10 +47,11 @@
       "headline": "TLPT ja TIBER-EE: mida DORA nõuab",
       "description": "TLPT ehk ohuteabel põhinev läbistustestimine ja TIBER-EE: keda kohustab, kuidas erineb tavalisest pentestist ja mida ette valmistada.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-24",
+      "dateModified": "2026-10-27",
       "inLanguage": "et",
       "citation": [
         "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+        "https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng",
         "https://www.fi.ee/sites/default/files/2026-09/tiber-ee-riiklik-rakendusdokument-est.pdf"
       ],
       "author": {
@@ -102,7 +103,7 @@
       "name": "TLPT ja TIBER-EE: mida DORA nõuab | Tehisabiline",
       "description": "TLPT ehk ohuteabel põhinev läbistustestimine ja TIBER-EE: keda kohustab, kuidas erineb tavalisest pentestist ja mida ette valmistada.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-24",
+      "dateModified": "2026-10-27",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -136,7 +137,7 @@
           "name": "Kas TLPT on sama mis tavaline pentest?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ei. TLPT on ohuteabel põhinev, punase meeskonna ja sinise meeskonna koostööd hõlmav test kriitiliste funktsioonide vastu, tavaliselt tootmiskeskkonnas. Tavaline pentest on kitsam ja ei pruugi järgida DORA/TIBER-EU nõudeid."
+            "text": "Ei. TLPT on ohuteabel põhinev test kriitiliste funktsioonide vastu, tavaliselt tootmiskeskkonnas: punane meeskond tegutseb kokkulepitud ulatuses ja sinine meeskond ei tea testist ette. Tavaline pentest on kitsam ega järgi DORA/TIBER-EU nõudeid."
           }
         },
         {
@@ -144,7 +145,7 @@
           "name": "Keda TLPT kohustab?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "DORA kohaselt need finantssektori ettevõtjad, kelle pädev asutus on TLPT kohustuslastena tuvastanud. Eestis on selleks Finantsinspektsioon; EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP."
+            "text": "DORA kohaselt neid finantsettevõtjaid, kelle pädev asutus on artikli 26 lõike 8 alusel TLPT kohustuslastena tuvastanud, ja vähemalt iga kolme aasta tagant. Eestis on selleks Finantsinspektsioon; EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP."
           }
         },
         {
@@ -152,7 +153,7 @@
           "name": "Kas TIBER-EE test annab sertifikaadi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ei. Nõuetekohaselt läbi viidud testi korral väljastab Finantsinspektsioon tõendi testi läbiviimise kohta. See ei ole turvalisuse ega vastavuse garantii."
+            "text": "Ei. Pädev TLPT asutus väljastab tõendi testi läbiviimise kohta: Finantsinspektsioon oma pädevusse kuuluvatel juhtudel ja EKP otsese järelevalve all olevate oluliste krediidiasutuste testidel EKP. See ei ole turvalisuse ega vastavuse garantii."
           }
         },
         {
@@ -160,7 +161,7 @@
           "name": "Kas Tehisabiline viib TLPT-d läbi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Me ei esitle end TIBER-EE testijana. Saame aidata ettevalmistuse, tavapentesti ja tõendite poolel; TLPT läbiviimiseks tuleb valida raamistikuga kooskõlas testija ja kooskõlastada see Finantsinspektsiooniga."
+            "text": "Me ei esitle end TIBER-EE testijana. Saame teha tavapentesti ja küberauditit, mis toetavad ettevalmistust ja annavad tehnilisi tõendeid, kuid ei asenda kohustuslikku TLPT-d; TLPT jaoks tuleb valida raamistikuga kooskõlas testija ja kooskõlastada see Finantsinspektsiooniga."
           }
         }
       ]
@@ -196,7 +197,7 @@
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/pentestimine/">Küberaudit / pentest</a>
             <a href="/mudelid/">Küber-AI API</a>
-            <a href="/nis2/">NIS2</a>
+            <a href="/nis2/">NIS2 Eestis</a>
             <a href="/meist/">Meist</a>
         </nav>
         <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
@@ -205,7 +206,7 @@
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
         <a href="/pentestimine/">Küberaudit / pentest</a>
         <a href="/mudelid/">Küber-AI API</a>
-        <a href="/nis2/">NIS2</a>
+        <a href="/nis2/">NIS2 Eestis</a>
         <a href="/meist/">Meist</a>
         <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
     </nav>
@@ -217,7 +218,7 @@
       <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">TLPT ja TIBER-EE</li></ol></nav>
       <h1>TLPT ja TIBER-EE</h1>
       <p class="lead">TLPT on ohuteabel põhinev läbistustestimine, mida DORA raames tehakse kriitiliste funktsioonide vastu. TIBER-EE on selle Eesti rakendus. Selgitame, keda see puudutab ja kuidas tavalisest pentestist erineb.</p>
-      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-24">24. oktoobril 2026</time></p>
+      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
     </div>
   </header>
   <section class="section">
@@ -226,15 +227,15 @@
       <article class="prose">
         <section class="short-answer" id="lyhidalt"><h2>Lühidalt</h2><p><strong>TLPT</strong> (<em>Threat-Led Penetration Testing</em>) on DORA määruse raames nõutav ohuteabel põhinev läbistustestimine. Seda ei tehta kõigi süsteemide vastu, vaid kriitiliste või oluliste funktsioonide ja neid toetavate süsteemide vastu, kontrollitud tingimustes.</p><p><strong>TIBER-EE</strong> on TIBER-EU raamistiku Eesti rakendus. Finantsinspektsiooni soovituslik juhend jõustus 15.09.2026 ja kirjeldab riiklikku juhtimismudelit, TCT-EE rolli ja testi tõendamist.</p><p>TLPT ei ole tavaline pentest ega „läbimise test“. Eesmärk on õppida, kuidas organisatsioon tuvastab ja peatab eesmärgistatud ründetegevuse.</p></section>
 
-        <section id="kohustus"><h2>Keda TLPT kohustab</h2><p>DORA artikkel 26 kohustab TLPT-d tegema finantssektori ettevõtjad, kelle pädev asutus on selleks tuvastanud. Eestis on Finantsinspektsioon pädev asutus oma järelevalve alla kuuluvate ettevõtjate jaoks. EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP.</p><ul><li><strong>Kohustuslik:</strong> Finantsinspektsiooni tuvastatud TLPT-kohustuslased; testitakse vastava järelevalveotsuse alusel.</li><li><strong>Vabatahtlik:</strong> teised finantssektori ettevõtjad võivad TIBER-EE-d kasutada, kuid see tuleb eelnevalt Finantsinspektsiooniga kooskõlastada.</li><li><strong>Väljaspool finantssektorit:</strong> TIBER-EU raamistikku võib kasutada ka mujal, kuid see jääb TIBER-EE juhtimiskorralduse alt välja.</li></ul><p>Kui sa ei ole kindel, kas oled kohustuslane, küsi seda Finantsinspektsioonilt (TLPT@fi.ee) – mitte turvatestijalt.</p></section>
+        <section id="kohustus"><h2>Keda TLPT kohustab</h2><p>DORA artikkel 26 kohustab TLPT-d tegema finantsettevõtjaid, kelle pädev asutus on artikli 26 lõike 8 alusel tuvastanud, lähtudes mõjust, süsteemsusest ja IKT-riskiprofiilist; kriteeriumid annab <a href="https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng">delegeeritud määrus (EL) 2025/1190</a>. Valitud ettevõtja peab testi tegema vähemalt iga kolme aasta tagant. Eestis on Finantsinspektsioon pädev asutus oma järelevalve alla kuuluvate ettevõtjate jaoks. EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP.</p><ul><li><strong>Kohustuslik:</strong> Finantsinspektsiooni tuvastatud TLPT-kohustuslased; testitakse vastava järelevalveotsuse alusel ja korduvalt vähemalt iga kolme aasta tagant.</li><li><strong>Vabatahtlik:</strong> teised finantssektori ettevõtjad võivad TIBER-EE-d kasutada, kuid see tuleb eelnevalt Finantsinspektsiooniga kooskõlastada.</li><li><strong>Väljaspool finantssektorit:</strong> TIBER-EU raamistikku võib kasutada ka mujal, kuid see jääb TIBER-EE juhtimiskorralduse alt välja.</li></ul><p>Kui sa ei ole kindel, kas oled kohustuslane, küsi seda Finantsinspektsioonilt (TLPT@fi.ee) – mitte turvatestijalt.</p></section>
 
         <section id="tiber"><h2>TIBER-EU ja TIBER-EE</h2><p>TIBER-EU on Euroopa raamistik ohuteabel põhinevaks eetiliseks punase meeskonna testimiseks. TIBER-EE on selle Eesti rakendus, mille riiklik juhtimismudel ja erisused on kirjas Finantsinspektsiooni soovituslikus juhendis.</p><p>Kõik TIBER-EU kohustuslikud nõuded kehtivad ka TIBER-EE testidele. Riiklik dokument ei dubleeri kogu metoodikat, vaid täpsustab Eesti konteksti: TCT-EE rolli, üldise ohumaastiku, konfidentsiaalsuse, RIA-ga koostöö ja EKP järelevalve all olevate krediidiasutuste erisused.</p><p>Seetõttu ei piisa ainult TIBER-EU materjalide lugemisest: Eestis tuleb arvestada ka Finantsinspektsiooni juhendit ja testi kooskõlastamist.</p></section>
 
-        <section id="vahe"><h2>TLPT vs tavaline pentest</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Küsimus</th><th scope="col">TLPT / TIBER-EE</th><th scope="col">Tavaline pentest</th></tr></thead><tbody><tr><th scope="row">Lähtekoht</th><td data-label="TLPT">Konkreetne ohuteave ja kriitilised funktsioonid</td><td data-label="Pentest">Kokkulepitud tehniline sihtmärk ja ulatus</td></tr><tr><th scope="row">Meeskond</th><td data-label="TLPT">Punane meeskond, sinine meeskond ja testijuht; koordineeritud protsess</td><td data-label="Pentest">Testijad, kes töötavad kokkulepitud ulatuses</td></tr><tr><th scope="row">Keskkond</th><td data-label="TLPT">Võimalusel tootmiskeskkond, range ohutus- ja konfidentsiaalsuskorraldus</td><td data-label="Pentest">Sageli testkeskkond või koopiad</td></tr><tr><th scope="row">Tõend</th><td data-label="TLPT">Finantsinspektsiooni tõend nõuetekohase läbiviimise kohta</td><td data-label="Pentest">Testiraport ja parandusplaan</td></tr><tr><th scope="row">Eesmärk</th><td data-label="TLPT">Hinnata tuvastus- ja reageerimisvõimet, mitte ainult leide</td><td data-label="Pentest">Leida ja tõendada haavatavusi</td></tr></tbody></table></div><p>Tavaline pentest võib olla TLPT ettevalmistuse osa, kuid ei asenda seda. TLPT nõuab threat intelligence'i, rohelise meeskonnaga koordineerimist ja dokumenteeritud tõendamist.</p></section>
+        <section id="vahe"><h2>TLPT vs tavaline pentest</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Küsimus</th><th scope="col">TLPT / TIBER-EE</th><th scope="col">Tavaline pentest</th></tr></thead><tbody><tr><th scope="row">Lähtekoht</th><td data-label="TLPT">Konkreetne ohuteave ja kriitilised funktsioonid</td><td data-label="Pentest">Kokkulepitud tehniline sihtmärk ja ulatus</td></tr><tr><th scope="row">Meeskond</th><td data-label="TLPT">Punane meeskond, sinine meeskond ja testijuht; koordineeritud protsess</td><td data-label="Pentest">Testijad, kes töötavad kokkulepitud ulatuses</td></tr><tr><th scope="row">Keskkond</th><td data-label="TLPT">Võimalusel tootmiskeskkond, range ohutus- ja konfidentsiaalsuskorraldus</td><td data-label="Pentest">Sageli testkeskkond või koopiad</td></tr><tr><th scope="row">Tõend</th><td data-label="TLPT">TLPT asutuse tõend testi läbiviimise kohta (FI või EKP)</td><td data-label="Pentest">Testiraport ja parandusplaan</td></tr><tr><th scope="row">Eesmärk</th><td data-label="TLPT">Hinnata tuvastus- ja reageerimisvõimet, mitte ainult leide</td><td data-label="Pentest">Leida ja tõendada haavatavusi</td></tr></tbody></table></div><p>Tavaline pentest võib olla TLPT ettevalmistuse osa, kuid ei asenda seda. TLPT nõuab threat intelligence'i, rohelise meeskonnaga koordineerimist ja dokumenteeritud tõendamist.</p></section>
 
-        <section id="protsess"><h2>Kuidas TIBER-EE test käib</h2><ol><li><strong>Ettevalmistus:</strong> kohustuslase tuvastamine, ulatuse ja kriitiliste funktsioonide kokkuleppimine, kontaktid ja salastatus.</li><li><strong>Ohuteave:</strong> testispetsiifiline threat intelligence; üldine ohumaastik (GTL) on toetav, mitte asendav sisend.</li><li><strong>Punane meeskond:</strong> eesmärgistatud ründetegevus kokkulepitud piirides, koostöös sinise meeskonnaga.</li><li><strong>Tuvastus ja reageerimine:</strong> mõõdetakse, kas organisatsioon märkab, eskaleerib ja peatab tegevuse.</li><li><strong>Tõendamine:</strong> Finantsinspektsioon valideerib testidokumendid ja väljastab nõuetekohase läbiviimise korral tõendi.</li><li><strong>Parandused:</strong> leiud, õppetunnid ja tegevuskava; konfidentsiaalsust hoitakse kogu protsessi vältel.</li></ol><p>Testi läbiviimise eest vastutab testitav ettevõtja koos oma teenuseosutajatega. Finantsinspektsioon ei tee operatiivset testimist, vaid koordineerib ja valideerib.</p></section>
+        <section id="protsess"><h2>Kuidas TIBER-EE test käib</h2><ol><li><strong>Ettevalmistus:</strong> kohustuslase tuvastamine, ulatuse ja kriitiliste funktsioonide kokkuleppimine, kontaktid ja salastatus.</li><li><strong>Ohuteave:</strong> testispetsiifiline threat intelligence; üldine ohumaastik (GTL) on toetav, mitte asendav sisend.</li><li><strong>Punane meeskond:</strong> eesmärgistatud ründetegevus kokkulepitud ulatuses; sinine meeskond ei tea testist ette.</li><li><strong>Tuvastus ja reageerimine:</strong> mõõdetakse, kas organisatsioon märkab, eskaleerib ja peatab tegevuse.</li><li><strong>Tõendamine:</strong> kontrollimeeskond juhib testi koos TCT-EE-ga ning pädev TLPT asutus valideerib dokumendid ja väljastab tõendi testi läbiviimise kohta.</li><li><strong>Parandused:</strong> leiud, õppetunnid ja tegevuskava; konfidentsiaalsust hoitakse kogu protsessi vältel.</li></ol><p>Pärast testi vaadatakse tulemused osalistega läbi. Allikad: <a href="https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html">EKP TIBER-EU raamistik</a> ja <a href="https://www.fi.ee/sites/default/files/2026-09/tiber-ee-riiklik-rakendusdokument-est.pdf">Finantsinspektsiooni TIBER-EE juhend</a>.</p><p>Testi läbiviimise eest vastutab testitav ettevõtja koos oma teenuseosutajatega. Finantsinspektsioon ei tee operatiivset testimist, vaid koordineerib ja valideerib. EKP otsese järelevalve all olevate oluliste krediidiasutuste testidel väljastab tõendi EKP.</p></section>
 
-        <section id="rollid"><h2>Rollid ja dokumendid</h2><p>TIBER-EE ei ole ainult testija ja testitava vaheline leping. Raamistik määrab rollid, et test oleks koordineeritud, konfidentsiaalne ja tõendatav.</p><ul><li><strong>TCT-EE:</strong> Finantsinspektsiooni TLPT kübertiim, mis koordineerib testi, valideerib dokumendid ja väljastab tõendi.</li><li><strong>Testitav ettevõtja:</strong> vastutab testi õiguslike ja tehniliste riskide, ohutuse ning oma teenuseosutajate kaasamise eest.</li><li><strong>Testija / punane meeskond:</strong> viib läbi eesmärgistatud tegevuse; peab olema sõltumatu ja konfidentsiaalsusnõuetega seotud.</li><li><strong>Sinine meeskond:</strong> tuvastab ja reageerib; testi eesmärk on hinnata ka seda võimet, mitte ainult leide.</li><li><strong>GTL:</strong> üldine ohumaastik toetab ettevalmistust, kuid ei asenda testispetsiifilist ohuteavet.</li></ul><p>Kogu testiteave liigub vajaduspõhiselt ja kokkulepitud klassifikatsiooni (nt TLP) järgi. Vaikimisi ei jagata testi tulemusi väljapoole ilma õigusliku aluse või kirjaliku nõusolekuta.</p></section>
+        <section id="rollid"><h2>Rollid ja dokumendid</h2><p>TIBER-EE ei ole ainult testija ja testitava vaheline leping. Raamistik määrab rollid, et test oleks koordineeritud, konfidentsiaalne ja tõendatav.</p><ul><li><strong>TCT-EE:</strong> Finantsinspektsiooni TLPT kübertiim, mis koordineerib testi ja valideerib dokumendid. Tõendi väljastab TLPT asutus: FI oma pädevusse kuuluvatel juhtudel, EKP otsese järelevalve all olevate oluliste krediidiasutuste testidel EKP.</li><li><strong>Testitav ettevõtja:</strong> vastutab testi õiguslike ja tehniliste riskide, ohutuse ning oma teenuseosutajate kaasamise eest.</li><li><strong>Testija / punane meeskond:</strong> viib läbi eesmärgistatud tegevuse; peab olema sõltumatu ja konfidentsiaalsusnõuetega seotud.</li><li><strong>Sinine meeskond:</strong> tuvastab ja reageerib; testi eesmärk on hinnata ka seda võimet, mitte ainult leide.</li><li><strong>GTL:</strong> üldine ohumaastik toetab ettevalmistust, kuid ei asenda testispetsiifilist ohuteavet.</li></ul><p>Kogu testiteave liigub vajaduspõhiselt ja kokkulepitud klassifikatsiooni (nt TLP) järgi. Vaikimisi ei jagata testi tulemusi väljapoole ilma õigusliku aluse või kirjaliku nõusolekuta.</p></section>
 
         <section id="ettevalmistus"><h2>Mida ette valmistada</h2><ul><li><strong>Kriitilised funktsioonid:</strong> millised teenused ja süsteemid on testi keskmes; mis on väljas.</li><li><strong>Kontaktid ja rollid:</strong> testijuht, sinine meeskond, juriidika, kommunikatsioon ja juhtkond.</li><li><strong>Lepingud ja load:</strong> testija, teenuseosutajate ja pilvepakkujate nõusolekud; NDA ja andmekaitse.</li><li><strong>Ohutus:</strong> stopitingimused, tootmiskeskkonna riskid, varundus ja taastamise plaan.</li><li><strong>Tõendid:</strong> logid, kontaktide ajakohasus, varasemad testid ja paranduste seis.</li></ul><p>Kui TLPT on alles ees, on mõistlik alustada tavapärase <a href="/pentestimine/">pentesti</a> ja <a href="/kuberaudit/">küberauditi</a>ga, et põhipuudujäägid ei jääks TLPT ajal varju.</p></section>
 
@@ -244,105 +245,92 @@
 
         <section id="kulud"><h2>Aeg ja kulud</h2><p>TLPT ei ole nädalane tellimus. Aeg kulub ettevalmistusele, ohuteabele, testi koordineerimisele, tõendamisele ja parandustele. Kulu sõltub kriitiliste funktsioonide arvust, testija mahust, tootmiskeskkonna riskidest, teenuseosutajate kaasamisest ja sellest, kui palju tuleb pärast testi parandada.</p><p>Vaikimisi ei avaldata ühtset hinnakirja, sest iga test on erinev. Küsi pakkumuses selget ulatust, meeskonda, ajakava, tõendamise kohustust ja seda, mis ei kuulu hinna sisse.</p></section>
 
-        <section id="piirid"><h2>Mida see ei ole</h2><ul><li><strong>Ei ole sertifikaat:</strong> tõend kinnitab testi läbiviimist raamistiku järgi, mitte täielikku turvalisust.</li><li><strong>Ei ole tavaline pentest:</strong> metoodika, meeskond ja tõendamine erinevad.</li><li><strong>Ei ole bug bounty:</strong> eesmärk ei ole leida mahult kõiki vigu, vaid hinnata kriitiliste funktsioonide vastupanuvõimet.</li><li><strong>Ei asenda parandusi:</strong> testi väärtus sõltub sellest, mida pärast leidudega tehakse.</li></ul></section>
+        <section id="piirid"><h2>Mida see ei ole</h2><ul><li><strong>Ei ole sertifikaat:</strong> tõend kinnitab konkreetse testi läbiviimist raamistiku järgi (artikkel 26 lõige 7), mitte täielikku turvalisust ega üldist DORA vastavust; see ei ole ka ISO/IEC 27001 sertifikaat.</li><li><strong>Ei ole tavaline pentest:</strong> metoodika, meeskond ja tõendamine erinevad.</li><li><strong>Ei ole bug bounty:</strong> eesmärk ei ole leida mahult kõiki vigu, vaid hinnata kriitiliste funktsioonide vastupanuvõimet.</li><li><strong>Ei asenda parandusi:</strong> testi väärtus sõltub sellest, mida pärast leidudega tehakse.</li></ul></section>
 
-        <section id="allikad"><h2>Allikad</h2><ul><li><a href="https://www.fi.ee/sites/default/files/2026-09/tiber-ee-riiklik-rakendusdokument-est.pdf">Finantsinspektsioon: TIBER-EE riiklik rakendusdokument</a> (jõustus 15.09.2026).</li><li><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">DORA määrus (EL) 2022/2554</a>, artiklid 26–27.</li><li><a href="https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html">EKP: TIBER-EU raamistik</a>.</li></ul><p>See leht on selgitav, mitte õigusnõu. Kohustuse ulatuse ja testi nõuded kinnitab sinu järelevalveasutus.</p></section>
+        <section id="allikad"><h2>Allikad</h2><ul><li><a href="https://www.fi.ee/sites/default/files/2026-09/tiber-ee-riiklik-rakendusdokument-est.pdf">Finantsinspektsioon: TIBER-EE riiklik rakendusdokument</a> (jõustus 15.09.2026).</li><li><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">DORA määrus (EL) 2022/2554</a>, artiklid 26–27.</li><li><a href="https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng">Delegeeritud määrus (EL) 2025/1190</a> TLPT-kohustuslaste tuvastamise kriteeriumide kohta.</li><li><a href="https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/en/index.en.html">EKP: TIBER-EU raamistik</a>.</li></ul><p>See leht on selgitav, mitte õigusnõu. Kohustuse ulatuse ja testi nõuded kinnitab sinu järelevalveasutus.</p></section>
 
         <section id="faq"><h2>Küsimused TLPT kohta</h2><div class="faq">
-          <details><summary><h3>Kas TLPT on sama mis tavaline pentest?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Ei. TLPT on ohuteabel põhinev, punase ja sinise meeskonna koostööd hõlmav test kriitiliste funktsioonide vastu, tavaliselt tootmiskeskkonnas. Tavaline pentest on kitsam ja ei pruugi järgida DORA/TIBER-EU nõudeid.</p></details>
-          <details><summary><h3>Keda TLPT kohustab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">DORA kohaselt neid finantssektori ettevõtjaid, kelle pädev asutus on TLPT kohustuslastena tuvastanud. Eestis on selleks Finantsinspektsioon; EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP.</p></details>
-          <details><summary><h3>Kas TIBER-EE test annab sertifikaadi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Ei. Nõuetekohaselt läbi viidud testi korral väljastab Finantsinspektsioon tõendi testi läbiviimise kohta. See ei ole turvalisuse ega vastavuse garantii.</p></details>
-          <details><summary><h3>Kas Tehisabiline viib TLPT-d läbi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Me ei esitle end TIBER-EE testijana. Saame aidata ettevalmistuse, tavapentesti ja tõendite poolel; TLPT läbiviimiseks tuleb valida raamistikuga kooskõlas testija ja kooskõlastada see Finantsinspektsiooniga.</p></details>
+          <details><summary><h3>Kas TLPT on sama mis tavaline pentest?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Ei. TLPT on ohuteabel põhinev test kriitiliste funktsioonide vastu, tavaliselt tootmiskeskkonnas: punane meeskond tegutseb kokkulepitud ulatuses ja sinine meeskond ei tea testist ette. Tavaline pentest on kitsam ega järgi DORA/TIBER-EU nõudeid.</p></details>
+          <details><summary><h3>Keda TLPT kohustab?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">DORA kohaselt neid finantsettevõtjaid, kelle pädev asutus on artikli 26 lõike 8 alusel TLPT kohustuslastena tuvastanud, ja vähemalt iga kolme aasta tagant. Eestis on selleks Finantsinspektsioon; EKP otsese järelevalve all olevate oluliste krediidiasutuste puhul tegutseb TLPT asutusena EKP.</p></details>
+          <details><summary><h3>Kas TIBER-EE test annab sertifikaadi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Ei. Pädev TLPT asutus väljastab tõendi testi läbiviimise kohta: Finantsinspektsioon oma pädevusse kuuluvatel juhtudel ja EKP otsese järelevalve all olevate oluliste krediidiasutuste testidel EKP. See ei ole turvalisuse ega vastavuse garantii.</p></details>
+          <details><summary><h3>Kas Tehisabiline viib TLPT-d läbi?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Me ei esitle end TIBER-EE testijana. Saame teha tavapentesti ja küberauditit, mis toetavad ettevalmistust ja annavad tehnilisi tõendeid, kuid ei asenda kohustuslikku TLPT-d; TLPT jaoks tuleb valida raamistikuga kooskõlas testija ja kooskõlastada see Finantsinspektsiooniga.</p></details>
         </div></section>
 
         <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list"><li><a href="/dora/"><span class="related__title">DORA nõuded</span><span class="related__desc">Viis sammast, teaberegister ja Eesti teatamiskanal.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/pentestimine/"><span class="related__title">Pentestimine</span><span class="related__desc">Ulatus, metoodika, raport ja kordustest.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/kuberaudit/"><span class="related__title">Küberaudit</span><span class="related__desc">Laiem turvaseis ja prioriteetne parandusplaan.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/nis2/"><span class="related__title">NIS2 nõuded</span><span class="related__desc">Riskijuhtimine, tarneahel ja teavitamine.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li></ul></section>
       </article>
     </div>
   </section>
-  <section class="band"><div class="wrap band__inner"><h2>Kas TLPT on teie ettevõttele kohustuslik?</h2><p>Selgita oma rolli ja järelevalveasutust. Aitame ettevalmistuse ja tavapentesti poolel; TLPT testija valikul lähtu TIBER-EU nõuetest.</p><a class="btn btn--white" href="/#contact">Küsi kaardistust</a></div></section>
+  <section class="band"><div class="wrap band__inner"><h2>Mida saab enne TLPT-d tehniliselt kontrollida?</h2><p>Kirjelda süsteemi ja testi eesmärki. Ütleme, milliseid tehnilisi kontrolle saame küberauditi või pentestiga hinnata; TLPT kohustuse kinnitab sinu järelevalveasutus.</p><a class="btn btn--white" href="/#contact">Küsi kaardistust</a></div></section>
 </main>
 <!-- chrome:footer -->
 <footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
-            <div>
+            <div class="site-footer__about">
                 <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Reg. kood 17607255 · Viimsi vald, Harju maakond</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
             </div>
             <nav aria-label="Teenuste lingid">
                 <p class="site-footer__title">Teenused</p>
                 <ul>
                     <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/kuberaudit/">IT turvaaudit</a></li>
                     <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 lingid">
+                <p class="site-footer__title">NIS2 Eestis</p>
+                <ul>
+                    <li><a href="/nis2/">NIS2 Eestis: ülevaade</a></li>
+                    <li><a href="/nis2/registreerimine/">Registreerimine RIA-s</a></li>
+                    <li><a href="/nis2/intsidendist-teatamine/">Intsidendist teatamine</a></li>
+                    <li><a href="/nis2/trahvid/">Trahvid ja vastutus</a></li>
+                    <li><a href="/nis2/kontrollnimekiri/">Kontrollnimekiri</a></li>
+                    <li><a href="/nis2/audit/">NIS2 audit</a></li>
+                    <li><a href="/nis2/toetus/">EIS-i NIS2 toetus</a></li>
+                    <li><a href="/sektorid/">NIS2 sektorite kaupa</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulatsioonide lingid">
+                <p class="site-footer__title">Regulatsioonid</p>
+                <ul>
+                    <li><a href="/regulatsioonid/">Kõik regulatsioonid</a></li>
+                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
+                    <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/ai-act/">AI Act Eestis</a></li>
+                    <li><a href="/e-its/">E-ITS ja audit</a></li>
+                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
                 </ul>
             </nav>
             <nav aria-label="Ettevõtte lingid">
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
-                    <li><a href="/en/press/" hreflang="en" lang="en">Press kit (EN)</a></li>
-                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
-                    <li><a href="/nis2/toetus/">NIS2 toetus</a></li>
-                    <li><a href="/sektorid/energeetika/">NIS2 energeetikas</a></li>
-                    <li><a href="/sektorid/tervishoid/">NIS2 tervishoius</a></li>
-                    <li><a href="/sektorid/finants/">DORA finantssektoris</a></li>
-                    <li><a href="/sektorid/">Sektorid</a></li>
-                    <li><a href="/sektorid/logistika/">NIS2 logistikas</a></li>
-                    <li><a href="/saidikaart/">Kõik lehed</a></li>
-                    <li><a href="/koolitus/">Koolitus</a></li>
-                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
-                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
-                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
-                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
-                    <li><a href="/nis2/">NIS2 juhend</a></li>
-                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
-                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
-                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
-                    <li><a href="/dora/audit/">DORA audit</a></li>
-                    <li><a href="/ai-act/">AI Act Eestis</a></li>
-                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
-                    <li><a href="/cra/">Cyber Resilience Act</a></li>
-                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
-                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
-                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
-                    <li><a href="/en/nis2/" hreflang="en" lang="en">NIS2 in Estonia (EN)</a></li>
-                    <li><a href="/en/nis2/audit/" hreflang="en" lang="en">NIS2 audit (EN)</a></li>
-                    <li><a href="/en/nis2/incident-reporting/" hreflang="en" lang="en">Incident reporting (EN)</a></li>
-                    <li><a href="/en/nis2/fines/" hreflang="en" lang="en">NIS2 fines (EN)</a></li>
-                    <li><a href="/en/nis2/registration/" hreflang="en" lang="en">NIS2 registration (EN)</a></li>
-                    <li><a href="/en/cra/" hreflang="en" lang="en">CRA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/" hreflang="en" lang="en">DORA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/audit/" lang="en" hreflang="en">DORA audit (EN)</a></li>
-                    <li><a href="/en/dora/register/" hreflang="en" lang="en">DORA register (EN)</a></li>
-                    <li><a href="/en/ai-act/" hreflang="en" lang="en">AI Act in Estonia (EN)</a></li>
-                    <li><a href="/en/sbom/" hreflang="en" lang="en">SBOM for CRA (EN)</a></li>
-                    <li><a href="/en/e-its/" hreflang="en" lang="en">E-ITS in Estonia (EN)</a></li>
-                    <li><a href="/en/pentesting/" hreflang="en" lang="en">Penetration testing (EN)</a></li>
-                    <li><a href="/en/security-audit/" hreflang="en" lang="en">Cybersecurity audit (EN)</a></li>
-                    <li><a href="/en/iso-27001/" hreflang="en" lang="en">ISO 27001 in Estonia (EN)</a></li>
-                    <li><a href="/e-its/">E-ITS ja audit</a></li>
-                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
-                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
-                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
+                    <li><a href="/artiklid/">Artiklid</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
-                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
+                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
+                    <li><a href="/saidikaart/">Kõik lehed</a></li>
                     <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
                     <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
                 </ul>
             </nav>
-            <div>
-                <p class="site-footer__title">Kontakt</p>
-                <ul>
-                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
-                    <li>Tallinn, Eesti</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
-                    <li><a href="/#contact">Tasuta kaardistus</a></li>
-                </ul>
-            </div>
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-24">24. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>

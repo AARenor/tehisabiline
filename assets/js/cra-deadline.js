@@ -6,8 +6,21 @@
 
   const fmt = new Intl.DateTimeFormat("et-EE", { dateStyle: "medium", timeStyle: "short" });
   const addHours = (date, hours) => new Date(date.getTime() + hours * 60 * 60 * 1000);
-  const addDays = (date, days) => new Date(date.getTime() + days * 24 * 60 * 60 * 1000);
-  const addMonth = (date) => { const next = new Date(date); next.setMonth(next.getMonth() + 1); return next; };
+  const addDays = (date, days) => {
+    const next = new Date(date);
+    next.setDate(next.getDate() + days);
+    return next;
+  };
+  // Calendar-month addition with end-of-month clamping: 31 Jan + 1 month = 28/29 Feb, not 2/3 Mar.
+  const addMonth = (date) => {
+    const next = new Date(date);
+    const day = next.getDate();
+    next.setDate(1);
+    next.setMonth(next.getMonth() + 1);
+    const lastDay = new Date(next.getFullYear(), next.getMonth() + 1, 0).getDate();
+    next.setDate(Math.min(day, lastDay));
+    return next;
+  };
   const typeSelect = form.querySelector("[name=cra-type]");
   const fixWrap = form.querySelector("[data-cra-fix-wrap]");
 
@@ -39,7 +52,7 @@
     } else {
       final = addMonth(notification); finalLabel = "1 kuu pärast põhiteavitust";
     }
-    out.innerHTML = `<p><strong>Avastamine:</strong> ${fmt.format(detected)}</p><ul><li><strong>Varajane hoiatus (24 h):</strong> ${fmt.format(warning)}</li><li><strong>Põhiteavitus (72 h):</strong> ${fmt.format(notification)}</li><li><strong>Lõpparuanne:</strong> ${final ? fmt.format(final) : finalLabel}${final ? ` — ${finalLabel}` : ""}</li></ul><p class="nis2-check__note">Kontrolli ENISA SRP-d, pädeva CSIRTi juhist ja CRA artiklit 14. Kalkulaator arvutab absoluutseid tunde; suveaja üleminekul võib kohalik kellaaeg nihkuda. See ei asenda teatamisprotsessi.</p>`;
+    out.innerHTML = `<p><strong>Avastamine:</strong> ${fmt.format(detected)}</p><ul><li><strong>Varajane hoiatus (24 h):</strong> ${fmt.format(warning)}</li><li><strong>Põhiteavitus (72 h):</strong> ${fmt.format(notification)}</li><li><strong>Lõpparuanne:</strong> ${final ? fmt.format(final) : finalLabel}${final ? ` — ${finalLabel}` : ""}</li></ul><p class="nis2-check__note">Kontrolli ENISA SRP-d, pädeva CSIRTi juhist ja CRA artiklit 14. „Üks kuu“ tähendab kalendrikuud: kui sama päev puudub, on tähtaeg kuu viimasel päeval. Suveaja üleminekul võib kohalik kellaaeg nihkuda. See ei asenda teatamisprotsessi.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });

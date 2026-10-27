@@ -2,15 +2,15 @@
 Founder: Arle Aron Reidma
 Role: AI developer and founder, Tehisabiline OÜ
 Contact: tehisabiline [at] gmail.com
-From: Tallinn, Estonia
+From: Viimsi Parish, Harju County, Estonia
 Profile: https://www.f6s.com/company/tehisabiline
 
 /* SITE */
-Last update: 2026/10/11
+Last update: 2026/10/27
 Language: Estonian (et)
 Standards: HTML5, CSS3, JSON-LD (schema.org), llms.txt
 Components: Static HTML, hand-written CSS design system, no frameworks, no tracking
 Fonts: Host Grotesk, Hanken Grotesk, JetBrains Mono (SIL Open Font License 1.1, self-hosted)
 Icons: Lucide (ISC License), inline SVG sprite
-Hosting: Vercel
+Hosting: Cloudflare Pages
 Source: https://github.com/AARenor/tehisabiline

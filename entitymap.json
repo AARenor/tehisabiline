@@ -32,10 +32,11 @@
     "founder": {
       "@id": "https://tehisabiline.ee/#founder"
     },
-    "description": "Tallinnas tegutsev ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
+    "description": "Eesti ettevõte: inimese kontrollitud agendipõhised küberauditid ja pentestimine ning planeeritav OpenAI-ühilduv API turvatööriistade arendajatele. API pole veel avalik; riistvara on tellitud, Eesti majutus tulekul.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Tallinn",
+      "addressLocality": "Viimsi vald",
+      "addressRegion": "Harju maakond",
       "addressCountry": "EE"
     },
     "areaServed": {
@@ -79,7 +80,6 @@
       "NIS2 intsidendist teatamine",
       "NIS2 trahvid",
       "DORA audit",
-      "Küberturvalisuse koolitus",
       "NIS2 toetus"
     ],
     "contactPointVariants": [
@@ -114,8 +114,7 @@
     "sameAs": [
       "https://www.linkedin.com/in/arlearonreidma/",
       "https://cerebralvalley.ai/u/AAR1",
-      "https://github.com/arlearonreidma",
-      "https://www.f6s.com/company/tehisabiline"
+      "https://github.com/arlearonreidma"
     ],
     "knowsAbout": [
       "AI Act",
@@ -138,7 +137,6 @@
       "Küberturbe auditid ja pentestid",
       "Küberturbe tööriistade API",
       "Küberturvalisus",
-      "Küberturvalisuse koolitus",
       "NIS2",
       "NIS2 audit",
       "NIS2 intsidendist teatamine",
@@ -405,14 +403,6 @@
       "knowsAbout": [
         "Veebirakenduse turvatestimine"
       ]
-    },
-    {
-      "id": "training",
-      "label": "Küberturvalisuse koolitus",
-      "hub": "/koolitus/",
-      "knowsAbout": [
-        "Küberturvalisuse koolitus"
-      ]
     }
   ],
   "clusters": [
@@ -435,8 +425,7 @@
         "/api-turvatestimine/",
         "/api-turvatestimine/kontrollnimekiri/",
         "/veebirakenduse-turvatestimine/",
-        "/ai-turvatestimine/",
-        "/koolitus/"
+        "/ai-turvatestimine/"
       ]
     },
     {
@@ -484,9 +473,7 @@
       "pages": [
         "/sektorid/",
         "/sektorid/energeetika/",
-        "/sektorid/tervishoid/",
-        "/sektorid/logistika/",
-        "/sektorid/finants/"
+        "/sektorid/tervishoid/"
       ]
     },
     {
@@ -536,8 +523,7 @@
         "/viitamine/",
         "/sonastik/",
         "/kasutusjuhud/",
-        "/privaatsus/",
-        "/saidikaart/"
+        "/privaatsus/"
       ]
     },
     {
@@ -556,7 +542,6 @@
     "/viitamine/": "trust",
     "/sonastik/": "trust",
     "/privaatsus/": "trust",
-    "/saidikaart/": "trust",
     "/mudelid/": "product",
     "/pentestimine/": "audit",
     "/pentestimine/naidisraport/": "audit",
@@ -565,7 +550,6 @@
     "/api-turvatestimine/kontrollnimekiri/": "audit",
     "/veebirakenduse-turvatestimine/": "audit",
     "/ai-turvatestimine/": "audit",
-    "/koolitus/": "audit",
     "/nis2/": "nis2",
     "/nis2/kontrollnimekiri/": "nis2",
     "/nis2/registreerimine/": "nis2",
@@ -586,8 +570,6 @@
     "/sektorid/": "sectors",
     "/sektorid/energeetika/": "sectors",
     "/sektorid/tervishoid/": "sectors",
-    "/sektorid/logistika/": "sectors",
-    "/sektorid/finants/": "sectors",
     "/artiklid/": "articles",
     "/artiklid/varunduse-taastetest/": "articles",
     "/artiklid/nis2-tarneahel/": "articles",

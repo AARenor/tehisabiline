@@ -23,7 +23,6 @@ Hub: `/pentestimine/`. Inbound to hub: 224 main-content links.
 | `/api-turvatestimine/kontrollnimekiri/` | API pentesti checklist | — | live, no asset |
 | `/veebirakenduse-turvatestimine/` | veebirakenduse pentest | — | live, no asset |
 | `/ai-turvatestimine/` | AI turvatestimine, prompt injection | — | live, no asset |
-| `/koolitus/` | küberturvalisus koolitus | — | live, no asset |
 
 Gaps: audit-vs-pentest comparison as its own URL (currently a section on `/kuberaudit/`);
 "pentesti hind" as its own page (currently a section); no checklist asset for web
@@ -107,8 +106,9 @@ English-language long-tail and cannot earn links the way `/artiklid/` can.
 
 ## 8. trust, product, home
 
-`/meist/`, `/viitamine/`, `/sonastik/`, `/kasutusjuhud/`, `/privaatsus/`, `/saidikaart/`,
-`/mudelid/`, `/`. These carry entity and citation weight, not keyword targets. `/viitamine/`
+`/meist/`, `/viitamine/`, `/sonastik/`, `/kasutusjuhud/`, `/privaatsus/`, `/mudelid/`, `/`. (`/saidikaart/`
+is `noindex, follow` since 2026-10-27: Google ranked the HTML sitemap for "nis2 eesti" instead of `/nis2/`.)
+These carry entity and citation weight, not keyword targets. `/viitamine/`
 is the citation hub for AI answer engines and press; keep it current with every new asset.
 
 ## How this map is used

@@ -23,7 +23,7 @@
     const maxFine = Math.max(fixed, turnoverPart);
     const basis = turnoverPart > fixed ? "turnover-based amount" : "fixed ceiling";
 
-    out.innerHTML = `<p><strong>Maximum fine: ${eur.format(maxFine)}</strong></p><p>Calculation: ${type === "essential" ? "essential" : "important"} entity, ${eur.format(fixed)} or ${(rate * 100).toLocaleString("en-GB")}% of turnover. The ${basis} applies.</p><p class="nis2-check__note">This is a mathematical ceiling, not a predicted fine. The supervisor weighs severity, duration, impact and cooperation. Check the applicable KüTS and RIA guidance.</p>`;
+    out.innerHTML = `<p><strong>Maximum fine: ${eur.format(maxFine)}</strong></p><p>Calculation: ${type === "essential" ? "essential" : "important"} entity; max(${eur.format(fixed)}; ${(rate * 100).toLocaleString("en-GB")}% of previous-year worldwide turnover ${eur.format(turnoverPart)}) = ${eur.format(maxFine)}. The ${basis} applies.</p><p class="nis2-check__note">This is a ceiling, not a predicted fine. The supervisor weighs severity, duration, prior breaches, impact, intent or negligence, mitigation and cooperation (KüTS&nbsp;§&nbsp;14(7)). Not a legal determination.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });

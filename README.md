@@ -2,7 +2,7 @@
 
 Live: https://tehisabiline.ee/
 
-Company website of Tehisabiline OÜ (Tallinn, Estonia): cybersecurity audits (including penetration testing with written authorization) and a cyber-AI API for security tooling. Static HTML/CSS/JS, no backend.
+Company website of Tehisabiline OÜ (registered office: Viimsi Parish, Harju County, Estonia; service area: Estonia): cybersecurity audits (including penetration testing with written authorization) and a cyber-AI API for security tooling. Static HTML/CSS/JS, no backend.
 
 AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenused on küberauditid ja kübertööriistade API; üldised hallatud AI-teenused on eraldi saidil `https://arle.top/`. SEO/GEO teenused ei kuulu veebisaidi pakkumisse.
 
@@ -10,7 +10,6 @@ AI-teemaline staatiline veebisait HTML-i, CSS-i ja JavaScriptiga. Avalikud teenu
 
 - [Küberturvalisuse regulatsioonide kaart](https://tehisabiline.ee/regulatsioonid/) ([CSV](https://tehisabiline.ee/assets/downloads/kyberturvalisuse-regulatsioonid-2026.csv), [ICS kalender](https://tehisabiline.ee/assets/downloads/regulatsioonide-tahtajad.ics))
 - [English home](https://tehisabiline.ee/en/)
-- [Küberturvalisuse koolitus](https://tehisabiline.ee/koolitus/)
 - [NIS2 toetus](https://tehisabiline.ee/nis2/toetus/)
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/)
 - [NIS2 registration in Estonia (EN)](https://tehisabiline.ee/en/nis2/registration/)
@@ -79,7 +78,7 @@ Audit jätab privaatse `docs/` arhiivi välja, kuid leiab avaliku lehe ka siis, 
 
 SEO/GEO sisupõhimõtted: vastus küsimusele on nähtavas HTML-is; teenuse ulatus, saadavus ja kontakt on selged; JSON-LD vastab lehe sisule. Avaleht ja teenuselehed kasutavad teenustele samu kanoonilisi `@id` väärtusi. `llms.txt` ja `llms-full.txt` on täiendavad kokkuvõtted, mitte indekseerimise või AI-tsitaatide garantii. Allikate arvud kirjeldavad nende uuringute valimit, mitte Eesti ettevõtte isiklikku riski.
 
-Sisulise muudatuse korral uuenda lehe nähtavat kuupäeva, JSON-LD `dateModified` välja, artikli sotsiaalmetaandmeid ja sitemap'i `lastmod` välja koos. `llms-full.txt` ülevaatuse kuupäev peab katma viimase sisumuudatuse. Indekseerimist ja päringute tulemust mõõda Search Console'is ning Bing Webmaster Toolsis; Lighthouse'i SEO skoor ei mõõda positsioone ega AI-vastustes mainimist.
+Sisulise muudatuse korral muuda ainult lehe nähtavat kuupäeva (`class="page-head__meta"` sees olev `<time datetime>`) ja jooksuta `node tools/stamp-modified.mjs`: see kopeerib sama kuupäeva JSON-LD `dateModified` väljale, `article:modified_time` metaandmele, jaluse kuupäevale ja sitemap'i `lastmod` väljale. `node tools/stamp-modified.mjs --check` näitab, kas need lähevad lahku (ka `npm run test:seo` kontrollib seda). Lehtedel, millel nähtav kuupäevaplokk puudub (avaleht, `/en/`, `/sektorid/`), on allikaks esimene JSON-LD `dateModified`. `llms-full.txt` ülevaatuse kuupäev peab katma viimase sisumuudatuse. Indekseerimist ja päringute tulemust mõõda Search Console'is ning Bing Webmaster Toolsis; Lighthouse'i SEO skoor ei mõõda positsioone ega AI-vastustes mainimist.
 
 Pentestimise SEO/GEO fookus (2026-10-12):
 
@@ -94,6 +93,8 @@ Pentestimise SEO/GEO fookus (2026-10-12):
 Üks põhileht iga erineva kasutajaeesmärgi kohta; ära tekita sünonüümidele ega linnadele dubleerivaid ukslehti. Märksõnavalik tugineb terminitele, teenuse sisule ja kontrollitud OWASP/NIST allikatele, mitte mõõdetud otsingumahule või lubatud positsioonidele. Küsimuste vastused, näidisjuhtumid ja allikad peavad olema nähtavas HTML-is; metoodikaviide ei tähenda sertifikaati ega automaatset täielikku katvust.
 
 Uue indekseeritava lehe puhul uuenda `tools/seo-check.mjs` lehtede loendit, sitemap'i, `llms.txt` ja `llms-full.txt` kokkuvõtteid ning lisa sisulised lingid olemasolevatelt lehtedelt. Kontrolli brauseris ka lehtedevaheliste `#ankur` linkide sihtmärke. Sitemap'i URL-ide järjekord ei ole SEO leping; tähtsad on täpne liikmesus, unikaalsus ja sisulise muudatuse kuupäevad.
+
+Kaotatud lehtede puhul kasuta 301-i, mitte `noindex`-it: `_redirects` sisaldab seisu 2026-10-27 — `/koolitus/` → `/nis2/` (koolitust ei pakuta), `/sektorid/finants/` → `/dora/` ja `/sektorid/logistika/` → `/sektorid/` (lehed liideti). Kustutatud lehtede URL-id tuleb eemaldada sitemap'ist, `entitymap.json`-ist, `tools/seo-check.mjs`-st, `llms*.txt`-st, `docs/seo/topical-map.md`-st ja `saidikaart/`-ist. `/saidikaart/` on `noindex, follow` (HTML-kaart on XML-sitemap'i duplikaat) ega kuulu sitemap'i. Sitemapi ja `llms` failide ebaõnnestunud kontrollid on seotud: `npm run test:seo` kontrollib mõlemat.
 
 IndexNow teavitus pärast muudatusi (kõik või valitud URL-id):
 
@@ -117,11 +118,14 @@ Peamised failid:
 - `assets/brand/logo.svg`, `assets/brand/favicon.svg` — vektorlogo ja väikese ikooni pikslivõrgule joondatud algallikas
 - `tools/logo-card.html`, `tools/og-card.html`, `tools/render-brand.mjs` — ikoonide ja lingi-eelvaate korratav renderdamine
 - `tools/render-og.mjs` — iga avaldatud lehe jaoks 1200×630 lingi-eelvaate kaart (`assets/brand/og-<slug>.png`) ja `og:image`/`twitter:image`/JSON-LD pildiviite uuendamine; jooksuta pärast sisumuudatusi (`node tools/render-og.mjs --force`) ja seejärel `npm run build:assets`
-- `tools/build-nis2-evidence-xlsx.py` — `/nis2/audit/` allalaaditava tõendite registri (XLSX) algallikas; `python3 tools/build-nis2-evidence-xlsx.py`
 - `PRODUCT.md`, `DESIGN.md`, `.impeccable/` — toote- ja disainiotsused arendajatele (ei lähe avalikku deploy'sse)
 - `tools/chrome.mjs` — ainus allikas jagatud päisele ja jalusele (`<!-- chrome:header -->` / `<!-- chrome:footer -->` markerid lehtedes). `chrome:widget` plokk hoiab alles lehe enda kalkulaatoriskriptid (`/assets/js/*`), ainult assistendi CSS/JS osa kirjutatakse üle
 - alamkataloogid — staatilised sisulehed
-- `tools/seo-check.mjs` — indexeeritavate lehtede kontroll
+- `tools/seo-check.mjs` — indexeeritavate lehtede kontroll (sh kuupäevade ühtsus, küsimuste ja vastuste ning breadcrumbi vastavus JSON-LD-le, keelatud konkurendiviited ja vananenud õiguslikud kuupäevad)
+- `tools/stamp-modified.mjs` — kuupäevade üks allikas: kopeerib lehe nähtava kuupäeva JSON-LD `dateModified` väljale, `article:modified_time` metaandmele, jalusele ja sitemap'i `lastmod` väljale (`--check` ainult kontrollib)
+- `tools/sync-faq.mjs` — sünkroonib JSON-LD `FAQPage` vastused nähtava vastusetekstiga (`--check` ainult kontrollib)
+- `tools/entitymap.mjs`, `tools/info-gain.mjs` — organisationaalse entity-kaardi ja lehtede unikaalsete varade kontroll
+- `tools/build-nis2-evidence-xlsx.py` — `/nis2/audit/` allalaaditava tõendite registri (XLSX) algallikas ja korratav ehitus (`python3 tools/build-nis2-evidence-xlsx.py`)
 - `tools/deploy.sh` — Cloudflare Pages'i deploy (avaldab ainult avalikud failid; nõuab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat)
 - `vercel.json`, `.vercelignore` — varasema Verceli seadistuse jäänuk, mida deploy ei kasuta
 

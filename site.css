@@ -663,7 +663,9 @@ table.data thead .ours { background: var(--blue); color: #fff; }
 /* 16 Footer --------------------------------------------------------------- */
 .site-footer { background: var(--mist); border-top: 1px solid var(--line); padding-top: clamp(3rem, 2.5rem + 3vw, 5rem); }
 .site-footer__grid { display: grid; gap: 2.5rem; padding-bottom: clamp(2.5rem, 2rem + 2vw, 4rem); }
-@media (min-width: 860px) { .site-footer__grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 3rem; } }
+@media (min-width: 640px) { .site-footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 3rem; } }
+@media (min-width: 1040px) { .site-footer__grid { grid-template-columns: minmax(0, 1.25fr) repeat(4, minmax(0, 1fr)); gap: 2.5rem 2.25rem; } }
+.site-footer__about .site-footer__title { margin-top: 1.75rem; margin-bottom: .75rem; }
 .site-footer .brand { font-size: 1.35rem; }
 .site-footer .brand img { width: 36px; height: 36px; border-radius: 9px; }
 .site-footer p { color: var(--muted); max-width: 22rem; margin-top: 1rem; }

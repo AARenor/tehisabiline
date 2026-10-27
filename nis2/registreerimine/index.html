@@ -36,7 +36,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=52056b57">
+    <link rel="stylesheet" href="/site.css?v=0453a9db">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "@type": "Article","citation":["https://www.eesti.ee/ettevotja/et/teenused/kuberturvalisus#teenuseosutaja-teavitus-(kuts-3-lg-1)","https://www.riigiteataja.ee/akt/106102026002","https://www.ria.ee/","https://eur-lex.europa.eu/eli/dir/2022/2555/oj"],
+      "@type": "Article","citation":["https://www.eesti.ee/ettevotja/et/teenused/kuberturvalisus#teenuseosutaja-teavitus-(kuts-3-lg-1)","https://www.riigiteataja.ee/akt/106102026002","https://www.ria.ee/kuberturvalisus/riigi-infoturbe-meetmete-haldus/teenuseosutaja-eits-auditi-iso-sertifikaadi-pilvandmetootluse-teade","https://eur-lex.europa.eu/eli/dir/2022/2555/oj"],
       "@id": "https://tehisabiline.ee/nis2/registreerimine/#article",
       "url": "https://tehisabiline.ee/nis2/registreerimine/",
       "headline": "NIS2 registreerimine RIA-le: sammud ja tähtajad",
@@ -188,7 +188,7 @@
           "name": "Kes peab end NIS2 järgi RIA-le registreerima?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kohustuslane, kes kuulub KüTS-i kohaldamisalasse oma sektori, teenuse ja rolli tõttu. Registreerimine ei ole vabatahtlik turundustegevus; see on järelevalve kontaktandmete ja tegevusandmete teavitamine."
+            "text": "Kohustuslane, kes kuulub KüTS § 3 kohaldamisalasse sektori, teenuse ja suuruskriteeriumi alusel. Registreerimine on kohustus, mitte turundustegevus: see on järelevalve kontaktandmete ja tegevusandmete teavitamine."
           }
         },
         {
@@ -196,7 +196,7 @@
           "name": "Millal tuleb NIS2 registreerimine teha?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kehtivad tähtajad tuleb kontrollida RIA juhisest ja KüTS-ist. Uus kohustuslane teatab tegevusest kolme kuu jooksul; olemasolevate kohustuslaste tähtaeg on möödunud ja hilinenud registreerimine tuleb ära teha koos põhjendusega."
+            "text": "Uus teenuseosutaja teavitab RIA-t kolme kuu jooksul pärast seda, kui muutub KüTS § 3 kohaseks teenuseosutajaks. Olemasolevad teenuseosutajad: kolme kuu jooksul seaduse jõustumisest 1. jaanuaril 2026 (see aken sulgus 2026. aasta kevadel); kui pole veel teavitanud, tee seda kohe."
           }
         },
         {
@@ -204,7 +204,7 @@
           "name": "Mida RIA registreerimisel küsib?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tüüpiliselt ettevõtte andmed, sektor ja teenus, kontaktisik, grupi suurus ning tegevuse ulatus. Täpne väljade loend sõltub RIA vormist; ära jäta välju vaikimisi tühjaks."
+            "text": "Nimi ja registrikood, tegevuskoha aadress, ajakohased kontaktandmed (sh e-posti aadressid, telefoninumbrid ja IP-aadressivahemikud), sektor ja allsektor, kui see on asjakohane. Täpne vorm on eesti.ee-s; kontrolli seda enne esitamist."
           }
         },
         {
@@ -212,7 +212,7 @@
           "name": "Mida teha, kui ettevõtte andmed muutuvad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Teavita RIA-t muudatusest ja hoia kontaktisik ajakohane. Muudatused sektoris, teenuses või grupi struktuuris võivad muuta ka kohustuste ulatust."
+            "text": "Teata muudatusest RIA-le hiljemalt kahe nädala jooksul muudatuse tegemisest. Muudatused sektoris, teenuses või grupi seostes võivad muuta ka kohaldamisala."
           }
         }
       ]
@@ -230,7 +230,7 @@
         <nav class="site-nav" aria-label="Põhinavigatsioon">
             <a href="/pentestimine/">Küberaudit / pentest</a>
             <a href="/mudelid/">Küber-AI API</a>
-            <a href="/nis2/" aria-current="page">NIS2</a>
+            <a href="/nis2/" aria-current="page">NIS2 Eestis</a>
             <a href="/meist/">Meist</a>
         </nav>
         <a class="btn btn--primary btn--sm site-header__cta" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
@@ -239,7 +239,7 @@
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobiilimenüü" hidden>
         <a href="/pentestimine/">Küberaudit / pentest</a>
         <a href="/mudelid/">Küber-AI API</a>
-        <a href="/nis2/" aria-current="page">NIS2</a>
+        <a href="/nis2/" aria-current="page">NIS2 Eestis</a>
         <a href="/meist/">Meist</a>
         <a class="btn btn--primary" href="/#contact">Tasuta kaardistus<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
     </nav>
@@ -255,21 +255,22 @@
     <p class="page-head__meta">Autor <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
   </div></header>
   <section class="section"><div class="wrap article">
-    <nav class="toc" aria-label="Sellel lehel"><strong>Sellel lehel</strong><ol><li><a href="#kes">Kes peab registreerima?</a></li><li><a href="#enne">Enne registreerimist</a></li><li><a href="#sammud">Sammud</a></li><li><a href="#muudatused">Muudatused</a></li><li><a href="#kalkulaator">Tähtaegade kalkulaator</a></li><li><a href="#vead">Tüüpilised vead</a></li><li><a href="#faq">Küsimused</a></li><li><a href="#allikad">Allikad</a></li></ol></nav>
+    <nav class="toc" aria-label="Sellel lehel"><strong>Sellel lehel</strong><ol><li><a href="#kes">Kes peab registreerima?</a></li><li><a href="#enne">Enne registreerimist</a></li><li><a href="#sammud">Sammud</a></li><li><a href="#muudatused">Muudatused</a></li><li><a href="#tahtajad">Tähtajad</a></li><li><a href="#kalkulaator">Tähtaegade kalkulaator</a></li><li><a href="#vead">Tüüpilised vead</a></li><li><a href="#faq">Küsimused</a></li><li><a href="#allikad">Allikad</a></li></ol></nav>
     <article class="prose">
-      <section class="short-answer" id="kes"><h2>Kes peab end RIA-le registreerima?</h2><p>Kohustuslane, kes kuulub KüTS-i kohaldamisalasse oma sektori, teenuse või rolli tõttu. See ei sõltu ainult töötajate arvust: vaata sektorit, osutatavat teenust ja grupi suurust. Kui oled avalik-õiguslik asutus või osutad avalikku teenust, võib kohaldumine olla laiem.</p><p>Kui pole kindel, tee esmalt <a href="/nis2/#enesekontroll">NIS2 enesekontroll</a> ja loe kohaldamisala peatükki. Registreerimine ei asenda riskianalüüsi ega tehnilisi meetmeid.</p></section>
-      <section id="enne"><h2>Enne registreerimist</h2><ul><li>Kinnita juriidiline nimi, registrikood ja kontaktisik.</li><li>Kirjelda sektorit ja teenust üheselt, mitte turunduskeeles.</li><li>Selgita välja grupi struktuur ja suurus.</li><li>Vaata, kes vastutab teavituse eest ja kes hoiab tõendeid.</li><li>Kontrolli RIA kehtivat vormi ja juhist; ära kasuta vana PDF-i.</li></ul><p>Kui registreerimise alus on ebaselge, dokumenteeri otsus ja selle põhjendus. Hilisem järelevalve küsib, miks teatud teenus või üksus kaasati või jäeti välja.</p></section>
-      <section id="sammud"><h2>Registreerimise sammud</h2><p>Vorm avaneb riigiportaali <a href="https://www.eesti.ee/ettevotja/et/teenused/kuberturvalisus#teenuseosutaja-teavitus-(kuts-3-lg-1)" rel="noopener">eesti.ee küber turvalisuse teenuses</a>. Esitatud andmete muudatustest tuleb RIA-le teatada hiljemalt kahe nädala jooksul.</p><ol><li><strong>Logi sisse RIA teenusekeskkonda</strong> ja ava NIS2/KüTS teavituse vorm.</li><li><strong>Täida ettevõtte andmed</strong> täpselt nagu registris; lisa kontaktisik, kes vastab järelevalve küsimustele.</li><li><strong>Vali sektor ja teenus</strong>; kirjelda tegevust nii, et järelevalve saab aru, miks oled kohustuslane.</li><li><strong>Märgi grupi suurus ja seotud üksused</strong>, kui vorm seda küsib.</li><li><strong>Kontrolli üle</strong> enne esitamist; salvesta kinnitus ja esitatud andmete koopia.</li><li><strong>Dokumenteeri</strong>, kes esitas, millal ja mis alusel.</li></ol><p>Kui vorm ei luba olukorda täpselt kirjeldada, lisa selgitus ja küsi RIA-lt juhis. Ära jäta välja tühjaks, kui see muudab kohustuse ebaselgeks.</p></section>
-      <section id="muudatused"><h2>Muudatuste teatamine</h2><p>Registreerimine ei ole ühekordne sündmus. Kui muutub kontaktisik, sektor, teenus, grupi struktuur või tegevuse ulatus, tuleb teavitus ajakohastada. Hoia alles esitatud andmete versioon ja muudatuse põhjendus.</p><p>Praktiline reegel: iga kord, kui juhatus kinnitab uue teenuse või omandab uue üksuse, kontrolli, kas NIS2 teavitus on endiselt õige.</p></section>
-      <section id="kalkulaator"><h2>Registreerimise ja muudatuse tähtaegade kalkulaator</h2><p>Sisesta tegevuse algus või muudatuse kuupäev. Kalkulaator näitab kolme kuu ja kahe nädala tähtaegu. Andmed jäävad brauserisse.</p><form class="nis2-check" data-nis2-reg-deadline data-local-check><fieldset><legend>Tegevuse algus või kohustuse tekkimine</legend><label for="nis2-reg-start">Kuupäev</label><input id="nis2-reg-start" name="start" type="date"></fieldset><fieldset><legend>Muudatus registriandmetes</legend><label for="nis2-reg-change">Muudatuse kuupäev</label><input id="nis2-reg-change" name="change" type="date"></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Arvuta tähtajad</button><button class="btn btn--ghost" type="reset">Lähtesta</button></div><div class="nis2-check__result" data-nis2-reg-deadline-result tabindex="-1" aria-live="polite" hidden></div></form></section>
-      <section id="vead"><h2>Tüüpilised vead</h2><ul><li>Registreeritakse alles siis, kui järelevalve küsib.</li><li>Kontaktisik on inimene, kes on ettevõttest lahkunud.</li><li>Sektor ja teenus on kirjeldatud liiga üldiselt.</li><li>Grupi struktuur jäetakse välja, kuigi vorm seda küsib.</li><li>Kinnitus ja esitatud andmed jäävad salvestamata.</li><li>Arvatakse, et registreerimine ise tähendab vastavust.</li></ul></section>
+      <section class="short-answer" id="kes"><h2>Kes peab end RIA-le registreerima?</h2><p>Kohustuslane, kes kuulub KüTS&nbsp;§&nbsp;3 kohaldamisalasse. Ei piisa ainult sektorist ega ainult suurusest: kontrolli, kas sinu tegevus on KüTS&nbsp;§&nbsp;3 loetelus ja kas selle kategooria suuruskriteerium on täidetud (tavaliselt vähemalt 50 töötajat ja aastakäive või bilansimaht üle 10 mln €; mõned kategooriad kehtivad suurusest sõltumata).</p><p>Kui pole kindel, vaata <a href="/nis2/">NIS2 Eestis: ülevaade</a>. Registreerimine ei asenda riskianalüüsi ega tehnilisi meetmeid; nende kontrolliks vaata <a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekirja</a> ja intsidendi korral <a href="/nis2/intsidendist-teatamine/">intsidendi teatamise juhendit</a>.</p></section>
+      <section id="enne"><h2>Enne registreerimist</h2><ul><li>Kinnita juriidiline nimi, registrikood ja tegevuskoha aadress.</li><li>Kogu ajakohased kontaktandmed: e-posti aadressid, telefoninumbrid ja kontaktisik, kes vastab järelevalve küsimustele.</li><li>Võta kokku ettevõtte IP-aadressivahemikud.</li><li>Kirjelda sektorit, allsektorit ja teenust üheselt, mitte turunduskeeles.</li><li>Selgita, kas ja milliste partnerite või sidusettevõtjate andmed on KüTS&nbsp;§&nbsp;3 lõike 7 järgi arvestatavad. Grupi andmeid ei liideta automaatselt.</li><li>Kontrolli eesti.ee kehtivat vormi ja RIA juhendit; ära kasuta vana PDF-i.</li></ul><p>Kui registreerimise alus on ebaselge, dokumenteeri otsus ja selle põhjendus, sh miks teatud teenus või üksus kaasati või jäeti välja.</p></section>
+      <section id="sammud"><h2>Registreerimise sammud</h2><p>Teavitus esitatakse riigiportaalis <a href="https://www.eesti.ee/ettevotja/et/teenused/kuberturvalisus#teenuseosutaja-teavitus-(kuts-3-lg-1)" rel="noopener">eesti.ee</a> ettevõtja vaates: Küberturvalisus → Teenuseosutaja teavitus. RIA juhendi järgi saab teavituse esitada ettevõtte juhatuse liige. Esitatud andmete muudatustest tuleb RIA-le teatada hiljemalt kahe nädala jooksul.</p><ol><li><strong>Logi sisse eesti.ee-sse</strong> ettevõtja vaates ja ava Küberturvalisus → Teenuseosutaja teavitus.</li><li><strong>Täida ettevõtte andmed:</strong> nimi ja registrikood, tegevuskoha aadress ning ajakohased kontaktandmed, sh e-posti aadressid, telefoninumbrid ja IP-aadressivahemikud.</li><li><strong>Vali sektor ja allsektor</strong>, kui need on NIS2 direktiivi I või II lisa järgi asjakohased, ning kirjelda teenust nii, et järelevalve saab aru, miks oled kohustuslane.</li><li><strong>Kontrolli üle</strong> enne esitamist; salvesta kinnitus ja esitatud andmete koopia.</li><li><strong>Dokumenteeri</strong>, kes esitas, millal ja mis alusel.</li></ol><p>Kui vorm ei luba olukorda täpselt kirjeldada, lisa selgitus ja küsi RIA-lt juhis. Ära jäta välju tühjaks, kui see muudab kohustuse ebaselgeks.</p></section>
+      <section id="muudatused"><h2>Muudatuste teatamine</h2><p>Registreerimine ei ole ühekordne sündmus. Kui muutub kontaktisik, sektor, teenus, grupi seosed või tegevuse ulatus, tuleb andmed RIA-le hiljemalt kahe nädala jooksul muudatusest teatada. Hoia alles esitatud andmete versioon ja muudatuse põhjendus.</p><p>Praktiline reegel: iga kord, kui juhatus kinnitab uue teenuse või omandab uue üksuse, kontrolli, kas teavitus on endiselt õige.</p></section>
+      <section id="tahtajad"><h2>Tähtajad</h2><ul><li><strong>Uus teenuseosutaja:</strong> teavita RIA-t kolme kuu jooksul pärast seda, kui muutud KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks (KüTS&nbsp;§&nbsp;4<sup>1</sup> lg&nbsp;1).</li><li><strong>Muudatused esitatud andmetes:</strong> hiljemalt kaks nädalat pärast muudatuse tegemist (KüTS&nbsp;§&nbsp;3<sup>1</sup> lg&nbsp;4).</li><li><strong>Olemasolevad teenuseosutajad:</strong> kolme kuu jooksul seaduse jõustumisest 1. jaanuaril 2026 (see aken sulgus 2026. aasta kevadel); kui pole veel teavitanud, tee seda kohe (KüTS&nbsp;§&nbsp;28<sup>1</sup> lg&nbsp;1).</li></ul><p>Kolme kuu tähtaeg algab sellest, kui muutud teenuseosutajaks, mitte ettevõtte asutamisest.</p></section>
+      <section id="kalkulaator"><h2>Registreerimise ja muudatuse tähtaegade kalkulaator</h2><p>Sisesta kuupäev, mil muutusid KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks (kolme kuu tähtaeg), ja/või muudatuse kuupäev (kahe nädala tähtaeg). Kalkulaator arvutab ainult kalendritähtajad. Andmed jäävad brauserisse.</p><form class="nis2-check" data-nis2-reg-deadline data-local-check><fieldset><legend>Päev, mil muutusid teenuseosutajaks</legend><label for="nis2-reg-start">Kuupäev</label><input id="nis2-reg-start" name="start" type="date"></fieldset><fieldset><legend>Muudatus registriandmetes</legend><label for="nis2-reg-change">Muudatuse kuupäev</label><input id="nis2-reg-change" name="change" type="date"></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Arvuta tähtajad</button><button class="btn btn--ghost" type="reset">Lähtesta</button></div><div class="nis2-check__result" data-nis2-reg-deadline-result tabindex="-1" aria-live="polite" hidden></div></form><p><strong>Näide (27.10.2026; ei ole õiguslik hinnang):</strong> ettevõte muutub KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks 15. septembril 2026. Kolme kuu tähtaeg on 15. detsember 2026. Kui 1. novembril 2026 muutub kontaktisik, tuleb muudatus teatada hiljemalt 15. novembriks 2026 (kaks nädalat).</p></section>
+      <section id="vead"><h2>Tüüpilised vead</h2><ul><li>Registreeritakse alles siis, kui järelevalve küsib.</li><li>Kontaktisik on inimene, kes on ettevõttest lahkunud.</li><li>Sektor ja teenus on kirjeldatud liiga üldiselt.</li><li>Suurust hinnatakse ainult töötajate arvu järgi, kuigi kohaldamine sõltub ka aastakäibest või bilansimahust.</li><li>Grupi seoseid ei hinnata, kuigi need võivad mõjutada kohaldamist (KüTS&nbsp;§&nbsp;3 lg&nbsp;7).</li><li>Kinnitus ja esitatud andmed jäävad salvestamata.</li><li>Arvatakse, et registreerimine ise tähendab vastavust.</li></ul></section>
       <section id="faq"><h2>Küsimused registreerimise kohta</h2><div class="faq">
-        <details><summary><h3>Kes peab end NIS2 järgi RIA-le registreerima?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Kohustuslane, kes kuulub KüTS-i kohaldamisalasse oma sektori, teenuse ja rolli tõttu. Registreerimine ei ole vabatahtlik turundustegevus; see on järelevalve kontaktandmete ja tegevusandmete teavitamine.</p></details>
-        <details><summary><h3>Millal tuleb NIS2 registreerimine teha?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Kehtivad tähtajad tuleb kontrollida RIA juhisest ja KüTS-ist. Uus kohustuslane teatab tegevusest kolme kuu jooksul; olemasolevate kohustuslaste tähtaeg on möödunud ja hilinenud registreerimine tuleb ära teha koos põhjendusega.</p></details>
-        <details><summary><h3>Mida RIA registreerimisel küsib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Tüüpiliselt ettevõtte andmed, sektor ja teenus, kontaktisik, grupi suurus ning tegevuse ulatus. Täpne väljade loend sõltub RIA vormist; ära jäta välju vaikimisi tühjaks.</p></details>
-        <details><summary><h3>Mida teha, kui ettevõtte andmed muutuvad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Teavita RIA-t muudatusest ja hoia kontaktisik ajakohane. Muudatused sektoris, teenuses või grupi struktuuris võivad muuta ka kohustuste ulatust.</p></details>
+        <details><summary><h3>Kes peab end NIS2 järgi RIA-le registreerima?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Kohustuslane, kes kuulub KüTS&nbsp;§&nbsp;3 kohaldamisalasse sektori, teenuse ja suuruskriteeriumi alusel. Registreerimine on kohustus, mitte turundustegevus: see on järelevalve kontaktandmete ja tegevusandmete teavitamine.</p></details>
+        <details><summary><h3>Millal tuleb NIS2 registreerimine teha?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Uus teenuseosutaja teavitab RIA-t kolme kuu jooksul pärast seda, kui muutub KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks. Olemasolevad teenuseosutajad: kolme kuu jooksul seaduse jõustumisest 1. jaanuaril 2026 (see aken sulgus 2026. aasta kevadel); kui pole veel teavitanud, tee seda kohe.</p></details>
+        <details><summary><h3>Mida RIA registreerimisel küsib?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Nimi ja registrikood, tegevuskoha aadress, ajakohased kontaktandmed (sh e-posti aadressid, telefoninumbrid ja IP-aadressivahemikud), sektor ja allsektor, kui see on asjakohane. Täpne vorm on eesti.ee-s; kontrolli seda enne esitamist.</p></details>
+        <details><summary><h3>Mida teha, kui ettevõtte andmed muutuvad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Teata muudatusest RIA-le hiljemalt kahe nädala jooksul muudatuse tegemisest. Muudatused sektoris, teenuses või grupi seostes võivad muuta ka kohaldamisala.</p></details>
       </div></section>
-      <section id="allikad"><h2>Allikad</h2><ul><li><a href="https://www.riigiteataja.ee/akt/106102026002" rel="noopener">Küberturvalisuse seadus (KüTS)</a>.</li><li><a href="https://www.ria.ee/" rel="noopener">RIA</a> järelevalve ja registreerimise juhised.</li><li><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" rel="noopener">NIS2 direktiiv (EL) 2022/2555</a>.</li></ul></section>
+      <section id="allikad"><h2>Allikad</h2><p>Kontrollitud 27.10.2026.</p><ul><li><a href="https://www.riigiteataja.ee/akt/106102026002" rel="noopener">Küberturvalisuse seadus (KüTS)</a>, kehtiv redaktsioon 16.10.2026 (RT I, 06.10.2026, 2; muutmise seadus RT I, 06.10.2026, 1).</li><li><a href="https://www.ria.ee/kuberturvalisus/riigi-infoturbe-meetmete-haldus/teenuseosutaja-eits-auditi-iso-sertifikaadi-pilvandmetootluse-teade" rel="noopener">RIA: teenuseosutaja teavitus</a>.</li><li><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" rel="noopener">NIS2 direktiiv (EL) 2022/2555</a>.</li></ul></section>
       <section class="related" aria-labelledby="related"><h2 id="related">Vaata ka</h2><ul class="related__list">
         <li><a href="/nis2/"><span class="related__title">NIS2 Eestis</span><span class="related__desc">Kohaldumine, kümme meedet ja tähtajad.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
         <li><a href="/nis2/kontrollnimekiri/"><span class="related__title">NIS2 kontrollnimekiri</span><span class="related__desc">Tõendid ja tüüpilised puudused.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
@@ -283,80 +284,67 @@
 <footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
-            <div>
+            <div class="site-footer__about">
                 <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
                 <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
+                <p class="site-footer__title">Kontakt</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Reg. kood 17607255 · Viimsi vald, Harju maakond</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="/#contact">Tasuta kaardistus</a></li>
+                </ul>
             </div>
             <nav aria-label="Teenuste lingid">
                 <p class="site-footer__title">Teenused</p>
                 <ul>
                     <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
+                    <li><a href="/kuberaudit/">IT turvaaudit</a></li>
                     <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
+                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
+                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
+                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
+                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 lingid">
+                <p class="site-footer__title">NIS2 Eestis</p>
+                <ul>
+                    <li><a href="/nis2/">NIS2 Eestis: ülevaade</a></li>
+                    <li><a href="/nis2/registreerimine/">Registreerimine RIA-s</a></li>
+                    <li><a href="/nis2/intsidendist-teatamine/">Intsidendist teatamine</a></li>
+                    <li><a href="/nis2/trahvid/">Trahvid ja vastutus</a></li>
+                    <li><a href="/nis2/kontrollnimekiri/">Kontrollnimekiri</a></li>
+                    <li><a href="/nis2/audit/">NIS2 audit</a></li>
+                    <li><a href="/nis2/toetus/">EIS-i NIS2 toetus</a></li>
+                    <li><a href="/sektorid/">NIS2 sektorite kaupa</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulatsioonide lingid">
+                <p class="site-footer__title">Regulatsioonid</p>
+                <ul>
+                    <li><a href="/regulatsioonid/">Kõik regulatsioonid</a></li>
+                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
+                    <li><a href="/cra/">Cyber Resilience Act</a></li>
+                    <li><a href="/ai-act/">AI Act Eestis</a></li>
+                    <li><a href="/e-its/">E-ITS ja audit</a></li>
+                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
+                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
                 </ul>
             </nav>
             <nav aria-label="Ettevõtte lingid">
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
-                    <li><a href="/en/press/" hreflang="en" lang="en">Press kit (EN)</a></li>
-                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
-                    <li><a href="/nis2/toetus/">NIS2 toetus</a></li>
-                    <li><a href="/sektorid/energeetika/">NIS2 energeetikas</a></li>
-                    <li><a href="/sektorid/tervishoid/">NIS2 tervishoius</a></li>
-                    <li><a href="/sektorid/finants/">DORA finantssektoris</a></li>
-                    <li><a href="/sektorid/">Sektorid</a></li>
-                    <li><a href="/sektorid/logistika/">NIS2 logistikas</a></li>
-                    <li><a href="/saidikaart/">Kõik lehed</a></li>
-                    <li><a href="/koolitus/">Koolitus</a></li>
-                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
-                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
-                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
-                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
-                    <li><a href="/nis2/">NIS2 juhend</a></li>
-                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
-                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
-                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
-                    <li><a href="/dora/audit/">DORA audit</a></li>
-                    <li><a href="/ai-act/">AI Act Eestis</a></li>
-                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
-                    <li><a href="/cra/">Cyber Resilience Act</a></li>
-                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
-                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
-                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
-                    <li><a href="/en/nis2/" hreflang="en" lang="en">NIS2 in Estonia (EN)</a></li>
-                    <li><a href="/en/nis2/audit/" hreflang="en" lang="en">NIS2 audit (EN)</a></li>
-                    <li><a href="/en/nis2/incident-reporting/" hreflang="en" lang="en">Incident reporting (EN)</a></li>
-                    <li><a href="/en/nis2/fines/" hreflang="en" lang="en">NIS2 fines (EN)</a></li>
-                    <li><a href="/en/nis2/registration/" hreflang="en" lang="en">NIS2 registration (EN)</a></li>
-                    <li><a href="/en/cra/" hreflang="en" lang="en">CRA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/" hreflang="en" lang="en">DORA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/audit/" lang="en" hreflang="en">DORA audit (EN)</a></li>
-                    <li><a href="/en/dora/register/" hreflang="en" lang="en">DORA register (EN)</a></li>
-                    <li><a href="/en/ai-act/" hreflang="en" lang="en">AI Act in Estonia (EN)</a></li>
-                    <li><a href="/en/sbom/" hreflang="en" lang="en">SBOM for CRA (EN)</a></li>
-                    <li><a href="/en/e-its/" hreflang="en" lang="en">E-ITS in Estonia (EN)</a></li>
-                    <li><a href="/en/pentesting/" hreflang="en" lang="en">Penetration testing (EN)</a></li>
-                    <li><a href="/en/security-audit/" hreflang="en" lang="en">Cybersecurity audit (EN)</a></li>
-                    <li><a href="/en/iso-27001/" hreflang="en" lang="en">ISO 27001 in Estonia (EN)</a></li>
-                    <li><a href="/e-its/">E-ITS ja audit</a></li>
-                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
-                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
-                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
+                    <li><a href="/artiklid/">Artiklid</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
-                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
+                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
+                    <li><a href="/saidikaart/">Kõik lehed</a></li>
                     <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
                     <li><a href="/llms.txt">AI-süsteemidele</a></li>
+                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
                 </ul>
             </nav>
-            <div>
-                <p class="site-footer__title">Kontakt</p>
-                <ul>
-                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
-                    <li>Tallinn, Eesti</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
-                    <li><a href="/#contact">Tasuta kaardistus</a></li>
-                </ul>
-            </div>
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>

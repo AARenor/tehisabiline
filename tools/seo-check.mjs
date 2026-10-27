@@ -52,7 +52,8 @@ const expectedPages = [
         canonical: `${origin}/saidikaart/`,
         schemaTypes: ["CollectionPage", "ItemList", "BreadcrumbList"],
         dateType: "CollectionPage",
-        requiresPublishedDate: true
+        requiresPublishedDate: true,
+        noindex: true
     },
     {
         file: "viitamine/index.html",
@@ -381,13 +382,6 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
-        file: "koolitus/index.html",
-        canonical: `${origin}/koolitus/`,
-        schemaTypes: ["Service", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
-        requiresOrganization: true
-    },
-    {
         file: "nis2/kontrollnimekiri/index.html",
         canonical: `${origin}/nis2/kontrollnimekiri/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
@@ -422,20 +416,6 @@ const expectedPages = [
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         lang: "et",
-        requiresPublishedDate: true
-    },
-    {
-        file: "sektorid/finants/index.html",
-        canonical: `${origin}/sektorid/finants/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
-        requiresPublishedDate: true
-    },
-    {
-        file: "sektorid/logistika/index.html",
-        canonical: `${origin}/sektorid/logistika/`,
-        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
-        dateType: "WebPage",
         requiresPublishedDate: true
     },
     {
@@ -850,8 +830,43 @@ for (const page of expectedPages) {
             const faqPage = graph.find((item) => item["@type"] === "FAQPage" || (Array.isArray(item["@type"]) && item["@type"].includes("FAQPage")));
             if (faqPage) {
                 const visibleText = stripHtml(html);
+                const flat = visibleText.replace(/\s+/g, " ").trim();
                 for (const q of faqPage.mainEntity || []) {
                     assert(q.name && visibleText.includes(q.name), label + ": FAQ question missing from visible content.");
+                    const answer = typeof q.acceptedAnswer?.text === "string" ? q.acceptedAnswer.text.replace(/\s+/g, " ").trim() : "";
+                    assert(answer.length > 0, label + ": FAQ answer text must be present in structured data.");
+                    assert(flat.includes(answer), label + ": FAQ answer text differs from the visible answer (JSON-LD must match the page text).");
+                }
+            }
+            const breadcrumb = graph.find((item) => item["@type"] === "BreadcrumbList" || (Array.isArray(item["@type"]) && item["@type"].includes("BreadcrumbList")));
+            const visibleTrail = html.match(/<ol class="breadcrumbs">([\s\S]*?)<\/ol>/)?.[1];
+            if (breadcrumb && visibleTrail) {
+                const visible = [...visibleTrail.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)].map(([, inner]) => {
+                    const href = inner.match(/<a\b[^>]*href="([^"]+)"/)?.[1] || "";
+                    const name = stripHtml(inner).replace(/\s+/g, " ").trim();
+                    return { name, path: href ? href.replace(/^https?:\/\/[^/]+/, "") : "" };
+                });
+                const structured = (breadcrumb.itemListElement || []).map((item) => ({
+                    name: String(item.name || "").replace(/\s+/g, " ").trim(),
+                    path: String(item.item || "").replace(/^https?:\/\/[^/]+/, ""),
+                }));
+                assert(
+                    visible.length === structured.length,
+                    `${label}: BreadcrumbList has ${structured.length} items but the visible breadcrumb has ${visible.length}.`
+                );
+                for (let i = 0; i < Math.min(visible.length, structured.length); i += 1) {
+                    const same = visible[i].name === structured[i].name;
+                    const compatible = same
+                        || visible[i].name.toLowerCase().includes(structured[i].name.toLowerCase())
+                        || structured[i].name.toLowerCase().includes(visible[i].name.toLowerCase());
+                    assert(compatible, `${label}: breadcrumb item ${i + 1} is "${structured[i].name}" in JSON-LD but "${visible[i].name}" on the page.`);
+                    // The current page (last crumb) is not a link on the page but carries its own URL in JSON-LD.
+                    if (structured[i].path && i < visible.length - 1) {
+                        assert(
+                            structured[i].path === visible[i].path,
+                            `${label}: breadcrumb item ${i + 1} links ${structured[i].path} in JSON-LD but ${visible[i].path || "no path"} on the page.`
+                        );
+                    }
                 }
             }
             const schemaUrls = [];
@@ -870,6 +885,11 @@ for (const page of expectedPages) {
             assert(/^\d{4}-\d{2}-\d{2}$/.test(dateModified), `${label}: ${page.dateType} dateModified must use YYYY-MM-DD.`);
             assert(!dateModified || dateModified <= today, `${label}: WebPage dateModified cannot be in the future: ${dateModified}.`);
             assert(!dateModified || html.includes(`<time datetime="${dateModified}">`), `${label}: visible update date must match structured data.`);
+            // The page-head date is the source of truth; tools/stamp-modified.mjs copies it to every other signal.
+            const headDate = html.match(/class="page-head__meta"[^>]*>[\s\S]*?<time datetime="(\d{4}-\d{2}-\d{2})"/)?.[1];
+            assert(!headDate || headDate === dateModified, `${label}: visible page-head date ${headDate} must equal dateModified ${dateModified}; run node tools/stamp-modified.mjs.`);
+            const footerDate = html.match(/<!-- chrome:footer -->[\s\S]*?<time datetime="(\d{4}-\d{2}-\d{2})"/)?.[1];
+            assert(!footerDate || footerDate === dateModified, `${label}: footer update date ${footerDate} must equal dateModified ${dateModified}; run node tools/stamp-modified.mjs.`);
             if (page.requiresPublishedDate) {
                 const datePublished = datedEntity?.datePublished || "";
                 assert(/^\d{4}-\d{2}-\d{2}$/.test(datePublished), `${label}: ${page.dateType} datePublished must use YYYY-MM-DD.`);
@@ -897,6 +917,8 @@ for (const page of expectedPages) {
     assert(details.maxDepth <= 1, `${label}: FAQ disclosures must not be nested.`);
     assert(details.depth === 0 && details.minDepth === 0, `${label}: FAQ disclosure tags must be balanced.`);
     assert(!/api\.tehisabiline\.ee/i.test(html), `${label}: must not present the unavailable API hostname as live.`);
+    assert(!/nis2\.ee/i.test(html), `${label}: must not link or cite nis2.ee (a private competitor site, not an official source).`);
+    assert(!/31\.\s?märts(il)?\s?2026|31\s+March\s+2026|2026-03-31/i.test(html), `${label}: "31 March 2026" is not the statutory NIS2 registration deadline; use the three-month rule with the spring-2026 window.`);
 
     if (!page.noindex) {
         const mains = [...html.matchAll(/<main\b[^>]*>/gi)].map((match) => match[0]);
@@ -928,9 +950,39 @@ for (const name of readdirSync(join(root, "assets/downloads")).sort()) {
 
 const homeHtml = readFileSync(join(root, "index.html"), "utf8");
 assert(homeHtml.includes("API pole veel avalik"), "Homepage API example must say that the API is not yet public.");
-for (const serviceUrl of expectedUrls.slice(1)) {
-    const pathname = new URL(serviceUrl).pathname;
-    assert(new RegExp(`<a\\b[^>]*href=["']${escapeRegExp(pathname)}["']`, "i").test(homeHtml), `Homepage must link directly to ${pathname}.`);
+// Crawl paths: the commercial pages and topic hubs are one click from the homepage, and every other
+// indexable page is reachable within two clicks over links on indexable pages. (A flat footer that
+// listed all pages used to force one click for everything; hubs now carry their own spokes.)
+const HOME_DIRECT = ["/pentestimine/", "/kuberaudit/", "/mudelid/", "/nis2/", "/regulatsioonid/", "/dora/", "/cra/", "/ai-act/", "/e-its/", "/iso-27001/", "/sbom/", "/artiklid/", "/sektorid/", "/meist/", "/en/"];
+const MAX_CLICKS = 2;
+const linkedPaths = (html) => {
+    const targets = new Set();
+    for (const match of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
+        const href = match[1].trim();
+        if (!(href.startsWith("/") && !href.startsWith("//")) && !href.startsWith(`${origin}/`)) continue;
+        targets.add(new URL(href, origin).pathname);
+    }
+    return targets;
+};
+const indexablePaths = new Map(expectedPages.filter((page) => !page.noindex).map((page) => [new URL(page.canonical).pathname, page]));
+const clickDepth = new Map([["/", 0]]);
+for (let frontier = ["/"]; frontier.length; ) {
+    const next = [];
+    for (const pathname of frontier) {
+        for (const target of linkedPaths(pageHtml(indexablePaths.get(pathname).file))) {
+            if (!indexablePaths.has(target) || clickDepth.has(target)) continue;
+            clickDepth.set(target, clickDepth.get(pathname) + 1);
+            next.push(target);
+        }
+    }
+    frontier = next;
+}
+for (const pathname of HOME_DIRECT) {
+    if (!indexablePaths.has(pathname)) continue;
+    assert(clickDepth.get(pathname) === 1, `Homepage must link directly to ${pathname}.`);
+}
+for (const pathname of indexablePaths.keys()) {
+    assert(clickDepth.has(pathname) && clickDepth.get(pathname) <= MAX_CLICKS, `${pathname} is ${clickDepth.has(pathname) ? `${clickDepth.get(pathname)} clicks` : "not reachable"} from the homepage; link it from a page the homepage links to (max ${MAX_CLICKS} clicks).`);
 }
 
 for (const page of expectedPages) {

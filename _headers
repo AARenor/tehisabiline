@@ -54,3 +54,9 @@
   X-Robots-Tag: noindex
 /sitemap.xml
   X-Robots-Tag: noindex
+/entitymap.json
+  X-Robots-Tag: noindex
+  Content-Type: application/json; charset=utf-8
+/humans.txt
+  X-Robots-Tag: noindex
+  Content-Type: text/plain; charset=utf-8

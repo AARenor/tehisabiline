@@ -103,6 +103,11 @@
 
 .checklist__item strong { color: var(--ink); }
 
+.checklist__item h3 {
+    margin: 0;
+    font: inherit;
+}
+
 @media (max-width: 640px) {
     .checklist__bar {
         top: calc(var(--header-h, 77px) + 0.35rem);
@@ -142,5 +147,11 @@
         content: " (" attr(href) ")";
         font-size: 0.75em;
         color: #555;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
     }
 }

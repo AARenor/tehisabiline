@@ -5,11 +5,20 @@ Kasuta seda malli oma ettevõtte intsidendi dokumenteerimiseks. Ära saada
 täidetud malli avalikku kanalisse. Enne teatise esitamist eemalda paroolid,
 API-võtmed, tokenid ja isikuandmed, mida ei ole teatamiseks vaja.
 
-1. VARAJANE HOIATUS (24 tunni jooksul)
---------------------------------------
+Ajaloogika (KüTS § 8):
+- Esmane teade: viivitamata, hiljemalt 24 tundi pärast olulise mõjuga
+  küberintsidendist teada saamist.
+- Intsidenditeade: viivitamata, hiljemalt 72 tundi pärast teada saamist.
+- Lõpparuanne: ühe kuu jooksul 72 tunni intsidenditeate esitamisest
+  (mitte teada saamisest). Kui intsident on veel lahendamata, käsitatakse
+  esitatud lõppraportit vahearuandena ja uus lõppraport tuleb esitada ühe
+  kuu jooksul pärast lahendamist.
+
+1. ESMANE TEADE (viivitamata, hiljemalt 24 tunni jooksul)
+--------------------------------------------------------
 Teatav üksus:
 Intsidendi ID:
-Avastamise aeg (UTC):
+Teada saamise aeg (UTC):
 Esialgne kirjeldus (faktid, ilma oletusteta):
 Kahtlus pahatahtlikust tegevusest (jah / ei / teadmata):
 Mõjutatud teenus(ed) ja süsteem(id):
@@ -17,22 +26,25 @@ Esialgne mõju (katkestus, andmed, kliendid, rahaline risk):
 Piiriülene mõju (jah / ei / teadmata):
 Esialgsed indikaatorid (IoC, logiviide):
 Võetud meetmed:
-Ööpäevaringne kontakt:
+Kontakt (soovituslikult ööpäevaringne):
 
-2. TÄPSUSTAV TEADE (72 tunni jooksul)
---------------------------------------
+2. INTSIDENDITEADE (viivitamata, hiljemalt 72 tunni jooksul)
+------------------------------------------------------------
 Intsidendi ID:
-Hinnang tõsidusele (oluline / ei ole oluline / selgub):
+Teada saamise aeg (UTC):
+Hinnang olulisele mõjule (KüTS § 8 lõige 2; jah / ei / selgub):
 Mõjutatud teenused ja süsteemid:
 Esialgne juurpõhjus:
 Leevendusmeetmed ja nende seis:
-Andmete ja isikuandmete mõju:
+Andmete ja isikuandmete mõju (vt allpool, GDPR-teavitus):
 Teavitused teistele osapooltele (kellele, millal):
-Järgmised sammud ja tähtaeg:
+Järgmised sammud ja aeg, millal järgmine ülevaade esitatakse:
 
-3. LÕPPARUANNE (ühe kuu jooksul)
----------------------------------
+3. LÕPPARUANNE (ühe kuu jooksul 72 tunni intsidenditeate esitamisest)
+---------------------------------------------------------------------
 Intsidendi ID:
+Intsidenditeate tegelik esitamise aeg (UTC; sellest algab ühe kuu tähtaeg):
+Intsident lahendatud (jah / ei; kui ei, käsitatakse seda raportit vahearuandena):
 Üksikasjalik kirjeldus:
 Ohu liik:
 Juurpõhjus:
@@ -40,18 +52,26 @@ Mõju (teenus, andmed, kliendid, rahaline, maine):
 Piiriülene mõju:
 Võetud meetmed ja nende tõhusus:
 Korduva esinemise vältimise meetmed:
-Õppetunnid ja protsessi muudatused:
+Õppetunnid ja protsessi muudatused (soovitus):
 Lisatud tõendid (failinimed, mitte sisu):
+
+ISIKUANDMETE RIKKUMINE (GDPR, eraldi kohustus)
+-----------------------------------------------
+Vastutav töötleja teavitab AKI-t 72 tunni jooksul ainult siis, kui
+rikkumine tõenäoliselt kujutab ohtu füüsiliste isikute õigustele ja
+vabadustele. Volitatud töötleja teavitab vastutavat töötlejat põhjendamatu
+viivituseta. Hinnang ja põhjendus:
 
 KONTROLL ENNE ESITAMIST
 -----------------------
 [ ] Kuupäevad on UTC-s ja kellaajad kontrollitud
 [ ] Paroolid, tokenid ja isikuandmed on eemaldatud
 [ ] Mõju on kirjeldatud faktide, mitte oletustega
-[ ] Kontakt vastab ka väljaspool tööaega
+[ ] Kontakt on määratud (soovituslikult ka väljaspool tööaega)
 [ ] Teatis on seotud intsidendi ID-ga
-[ ] Isikuandmete rikkest teatamine AKI-le on hinnatud
+[ ] Lõpparuande tähtaeg on arvutatud intsidenditeate tegelikust esitamisest
+[ ] GDPR-i hinnang (vt ülal) on tehtud eraldi
 
 Allikas: https://tehisabiline.ee/nis2/intsidendist-teatamine/
 See mall on abivahend, mitte õiguslik nõuanne. Kohustused ja tähtajad
-kontrolli RIA ja kehtiva õiguse järgi.
+kontrolli RIA ja kehtiva õiguse järgi (KüTS, kehtiv redaktsioon 16.10.2026).

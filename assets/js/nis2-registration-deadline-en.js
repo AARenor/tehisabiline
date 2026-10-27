@@ -29,9 +29,9 @@
       return;
     }
     const parts = [];
-    if (start) parts.push(`<li><strong>Registration:</strong> ${fmt.format(addMonthsClamped(start, 3))} — within three months of starting the activity.</li>`);
-    if (change) parts.push(`<li><strong>Change notification:</strong> ${fmt.format(addDays(change, 14))} — within two weeks of the change.</li>`);
-    out.innerHTML = `<ul>${parts.join("")}</ul><p class="nis2-check__note">Check the RIA registration form and the current KüTS text. The calculator returns calendar deadlines, not acceptance or processing time.</p>`;
+    if (start) parts.push(`<li><strong>RIA notification:</strong> ${fmt.format(addMonthsClamped(start, 3))} — no later than three months after you became a service provider within KüTS&nbsp;§&nbsp;3.</li>`);
+    if (change) parts.push(`<li><strong>Change notice:</strong> ${fmt.format(addDays(change, 14))} — no later than two weeks after the change.</li>`);
+    out.innerHTML = `<ul>${parts.join("")}</ul><p class="nis2-check__note">The three-month period starts when you became a service provider within KüTS&nbsp;§&nbsp;3, not when the business started. Check the eesti.ee notification form and the current KüTS text. The calculator returns calendar dates, not RIA processing time. This is not a legal determination.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });
