@@ -37,6 +37,9 @@
 /assets/downloads/*.ics
   Content-Type: text/calendar; charset=utf-8
   Cache-Control: public, max-age=300, stale-while-revalidate=86400
+/assets/downloads/*.xlsx
+  Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+  Cache-Control: public, max-age=300, stale-while-revalidate=86400
 /feed.xml
   Content-Type: application/rss+xml; charset=utf-8
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400

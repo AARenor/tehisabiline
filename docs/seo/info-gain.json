@@ -11,7 +11,7 @@
     "/nis2/intsidendist-teatamine/": { "asset": "24/72-tunni teatamistähtaja kalkulaator", "type": "calculator", "proof": "/assets/js/nis2-deadline.js" },
     "/nis2/trahvid/": { "asset": "Trahvi ülempiiri kalkulaator", "type": "calculator", "proof": "/assets/js/nis2-fine.js" },
     "/nis2/registreerimine/": { "asset": "Registreerimis- ja muudatustähtaja kalkulaator", "type": "calculator", "proof": "/assets/js/nis2-registration-deadline.js" },
-    "/nis2/audit/": { "asset": "Auditi tõendite tabel (CSV)", "type": "template", "proof": "/assets/downloads/nis2-auditi-toendite-mall.csv" },
+    "/nis2/audit/": { "asset": "Auditi tõendite register (Excel: rippmenüüd, tähtaja värv ja kokkuvõte)", "type": "template", "proof": "/assets/downloads/nis2-auditi-toendite-mall.xlsx" },
     "/nis2/toetus/": { "asset": "Toetuse mõju trahviriski kalkulaator", "type": "calculator", "proof": "/assets/js/nis2-fine.js" },
     "/pentestimine/naidisraport/": { "asset": "Sünteetiline pentesti raport (PDF)", "type": "sample", "proof": "/assets/downloads/pentesti-raporti-naidis.pdf" },
     "/dora/": { "asset": "DORA teaberegistri mall (CSV)", "type": "template", "proof": "/assets/downloads/dora-teaberegister-mall.csv" },

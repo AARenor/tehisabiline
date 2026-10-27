@@ -132,7 +132,7 @@ Canonical page: https://tehisabiline.ee/nis2/registreerimine/
 Practical registration guide: who must notify RIA, what to prepare before starting, the eesti.ee form, the three-month deadline for a new entity, the two-week change-notification rule, saving proof and common mistakes. It states that registration is not a certificate of compliance.
 
 Canonical page: https://tehisabiline.ee/nis2/audit/
-Downloadable CSV template: https://tehisabiline.ee/assets/downloads/nis2-auditi-toendite-mall.csv
+Downloadable Excel evidence register (one row per NIS2 art 21(2) measure, real date fields, result/status drop-downs, per-row overdue highlighting and a summary sheet): https://tehisabiline.ee/assets/downloads/nis2-auditi-toendite-mall.xlsx
 
 NIS2 audit guide: scope across management, risk, the ten measures, supply chain and incidents; an evidence table; interviews, sampling and testing; report contents including findings, evidence, impact, priorities and management response; and the difference from a penetration test. NIS2 does not prescribe one mandatory certificate or audit form.
 
