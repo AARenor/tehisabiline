@@ -23,7 +23,7 @@
     const maxFine = Math.max(fixed, turnoverPart);
     const basis = turnoverPart > fixed ? "käibepõhine osa" : "fikseeritud ülempiir";
 
-    out.innerHTML = `<p><strong>Maksimaalne rahatrahv: ${eur.format(maxFine)}</strong></p><p>Arvutus: ${type === "essential" ? "ülioluline" : "oluline"} üksus, ${eur.format(fixed)} või ${(rate * 100).toLocaleString("et-EE")}% käibest. Määrav on ${basis}.</p><p class="nis2-check__note">See on matemaatiline ülempiir, mitte hinnang tegelikule trahvile. Järelevalve hindab rikkumise raskust, kestust, mõju ja koostööd. Kontrolli kehtivat KüTS-i ja RIA juhist.</p>`;
+    out.innerHTML = `<p><strong>Maksimaalne rahatrahv: ${eur.format(maxFine)}</strong></p><p>Arvutus: ${type === "essential" ? "ülioluline" : "oluline"} üksus; max(${eur.format(fixed)}; ${(rate * 100).toLocaleString("et-EE")}% eelmise majandusaasta ülemaailmsest aastakäibest ${eur.format(turnoverPart)}) = ${eur.format(maxFine)}. Määrav on ${basis}.</p><p class="nis2-check__note">See on ülempiir, mitte oodatav trahv. Järelevalve hindab rikkumise raskust, kestust, varasemaid rikkumisi, mõju, tahtlust või hooletust, leevendamist ja koostööd (KüTS&nbsp;§&nbsp;14 lg&nbsp;7). See ei ole õiguslik hinnang.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });

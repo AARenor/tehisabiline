@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=52056b57">
+    <link rel="stylesheet" href="/site.css?v=0453a9db">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -184,13 +184,13 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Home",
+          "name": "Estonia regulations",
           "item": "https://tehisabiline.ee/en/regulations/"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "SBOM for CRA",
+          "name": "SBOM",
           "item": "https://tehisabiline.ee/en/sbom/"
         }
       ]
@@ -204,7 +204,7 @@
           "name": "Is an SBOM mandatory under the CRA?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The CRA requires manufacturers to identify and document components and vulnerabilities. An SBOM is the practical way to meet that duty; the regulation does not prescribe one file format."
+            "text": "The CRA requires a machine-readable list of components in a commonly used format covering at least top-level dependencies (Annex I, Part II, point 1), kept in the technical documentation and provided to a market-surveillance authority on request. It does not prescribe one file format and does not require publication."
           }
         },
         {
@@ -228,7 +228,7 @@
           "name": "Does an SBOM include transitive dependencies?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A useful SBOM does. Direct components alone hide the dependency chain and the vulnerabilities that reach your product through third-party libraries."
+            "text": "The CRA's minimum covers top-level dependencies; including transitive dependencies is good practice and gives a truer picture of the attack surface. Direct components alone hide the dependency chain and the vulnerabilities that reach your product through third-party libraries."
           }
         },
         {
@@ -236,7 +236,7 @@
           "name": "How often should the SBOM be updated?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At every release and whenever a component changes materially. It must stay tied to the product version and support period."
+            "text": "At every release and whenever a component changes materially (a practical cadence, not a statutory one). It should stay tied to the product version and support period."
           }
         },
         {
@@ -275,7 +275,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – home</span></a>
         <nav class="site-nav" aria-label="Main navigation">
             <a href="/pentestimine/">Audit / pentest</a>
             <a href="/mudelid/">Cyber-AI API</a>
@@ -299,14 +299,14 @@
     <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/en/regulations/">Estonia regulations</a></li><li aria-current="page">SBOM</li></ol></nav>
     <p class="eyebrow">CRA · SBOM</p>
     <h1>SBOM for CRA: components, vulnerabilities and evidence</h1>
-    <p class="lead">A software bill of materials is the inventory behind CRA vulnerability handling. This guide covers minimum fields, SPDX and CycloneDX, release linkage and the evidence a customer or market-surveillance authority may request.</p>
-    <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-24">24 October 2026</time></p>
+    <p class="lead">A software bill of materials is the inventory behind CRA vulnerability handling. This guide covers the legal minimum, practical fields, SPDX and CycloneDX, release linkage and the evidence a customer or market-surveillance authority may request.</p>
+    <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-27">27 October 2026</time></p>
   </div></header>
   <section class="section"><div class="wrap article">
-    <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#short-answer">Short answer</a></li><li><a href="#fields">Minimum fields</a></li><li><a href="#formats">Formats</a></li><li><a href="#process">Process</a></li><li><a href="#vulns">Vulnerability matching</a></li><li><a href="#evidence">Evidence</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+    <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#short-answer">Short answer</a></li><li><a href="#fields">Practical fields</a></li><li><a href="#formats">Formats</a></li><li><a href="#process">Process</a></li><li><a href="#vulns">Vulnerability matching</a></li><li><a href="#evidence">Evidence</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li></ol></nav>
     <article class="prose">
-      <section class="short-answer" id="short-answer"><h2>SBOM for CRA: short answer</h2><p>The CRA requires manufacturers to identify and document the components of a product with digital elements and to handle vulnerabilities throughout the support period. An <strong>SBOM</strong> is the practical inventory that makes this possible.</p><p>An SBOM is not a one-off PDF. It must be tied to a product release, cover transitive dependencies and connect to a vulnerability process that can find, triage and fix affected components.</p></section>
-      <section id="fields"><h2>Minimum SBOM fields</h2><div class="table-wrap"><table class="data"><caption>Useful SBOM fields</caption><thead><tr><th scope="col">Field</th><th scope="col">Why it matters</th></tr></thead><tbody>
+      <section class="short-answer" id="short-answer"><h2>SBOM for CRA: short answer</h2><p>The CRA requires manufacturers to identify and document the components of a product with digital elements and to handle vulnerabilities throughout the support period. An <strong>SBOM</strong> is the practical inventory that makes this possible.</p><p>An SBOM is not a one-off PDF. It should be tied to a product release and, where available, include transitive dependencies. The CRA's minimum is a machine-readable SBOM covering at least top-level dependencies (Annex I, Part II, point 1); it belongs in the technical documentation and is provided to a market-surveillance authority on request. Deeper dependency coverage is good practice, not the legal floor. It must connect to a vulnerability process that can find, triage and fix affected components.</p></section>
+      <section id="fields"><h2>Practical SBOM fields</h2><div class="table-wrap"><table class="data"><caption>Useful SBOM fields</caption><thead><tr><th scope="col">Field</th><th scope="col">Why it matters</th></tr></thead><tbody>
         <tr><th scope="row">Component name and version</th><td>Identifies what is actually shipped.</td></tr>
         <tr><th scope="row">Supplier</th><td>Shows who owns the component and where to escalate.</td></tr>
         <tr><th scope="row">Package identifiers</th><td>purl or CPE lets tools match advisories reliably.</td></tr>
@@ -318,20 +318,20 @@
       <section id="formats"><h2>SPDX, CycloneDX or a spreadsheet?</h2><p><strong>SPDX</strong> and <strong>CycloneDX</strong> are the common machine-readable formats. Choose one your build pipeline can generate and your customers can consume. A CSV is useful for a first inventory, but it is harder to validate and link to releases.</p><p>Whatever the format, keep a stable mapping between an internal component ID and the package identifier. That mapping is what lets you answer a new CVE without rebuilding the whole inventory.</p></section>
       <section id="process"><h2>A workable SBOM process</h2><ol><li><strong>Generate:</strong> produce the SBOM in the build pipeline, not after release.</li><li><strong>Enrich:</strong> add supplier, identifiers, licenses and dependency relationships.</li><li><strong>Store:</strong> keep each version with the product release and build metadata.</li><li><strong>Match:</strong> compare components with vulnerability feeds and advisories.</li><li><strong>Triage:</strong> assign an owner, exploitability and remediation deadline.</li><li><strong>Update:</strong> regenerate when a component changes; keep the old version for traceability.</li><li><strong>Share:</strong> provide the agreed extract to customers or authorities under contract.</li></ol></section>
       <section id="vulns"><h2>Vulnerability matching in practice</h2><p>A CVE feed alone is not enough. You need a component-to-advisory mapping, a triage decision and evidence of the fix. Track:</p><ul><li>Affected product and version range.</li><li>Exploitability and exposure in your configuration.</li><li>Severity and business impact.</li><li>Remediation, workaround and release version.</li><li>Customer communication and disclosure timing.</li></ul><p>For actively exploited vulnerabilities, CRA reporting deadlines apply. Keep the SBOM and the incident record linked.</p></section>
-      <section id="evidence"><h2>What to show a customer or regulator</h2><ul><li>SBOM for the exact release, with a timestamp.</li><li>Component identifiers and supplier contacts.</li><li>Vulnerability policy, triage records and remediation SLAs.</li><li>Evidence of the fix and the new SBOM version.</li><li>Support-period statement and update mechanism.</li><li>Disclosure and incident-reporting records.</li></ul><p>Our <a href="/sbom/" lang="et">Estonian SBOM guide</a> includes a CSV template. A penetration test supports the technical evidence but does not replace the inventory.</p></section>
-      <section id="check"><h2>Check an SBOM CSV</h2><p>Upload the downloadable template or a file with the same headers. The checker looks for required fields, identifiers, duplicate component versions and placeholder values. The file stays in your browser.</p><form class="nis2-check" data-sbom-check data-local-check novalidate><label for="sbom-file-en">Choose an SBOM CSV file</label><input id="sbom-file-en" type="file" accept=".csv,text/csv" data-sbom-file><button class="btn" type="submit">Check the file</button><div class="nis2-check__result" data-sbom-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">The check is indicative and does not replace an SBOM quality audit.</p></section>
+      <section id="evidence"><h2>What to show a customer or regulator</h2><ul><li>SBOM for the exact release, with a timestamp.</li><li>Component identifiers and supplier contacts.</li><li>Vulnerability policy, triage records and remediation SLAs.</li><li>Evidence of the fix and the new SBOM version.</li><li>Support-period statement and update mechanism.</li><li>Disclosure and incident-reporting records.</li></ul><p>Our <a href="/sbom/" lang="et">Estonian SBOM guide</a> includes a manual inventory worksheet (CSV), not a machine-readable SBOM. A penetration test supports the technical evidence but does not replace the inventory.</p></section>
+      <section id="check"><h2>Check an SBOM CSV</h2><p>Upload the downloadable worksheet or a file with the same headers. This is a basic check: it looks at the header structure, required fields, the identifier prefix (pkg: or cpe:), duplicate component versions and placeholder values. It does not validate SPDX or CycloneDX, and it does not scan for vulnerabilities. The file stays in your browser.</p><form class="nis2-check" data-sbom-check data-local-check novalidate><label for="sbom-file-en">Choose an SBOM CSV file</label><input id="sbom-file-en" type="file" accept=".csv,text/csv" data-sbom-file><button class="btn" type="submit">Check the file</button><div class="nis2-check__result" data-sbom-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">The check is indicative and does not replace an SBOM quality audit or format validation. The downloadable file is a manual inventory worksheet, not a machine-readable SBOM and not a CRA submission format.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
-        <details><summary><h3>Is an SBOM mandatory under the CRA?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The CRA requires manufacturers to identify and document components and vulnerabilities. An SBOM is the practical way to meet that duty; the regulation does not prescribe one file format.</p></details>
+        <details><summary><h3>Is an SBOM mandatory under the CRA?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The CRA requires a machine-readable list of components in a commonly used format covering at least top-level dependencies (Annex I, Part II, point 1), kept in the technical documentation and provided to a market-surveillance authority on request. It does not prescribe one file format and does not require publication.</p></details>
         <details><summary><h3>Which SBOM format should I use?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">SPDX and CycloneDX are the most common machine-readable formats. Choose what your tooling and customers can consume, and keep the mapping to internal component IDs.</p></details>
         <details><summary><h3>Should the SBOM be public?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Not necessarily. Regulators, customers and integrators may need an extract under contract. Publish only what you intend to disclose; the internal SBOM can remain confidential.</p></details>
-        <details><summary><h3>Does an SBOM include transitive dependencies?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">A useful SBOM does. Direct components alone hide the dependency chain and the vulnerabilities that reach your product through third-party libraries.</p></details>
-        <details><summary><h3>How often should the SBOM be updated?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">At every release and whenever a component changes materially. It must stay tied to the product version and support period.</p></details>
+        <details><summary><h3>Does an SBOM include transitive dependencies?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The CRA's minimum covers top-level dependencies; including transitive dependencies is good practice and gives a truer picture of the attack surface. Direct components alone hide the dependency chain and the vulnerabilities that reach your product through third-party libraries.</p></details>
+        <details><summary><h3>How often should the SBOM be updated?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">At every release and whenever a component changes materially (a practical cadence, not a statutory one). It should stay tied to the product version and support period.</p></details>
         <details><summary><h3>Does an SBOM prove CRA compliance?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. It is one evidence layer. Compliance also needs risk assessment, secure design, vulnerability handling, technical documentation, conformity assessment and support.</p></details>
       </div></section>
       <section id="sources"><h2>Sources</h2><ul><li><a href="https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng" rel="noopener">Cyber Resilience Act, Regulation (EU) 2024/2847</a>.</li><li><a href="https://spdx.dev/" rel="noopener">SPDX</a>.</li><li><a href="https://cyclonedx.org/" rel="noopener">CycloneDX</a>.</li><li><a href="https://www.cisa.gov/sbom" rel="noopener">CISA SBOM resources</a>.</li></ul></section>
       <section class="related" aria-labelledby="related"><h2 id="related">Related guides</h2><ul class="related__list">
         <li><a href="/en/cra/"><span class="related__title">CRA in Estonia</span><span class="related__desc">Product scope, reporting and conformity assessment.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
-        <li><a href="/sbom/" lang="et"><span class="related__title">SBOM guide (Estonian)</span><span class="related__desc">CSV template and a practical inventory process.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+        <li><a href="/sbom/" lang="et"><span class="related__title">SBOM guide (Estonian)</span><span class="related__desc">Inventory worksheet and a practical process.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
         <li><a href="/en/nis2/"><span class="related__title">NIS2 in Estonia</span><span class="related__desc">Supply-chain and incident duties.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
       </ul></section>
     </article>
@@ -342,84 +342,65 @@
 <footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
-            <div>
-                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
-                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
-            </div>
-            <nav aria-label="Teenuste lingid">
-                <p class="site-footer__title">Teenused</p>
-                <ul>
-                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
-                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
-                </ul>
-            </nav>
-            <nav aria-label="Ettevõtte lingid">
-                <p class="site-footer__title">Teave</p>
-                <ul>
-                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
-                    <li><a href="/en/press/" hreflang="en" lang="en">Press kit (EN)</a></li>
-                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
-                    <li><a href="/nis2/toetus/">NIS2 toetus</a></li>
-                    <li><a href="/sektorid/energeetika/">NIS2 energeetikas</a></li>
-                    <li><a href="/sektorid/tervishoid/">NIS2 tervishoius</a></li>
-                    <li><a href="/sektorid/finants/">DORA finantssektoris</a></li>
-                    <li><a href="/sektorid/">Sektorid</a></li>
-                    <li><a href="/sektorid/logistika/">NIS2 logistikas</a></li>
-                    <li><a href="/saidikaart/">Kõik lehed</a></li>
-                    <li><a href="/koolitus/">Koolitus</a></li>
-                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
-                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
-                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
-                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
-                    <li><a href="/nis2/">NIS2 juhend</a></li>
-                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
-                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
-                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
-                    <li><a href="/dora/audit/">DORA audit</a></li>
-                    <li><a href="/ai-act/">AI Act Eestis</a></li>
-                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
-                    <li><a href="/cra/">Cyber Resilience Act</a></li>
-                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
-                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
-                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
-                    <li><a href="/en/nis2/" hreflang="en" lang="en">NIS2 in Estonia (EN)</a></li>
-                    <li><a href="/en/nis2/audit/" hreflang="en" lang="en">NIS2 audit (EN)</a></li>
-                    <li><a href="/en/nis2/incident-reporting/" hreflang="en" lang="en">Incident reporting (EN)</a></li>
-                    <li><a href="/en/nis2/fines/" hreflang="en" lang="en">NIS2 fines (EN)</a></li>
-                    <li><a href="/en/nis2/registration/" hreflang="en" lang="en">NIS2 registration (EN)</a></li>
-                    <li><a href="/en/cra/" hreflang="en" lang="en">CRA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/" hreflang="en" lang="en">DORA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/audit/" lang="en" hreflang="en">DORA audit (EN)</a></li>
-                    <li><a href="/en/dora/register/" hreflang="en" lang="en">DORA register (EN)</a></li>
-                    <li><a href="/en/ai-act/" hreflang="en" lang="en">AI Act in Estonia (EN)</a></li>
-                    <li><a href="/en/sbom/" hreflang="en" lang="en">SBOM for CRA (EN)</a></li>
-                    <li><a href="/en/e-its/" hreflang="en" lang="en">E-ITS in Estonia (EN)</a></li>
-                    <li><a href="/en/pentesting/" hreflang="en" lang="en">Penetration testing (EN)</a></li>
-                    <li><a href="/en/security-audit/" hreflang="en" lang="en">Cybersecurity audit (EN)</a></li>
-                    <li><a href="/en/iso-27001/" hreflang="en" lang="en">ISO 27001 in Estonia (EN)</a></li>
-                    <li><a href="/e-its/">E-ITS ja audit</a></li>
-                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
-                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
-                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
-                    <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
-                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
-                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
-                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
-                </ul>
-            </nav>
-            <div>
-                <p class="site-footer__title">Kontakt</p>
+            <div class="site-footer__about">
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – home</span></a>
+                <p>Penetration testing and cyber audits under written authorization, with human review. API for security tooling.</p>
+                <p class="site-footer__title">Contact</p>
                 <ul>
                     <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
-                    <li>Tallinn, Eesti</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li>Reg. no. 17607255 · Viimsi Parish, Harju County</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Founder on LinkedIn</a></li>
                     <li><a href="/en/#contact">Free assessment</a></li>
                 </ul>
             </div>
+            <nav aria-label="Service links">
+                <p class="site-footer__title">Services</p>
+                <ul>
+                    <li><a href="/en/pentesting/">Penetration testing</a></li>
+                    <li><a href="/en/security-audit/">Cybersecurity audit</a></li>
+                    <li><a href="/mudelid/" hreflang="et" lang="et">Cyber-AI API (Estonian)</a></li>
+                    <li><a href="/kasutusjuhud/" hreflang="et" lang="et">Cyber-AI use cases (Estonian)</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 links">
+                <p class="site-footer__title">NIS2 in Estonia</p>
+                <ul>
+                    <li><a href="/en/nis2/">NIS2 in Estonia: overview</a></li>
+                    <li><a href="/en/nis2/registration/">Registration with RIA</a></li>
+                    <li><a href="/en/nis2/incident-reporting/">Incident reporting</a></li>
+                    <li><a href="/en/nis2/fines/">Fines and liability</a></li>
+                    <li><a href="/en/nis2/audit/">NIS2 audit</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulation links">
+                <p class="site-footer__title">Regulations</p>
+                <ul>
+                    <li><a href="/en/regulations/">Estonia regulations overview</a></li>
+                    <li><a href="/en/dora/">DORA in Estonia</a></li>
+                    <li><a href="/en/dora/register/">DORA register of information</a></li>
+                    <li><a href="/en/dora/audit/">DORA audit</a></li>
+                    <li><a href="/en/cra/">CRA in Estonia</a></li>
+                    <li><a href="/en/sbom/">SBOM for the CRA</a></li>
+                    <li><a href="/en/ai-act/">AI Act in Estonia</a></li>
+                    <li><a href="/en/e-its/">E-ITS in Estonia</a></li>
+                    <li><a href="/en/iso-27001/">ISO 27001 in Estonia</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Company links">
+                <p class="site-footer__title">Company</p>
+                <ul>
+                    <li><a href="/en/">Tehisabiline in English</a></li>
+                    <li><a href="/en/press/">Press kit</a></li>
+                    <li><a href="/meist/" hreflang="et" lang="et">About (Estonian)</a></li>
+                    <li><a href="/privaatsus/" hreflang="et" lang="et">Privacy (Estonian)</a></li>
+                    <li><a href="/llms.txt">For AI systems</a></li>
+                    <li><a href="/" hreflang="et" lang="et">Eesti keeles</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="site-footer__legal">
-            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>© 2026 Tehisabiline OÜ. All rights reserved.</span>
+            <span>Last materially updated <time datetime="2026-10-27">27 October 2026</time></span>
         </div>
     </div>
 </footer>

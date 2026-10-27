@@ -6,7 +6,7 @@
 /ai/turvatestimine/*  /ai-turvatestimine/  301
 /ai  https://arle.top/  301
 /ai/  https://arle.top/  301
-/ai/*  https://arle.top/:splat  301
+/ai/*  https://arle.top/  301
 /ai-chatbot  https://arle.top/ai-chatbot/  301
 /ai-chatbot/  https://arle.top/ai-chatbot/  301
 /ai-chatbot/*  https://arle.top/ai-chatbot/:splat  301
@@ -28,15 +28,12 @@
 
 /ai-automatiseerimine-ettevottele/  /  301
 
-# Internal repository files must never be served (defence in depth; deploy excludes them)
-/AGENTS.md  /  301
-/PRODUCT.md  /  301
-/DESIGN.md  /  301
-/README.md  /  301
-/package.json  /  301
-/vercel.json  /  301
-/docs/*  /  301
-/tools/*  /  301
-/output/*  /  301
-/.github/*  /  301
-/.impeccable/*  /  301
+# Retired sector pages (merged 2026-10-27): finance is covered by the DORA guide, logistics by the sector hub.
+/sektorid/finants  /dora/  301
+/sektorid/finants/  /dora/  301
+/sektorid/logistika  /sektorid/  301
+/sektorid/logistika/  /sektorid/  301
+
+# Retired training page (2026-10-27): Tehisabiline does not sell training; the free NIS2 guide is the closest useful destination.
+/koolitus  /nis2/  301
+/koolitus/  /nis2/  301

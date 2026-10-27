@@ -29,9 +29,9 @@
       return;
     }
     const parts = [];
-    if (start) parts.push(`<li><strong>Registreerimine:</strong> ${fmt.format(addMonthsClamped(start, 3))} — kolme kuu jooksul tegevuse alustamisest.</li>`);
-    if (change) parts.push(`<li><strong>Muudatusest teatamine:</strong> ${fmt.format(addDays(change, 14))} — kahe nädala jooksul muudatusest.</li>`);
-    out.innerHTML = `<ul>${parts.join("")}</ul><p class="nis2-check__note">Kontrolli RIA registreerimisvormi ja KüTS-i kehtivat teksti. See kalkulaator arvutab kalendritähtajad, mitte tegelikku vastuvõtu- ega menetlusaega.</p>`;
+    if (start) parts.push(`<li><strong>RIA teavitus:</strong> ${fmt.format(addMonthsClamped(start, 3))} — hiljemalt kolme kuu jooksul pärast seda, kui muutusid KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks.</li>`);
+    if (change) parts.push(`<li><strong>Muudatusest teatamine:</strong> ${fmt.format(addDays(change, 14))} — hiljemalt kaks nädalat pärast muudatuse tegemise kuupäeva.</li>`);
+    out.innerHTML = `<ul>${parts.join("")}</ul><p class="nis2-check__note">Kolme kuu tähtaeg algab päevast, mil muutusid KüTS&nbsp;§&nbsp;3 kohaseks teenuseosutajaks, mitte ettevõtte asutamisest. Kontrolli eesti.ee teavituse vormi ja KüTS-i kehtivat teksti. Kalkulaator arvutab kalendritähtajad, mitte RIA menetlusaega. See ei ole õiguslik hinnang.</p>`;
     out.hidden = false;
     requestAnimationFrame(() => out.focus());
   });

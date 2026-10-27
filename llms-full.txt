@@ -9,8 +9,8 @@ This file summarizes public website information. The site language is Estonian; 
 ## Entity
 
 - Legal name: Tehisabiline OÜ
-- Location: Tallinn, Estonia
-- Founder: Arle Aron Reidma. Public profile: https://www.f6s.com/company/tehisabiline
+- Registered office: Viimsi Parish, Harju County, Estonia (public register: https://ariregister.rik.ee/eng/company/17607255). Registry code 17607255. Service area: Estonia.
+- Founder: Arle Aron Reidma (LinkedIn: https://www.linkedin.com/in/arlearonreidma/). Company profile: https://www.f6s.com/company/tehisabiline
 - Email: tehisabiline@gmail.com
 - Website: https://tehisabiline.ee/
 - Code profile: https://github.com/AARenor/tehisabiline
@@ -18,8 +18,8 @@ This file summarizes public website information. The site language is Estonian; 
 ## Current status
 
 - Developer API: planned, not yet public. Pilot access is discussed by email.
-- Hardware: ordered (as of September 2026); Estonian model hosting is forthcoming, not live.
-- Pentesting and audits: offered for systems the client owns or controls, under written authorization and an agreed scope. No network/mobile/cloud speciality, complete OWASP coverage, certificate, fixed price or security guarantee is implied.
+- Hardware: ordered; Estonian model hosting is forthcoming, not live (current status on https://tehisabiline.ee/mudelid/).
+- Pentesting and audits: offered for systems the client owns or controls, under written authorization and an agreed scope. Cloud configuration can be included in an agreed scope; no separate network, mobile or cloud speciality, complete OWASP coverage, certificate, fixed price or security guarantee is implied.
 - Significant audit findings and consequential AI outputs pass human review.
 - Tehisabiline does not claim 100 percent security, error-free AI, guaranteed savings or guaranteed outcomes.
 
@@ -47,7 +47,7 @@ Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE i
 
 ### DORA guide
 
-Guide to DORA in Estonia: scope across financial entities, the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing), Finantsinspektsioon supervision, the incident-reporting channel change from email to the central bank/authority portal on 1 November 2026, the Article 28(3) register of information and its annual submission, a downloadable CSV register template, TLPT under Articles 26–27 via TIBER-EE, differences from NIS2 and E-ITS, and a 30/60/90-day readiness plan. It states that DORA has no certificate and is not limited to pentesting.
+Guide to DORA in Estonia: scope follows the Article 2 list rather than "the financial sector"; the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing); Finantsinspektsioon supervision; the incident-reporting channel change from email (until 31.10.2026) to the Finantsinspektsioon portal from 1 November 2026; the Article 28(3) register of information, submitted as an annual summary with the full register on request and a year-end collection on 31.12.2026; a downloadable CSV register template; TLPT under Articles 26–27 via TIBER-EE with attestation by Finantsinspektsioon or the ECB; differences from NIS2 and E-ITS; and a four-step preparation order. It states that DORA has no certificate and is not limited to pentesting.
 
 ### Articles
 
@@ -59,7 +59,7 @@ The NIS2 board-duties article covers the management body’s approval and oversi
 
 Canonical page: https://tehisabiline.ee/e-its/
 
-Explains the RIA-administered Estonian standard (2026 version no longer tied to ISO/IEC 27001): public-sector duty, voluntary company use, baseline measures for KüTS service providers, E-ITS audit versus ISO 27001 certification, the 2026 audit changes and a six-step evidence preparation path. It explicitly states that an E-ITS audit is not a pentest or an ISO certificate.
+Explains the Estonian information security standard administered by RIA: it is set by regulation no. 30 (25.08.2026, in force 01.09.2026), mandatory for public-sector tasks, applied to KüTS service providers as the basic measures, and added when those basic measures are not sufficient; otherwise its use is voluntary. Covers E-ITS audit versus ISO 27001 certification, what must be filed with the auditor and when (auditor conclusion within 14 days, six months to remedy a high-risk finding), and a six-step evidence preparation path. It explicitly states that an E-ITS audit is not a pentest, not an ISO certificate, and not a service Tehisabiline performs as a formal E-ITS audit.
 
 ### AI application security testing
 
@@ -105,19 +105,19 @@ Veebirakenduse turvatestimine, veebilehe pentest and web application penetration
 
 Canonical page: https://tehisabiline.ee/kasutusjuhud/
 
-Practical cyber-AI use cases for security work, each with human checkpoints and measurements. References include MITRE ATT&CK (https://attack.mitre.org/), OWASP LLM Top 10 (https://genai.owasp.org/llm-top-10/) and NCSC guidance (https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai).
+Twelve planned pilot use cases (hypotheses) for cyber-AI in security work, each with the human checkpoint and the measure to watch; they are proposals, not measured results. References include MITRE ATT&CK (https://attack.mitre.org/), OWASP LLM Top 10 (https://genai.owasp.org/llm-top-10/) and NCSC guidance (https://www.ncsc.gov.uk/blogs/managing-the-cyber-risk-of-agentic-ai).
 
 ### API pentest checklist
 
 Canonical page: https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
 
-Preparation checklist (scope, OpenAPI, test accounts, limits, contacts, backup), the OWASP API Security Top 10 (2023) checks with the evidence expected in the report, an access matrix example and the retest scope.
+The OWASP API Security Top 10 (2023) evidence table: which check applies, what evidence the report must contain and what a retest verifies. Preparation, test accounts and the access matrix stay on the parent guide.
 
 ### NIS2 guide
 
 Canonical page: https://tehisabiline.ee/nis2/
 
-Guide to the Estonian cybersecurity act and practical cybersecurity steps, including a four-question applicability self-check that runs locally in the browser. The act has applied since 1 January 2026; RIA reports about 3,000 additional entities, bringing the total to roughly 6,500. Current consolidated text: RT I, 06.10.2026, 1, in force 16.10.2026; it clarifies the incident definition, adds a near-miss concept with voluntary reporting, and updates audit and supervisory wording. The 24/72/1-month reporting deadlines are unchanged. In scope for the full regime are essential and important entities; ordinary micro and small enterprises are generally outside it. NIS2's minimum measures cover risk analysis and policy, incident handling, business continuity and backup, supply-chain security, secure acquisition and vulnerability handling, effectiveness testing, cryptography, access control and MFA, training, and management accountability. Significant incidents require an early warning within 24 hours, a notification within 72 hours and a final report within one month (Directive (EU) 2022/2555, Article 23; https://eur-lex.europa.eu/eli/dir/2022/2555/oj). Fines can reach 10 million EUR or 2% of worldwide annual turnover for essential entities and 7 million EUR or 1.4% for important entities (RIA, 2 January 2026; https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus). Consult the page and official sources for current applicability and requirements.
+Guide to NIS2 in Estonia, which applies through the Cybersecurity Act (KüTS) since 1 January 2026 (current consolidated text RT I, 06.10.2026, 2; https://www.riigiteataja.ee/akt/106102026002). It explains who is in scope under KüTS §3: a list of categories plus a size test (important entities generally have at least 50 employees AND turnover or balance sheet above EUR 10 million; essential entities in the listed categories have at least 250 employees AND balance sheet above EUR 43 million or turnover above EUR 50 million; some categories apply regardless of size). It includes a four-question self-check that runs locally in the browser, the registration route with RIA through eesti.ee, the ten minimum measures (Directive (EU) 2022/2555, Article 21(2)(a)-(j)), management duties (Article 20; KüTS §6¹), incident reporting (early warning within 24 hours and notification within 72 hours of becoming aware; final report within one month of filing the 72-hour notification; KüTS §8), fine ceilings (up to EUR 10 million or 2%, or EUR 7 million or 1.4%, of the previous financial year's worldwide turnover, whichever is higher; KüTS §18² and §18³), the EIS grant (status checked 27.10.2026) and a comparison with E-ITS and ISO 27001. Ordinary micro and small businesses are generally outside the regime unless a size-independent category applies. Check the page and Riigi Teataja for the current text.
 
 Canonical page: https://tehisabiline.ee/nis2/kontrollnimekiri/
 
@@ -125,7 +125,7 @@ Ten-measure NIS2 checklist with the evidence an auditor asks for, a quick win an
 
 Canonical page: https://tehisabiline.ee/nis2/intsidendist-teatamine/
 
-Significant-incident criteria, the three NIS2 reports (early warning within 24 hours, notification within 72 hours, final report within one month), what to include, the Estonian reporting channel, near-miss reporting (voluntary), the separate GDPR breach notification and a browser-only deadline calculator.
+Significant-incident criteria, the three NIS2 reports (early warning within 24 hours and notification within 72 hours of becoming aware, final report within one month of filing the 72-hour notification), what to include, the Estonian reporting channel, near-miss reporting (voluntary), the separate GDPR breach notification and a browser-only deadline calculator.
 
 Canonical page: https://tehisabiline.ee/nis2/registreerimine/
 
@@ -138,7 +138,7 @@ NIS2 audit guide: scope across management, risk, the ten measures, supply chain 
 
 Canonical page: https://tehisabiline.ee/nis2/trahvid/
 
-NIS2 fines and supervision: essential entities up to EUR 10 million or 2% of worldwide annual turnover, important entities up to EUR 7 million or 1.4%, whichever is higher. The page explains that a fine is not automatic, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance, and includes a browser-only calculator for the mathematical fine ceiling.
+NIS2 fines and supervision: ceilings of EUR 10 million or 2% for essential entities and EUR 7 million or 1.4% for important entities, calculated on the previous financial year's worldwide turnover, whichever is higher. The page explains that a ceiling is not an expected fine, lists the factors a supervisor weighs, covers management responsibility and links to registration and evidence guidance, and includes a browser-only calculator for the mathematical fine ceiling.
 
 ### Glossary
 
@@ -174,7 +174,7 @@ Comparison hub for NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, AI Act and the Cyber 
 
 Canonical page: https://tehisabiline.ee/en/regulations/
 
-English overview of NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, the AI Act and the Cyber Resilience Act in Estonia. It maps service-provider, financial-sector, product and AI roles, explains the 2026–2028 deadlines and lists the evidence regulators and auditors ask for. The detailed guides remain in Estonian and are linked from the page.
+English overview of NIS2/KüTS, DORA, E-ITS, ISO/IEC 27001, the AI Act and the Cyber Resilience Act in Estonia. It maps service-provider, financial-sector, product and AI roles, explains the 2026–2028 deadlines and lists the evidence regulators and auditors ask for. Estonian is the primary language of the site; English versions exist for selected guides and are linked from the page.
 
 ### SBOM
 
@@ -198,13 +198,13 @@ Guide to the EU AI Act in Estonian: provider and deployer roles, prohibited/high
 
 Canonical page: https://tehisabiline.ee/dora/teaberegister/
 
-Practical guide to the DORA Article 28(3) register: the contractual and dependency fields, critical/important function mapping, data locations, subcontractors, exit plans and evidence. It explains that the downloadable CSV is an internal working template, not the official ITS (EU) 2024/2956 submission format, and describes the Estonian submission channel and checks before submission. A browser-only checker validates required fields, date formats and duplicate IDs without uploading the file.
+Practical guide to the DORA Article 28(3) register: the contractual and dependency fields, critical/important function mapping, data locations, subcontractors, exit plans and evidence. It explains that the downloadable CSV is an internal working template, not the official ITS (EU) 2024/2956 submission format, and describes submission through the Finantsinspektsioon portal (annual summary, full register on request) and the checks to run before submitting. A browser-only checker validates required fields, date formats and duplicate IDs without uploading the file.
 
 ### ISO/IEC 27001
 
 Canonical page: https://tehisabiline.ee/iso-27001/
 
-Guide to ISO/IEC 27001:2022 in the Estonian context: what an ISMS is, the 93 Annex A controls in four themes, Stage 1/Stage 2 certification, surveillance and recertification, the evidence an auditor asks for, accreditation by EAK, and the difference from E-ITS and NIS2. It states that Tehisabiline is not an accredited certification body.
+Guide to ISO/IEC 27001:2022 in the Estonian context: what an ISMS is, the Annex A control set with Amendment 1:2024, Stage 1/Stage 2 certification, surveillance and recertification set by the certification body's accredited scheme, the evidence an auditor asks for, accreditation by EAK, and the difference from E-ITS and NIS2. It notes that the 2013 to 2022 transition completed on 31 October 2025 and that Tehisabiline is not an accredited certification body.
 
 ## Facts to quote
 
@@ -217,7 +217,7 @@ These are international research findings, not measurements of Tehisabiline cust
 ## NIS2 in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/nis2/
-Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities in scope on that date had to submit activity data to RIA by 31 March 2026. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, testing, hygiene, cryptography, access control and multi-factor authentication. Incident reports: early warning within 24 hours, notification within 72 hours, final report within one month.
+Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities already in scope on that date had three months to notify RIA (that window closed in spring 2026); a new service provider has three months from becoming one. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, effectiveness testing, hygiene and training, cryptography, human resources and access control, and multi-factor authentication. Incident reports: early warning within 24 hours and notification within 72 hours of becoming aware, final report within one month of filing the 72-hour notification.
 
 ## CRA in Estonia (EN)
 
@@ -232,7 +232,7 @@ DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entitie
 ## AI Act in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/ai-act/
-The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in stages. Prohibitions and AI literacy apply from 2 February 2025; general-purpose AI obligations from 2 August 2025; high-risk Annex III obligations from 2 August 2026; and Annex I product rules from 2 August 2027. Providers and deployers need an AI inventory, role and risk classification, technical documentation, human-oversight evidence, logging and post-market monitoring.
+The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in stages. Prohibitions and AI literacy apply from 2 February 2025; general-purpose AI obligations from 2 August 2025; the general date of application, including the Article 50 transparency rules, is 2 August 2026. As amended by Regulation (EU) 2026/1744, new prohibitions and the Article 50(2) transition for systems already on the market apply from 2 December 2026, Annex III high-risk obligations from 2 December 2027 and Annex I product rules from 2 August 2028. Providers and deployers need an AI inventory, role and risk classification, technical documentation, human-oversight evidence, logging and post-market monitoring.
 
 ## SBOM for CRA (EN)
 
@@ -247,7 +247,7 @@ E-ITS is the Estonian information-security framework maintained under RIA. It pr
 ## Penetration testing in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/pentesting/
-Authorised penetration testing for web applications, APIs, cloud and AI integrations. Testing starts only after a written scope and rules of engagement. Deliverables include a findings report with evidence, severity and remediation guidance, plus a retest where agreed. Automated scanners support the work; a person validates every material finding.
+Authorised penetration testing for web applications and APIs; cloud configuration and AI features can be included in an agreed scope. Testing starts only after a written scope and rules of engagement. Deliverables include a findings report with evidence, severity and remediation guidance, plus a retest where agreed. Automated scanners support the work; a person validates every material finding.
 
 ## Cybersecurity audit in Estonia (EN)
 
@@ -295,7 +295,6 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/en/pentesting/
 - https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/en/iso-27001/
-- https://tehisabiline.ee/saidikaart/
 - https://tehisabiline.ee/en/press/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
@@ -315,14 +314,11 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/
 - https://tehisabiline.ee/veebirakenduse-turvatestimine/
 - https://tehisabiline.ee/nis2/
-- https://tehisabiline.ee/koolitus/
 - https://tehisabiline.ee/nis2/kontrollnimekiri/
 - https://tehisabiline.ee/nis2/intsidendist-teatamine/
 - https://tehisabiline.ee/nis2/toetus/
 - https://tehisabiline.ee/nis2/trahvid/
 - https://tehisabiline.ee/nis2/registreerimine/
-- https://tehisabiline.ee/sektorid/finants/
-- https://tehisabiline.ee/sektorid/logistika/
 - https://tehisabiline.ee/sektorid/tervishoid/
 - https://tehisabiline.ee/sektorid/
 - https://tehisabiline.ee/sektorid/energeetika/

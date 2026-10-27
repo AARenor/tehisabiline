@@ -3,7 +3,7 @@
     const root = document.getElementById("nis2-checklist");
     if (!root) return;
 
-    const key = root.dataset.storageKey || "tehisabiline-nis2-checklist-v1";
+    const key = root.dataset.storageKey || "tehisabiline-nis2-checklist-v2";
     const checks = [...root.querySelectorAll("input[data-check]")];
     const bar = root.querySelector(".checklist__bar");
     const fill = root.querySelector("[data-progress-fill]");
@@ -36,9 +36,9 @@
         const hint = root.querySelector("[data-progress-hint]");
         if (hint) {
             hint.textContent = value <= 3
-                ? "Alusta kolmest kiirest võidust: varunduse taastetest, MFA ja ligipääsud."
+                ? "Soovitus: alusta varunduse taastetestist (c), MFA-st (j) ja ligipääsude ülevaatusest (i)."
                 : value <= 7
-                    ? "Põhi on paigas. Järgmiseks tõendid ja juhtkonna ülevaatus."
+                    ? "Põhi on paigas. Järgmiseks kinnita tõendid ja juhtorgani ülevaatus (art 20)."
                     : "Tugev baas. Kontrolli, et tõendid oleksid ajakohased ja testitud.";
         }
         if (bar) bar.hidden = false;

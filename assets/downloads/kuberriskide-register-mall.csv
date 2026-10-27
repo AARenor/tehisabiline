@@ -1,2 +1,2 @@
 ﻿Riski ID;Vara või protsess;Oht;Haavatavus;Mõju (1-5);Tõenäosus (1-5);Riskitase;Ravi;Omanik;Tähtaeg;Jääkrisk;Tõend;Ülevaatuse kuupäev;Märkused
-RISK-001;NÄIDIS: kliendiportaal;Andmepüügiga admin-konto ülevõtmine;Admin-kontodel puudub MFA;5;4;Kõrge;MFA kohustuslikuks ja varufaktorid;IT-juht;2026-12-31;Keskmine;MFA katvus ja erandite loetelu;2027-01-31;Kustuta see näidisrida
+RISK-001;NÄIDIS: kliendiportaal;Andmepüügiga admin-konto ülevõtmine;Admin-kontodel puudub MFA;5;4;Kõrge;MFA kohustuslikuks ja varufaktorid;IT-juht;AAAA-KK-PP;Keskmine;MFA katvus ja erandite loetelu;AAAA-KK-PP;Kustuta see näidisrida

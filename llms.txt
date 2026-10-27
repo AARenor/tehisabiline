@@ -5,8 +5,8 @@
 Entity:
 
 - Legal name: Tehisabiline OÜ
-- Location: Tallinn, Estonia
-- Founder: Arle Aron Reidma (public profile: https://www.f6s.com/company/tehisabiline)
+- Location: registered office in Viimsi Parish, Harju County, Estonia (registry code 17607255, public register: https://ariregister.rik.ee/est/company/17607255); service area: Estonia.
+- Founder: Arle Aron Reidma (LinkedIn: https://www.linkedin.com/in/arlearonreidma/; company profile: https://www.f6s.com/company/tehisabiline)
 - Email: tehisabiline@gmail.com
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
 - Entity map (JSON): https://tehisabiline.ee/entitymap.json — canonical organization, founder, services, topic vocabulary and the page-to-cluster map
@@ -23,11 +23,11 @@ Status reviewed on 2026-10-27:
 - [Pentestimine Eestis](https://tehisabiline.ee/pentestimine/): primary penetration-testing service page for agreed website/application and API targets; written authorization, scope, test preparation, report, pricing factors and agreed retest.
 - [Pentesti raporti näidis](https://tehisabiline.ee/pentestimine/naidisraport/): synthetic sample report structure with scope, methodology, three evidence-backed findings, remediation priorities and retest; clearly not a client report.
 - [AI turvatestimine](https://tehisabiline.ee/ai-turvatestimine/): scoped testing of LLM/RAG/agent applications for prompt injection, retrieval leakage, tool permissions, output handling and API abuse; limits and AI Act/NIS2 context.
-- [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard, who must apply it, E-ITS audit vs ISO 27001 certification, 2026 changes (no direct ISO 27001 alignment), the new audit cycle and evidence preparation.
+- [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard (regulation no. 30, in force 01.09.2026): who must apply it, E-ITS audit versus ISO 27001 certification, what must be filed and when, and evidence preparation.
 - [TLPT ja TIBER-EE](https://tehisabiline.ee/tlpt/): DORA threat-led penetration testing in Estonia, who is designated, TIBER-EE roles, attestation versus certification and preparation.
-- [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope, five pillars, Estonian incident-reporting channel (email until 31.10.2026, portal from 01.11.2026), register of information, a downloadable register template, TLPT/TIBER-EE and a 30/60/90-day readiness plan.
+- [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope under Article 2, the five pillars, the Estonian incident-reporting channel (email until 31.10.2026, Finantsinspektsioon portal from 01.11.2026), the Article 28(3) register with its annual summary and full register on request, a downloadable register template, TLPT under Articles 26–27 via TIBER-EE (attestation by Finantsinspektsioon or the ECB) and a four-step preparation order.
 - [DORA audit](https://tehisabiline.ee/dora/audit/): scope, evidence and report for an ICT-risk audit; register and TLPT boundaries, common gaps and board evidence.
-- [DORA teaberegister](https://tehisabiline.ee/dora/teaberegister/): what the Article 28(3) register must show, how to fill it, common errors, the difference between a working CSV and the official ITS 2024/2956 template, the Estonian submission channel and a browser-only CSV checker.
+- [DORA teaberegister](https://tehisabiline.ee/dora/teaberegister/): what the Article 28(3) register must show, how to fill it, common errors, the difference between a working CSV and the official ITS 2024/2956 template, submission through the Finantsinspektsioon portal (annual summary; full register on request) and a browser-only CSV checker.
 - [Küberturvalisuse regulatsioonid Eestis](https://tehisabiline.ee/regulatsioonid/): one map of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA: who they cover, what they require, how they overlap and which evidence an audit asks for. Includes a downloadable comparison CSV.
 - [AI Act Eestis](https://tehisabiline.ee/ai-act/): the EU AI Act in Estonian: risk classes, current deadlines after the 2026 amendment, TTJA supervision, Article 15 security expectations, a browser-only risk-class self-check and what scoped AI testing can and cannot prove.
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/): English overview of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA, including deadlines and evidence.
@@ -61,27 +61,21 @@ Status reviewed on 2026-10-27:
 
 - [English home](https://tehisabiline.ee/en/): cybersecurity audit, penetration testing and NIS2/CRA evidence in Estonia.
 
-- [Küberturvalisus koolitus](https://tehisabiline.ee/koolitus/): NIS2 ja E-ITS koolitus juhtkonnale ja töötajatele, formaadid, sisu ja tabletop.
-
 - [NIS2 toetus](https://tehisabiline.ee/nis2/toetus/): EIS toetuse summad, abikõlblikud kulud, taotlemine ja tüüpilised vead.
 
 - [NIS2 energeetikas](https://tehisabiline.ee/sektorid/energeetika/): OT-riskid, tarneahel, intsidendid ja audititõendid.
 
 - [NIS2 tervishoius](https://tehisabiline.ee/sektorid/tervishoid/): patsiendiohutus, meditsiiniseadmed, tarneahel ja intsidendid.
 
-- [DORA finantssektoris](https://tehisabiline.ee/sektorid/finants/): teaberegister, lepingud, intsidendid ja TLPT.
-
-- [Sektorid](https://tehisabiline.ee/sektorid/): NIS2 energeetikas ja tervishoius, DORA finantssektoris.
-
-- [NIS2 logistikas](https://tehisabiline.ee/sektorid/logistika/): tarneahel, jälgitavus, tarnijad ja intsidendid.
+- [Sektorid](https://tehisabiline.ee/sektorid/): NIS2 energeetikas, tervishoius ja transpordis; finantssektori nõuded on DORA juhendis.
 
 ## Guides and organization
 
 - [API turvatestimine ja API pentest](https://tehisabiline.ee/api-turvatestimine/): API penetration testing guide: BOLA/IDOR, role and tenant access matrix, authentication, safe evidence and preparation. This is not the planned model API.
-- [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/): scope, test accounts, OWASP API Top 10 checks, evidence and retest.
+- [API pentesti kontrollnimekiri](https://tehisabiline.ee/api-turvatestimine/kontrollnimekiri/): the OWASP API Security Top 10 (2023) evidence table and the retest points.
 - [Veebirakenduse turvatestimine](https://tehisabiline.ee/veebirakenduse-turvatestimine/): web application penetration testing, website/e-commerce user flows, sessions, test accounts, scanner limitations and retesting.
 
-- [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): practical cyber-AI use cases grounded in cited security guidance.
+- [Küber-AI kasutusjuhud](https://tehisabiline.ee/kasutusjuhud/): twelve planned pilot use cases (hypotheses) for cyber-AI in security work, each with the human checkpoint and the measure to watch; not measured results.
 - [NIS2 nõuded Eestis](https://tehisabiline.ee/nis2/): scope, a four-question applicability self-check, ten minimum measures, incident reporting deadlines and fines in Estonia; covers the current KüTS redaction of 16.10.2026 and near-miss reporting.
 - [NIS2 kontrollnimekiri](https://tehisabiline.ee/nis2/kontrollnimekiri/): ten measures with the evidence auditors ask for, quick wins and typical gaps.
 - [NIS2 intsidendist teatamine](https://tehisabiline.ee/nis2/intsidendist-teatamine/): significant-incident criteria, the 24/72/1-month reports, a deadline calculator and the Estonian reporting channel.
@@ -90,7 +84,6 @@ Status reviewed on 2026-10-27:
 - [NIS2 audit](https://tehisabiline.ee/nis2/audit/): scope, evidence, process, report contents and the difference from a penetration test.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
-- [Kõik lehed](https://tehisabiline.ee/saidikaart/): teenused, regulatsioonid, artiklid ja inglisekeelsed juhendid.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
 - [Privaatsus](https://tehisabiline.ee/privaatsus/): privacy information.
 
@@ -100,8 +93,8 @@ These are international research findings, not measurements of Tehisabiline cust
 
 - [Verizon DBIR 2026 executive summary](https://www.verizon.com/business/resources/executivebriefs/2026-dbir-executive-summary.pdf): human element was present in 62% of breaches (page 11); vulnerability exploitation accounted for 31% of known initial access vectors in non-Error, non-Misuse breaches (page 9), cited on https://tehisabiline.ee/kuberaudit/.
 - [IBM Cost of a Data Breach 2026](https://www.ibm.com/reports/data-breach): global average breach cost of 4.99 million USD, 12% higher than the year before (cited on https://tehisabiline.ee/kuberaudit/).
-- [RIA on the expanded Estonian cybersecurity act](https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus): the act has applied since 1 January 2026; about 3,000 entities were added, bringing the total to roughly 6,500; fines reach 10 million EUR or 2% of worldwide turnover for essential entities and 7 million EUR or 1.4% for important entities (cited on https://tehisabiline.ee/nis2/).
-- [Directive (EU) 2022/2555, Article 23](https://eur-lex.europa.eu/eli/dir/2022/2555/oj): significant incidents require an early warning within 24 hours, an incident notification within 72 hours and a final report within one month (cited on https://tehisabiline.ee/nis2/).
+- [RIA on the expanded Estonian cybersecurity act](https://www.ria.ee/uudised/uuest-aastast-laienes-kuberturvalisuse-seadus): the act has applied since 1 January 2026; about 3,000 entities were added, bringing the total to roughly 6,500; fine ceilings are 10 million EUR or 2% of the previous financial year's worldwide turnover for essential entities and 7 million EUR or 1.4% for important entities, whichever is higher (cited on https://tehisabiline.ee/nis2/).
+- [Directive (EU) 2022/2555, Article 23](https://eur-lex.europa.eu/eli/dir/2022/2555/oj): significant incidents require an early warning within 24 hours and an incident notification within 72 hours of becoming aware, and a final report within one month of the notification (cited on https://tehisabiline.ee/nis2/).
 
 ## Optional
 

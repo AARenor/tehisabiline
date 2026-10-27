@@ -3,67 +3,77 @@ VERSION:2.0
 PRODID:-//Tehisabiline//Regulatsioonide tähtajad//ET
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Tehisabiline – küberturvalisuse tähtajad
-X-WR-CALDESC:NIS2, DORA, E-ITS, AI Act ja CRA olulisemad kuupäevad. Kontrolli alati kehtivat õigusakti.
+X-WR-CALNAME:Tehisabiline – CRA ja AI Acti tähtajad
+X-WR-CALDESC:CRA ja AI Acti olulisemad kuupäevad, kontrollitud 27.10.2026. Kontrolli alati kehtivat õigusakti.
 X-WR-TIMEZONE:Europe/Tallinn
 REFRESH-INTERVAL;VALUE=DURATION:P1D
 BEGIN:VEVENT
 UID:cra-reporting-2026-09-11@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20260911
 DTEND;VALUE=DATE:20260912
-SUMMARY:CRA teatamiskohustus
-DESCRIPTION:Tootjad peavad teatama aktiivselt ärakasutatud haavatavustest ja tõsistest intsidentidest ENISA ühtse teatamisplatvormi kaudu. Algne hoiatus 24 h, põhiteavitus 72 h.
+SUMMARY:CRA teatamiskohustus (art 14)
+DESCRIPTION:Määruse (EL) 2024/2847 art 14 teatamiskohustus kehtib alates 11.09.2026. Tootjad teatavad aktiivselt ärakasutatud haavatavustest ja tõsistest intsidentidest ENISA ühtse teatamisplatvormi kaudu. Algne hoiatus 24 h, põhiteavitus 72 h.
 URL:https://tehisabiline.ee/cra/
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:ai-act-transparency-2026-08-02@tehisabiline.ee
+DTSTAMP:20261027T000000Z
+DTSTART;VALUE=DATE:20260802
+DTEND;VALUE=DATE:20260803
+SUMMARY:AI Act: läbipaistvusreeglid (art 50) kehtivad
+DESCRIPTION:Määruse (EL) 2024/1689 art 50 läbipaistvuskohustused kehtivad alates 02.08.2026 (üldine kohaldamine). Kontrolli kehtivat redaktsiooni ja TTJA teavet.
+URL:https://tehisabiline.ee/ai-act/
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ai-act-transparency-2026-12-02@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
-SUMMARY:AI Act läbipaistvuskohustused ja uued keelud
-DESCRIPTION:AI Acti ajakava muudatuste järgi hakkavad sel kuupäeval kehtima täiendavad keelud ja piiratud riskiga süsteemide läbipaistvuskohustused. Kontrolli kehtivat redaktsiooni ja TTJA teavet.
+SUMMARY:AI Act: uued keelud ja artikli 50 lõike 2 üleminek
+DESCRIPTION:Määrusega (EL) 2026/1744 muudetud ajakava järgi kehtivad sel kuupäeval uued art 5 keelud. Enne 02.08.2026 turule lastud sünteetilist sisu loovate süsteemide art 50(2) üleminekutähtaeg on 02.12.2026. See ei ole art 50 üldine alguskuupäev.
 URL:https://tehisabiline.ee/ai-act/
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cra-main-obligations-2027-12-11@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20271211
 DTEND;VALUE=DATE:20271212
 SUMMARY:CRA põhinõuded ja CE-märgis
-DESCRIPTION:CRA põhinõuded hakkavad kehtima ELi turule lastavatele digielementidega toodetele. Vajalik on riskianalüüs, tehniline dokumentatsioon, vastavushindamine, CE-märgis ja tugiperiood.
+DESCRIPTION:Määruse (EL) 2024/2847 põhinõuded hakkavad kehtima ELi turule lastavatele digielemente sisaldavatele toodetele. Vajalik on riskianalüüs, tehniline dokumentatsioon, vastavushindamine, CE-märgis ja tugiperiood.
 URL:https://tehisabiline.ee/cra/
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ai-act-high-risk-2027-12-02@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20271202
 DTEND;VALUE=DATE:20271203
-SUMMARY:AI Act suure riskiga süsteemide nõuded
-DESCRIPTION:AI Acti muudetud ajakava järgi hakkavad enamiku suure riskiga süsteemide nõuded kehtima 2. detsembril 2027. Tootesse integreeritud süsteemide kuupäev on eraldi.
+SUMMARY:AI Act: lisa III suure riskiga süsteemide nõuded
+DESCRIPTION:Määrusega (EL) 2026/1744 muudetud ajakava järgi kehtivad lisa III suure riskiga süsteemide nõuded alates 02.12.2027. Toodetesse integreeritud (lisa I) süsteemide kuupäev on 02.08.2028.
 URL:https://tehisabiline.ee/ai-act/
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cra-type-examination-2028-06-11@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20280611
 DTEND;VALUE=DATE:20280612
 SUMMARY:CRA varasemate tüübikinnituste üleminek
-DESCRIPTION:Varasemad ELi tüübikinnitus- ja heakskiiduotsused kehtivad CRA kohaselt kuni selle kuupäevani, kui need varem ei lõpe.
+DESCRIPTION:Määruse (EL) 2024/2847 art 69 kohaselt kehtivad varasemad ELi tüübikinnitus- ja heakskiiduotsused kuni selle kuupäevani, kui need varem ei lõpe.
 URL:https://tehisabiline.ee/cra/
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ai-act-product-high-risk-2028-08-02@tehisabiline.ee
-DTSTAMP:20261024T000000Z
+DTSTAMP:20261027T000000Z
 DTSTART;VALUE=DATE:20280802
 DTEND;VALUE=DATE:20280803
-SUMMARY:AI Act toodetesse integreeritud suure riskiga süsteemid
-DESCRIPTION:Todetesse integreeritud suure riskiga AI-süsteemide jaoks kehtib AI Acti ajakavas eraldi hilisem kuupäev. Kontrolli toote klassi ja kohaldumist.
+SUMMARY:AI Act: lisa I toodetesse integreeritud suure riskiga süsteemid
+DESCRIPTION:Lisa I toodetesse integreeritud suure riskiga AI-süsteemide nõuded kehtivad alates 02.08.2028 (määrus (EL) 2026/1744). Kontrolli toote klassi ja art 6 tingimusi.
 URL:https://tehisabiline.ee/ai-act/
 TRANSP:TRANSPARENT
 END:VEVENT

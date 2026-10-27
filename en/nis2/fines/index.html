@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NIS2 Fines in Estonia: Caps, Supervision and Liability</title>
-    <meta name="description" content="NIS2 fines in Estonia: €10M or 2% and €7M or 1.4% caps, how supervision works, management liability and a browser-only maximum-fine calculator.">
+    <meta name="description" content="NIS2 fines in Estonia: caps of €10M or 2% and €7M or 1.4% of previous-year turnover, whichever is higher. A ceiling, not an automatic fine.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
     <meta name="theme-color" content="#0857f8">
@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=52056b57">
+    <link rel="stylesheet" href="/site.css?v=0453a9db">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -141,7 +141,7 @@
           "name": "What is the maximum NIS2 fine?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For essential entities, up to €10 million or 2% of worldwide annual turnover, whichever is higher. For important entities, up to €7 million or 1.4% of worldwide annual turnover, whichever is higher."
+            "text": "For essential entities, up to €10 million or 2% of the previous financial year's worldwide annual turnover, whichever is higher. For important entities, up to €7 million or 1.4% of the same turnover, whichever is higher. These are maximums, not expected fines."
           }
         },
         {
@@ -149,7 +149,7 @@
           "name": "Is a NIS2 fine automatic?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The supervisor assesses severity, duration, impact, negligence and cooperation. A fine is one possible measure, alongside warnings, binding instructions and remediation orders."
+            "text": "No. The supervisor weighs severity, duration, prior breaches, impact, intent or negligence, mitigation and cooperation (KüTS § 14(7)). A fine is one possible measure, alongside warnings and binding instructions."
           }
         },
         {
@@ -157,7 +157,7 @@
           "name": "Can management be held liable?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NIS2 requires management accountability and approval of risk measures. National law determines personal or board-level consequences; do not assume a fine is the only risk."
+            "text": "NIS2 Article 20 requires management bodies to approve and oversee cyber-risk measures. National law determines personal or board-level consequences; do not assume a fine is the only risk."
           }
         },
         {
@@ -165,7 +165,7 @@
           "name": "Does a small company avoid NIS2 fines?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Size affects scope and obligations, but not automatically immunity. If the entity is in scope, the duties apply; check the size and sector rules carefully."
+            "text": "No automatic immunity. If a small company is in scope, its duties apply. Size matters for scope: the general rule is at least 50 employees and turnover or balance sheet above €10 million, but some categories apply regardless of size."
           }
         }
       ]
@@ -179,7 +179,7 @@
     <!-- chrome:header -->
 <header class="site-header" id="navbar">
     <div class="wrap site-header__bar">
-        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – avaleht</span></a>
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – home</span></a>
         <nav class="site-nav" aria-label="Main navigation">
             <a href="/pentestimine/">Audit / pentest</a>
             <a href="/mudelid/">Cyber-AI API</a>
@@ -203,112 +203,93 @@
     <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/en/">English home</a></li><li><a href="/en/nis2/">NIS2</a></li><li aria-current="page">Fines</li></ol></nav>
     <p class="eyebrow">NIS2 · Supervision</p>
     <h1>NIS2 fines in Estonia: caps, supervision and liability</h1>
-    <p class="lead">The fine caps are simple. The operational risk is not. This guide explains the maximum amounts, how a supervisor assesses a breach, what management accountability means and how to reduce exposure before a review.</p>
-    <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-24">24 October 2026</time></p>
+    <p class="lead">The caps are legal maximums, not expected fines. This guide explains the amounts, how a supervisor weighs a breach, what management accountability means and how to reduce exposure before a review.</p>
+    <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-27">27 October 2026</time></p>
   </div></header>
   <section class="section"><div class="wrap article">
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#short">Short answer</a></li><li><a href="#caps">Caps</a></li><li><a href="#calculator">Calculator</a></li><li><a href="#assessment">Assessment</a></li><li><a href="#liability">Liability</a></li><li><a href="#reduce">Reduce risk</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li></ol></nav>
     <article class="prose">
-      <section class="short-answer" id="short"><h2>Short answer</h2><p><strong>Essential entities:</strong> up to <strong>€10 million or 2% of worldwide annual turnover</strong>, whichever is higher. <strong>Important entities:</strong> up to <strong>€7 million or 1.4% of worldwide annual turnover</strong>, whichever is higher. A fine is not automatic; the supervisor weighs severity, duration, impact, negligence and cooperation, and can also issue warnings, binding instructions and remediation orders.</p></section>
-      <section id="caps"><h2>Fine caps</h2><div class="table-wrap"><table><caption>NIS2 maximum fines</caption><thead><tr><th scope="col">Entity type</th><th scope="col">Maximum</th></tr></thead><tbody><tr><td>Essential</td><td>€10M or 2% of worldwide annual turnover</td></tr><tr><td>Important</td><td>€7M or 1.4% of worldwide annual turnover</td></tr></tbody></table></div><p>The cap is a ceiling, not a tariff. The actual outcome depends on the facts and national procedural law.</p></section>
-      <section id="calculator"><h2>Maximum-fine calculator</h2><p>Enter the entity type and annual turnover. The calculation is local and is not a legal assessment.</p>
-      <form class="nis2-check" data-nis2-fine-en data-local-check><fieldset><legend>Entity type</legend><label><input type="radio" name="type" value="essential" required> Essential</label><label><input type="radio" name="type" value="important"> Important</label></fieldset><fieldset><legend>Worldwide annual turnover (EUR)</legend><label for="nis2-fine-turnover-en">Turnover</label><input id="nis2-fine-turnover-en" name="turnover" type="number" min="0" step="100000" required></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate maximum</button><button class="btn btn--ghost" type="reset">Clear</button></div><div class="nis2-check__result" data-nis2-fine-en-result hidden tabindex="-1" role="status" aria-live="polite"></div><p class="nis2-check__note">A mathematical ceiling, not a prediction. Check the applicable national law and supervisory guidance.</p></form></section>
-      <section id="assessment"><h2>What the supervisor assesses</h2><ul><li>Severity and duration of the breach.</li><li>Impact on services, customers and other entities.</li><li>Whether the entity was negligent or acted deliberately.</li><li>Cooperation, notification and remediation speed.</li><li>Repeat breaches and prior warnings.</li></ul><p>Documenting decisions and fixes is not paperwork for its own sake; it is the evidence that the entity took the duty seriously.</p></section>
-      <section id="liability"><h2>Management accountability</h2><p>NIS2 requires management bodies to approve and oversee cyber-risk measures. National law determines personal or board-level consequences. The practical lesson: board minutes, risk appetite, budget decisions and remediation deadlines should be traceable, not reconstructed after an incident.</p><p><a href="/en/nis2/">Read the full NIS2 guide</a> for the ten duties and incident reporting.</p></section>
-      <section id="reduce"><h2>How to reduce exposure</h2><ol><li>Confirm scope and register with RIA on time.</li><li>Keep a risk register with owners and treatment dates.</li><li>Test backup restore, MFA and incident contact routes.</li><li>Collect supplier and technical evidence.</li><li>Record board decisions and remediation progress.</li><li>Run a tabletop exercise and document lessons.</li></ol><p>Need a second pair of eyes? <a href="/en/security-audit/">Review the audit scope</a> or <a href="/en/#contact">request a scoping call</a>.</p></section>
+      <section class="short-answer" id="short"><h2>Short answer</h2><p><strong>Essential entities:</strong> up to <strong>€10 million or 2% of the previous financial year's worldwide annual turnover</strong>, whichever is higher. <strong>Important entities:</strong> up to <strong>€7 million or 1.4%</strong> of the same turnover, whichever is higher. These maximums apply to breaches of the security-measure duties (KüTS&nbsp;§&nbsp;7) and the incident-reporting duties (KüTS&nbsp;§&nbsp;8), under KüTS&nbsp;§&nbsp;18<sup>2</sup> and&nbsp;§&nbsp;18<sup>3</sup>. A fine is not automatic: the supervisor weighs severity, duration, prior breaches, impact, intent or negligence, mitigation and cooperation (KüTS&nbsp;§&nbsp;14(7)). For scope and duties, see <a href="/en/nis2/">NIS2 in Estonia</a>.</p></section>
+      <section id="caps"><h2>Fine caps</h2><div class="table-wrap"><table><caption>NIS2 maximum fines</caption><thead><tr><th scope="col">Entity type</th><th scope="col">Maximum</th></tr></thead><tbody><tr><td>Essential</td><td>€10M or 2% of previous financial year's worldwide annual turnover, whichever is higher</td></tr><tr><td>Important</td><td>€7M or 1.4% of previous financial year's worldwide annual turnover, whichever is higher</td></tr></tbody></table></div><p>The cap is a maximum, not an expected fine. The actual outcome depends on the facts and national procedure.</p></section>
+      <section id="calculator"><h2>Maximum-fine calculator</h2><p>Choose the entity type and enter the worldwide turnover of the previous financial year. The calculation is local and is not a legal assessment.</p>
+      <form class="nis2-check" data-nis2-fine-en data-local-check><fieldset><legend>Entity type</legend><label><input type="radio" name="type" value="essential" required> Essential</label><label><input type="radio" name="type" value="important"> Important</label></fieldset><fieldset><legend>Worldwide turnover of the previous financial year (EUR)</legend><label for="nis2-fine-turnover-en">Turnover</label><input id="nis2-fine-turnover-en" name="turnover" type="number" min="0" step="100000" required></fieldset><div class="nis2-check__actions"><button class="btn btn--primary" type="submit">Calculate maximum</button><button class="btn btn--ghost" type="reset">Clear</button></div><div class="nis2-check__result" data-nis2-fine-en-result hidden tabindex="-1" role="status" aria-live="polite"></div><p class="nis2-check__note">A mathematical ceiling, not a prediction. Check the applicable national law and supervisory guidance.</p></form><p><strong>Example (27 October 2026; not a legal determination).</strong> Essential entity, previous-year worldwide turnover €800 million: max(€10M; 2% × €800M) = max(€10M; €16M) = <strong>€16M</strong>. Important entity, same turnover: max(€7M; 1.4% × €800M) = max(€7M; €11.2M) = <strong>€11.2M</strong>. Essential entity with turnover €100M: max(€10M; 2% × €100M) = max(€10M; €2M) = <strong>€10M</strong>. Basis: KüTS&nbsp;§&nbsp;18<sup>2</sup> and&nbsp;§&nbsp;18<sup>3</sup>.</p></section>
+      <section id="assessment"><h2>What the supervisor assesses</h2><p>KüTS&nbsp;§&nbsp;14(7) lists the factors. They are assessment criteria, not a prediction of a fine:</p><ul><li>Severity and duration of the breach.</li><li>Prior breaches and warnings.</li><li>Impact on services, customers and other persons.</li><li>Intent or negligence.</li><li>Mitigation, cooperation, notification and remediation speed.</li></ul><p>Documenting decisions and fixes is the evidence that the entity took the duty seriously.</p></section>
+      <section id="liability"><h2>Management accountability</h2><p>NIS2 Article 20 requires management bodies to approve and oversee cyber-risk measures. National law determines personal or board-level consequences. The practical lesson: board minutes, risk appetite, budget decisions and remediation deadlines should be traceable, not reconstructed after an incident.</p><p><a href="/en/nis2/">Read the full NIS2 guide</a> for the ten duties and incident reporting.</p></section>
+      <section id="reduce"><h2>How to reduce exposure</h2><ol><li>Confirm scope and register with RIA on time; see <a href="/en/nis2/registration/">NIS2 registration</a>.</li><li>Keep a risk register with owners and treatment dates.</li><li>Test backup restore, MFA and incident contact routes against the 24- and 72-hour clocks.</li><li>Collect supplier and technical evidence.</li><li>Record board decisions and remediation progress.</li></ol><p>Need a second pair of eyes? <a href="/en/security-audit/">Review the audit scope</a> or <a href="/en/#contact">ask for a free initial mapping by email</a>.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
-        <details><summary><h3>What is the maximum NIS2 fine?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">For essential entities, up to €10 million or 2% of worldwide annual turnover, whichever is higher. For important entities, up to €7 million or 1.4% of worldwide annual turnover, whichever is higher.</p></details>
-        <details><summary><h3>Is a NIS2 fine automatic?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. The supervisor assesses severity, duration, impact, negligence and cooperation. A fine is one possible measure, alongside warnings, binding instructions and remediation orders.</p></details>
-        <details><summary><h3>Can management be held liable?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">NIS2 requires management accountability and approval of risk measures. National law determines personal or board-level consequences; do not assume a fine is the only risk.</p></details>
-        <details><summary><h3>Does a small company avoid NIS2 fines?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Size affects scope and obligations, but not automatically immunity. If the entity is in scope, the duties apply; check the size and sector rules carefully.</p></details>
+        <details><summary><h3>What is the maximum NIS2 fine?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">For essential entities, up to €10 million or 2% of the previous financial year's worldwide annual turnover, whichever is higher. For important entities, up to €7 million or 1.4% of the same turnover, whichever is higher. These are maximums, not expected fines.</p></details>
+        <details><summary><h3>Is a NIS2 fine automatic?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. The supervisor weighs severity, duration, prior breaches, impact, intent or negligence, mitigation and cooperation (KüTS&nbsp;§&nbsp;14(7)). A fine is one possible measure, alongside warnings and binding instructions.</p></details>
+        <details><summary><h3>Can management be held liable?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">NIS2 Article 20 requires management bodies to approve and oversee cyber-risk measures. National law determines personal or board-level consequences; do not assume a fine is the only risk.</p></details>
+        <details><summary><h3>Does a small company avoid NIS2 fines?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No automatic immunity. If a small company is in scope, its duties apply. Size matters for scope: the general rule is at least 50 employees and turnover or balance sheet above €10 million, but some categories apply regardless of size.</p></details>
       </div></section>
-      <section id="sources"><h2>Sources</h2><ul><li><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" rel="noopener">NIS2 Directive (EU) 2022/2555</a>, Article 34.</li><li><a href="https://www.riigiteataja.ee/akt/106102026002" rel="noopener">Cybersecurity Act (KüTS)</a>.</li><li><a href="https://www.ria.ee/" rel="noopener">RIA</a>.</li></ul></section>
-      <section class="related" aria-labelledby="related"><h2 id="related">Related guides</h2><ul class="related__list"><li><a href="/en/nis2/"><span class="related__title">NIS2 in Estonia</span><span class="related__desc">Scope, duties and incident reporting.</span></a></li><li><a href="/nis2/trahvid/" lang="et"><span class="related__title">Trahvid (ET)</span><span class="related__desc">Estonian guide and calculator.</span></a></li><li><a href="/en/security-audit/"><span class="related__title">Cybersecurity audit</span><span class="related__desc">Evidence before supervision.</span></a></li></ul></section>
+      <section id="sources"><h2>Sources</h2><p>Checked 27 October 2026.</p><ul><li><a href="https://www.riigiteataja.ee/akt/106102026002" rel="noopener">Cybersecurity Act (KüTS)</a>, §&nbsp;7, §&nbsp;8, §&nbsp;14(7), §&nbsp;18<sup>2</sup> and §&nbsp;18<sup>3</sup>; consolidated text valid from 16.10.2026 (RT I, 06.10.2026, 2; amending act RT I, 06.10.2026, 1).</li><li><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" rel="noopener">NIS2 Directive (EU) 2022/2555</a>, Articles 20 and 34 (background).</li><li><a href="https://www.ria.ee/" rel="noopener">RIA</a>.</li></ul></section>
+      <section class="related" aria-labelledby="related"><h2 id="related">Related guides</h2><ul class="related__list"><li><a href="/en/nis2/"><span class="related__title">NIS2 in Estonia</span><span class="related__desc">Scope, duties and incident reporting.</span></a></li><li><a href="/en/nis2/registration/"><span class="related__title">NIS2 registration</span><span class="related__desc">RIA notification and deadlines.</span></a></li><li><a href="/nis2/trahvid/" lang="et"><span class="related__title">Trahvid (ET)</span><span class="related__desc">Estonian guide and calculator.</span></a></li></ul></section>
     </article>
   </div></section>
-  <section class="band" id="contact"><div class="wrap band__inner"><h2>Need the evidence before the supervisor asks?</h2><p>Send the scope and current evidence. We will tell you what is missing.</p><a class="btn btn--white" href="mailto:tehisabiline@gmail.com?subject=NIS2%20evidence%20review">Email tehisabiline@gmail.com</a></div></section>
+  <section class="band" id="contact"><div class="wrap band__inner"><h2>Need the evidence before the supervisor asks?</h2><p>Email the scope and current evidence for a free initial mapping.</p><a class="btn btn--white" href="mailto:tehisabiline@gmail.com?subject=NIS2%20evidence%20review">Email tehisabiline@gmail.com</a></div></section>
 </main>    <!-- chrome:footer -->
 <footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
-            <div>
-                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – avaleht</span></a>
-                <p>Pentestimine ja küberauditid kirjaliku loa alusel, inimese ülevaatusega. API turvatööriistadele.</p>
-            </div>
-            <nav aria-label="Teenuste lingid">
-                <p class="site-footer__title">Teenused</p>
-                <ul>
-                    <li><a href="/pentestimine/">Küberaudit ja pentestimine</a></li>
-                    <li><a href="/mudelid/">Keeldudeta küber-AI API</a></li>
-                </ul>
-            </nav>
-            <nav aria-label="Ettevõtte lingid">
-                <p class="site-footer__title">Teave</p>
-                <ul>
-                    <li><a href="/meist/">Meist ja põhimõtted</a></li>
-                    <li><a href="/en/press/" hreflang="en" lang="en">Press kit (EN)</a></li>
-                    <li><a href="/viitamine/">Viitamine ja allikad</a></li>
-                    <li><a href="/nis2/toetus/">NIS2 toetus</a></li>
-                    <li><a href="/sektorid/energeetika/">NIS2 energeetikas</a></li>
-                    <li><a href="/sektorid/tervishoid/">NIS2 tervishoius</a></li>
-                    <li><a href="/sektorid/finants/">DORA finantssektoris</a></li>
-                    <li><a href="/sektorid/">Sektorid</a></li>
-                    <li><a href="/sektorid/logistika/">NIS2 logistikas</a></li>
-                    <li><a href="/saidikaart/">Kõik lehed</a></li>
-                    <li><a href="/koolitus/">Koolitus</a></li>
-                    <li><a href="/kuberaudit/">Turvaaudit ja küberaudit</a></li>
-                    <li><a href="/kasutusjuhud/">Küber-AI kasutusjuhud</a></li>
-                    <li><a href="/api-turvatestimine/">API turvatestimise juhend</a></li>
-                    <li><a href="/veebirakenduse-turvatestimine/">Veebirakenduse pentesti juhend</a></li>
-                    <li><a href="/nis2/">NIS2 juhend</a></li>
-                    <li><a href="/regulatsioonid/">Regulatsioonid ja AI Act</a></li>
-                    <li><a href="/dora/">DORA nõuded Eestis</a></li>
-                    <li><a href="/dora/teaberegister/">DORA teaberegister</a></li>
-                    <li><a href="/dora/audit/">DORA audit</a></li>
-                    <li><a href="/ai-act/">AI Act Eestis</a></li>
-                    <li><a href="/iso-27001/">ISO 27001 Eestis</a></li>
-                    <li><a href="/cra/">Cyber Resilience Act</a></li>
-                    <li><a href="/sbom/">SBOM ja tarkvara koostis</a></li>
-                    <li><a href="/en/" hreflang="en" lang="en">English</a></li>
-                    <li><a href="/en/regulations/" hreflang="en" lang="en">Estonia regulations (EN)</a></li>
-                    <li><a href="/en/nis2/" hreflang="en" lang="en">NIS2 in Estonia (EN)</a></li>
-                    <li><a href="/en/nis2/audit/" hreflang="en" lang="en">NIS2 audit (EN)</a></li>
-                    <li><a href="/en/nis2/incident-reporting/" hreflang="en" lang="en">Incident reporting (EN)</a></li>
-                    <li><a href="/en/nis2/fines/" hreflang="en" lang="en">NIS2 fines (EN)</a></li>
-                    <li><a href="/en/nis2/registration/" hreflang="en" lang="en">NIS2 registration (EN)</a></li>
-                    <li><a href="/en/cra/" hreflang="en" lang="en">CRA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/" hreflang="en" lang="en">DORA in Estonia (EN)</a></li>
-                    <li><a href="/en/dora/audit/" lang="en" hreflang="en">DORA audit (EN)</a></li>
-                    <li><a href="/en/dora/register/" hreflang="en" lang="en">DORA register (EN)</a></li>
-                    <li><a href="/en/ai-act/" hreflang="en" lang="en">AI Act in Estonia (EN)</a></li>
-                    <li><a href="/en/sbom/" hreflang="en" lang="en">SBOM for CRA (EN)</a></li>
-                    <li><a href="/en/e-its/" hreflang="en" lang="en">E-ITS in Estonia (EN)</a></li>
-                    <li><a href="/en/pentesting/" hreflang="en" lang="en">Penetration testing (EN)</a></li>
-                    <li><a href="/en/security-audit/" hreflang="en" lang="en">Cybersecurity audit (EN)</a></li>
-                    <li><a href="/en/iso-27001/" hreflang="en" lang="en">ISO 27001 in Estonia (EN)</a></li>
-                    <li><a href="/e-its/">E-ITS ja audit</a></li>
-                    <li><a href="/ai-turvatestimine/">AI turvatestimine</a></li>
-                    <li><a href="/tlpt/">TLPT ja TIBER-EE</a></li>
-                    <li><a href="/nis2/kontrollnimekiri/">NIS2 kontrollnimekiri</a></li>
-                    <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
-                    <li><a href="/api-turvatestimine/kontrollnimekiri/">API pentesti kontrollnimekiri</a></li>
-                    <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
-                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
-                </ul>
-            </nav>
-            <div>
-                <p class="site-footer__title">Kontakt</p>
+            <div class="site-footer__about">
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – home</span></a>
+                <p>Penetration testing and cyber audits under written authorization, with human review. API for security tooling.</p>
+                <p class="site-footer__title">Contact</p>
                 <ul>
                     <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
-                    <li>Tallinn, Eesti</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li>Reg. no. 17607255 · Viimsi Parish, Harju County</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Founder on LinkedIn</a></li>
                     <li><a href="/en/#contact">Free assessment</a></li>
                 </ul>
             </div>
+            <nav aria-label="Service links">
+                <p class="site-footer__title">Services</p>
+                <ul>
+                    <li><a href="/en/pentesting/">Penetration testing</a></li>
+                    <li><a href="/en/security-audit/">Cybersecurity audit</a></li>
+                    <li><a href="/mudelid/" hreflang="et" lang="et">Cyber-AI API (Estonian)</a></li>
+                    <li><a href="/kasutusjuhud/" hreflang="et" lang="et">Cyber-AI use cases (Estonian)</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 links">
+                <p class="site-footer__title">NIS2 in Estonia</p>
+                <ul>
+                    <li><a href="/en/nis2/">NIS2 in Estonia: overview</a></li>
+                    <li><a href="/en/nis2/registration/">Registration with RIA</a></li>
+                    <li><a href="/en/nis2/incident-reporting/">Incident reporting</a></li>
+                    <li><a href="/en/nis2/fines/">Fines and liability</a></li>
+                    <li><a href="/en/nis2/audit/">NIS2 audit</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulation links">
+                <p class="site-footer__title">Regulations</p>
+                <ul>
+                    <li><a href="/en/regulations/">Estonia regulations overview</a></li>
+                    <li><a href="/en/dora/">DORA in Estonia</a></li>
+                    <li><a href="/en/dora/register/">DORA register of information</a></li>
+                    <li><a href="/en/dora/audit/">DORA audit</a></li>
+                    <li><a href="/en/cra/">CRA in Estonia</a></li>
+                    <li><a href="/en/sbom/">SBOM for the CRA</a></li>
+                    <li><a href="/en/ai-act/">AI Act in Estonia</a></li>
+                    <li><a href="/en/e-its/">E-ITS in Estonia</a></li>
+                    <li><a href="/en/iso-27001/">ISO 27001 in Estonia</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Company links">
+                <p class="site-footer__title">Company</p>
+                <ul>
+                    <li><a href="/en/">Tehisabiline in English</a></li>
+                    <li><a href="/en/press/">Press kit</a></li>
+                    <li><a href="/meist/" hreflang="et" lang="et">About (Estonian)</a></li>
+                    <li><a href="/privaatsus/" hreflang="et" lang="et">Privacy (Estonian)</a></li>
+                    <li><a href="/llms.txt">For AI systems</a></li>
+                    <li><a href="/" hreflang="et" lang="et">Eesti keeles</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="site-footer__legal">
-            <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>© 2026 Tehisabiline OÜ. All rights reserved.</span>
+            <span>Last materially updated <time datetime="2026-10-27">27 October 2026</time></span>
         </div>
     </div>
 </footer>

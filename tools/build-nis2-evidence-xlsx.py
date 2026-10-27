@@ -2,7 +2,7 @@
 """Build assets/downloads/nis2-auditi-toendite-mall.xlsx (NIS2 audit evidence register).
 
 Source of truth for the downloadable evidence template served by /nis2/audit/.
-Rows map the ten minimum measures of NIS2 (EU) 2022/2555 art 21(2)(a)-(j).
+Rows map the ten measures of NIS2 (EU) 2022/2555 art 21(2)(a)-(j) plus one row for the management duties of art 20 (KüTS §6¹).
 
 Run from the repo root:  python3 tools/build-nis2-evidence-xlsx.py
 Requires openpyxl (system python3-openpyxl).
@@ -24,22 +24,23 @@ BAND = "FFF2F6F8"
 LINE = Side(style="thin", color="FFD3DDE3")
 
 ROWS = [
-    ("1", "21(2)(a)", "Riskianalüüs ja turvapoliitika", "Kinnitatud riskiregister ja turvapoliitika", "Küberturbe juht", "Vali 3 riski ja kontrolli ravi ning jääkriski"),
-    ("2", "21(2)(b)", "Intsidentide käsitlemine", "Intsidendiprotseduur ja kontaktid", "IT-juht", "Simuleeri intsident ja kontrolli 24/72 tunni rada"),
-    ("3", "21(2)(c)", "Toimepidevus ja varundus", "Varundusplaan ja taastetesti raport", "IT-juht", "Kontrolli viimast taastetesti ja RPO/RTO vastavust"),
-    ("4", "21(2)(d)", "Tarneahela turve", "Kriitiliste tarnijate nimekiri ja lepingud", "Hanked", "Vali 3 tarnijat ja kontrolli due diligence't"),
-    ("5", "21(2)(e)", "Turvaline arendus ja haavatavused", "Haavatavuste protsess ja parandusajad", "Arendusjuht", "Kontrolli 5 haavatavuse parandamise tõendit"),
-    ("6", "21(2)(f)", "Tõhususe testimine", "Testiplaan ja viimased tulemused", "Turvajuht", "Kontrolli, kas testid katavad kriitilised süsteemid"),
-    ("7", "21(2)(g)", "Küberhügieen ja koolitus", "Koolituskava ja osalemise tõendid", "Personal", "Kontrolli koolituse katvust ja värskust"),
-    ("8", "21(2)(h)", "Krüpteerimine", "Krüpteerimise poliitika ja kasutuspõhimõtted", "IT-juht", "Kontrolli andmete liikumist ja krüpteerimist"),
-    ("9", "21(2)(i)", "Ligipääsukontroll", "Privileegide maatriks ja ülevaatuse tõendid", "IT-juht", "Vali 5 kontot ja kontrolli õigusi"),
-    ("10", "21(2)(j)", "MFA ja turvaline side", "MFA katvus ja erisused", "IT-juht", "Kontrolli kriitiliste kontode MFA-d"),
+    ("(a)", "21(2)(a)", "Riskianalüüs ja infosüsteemide turvalisuse poliitika", "Kinnitatud riskiregister, turvapoliitika ja riskianalüüsi metoodika (versioon, kinnitaja, kuupäev)", "Küberturbe juht", "Vali 3 riski; kontrolli ravi, omanikku ja jääkriski"),
+    ("(b)", "21(2)(b)", "Intsidentide käsitlemine", "Intsidendiprotseduur, kontaktid ja teavituste logi; esmane teade hiljemalt 24 h, intsidenditeade hiljemalt 72 h, lõpparuanne ühe kuu jooksul intsidenditeate esitamisest (KüTS § 8)", "IT-juht", "Kontrolli, kas protseduur sisaldab 24 h, 72 h ja lõpparuande tähtaegu ning rolle; vaata viimast teavituste logi"),
+    ("(c)", "21(2)(c)", "Toimepidevus, varukoopiate haldus ja taastamine ning kriisijuhtimine", "Varundusplaan, viimase taastetesti raport, RTO/RPO ja kriisijuhtimise kord", "IT-juht", "Kontrolli viimast taastetesti ja RPO/RTO vastavust"),
+    ("(d)", "21(2)(d)", "Tarneahela turvalisus", "Kriitiliste tarnijate nimekiri, lepingute turvatingimused ja hindamise märkmed (sh suhted otseste tarnijate ja teenuseosutajatega)", "Hanked", "Vali 3 tarnijat ja kontrolli lepingut ning hindamist"),
+    ("(e)", "21(2)(e)", "Turvalisus hankimisel, arendamisel ja hooldamisel", "Haavatavuste käsitlemise ja avalikustamise kord, kanal ja parandamise logi (tähtajad on sisemised sihid)", "Arendusjuht", "Kontrolli 5 viimase haavatavuse parandamise tõendit"),
+    ("(f)", "21(2)(f)", "Riskijuhtimismeetmete tõhususe hindamine", "Testiplaan, viimased tulemused ja leidude jälgimine", "Turvajuht", "Kontrolli, kas testid katavad kriitilised süsteemid ja kas leiud on parandatud"),
+    ("(g)", "21(2)(g)", "Küberhügieen ja küberturvalisuse koolitus", "Koolituskava, osalejate nimekiri ja sisu ajakohasus", "Personal", "Kontrolli koolituse katvust ja värskust"),
+    ("(h)", "21(2)(h)", "Krüptograafia ja krüpteerimine", "Krüptograafia ja krüpteerimise poliitika, võtmete ja sertifikaatide loetelu", "IT-juht", "Kontrolli andmete liikumist, krüpteerimist ja sertifikaatide aegumist"),
+    ("(i)", "21(2)(i)", "Personaliturvalisus, juurdepääsukontroll ja varahaldus", "Õiguste maatriks ja ülevaatuse tõend, töölt lahkumise kord, varanimekiri", "IT-juht ja personal", "Vali 5 kontot (sh 1 lahkunud töötaja) ja kontrolli õigusi ning varakirjeid"),
+    ("(j)", "21(2)(j)", "Mitmefaktorautentimine ja turvaline side (sh hädaolukorra side)", "MFA katvuse loend kriitiliste kontodega, turvalise side kirjeldus ja hädaolukorra sideviis", "IT-juht", "Kontrolli kriitiliste kontode MFA-d ja hädaolukorra sideviisi toimimist"),
+    ("Juhtorgan", "art 20 · KüTS §6¹", "Juhtorgani kohustused (art 20 / KüTS §6¹)", "Juhatuse protokoll, mis kinnitab riskijuhtimismeetmed; koolituse tõend", "Juhatus", "Kontrolli viimast juhatuse protokolli ja koolituse tõendit"),
 ]
 
 HEADERS = [
-    ("Meede", 7),
-    ("Säte", 11),
-    ("Nõue", 30),
+    ("Meede", 11),
+    ("Säte", 16),
+    ("Nõue", 36),
     ("Tõend, mida koguda", 34),
     ("Omanik", 15),
     ("Testi kirjeldus", 34),
@@ -55,6 +56,14 @@ HEADERS = [
 RESULTS = ["Vastab", "Osaliselt vastab", "Ei vasta", "Pole hinnatud"]
 STATUSES = ["Pole alustatud", "Töös", "Valmis", "Edasi lükatud"]
 LAST_ROW = 200  # validation/formatting reach further than the seeded rows
+
+
+def _text_lines(text, width):
+    """Estimate wrapped line count so row heights fit the text."""
+    if not text:
+        return 1
+    per_line = max(1, int(width * 1.1))
+    return sum(max(1, (len(part) + per_line - 1) // per_line) for part in str(text).split("\n"))
 
 
 def build() -> None:
@@ -84,7 +93,8 @@ def build() -> None:
                 cell.number_format = "DD.MM.YYYY"
             if r % 2 == 1:
                 cell.fill = PatternFill("solid", fgColor=BAND)
-        ws.row_dimensions[r].height = 34
+        lines = max(_text_lines(v, w) for v, (_, w) in zip(values, HEADERS))
+        ws.row_dimensions[r].height = max(34, 15 * lines + 4)
 
     # Status and result are pick-lists: free text would make the register unsortable.
     for status_list, col_letter in ((RESULTS, "H"), (STATUSES, "L")):
@@ -147,7 +157,7 @@ def build() -> None:
         return cell
 
     block(1, "NIS2 auditi tõendite mall", size=16, bold=True, color=INK)
-    block(2, "Töömall tõendite kogumiseks NIS2 direktiivi (EL) 2022/2555 artikli 21 lõike 2 kümne miinimumnõude kohta. Täida lehel „Tõendid“ üks rida iga meetme kohta.", color=MUTED)
+    block(2, "Töömall tõendite kogumiseks NIS2 direktiivi (EL) 2022/2555 artikli 21 lõike 2 punktide (a)–(j) ja artikli 20 juhtorgani kohustuste kohta. Täida lehel „Tõendid“ üks rida iga punkti ja juhtorgani rea kohta.", color=MUTED)
     guide.merge_cells("A2:C2")
     guide.row_dimensions[2].height = 32
 
@@ -167,7 +177,7 @@ def build() -> None:
 
     block(11, "Veergude tähendus", size=12, bold=True, color=INK)
     legend = [
-        ("Meede / Säte", "NIS2 artikli 21 lõike 2 punkt; hoiab rea seotud direktiivi tekstiga."),
+        ("Meede / Säte", "Artikli 21 lõike 2 punkt (a)–(j) või juhtorgani rida (art 20); hoiab rea seotud direktiivi tekstiga."),
         ("Nõue", "Meetme nimi sellisel kujul, nagu seda kohustuslase dokumentatsioonis kasutatakse."),
         ("Tõend, mida koguda", "Dokument või väljavõte, mida auditeerija küsib."),
         ("Tulemus", "Vastab / Osaliselt vastab / Ei vasta / Pole hinnatud."),
@@ -210,13 +220,13 @@ def build() -> None:
     caveat = guide.cell(row=32, column=1, value=(
         "See on töövahend, mitte auditiraport, sertifikaat ega vastavusdeklaratsioon. NIS2 ei nõua ühte sertifikaati: "
         "auditi järeldus peab põhinema ulatusel, kriteeriumidel ja nähtud tõenditel. Täidetud tabel ilma tõendite asukohtadeta "
-        "ei ole auditiks piisav. Kontrolli enne kasutamist kehtivat NIS2/Eesti KüTS redaktsiooni."
+        "ei ole auditiks piisav. Kontrolli enne kasutamist kehtivat KüTS-i redaktsiooni (kehtiv 16.10.2026)."
     ))
     caveat.alignment = Alignment(vertical="top", wrap_text=True)
     guide.merge_cells("A32:C32")
     guide.row_dimensions[32].height = 58
 
-    block(34, "Allikas: NIS2 direktiiv (EL) 2022/2555, art 21 lg 2 · tehisabiline.ee/nis2/audit/", size=9, color=MUTED, italic=True)
+    block(34, "Allikas: NIS2 direktiiv (EL) 2022/2555, art 20 ja art 21 lg 2 · KüTS (kehtiv 16.10.2026) · tehisabiline.ee/nis2/audit/", size=9, color=MUTED, italic=True)
 
     wb.properties.title = "NIS2 auditi tõendite mall"
     wb.properties.subject = "NIS2 direktiivi art 21 lg 2 tõendite register"

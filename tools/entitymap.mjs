@@ -169,7 +169,8 @@ export function validateEntityMap(root = toolRoot) {
     const contactPoints = [org.contactPoint, ...(org.contactPointVariants || [])];
     const personUrls = [person.url, ...(person.urlAliases || [])];
     const personTitles = [person.jobTitle, ...(person.jobTitleAliases || [])];
-    const orgStrictKeys = ["legalName", "identifier", "foundingDate", "alternateName", "image", "email", "founder", "address", "areaServed"];
+    // image is the page's own social card (tools/render-og.mjs), so it legitimately differs per page.
+    const orgStrictKeys = ["legalName", "identifier", "foundingDate", "alternateName", "email", "founder", "address", "areaServed"];
 
     for (const [url, clusterId] of Object.entries(pages)) {
         const file = pageFile(url);
@@ -238,10 +239,12 @@ export function validateEntityMap(root = toolRoot) {
             .find((node) => typesOf(node).includes("Organization") && stripVersion(node["@id"]) === stripVersion(org["@id"]));
         if (!homeOrg) fail("index.html must publish the canonical Organization node.");
         else {
-            const metaKeys = new Set(["$comment", "contactPointVariants", "urlAliases", "jobTitleAliases", "knowsLanguage"]);
+            const metaKeys = new Set(["$comment", "contactPointVariants", "urlAliases", "jobTitleAliases", "knowsLanguage", "image"]);
             const compare = (node) => Object.fromEntries(Object.entries(node).filter(([key]) => !metaKeys.has(key)));
-            const differing = [...new Set([...Object.keys(homeOrg), ...Object.keys(compare(org))])]
-                .filter((key) => stable(homeOrg[key]) !== stable(compare(org)[key]));
+            const home = compare(homeOrg);
+            const canonical = compare(org);
+            const differing = [...new Set([...Object.keys(home), ...Object.keys(canonical)])]
+                .filter((key) => stable(home[key]) !== stable(canonical[key]));
             if (differing.length) fail(`index.html Organization differs from the canonical map in: ${differing.join(", ")}.`);
         }
     }
