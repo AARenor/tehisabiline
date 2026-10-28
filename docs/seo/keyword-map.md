@@ -55,3 +55,20 @@ Impressions moved from ~10/day to 154/day on 26 October when the English section
 - Use synonyms naturally in headings, definitions, FAQs and internal links.
 - Do not claim certification, complete coverage or guaranteed ranking.
 - Recheck GSC Performance after 28 days; add queries only when they show impressions.
+
+## GSC + autocomplete update 2026-10-28 (afternoon)
+
+Method: Search Console Search Analytics API (28 d, page and query dimensions), URL Inspection
+on all 58 sitemap URLs, and Google Autocomplete with `hl=et,gl=ee` / `hl=en`.
+
+| Observation | Numbers | Decision |
+| --- | --- | --- |
+| `nis2 audit` (EN page) | 21 imp / 3 d at pos 15.2; 22 imp / 28 d at 14.6 | deepen `/en/nis2/audit/`: who may audit, preparation checklist, requirements |
+| `nis2 compliance checklist`, `nis2 requirements checklist`, `nis2 requirements list` | dense EN autocomplete, no site URL | new `/en/nis2/checklist/` with the ten measures and their evidence |
+| `dora register of information template / rts / requirements / data model / 2026 deadline` | dense EN autocomplete; site ranked 57 for the template query | `/en/dora/register/` rebuilt around the fourteen ITS 2024/2956 template codes |
+| `cyber security audit`, `cyber security audit checklist` | site at pos 70 on a 850-word page | `/en/security-audit/` gained coverage table, preparation checklist, independence section |
+| `nis2 auditor` (ET) | autocomplete suggests `nis2 auditor`; ET audit page had no "who may audit" section | `/nis2/audit/` gained the internal / external / RIA comparison |
+| Estonian sector and applicability long tail | `nis2 kuuluvus`, `nis2 sektorid`, `nis2 toiduaine`, `nis2 trahvid` return no autocomplete suggestions | **do not build** the sector spokes listed in the topical map without new evidence; the pages would be thin URLs with no demand |
+
+Rule this confirms: build where autocomplete or impressions already exist, not where a
+framework map suggests a symmetrical gap.

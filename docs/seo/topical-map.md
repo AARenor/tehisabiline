@@ -100,10 +100,17 @@ the weakest link in the internal graph; hub-to-article links are the cheapest fi
 
 ## 7. en — English
 
-Hub: `/en/`. 18 pages, 16 inbound for the hub.
+Hub: `/en/`. 19 pages, 16 inbound for the hub.
+
+| Spoke | Target term | Unique asset | Status |
+| --- | --- | --- | --- |
+| `/en/nis2/checklist/` | nis2 compliance checklist, nis2 requirements checklist | interactive ten-measure checklist (EN) | live 2026-10-28 |
 
 Gaps: zero English editorial. The EN tree is guide-only, so it cannot rank for
-English-language long-tail and cannot earn links the way `/artiklid/` can.
+English-language long-tail and cannot earn links the way `/artiklid/` can. English
+autocomplete demand is real (`nis2 audit checklist`, `nis2 requirements for suppliers`,
+`dora register of information template`), so English spokes are the higher-value
+investment than the demand-free Estonian sector pages listed under 5.
 
 ## 8. trust, product, home
 

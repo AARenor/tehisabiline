@@ -1,7 +1,7 @@
 {
   "$comment": "Canonical entity map for tehisabiline.ee. Enforced by tools/entitymap.mjs (run standalone or via npm run test:seo). Pages may repeat these values and must reference the same @id; they must not introduce a contradicting Organization, Person, Service or Topic node. Asset URLs are compared without their ?v= cache-buster.",
   "version": 1,
-  "updated": "2026-10-25",
+  "updated": "2026-10-28",
   "origin": "https://tehisabiline.ee",
   "organization": {
     "@type": "Organization",
@@ -502,6 +502,7 @@
         "/en/nis2/fines/",
         "/en/nis2/incident-reporting/",
         "/en/nis2/audit/",
+        "/en/nis2/checklist/",
         "/en/cra/",
         "/en/dora/",
         "/en/dora/audit/",
@@ -593,6 +594,7 @@
     "/en/e-its/": "en",
     "/en/pentesting/": "en",
     "/en/security-audit/": "en",
-    "/en/iso-27001/": "en"
+    "/en/iso-27001/": "en",
+    "/en/nis2/checklist/": "en"
   }
 }

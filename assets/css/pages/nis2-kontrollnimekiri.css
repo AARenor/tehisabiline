@@ -155,3 +155,19 @@
         size: A4;
     }
 }
+
+/* English checklist: the measure cell carries the tick box, so the four text
+   columns need explicit shares instead of the 24% row-header default. */
+#nis2-checklist table.data { table-layout: fixed; }
+#nis2-checklist table.data tbody th { width: 30%; }
+#nis2-checklist table.data thead th:nth-child(2) { width: 26%; }
+#nis2-checklist table.data thead th:nth-child(3) { width: 26%; }
+#nis2-checklist table.data thead th:nth-child(4) { width: 18%; }
+
+@media (max-width: 900px) {
+    #nis2-checklist table.data,
+    #nis2-checklist table.data tbody th,
+    #nis2-checklist table.data thead th:nth-child(2),
+    #nis2-checklist table.data thead th:nth-child(3),
+    #nis2-checklist table.data thead th:nth-child(4) { width: auto; table-layout: auto; }
+}

@@ -170,6 +170,7 @@ const FOOTER = {
                     ["/en/nis2/incident-reporting/", "Incident reporting"],
                     ["/en/nis2/fines/", "Fines and liability"],
                     ["/en/nis2/audit/", "NIS2 audit"],
+                    ["/en/nis2/checklist/", "NIS2 compliance checklist"],
                 ],
             },
             {
