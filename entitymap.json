@@ -503,6 +503,7 @@
         "/en/nis2/incident-reporting/",
         "/en/nis2/audit/",
         "/en/nis2/checklist/",
+        "/en/nis2/suppliers/",
         "/en/cra/",
         "/en/dora/",
         "/en/dora/audit/",
@@ -595,6 +596,7 @@
     "/en/pentesting/": "en",
     "/en/security-audit/": "en",
     "/en/iso-27001/": "en",
-    "/en/nis2/checklist/": "en"
+    "/en/nis2/checklist/": "en",
+    "/en/nis2/suppliers/": "en"
   }
 }

@@ -284,6 +284,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/en/nis2/incident-reporting/
 - https://tehisabiline.ee/en/nis2/fines/
 - https://tehisabiline.ee/en/nis2/checklist/
+- https://tehisabiline.ee/en/nis2/suppliers/
 - https://tehisabiline.ee/en/nis2/registration/
 - https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/en/cra/

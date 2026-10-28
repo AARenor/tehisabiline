@@ -36,6 +36,7 @@ Status reviewed on 2026-10-27:
 - [NIS2 incident reporting in Estonia (EN)](https://tehisabiline.ee/en/nis2/incident-reporting/): 24-hour early warning, 72-hour notification, one-month report and common mistakes.
 - [NIS2 audit in Estonia (EN)](https://tehisabiline.ee/en/nis2/audit/): scope, ten duties, evidence and common gaps.
 - [NIS2 compliance checklist (EN)](https://tehisabiline.ee/en/nis2/checklist/): the ten Article 21(2) measures as an interactive checklist with the evidence, the owner and the common failure for each row.
+- [NIS2 supplier requirements (EN)](https://tehisabiline.ee/en/nis2/suppliers/): Article 21(2)(d) supply chain duties, fourteen due-diligence questions with the evidence to request, the contract clauses behind them and a free CSV questionnaire.
 - [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/): English guide to KüTS scope, RIA registration and change deadlines, incident-reporting deadlines, the ten duties, a fine calculator and audit evidence.
 - [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/): English guide to Cyber Resilience Act product scope, manufacturer duties, a reporting-deadline calculator and SBOM evidence.
 - [DORA audit (EN)](https://tehisabiline.ee/en/dora/audit/): scope, evidence, register/TLPT boundaries and common gaps.

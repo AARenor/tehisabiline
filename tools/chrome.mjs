@@ -171,6 +171,7 @@ const FOOTER = {
                     ["/en/nis2/fines/", "Fines and liability"],
                     ["/en/nis2/audit/", "NIS2 audit"],
                     ["/en/nis2/checklist/", "NIS2 compliance checklist"],
+                    ["/en/nis2/suppliers/", "NIS2 supplier requirements"],
                 ],
             },
             {

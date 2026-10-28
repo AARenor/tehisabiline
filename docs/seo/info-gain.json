@@ -147,6 +147,11 @@
       "asset": "Interactive ten-measure checklist with the evidence and owner for each measure (EN)",
       "type": "calculator",
       "proof": "/assets/js/nis2-checklist-en.js"
+    },
+    "/en/nis2/suppliers/": {
+      "asset": "NIS2 supplier questionnaire (CSV, 14 questions with evidence and risk columns)",
+      "type": "template",
+      "proof": "/assets/downloads/nis2-supplier-questionnaire.csv"
     }
   }
 }
