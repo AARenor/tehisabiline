@@ -1,8 +1,27 @@
 # Tehisabiline backlink playbook
 
-Status: prepared 2026-10-24. No outreach has been sent. Sending is owner-gated.
+Status: prepared 2026-10-24, baseline measured 2026-10-28. No outreach has been sent. Sending is owner-gated.
 
 Goal: 10–20 relevant referring domains in 90 days, with at least 5 links to commercial or resource pages. Quality, relevance and referral traffic matter more than a third-party authority score.
+
+## Measured baseline (2026-10-28)
+
+Sources that answered: Brave SERP, Sourcegraph, HN Algolia, GitHub API, Common Crawl index, Wayback CDX, F6S, RIK. No Moz/Bing/DataForSEO credentials exist on this host, so no authority metric and no referring-domain count from a link database is available — only what an index proves.
+
+| Exists today | Proof | Value |
+| --- | --- | --- |
+| `github.com/AARenor/tehisabiline` → homepage field plus 4 URLs in the README | repo API `homepage`, README fetched | **nofollow**, self-published |
+| `f6s.com/company/tehisabiline` with the anchor `tehisabiline.ee` | page fetched | profile citation |
+
+Everything else is a negative result, and the negatives are the finding:
+
+- `"tehisabiline.ee"` in Brave → "Too few matches were found"; `"Tehisabiline OÜ"` → only the site's own dependabot PRs. No unlinked mention exists to convert.
+- HN Algolia `tehisabiline` → `nbHits: 0`. Sourcegraph keyword → `matchCount: 0`. Common Crawl `CC-MAIN-2026-43` and `-34` domain query → no captures.
+- **Bing `site:tehisabiline.ee` returns nothing: the domain is not indexed by Bing at all**, so Bing/Copilot citations are structurally impossible until it is. IndexNow is submitted on every deploy for exactly this reason.
+- `ariregister.rik.ee` holds the company record with no website link; `inforegister.ee` holds only the email.
+- No ENISA, EU, Estonian public-body, university, conference or awesome-list citation found in any index that responded.
+
+Consequence for the plan: this is a cold-start link problem with no mentions to reclaim. The winning move is an artefact that a maintainer accepts as reference material, not a pitch to a portal that does not link out.
 
 ## Start with the baseline
 
@@ -43,23 +62,48 @@ Priority A = direct audience fit; B = broader reach; C = entity/citation profile
 | 11 | [Eesti Kaubandus-Tööstuskoda](https://www.koda.ee/) | business chamber | A | SME NIS2 applicability and checklist |
 | 12 | [Eesti Tööandjate Keskliit](https://www.tooandjad.ee/) | employers | B | board duties and NIS2 governance |
 | 13 | [Geenius](https://geenius.ee/) | tech media | A | expert comment / resource mention |
-| 14 | [ITuudised](https://www.ituudised.ee/) | IT media | A | expert article or news comment |
+| 14 | ~~ITuudised~~ | IT media | — | **dead target:** 301s to `aritehnoloogia.ee`; measured 2026-10-28, its NIS2 article links 54 external URLs and every one is Äripäev-owned |
 | 15 | [Äripäev](https://www.aripaev.ee/) | business media | A | NIS2 deadline / board brief |
 | 16 | [Delfi](https://www.delfi.ee/) | general media | B | expert quote on incidents or regulation |
 | 17 | [Postimees](https://www.postimees.ee/) | general media | B | expert quote on incidents or regulation |
-| 18 | [TalTech](https://taltech.ee/) | university | B | guest lecture / reading list |
-| 19 | [EBS](https://ebs.ee/) | business school | B | guest lecture / practical reading list |
-| 20 | [Tallinna Ülikool](https://www.tlu.ee/) | university | C | course reading list |
-| 21 | [Tartu Ülikool](https://ut.ee/) | university | C | course reading list |
+| 18 | TalTech | university | D | **dropped:** its cyber MSc page has 16 external links, all `taltech.ee` or social — no reading lists exist to be added to |
+| 19 | EBS | business school | D | dropped: no public external resource lists |
+| 20 | Tallinna Ülikool | university | D | dropped: no public external resource lists |
+| 21 | Tartu Ülikool | university | D | dropped: no public external resource lists |
 | 22 | [F6S](https://www.f6s.com/company/tehisabiline) | startup profile | C | keep profile complete; current citation |
 | 23 | [GitHub repository](https://github.com/AARenor/tehisabiline) | code/profile | C | README links to the relevant guides |
 | 24 | [LinkedIn](https://www.linkedin.com/in/arlearonreidma/) | professional profile | C | founder profile and company page |
 | 25 | [Crunchbase](https://www.crunchbase.com/) | company database | C | complete company profile |
-| 26 | [Eesti Infoturbeliit (EISA)](https://eisa.ee/) | cyber community | A | resource page / member news |
+| 26 | ~~EISA~~ | cyber community | — | **dead target:** `eisa.ee` 301s to `kindlustus.info/eisa/` (insurance brokers); MTÜ Eesti Infoturbe Assotsiatsioon (reg. 80441379) has no live site |
 | 27 | [RIA](https://www.ria.ee/) | regulator | C | do not pitch for links; cite official guidance |
 | 28 | [Finantsinspektsioon](https://www.fi.ee/) | regulator | C | do not pitch for links; cite official guidance |
 | 29 | [Eesti Ettevõtluskõrgkool Mainor](https://www.eek.ee/) | education | C | guest lecture / reading list |
 | 30 | [Eesti Disainikeskus](https://www.disainikeskus.ee/) | creative/business network | C | not a priority; only if a real collaboration exists |
+
+Verified-receptive targets measured 2026-10-28 (replaces guesswork above):
+
+| Target | Asset that earns it | Proof of receptivity |
+| --- | --- | --- |
+| `geeniusdigipro.delfi.ee/blogi/` | `/nis2/kontrollnimekiri/` + `nis2-auditi-toendite-mall.xlsx` | a published post there links three third-party Estonian cyber sites, including a competitor |
+| `github.com/awesomeSBOM/awesome-sbom` (602★) | `/sbom/` + `cra-sbom-mall.csv` | has Tools and Community Repositories sections; a template is in scope |
+| `github.com/cra-compliance-lab/awesome-cra-compliance` | `cra-sbom-mall.csv` | "PRs Welcome" badge and CONTRIBUTING.md; SBOM is the CRA weak spot |
+| `github.com/cyber-albsecop/Awesome-NIS2` | `nis2-kontrollnimekiri.pdf` | README: "We welcome contributions from anyone"; exact topic |
+| `github.com/bureado/awesome-software-supply-chain-security` (381★) | SBOM template | a compilation, not tools-only |
+| `koda.ee/et/liikmed/liikmelt-liikmemele-pakkumised/` | NIS2 checklist for SME clients | page type confirmed live; **requires chamber membership — a business cost, not a link purchase** |
+| `itl.ee/cybertech/` | `/pentestimine/naidisraport/` | member listing per service verified; **cluster membership fee** |
+| `financeestonia.eu/member/<slug>` | `dora-register-of-information-template.csv` | member directory confirmed; finance-sector fit is the gate |
+| `eisay.ee` | ISO 27001 / NIS2 evidence workbook | exact auditor audience; 15 KB site with no resource list, so one email, low odds |
+| `startupestonia.ee/organisations-ecosystem/` | NIS2 starter for founders | page invites support organisations to showcase services; expect a mention, not a guaranteed link |
+
+Media correction: Estonian tech media do not link out as a rule. Measured on `aritehnoloogia.ee`
+(the redirect target of the old ITuudised) and on Telia's Digitark E-ITS article: zero external
+editorial links. Treat an expert article as brand exposure, not as a link.
+
+Artifact gap worth closing first: a field-level CSV mapping SBOM columns to the prEN 40000-1-3
+requirement IDs (`PRE-7-RQ-01…07`, `PRE-8-RQ-02`) and to CycloneDX/SPDX equivalents. The
+CRA awesome-list paraphrases those IDs and tells readers to consult their national standards
+body; no public field mapping exists. That artefact converts three of the targets above from
+"please list my template" into "here is the missing reference".
 
 Notes:
 - Regulators are sources, not outreach targets. Link to their guidance in content; do not ask them for a vendor link.

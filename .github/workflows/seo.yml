@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - run: node tools/sync-faq.mjs --check
+      - run: node tools/stamp-modified.mjs --check
       - run: node tools/seo-check.mjs
 
   seo-loop:
