@@ -259,6 +259,36 @@ A scoped cybersecurity audit reviews identity and access, configuration, cloud, 
 Canonical page: https://tehisabiline.ee/en/iso-27001/
 ISO/IEC 27001 is a voluntary international standard for an information-security management system. Certification is issued by an accredited certification body after a two-stage audit and annual surveillance. It does not by itself prove NIS2, E-ITS or DORA compliance, but it can support the evidence base.
 
+## NIS2 scope assessment (EN)
+
+Canonical page: https://tehisabiline.ee/en/nis2/scope-assessment/
+Applies when an Annex I or Annex II type of activity meets the size test, or when Article 2(2) names the type regardless of size. Article 2 defines coverage: entities of an Annex I or Annex II type that qualify as medium-sized enterprises or exceed the medium-sized ceilings under the Annex to Recommendation 2003/361/EC and provide services in the Union. Article 3 splits covered entities into essential and important. Recommendation 2003/361/EC supplies the €10m/€50m/€43m ceilings and the 50/250 headcount bands. In Estonia the same test sits in the Cybersecurity Act (KüTS), in force since 1 January 2026. The page carries a browser-only eight-question assessment and a worksheet CSV for recording the decision.
+
+## NIS2 vs ISO 27001 (EN)
+
+Canonical page: https://tehisabiline.ee/en/nis2/vs-iso-27001/
+An ISO/IEC 27001 certificate cannot prove NIS2 compliance. Certification attests that an information security management system conforms to a voluntary standard; NIS2 is a directive, transposed in Estonia by KüTS and supervised by RIA, and carries duties no management system contains: registration with the competent authority, an early warning within 24 hours and a notification within 72 hours of becoming aware of a significant incident, and board accountability under Article 20. The page maps each Article 21(2) measure to ISO/IEC 27001:2022 Annex A controls, shows what an ISMS already supplies, and ships the mapping as a CSV.
+
+## ISO 27001 audit checklist (EN)
+
+Canonical page: https://tehisabiline.ee/en/iso-27001/audit-checklist/
+An internal audit under clause 9.2 of ISO/IEC 27001:2022 is a planned check of the organisation's own ISMS by people who are not responsible for what they check. It tests conformity with the standard and with the organisation's own rules, and whether the ISMS is effectively implemented and maintained. It is not a certification audit, not a penetration test, and not a policy-library review. The page carries clause 9.2 requirements, a six-step method with sampling defaults, the checklist by Annex A theme, gap scoring, and a 63-row CSV.
+
+## Cybersecurity audit checklist (EN)
+
+Canonical page: https://tehisabiline.ee/en/security-audit/checklist/
+A cybersecurity audit tests whether the controls an organisation claims to have exist, operate and leave evidence; a penetration test tests whether a specific weakness can be exploited now. The audit reads artefacts — board minutes, access reviews, restore logs, ticket trails, contract schedules — and samples them. The page carries a 74-row checklist across ten domains, sampling guidance, a severity model, and a fill-in report template.
+
+## Penetration test report (EN)
+
+Canonical page: https://tehisabiline.ee/en/pentest-report/
+A report is useful when a stranger can reproduce each finding and a decision-maker can act on it: scope and rules of engagement, method with a coverage matrix naming what was not tested, one block per finding (identifier, CVSS vector with its scoring version, CWE class, affected asset, evidence, reproduction steps, impact, remediation, retest status), a risk ordering that states its own rule, and an appendix indexing raw tool output. A CVSS base score describes a vulnerability's intrinsic characteristics, not business risk. The page ships a report template and a scope worksheet.
+
+## TLPT and TIBER-EU (EN)
+
+Canonical page: https://tehisabiline.ee/en/tlpt/
+TLPT is the advanced test DORA Article 26 requires: an intelligence-led, controlled attack on the live production systems behind a financial entity's critical or important functions, at least every three years for entities identified by the competent authority, with independent testers and an attestation route to the supervisor. TIBER-EU is the European framework for running it — developed by the ECB with the national central banks, published in May 2018, updated in 2024 to align with the DORA technical standards on TLPT. TIBER-EE is Estonia's national implementation; Finantsinspektsioon is the TLPT authority for the financial sector. A readiness checklist CSV is published with the page.
+
 ## Press and media kit (EN)
 
 Canonical page: https://tehisabiline.ee/en/press/

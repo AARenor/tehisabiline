@@ -1,6 +1,6 @@
-# Tehisabiline topical map — 2026-10-27
+# Tehisabiline topical map — 2026-10-28
 
-Status: canonical cluster map. Derived from `sitemap.xml` (58 URLs), `entitymap.json`
+Status: canonical cluster map. Derived from `sitemap.xml` (66 URLs), `entitymap.json`
 (10 clusters) and `docs/seo/keyword-map.md` (target terms). Keep in sync when a page is
 added or retired; `tools/entitymap.mjs` fails the build if the page set and cluster map
 disagree.
@@ -100,18 +100,32 @@ the weakest link in the internal graph; hub-to-article links are the cheapest fi
 
 ## 7. en — English
 
-Hub: `/en/`. 20 pages, 16 inbound for the hub.
+Hub: `/en/`. 26 pages, 22 inbound for the hub.
 
 | Spoke | Target term | Unique asset | Status |
 | --- | --- | --- | --- |
 | `/en/nis2/checklist/` | nis2 compliance checklist, nis2 requirements checklist | interactive ten-measure checklist (EN) | live 2026-10-28 |
 | `/en/nis2/suppliers/` | nis2 requirements for suppliers | supplier questionnaire CSV + contract clause map | live 2026-10-28 |
+| `/en/nis2/scope-assessment/` | nis2 scope assessment tool, nis2 scope test tool, nis2 in scope entities | browser-only scope test + worksheet CSV | live 2026-10-28 |
+| `/en/nis2/vs-iso-27001/` | nis2 vs iso 27001 mapping, nis2 compliance vs iso 27001 | Article 21(2) → Annex A mapping CSV | live 2026-10-28 |
+| `/en/iso-27001/audit-checklist/` | iso 27001 audit checklist, iso 27001 gap analysis | clause 9.2 walkthrough + 63-row checklist CSV | live 2026-10-28 |
+| `/en/security-audit/checklist/` | cyber security audit checklist, security audit report template | 74-row checklist CSV + report template TXT | live 2026-10-28 |
+| `/en/pentest-report/` | penetration testing report template, penetration testing scope template | report template TXT + scope worksheet CSV | live 2026-10-28 |
+| `/en/tlpt/` | tlpt vs tiber, dora tlpt, threat led penetration testing | readiness checklist CSV; hreflang pair with `/tlpt/` | live 2026-10-28 |
 
-Gaps: zero English editorial. The EN tree is guide-only, so it cannot rank for
-English-language long-tail and cannot earn links the way `/artiklid/` can. English
+Gaps: zero English editorial. The EN tree is guides and spokes, so it cannot rank for
+English-language long-tail and cannot earn links the way `/artiklid/` can — the six
+2026-10-28 spokes answered the template/tool half of the demand (see
+`docs/seo/demand-2026-10-28-en-spokes.md`), the narrative half is still open. English
 autocomplete demand is real (`nis2 audit checklist`, `nis2 requirements for suppliers`,
 `dora register of information template`), so English spokes are the higher-value
 investment than the demand-free Estonian sector pages listed under 5.
+
+Known EN gaps after the batch: no English editorial for CRA/AI Act/SBOM beyond the guide
+pages; `nis2 self assessment` is served by a section on `/en/nis2/checklist/` on purpose
+(a separate URL would cannibalise it); DORA audit has one URL (`/en/dora/audit/`) where the
+demand has five (`dora audit checklist`, `dora audit plan`, `dora audit rights`,
+`dora auditor`, `dora third party register`).
 
 ## 8. trust, product, home
 
