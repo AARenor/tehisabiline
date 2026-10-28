@@ -16,8 +16,8 @@
     <!-- step 2 -->
     <rect x="375" y="34" width="250" height="86" rx="12" fill="#ffffff" stroke="#c7d3e8" stroke-width="2"/>
     <text x="395" y="66" font-size="18" fill="#0a2f8f" font-weight="700">2. Suurus</text>
-    <text x="395" y="90" font-size="16" fill="#090c24">Vähemalt keskmine ettevõte:</text>
-    <text x="395" y="110" font-size="16" fill="#090c24">50 töötajat või 10 m€</text>
+    <text x="395" y="90" font-size="16" fill="#090c24">Vähemalt 50 töötajat JA</text>
+    <text x="395" y="110" font-size="16" fill="#090c24">käive või bilanss üle 10 m€</text>
     <!-- step 3 -->
     <rect x="710" y="34" width="250" height="86" rx="12" fill="#ffffff" stroke="#c7d3e8" stroke-width="2"/>
     <text x="730" y="66" font-size="18" fill="#934700" font-weight="700">3. Erinõue</text>
@@ -49,8 +49,9 @@
     <text x="900" y="228" text-anchor="middle" font-size="14" fill="#0a2f8f">II lisa või vahemik</text>
     <!-- footer -->
     <line x1="40" y1="268" x2="960" y2="268" stroke="#e1e8f4" stroke-width="2"/>
-    <text x="40" y="298" font-size="16" fill="#56617f">Suuruse test: soovitus 2003/361/EÜ — 50/250 töötajat, 10/50 m€ käive või 10/43 m€ bilanss.</text>
+    <text x="40" y="298" font-size="16" fill="#56617f">Eesti (KüTS § 3): vähemalt 50 töötajat JA kas käive või bilanss üle 10 m€.</text>
     <text x="40" y="326" font-size="16" fill="#56617f">Otsus tuleb dokumenteerida: kes kontrollis, mis vastused, mis kuupäev. Tööleht on lehe allalaaditav CSV.</text>
-    <text x="40" y="372" font-size="15" fill="#7088b0">Alus: direktiiv (EL) 2022/2555 artiklid 2 ja 3; Eestis KüTS § 3.</text>
+    <text x="40" y="370" font-size="15" fill="#7088b0">Alus: direktiiv (EL) 2022/2555 artiklid 2 ja 3; Eestis KüTS § 3.</text>
+    <text x="40" y="392" font-size="15" fill="#7088b0">Piirijuht: soovitus 2003/361/EÜ „ja/või“ loeb ka alla 50 töötaja, kui mõlemad näitajad &gt; 10 m€.</text>
   </g>
 </svg>
