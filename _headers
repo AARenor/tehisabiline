@@ -60,3 +60,25 @@
 /humans.txt
   X-Robots-Tag: noindex
   Content-Type: text/plain; charset=utf-8
+
+# Repo-only material: never a search result, even if a future deploy path serves it.
+/docs/*
+  X-Robots-Tag: noindex
+  Content-Type: text/plain; charset=utf-8
+/tools/*
+  X-Robots-Tag: noindex
+  Content-Type: text/plain; charset=utf-8
+/.github/*
+  X-Robots-Tag: noindex
+/AGENTS.md
+  X-Robots-Tag: noindex
+/PRODUCT.md
+  X-Robots-Tag: noindex
+/DESIGN.md
+  X-Robots-Tag: noindex
+/README.md
+  X-Robots-Tag: noindex
+/package.json
+  X-Robots-Tag: noindex
+/package-lock.json
+  X-Robots-Tag: noindex
