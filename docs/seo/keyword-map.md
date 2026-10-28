@@ -72,3 +72,47 @@ on all 58 sitemap URLs, and Google Autocomplete with `hl=et,gl=ee` / `hl=en`.
 
 Rule this confirms: build where autocomplete or impressions already exist, not where a
 framework map suggests a symmetrical gap.
+
+## 2026-10-28 — Google Autocomplete pass (ET + EN)
+
+Method: `tools/suggest.py` queries `https://suggestqueries.google.com/complete/search?client=chrome&hl=<lang>&gl=ee&q=<term>` in three stages — 83 seeds per language, the in-cluster suggestions become queries themselves, then an a–z pass over the busiest heads. 619 ET queries returned 3 975 suggestions, 620 EN queries returned 5 137; the raw payloads sit beside this file as `suggest-et-2026-10-28.json` and `suggest-en-2026-10-28.json`.
+
+Relevance filter: a suggestion is kept only if it contains the cluster head (`nis2`, `cra`, `dora`, `iso 27001`, `e-its`, `audit`, `pentest`, `ai act`, `kübertur…`) and none of the noise markers that the alphabet pass produces — company names (`… oü`, crabsec, cramo), other markets (`india`, `near me`, `salary`, `jobs`), training (`koolitus`, `kursus`) and unrelated homonyms (`dora tartu`, ai actress).
+
+Autocomplete ranks what people type, not how often; no volume figure is claimed for any row.
+
+| Cluster | ET kept / absent from the site | EN kept / absent |
+| --- | --- | --- |
+| ai | 217 / 213 | 176 / 176 |
+| audit | 193 / 181 | 260 / 249 |
+| cra | 96 / 95 | 136 / 133 |
+| dora | 240 / 224 | 136 / 123 |
+| eits | 6 / 2 | 2 / 2 |
+| iso | 345 / 333 | 511 / 500 |
+| juhtimine | 159 / 151 | 159 / 148 |
+| nis2 | 266 / 249 | 474 / 458 |
+| pentest | 50 / 48 | 45 / 43 |
+| vaikeettevote | 19 / 14 | 23 / 19 |
+
+### What this pass changed on the site
+
+| Query family (highest seed frequency) | Where it now appears | What was added |
+| --- | --- | --- |
+| `nis2 direktiiv eesti` (44), `nis2 direktiivi ülevõtmine` (34), `nis 2 eesti` (20) | `/nis2/` | `<h3>NIS2 direktiiv ja selle ülevõtmine Eestis</h3>` above the paragraph that already carried the transposition facts — heading only, no repeated prose |
+| `iso 27001 eesti keeles` (20), `iso 27001 pdf` (15), `iso 27001 requirements checklist` (15/16) | `/iso-27001/` | paragraph on why the standard is not free, the EVS catalogue check, and a link to the free `ISO 27001 nõuete kontrollnimekiri (CSV)` |
+| `nis2 article 3`, `nis2 directive important entities` | `/en/nis2/` | one paragraph naming Article 3 and the essential/important split |
+| `iso 27001 requirements checklist` | `/en/iso-27001/` | related-link title changed from “ISO 27001 audit checklist” to “ISO 27001 requirements checklist” |
+| `dora internal audit`, `dora internal audit requirements` (15+14) | `/en/dora/` | related-link entry “DORA internal audit requirements” → the existing audit spoke |
+| `riskianalüüsi tegemine`, `riskianalüüsi juhend`, `riskianalüüsi näide`, `riskianalüüsi koostamine` (juhtimine cluster: 159 kept, 151 absent) | `/artiklid/kuberriskide-register/` | new section “Riskianalüüsi juhend: kuidas stsenaariumid kirja saada” — threat sources, the scenario sentence, scoring discipline, one worked register row end to end — plus two FAQ entries; the existing article was extended rather than a second risk page published, because two Estonian URLs for `riskianalüüs` would compete with each other |
+
+### Rejected
+
+- `security auditor salary`, `… jobs near me`, `cybersecurity for auditors`, `isaca … certificate program` — employment and certification demand in other markets, not a service Tehisabiline sells.
+- `nis2 koolitus`, `e-its koolitus`, `küberturvalisus kursus` — training demand; no course product exists.
+- `crabsec`, `cramo kaabliotsija`, `dora tartu`, `dora stipendium`, `ai actress …`, `pentesterlab` — alphabet-pass noise or a different entity with the same name.
+- `cra sbom` was already served by `/en/sbom/` and the CRA SBOM section, so nothing was added; `pentest scope` was already served by the FAQ and the scope worksheet on `/en/pentest-report/`.
+
+### Not changed, and why
+
+- No new page was created for any family. Every accepted family already had a page whose history, internal links and entity map would have had to be duplicated; the missing surface was the wording, not the document.
+- CRA `coordinated vulnerability disclosure` was left out: the claim could not be verified against the fetched regulation text in this pass, and an unverified statutory duty is worse than a missing keyword.
