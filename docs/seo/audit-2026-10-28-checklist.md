@@ -42,3 +42,14 @@ measurement proved it and nothing was changed.
 - No Estonian sector pages and no standalone Estonian applicability URL: no autocomplete demand exists for them (re-checked 2026-10-28).
 - No outreach, no link purchases, no guest-post or directory submissions: owner-gated, and several "obvious" targets turned out to be dead or to never link out.
 - `/saidikaart/` title left at 37 characters on purpose: it is `noindex, follow`, so SERP width does not apply.
+
+## Correction: the NIS2 size test (2026-10-28)
+
+The scope tool computed the size floor as `staff50 || money10`. A 30-person company with a EUR 15m turnover and a EUR 5m balance sheet was therefore told it was in scope, which is wrong under both readings of the test. Fixed in `assets/js/nis2-scope-en.js`, the tool's questions, its no-JS fallback table, the worksheet CSV and the Estonian decision diagram.
+
+Primary sources:
+- Estonia, KüTS § 3(2)(8) and § 3(4)(8): "…majandusaasta jooksul 50 või rohkem töötajat **ja** kelle aastabilansimaht **või** aastakäive ületab 10 miljonit eurot" — https://www.riigiteataja.ee/akt/106102026002
+- KüTS § 3(3), essential entities: "250 või rohkem töötajat ja kelle aastabilansimaht ületab 43 miljonit eurot või aastakäive ületab 50 miljonit eurot".
+- Recommendation 2003/361/EC, Annex Article 2(1)-(2) — https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32003H0361 — Article 2(2) is written "and/or", and recital (4) speaks of "the possibility of either of these two criteria being exceeded", so that reading leaves the small band at 50+ staff **or** when both financial figures exceed EUR 10m.
+
+The two readings differ only on borderline figures, so the tool now asks turnover and balance sheet separately, decides on the statute (which RIA applies) and prints the divergence paragraph only when the answer would change. Verified in the browser on eight scenarios, including the counter-example above (now "Out of scope").
