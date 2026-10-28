@@ -326,6 +326,10 @@ table { border-collapse: collapse; }
 .prose pre { background: var(--navy); color: #dbe6ff; border-radius: var(--radius); padding: 1.1rem 1.25rem; overflow-x: auto; line-height: 1.6; }
 .prose pre code { background: none; border: 0; padding: 0; }
 .prose img { border-radius: var(--radius); }
+/* Diagram figures: a wide SVG must stay readable and never force sideways scroll. */
+.diagram { margin: var(--space-6, 1.5rem) 0; }
+.diagram img { width: 100%; height: auto; border-radius: var(--radius); background: var(--mist); }
+.diagram figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
 .founder-photo { display: flex; align-items: center; gap: 1rem; margin-inline: 0; }
 .founder-photo img { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex: none; }
 .founder-photo figcaption { color: var(--muted); }

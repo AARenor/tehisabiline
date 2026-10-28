@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-labelledby="t d">
+  <title id="t">NIS2 intsidendist teatamise kolm tähtaega</title>
+  <desc id="d">Ajajoon: teada saamisest 24 tunni jooksul esmane teade, 72 tunni jooksul intsidenditeade, üks kuu pärast intsidenditeadet lõpparuanne. Allikas KüTS § 8.</desc>
+  <rect width="1000" height="300" fill="#f5f8ff"/>
+  <g font-family="'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif">
+    <!-- baseline -->
+    <line x1="70" y1="170" x2="930" y2="170" stroke="#c7d3e8" stroke-width="3"/>
+    <polygon points="930,170 914,162 914,178" fill="#c7d3e8"/>
+    <!-- T0 -->
+    <circle cx="120" cy="170" r="11" fill="#090c24"/>
+    <text x="120" y="216" text-anchor="middle" font-size="19" fill="#090c24" font-weight="700">T0</text>
+    <text x="120" y="240" text-anchor="middle" font-size="17" fill="#56617f">teada saamine</text>
+    <!-- 24h -->
+    <circle cx="360" cy="170" r="11" fill="#0857f8"/>
+    <rect x="252" y="52" width="216" height="60" rx="10" fill="#dce7ff"/>
+    <text x="360" y="78" text-anchor="middle" font-size="21" fill="#0a2f8f" font-weight="700">24 tundi</text>
+    <text x="360" y="101" text-anchor="middle" font-size="17" fill="#0a2f8f">esmane teade</text>
+    <line x1="360" y1="112" x2="360" y2="159" stroke="#0857f8" stroke-width="2" stroke-dasharray="5 4"/>
+    <!-- 72h -->
+    <circle cx="600" cy="170" r="11" fill="#0857f8"/>
+    <rect x="492" y="52" width="216" height="60" rx="10" fill="#dce7ff"/>
+    <text x="600" y="78" text-anchor="middle" font-size="21" fill="#0a2f8f" font-weight="700">72 tundi</text>
+    <text x="600" y="101" text-anchor="middle" font-size="17" fill="#0a2f8f">intsidenditeade</text>
+    <line x1="600" y1="112" x2="600" y2="159" stroke="#0857f8" stroke-width="2" stroke-dasharray="5 4"/>
+    <!-- one month -->
+    <circle cx="850" cy="170" r="11" fill="#0b6a49"/>
+    <rect x="718" y="196" width="250" height="60" rx="10" fill="#e3f5ec"/>
+    <text x="843" y="222" text-anchor="middle" font-size="21" fill="#0b6a49" font-weight="700">1 kuu</text>
+    <text x="843" y="245" text-anchor="middle" font-size="17" fill="#0b6a49">lõpparuanne</text>
+    <line x1="850" y1="181" x2="850" y2="196" stroke="#0b6a49" stroke-width="2" stroke-dasharray="5 4"/>
+    <!-- bracket annotation -->
+    <text x="600" y="292" text-anchor="middle" font-size="16" fill="#56617f">kuu aega arvestatakse 72 tunni teate esitamisest, mitte intsidendist teada saamisest</text>
+  </g>
+</svg>
