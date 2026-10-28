@@ -1,6 +1,6 @@
 # Tehisabiline backlink playbook
 
-Status: prepared 2026-10-24, baseline measured 2026-10-28. No outreach has been sent. Sending is owner-gated.
+Status: prepared 2026-10-24, baseline measured 2026-10-28, ten target-specific drafts written 2026-10-28 (`outreach-drafts-2026-10-28.md`). No outreach has been sent. Sending is owner-gated.
 
 Goal: 10–20 relevant referring domains in 90 days, with at least 5 links to commercial or resource pages. Quality, relevance and referral traffic matter more than a third-party authority score.
 
@@ -84,12 +84,12 @@ Verified-receptive targets measured 2026-10-28 (replaces guesswork above):
 
 | Target | Asset that earns it | Proof of receptivity |
 | --- | --- | --- |
-| `geeniusdigipro.delfi.ee/blogi/` | `/nis2/kontrollnimekiri/` + `nis2-auditi-toendite-mall.xlsx` | a published post there links three third-party Estonian cyber sites, including a competitor |
+| `digipro.geenius.ee/blogi/` | `/nis2/kontrollnimekiri/` + `nis2-auditi-toendite-mall.xlsx` | a published post there links three third-party Estonian cyber sites, including a competitor. Corrected 2026-10-28: the old `geeniusdigipro.delfi.ee/blogi/` path returns 404 |
 | `github.com/awesomeSBOM/awesome-sbom` (602★) | `/sbom/` + `cra-sbom-mall.csv` | has Tools and Community Repositories sections; a template is in scope |
 | `github.com/cra-compliance-lab/awesome-cra-compliance` | `cra-sbom-mall.csv` | "PRs Welcome" badge and CONTRIBUTING.md; SBOM is the CRA weak spot |
 | `github.com/cyber-albsecop/Awesome-NIS2` | `nis2-kontrollnimekiri.pdf` | README: "We welcome contributions from anyone"; exact topic |
 | `github.com/bureado/awesome-software-supply-chain-security` (381★) | SBOM template | a compilation, not tools-only |
-| `koda.ee/et/liikmed/liikmelt-liikmemele-pakkumised/` | NIS2 checklist for SME clients | page type confirmed live; **requires chamber membership — a business cost, not a link purchase** |
+| `koda.ee/et/liikmed/liikmelt-liikmele-pakkumised` | NIS2 checklist for SME clients | page type confirmed live 2026-10-28 at this path (the `-liikmemele-` variant 404s); **requires chamber membership — a business cost, not a link purchase** |
 | `itl.ee/cybertech/` | `/pentestimine/naidisraport/` | member listing per service verified; **cluster membership fee** |
 | `financeestonia.eu/member/<slug>` | `dora-register-of-information-template.csv` | member directory confirmed; finance-sector fit is the gate |
 | `eisay.ee` | ISO 27001 / NIS2 evidence workbook | exact auditor audience; 15 KB site with no resource list, so one email, low odds |
