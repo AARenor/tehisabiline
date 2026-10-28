@@ -297,6 +297,12 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/en/pentesting/
 - https://tehisabiline.ee/en/security-audit/
 - https://tehisabiline.ee/en/iso-27001/
+- https://tehisabiline.ee/en/nis2/scope-assessment/
+- https://tehisabiline.ee/en/nis2/vs-iso-27001/
+- https://tehisabiline.ee/en/iso-27001/audit-checklist/
+- https://tehisabiline.ee/en/security-audit/checklist/
+- https://tehisabiline.ee/en/pentest-report/
+- https://tehisabiline.ee/en/tlpt/
 - https://tehisabiline.ee/en/press/
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/

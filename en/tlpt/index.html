@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TLPT and TIBER-EU: Threat-Led Penetration Testing</title>
+    <meta name="description" content="How threat-led penetration testing works under TIBER-EU and DORA: the phases, who must run it, what the report proves and how it differs from red teaming.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tehisabiline OÜ">
+    <meta name="theme-color" content="#0857f8">
+    <link rel="canonical" href="https://tehisabiline.ee/en/tlpt/">
+    <link rel="alternate" hreflang="et" href="https://tehisabiline.ee/tlpt/">
+    <link rel="alternate" hreflang="en" href="https://tehisabiline.ee/en/tlpt/">
+    <link rel="alternate" hreflang="x-default" href="https://tehisabiline.ee/tlpt/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="et_EE">
+    <meta property="og:site_name" content="Tehisabiline">
+    <meta property="og:title" content="TLPT and TIBER-EU: Threat-Led Penetration Testing">
+    <meta property="og:description" content="The TIBER-EU phases, who DORA Article 26 obliges, what the attestation proves and how TLPT differs from a pentest or red teaming.">
+    <meta property="og:url" content="https://tehisabiline.ee/en/tlpt/">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/og-en-tlpt.png?v=785222bf">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="DORA · Article 26 — TLPT and TIBER-EU: Threat-Led Penetration Testing">
+    <meta name="article:published_time" content="2026-10-28">
+    <meta name="article:modified_time" content="2026-10-28">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TLPT and TIBER-EU: Threat-Led Penetration Testing">
+    <meta name="twitter:description" content="The TIBER-EU phases, who DORA Article 26 obliges, what the attestation proves and how TLPT differs from a pentest or red teaming.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/og-en-tlpt.png?v=785222bf">
+    <meta name="twitter:image:alt" content="DORA · Article 26 — TLPT and TIBER-EU: Threat-Led Penetration Testing">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=703dfa31">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=1578d58e">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0453a9db">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tehisabiline.ee/#organization",
+      "name": "Tehisabiline OÜ",
+      "url": "https://tehisabiline.ee/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "https://github.com/AARenor/tehisabiline",
+        "https://www.f6s.com/company/tehisabiline"
+      ]
+    },
+    {
+      "@type": "Article",
+      "citation": [
+        "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng",
+        "https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng",
+        "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html",
+        "https://www.fi.ee/sites/default/files/2026-09/tiber-ee-national-implementation-guide-eng.pdf"
+      ],
+      "@id": "https://tehisabiline.ee/en/tlpt/#article",
+      "url": "https://tehisabiline.ee/en/tlpt/",
+      "headline": "TLPT and TIBER-EU: threat-led penetration testing under DORA",
+      "description": "The TIBER-EU phases, who DORA Article 26 obliges, what the attestation proves and how TLPT differs from a pentest or red teaming.",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://tehisabiline.ee/#founder",
+        "name": "Arle Aron Reidma",
+        "url": "https://tehisabiline.ee/meist/#autor"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Threat-led penetration testing under DORA Article 26 and the TIBER-EU framework"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/og-en-tlpt.png?v=785222bf",
+        "width": 1200,
+        "height": 630
+      },
+      "mainEntityOfPage": {
+        "@id": "https://tehisabiline.ee/en/tlpt/#webpage"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/en/tlpt/#webpage",
+      "url": "https://tehisabiline.ee/en/tlpt/",
+      "name": "TLPT and TIBER-EU: Threat-Led Penetration Testing",
+      "description": "How threat-led penetration testing works under TIBER-EU and DORA: the phases, who must run it, what the report proves and how it differs from red teaming.",
+      "datePublished": "2026-10-28",
+      "dateModified": "2026-10-28",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/en/tlpt/#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/en/tlpt/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "English home",
+          "item": "https://tehisabiline.ee/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DORA in Estonia",
+          "item": "https://tehisabiline.ee/en/dora/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TLPT and TIBER-EU",
+          "item": "https://tehisabiline.ee/en/tlpt/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/en/tlpt/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is TLPT and what is TIBER-EU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TLPT is threat-led penetration testing: a controlled, intelligence-led attack on the live production systems behind a financial entity’s critical or important functions, required by Article 26 of DORA from the entities the competent authority identifies. TIBER-EU is the European framework that describes how such a test is run, published by the ECB and updated in 2024 to align with the DORA regulatory technical standards. In Estonia the national implementation is TIBER-EE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is TIBER-EU the same thing as TLPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. TLPT is the obligation in Article 26 of DORA; TIBER-EU is one way to discharge it, and the framework the DORA technical standards were written against. A TIBER-EU test therefore satisfies TLPT, but TLPT is a legal requirement that exists whether or not a test uses the TIBER-EU label, and it is the national implementation document that tells you how the authority will supervise it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who has to run a DORA TLPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Financial entities other than those referred to in the first subparagraph of Article 16(1) and other than microenterprises, which the competent authority has identified under Article 26(8) and to which it has issued a supervisory decision. The authority weighs impact on the financial sector, systemic character and the ICT risk profile. In Estonia Finantsinspektsioon is the TLPT authority for the entities in its remit; for significant institutions under direct ECB supervision the ECB is."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is threat-led penetration testing different from red teaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Red teaming is the technique: testers acting as an adversary against objectives you agreed. TLPT wraps that technique in a regulated process — entity-specific threat intelligence first, a scope that covers critical or important functions and is validated by the authority, a blue team that is not told, a closure phase with a test summary report and a remediation plan, and an attestation from the TLPT authority. A red team exercise with none of that is legitimate testing, but it is not TLPT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often must a TLPT be repeated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At least every three years under Article 26(1), and the competent authority may ask for a shorter interval or allow a longer one when the risk profile and operational circumstances justify it. If you use internal testers, Article 26(8) also requires external testers every third test, and significant credit institutions may use external testers only."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the attestation prove DORA compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Article 26(7) requires the authority to attest that the test was performed in accordance with the requirements, so the result can be recognised by other competent authorities. That proves the process, not your security, and it says nothing about incident reporting, the register of information, contract clauses or the rest of the DORA duties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Tehisabiline run a TLPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We do not present ourselves as a TIBER-EE tester. We run ordinary penetration tests and cyber audits that prepare the ground — scope, asset and provider inventory, logging and detection gaps, remediation evidence — but they do not replace a mandatory TLPT, for which the tester must be selected against the framework and agreed with Finantsinspektsioon."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – home</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="/en/pentesting/">Audit / pentest</a>
+            <a href="/mudelid/">Cyber-AI API</a>
+            <a href="/en/nis2/">NIS2</a>
+            <a href="/meist/">About</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu" hidden>
+        <a href="/en/pentesting/">Audit / pentest</a>
+        <a href="/mudelid/">Cyber-AI API</a>
+        <a href="/en/nis2/">NIS2</a>
+        <a href="/meist/">About</a>
+        <a class="btn btn--primary" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+    <main id="main-content">
+  <header class="page-head"><div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/en/">English home</a></li><li><a href="/en/dora/">DORA in Estonia</a></li><li aria-current="page">TLPT and TIBER-EU</li></ol></nav>
+    <p class="eyebrow">DORA · Article 26</p>
+    <h1>TLPT and TIBER-EU: threat-led penetration testing under DORA</h1>
+    <p class="lead">Article 26 of DORA requires threat-led penetration testing from the financial entities that their competent authority identifies. TIBER-EU is the framework that describes the test and TIBER-EE is Estonia’s national implementation. This page covers the phases in order, who is actually obliged, what the report proves to a supervisor, a board and an auditor, and where the exercise differs from a penetration test or red teaming.</p>
+    <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-28">28 October 2026</time></p>
+  </div></header>
+  <section class="section"><div class="wrap article">
+    <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#short">Short answer</a></li><li><a href="#versus">TLPT, pentest or red teaming</a></li><li><a href="#phases">The TIBER-EU phases</a></li><li><a href="#who">Who is obliged</a></li><li><a href="#report">What the report proves</a></li><li><a href="#providers">Testers and independence</a></li><li><a href="#timeline">Timeline and budget</a></li><li><a href="#failures">Common failures</a></li><li><a href="#checklist">Readiness checklist</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+    <article class="prose">
+      <section class="short-answer" id="short"><h2>Short answer</h2><p><strong>TLPT (threat-led penetration testing)</strong> is the advanced test Article 26 of DORA requires: an intelligence-led, controlled attack on the live production systems behind a financial entity’s critical or important functions. <strong>TIBER-EU</strong> is the European framework that describes how such a test is run — developed by the ECB with the national central banks, published in May 2018 and updated in 2024 to align with the DORA technical standards on TLPT. <strong>TIBER-EE</strong> is Estonia’s national implementation, an advisory guide from Finantsinspektsioon in force since 15 September 2026.</p><p>You do not put yourself in scope: Article 26(1) applies to entities the competent authority has identified under Article 26(8) by supervisory decision, at least every three years. The output is not a pass mark but a test summary report, a remediation plan and an attestation that the test followed the framework.</p></section>
+
+      <section id="versus"><h2>TLPT vs penetration test vs red teaming</h2><p>The three terms get used as synonyms in procurement documents and produce very different artefacts. What matters legally is who fixes the scope, who knows the test is running, and what the deliverable proves.</p>
+        <div class="table-wrap table-wrap--stack"><table class="data"><caption>Same technical skills, different process and different deliverable</caption><thead><tr><th scope="col">Question</th><th scope="col">TLPT under DORA</th><th scope="col">Penetration test</th><th scope="col">Red teaming</th></tr></thead><tbody>
+          <tr><th scope="row">Starting point</th><td data-label="TLPT">Entity-specific threat intelligence and the critical or important functions</td><td data-label="Pentest">An agreed list of technical targets</td><td data-label="Red teaming">An adversary objective, with or without intelligence</td></tr>
+          <tr><th scope="row">Who fixes the scope</th><td data-label="TLPT">You propose it; the TLPT authority validates it (Article 26(2))</td><td data-label="Pentest">You and the tester</td><td data-label="Red teaming">You and the tester</td></tr>
+          <tr><th scope="row">Environment</th><td data-label="TLPT">Live production systems supporting those functions</td><td data-label="Pentest">Often a test copy; production only by agreement</td><td data-label="Red teaming">Production-like, agreed in advance</td></tr>
+          <tr><th scope="row">Who knows</th><td data-label="TLPT">The control team only; the blue team is not told</td><td data-label="Pentest">Your team does</td><td data-label="Red teaming">A small circle, with no external validation</td></tr>
+          <tr><th scope="row">Regulated process</th><td data-label="TLPT">Article 26 and 27 DORA, delegated regulation 2025/1190, TIBER-EU and the national guide</td><td data-label="Pentest">None by itself</td><td data-label="Red teaming">None by itself</td></tr>
+          <tr><th scope="row">Duration</th><td data-label="TLPT">Preparation up to six months; at least twelve weeks of active testing</td><td data-label="Pentest">Days to a few weeks</td><td data-label="Red teaming">Weeks</td></tr>
+          <tr><th scope="row">Deliverable</th><td data-label="TLPT">Test summary report, remediation plan, authority attestation</td><td data-label="Pentest">Report and fix plan</td><td data-label="Red teaming">Report</td></tr>
+          <tr><th scope="row">What it proves</th><td data-label="TLPT">Whether detection, escalation and response held against a realistic adversary, in a form another supervisor recognises</td><td data-label="Pentest">Whether a named set of weaknesses can be exploited</td><td data-label="Red teaming">Whether a goal can be reached by an adversary</td></tr>
+        </tbody></table></div>
+        <p>Red teaming is the technique; TLPT is the regulated process around it. A red-team exercise without threat intelligence, a validated scope and closure artefacts is legitimate testing, but not TLPT. A penetration test is useful preparation and cannot substitute for it.</p>
+      </section>
+
+      <section id="phases"><h2>The TIBER-EU phases step by step</h2><p>A TIBER-EU test runs as a preparation phase, a testing phase with two components and a closure phase, each with named artefacts the TLPT authority reviews — which is what makes mutual recognition possible. The Estonian guide adds governance, not a second methodology.</p>
+        <ol>
+          <li><strong>Preparation.</strong> Starts with a written notification from the authority to your designated contact point and covers four steps: notification, initiation, scoping and procurement. Artefacts: initiation documents, an initial risk assessment with safeguards that limit impact on production, a scope specification document naming the critical or important functions with the systems and ICT providers behind them, and the procured threat intelligence provider and red team tester.</li>
+          <li><strong>Testing: threat intelligence.</strong> The provider collects target intelligence (attack surface, exposures) and threat intelligence (relevant actors, probable scenarios) and turns it into a targeted threat intelligence report. You agree the scenarios with the test manager at a scenario selection meeting; the report is approved before any attack begins.</li>
+          <li><strong>Testing: red team testing.</strong> The red team writes a test plan against the approved scenarios, then tests actively towards the flags in that plan, imitating a real adversary. Progress goes to the control team and test manager in weekly updates, and every action is logged for the replay.</li>
+          <li><strong>Closure.</strong> The red team report and the blue team report are produced — the second by people who did not know the test was running — then a replay or purple-teaming exercise compares what was and was not detected, followed by the test summary report, the remediation plan, 360-degree feedback and the attestation.</li>
+        </ol>
+        <p>Coordination sits with TCT-EE, the TLPT cyber team inside Finantsinspektsioon’s financial sector IT supervision department, with test managers assigned per test; FI validates key artefacts and issues the attestation. A Generic Threat Landscape may be published as a supporting input that does not replace test-specific intelligence, and information is handled under an agreed classification such as the Traffic Light Protocol.</p>
+      </section>
+
+      <section id="who"><h2>Who is obliged, and on what reasoning</h2><p>Article 26(1) applies to financial entities other than those referred to in the first subparagraph of Article 16(1) and other than microenterprises, and only once the competent authority has identified them under Article 26(8). The authority applies the criteria of Article 4(2) and weighs three factors: how far your services affect the financial sector, whether there are financial stability or systemic concerns at national or Union level, and your ICT risk profile or maturity. The frequency is at least every three years, and the authority may shorten or lengthen that interval when the risk profile and circumstances justify it.</p>
+        <h3>Estonia: who supervises what</h3>
+        <ul>
+          <li><strong>Finantsinspektsioon (FI)</strong> acts as the TLPT authority under Article 26(9) for the financial entities in its TLPT remit, and issues the attestation for those tests.</li>
+          <li><strong>The ECB</strong> is the TLPT authority for mandatory TLPTs of significant institutions under its direct supervision, applies its TIBER-EU SSM guide to them, and always issues the attestation.</li>
+          <li><strong>Other Estonian financial entities</strong> may run a TIBER-EE test voluntarily, subject to prior agreement with FI. Other sectors may apply TIBER-EU on their own initiative, outside the Estonian guide and FI’s TLPT governance.</li>
+        </ul>
+        <h3>The significant-institution difference</h3>
+        <p>For credit institutions classified as significant under Article 6(4) of Regulation (EU) No 1024/2013, Article 26(8) removes the internal-tester option: external testers only, meeting points (a) to (e) of Article 27(1). Every other identified entity may use internal testers if the authority approves the use, verifies dedicated resources and no conflicts of interest, and the threat intelligence provider is external. External testers are also required every third test — which is why a bank’s programme looks nothing like an insurer’s.</p>
+        <p>TLPT is a DORA instrument. NIS2 creates no TIBER-EU duty; it asks for evidence that the measures you claim actually work. If you are both a NIS2 entity and a financial entity, keep the two evidence sets separate — the <a href="/en/nis2/audit/">NIS2 audit</a> page covers the second one.</p>
+      </section>
+
+      <section id="report"><h2>What the report proves, and to whom</h2><ul>
+          <li><strong>To the supervisor.</strong> Article 26(6) requires that, once reports and remediation plans are agreed, you and where applicable the external testers give the designated authority a summary of the findings, the remediation plans and the documentation showing the test met the requirements. Article 26(7) obliges the authority to attest that it did, so other competent authorities recognise it, and obliges you to notify your own competent authority of the attestation, the findings summary and the remediation plans.</li>
+          <li><strong>To the board.</strong> The attestation says the process was followed; the test summary report says which detection, escalation and response steps held — the first honest measure of whether monitoring spend bought anything. Under the comply-or-explain principle a deviation does not automatically invalidate a test, but it can affect whether the attestation is issued, so record the reasons.</li>
+          <li><strong>To the auditor.</strong> Article 6(5) requires internal audit to review the ICT risk management framework, and a TLPT report is an artefact it can sample next to the register of information and the contracts. It is evidence about a point in time, not the current state.</li>
+        </ul>
+        <p>What it does not prove: DORA compliance, security outside the agreed scope, or that findings were fixed. It is not an ISO/IEC 27001 certification and no guarantee of detection next year. The wider evidence picture is on the <a href="/en/dora/">DORA in Estonia</a> page, the review route on <a href="/en/dora/audit/">DORA audit</a>.</p>
+      </section>
+
+      <section id="providers"><h2>Testers and independence requirements</h2><p>Article 27(1) allows only testers that meet five conditions: highest suitability and reputability; demonstrated expertise in threat intelligence, penetration testing and red team testing; certification by an accreditation body in a Member State or adherence to formal codes of conduct or ethical frameworks; independent assurance or an audit report on how they manage the risks of the test, including protection of your confidential information; and full professional indemnity insurance, including against misconduct and negligence. Article 27(3) adds that the contract must require sound management of the results, so generating, storing, aggregating, reporting or destroying test data creates no new risk for you.</p><p>The TIBER-EU procurement guidance exists because “we have done red teaming” is not a qualification. Ask in writing for threat intelligence capability, red team history in production, independence from the systems under test, an insurance certificate and a record of working with a TIBER cyber team. Where the provider is also your managed security service provider or system integrator, document the conflict and how it is managed.</p><p>We do not present ourselves as a TIBER-EE tester. What we do is prepare the ground: <a href="/en/pentesting/">penetration testing</a> that clears ordinary weaknesses, an audit of logging and detection coverage so the blue team report measures something real, and an inventory of critical functions and ICT providers the scope document can be built on. The mandatory test needs a tester selected against the framework and agreed with Finantsinspektsioon.</p>
+      </section>
+
+      <section id="timeline"><h2>Timeline and budget reality</h2><p>TLPT is not a four-week booking. The framework gives indicative durations; most entities underestimate them, because nothing in the red team phase starts before the threat intelligence report is approved.</p>
+        <div class="table-wrap table-wrap--stack"><table class="data"><caption>Indicative durations in the TIBER-EU framework</caption><thead><tr><th scope="col">Phase</th><th scope="col">Framework timing</th><th scope="col">What it means for planning</th></tr></thead><tbody>
+          <tr><th scope="row">Preparation</th><td data-label="Framework timing">No longer than six months from the written notification</td><td data-label="Planning">Budget, provider procurement and legal review land here; start before the notification where you can</td></tr>
+          <tr><th scope="row">Threat intelligence</th><td data-label="Framework timing">Indicative 4–6 weeks</td><td data-label="Planning">Your own knowledge of the estate is what makes this phase fast</td></tr>
+          <tr><th scope="row">Red team test plan</th><td data-label="Framework timing">Indicative 2–3 weeks</td><td data-label="Planning">Approval by the control team and the test manager gates the start</td></tr>
+          <tr><th scope="row">Active testing</th><td data-label="Framework timing">Minimum 12 weeks</td><td data-label="Planning">Fixed floor, not a target; weekly updates run throughout</td></tr>
+          <tr><th scope="row">Closure reports</th><td data-label="Framework timing">Red team report 4 weeks, blue team report 6 weeks</td><td data-label="Planning">The blue team report is written after the fact and needs its own capacity</td></tr>
+          <tr><th scope="row">Reporting and feedback</th><td data-label="Framework timing">360-degree feedback indicatively 8 weeks</td><td data-label="Planning">Overlaps with remediation planning; attestation follows</td></tr>
+        </tbody></table></div>
+        <p>Two costs sit outside the table. Remediation: findings you cannot fix within a quarter become a second project with its own budget. Internal time: the control team, the blue team report and the replay exercise are your people. There is no public price list, because the drivers are critical functions in scope, threat intelligence depth, production risk, third parties and remediation volume. Ask every proposal for the scope boundary, the named team, the cadence, who owns the artefacts the authority reviews and what is excluded.</p>
+      </section>
+
+      <section id="failures"><h2>Common failure modes</h2><ul>
+          <li><strong>Booked as a large penetration test.</strong> No intelligence phase, no validated scope, no replay: excellent testing, no attestation.</li>
+          <li><strong>Scope written by the tester.</strong> Article 26(2) makes the choice of critical or important functions your task, and the authority validates the result; a tool-led target list does not satisfy it.</li>
+          <li><strong>Outsourced systems left out.</strong> The article explicitly includes functions contracted to ICT third-party providers; their participation is arranged, not assumed.</li>
+          <li><strong>A blue team that was told.</strong> Once the SOC knows, the detection measurement is gone and the blue team report is fiction.</li>
+          <li><strong>Procurement at the last minute.</strong> Providers must be in place before the testing phase opens, and due diligence against Article 27 takes longer than a purchase order.</li>
+          <li><strong>No stop conditions.</strong> Article 26(5) requires controls that limit impact on data, assets and critical functions; stop conditions and a rollback plan belong in the initiation pack.</li>
+          <li><strong>Logging switched off.</strong> Without retained logs there is no replay, no blue team report and nothing to show the authority.</li>
+          <li><strong>Remediation without owners or dates.</strong> The attestation arrives, the findings age, and the next test measures the same gaps.</li>
+        </ul>
+      </section>
+
+      <section id="checklist"><h2>Readiness checklist</h2>
+        <p><a class="btn btn--primary" href="/assets/downloads/tlpt-readiness-checklist.csv" download>Download the TLPT readiness checklist (CSV)</a></p>
+        <p>The file has 22 rows in five columns — phase, requirement, evidence, owner, status — covering the four TIBER-EU phases plus the continuing duties in Articles 26 and 27: the three-year cycle, external testers every third test, the attestation and notification step, and board reporting. Fill the owner column first; a row with no owner is a row nobody will evidence.</p>
+        <p>Three rows decide whether the programme is calm or chaotic: the designated contact point with real authority, the scope document listing every critical function including outsourced ones, and the procurement file mapping providers to Article 27(1)(a) to (e). Start there.</p>
+      </section>
+
+      <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
+        <details><summary><h3>What is TLPT and what is TIBER-EU?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">TLPT is threat-led penetration testing: a controlled, intelligence-led attack on the live production systems behind a financial entity’s critical or important functions, required by Article 26 of DORA from the entities the competent authority identifies. TIBER-EU is the European framework that describes how such a test is run, published by the ECB and updated in 2024 to align with the DORA regulatory technical standards. In Estonia the national implementation is TIBER-EE.</p></details>
+        <details><summary><h3>Is TIBER-EU the same thing as TLPT?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. TLPT is the obligation in Article 26 of DORA; TIBER-EU is one way to discharge it, and the framework the DORA technical standards were written against. A TIBER-EU test therefore satisfies TLPT, but TLPT is a legal requirement that exists whether or not a test uses the TIBER-EU label, and it is the national implementation document that tells you how the authority will supervise it.</p></details>
+        <details><summary><h3>Who has to run a DORA TLPT?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Financial entities other than those referred to in the first subparagraph of Article 16(1) and other than microenterprises, which the competent authority has identified under Article 26(8) and to which it has issued a supervisory decision. The authority weighs impact on the financial sector, systemic character and the ICT risk profile. In Estonia Finantsinspektsioon is the TLPT authority for the entities in its remit; for significant institutions under direct ECB supervision the ECB is.</p></details>
+        <details><summary><h3>How is threat-led penetration testing different from red teaming?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Red teaming is the technique: testers acting as an adversary against objectives you agreed. TLPT wraps that technique in a regulated process — entity-specific threat intelligence first, a scope that covers critical or important functions and is validated by the authority, a blue team that is not told, a closure phase with a test summary report and a remediation plan, and an attestation from the TLPT authority. A red team exercise with none of that is legitimate testing, but it is not TLPT.</p></details>
+        <details><summary><h3>How often must a TLPT be repeated?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">At least every three years under Article 26(1), and the competent authority may ask for a shorter interval or allow a longer one when the risk profile and operational circumstances justify it. If you use internal testers, Article 26(8) also requires external testers every third test, and significant credit institutions may use external testers only.</p></details>
+        <details><summary><h3>Does the attestation prove DORA compliance?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. Article 26(7) requires the authority to attest that the test was performed in accordance with the requirements, so the result can be recognised by other competent authorities. That proves the process, not your security, and it says nothing about incident reporting, the register of information, contract clauses or the rest of the DORA duties.</p></details>
+        <details><summary><h3>Can Tehisabiline run a TLPT?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">We do not present ourselves as a TIBER-EE tester. We run ordinary penetration tests and cyber audits that prepare the ground — scope, asset and provider inventory, logging and detection gaps, remediation evidence — but they do not replace a mandatory TLPT, for which the tester must be selected against the framework and agreed with Finantsinspektsioon.</p></details>
+      </div></section>
+
+      <section id="sources"><h2>Sources</h2><ul>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng" rel="noopener">Regulation (EU) 2022/2554 (DORA)</a>, EUR-Lex — Articles 6, 16 and 26 to 27.</li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng" rel="noopener">Commission Delegated Regulation (EU) 2025/1190</a>, the regulatory technical standards on TLPT.</li>
+          <li><a href="https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html" rel="noopener">ECB: the TIBER-EU framework</a> — phases, teams, guidance and templates.</li>
+          <li><a href="https://www.fi.ee/sites/default/files/2026-09/tiber-ee-national-implementation-guide-eng.pdf" rel="noopener">Finantsinspektsioon: TIBER-EE National Implementation Document</a> (in force 15 September 2026).</li>
+        </ul><p>This page explains the framework; it is not legal advice. The scope of the obligation and the requirements for a specific test are confirmed by your TLPT authority.</p></section>
+
+      <section class="related" aria-labelledby="related"><h2 id="related">Related guides</h2><ul class="related__list">
+        <li><a href="/en/dora/"><span class="related__title">DORA in Estonia</span><span class="related__desc">Register, contracts, incidents and the testing layer.</span></a></li>
+        <li><a href="/en/dora/audit/"><span class="related__title">DORA audit</span><span class="related__desc">Scope, evidence and the report an auditor expects.</span></a></li>
+        <li><a href="/en/pentesting/"><span class="related__title">Penetration testing</span><span class="related__desc">Scope, authorisation, report and retest.</span></a></li>
+        <li><a href="/en/nis2/audit/"><span class="related__title">NIS2 audit</span><span class="related__desc">Evidence that the measures operate, for the other regime.</span></a></li>
+        <li><a href="/tlpt/" hreflang="et" lang="et"><span class="related__title">TLPT ja TIBER-EE (Estonian)</span><span class="related__desc">The Estonian version of this guide.</span></a></li>
+      </ul></section>
+    </article>
+  </div></section>
+  <section class="band"><div class="wrap band__inner"><h2>Preparing for a test you cannot book as a pentest?</h2><p>We test and audit the layers a TLPT will land on: critical function inventory, logging and detection coverage, and the weaknesses that would otherwise hide the signal. The mandatory test itself is agreed with Finantsinspektsioon.</p><a class="btn btn--white" href="/en/#contact">Request a scoping call</a></div></section>
+</main>
+    <!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div class="site-footer__about">
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – home</span></a>
+                <p>Penetration testing and cyber audits under written authorization, with human review. API for security tooling.</p>
+                <p class="site-footer__title">Contact</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Reg. no. 17607255 · Viimsi Parish, Harju County</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Founder on LinkedIn</a></li>
+                    <li><a href="/en/#contact">Free assessment</a></li>
+                </ul>
+            </div>
+            <nav aria-label="Service links">
+                <p class="site-footer__title">Services</p>
+                <ul>
+                    <li><a href="/en/pentesting/">Penetration testing</a></li>
+                    <li><a href="/en/pentest-report/">Pentest report template</a></li>
+                    <li><a href="/en/security-audit/">Cybersecurity audit</a></li>
+                    <li><a href="/en/security-audit/checklist/">Cybersecurity audit checklist</a></li>
+                    <li><a href="/mudelid/" hreflang="et" lang="et">Cyber-AI API (Estonian)</a></li>
+                    <li><a href="/kasutusjuhud/" hreflang="et" lang="et">Cyber-AI use cases (Estonian)</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 links">
+                <p class="site-footer__title">NIS2 in Estonia</p>
+                <ul>
+                    <li><a href="/en/nis2/">NIS2 in Estonia: overview</a></li>
+                    <li><a href="/en/nis2/registration/">Registration with RIA</a></li>
+                    <li><a href="/en/nis2/incident-reporting/">Incident reporting</a></li>
+                    <li><a href="/en/nis2/fines/">Fines and liability</a></li>
+                    <li><a href="/en/nis2/audit/">NIS2 audit</a></li>
+                    <li><a href="/en/nis2/checklist/">NIS2 compliance checklist</a></li>
+                    <li><a href="/en/nis2/scope-assessment/">NIS2 scope assessment</a></li>
+                    <li><a href="/en/nis2/vs-iso-27001/">NIS2 vs ISO 27001</a></li>
+                    <li><a href="/en/nis2/suppliers/">NIS2 supplier requirements</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulation links">
+                <p class="site-footer__title">Regulations</p>
+                <ul>
+                    <li><a href="/en/regulations/">Estonia regulations overview</a></li>
+                    <li><a href="/en/dora/">DORA in Estonia</a></li>
+                    <li><a href="/en/dora/register/">DORA register of information</a></li>
+                    <li><a href="/en/dora/audit/">DORA audit</a></li>
+                    <li><a href="/en/cra/">CRA in Estonia</a></li>
+                    <li><a href="/en/sbom/">SBOM for the CRA</a></li>
+                    <li><a href="/en/ai-act/">AI Act in Estonia</a></li>
+                    <li><a href="/en/e-its/">E-ITS in Estonia</a></li>
+                    <li><a href="/en/iso-27001/">ISO 27001 in Estonia</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Company links">
+                <p class="site-footer__title">Company</p>
+                <ul>
+                    <li><a href="/en/">Tehisabiline in English</a></li>
+                    <li><a href="/en/press/">Press kit</a></li>
+                    <li><a href="/meist/" hreflang="et" lang="et">About (Estonian)</a></li>
+                    <li><a href="/privaatsus/" hreflang="et" lang="et">Privacy (Estonian)</a></li>
+                    <li><a href="/llms.txt">For AI systems</a></li>
+                    <li><a href="/" hreflang="et" lang="et">Eesti keeles</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. All rights reserved.</span>
+            <span>Last materially updated <time datetime="2026-10-28">28 October 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+    <!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->
+</body>
+</html>

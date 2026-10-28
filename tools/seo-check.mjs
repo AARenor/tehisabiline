@@ -257,6 +257,54 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/nis2/scope-assessment/index.html",
+        canonical: `${origin}/en/nis2/scope-assessment/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/nis2/vs-iso-27001/index.html",
+        canonical: `${origin}/en/nis2/vs-iso-27001/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/iso-27001/audit-checklist/index.html",
+        canonical: `${origin}/en/iso-27001/audit-checklist/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/security-audit/checklist/index.html",
+        canonical: `${origin}/en/security-audit/checklist/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/pentest-report/index.html",
+        canonical: `${origin}/en/pentest-report/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/tlpt/index.html",
+        canonical: `${origin}/en/tlpt/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
         file: "en/press/index.html",
         canonical: `${origin}/en/press/`,
         schemaTypes: ["Organization", "Person", "WebSite", "AboutPage", "BreadcrumbList"],

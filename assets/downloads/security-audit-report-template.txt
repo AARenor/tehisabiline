@@ -1,0 +1,195 @@
+CYBERSECURITY AUDIT REPORT — TEMPLATE
+=====================================
+Fill in every field marked [ ]. Delete nothing that is annotated; delete the
+annotations only after the field is filled. Plain text on purpose: it opens in
+any editor, diffs in version control and survives being pasted into a ticket.
+
+Companion file: cybersecurity-audit-checklist.csv (the working checklist this
+report is generated from). Template version 1.0, 2026-10-28.
+Publisher: Tehisabiline OÜ, https://tehisabiline.ee/
+
+
+1. COVER
+--------
+Report title ............ [Cybersecurity audit — <organisation> — <period>]
+Report reference ........ [YYYY-NN]
+Report version .......... [1.0]        Status: [draft / for review / final]
+Classification .......... [internal / confidential / restricted]
+Client legal name ....... [ ]
+Registry code ........... [ ]
+Audit period ............ [from YYYY-MM-DD to YYYY-MM-DD]
+Evidence cut-off ........ [YYYY-MM-DD]  (nothing after this date is assessed)
+Fieldwork dates ......... [ ]
+Report date ............. [YYYY-MM-DD]
+Prepared by ............. [name, role, organisation]
+Reviewed by ............. [name, role]            (independence statement below)
+Client contact .......... [name, role, email]
+Distribution list ....... [board / CISO / supervisory body / auditor]
+
+Independence and limits of the engagement
+[State who commissioned the audit, who could change the scope, and whether the
+auditor implemented any control being assessed. If the auditor also remediates,
+say so here.]
+
+
+2. SCOPE AND BOUNDARIES
+-----------------------
+2.1 In scope
+| Ref | System / process / site | Owner | Why it is in scope |
+|  S1 |                         |       |                    |
+|  S2 |                         |       |                    |
+
+2.2 Out of scope and why
+| Ref | Excluded item | Reason (timing, no access, third party) | Residual risk owner |
+|  X1 |               |                                         |                     |
+
+2.3 Boundaries that change the conclusion
+- Organisational boundary: [entities, subcontractors, group services]
+- Technical boundary: [network segments, cloud tenants, on-premise estate]
+- Third-party boundary: [hosting, managed service providers, SaaS]
+- Evidence boundary: [systems with logs, systems without]
+
+2.4 Criteria used
+[Name every standard, law or internal policy a finding can be judged against.
+Examples: ISO/IEC 27001:2022 clauses and controls; NIST CSF 2.0 functions;
+NIS2 Article 21(2); E-ITS baseline (RIA); internal policy document numbers and
+versions. A finding with no criterion is an opinion.]
+
+
+3. METHOD
+---------
+3.1 Approach
+[One paragraph: interviews, document review, configuration inspection, and
+testing performed. Say what was tested by execution and what was only read.]
+
+3.2 Assessment methods per area
+| Area | Examine | Interview | Test | Depth | Coverage |
+|      |         |           |      |       |          |
+[Depth and coverage wording follows NIST SP 800-53A Rev. 5 — state whether you
+looked at one instance or all of them, representative or exhaustive.]
+
+3.3 Sampling
+| Population | Size | Sampled | How selected | Exceptions |
+|            |      |         |              |            |
+
+3.4 Evidence register
+| ID  | Request ref | Requested from | Requested on | Received on | File name / hash | Custodian |
+| E01 |             |                |              |             |                  |           |
+
+3.5 Persons interviewed
+| Name | Role | Date | Duration | Topic |
+
+
+4. FINDINGS
+-----------
+Repeat this block once per finding, ordered by severity, highest first.
+
+FINDING [F-01]
+  Title ............. [Short, factual, no adjectives]
+  Severity .......... [Critical / High / Medium / Low]     Score (if CVSS): [x.x]
+  Criteria .......... [Standard, clause or policy that is not met]
+  Condition ......... [What was observed, in one or two sentences]
+  Cause ............. [Why it exists: design gap, no owner, no process, drift]
+  Effect ............ [What happens if it is not fixed, in business terms]
+  Affected assets ... [Hostnames, systems, sites, counts]
+  Evidence .......... [E-ref, file name, date, page or line]
+  Reproduced ........ [yes/no; date and method if yes]
+  Recommendation .... [Specific action, target state, completion test]
+  Owner ............. [Named role]
+  Due date .......... [YYYY-MM-DD]
+  Residual risk ..... [Accepted / partially mitigated / open — signed by whom]
+
+  Repeatable finding? [yes/no]   Related findings: [F-xx, F-yy]
+
+Severity rules used in this report
+[State the model. For vulnerability findings, name CVSS v4.0 and its qualitative
+ratings: None 0.0, Low 0.1-3.9, Medium 4.0-6.9, High 7.0-8.9, Critical
+9.0-10.0. For governance findings with no vector, define your own four levels
+and write the definitions here, so two readers reach the same rating.]
+
+
+5. RISK SUMMARY
+---------------
+5.1 Counts by severity
+| Severity | Open | In progress | Closed during audit |
+| Critical |      |             |                     |
+| High     |      |             |                     |
+| Medium   |      |             |                     |
+| Low      |      |             |                     |
+
+5.2 Counts by domain
+| Domain | Findings | Highest severity |
+| Governance and policy            |          |                  |
+| Asset and identity management    |          |                  |
+| Access control and MFA           |          |                  |
+| Network architecture             |          |                  |
+| Endpoint and patch management    |          |                  |
+| Logging and monitoring           |          |                  |
+| Backup and restore               |          |                  |
+| Supplier and cloud               |          |                  |
+| Incident response                |          |                  |
+| Awareness and training           |          |                  |
+
+5.3 What the pattern says
+[Two or three sentences. Which single missing control explains most findings?
+Say it plainly; do not list every finding again.]
+
+5.4 Accepted risks
+| Ref | Risk | Accepted by | Date | Review date | Compensating control |
+
+
+6. REMEDIATION ROADMAP
+----------------------
+| Order | Finding | Action | Owner | Effort (S/M/L) | Due | Completion test |
+|   1   |         |        |       |                |     |                 |
+Sequence rule: fix what stops detection or recovery first, then what stops
+access, then documentation. A plan that starts with rewriting policies and
+finishes with backup restores is in the wrong order.
+
+6.1 Decisions needed from management
+| Decision | Who decides | Needed by | Consequence if deferred |
+|          |             |           |                         |
+
+
+7. RETEST AND CLOSURE
+---------------------
+Retest scope ....... [findings F-xx to F-yy]
+Retest date ........ [YYYY-MM-DD]
+Result per finding . [closed / partially closed / open — with the evidence ref]
+Reopen rule ........ [what makes a closed finding open again]
+
+
+8. APPENDIX — SAMPLED EVIDENCE
+------------------------------
+| ID  | Finding | Description | Source system | Collected on | Collected by | File / hash | Sensitivity |
+| E01 |         |             |               |              |              |             |             |
+
+Evidence handling
+[Storage location, access list, retention period, destruction date. State that
+sample exports containing personal data were minimised and, where possible,
+redacted before leaving the client environment.]
+
+
+9. SIGN-OFF
+-----------
+Auditor ............. [name] [signature] [date]
+Reviewer ............ [name] [signature] [date]
+Client acceptance ... [name] [signature] [date]
+
+Statement:
+This report describes the state of the in-scope systems and processes during
+the audit period, based on the evidence listed in section 8. It is not a
+certification, an attestation of compliance, or an assurance that the systems
+are free of weaknesses outside the scope in section 2.
+
+WHERE THE TEXT IS DOING TOO MUCH — delete each line that applies
+---------------------------------------------------------------
+[ ] A finding with no criterion              -> add the clause or drop the finding
+[ ] A finding with no evidence reference     -> this is an opinion, not a finding
+[ ] "Best practice" as the only criterion    -> name the standard or the policy
+[ ] "Critical" with no stated impact         -> say what breaks and for whom
+[ ] A recommendation naming a product only    -> state the outcome it must achieve
+[ ] An owner who is a team and not a person   -> name the accountable role
+[ ] A due date of "Q3"                        -> use a date that can be missed
+[ ] "Fully compliant" / "no risks found"     -> replace with what was reviewed
+[ ] Findings that repeat last year unchanged  -> say so in 5.3 and escalate

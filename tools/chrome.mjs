@@ -41,9 +41,9 @@ const LOCALE = {
     },
     en: {
         nav: [
-            ["/pentestimine/", "Audit / pentest"],
+            ["/en/pentesting/", "Audit / pentest"],
             ["/mudelid/", "Cyber-AI API"],
-            ["/nis2/", "NIS2"],
+            ["/en/nis2/", "NIS2"],
             ["/meist/", "About"],
         ],
         cta: ["/en/#contact", "Free assessment"],
@@ -156,7 +156,9 @@ const FOOTER = {
                 label: "Service links",
                 links: [
                     ["/en/pentesting/", "Penetration testing"],
+                    ["/en/pentest-report/", "Pentest report template"],
                     ["/en/security-audit/", "Cybersecurity audit"],
+                    ["/en/security-audit/checklist/", "Cybersecurity audit checklist"],
                     ["/mudelid/", "Cyber-AI API (Estonian)", "et"],
                     ["/kasutusjuhud/", "Cyber-AI use cases (Estonian)", "et"],
                 ],
@@ -171,6 +173,8 @@ const FOOTER = {
                     ["/en/nis2/fines/", "Fines and liability"],
                     ["/en/nis2/audit/", "NIS2 audit"],
                     ["/en/nis2/checklist/", "NIS2 compliance checklist"],
+                    ["/en/nis2/scope-assessment/", "NIS2 scope assessment"],
+                    ["/en/nis2/vs-iso-27001/", "NIS2 vs ISO 27001"],
                     ["/en/nis2/suppliers/", "NIS2 supplier requirements"],
                 ],
             },

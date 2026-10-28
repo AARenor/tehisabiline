@@ -245,4 +245,28 @@
         <loc>https://tehisabiline.ee/sektorid/</loc>
         <lastmod>2026-10-27</lastmod>
     </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/nis2/scope-assessment/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/nis2/vs-iso-27001/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/iso-27001/audit-checklist/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/security-audit/checklist/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/pentest-report/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+        <loc>https://tehisabiline.ee/en/tlpt/</loc>
+        <lastmod>2026-10-28</lastmod>
+    </url>
 </urlset>

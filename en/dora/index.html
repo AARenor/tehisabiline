@@ -275,18 +275,18 @@
     <div class="wrap site-header__bar">
         <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – home</span></a>
         <nav class="site-nav" aria-label="Main navigation">
-            <a href="/pentestimine/">Audit / pentest</a>
+            <a href="/en/pentesting/">Audit / pentest</a>
             <a href="/mudelid/">Cyber-AI API</a>
-            <a href="/nis2/">NIS2</a>
+            <a href="/en/nis2/">NIS2</a>
             <a href="/meist/">About</a>
         </nav>
         <a class="btn btn--primary btn--sm site-header__cta" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu" hidden>
-        <a href="/pentestimine/">Audit / pentest</a>
+        <a href="/en/pentesting/">Audit / pentest</a>
         <a href="/mudelid/">Cyber-AI API</a>
-        <a href="/nis2/">NIS2</a>
+        <a href="/en/nis2/">NIS2</a>
         <a href="/meist/">About</a>
         <a class="btn btn--primary" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
     </nav>
@@ -308,7 +308,7 @@
       <section id="register"><h2>The register of information</h2><p>The register records every contractual arrangement with an ICT third-party provider that supports a financial entity's services. A useful register answers:</p><ul><li>Which legal entity and branch uses the service?</li><li>Which function and process does it support, and is it critical or important?</li><li>Who is the provider, including ultimate parent and subcontractors?</li><li>Where is data processed and stored?</li><li>When does the contract start and end, and what is the exit plan?</li></ul><p>Article 28(3) requires an annual report with summary data, including the number of new arrangements, and the full register on the supervisor's request. Record the subcontractors the ITS template covers, in particular those underpinning critical or important functions or material parts of them (<a href="https://eur-lex.europa.eu/eli/reg_impl/2024/2956/oj/eng" rel="noopener">Implementing Regulation (EU) 2024/2956</a>, recital 6). Finantsinspektsioon separately collects a year-end register: the 2027 collection uses the position at 31 December 2026.</p><p>Our <a href="/dora/teaberegister/" lang="et">DORA register checker (Estonian)</a> checks a CSV export for required fields and common gaps.</p><p>For the fields, the working CSV and the ITS template, read the <a href="/en/dora/register/">DORA register of information guide</a>.</p></section>
       <section id="contracts"><h2>Contract clauses supervisors look for</h2><ul><li>Service description, service levels and quantitative targets.</li><li>Data location, protection, availability and return or deletion at exit.</li><li>Access, audit and information rights for the financial entity and supervisors.</li><li>Incident notification, cooperation and root-cause analysis.</li><li>Business-continuity, backup and tested exit strategies.</li><li>Subcontracting approval, change control and termination rights.</li><li>Participation in TLPT where relevant.</li></ul><p>A generic SaaS terms page is rarely enough for a critical function. The contract and the register must tell the same story.</p></section>
       <section id="reporting"><h2>Incident reporting and testing</h2><p>DORA requires a documented ICT incident-management process, classification, reporting to the competent authority and communication to clients where relevant. Keep the timeline, affected services, root cause, recovery and lessons learned.</p><p><strong>Estonia:</strong> Finantsinspektsioon accepts DORA reports by email until 31 October 2026. From 1 November 2026, reports must be submitted through the Eesti Pank / Finantsinspektsioon data-collection portal; email is no longer the route (<a href="https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-regulatsioonid/dora-maarusest-ja-nouetest-eesti-finantssektoris-tegutsevatele-ettevotetele" rel="noopener">FI DORA guidance</a>, checked 27 October 2026). Register reporting is a separate process; see the <a href="/en/dora/register/">register guide</a>.</p><p>Resilience testing must match the entity's risk profile. TLPT is required for financial entities identified by the competent authority under Article 26(8), at least every three years, and must follow the EU framework. A vulnerability scan is not TLPT.</p></section>
-      <section id="tlpt"><h2>TLPT and technical evidence</h2><p>Threat-led penetration testing combines intelligence, red-team testing and controlled production impact. It tests critical functions and people, not only a web page. Evidence includes the scoping document, threat intelligence, test logs, findings, remediation and retesting.</p><p>Testing does not replace the register, contract review or continuity plan. It is one layer of the DORA evidence pack.</p></section>
+      <section id="tlpt"><h2>TLPT and technical evidence</h2><p>Threat-led penetration testing combines intelligence, red-team testing and controlled production impact. It tests critical functions and people, not only a web page. Evidence includes the scoping document, threat intelligence, test logs, findings, remediation and retesting.</p><p>Testing does not replace the register, contract review or continuity plan. It is one layer of the DORA evidence pack. How the phases work, who is obliged and what a readiness checklist contains: <a href="/en/tlpt/">TLPT and TIBER-EU</a>.</p></section>
       <section id="evidence"><h2>What a DORA evidence pack contains</h2><ul><li>ICT risk assessment and approved risk appetite.</li><li>Asset and service inventory mapped to business functions.</li><li>Register of information with contract references.</li><li>Continuity and recovery test results, including critical providers.</li><li>Incident log, classification and reporting evidence.</li><li>TLPT or other testing results and remediation tracking.</li><li>Board and management oversight records.</li></ul><p>Technical testing covers one part of this pack: scope, method, findings, fixes and retest, all in writing. That is what we do. We do not perform a formal DORA audit or give a legal opinion; applicability, register content and the TLPT duty are confirmed by your competent authority. The evidence checklist is on the <a href="/en/dora/audit/">DORA audit evidence page</a>.</p><p>Under Article 4 of the NIS2 Directive, equivalent NIS2 provisions do not apply to entities covered by DORA. The general framework is described in the <a href="/en/nis2/">NIS2 in Estonia</a> guide.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
         <details><summary><h3>When did DORA start to apply?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">DORA applies from 17 January 2025. It is an EU regulation and applies directly in Estonia.</p></details>
@@ -323,6 +323,7 @@
         <li><a href="/dora/" lang="et"><span class="related__title">DORA guide (Estonian)</span><span class="related__desc">Full Estonian guide with the register and contract checklist.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
         <li><a href="/dora/teaberegister/" lang="et"><span class="related__title">Register checker</span><span class="related__desc">Check a DORA register export for required fields.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
         <li><a href="/en/nis2/"><span class="related__title">NIS2 in Estonia</span><span class="related__desc">Scope, registration and incident reporting.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
+        <li><a href="/en/tlpt/"><span class="related__title">TLPT and TIBER-EU</span><span class="related__desc">Threat-led testing phases, obligations and a readiness checklist.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li>
       </ul></section>
     </article>
   </div></section>
@@ -347,7 +348,9 @@
                 <p class="site-footer__title">Services</p>
                 <ul>
                     <li><a href="/en/pentesting/">Penetration testing</a></li>
+                    <li><a href="/en/pentest-report/">Pentest report template</a></li>
                     <li><a href="/en/security-audit/">Cybersecurity audit</a></li>
+                    <li><a href="/en/security-audit/checklist/">Cybersecurity audit checklist</a></li>
                     <li><a href="/mudelid/" hreflang="et" lang="et">Cyber-AI API (Estonian)</a></li>
                     <li><a href="/kasutusjuhud/" hreflang="et" lang="et">Cyber-AI use cases (Estonian)</a></li>
                 </ul>
@@ -361,6 +364,8 @@
                     <li><a href="/en/nis2/fines/">Fines and liability</a></li>
                     <li><a href="/en/nis2/audit/">NIS2 audit</a></li>
                     <li><a href="/en/nis2/checklist/">NIS2 compliance checklist</a></li>
+                    <li><a href="/en/nis2/scope-assessment/">NIS2 scope assessment</a></li>
+                    <li><a href="/en/nis2/vs-iso-27001/">NIS2 vs ISO 27001</a></li>
                     <li><a href="/en/nis2/suppliers/">NIS2 supplier requirements</a></li>
                 </ul>
             </nav>

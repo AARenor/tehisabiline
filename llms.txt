@@ -48,6 +48,13 @@ Status reviewed on 2026-10-27:
 - [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/): scope, authorisation, report and retest for web, API, cloud and AI.
 - [Cybersecurity audit in Estonia (EN)](https://tehisabiline.ee/en/security-audit/): scope, evidence review and remediation planning.
 - [ISO 27001 in Estonia (EN)](https://tehisabiline.ee/en/iso-27001/): certification steps, audit evidence and NIS2/E-ITS comparison.
+- [NIS2 compliance checklist (EN)](https://tehisabiline.ee/en/nis2/checklist/): the ten Article 21(2) measures with what done looks like, the evidence requested, the owner and the common failure.
+- [NIS2 scope assessment (EN)](https://tehisabiline.ee/en/nis2/scope-assessment/): sector, size and group test to decide whether NIS2 applies, essential versus important, and a downloadable worksheet.
+- [NIS2 vs ISO 27001 (EN)](https://tehisabiline.ee/en/nis2/vs-iso-27001/): Article 21(2) mapped onto ISO/IEC 27001:2022 Annex A, what an ISMS already covers and the three duties it leaves open, with a mapping CSV.
+- [ISO 27001 audit checklist (EN)](https://tehisabiline.ee/en/iso-27001/audit-checklist/): clause 9.2 internal audit requirements, Annex A sampling by theme, gap scoring and a downloadable checklist.
+- [Cybersecurity audit checklist (EN)](https://tehisabiline.ee/en/security-audit/checklist/): ten audit domains with the evidence to sample, plus a plain-text report template listing the fields an auditor must fill.
+- [Penetration test report (EN)](https://tehisabiline.ee/en/pentest-report/): what a report must contain, how to read CVSS base score against business risk, a report template and a scope worksheet.
+- [TLPT and TIBER-EU (EN)](https://tehisabiline.ee/en/tlpt/): threat-led penetration testing phases, who is obliged under DORA Article 26, independence rules and a readiness checklist.
 - [Press and media kit (EN)](https://tehisabiline.ee/en/press/): company facts, founder bio, brand assets, citation formats and media contact.
 - [SBOM ehk tarkvara koostisosade loend](https://tehisabiline.ee/sbom/): CRA and NIS2 supply-chain context, required fields, SPDX/CycloneDX formats, lifecycle, common mistakes and a CSV template.
 - [CRA ehk Cyber Resilience Act](https://tehisabiline.ee/cra/): scope, manufacturer duties, support period, 11 September 2026 reporting deadlines, a deadline calculator, conformity assessment, the 11 December 2027 transition and a browser-only scope check.

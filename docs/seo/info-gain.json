@@ -1,7 +1,7 @@
 {
   "$comment": "Per-page information gain: the one thing this page has that a competing page does not. Enforced by tools/info-gain.mjs (npm run test:seo). proof must be a string that appears verbatim in the page HTML, so this file cannot silently reference a deleted asset. Pages without an entry are listed as gaps in docs/seo/topical-map.md.",
   "updated": "2026-10-28",
-  "requiredCoverage": 28,
+  "requiredCoverage": 36,
   "pages": {
     "/": {
       "asset": "Regulatsioonide tähtaegade kalender (ICS)",
@@ -152,6 +152,36 @@
       "asset": "NIS2 supplier questionnaire (CSV, 14 questions with evidence and risk columns)",
       "type": "template",
       "proof": "/assets/downloads/nis2-supplier-questionnaire.csv"
+    },
+    "/en/nis2/scope-assessment/": {
+      "asset": "Browser-only NIS2 scope assessment: sector, size and group test with a verdict, plus a decision worksheet CSV (EN)",
+      "type": "calculator",
+      "proof": "/assets/downloads/nis2-scope-assessment-worksheet.csv"
+    },
+    "/en/nis2/vs-iso-27001/": {
+      "asset": "Article 21(2) to Annex A mapping CSV: controls, coverage, open gap and closing evidence per measure (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/nis2-iso-27001-mapping.csv"
+    },
+    "/en/iso-27001/audit-checklist/": {
+      "asset": "ISO/IEC 27001:2022 internal audit checklist CSV: 63 controls with audit question, evidence to sample and gap note (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/iso-27001-audit-checklist.csv"
+    },
+    "/en/security-audit/checklist/": {
+      "asset": "Cybersecurity audit checklist CSV (74 rows across ten domains) plus a fill-in report template TXT (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/security-audit-report-template.txt"
+    },
+    "/en/pentest-report/": {
+      "asset": "Pentest report template TXT with CVSS/CWE finding fields and a scope worksheet CSV for rules of engagement (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/pentest-report-template.txt"
+    },
+    "/en/tlpt/": {
+      "asset": "TLPT readiness checklist CSV mapped to the TIBER-EU phases and DORA Article 26 duties (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/tlpt-readiness-checklist.csv"
     }
   }
 }

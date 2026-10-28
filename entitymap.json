@@ -513,7 +513,13 @@
         "/en/e-its/",
         "/en/pentesting/",
         "/en/security-audit/",
-        "/en/iso-27001/"
+        "/en/iso-27001/",
+        "/en/nis2/scope-assessment/",
+        "/en/nis2/vs-iso-27001/",
+        "/en/iso-27001/audit-checklist/",
+        "/en/security-audit/checklist/",
+        "/en/pentest-report/",
+        "/en/tlpt/"
       ]
     },
     {
@@ -597,6 +603,12 @@
     "/en/security-audit/": "en",
     "/en/iso-27001/": "en",
     "/en/nis2/checklist/": "en",
-    "/en/nis2/suppliers/": "en"
+    "/en/nis2/suppliers/": "en",
+    "/en/nis2/scope-assessment/": "en",
+    "/en/nis2/vs-iso-27001/": "en",
+    "/en/iso-27001/audit-checklist/": "en",
+    "/en/security-audit/checklist/": "en",
+    "/en/pentest-report/": "en",
+    "/en/tlpt/": "en"
   }
 }
