@@ -5,30 +5,34 @@
 /ai/turvatestimine/  /ai-turvatestimine/  301
 /ai/turvatestimine/*  /ai-turvatestimine/  301
 # AI pages moved to arletop.com on 2026-10-24. One 301 per old URL, straight to the final page.
-# Wildcard rules point at the base page: arletop.com returns 404 for unknown sub-paths.
-/ai  https://arletop.com/  301
-/ai/  https://arletop.com/  301
-/ai/*  https://arletop.com/  301
+# Wildcard rules discard unknown sub-paths and point to the closest live destination; arletop.com returns 404 for unknown sub-paths.
+/ai  https://arletop.com/ai-arendus/  301
+/ai/  https://arletop.com/ai-arendus/  301
+/ai/*  https://arletop.com/ai-arendus/  301
 /ai-chatbot  https://arletop.com/ai-chatbot/  301
 /ai-chatbot/  https://arletop.com/ai-chatbot/  301
 /ai-chatbot/*  https://arletop.com/ai-chatbot/  301
-/ai-automatiseerimise-naited  https://arletop.com/ai-automatiseerimine/  301
-/ai-automatiseerimise-naited/  https://arletop.com/ai-automatiseerimine/  301
-/ai-automatiseerimise-naited/*  https://arletop.com/ai-automatiseerimine/  301
+/ai-automatiseerimise-naited  https://arletop.com/kasutusjuhud/  301
+/ai-automatiseerimise-naited/  https://arletop.com/kasutusjuhud/  301
+/ai-automatiseerimise-naited/*  https://arletop.com/kasutusjuhud/  301
 /ai-automatiseerimine  https://arletop.com/ai-automatiseerimine/  301
 /ai-automatiseerimine/  https://arletop.com/ai-automatiseerimine/  301
 /ai-automatiseerimine/*  https://arletop.com/ai-automatiseerimine/  301
 /at-automatiseerimine  https://arletop.com/ai-automatiseerimine/  301
 /at-automatiseerimine/  https://arletop.com/ai-automatiseerimine/  301
 /at-automatiseerimine/*  https://arletop.com/ai-automatiseerimine/  301
+/hinnajalgimine  https://arletop.com/ai-automatiseerimine/  301
+/hinnajalgimine/  https://arletop.com/ai-automatiseerimine/  301
 /index.html  /  301
 
 # Retired download: the NIS2 audit evidence template is an Excel workbook since 2026-10-27.
 /assets/downloads/nis2-auditi-toendite-mall.csv  /assets/downloads/nis2-auditi-toendite-mall.xlsx  301
 
-/en/ai-consulting/  /en/  301
+/en/ai-consulting  https://arletop.com/en/ai-konsultatsioon/  301
+/en/ai-consulting/  https://arletop.com/en/ai-konsultatsioon/  301
 
-/ai-automatiseerimine-ettevottele/  /  301
+/ai-automatiseerimine-ettevottele  https://arletop.com/ai-automatiseerimine/  301
+/ai-automatiseerimine-ettevottele/  https://arletop.com/ai-automatiseerimine/  301
 
 # Retired sector pages (merged 2026-10-27): finance is covered by the DORA guide, logistics by the sector hub.
 /sektorid/finants  /dora/  301

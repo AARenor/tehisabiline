@@ -129,7 +129,7 @@ Peamised failid:
 - `tools/deploy.sh` — Cloudflare Pages'i deploy (avaldab ainult avalikud failid; nõuab `CLOUDFLARE_API_TOKEN` keskkonnamuutujat)
 - `vercel.json`, `.vercelignore` — varasema Verceli seadistuse jäänuk, mida deploy ei kasuta
 
-Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. Üldised AI-teenused avaldatakse eraldi saidil `https://arletop.com/`; tehisabiline.ee AI-URLid suunatakse sinna 301-ga. `docs/` ja `tools/` ei lähe avalikku deploy'sse (`tools/deploy.sh`).
+Varasem üldiste AI-teenuste ja SEO/GEO veebisisu algversioonid on privaatses arhiivis `docs/future-ai-site/`. Üldised AI-teenused avaldatakse eraldi saidil `https://arletop.com/`. Tehisabiline.ee vanad AI-URLid suunatakse 301-ga sisult lähimale kehtivale lehele: `/ai` ja selle alamteed (v.a kohalik `/ai/turvatestimine`) → `/ai-arendus/`; automatiseerimise näited → `/kasutusjuhud/`; hinnajälgimine ja ettevõtetele mõeldud automatiseerimine → `/ai-automatiseerimine/`; vestlusroboti leht ja vana automatiseerimise teenuseleht → vastavalt `/ai-chatbot/` ja `/ai-automatiseerimine/`; ingliskeelne AI-konsultatsioon → `/en/ai-konsultatsioon/`. Loetletud lähte-URLid töötavad nii kaldkriipsuga kui ka ilma. `docs/` ja `tools/` ei lähe avalikku deploy'sse (`tools/deploy.sh`).
 
 Kohalikuks eelvaateks võib kasutada näiteks `python3 -m http.server 4173` projekti juurkaustas.
 
