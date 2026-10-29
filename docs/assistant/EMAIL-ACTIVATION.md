@@ -1,6 +1,6 @@
 # E-posti aktivatsiooni checklist (pärast Zone.ee tellimust)
 
-Taust ja hinnad: `/home/arle/tehisabiline-mail-decision-2026-10-12.md` (Parts 1–22).
+Taust ja hinnad: `/home/arle/research-notes/outreach/tehisabiline-mail-decision-2026-10-12.md` (Parts 1–22).
 See fail = tegevuskava hetkest, mil Zone.ee konto on loodud.
 
 ## 1. Tellimus (kasutaja tegevus)

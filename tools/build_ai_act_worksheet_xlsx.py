@@ -9,7 +9,7 @@ Sheets in both files: Classification, Requirements and evidence, Roles, plus a s
 Rows follow Regulation (EU) 2024/1689: art 6(1)-(4), Annex III (eight areas), art 8-15,
 art 16-17 and 23-27, art 49. Wording is a working paraphrase, not the legal text.
 
-Run from the repo root:  python3 tools/build-ai-act-worksheet-xlsx.py
+Run from the repo root:  python3 tools/build_ai_act_worksheet_xlsx.py
 Requires openpyxl (system python3-openpyxl).
 """
 

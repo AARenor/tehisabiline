@@ -6,7 +6,7 @@ Sheets: audit programme (p 9.2.2), requirements of clauses 4-10, finding registe
 actions (p 10.2), plus a guide sheet. Annex A appears only as its four themes and control
 counts: the control titles are copyright ISO/IEC text and are deliberately not reproduced.
 
-Run from the repo root:  python3 tools/build-iso27001-audit-xlsx.py
+Run from the repo root:  python3 tools/build_iso27001_audit_xlsx.py
 Requires openpyxl (system python3-openpyxl).
 """
 
