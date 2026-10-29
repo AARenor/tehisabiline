@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-10-28
+Last materially reviewed: 2026-10-29
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -47,7 +47,7 @@ Explains DORA Article 26 threat-led penetration testing and Estonia's TIBER-EE i
 
 ### DORA guide
 
-Guide to DORA in Estonia: scope follows the Article 2 list rather than "the financial sector"; the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing); Finantsinspektsioon supervision; the incident-reporting channel change from email (until 31.10.2026) to the Finantsinspektsioon portal from 1 November 2026; the Article 28(3) register of information, submitted as an annual summary with the full register on request and a year-end collection on 31.12.2026; a downloadable CSV register template; TLPT under Articles 26–27 via TIBER-EE with attestation by Finantsinspektsioon or the ECB; differences from NIS2 and E-ITS; and a four-step preparation order. It states that DORA has no certificate and is not limited to pentesting.
+Guide to DORA in Estonia: scope follows the Article 2 list rather than "the financial sector"; the five pillars (ICT risk management, incident reporting, resilience testing, third-party risk and information sharing); Finantsinspektsioon supervision; the incident-reporting channel change from email (until 31.10.2026) to the Finantsinspektsioon portal from 1 November 2026; the Article 28(3) register of information, submitted as an annual summary with the full register on request and a year-end collection on 31.12.2026; a downloadable CSV register template; TLPT under Articles 26–27 via TIBER-EE with attestation by Finantsinspektsioon or the ECB; differences from NIS2 and E-ITS; and a four-step preparation order. It states that DORA has no certificate and is not limited to pentesting, that DORA is a regulation rather than a directive and therefore needed no transposition, and that the technical detail sits in delegated and implementing regulations 2024/1774 (ICT risk management), 2024/1773 (contracts supporting critical or important functions), 2025/1190 (TLPT) and 2024/2956 (register templates).
 
 ### Articles
 
@@ -194,6 +194,12 @@ Canonical page: https://tehisabiline.ee/ai-act/
 
 Guide to the EU AI Act in Estonian: provider and deployer roles, prohibited/high-risk/limited/minimal risk, the amended timeline (including the 2026 omnibus delay of high-risk deadlines), TTJA's future market-surveillance role, Article 15 accuracy/robustness/cybersecurity expectations, a browser-only risk-class self-check and the limits of scoped AI security testing. It is explanatory, not legal advice.
 
+### Kõrge riskiga AI-süsteemid
+
+Canonical page: https://tehisabiline.ee/ai-act/korge-riskiga-susteemid/
+
+Estonian guide to the high-risk class of Regulation (EU) 2024/1689. It walks Article 6 classification step by step — Annex I product rules versus Annex III use lists — and then takes Annex III area by area, use by use (eight areas, 25 listed uses), with the exclusions the annex itself states. It sets out the Article 6(3) exception with its four cumulative conditions and the rule that an Annex III system performing profiling of natural persons is always high-risk, and it explains the registration that follows from a 6(3) self-assessment. Articles 9–15 are mapped to the technical evidence to produce and keep (risk management, data governance, documentation, logging, instructions for use, human oversight, accuracy, robustness and cybersecurity), followed by the provider and deployer duties (Articles 16, 17, 23–27 including the FRIA), the fine tiers of Article 99 up to EUR 35 000 000 or 7%, and the timeline already used on the hub: Annex III obligations from 2 December 2027 and Annex I product rules from 2 August 2028. The page ships a downloadable worksheet (Excel) with the Annex III classification rows, the Article 9–15 evidence map and a role test. It is explanatory, not legal advice.
+
 ### DORA register of information
 
 Canonical page: https://tehisabiline.ee/dora/teaberegister/
@@ -206,6 +212,12 @@ Canonical page: https://tehisabiline.ee/iso-27001/
 
 Guide to ISO/IEC 27001:2022 in the Estonian context: what an ISMS is, the Annex A control set with Amendment 1:2024, Stage 1/Stage 2 certification, surveillance and recertification set by the certification body's accredited scheme, the evidence an auditor asks for, accreditation by EAK, and the difference from E-ITS and NIS2. It notes that the 2013 to 2022 transition completed on 31 October 2025 and that Tehisabiline is not an accredited certification body.
 
+### ISO 27001 auditeerimine
+
+Canonical page: https://tehisabiline.ee/iso-27001/auditeerimine/
+
+Estonian guide to auditing an ISO/IEC 27001:2022 ISMS. It separates the three audits: the clause 9.2 internal audit, the accredited certification audit and a second-party audit. For clause 9.2 it lays out the 9.2.1–9.2.2 requirements with the artefact to sample for each, gives a seven-step internal audit method, a clause 4–10 checklist with the evidence to request, the audit report structure with four finding classes, and the ISO/IEC 17021-1 certification cycle: a two-stage initial audit, surveillance at least once a calendar year and no later than 12 months after the certification decision, recertification in the third year, and correction of a major nonconformity within six months after the last day of Stage 2. Audit duration is explained only through the ISO/IEC 17021-1 §9.1.4 factors; no prices or day counts are given. It notes that ISO/IEC 27001 does not require ISO 19011 (its only normative reference is ISO/IEC 27000) and does not require a certified internal auditor, that Annex A is normative but not a list of requirements (point 6.1.3 and the Statement of Applicability), and that an internal audit is neither a certification audit nor a penetration test. The page ships an internal audit workbook (Excel) with the audit programme, every clause 4–10 subclause with its evidence column, a finding register and corrective actions. It states that Tehisabiline is not an accredited certification body.
+
 ## Facts to quote
 
 These are international research findings, not measurements of Tehisabiline customers or a risk estimate for an Estonian business. Quote with the original source:
@@ -217,22 +229,32 @@ These are international research findings, not measurements of Tehisabiline cust
 ## NIS2 in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/nis2/
-Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities already in scope on that date had three months to notify RIA (that window closed in spring 2026); a new service provider has three months from becoming one. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, effectiveness testing, hygiene and training, cryptography, human resources and access control, and multi-factor authentication. Incident reports: early warning within 24 hours and notification within 72 hours of becoming aware, final report within one month of filing the 72-hour notification.
+NIS2 is Directive (EU) 2022/2555, a unified framework for cybersecurity in 18 critical sectors that replaced Directive 2016/1148 (NIS1); it is a directive, not a regulation, so its duties reach organisations through national law. Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities already in scope on that date had three months to notify RIA (that window closed in spring 2026); a new service provider has three months from becoming one. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, effectiveness testing, hygiene and training, cryptography, human resources and access control, and multi-factor authentication. Incident reports: early warning within 24 hours and notification within 72 hours of becoming aware, final report within one month of filing the 72-hour notification.
 
 ## CRA in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/cra/
 The Cyber Resilience Act (Regulation (EU) 2024/2847) applies directly in Estonia. Reporting obligations apply from 11 September 2026; the main product obligations apply from 11 December 2027. Manufacturers must document components and vulnerabilities (an SBOM), handle vulnerabilities, state a support period of at least five years unless the expected lifetime is shorter, complete conformity assessment and keep technical documentation. CRA reporting uses an early warning within 24 hours, a notification within 72 hours and a final report after a corrective measure or one month after notification; both the Estonian and English CRA pages include browser-only deadline calculators.
 
+## CRA vulnerability reporting (EN)
+
+Canonical page: https://tehisabiline.ee/en/cra/vulnerability-reporting/
+A manufacturer must report any actively exploited vulnerability in its product with digital elements that it becomes aware of: an early warning within 24 hours of becoming aware and a notification within 72 hours, both to the CSIRT designated as coordinator and to ENISA through the single reporting platform ENISA operates under Article 16, then a final report no later than 14 days after a corrective or mitigating measure is available (Article 14(2)). A severe incident keeps the 24-hour and 72-hour steps but the final report is due within one month after the incident notification (Article 14(4)). Reporting under Article 14 applies from 11 September 2026; the rest of the regulation, Annex I requirements included, from 11 December 2027 (Article 71). The page separates that reporting duty from the eight Annex I, Part II handling requirements — SBOM, remediation without delay, tests and reviews, publication about fixed vulnerabilities, a coordinated vulnerability disclosure policy, a contact address, secure update distribution and free security updates — with the evidence to keep for each row. It states that Regulation (EU) 2024/2847 never names security.txt and never uses CVE or CVSS: the file format comes from RFC 9116, whose Contact field is mandatory and whose single Expires field must be an RFC 3339 timestamp, and the page ships a browser-only builder that validates those fields and makes no network request. A DOCX template adds a coordinated vulnerability disclosure policy outline and the Annex I, Part II evidence table. Policy targets are the reader's own service levels, not statutory deadlines.
+
 ## DORA in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/dora/
-DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. Financial entities must maintain an ICT risk framework, a register of information covering contractual arrangements with ICT third-party providers, contractual safeguards, incident reporting and resilience testing. Certain significant entities must carry out threat-led penetration testing (TLPT) at least every three years.
+DORA (Regulation (EU) 2022/2554) applies from 17 January 2025. It is a regulation, not a directive, so it applied directly without transposition, and the technical detail sits in delegated and implementing regulations 2024/1774, 2024/1773, 2025/1190 and 2024/2956. Financial entities must maintain an ICT risk framework, a register of information covering contractual arrangements with ICT third-party providers, contractual safeguards, incident reporting and resilience testing. Certain significant entities must carry out threat-led penetration testing (TLPT) at least every three years.
 
 ## AI Act in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/ai-act/
 The AI Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024 and applies in stages. Prohibitions and AI literacy apply from 2 February 2025; general-purpose AI obligations from 2 August 2025; the general date of application, including the Article 50 transparency rules, is 2 August 2026. As amended by Regulation (EU) 2026/1744, new prohibitions and the Article 50(2) transition for systems already on the market apply from 2 December 2026, Annex III high-risk obligations from 2 December 2027 and Annex I product rules from 2 August 2028. Providers and deployers need an AI inventory, role and risk classification, technical documentation, human-oversight evidence, logging and post-market monitoring.
+
+## High-risk AI systems (EN)
+
+Canonical page: https://tehisabiline.ee/en/ai-act/high-risk/
+Article 6 classification runs in two branches: a system that is a safety component of, or is itself, a product covered by the Annex I product-safety law is high-risk, and a system listed in Annex III is high-risk unless the Article 6(3) exception applies. The page takes the eight Annex III areas use by use, states the annex's own exclusions, sets out the four cumulative Article 6(3) conditions and the rule that profiling of natural persons always makes an Annex III system high-risk, and covers the registration that follows a 6(3) self-assessment. Articles 9–15 become a table of requirements with the technical evidence to produce and keep, from risk management and data governance through documentation, logging, instructions for use, human oversight, accuracy, robustness and cybersecurity; provider and deployer duties (Articles 16, 17, 23–27, FRIA included) and the Article 99 fine tiers up to EUR 35 000 000 or 7% follow. An Excel worksheet carries the Annex III rows, the Article 9–15 evidence map and a role test.
 
 ## SBOM for CRA (EN)
 
@@ -308,6 +330,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/dora/
 - https://tehisabiline.ee/regulatsioonid/
 - https://tehisabiline.ee/ai-act/
+- https://tehisabiline.ee/ai-act/korge-riskiga-susteemid/
 - https://tehisabiline.ee/en/
 - https://tehisabiline.ee/en/regulations/
 - https://tehisabiline.ee/en/nis2/audit/
@@ -318,10 +341,12 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/en/nis2/registration/
 - https://tehisabiline.ee/en/nis2/
 - https://tehisabiline.ee/en/cra/
+- https://tehisabiline.ee/en/cra/vulnerability-reporting/
 - https://tehisabiline.ee/en/dora/audit/
 - https://tehisabiline.ee/en/dora/register/
 - https://tehisabiline.ee/en/dora/
 - https://tehisabiline.ee/en/ai-act/
+- https://tehisabiline.ee/en/ai-act/high-risk/
 - https://tehisabiline.ee/en/sbom/
 - https://tehisabiline.ee/en/e-its/
 - https://tehisabiline.ee/en/pentesting/
@@ -337,6 +362,7 @@ Company facts, boilerplate, founder profile, brand assets, citation formats and 
 - https://tehisabiline.ee/sbom/
 - https://tehisabiline.ee/cra/
 - https://tehisabiline.ee/iso-27001/
+- https://tehisabiline.ee/iso-27001/auditeerimine/
 - https://tehisabiline.ee/dora/audit/
 - https://tehisabiline.ee/dora/teaberegister/
 - https://tehisabiline.ee/artiklid/

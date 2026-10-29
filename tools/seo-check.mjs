@@ -185,6 +185,14 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "en/cra/vulnerability-reporting/index.html",
+        canonical: `${origin}/en/cra/vulnerability-reporting/`,
+        lang: "en",
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "en/dora/audit/index.html",
         canonical: `${origin}/en/dora/audit/`,
         lang: "en",
@@ -212,6 +220,14 @@ const expectedPages = [
         file: "en/ai-act/index.html",
         canonical: `${origin}/en/ai-act/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage", "Service"],
+        dateType: "WebPage",
+        lang: "en",
+        requiresPublishedDate: true
+    },
+    {
+        file: "en/ai-act/high-risk/index.html",
+        canonical: `${origin}/en/ai-act/high-risk/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         lang: "en",
         requiresPublishedDate: true
@@ -320,6 +336,13 @@ const expectedPages = [
         requiresPublishedDate: true
     },
     {
+        file: "ai-act/korge-riskiga-susteemid/index.html",
+        canonical: `${origin}/ai-act/korge-riskiga-susteemid/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
         file: "sbom/index.html",
         canonical: `${origin}/sbom/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
@@ -336,6 +359,13 @@ const expectedPages = [
     {
         file: "iso-27001/index.html",
         canonical: `${origin}/iso-27001/`,
+        schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
+        dateType: "WebPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "iso-27001/auditeerimine/index.html",
+        canonical: `${origin}/iso-27001/auditeerimine/`,
         schemaTypes: ["Article", "WebPage", "BreadcrumbList", "FAQPage"],
         dateType: "WebPage",
         requiresPublishedDate: true

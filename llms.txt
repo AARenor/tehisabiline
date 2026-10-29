@@ -11,7 +11,7 @@ Entity:
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
 - Entity map (JSON): https://tehisabiline.ee/entitymap.json — canonical organization, founder, services, topic vocabulary and the page-to-cluster map
 
-Status reviewed on 2026-10-27:
+Status reviewed on 2026-10-29:
 
 - The developer API is not yet public; pilot access is discussed by email.
 - Model hosting hardware is ordered; processing in Estonia is forthcoming, not live.
@@ -25,11 +25,12 @@ Status reviewed on 2026-10-27:
 - [AI turvatestimine](https://tehisabiline.ee/ai-turvatestimine/): scoped testing of LLM/RAG/agent applications for prompt injection, retrieval leakage, tool permissions, output handling and API abuse; limits and AI Act/NIS2 context.
 - [E-ITS](https://tehisabiline.ee/e-its/): Estonian information security standard (regulation no. 30, in force 01.09.2026): who must apply it, E-ITS audit versus ISO 27001 certification, what must be filed and when, and evidence preparation.
 - [TLPT ja TIBER-EE](https://tehisabiline.ee/tlpt/): DORA threat-led penetration testing in Estonia, who is designated, TIBER-EE roles, attestation versus certification and preparation.
-- [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope under Article 2, the five pillars, the Estonian incident-reporting channel (email until 31.10.2026, Finantsinspektsioon portal from 01.11.2026), the Article 28(3) register with its annual summary and full register on request, a downloadable register template, TLPT under Articles 26–27 via TIBER-EE (attestation by Finantsinspektsioon or the ECB) and a four-step preparation order.
+- [DORA nõuded Eestis](https://tehisabiline.ee/dora/): scope under Article 2, the five pillars, the Estonian incident-reporting channel (email until 31.10.2026, Finantsinspektsioon portal from 01.11.2026), the Article 28(3) register with its annual summary and full register on request, a downloadable register template, TLPT under Articles 26–27 via TIBER-EE (attestation by Finantsinspektsioon or the ECB) and a four-step preparation order. DORA is Regulation (EU) 2022/2554 — a regulation, not a directive, so it applied directly from 17 January 2025 — and the technical detail sits in delegated and implementing regulations 2024/1774, 2024/1773, 2025/1190 and 2024/2956.
 - [DORA audit](https://tehisabiline.ee/dora/audit/): scope, evidence and report for an ICT-risk audit; register and TLPT boundaries, common gaps and board evidence.
 - [DORA teaberegister](https://tehisabiline.ee/dora/teaberegister/): what the Article 28(3) register must show, how to fill it, common errors, the difference between a working CSV and the official ITS 2024/2956 template, submission through the Finantsinspektsioon portal (annual summary; full register on request) and a browser-only CSV checker.
 - [Küberturvalisuse regulatsioonid Eestis](https://tehisabiline.ee/regulatsioonid/): one map of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA: who they cover, what they require, how they overlap and which evidence an audit asks for. Includes a downloadable comparison CSV.
 - [AI Act Eestis](https://tehisabiline.ee/ai-act/): the EU AI Act in Estonian: risk classes, current deadlines after the 2026 amendment, TTJA supervision, Article 15 security expectations, a browser-only risk-class self-check and what scoped AI testing can and cannot prove.
+- [Kõrge riskiga AI-süsteemid](https://tehisabiline.ee/ai-act/korge-riskiga-susteemid/): AI Acti art 6 klassifikatsioon samm-sammult (I lisa vs III lisa), III lisa kaheksa valdkonda kasutuse kaupa, art 6(3) erandi neli tingimust ja profileerimise keeld, artiklid 9–15 koos tehniliste tõenditega, pakkuja ja kasutaja kohustused, trahviastmed ja allalaaditav tööleht.
 - [Estonia cybersecurity regulations (EN)](https://tehisabiline.ee/en/regulations/): English overview of NIS2/KüTS, DORA, E-ITS, ISO 27001, AI Act and CRA, including deadlines and evidence.
 - [NIS2 registration in Estonia (EN)](https://tehisabiline.ee/en/nis2/registration/): RIA steps, three-month and 14-day deadlines, preparation and a calculator.
 - [NIS2 fines in Estonia (EN)](https://tehisabiline.ee/en/nis2/fines/): caps, supervisory assessment, management liability and a calculator.
@@ -37,12 +38,14 @@ Status reviewed on 2026-10-27:
 - [NIS2 audit in Estonia (EN)](https://tehisabiline.ee/en/nis2/audit/): scope, ten duties, evidence and common gaps.
 - [NIS2 compliance checklist (EN)](https://tehisabiline.ee/en/nis2/checklist/): the ten Article 21(2) measures as an interactive checklist with the evidence, the owner and the common failure for each row.
 - [NIS2 supplier requirements (EN)](https://tehisabiline.ee/en/nis2/suppliers/): Article 21(2)(d) supply chain duties, fourteen due-diligence questions with the evidence to request, the contract clauses behind them and a free CSV questionnaire.
-- [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/): English guide to KüTS scope, RIA registration and change deadlines, incident-reporting deadlines, the ten duties, a fine calculator and audit evidence.
+- [NIS2 in Estonia (EN)](https://tehisabiline.ee/en/nis2/): English guide to KüTS scope, RIA registration and change deadlines, incident-reporting deadlines, the ten duties, a fine calculator and audit evidence. NIS2 is Directive (EU) 2022/2555, a unified framework for 18 critical sectors that replaced Directive 2016/1148 (NIS1).
 - [CRA in Estonia (EN)](https://tehisabiline.ee/en/cra/): English guide to Cyber Resilience Act product scope, manufacturer duties, a reporting-deadline calculator and SBOM evidence.
+- [CRA vulnerability reporting (EN)](https://tehisabiline.ee/en/cra/vulnerability-reporting/): CRA Article 14 reporting — what to report about an actively exploited vulnerability, the 24-hour, 72-hour and final-report steps, the eight Annex I Part II vulnerability-handling duties with the evidence for each, and a browser-only security.txt builder plus a downloadable policy template (DOCX).
 - [DORA audit (EN)](https://tehisabiline.ee/en/dora/audit/): scope, evidence, register/TLPT boundaries and common gaps.
 - [DORA register of information (EN)](https://tehisabiline.ee/en/dora/register/): Article 28(3) fields, ITS template, working CSV, common errors and Estonian submission context.
 - [DORA in Estonia (EN)](https://tehisabiline.ee/en/dora/): English guide to the register of information, ICT contracts, incident reporting and TLPT.
 - [AI Act in Estonia (EN)](https://tehisabiline.ee/en/ai-act/): English guide to risk classes, deadlines, GPAI duties and evidence.
+- [High-risk AI systems (EN)](https://tehisabiline.ee/en/ai-act/high-risk/): Article 6(1) versus Annex III classification, the eight Annex III areas use by use, the Article 6(3) exception and profiling rule, Articles 9-15 mapped to technical evidence, provider and deployer duties, fine tiers and a downloadable worksheet.
 - [SBOM for CRA (EN)](https://tehisabiline.ee/en/sbom/): minimum fields, SPDX/CycloneDX, vulnerability matching and release evidence.
 - [E-ITS in Estonia (EN)](https://tehisabiline.ee/en/e-its/): scope, 2026 changes, audit evidence and the NIS2 relationship.
 - [Penetration testing in Estonia (EN)](https://tehisabiline.ee/en/pentesting/): scope, authorisation, report and retest for web, API, cloud and AI.
@@ -59,6 +62,7 @@ Status reviewed on 2026-10-27:
 - [SBOM ehk tarkvara koostisosade loend](https://tehisabiline.ee/sbom/): CRA and NIS2 supply-chain context, required fields, SPDX/CycloneDX formats, lifecycle, common mistakes and a CSV template.
 - [CRA ehk Cyber Resilience Act](https://tehisabiline.ee/cra/): scope, manufacturer duties, support period, 11 September 2026 reporting deadlines, a deadline calculator, conformity assessment, the 11 December 2027 transition and a browser-only scope check.
 - [ISO 27001 Eestis](https://tehisabiline.ee/iso-27001/): certification stages, the 93 Annex A controls, evidence an auditor asks for, accreditation, and how ISO/IEC 27001 differs from E-ITS and NIS2. It explicitly states that Tehisabiline is not a certification body.
+- [ISO 27001 auditeerimine](https://tehisabiline.ee/iso-27001/auditeerimine/): clause 9.2 internal audit requirements, a clause 4–10 checklist with the evidence to request, the audit report and the four finding classes, the ISO/IEC 17021-1 certification cycle, the audit-time factors with no prices, and a downloadable internal audit workbook (Excel). States that Tehisabiline is not a certification body.
 - [Artiklid](https://tehisabiline.ee/artiklid/): practical guides on backup restore testing, NIS2 supply-chain security and MFA rollout.
 - [Varunduse taastetest](https://tehisabiline.ee/artiklid/varunduse-taastetest/): RPO/RTO, test scope, four test levels, a 90-minute plan and the evidence NIS2 auditors ask for.
 - [NIS2 tarneahela turve](https://tehisabiline.ee/artiklid/nis2-tarneahel/): supplier tiering, due diligence, contract clauses, ongoing review and evidence.

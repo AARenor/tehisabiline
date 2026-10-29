@@ -116,3 +116,22 @@ Autocomplete ranks what people type, not how often; no volume figure is claimed 
 
 - No new page was created for any family. Every accepted family already had a page whose history, internal links and entity map would have had to be duplicated; the missing surface was the wording, not the document.
 - CRA `coordinated vulnerability disclosure` was left out: the claim could not be verified against the fetched regulation text in this pass, and an unverified statutory duty is worse than a missing keyword.
+
+## 2026-10-29 — R3: cyber and AI Act gaps (built where the evidence was)
+
+Evidence rule unchanged: build only where autocomplete or impressions already exist; wording over new pages unless a distinct intent exists. Page-level GSC (28 d, all queries) put `/en/ai-act/` first (81 impressions, 5 clicks, position 4.5), which is why the AI Act got the deepest build.
+
+| Query family (seed frequency) | Page | Asset |
+| --- | --- | --- |
+| `iso 27001 auditeerimine` (57 + 9), `iso 27001 internal audit checklist xls` (13) | NEW `/iso-27001/auditeerimine/` (ET; EN twin already `/en/iso-27001/audit-checklist/`, now hreflang-paired) | Siseauditi töövihik XLSX |
+| `high risk ai systems` (7 ET / 14 EN), `ai act risk categories`, `risk management system ai act` (5), `ai act applicability` (16) | NEW `/ai-act/korge-riskiga-susteemid/` + `/en/ai-act/high-risk/` | Classification and evidence worksheet XLSX (ET + EN) |
+| `ai act article 50 ...` (8 variants), `tehisintellekti määrus`, `ai määrus` | Art 50 section, two FAQs and the naming sentence on `/ai-act/` and `/en/ai-act/` | none (hub copy) |
+| `cra vulnerability disclosure/reporting` (7, 7, 5, 3, 3, 3) | NEW EN-only `/en/cra/vulnerability-reporting/` | RFC 9116 security.txt builder + DOCX handling template |
+| `dora direktiiv` (20), `dora requirements` (19), `dora regulations` (17), `dora act` (12) | FAQ "regulation or directive" on `/dora/` and `/en/dora/` | none |
+| `pen testid` (8), `pen testimine` (8), `pentesting eesti` (9) | naming sentence in an existing FAQ on `/pentestimine/` | none |
+| `nis2 meaning` / `what is nis2` | FAQ + short answer on `/en/nis2/` | none |
+| `E-ITS nõuded` / `meetmed` / `rakendamine` | two sentences on `/e-its/`, `/en/e-its/` | none |
+
+Not built: LLM security, prompt injection, AI red teaming (no autocomplete demand in ET or EN); `/ai-turvatestimine/` stays a service page. `tlpt` pages already answered every requested row, so no edit.
+
+Correction made while checking sources: the E-ITS audit conclusion has two clocks. Audit rules point 6.17: 14 days to the supervisory authority after receiving the conclusion and final report. Government Regulation no. 121 § 4(2) (consolidated text in force 01.10.2026, RT I, 04.09.2026, 22): the provider forwards the conclusion to RIA within 30 days of receiving it. Both pages now state both and tell the reader to work to the earlier one. The two FAQ entries still mention only 14 days.

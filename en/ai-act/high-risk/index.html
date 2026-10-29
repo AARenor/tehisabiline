@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>High-Risk AI Systems: Classification and Evidence</title>
+    <meta name="description" content="How the AI Act decides high-risk: Article 6(1) and Annex III, the Article 6(3) exceptions, Articles 9-15 duties and the evidence a tester can produce.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Tehisabiline OÜ">
+    <meta name="theme-color" content="#0857f8">
+    <link rel="canonical" href="https://tehisabiline.ee/en/ai-act/high-risk/">
+    <link rel="alternate" hreflang="et" href="https://tehisabiline.ee/ai-act/korge-riskiga-susteemid/">
+    <link rel="alternate" hreflang="en" href="https://tehisabiline.ee/en/ai-act/high-risk/">
+    <link rel="alternate" hreflang="x-default" href="https://tehisabiline.ee/ai-act/korge-riskiga-susteemid/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="et_EE">
+    <meta property="og:site_name" content="Tehisabiline">
+    <meta property="og:title" content="High-Risk AI Systems: Classification and Evidence">
+    <meta property="og:description" content="Two routes to high-risk: the Annex I product-safety route and the eight Annex III areas, plus the Article 6(3) exception and Articles 9-15 evidence.">
+    <meta property="og:url" content="https://tehisabiline.ee/en/ai-act/high-risk/">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/og-en-ai-act-high-risk.png?v=1ced0d44">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Estonia · AI Act — High-Risk AI Systems: Classification and Evidence">
+    <meta name="article:published_time" content="2026-10-29">
+    <meta name="article:modified_time" content="2026-10-29">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="High-Risk AI Systems: Classification and Evidence">
+    <meta name="twitter:description" content="Two routes to high-risk: the Annex I product-safety route and the eight Annex III areas, plus the Article 6(3) exception and Articles 9-15 evidence.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/og-en-ai-act-high-risk.png?v=1ced0d44">
+    <meta name="twitter:image:alt" content="Estonia · AI Act — High-Risk AI Systems: Classification and Evidence">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=703dfa31">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png?v=1578d58e">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
+    <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=98f905c0">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#article",
+      "url": "https://tehisabiline.ee/en/ai-act/high-risk/",
+      "headline": "High-risk AI systems: classification, duties and evidence",
+      "description": "How the AI Act classifies high-risk systems: Article 6(1) Annex I route, the eight Annex III areas, the Article 6(3) exception with its profiling rule, Articles 8-15 requirements with the technical evidence behind each, provider and deployer duties, and the Article 99 fine tiers.",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "inLanguage": "en",
+      "author": {
+        "@type": "Person",
+        "@id": "https://tehisabiline.ee/#founder",
+        "name": "Arle Aron Reidma",
+        "url": "https://tehisabiline.ee/meist/#autor"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://tehisabiline.ee/#organization",
+        "name": "Tehisabiline OÜ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tehisabiline.ee/assets/brand/logo-512.png?v=2fdeb6ca",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://github.com/AARenor/tehisabiline",
+          "https://www.f6s.com/company/tehisabiline"
+        ]
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://tehisabiline.ee/assets/brand/og-en-ai-act-high-risk.png?v=1ced0d44",
+        "width": 1200,
+        "height": 630
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "AI Act"
+        },
+        {
+          "@type": "Thing",
+          "name": "High-risk AI systems"
+        },
+        {
+          "@type": "Thing",
+          "name": "AI security testing"
+        }
+      ],
+      "citation": [
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+        "https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng",
+        "https://artificialintelligenceact.eu/article/6/",
+        "https://artificialintelligenceact.eu/annex/3/",
+        "https://artificialintelligenceact.eu/article/26/",
+        "https://artificialintelligenceact.eu/article/99/",
+        "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+        "https://www.ttja.ee/ariklient/ohutus/tooted-teenused/tehisintellektisusteemid"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#webpage",
+      "url": "https://tehisabiline.ee/en/ai-act/high-risk/",
+      "name": "High-Risk AI Systems: Classification and Evidence | Tehisabiline",
+      "description": "How the AI Act decides high-risk: Article 6(1) and Annex III, the Article 6(3) exceptions, Articles 9-15 duties and the evidence a tester can produce.",
+      "datePublished": "2026-10-29",
+      "dateModified": "2026-10-29",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/#website"
+      },
+      "about": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#article"
+      },
+      "author": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "publisher": {
+        "@id": "https://tehisabiline.ee/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#breadcrumb"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#faq",
+      "isPartOf": {
+        "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#webpage"
+      },
+      "inLanguage": "en",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between the Annex I and Annex III routes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Annex I route (Article 6(1)) needs two conditions at once: the AI system is a safety component of a product covered by Union harmonisation legislation listed in Annex I, or is itself such a product, and that product must undergo a third-party conformity assessment. The Annex III route (Article 6(2)) is a list of eight areas: if the system is intended for a use listed there, it is high-risk unless the Article 6(3) exception applies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Article 6(3) exception remove all duties?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The exception only says that an Annex III system is not considered high-risk. For that, the system must not pose a significant risk of harm to health, safety or fundamental rights and must not materially influence the outcome of decision making, and it must meet one of four conditions. The provider must document the assessment before placing the system on the market (Article 6(4)) and register it (Article 49(2)). If the conditions are not met, every requirement in Section 2 applies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a system that profiles people always high-risk?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Where an Annex III system performs profiling of natural persons, it is always considered high-risk: the last subparagraph of Article 6(3) removes the exception in that case."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When do the high-risk obligations apply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI Act entered into force on 1 August 2024. Article 5 prohibitions and Article 4 AI literacy apply from 2 February 2025 (Article 113(a)); general-purpose AI obligations from 2 August 2025; general application and Article 50 transparency from 2 August 2026; new prohibitions and the Article 50(2) transition on 2 December 2026; Annex III high-risk obligations from 2 December 2027; and Annex I product rules from 2 August 2028."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What must a provider of a high-risk system do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A provider must ensure compliance with the Section 2 requirements, run a quality-management system (Article 17), draw up the technical documentation (Article 11 and Annex IV), keep the logs (Article 19), complete the conformity assessment (Article 43), draw up the EU declaration of conformity (Article 47) and affix the CE marking (Article 48)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What must a deployer of a high-risk system do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the system according to the instructions for use, assign competent human oversight, ensure the input data is relevant and sufficiently representative, monitor operation and suspend use when a risk appears, report serious incidents and keep the logs for at least six months (Article 26). Public authorities must also register themselves and the system (Article 26(8), Article 49)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a penetration test prove Article 15 compliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Article 15 requires an appropriate level of accuracy, robustness and cybersecurity, including resilience against AI-specific attacks. A penetration test produces evidence for one part, usually cybersecurity and adversarial inputs, and does not replace the risk-management system, data governance, technical documentation or human oversight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Must an Annex III system be registered in the EU database?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Before placing on the market or putting into service, a high-risk system listed in Annex III must be registered in the EU database, except the critical-infrastructure systems referred to in point 2 of Annex III (Article 49(1)). A system assessed as not high-risk under Article 6(3) must also be registered (Article 49(2))."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://tehisabiline.ee/en/ai-act/high-risk/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Estonia regulations",
+          "item": "https://tehisabiline.ee/en/regulations/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Act",
+          "item": "https://tehisabiline.ee/en/ai-act/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "High-risk systems",
+          "item": "https://tehisabiline.ee/en/ai-act/high-risk/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <!-- chrome:header -->
+<header class="site-header" id="navbar">
+    <div class="wrap site-header__bar">
+        <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline</span><span class="visually-hidden"> – home</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="/en/pentesting/">Audit / pentest</a>
+            <a href="/mudelid/">Cyber-AI API</a>
+            <a href="/en/nis2/">NIS2</a>
+            <a href="/meist/">About</a>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="i i--open" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#menu"/></svg><svg class="i i--close" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu" hidden>
+        <a href="/en/pentesting/">Audit / pentest</a>
+        <a href="/mudelid/">Cyber-AI API</a>
+        <a href="/en/nis2/">NIS2</a>
+        <a href="/meist/">About</a>
+        <a class="btn btn--primary" href="/en/#contact">Free assessment<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a>
+    </nav>
+</header>
+<!-- /chrome:header -->
+    <main id="main-content">
+        <header class="page-head"><div class="wrap">
+            <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/en/regulations/">Estonia regulations</a></li><li><a href="/en/ai-act/">AI Act</a></li><li aria-current="page">High-risk systems</li></ol></nav>
+            <p class="eyebrow">Estonia · AI Act</p>
+            <h1>High-risk AI systems under the AI Act</h1>
+            <p class="lead">Most of the AI Act's weight sits in the high-risk chapter. This page shows how classification actually works: the Article 6(1) product-safety route, the eight Annex III areas use by use, the four Article 6(3) conditions and the profiling rule, the requirements in Articles 9-15, and the evidence a technical tester can produce for each.</p>
+            <p class="page-head__meta">By <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Last materially updated <time datetime="2026-10-29">29 October 2026</time></p>
+        </div></header>
+
+        <section class="section"><div class="wrap article">
+            <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#short-answer">Short answer</a></li><li><a href="#classification">Classification in order</a></li><li><a href="#annex-iii">The eight Annex III areas</a></li><li><a href="#exception">The Article 6(3) exception</a></li><li><a href="#requirements">Requirements and evidence</a></li><li><a href="#example">Worked example</a></li><li><a href="#roles">Provider, deployer and others</a></li><li><a href="#fines">Fines</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#worksheet">Worksheet</a></li><li><a href="#faq">FAQ</a></li><li><a href="#sources">Sources</a></li></ol></nav>
+            <article class="prose">
+                <section class="short-answer" id="short-answer"><h2>High-risk AI systems: short answer</h2>
+                    <p>A <strong>high-risk AI system</strong> under Regulation (EU) 2024/1689 arrives by one of two routes. <strong>Article 6(1), the product-safety route:</strong> the system is a safety component of a product covered by Union harmonisation legislation listed in Annex I, or is itself such a product, <em>and</em> that product must undergo a third-party conformity assessment. <strong>Article 6(2), the Annex III route:</strong> the system is intended for a use listed in one of the eight areas of Annex III.</p>
+                    <p>An Annex III system can be kept out of high-risk only through Article 6(3): it must not pose a significant risk of harm to health, safety or fundamental rights, must not materially influence the outcome of decision making, and must meet one of four narrow conditions. Profiling removes the exception entirely. The decision is not a marketing position: the provider must document it before placing the system on the market (Article 6(4)) and register the system (Article 49).</p>
+                    <p>Working tool: <a href="/assets/downloads/ai-act-high-risk-worksheet.xlsx" download>AI Act high-risk worksheet (Excel)</a> — classification by Annex III use, the Articles 9-15 requirements with evidence, and a role test.</p>
+                </section>
+
+                <section id="classification"><h2>How classification works, step by step</h2>
+                    <p>Classification does not start from a model name or a vendor claim. It starts from the <strong>intended purpose</strong> and your role. The order matters: each step can overrule the previous answer.</p>
+                    <ol>
+                        <li><strong>Scope and role (Article 2).</strong> The Act applies to providers placing systems on the Union market or putting them into service, whether established inside or outside the Union; to deployers established in the Union; to providers and deployers in third countries where the system's output is used in the Union; and to importers, distributors and product manufacturers. The role sets the duties, not the company size.</li>
+                        <li><strong>Prohibited practice first (Article 5).</strong> If the use case is a prohibited practice, the question is no longer about risk class — the system must not be used. The prohibition dates and exceptions are in the <a href="/en/ai-act/">AI Act overview</a>.</li>
+                        <li><strong>Annex I route (Article 6(1)).</strong> Test both conditions together: (a) the system is a safety component of a product covered by Annex I harmonisation legislation, or is itself such a product; (b) the product must undergo a third-party conformity assessment. Article 6(1a)-(1c) draw the boundary: a system used solely for user assistance, performance optimisation, service efficiency, automation or convenience, or quality control, is not a safety component; a system whose failure or malfunctioning would endanger health and safety is one; and a product that needs third-party assessment solely for risks other than health and safety (for example radio-spectrum distribution or electromagnetic interference) does not meet point (b).</li>
+                        <li><strong>Annex III route (Article 6(2)).</strong> Match the intended purpose against the eight areas and the uses listed there (table below). For areas 1, 6 and 7, Annex III applies only in so far as the use is permitted under Union or national law.</li>
+                        <li><strong>The Article 6(3) test.</strong> If the system is in Annex III, check whether the exception applies at all: four conditions plus the profiling rule (separate section below). The exception is not available "partly" — if one condition fails, the system is high-risk.</li>
+                        <li><strong>Document and register (Article 6(4), Article 49).</strong> Where a provider concludes that an Annex III system is not high-risk, it must document that assessment before placing the system on the market or putting it into service and register the system under Article 49(2); the documentation goes to a national competent authority on request.</li>
+                        <li><strong>Conformity assessment (Article 43).</strong> For Annex III point 1 (biometrics), a provider that applies harmonised standards or common specifications may choose internal control (Annex VI) or the quality-management and technical-documentation assessment with a notified body (Annex VII); where no such standards exist or they are not applied, Annex VII applies. For Annex III points 2 to 8, internal control under Annex VI applies, without a notified body. For Annex I products, the relevant product-safety conformity assessment is followed and the Section 2 requirements become part of it.</li>
+                        <li><strong>Commission guidelines (Article 6(5)).</strong> The Act requires the Commission to provide guidelines on the practical implementation of Article 6, with a list of practical examples of high-risk and non-high-risk uses, by 2 February 2026. Before you commit a project, check whether the guidelines are published and what they say about your sector.</li>
+                    </ol>
+                    <p>Article 6 also lets the Commission amend the Article 6(3) conditions by delegated act where there is concrete and reliable evidence (Article 6(6)-(8)). A classification is therefore not permanent.</p>
+                </section>
+
+                <section id="annex-iii"><h2>The eight Annex III areas</h2>
+                    <p>The table follows the Annex III wording. The third column gives examples of the same use in plain language; it neither widens nor narrows the text.</p>
+                    <div class="table-wrap table-wrap--stack">
+                        <table class="data">
+                            <thead><tr><th scope="col">Area</th><th scope="col">What Annex III says</th><th scope="col">Examples of the same use</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">1. Biometrics<br>(where Union or national law permits)</th><td data-label="Annex III">Remote biometric identification; biometric categorisation according to sensitive or protected attributes based on inferring them; emotion recognition. Excluded: biometric verification whose sole purpose is to confirm that a person is who they claim to be.</td><td data-label="Examples">Face matching on CCTV; inferring emotion from voice in an interview; sorting visitors by inferred age or sex. Face login for authentication is the stated exclusion.</td></tr>
+                                <tr><th scope="row">2. Critical infrastructure</th><td data-label="Annex III">Systems used as safety components in the management and operation of critical digital infrastructure, road traffic, or the supply of water, gas, heating or electricity.</td><td data-label="Examples">AI that manages grid load or traffic flow where a failure affects safety.</td></tr>
+                                <tr><th scope="row">3. Education and vocational training</th><td data-label="Annex III">Determining access, admission or assignment to institutions at all levels; evaluating learning outcomes, including where they steer the learning process; assessing the level of education a person can access; monitoring and detecting prohibited behaviour during tests.</td><td data-label="Examples">Automatic admission scoring; essay grading that steers the curriculum; camera-based exam proctoring.</td></tr>
+                                <tr><th scope="row">4. Employment and workers</th><td data-label="Annex III">Recruitment and selection, including targeted job advertisements, analysing and filtering applications and evaluating candidates; decisions affecting terms of work (promotion, termination), allocating tasks based on behaviour or traits, and monitoring or evaluating performance and behaviour.</td><td data-label="Examples">Automatic CV filtering; interview scoring; continuous productivity scoring of employees.</td></tr>
+                                <tr><th scope="row">5. Essential private and public services and benefits</th><td data-label="Annex III">Used by or on behalf of public authorities to evaluate eligibility for essential public benefits and services, including healthcare, and to grant, reduce, revoke or reclaim them; creditworthiness or credit scoring (exception: detecting financial fraud); risk assessment and pricing for life and health insurance; evaluating and classifying emergency calls, dispatching or prioritising first responders and emergency triage.</td><td data-label="Examples">Benefit eligibility scoring; payday-loan credit scoring; insurance risk scoring; emergency-call classification and dispatch.</td></tr>
+                                <tr><th scope="row">6. Law enforcement<br>(where Union or national law permits)</th><td data-label="Annex III">Assessing the risk of a person becoming a victim of crime; polygraphs and similar tools; evaluating the reliability of evidence; assessing the risk of offending or re-offending, or personality traits and past criminal behaviour; profiling under Article 3(4) of Directive (EU) 2016/680.</td><td data-label="Examples">Victimisation-risk scoring; statement-reliability scoring; re-offending risk scoring.</td></tr>
+                                <tr><th scope="row">7. Migration, asylum and border control<br>(where Union or national law permits)</th><td data-label="Annex III">Polygraphs and similar tools; assessing a risk, including security, irregular migration or health risk; assisting the examination of asylum, visa or residence-permit applications, including the reliability of evidence; detecting, recognising or identifying persons (exception: verification of travel documents).</td><td data-label="Examples">Application pre-screening scores; identity checks at the border; security-risk classification.</td></tr>
+                                <tr><th scope="row">8. Justice and democratic processes</th><td data-label="Annex III">Assisting a judicial authority in researching and interpreting facts and the law and applying the law to a concrete set of facts, or used similarly in alternative dispute resolution; influencing the outcome of an election or referendum or voting behaviour (exception: tools whose output people are not directly exposed to, such as campaign administration).</td><td data-label="Examples">Drafting assistance for a court; targeting voters for persuasion.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Annex III is not a closed list for all time: Article 7 allows the Commission to add new areas by delegated act. Check the current text of Annex III before you sign off a classification.</p>
+                </section>
+
+                <section id="exception"><h2>The Article 6(3) exception: four conditions and the profiling rule</h2>
+                    <p>An Annex III system <strong>is not considered high-risk</strong> where it does not pose a significant risk of harm to the health, safety or fundamental rights of natural persons, including by not materially influencing the outcome of decision making. It must also meet one of the following conditions:</p>
+                    <ul>
+                        <li><strong>(a)</strong> the system is intended to perform a narrow procedural task;</li>
+                        <li><strong>(b)</strong> the system is intended to improve the result of a previously completed human activity;</li>
+                        <li><strong>(c)</strong> the system is intended to detect decision-making patterns or deviations from prior decision-making patterns and is not meant to replace or influence the previously completed human assessment without proper human review; or</li>
+                        <li><strong>(d)</strong> the system is intended to perform a preparatory task to an assessment relevant for the Annex III use cases.</li>
+                    </ul>
+                    <p><strong>Profiling overrides all of the above:</strong> an Annex III system that performs profiling of natural persons is always considered high-risk. In practice, a recruitment, credit or risk-scoring system that processes personal data to evaluate a person does not escape through the exception, even if the vendor calls it "decision support".</p>
+                    <p>The exception cannot be used silently. Under Article 6(4) the provider must document the assessment before placing the system on the market or putting it into service, register the system under Article 49(2), and provide the documentation to a national competent authority on request. If the conditions fail, every Section 2 requirement applies: risk management, data governance, technical documentation, logging, transparency, human oversight, and accuracy, robustness and cybersecurity.</p>
+                </section>
+
+                <section id="requirements"><h2>Requirements and evidence: Articles 9-15</h2>
+                    <p>The requirements for high-risk systems sit in Articles 8-15. The table maps each requirement to evidence a technical tester or developer can actually produce. Evidence you cannot show is not evidence.</p>
+                    <div class="table-wrap table-wrap--stack">
+                        <table class="data">
+                            <thead><tr><th scope="col">Article</th><th scope="col">Requirement</th><th scope="col">Evidence to collect</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">Art 9</th><td data-label="Requirement">A risk-management system across the lifecycle: identifying and analysing risks, estimating them also under reasonably foreseeable misuse, using post-market monitoring data and applying targeted measures.</td><td data-label="Evidence">Risk register with likelihood and impact; a test and result for each mitigation; the feedback loop from post-market monitoring (Article 72); review log.</td></tr>
+                                <tr><th scope="row">Art 10</th><td data-label="Requirement">Data governance: suitability, origin, quality and bias examination of training, validation and testing data.</td><td data-label="Evidence">Data map (source, collection purpose, period, label quality); duplicate and leakage tests; bias measurement by group.</td></tr>
+                                <tr><th scope="row">Art 11</th><td data-label="Requirement">Technical documentation drawn up before placing on the market, kept up to date and containing at least the Annex IV elements.</td><td data-label="Evidence">Document register with versions; a mapping from every Article 9-15 requirement to its evidence; change log with approver.</td></tr>
+                                <tr><th scope="row">Art 12</th><td data-label="Requirement">The system must technically allow automatic recording of events (logs) over its lifetime, so that risk situations, substantial modifications and deployer oversight can be investigated later. For Annex III point 1(a) systems, the log must cover at least the period of each use, the reference database, the input data that produced a match, and the persons who verified the results.</td><td data-label="Evidence">Log schema and field list; real event samples before and after a fix; clock source; tamper-detection test; access rights to the logs.</td></tr>
+                                <tr><th scope="row">Art 13</th><td data-label="Requirement">Transparency and instructions for use: characteristics, capabilities and limitations, including declared accuracy, robustness and cybersecurity.</td><td data-label="Evidence">The instructions text; the measurement protocol behind the declared accuracy metrics; a list of known limitations and weaknesses.</td></tr>
+                                <tr><th scope="row">Art 14</th><td data-label="Requirement">Effective human oversight during use, built into the system or implemented by the deployer, proportionate to risk and level of autonomy.</td><td data-label="Evidence">Oversight role and authority; a stop test; an approval test (does a decision pass without a person?); training and competence evidence.</td></tr>
+                                <tr><th scope="row">Art 15</th><td data-label="Requirement">An appropriate level of accuracy (metrics declared in the instructions for use), robustness against errors, faults and inconsistencies, and cybersecurity, including resilience against attempts to alter use, outputs or performance. AI-specific vulnerabilities: data poisoning, poisoning of pre-trained components, adversarial examples (model evasion), confidentiality attacks and model flaws.</td><td data-label="Evidence">Test dataset and metrics with the calculation method; fault-injection tests and recovery time; fail-safe plan test; authorised penetration-test report with scope; prompt-injection and adversarial-input tests; a result and mitigation for each attempt.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Article 8 ties compliance to the intended purpose and the generally acknowledged state of the art, and requires the risk-management system of Article 9 to be taken into account. Where a product contains both an AI system and Annex I product-safety requirements, the provider is responsible for all applicable requirements and may integrate testing, reporting and documentation into existing procedures (Article 8(2)).</p>
+                    <p>The technical part — prompt injection, RAG data leakage, agent permissions and output misuse — is what can actually be tested. That work is described in our <a href="/ai-turvatestimine/" lang="et">AI security testing guide</a> (Estonian) and in the <a href="/en/pentesting/">penetration testing service</a>. A test result is evidence for one part of a requirement, not a conformity assessment.</p>
+                </section>
+
+                <section id="example"><h2>One worked example</h2>
+                    <p>A company runs an AI assistant on its recruitment platform that ranks candidates and drafts a shortlist. The vendor argues the system only "improves a previously completed human activity" and therefore sits under Article 6(3)(b).</p>
+                    <ul>
+                        <li><strong>Classification.</strong> The use matches Annex III point 4(a): analysing and filtering job applications and evaluating candidates. It is an Annex III system.</li>
+                        <li><strong>Exception test.</strong> If the system evaluates candidate attributes automatically, it profiles natural persons, and the Article 6(3) exception cannot apply. Even without profiling, the provider would have to show that the system does not materially influence the outcome — assembling a shortlist does.</li>
+                        <li><strong>Conclusion.</strong> The system is high-risk. The provider documents the assessment (Article 6(4)) and registers the system (Article 49(1)), draws up technical documentation (Article 11) and runs the conformity assessment by internal control (Article 43(2), Annex VI).</li>
+                        <li><strong>Evidence.</strong> A data map and bias measurement by sex and age (Article 10); logs that show who reviewed the result (Articles 12 and 14); declared accuracy and its measurement protocol (Articles 13 and 15); prompt-injection and data-leakage tests if the platform uses an LLM (Article 15).</li>
+                        <li><strong>Deployer duty.</strong> The employer as deployer ensures human oversight, informs workers and their representatives about the use at the workplace, and keeps the logs for at least six months (Article 26).</li>
+                    </ul>
+                </section>
+
+                <section id="roles"><h2>Provider, deployer and the rest of the chain</h2>
+                    <p>The same system creates different duties per role. The role follows who places the system on the market, who puts it into service and who passes it on — not who wrote the code.</p>
+                    <div class="table-wrap table-wrap--stack">
+                        <table class="data">
+                            <thead><tr><th scope="col">Role</th><th scope="col">Main duties</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">Provider</th><td data-label="Duties">Compliance with the Section 2 requirements, name and contact details on the system or its documentation, a quality-management system (Article 17), technical documentation (Article 18, Article 11), logs under its control (Article 19), conformity assessment (Article 43), EU declaration of conformity (Article 47) and CE marking (Article 48) — Article 16.</td></tr>
+                                <tr><th scope="row">Deployer</th><td data-label="Duties">Use per the instructions, competent human oversight, relevant input data, monitoring operation and suspending use when a risk appears, reporting serious incidents, keeping logs for at least six months, informing workers and their representatives at the workplace, registration by public authorities — Article 26.</td></tr>
+                                <tr><th scope="row">Fundamental rights impact assessment</th><td data-label="Duties">Bodies governed by public law, private entities providing public services, and deployers of Annex III points 5(b) and (c) systems assess the impact on fundamental rights before first use (Article 27(1)); Annex III point 2 (critical infrastructure) is excluded.</td></tr>
+                                <tr><th scope="row">Importer (Article 23)</th><td data-label="Duties">Before placing on the market, verify that the conformity assessment was carried out, the technical documentation exists, and the system carries the CE marking and the EU declaration of conformity.</td></tr>
+                                <tr><th scope="row">Distributor (Article 24)</th><td data-label="Duties">Verify the CE marking, a copy of the declaration of conformity and the instructions for use, and that the provider and importer met their duties.</td></tr>
+                                <tr><th scope="row">Change of role (Article 25)</th><td data-label="Duties">A distributor, importer, deployer or other third party is treated as a provider when it puts its name or trademark on a high-risk system or makes a substantial modification to it.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>The full role test with evidence sits on the "Roles" sheet of the worksheet. If you are provider and deployer at once, both sets of duties apply.</p>
+                </section>
+
+                <section id="fines"><h2>Fine tiers</h2>
+                    <p>Article 99 sets ceilings within which Member States lay down penalties. Where an amount and a percentage are both given, the higher one applies.</p>
+                    <div class="table-wrap table-wrap--stack">
+                        <table class="data">
+                            <thead><tr><th scope="col">Infringement</th><th scope="col">Ceiling (Article 99)</th></tr></thead>
+                            <tbody>
+                                <tr><th scope="row">Prohibited practices (Article 5)</th><td data-label="Ceiling">EUR 35 000 000 or 7% of total worldwide annual turnover, whichever is higher (Article 99(3)).</td></tr>
+                                <tr><th scope="row">Other obligations, including provider (Article 16), deployer (Article 26) and transparency (Article 50)</th><td data-label="Ceiling">EUR 15 000 000 or 3% of total worldwide annual turnover, whichever is higher (Article 99(4)).</td></tr>
+                                <tr><th scope="row">Incorrect, incomplete or misleading information to authorities</th><td data-label="Ceiling">EUR 7 500 000 or 1% of total worldwide annual turnover, whichever is higher (Article 99(5)).</td></tr>
+                                <tr><th scope="row">SMEs and start-ups</th><td data-label="Ceiling">Each fine is capped at the lower of the percentage and the amount (Article 99(6)).</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="timeline"><h2>Timeline</h2>
+                    <p>The high-risk obligations do not start across the whole Act at once:</p>
+                    <ul>
+                        <li><strong>Annex III high-risk obligations from 2 December 2027 (Article 6(2), Article 113); Annex I product rules from 2 August 2028 (Article 6(1)).</strong></li>
+                    </ul>
+                    <p>The AI Act entered into force on 1 August 2024. Article 5 prohibitions and Article 4 AI literacy apply from 2 February 2025 (Article 113(a)); general-purpose AI obligations from 2 August 2025; general application and Article 50 transparency from 2 August 2026; new prohibitions and the Article 50(2) transition on 2 December 2026; Annex III high-risk obligations from 2 December 2027; and Annex I product rules from 2 August 2028.</p>
+                    <p>Dates checked on 27 October 2026 against the <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng" rel="noopener">consolidated AI Act</a> (including Regulation (EU) 2026/1744, which moved the high-risk deadlines and added the new prohibitions) and the <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" rel="noopener">European Commission AI Act Service Desk timeline</a>. The schedule has changed before; verify the current text before you commit a project.</p>
+                </section>
+
+                <section id="worksheet"><h2>Worksheet</h2>
+                    <p>The <a href="/assets/downloads/ai-act-high-risk-worksheet.xlsx" download>AI Act high-risk worksheet (Excel)</a> is a three-sheet working tool that follows the same structure as this page:</p>
+                    <ul>
+                        <li><strong>Classification</strong> — one row per Annex III use (25 rows), a question about your system, the Article 6(3) test, a rationale and an evidence reference.</li>
+                        <li><strong>Requirements and evidence</strong> — Articles 9-15, each with a concrete test and evidence, an owner, a status and a location. Article 12 logging and Article 15 accuracy, robustness and cybersecurity are split into smaller rows you can test separately.</li>
+                        <li><strong>Roles</strong> — a role test for provider, deployer, importer, distributor, change of role and the fundamental rights impact assessment.</li>
+                    </ul>
+                    <p>The worksheet is a working tool, not a declaration of conformity or legal advice. A completed table without evidence locations cannot be used in an audit.</p>
+                </section>
+
+                <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
+                    <details><summary><h3>What is the difference between the Annex I and Annex III routes?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The Annex I route (Article 6(1)) needs two conditions at once: the AI system is a safety component of a product covered by Union harmonisation legislation listed in Annex I, or is itself such a product, and that product must undergo a third-party conformity assessment. The Annex III route (Article 6(2)) is a list of eight areas: if the system is intended for a use listed there, it is high-risk unless the Article 6(3) exception applies.</p></details>
+                    <details><summary><h3>Does the Article 6(3) exception remove all duties?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The exception only says that an Annex III system is not considered high-risk. For that, the system must not pose a significant risk of harm to health, safety or fundamental rights and must not materially influence the outcome of decision making, and it must meet one of four conditions. The provider must document the assessment before placing the system on the market (Article 6(4)) and register it (Article 49(2)). If the conditions are not met, every requirement in Section 2 applies.</p></details>
+                    <details><summary><h3>Is a system that profiles people always high-risk?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Yes. Where an Annex III system performs profiling of natural persons, it is always considered high-risk: the last subparagraph of Article 6(3) removes the exception in that case.</p></details>
+                    <details><summary><h3>When do the high-risk obligations apply?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">The AI Act entered into force on 1 August 2024. Article 5 prohibitions and Article 4 AI literacy apply from 2 February 2025 (Article 113(a)); general-purpose AI obligations from 2 August 2025; general application and Article 50 transparency from 2 August 2026; new prohibitions and the Article 50(2) transition on 2 December 2026; Annex III high-risk obligations from 2 December 2027; and Annex I product rules from 2 August 2028.</p></details>
+                    <details><summary><h3>What must a provider of a high-risk system do?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">A provider must ensure compliance with the Section 2 requirements, run a quality-management system (Article 17), draw up the technical documentation (Article 11 and Annex IV), keep the logs (Article 19), complete the conformity assessment (Article 43), draw up the EU declaration of conformity (Article 47) and affix the CE marking (Article 48).</p></details>
+                    <details><summary><h3>What must a deployer of a high-risk system do?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Use the system according to the instructions for use, assign competent human oversight, ensure the input data is relevant and sufficiently representative, monitor operation and suspend use when a risk appears, report serious incidents and keep the logs for at least six months (Article 26). Public authorities must also register themselves and the system (Article 26(8), Article 49).</p></details>
+                    <details><summary><h3>Does a penetration test prove Article 15 compliance?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">No. Article 15 requires an appropriate level of accuracy, robustness and cybersecurity, including resilience against AI-specific attacks. A penetration test produces evidence for one part, usually cybersecurity and adversarial inputs, and does not replace the risk-management system, data governance, technical documentation or human oversight.</p></details>
+                    <details><summary><h3>Must an Annex III system be registered in the EU database?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><p class="answer">Yes. Before placing on the market or putting into service, a high-risk system listed in Annex III must be registered in the EU database, except the critical-infrastructure systems referred to in point 2 of Annex III (Article 49(1)). A system assessed as not high-risk under Article 6(3) must also be registered (Article 49(2)).</p></details>
+                </div></section>
+
+                <section id="sources"><h2>Sources</h2>
+                    <ul>
+                        <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" rel="noopener">AI Act, Regulation (EU) 2024/1689</a> — the legal text.</li>
+                        <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/2026-07-27/eng" rel="noopener">Consolidated AI Act (state of 27 July 2026, including Regulation (EU) 2026/1744)</a>.</li>
+                        <li><a href="https://artificialintelligenceact.eu/article/6/" rel="noopener">Article 6 (classification)</a>, <a href="https://artificialintelligenceact.eu/annex/3/" rel="noopener">Annex III</a>, <a href="https://artificialintelligenceact.eu/article/26/" rel="noopener">Article 26</a>, <a href="https://artificialintelligenceact.eu/article/27/" rel="noopener">Article 27</a>, <a href="https://artificialintelligenceact.eu/article/43/" rel="noopener">Article 43</a>, <a href="https://artificialintelligenceact.eu/article/49/" rel="noopener">Article 49</a> and <a href="https://artificialintelligenceact.eu/article/99/" rel="noopener">Article 99</a> — read on 29 October 2026 on the open AI Act Explorer pages and used to check the wording. Articles 8-17 and 23-25 were read from the same source.</li>
+                        <li><a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" rel="noopener">European Commission: AI Act Service Desk, implementation timeline</a>.</li>
+                        <li><a href="https://www.ttja.ee/ariklient/ohutus/tooted-teenused/tehisintellektisusteemid" rel="noopener">TTJA: AI systems (in Estonian)</a>.</li>
+                    </ul>
+                    <p>Written from the regulation text on 29 October 2026. This is not legal advice: the classification and the conformity assessment remain the responsibility of the provider.</p>
+                </section>
+
+                <section class="related" aria-labelledby="related"><h2 id="related">Related guides</h2><ul class="related__list"><li><a href="/en/ai-act/"><span class="related__title">AI Act in Estonia: overview</span><span class="related__desc">Risk classes, deadlines, GPAI, TTJA supervision and the Article 50 transparency duties.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/en/pentesting/"><span class="related__title">Penetration testing</span><span class="related__desc">Scope, authorization and the evidence a report gives you.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/ai-turvatestimine/" lang="et"><span class="related__title">AI security testing (Estonian)</span><span class="related__desc">Prompt injection, RAG leakage and agent permissions.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li><li><a href="/en/regulations/"><span class="related__title">Estonia regulations overview</span><span class="related__desc">NIS2, DORA, CRA, AI Act, E-ITS and ISO 27001 side by side.</span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></li></ul></section>
+            </article>
+        </div></section>
+        <section class="band"><div class="wrap band__inner"><h2>Need technical evidence for Article 15?</h2><p>Describe the system, its intended purpose and its risk class. We will tell you what we can test, what evidence that gives — and what a test does not prove.</p><a class="btn btn--white" href="/en/pentesting/">Penetration testing<svg class="i i--go" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#arrow-right"/></svg></a></div></section>
+    </main>
+    <!-- chrome:footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div class="site-footer__about">
+                <a class="brand" href="/"><img src="/assets/brand/logo.svg?v=85069ce5" width="64" height="64" alt=""><span translate="no">Tehisabiline OÜ</span><span class="visually-hidden"> – home</span></a>
+                <p>Penetration testing and cyber audits under written authorization, with human review. API for security tooling.</p>
+                <p class="site-footer__title">Contact</p>
+                <ul>
+                    <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
+                    <li>Reg. no. 17607255 · Viimsi Parish, Harju County</li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Founder on LinkedIn</a></li>
+                    <li><a href="/en/#contact">Free assessment</a></li>
+                </ul>
+            </div>
+            <nav aria-label="Service links">
+                <p class="site-footer__title">Services</p>
+                <ul>
+                    <li><a href="/en/pentesting/">Penetration testing</a></li>
+                    <li><a href="/en/pentest-report/">Pentest report template</a></li>
+                    <li><a href="/en/security-audit/">Cybersecurity audit</a></li>
+                    <li><a href="/en/security-audit/checklist/">Cybersecurity audit checklist</a></li>
+                    <li><a href="/mudelid/" hreflang="et" lang="et">Cyber-AI API (Estonian)</a></li>
+                    <li><a href="/kasutusjuhud/" hreflang="et" lang="et">Cyber-AI use cases (Estonian)</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="NIS2 links">
+                <p class="site-footer__title">NIS2 in Estonia</p>
+                <ul>
+                    <li><a href="/en/nis2/">NIS2 in Estonia: overview</a></li>
+                    <li><a href="/en/nis2/registration/">Registration with RIA</a></li>
+                    <li><a href="/en/nis2/incident-reporting/">Incident reporting</a></li>
+                    <li><a href="/en/nis2/fines/">Fines and liability</a></li>
+                    <li><a href="/en/nis2/audit/">NIS2 audit</a></li>
+                    <li><a href="/en/nis2/checklist/">NIS2 compliance checklist</a></li>
+                    <li><a href="/en/nis2/scope-assessment/">NIS2 scope assessment</a></li>
+                    <li><a href="/en/nis2/vs-iso-27001/">NIS2 vs ISO 27001</a></li>
+                    <li><a href="/en/nis2/suppliers/">NIS2 supplier requirements</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Regulation links">
+                <p class="site-footer__title">Regulations</p>
+                <ul>
+                    <li><a href="/en/regulations/">Estonia regulations overview</a></li>
+                    <li><a href="/en/dora/">DORA in Estonia</a></li>
+                    <li><a href="/en/dora/register/">DORA register of information</a></li>
+                    <li><a href="/en/dora/audit/">DORA audit</a></li>
+                    <li><a href="/en/cra/">CRA in Estonia</a></li>
+                    <li><a href="/en/sbom/">SBOM for the CRA</a></li>
+                    <li><a href="/en/ai-act/">AI Act in Estonia</a></li>
+                    <li><a href="/en/e-its/">E-ITS in Estonia</a></li>
+                    <li><a href="/en/iso-27001/">ISO 27001 in Estonia</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Company links">
+                <p class="site-footer__title">Company</p>
+                <ul>
+                    <li><a href="/en/">Tehisabiline in English</a></li>
+                    <li><a href="/en/press/">Press kit</a></li>
+                    <li><a href="/meist/" hreflang="et" lang="et">About (Estonian)</a></li>
+                    <li><a href="/privaatsus/" hreflang="et" lang="et">Privacy (Estonian)</a></li>
+                    <li><a href="/llms.txt">For AI systems</a></li>
+                    <li><a href="/" hreflang="et" lang="et">Eesti keeles</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="site-footer__legal">
+            <span>© 2026 Tehisabiline OÜ. All rights reserved.</span>
+            <span>Last materially updated <time datetime="2026-10-29">29 October 2026</time></span>
+        </div>
+    </div>
+</footer>
+<!-- /chrome:footer -->
+<!-- chrome:widget -->
+<link rel="stylesheet" href="/assistant.css">
+<script src="/assistant.js" defer></script>
+<!-- /chrome:widget -->
+</body>
+</html>

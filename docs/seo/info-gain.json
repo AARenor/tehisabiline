@@ -1,7 +1,7 @@
 {
   "$comment": "Per-page information gain: the one thing this page has that a competing page does not. Enforced by tools/info-gain.mjs (npm run test:seo). proof must be a string that appears verbatim in the page HTML, so this file cannot silently reference a deleted asset. Pages without an entry are listed as gaps in docs/seo/topical-map.md.",
-  "updated": "2026-10-28",
-  "requiredCoverage": 36,
+  "updated": "2026-10-29",
+  "requiredCoverage": 40,
   "pages": {
     "/": {
       "asset": "Regulatsioonide tähtaegade kalender (ICS)",
@@ -108,6 +108,21 @@
       "type": "calculator",
       "proof": "/assets/js/sbom-check.js"
     },
+    "/iso-27001/auditeerimine/": {
+      "asset": "Siseauditi töövihik (Excel: auditiprogramm, nõuded 4–10, leidude register, parandusmeetmed)",
+      "type": "template",
+      "proof": "/assets/downloads/iso-27001-siseauditi-toovihik.xlsx"
+    },
+    "/ai-act/korge-riskiga-susteemid/": {
+      "asset": "Art 6 / III lisa klassifikatsiooni tööleht koos art 9–15 tõenditega (XLSX)",
+      "type": "template",
+      "proof": "/assets/downloads/ai-act-korge-risk-too-leht.xlsx"
+    },
+    "/en/ai-act/high-risk/": {
+      "asset": "Article 6 / Annex III classification worksheet with the Article 9-15 evidence map (XLSX)",
+      "type": "template",
+      "proof": "/assets/downloads/ai-act-high-risk-worksheet.xlsx"
+    },
     "/cra/": {
       "asset": "CRA kohaldumise enesekontroll",
       "type": "calculator",
@@ -117,6 +132,11 @@
       "asset": "CRA scope self-check",
       "type": "calculator",
       "proof": "/assets/js/cra-check-en.js"
+    },
+    "/en/cra/vulnerability-reporting/": {
+      "asset": "Browser-only security.txt builder (RFC 9116 Contact/Expires validation, copy and download) plus a DOCX disclosure-policy outline and Annex I Part II evidence table (EN)",
+      "type": "template",
+      "proof": "/assets/downloads/cra-vulnerability-handling-template.docx"
     },
     "/en/nis2/": {
       "asset": "NIS2 scoping, deadline, fine and registration calculators (EN)",
