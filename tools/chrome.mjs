@@ -130,6 +130,7 @@ const FOOTER = {
                 label: "Ettevõtte lingid",
                 links: [
                     ["/meist/", "Meist ja põhimõtted"],
+                    ["https://arletop.com/arle-reidma/", "Asutaja: Arle Aron Reidma"],
                     ["/artiklid/", "Artiklid"],
                     ["/sonastik/", "Küberturbe sõnastik"],
                     ["/viitamine/", "Viitamine ja allikad"],
@@ -142,7 +143,7 @@ const FOOTER = {
         ],
         contactTitle: "Kontakt",
         place: "Reg. kood 17607255 · Viimsi vald, Harju maakond",
-        linkedin: "Asutaja LinkedIn",
+        linkedin: "LinkedIn",
         rights: "© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.",
         updated: "Viimati sisuliselt uuendatud",
     },
@@ -199,6 +200,7 @@ const FOOTER = {
                 links: [
                     ["/en/", "Tehisabiline in English"],
                     ["/en/press/", "Press kit"],
+                    ["https://arletop.com/en/arle-reidma/", "Founder: Arle Aron Reidma"],
                     ["/meist/", "About (Estonian)", "et"],
                     ["/privaatsus/", "Privacy (Estonian)", "et"],
                     ["/llms.txt", "For AI systems"],
@@ -208,7 +210,7 @@ const FOOTER = {
         ],
         contactTitle: "Contact",
         place: "Reg. no. 17607255 · Viimsi Parish, Harju County",
-        linkedin: "Founder on LinkedIn",
+        linkedin: "LinkedIn",
         rights: "© 2026 Tehisabiline OÜ. All rights reserved.",
         updated: "Last materially updated",
     },

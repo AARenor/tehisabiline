@@ -58,7 +58,8 @@
       },
       "sameAs": [
         "https://github.com/AARenor/tehisabiline",
-        "https://www.f6s.com/company/tehisabiline"
+        "https://www.f6s.com/company/tehisabiline",
+        "https://ariregister.rik.ee/est/company/17607255"
       ]
     },
     {
@@ -72,7 +73,9 @@
       },
       "sameAs": [
         "https://www.linkedin.com/in/arlearonreidma/",
-        "https://github.com/arlearonreidma"
+        "https://cerebralvalley.ai/u/AAR1",
+        "https://github.com/arlearonreidma",
+        "https://arletop.com/arle-reidma/"
       ],
       "knowsAbout": [
         "NIS2",
@@ -315,7 +318,7 @@
       <section id="scope"><h2>Who is in scope?</h2><p>DORA covers a broad list of financial entities, including credit institutions, payment institutions, e-money institutions, investment firms, insurers and intermediaries, fund managers, central securities depositories, trading venues, crypto-asset service providers and crowdfunding service providers. Scope follows the entity list and the exclusions in Article 2, not a sector label or a size test.</p><p>ICT third-party providers are not automatically “DORA entities”, but critical providers can be designated and supervised at EU level. Financial entities remain responsible for their own outsourcing and concentration risk.</p></section>
       <section id="register"><h2>The register of information</h2><p>The register records every contractual arrangement with an ICT third-party provider that supports a financial entity's services. A useful register answers:</p><ul><li>Which legal entity and branch uses the service?</li><li>Which function and process does it support, and is it critical or important?</li><li>Who is the provider, including ultimate parent and subcontractors?</li><li>Where is data processed and stored?</li><li>When does the contract start and end, and what is the exit plan?</li></ul><p>Article 28(3) requires an annual report with summary data, including the number of new arrangements, and the full register on the supervisor's request. Record the subcontractors the ITS template covers, in particular those underpinning critical or important functions or material parts of them (<a href="https://eur-lex.europa.eu/eli/reg_impl/2024/2956/oj/eng" rel="noopener">Implementing Regulation (EU) 2024/2956</a>, recital 6). Finantsinspektsioon separately collects a year-end register: the 2027 collection uses the position at 31 December 2026.</p><p>Our <a href="/dora/teaberegister/" lang="et">DORA register checker (Estonian)</a> checks a CSV export for required fields and common gaps. It is a file validator, not a compliance suite: it checks required fields, date formats and duplicate record IDs, not whether the controls behind the export work.</p><p>For the fields, the working CSV and the ITS template, read the <a href="/en/dora/register/">DORA register of information guide</a>.</p></section>
       <section id="contracts"><h2>Contract clauses supervisors look for</h2><ul><li>Service description, service levels and quantitative targets.</li><li>Data location, protection, availability and return or deletion at exit.</li><li>Access, audit and information rights for the financial entity and supervisors.</li><li>Incident notification, cooperation and root-cause analysis.</li><li>Business-continuity, backup and tested exit strategies.</li><li>Subcontracting approval, change control and termination rights.</li><li>Participation in TLPT where relevant.</li></ul><p>A generic SaaS terms page is rarely enough for a critical function. The contract and the register must tell the same story.</p></section>
-      <section id="reporting"><h2>Incident reporting and testing</h2><p>DORA requires a documented ICT incident-management process, classification, reporting to the competent authority and communication to clients where relevant. Keep the timeline, affected services, root cause, recovery and lessons learned.</p><p><strong>Estonia:</strong> Finantsinspektsioon accepts DORA reports by email until 31 October 2026. From 1 November 2026, reports must be submitted through the Eesti Pank / Finantsinspektsioon data-collection portal; email is no longer the route (<a href="https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-regulatsioonid/dora-maarusest-ja-nouetest-eesti-finantssektoris-tegutsevatele-ettevotetele" rel="noopener">FI DORA guidance</a>, checked 27 October 2026). Register reporting is a separate process; see the <a href="/en/dora/register/">register guide</a>.</p><p>Resilience testing must match the entity's risk profile. TLPT is required for financial entities identified by the competent authority under Article 26(8), at least every three years, and must follow the EU framework. A vulnerability scan is not TLPT.</p></section>
+      <section id="reporting"><h2>Incident reporting and testing</h2><p>DORA requires a documented ICT incident-management process, classification, reporting to the competent authority and communication to clients where relevant. Keep the timeline, affected services, root cause, recovery and lessons learned.</p><p><strong>Estonia:</strong> Finantsinspektsioon accepts DORA reports by email until 31 October 2026; from 1 November 2026 they must be submitted through the Eesti Pank / Finantsinspektsioon data-collection portal (<a href="https://www.fi.ee/et/pangandus-ja-krediit/krediidivaldkonna-regulatsioonid/dora-maarusest-ja-nouetest-eesti-finantssektoris-tegutsevatele-ettevotetele" rel="noopener">FI DORA guidance</a>, checked 27 October 2026). Register reporting is a separate process; see the <a href="/en/dora/register/">register guide</a>.</p><p>Resilience testing must match the entity's risk profile. TLPT is required for financial entities identified by the competent authority under Article 26(8), at least every three years, and must follow the EU framework. A vulnerability scan is not TLPT.</p></section>
       <section id="tlpt"><h2>TLPT and technical evidence</h2><p>Threat-led penetration testing combines intelligence, red-team testing and controlled production impact. It tests critical functions and people, not only a web page. Evidence includes the scoping document, threat intelligence, test logs, findings, remediation and retesting.</p><p>Testing does not replace the register, contract review or continuity plan. It is one layer of the DORA evidence pack. How the phases work, who is obliged and what a readiness checklist contains: <a href="/en/tlpt/">TLPT and TIBER-EU</a>.</p></section>
       <section id="evidence"><h2>What a DORA evidence pack contains</h2><ul><li>ICT risk assessment and approved risk appetite.</li><li>Asset and service inventory mapped to business functions.</li><li>Register of information with contract references.</li><li>Continuity and recovery test results, including critical providers.</li><li>Incident log, classification and reporting evidence.</li><li>TLPT or other testing results and remediation tracking.</li><li>Board and management oversight records.</li></ul><p>Technical testing covers one part of this pack: scope, method, findings, fixes and retest, all in writing. That is what we do. We do not perform a formal DORA audit or give a legal opinion; applicability, register content and the TLPT duty are confirmed by your competent authority. The evidence checklist is on the <a href="/en/dora/audit/">DORA audit evidence page</a>.</p><p>Under Article 4 of the NIS2 Directive, equivalent NIS2 provisions do not apply to entities covered by DORA. The general framework is described in the <a href="/en/nis2/">NIS2 in Estonia</a> guide.</p></section>
       <section id="faq"><h2>Frequently asked questions</h2><div class="faq">
@@ -349,7 +352,7 @@
                 <ul>
                     <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
                     <li>Reg. no. 17607255 · Viimsi Parish, Harju County</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Founder on LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">LinkedIn</a></li>
                     <li><a href="/en/#contact">Free assessment</a></li>
                 </ul>
             </div>
@@ -397,6 +400,7 @@
                 <ul>
                     <li><a href="/en/">Tehisabiline in English</a></li>
                     <li><a href="/en/press/">Press kit</a></li>
+                    <li><a href="https://arletop.com/en/arle-reidma/">Founder: Arle Aron Reidma</a></li>
                     <li><a href="/meist/" hreflang="et" lang="et">About (Estonian)</a></li>
                     <li><a href="/privaatsus/" hreflang="et" lang="et">Privacy (Estonian)</a></li>
                     <li><a href="/llms.txt">For AI systems</a></li>

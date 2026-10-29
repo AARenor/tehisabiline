@@ -22,7 +22,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline — AI-rakenduse turvatestimine: LLM, RAG">
     <meta name="article:published_time" content="2026-10-24">
-    <meta name="article:modified_time" content="2026-10-27">
+    <meta name="article:modified_time" content="2026-10-29">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI-rakenduse turvatestimine: LLM, RAG | Tehisabiline">
     <meta name="twitter:description" content="Kokkulepitud ulatuses AI-rakenduse turvatestimine: prompt injection, RAG, tööriistad ja väljundid. Osa kirjaliku loa alusel tehtavast auditist või pentestist.">
@@ -79,7 +79,7 @@
       "name": "AI-rakenduse turvatestimine: LLM, RAG | Tehisabiline",
       "description": "Kokkulepitud ulatuses AI-rakenduse turvatestimine: prompt injection, RAG, tööriistad ja väljundid. Osa kirjaliku loa alusel tehtavast auditist või pentestist.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-29",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -196,7 +196,7 @@
       <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">AI turvatestimine</li></ol></nav>
       <h1>AI-rakenduse turvatestimine: LLM, RAG ja agendid</h1>
       <p class="lead">Kontrollime, kas LLM-, RAG- või agentrakendust saab kokkulepitud ulatuses panna tegema midagi, mida see ei peaks tegema – ja kas andmed, tööriistad ning väljundid on kaitstud.</p>
-      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
+      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-29">29. oktoobril 2026</time></p>
     </div>
   </header>
   <section class="section">
@@ -204,6 +204,7 @@
       <nav class="toc" aria-label="Sisukord"><strong>Sellel lehel</strong><ol><li><a href="#lyhidalt">Lühidalt</a></li><li><a href="#erinevus">Miks teisiti</a></li><li><a href="#mida">Mida testime</a></li><li><a href="#stsenaariumid">Näidistsenaariumid</a></li><li><a href="#protsess">Kuidas test käib</a></li><li><a href="#ettevalmistus">Ettevalmistus</a></li><li><a href="#piirid">Mida test ei tõesta</a></li><li><a href="#ai-act">AI Act / tehisintellekti seadus</a></li><li><a href="#tulemused">Tulemused</a></li><li><a href="#prioriteedid">Prioriteedid</a></li><li><a href="#hind">Hind</a></li><li><a href="#faq">Küsimused</a></li></ol></nav>
       <article class="prose">
         <section class="short-answer" id="lyhidalt"><h2>Lühidalt</h2><p><strong>AI turvatestimine</strong> on kokkulepitud ulatuses tehtav käsitsi ja tööriistapõhine kontroll, mis vaatab, kuidas AI-rakendus käitub ründaja sisendite, pahatahtlike dokumentide, liigsete õiguste ja ootamatute väljundite korral. See ei ole mudeli treenimise audit ega vastavussertifikaat.</p><p>AI-rakenduse kontroll on osa kokkulepitud küberauditi või pentesti ulatusest. Enne pakkumist kinnitame rakenduse, andmevood ja teostatavad stsenaariumid; see ei ole eraldi vastavushindamine.</p><p>Test on mõeldud meeskondadele, kes on LLM-i, RAG-i või agentidega juba tootmises või pilotis ning vajavad tõendeid enne laiemat kasutuselevõttu. Töö käib kirjaliku loa, testkontode ja selgete stopitingimustega.</p><p>Mõisted, mida lehel kasutame: <strong>RAG</strong> on otsingupõhine vastamine – mudel loeb enne vastust dokumendiotsingu tulemused; <strong>retrieval</strong> on dokumentide otsing; <strong>tenant</strong> on kliendi eraldatud keskkond; <strong>prompt injection</strong> on sisendis peidetud käsk, mis üritab mudelit juhtida.</p><p>Lähtume <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP-i LLM-rakenduste riskidest</a> ja <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI RMF-i</a> loogikast, kuid iga test kohandatakse sinu kasutusjuhtumi, andmete ja tööriistade järgi.</p></section>
+        <p>Kui agenti alles ehitatakse, vaata enne testimist <a href="https://arletop.com/ai-agent/">AI-agendi lehte arletop.com-is</a>.</p>
 
         <section id="erinevus"><h2>Miks AI-rakenduse test on teistsugune</h2><p>Tavaline veebi- või API-test eeldab deterministlikku loogikat: sama sisend annab sama tulemuse. LLM-i puhul see ei kehti. Vastus sõltub mudelist, versioonist, süsteemijuhisest, kontekstist, retrieval'ist ja isegi sõnastusest.</p><ul><li><strong>Piirid on hägused:</strong> „õige“ ja „keelatud“ käitumine tuleb määratleda ärireeglite, mitte ainult HTTP-vastuse kaudu.</li><li><strong>Rünne tuleb andmete sees:</strong> pahatahtlik juhis võib olla dokumendis, e-kirjas või tööriista vastuses, mitte kasutaja sisestatud promptis.</li><li><strong>Kaitse on mitmekihiline:</strong> süsteemijuhis üksi ei ole turvapiir; vaja on retrieval'i õigusi, tööriistade lubatud toiminguid, väljundi kodeerimist ja seiret.</li><li><strong>Tulemus vananeb:</strong> mudeli või prompti uuendus võib käitumist muuta, seega tuleb testi versioon ja aeg fikseerida.</li></ul><p>Sellepärast algab töö äriohu mudelist, mitte promptide loetelust.</p></section>
 
@@ -251,7 +252,7 @@
                 <ul>
                     <li><a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a></li>
                     <li>Reg. kood 17607255 · Viimsi vald, Harju maakond</li>
-                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">Asutaja LinkedIn</a></li>
+                    <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">LinkedIn</a></li>
                     <li><a href="/#contact">Tasuta kaardistus</a></li>
                 </ul>
             </div>
@@ -296,6 +297,7 @@
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="https://arletop.com/arle-reidma/">Asutaja: Arle Aron Reidma</a></li>
                     <li><a href="/artiklid/">Artiklid</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
                     <li><a href="/viitamine/">Viitamine ja allikad</a></li>
@@ -308,7 +310,7 @@
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-29">29. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>
