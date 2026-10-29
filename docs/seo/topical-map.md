@@ -141,3 +141,9 @@ is the citation hub for AI answer engines and press; keep it current with every 
    not sufficient internal linking.
 3. Cluster without an asset → the next content investment is an asset, not another article.
 4. Gap rows are a backlog, not commitments. Do not publish a spoke to fill a table row.
+
+## 2026-10-29 additions (R3)
+
+- Frameworks cluster: `/iso-27001/auditeerimine/` (spoke of `/iso-27001/`, EN twin `/en/iso-27001/audit-checklist/`); `/ai-act/korge-riskiga-susteemid/` (spoke of `/ai-act/`, EN twin `/en/ai-act/high-risk/`).
+- EN cluster: `/en/cra/vulnerability-reporting/` (spoke of `/en/cra/`, EN-only; linked from `/en/` guides).
+- Hubs linking down: `/iso-27001/`, `/ai-act/`, `/en/ai-act/`, `/regulatsioonid/`. Every new page is within 2 clicks of home.
