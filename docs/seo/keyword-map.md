@@ -135,3 +135,36 @@ Evidence rule unchanged: build only where autocomplete or impressions already ex
 Not built: LLM security, prompt injection, AI red teaming (no autocomplete demand in ET or EN); `/ai-turvatestimine/` stays a service page. `tlpt` pages already answered every requested row, so no edit.
 
 Correction made while checking sources: the E-ITS audit conclusion has two clocks. Audit rules point 6.17: 14 days to the supervisory authority after receiving the conclusion and final report. Government Regulation no. 121 § 4(2) (consolidated text in force 01.10.2026, RT I, 04.09.2026, 22): the provider forwards the conclusion to RIA within 30 days of receiving it. Both pages now state both and tell the reader to work to the earlier one. The two FAQ entries still mention only 14 days.
+
+## 2026-10-30 — complete-day decline check and bounded corrections
+
+Fresh Search Analytics API requests used `sc-domain:tehisabiline.ee`, Web search and `dataState=final`, with separate dimensionless property aggregates. Dates are Search Console's Pacific reporting dates. The newest final day is **2026-10-28**; the `all` response marks **2026-10-29** as `firstIncompleteDate`, so that day must not be compared with a complete day.
+
+| Final reporting period | Impressions | Clicks | Average position |
+| --- | ---: | ---: | ---: |
+| 2026-10-27 | 163 | 6 | 7.85 |
+| 2026-10-28 | 137 | 4 | 8.85 |
+| 2026-10-15–21 | 55 | 4 | 8.71 |
+| 2026-10-22–28 | 618 | 19 | 7.86 |
+| 2026-09-03–30 | 256 | 6 | 23.83 |
+| 2026-10-01–28 | 741 | 28 | 8.59 |
+
+The last complete day declined, but the weekly and 28-day comparisons improved. One day's two-click difference does not establish a sustained ranking loss or a Google penalty. Query rows expose only 163 of 741 current-period impressions and 89 of 256 previous-period impressions; anonymized/omitted queries prevent a complete query-level explanation of the property movement. Earlier helper reports that sum query/page rows are not dimensionless property totals. Raw responses and derived comparisons are retained locally in `/home/arle/tmp/tehisabiline_gsc_20261030/`.
+
+Daily country/device rows reconcile to the property totals. Desktop accounts for the two-click net loss (138 to 115 impressions, five to three clicks); mobile remains at one click and its average position improves. Estonia falls from four to two clicks and Indonesia from two to zero, offset by one new click each from Denmark and Italy. These describe the desktop/geographic distribution of the dip, not why Google's ranking system changed. Daily query rows expose only 52 then 35 impressions and three then zero clicks, despite four property clicks on October 28. Page impressions are also nonadditive (196 then 158 versus property totals of 163 then 137). Do not sum those page rows or interpret a query with no recorded impressions as a proven ranking loss.
+
+Current final seven-day visible-query opportunities include `nis2 audit` (33 impressions, position 15.15), `nis2 eesti` (10, 15.20), `iso 27001` (7, 5.43), `audit nis2` (6, 11.00) and `audit cybersecurity nis 2` (5, 9.80). These are all-country averages, not a fixed rank in Estonia. The relevant existing pages already cover the intents; use post-recrawl, complete-period evidence before another content or title change.
+
+Live checks found no blocking regression on sampled core and recent pages: correct host redirects, HTTP 200, crawlable HTML, self-canonicals and working hub links. The XML sitemap had 70 unique URLs. This is not proof that every URL is indexed or that every Google report is issue-free. Existing NIS2 pages already answer the observed intents; preserve their titles, URLs and useful content rather than rewrite them in reaction to one weaker day.
+
+Read-only URL Inspection also confirms `/nis2/`, `/en/nis2/audit/` and `/en/ai-act/` are submitted/indexed, allowed and self-canonical. Their recorded crawls are October 30, October 24 and October 25 respectively: the latter two cannot yet demonstrate Google's response to all subsequent edits. Of the four October 29 additions, `/iso-27001/auditeerimine/` is indexed, while both new AI Act high-risk pages and the CRA vulnerability-reporting page remain unknown to Google. The submitted sitemap reports 70 web URLs and no warnings/errors, last downloaded October 29. Discovery and recrawl lag remain observation items, not a reason to replace working URLs or fabricate indexing-API submissions.
+
+Older exports are not final baselines: `snap-1028/d90.json` recorded October 27 as 154 impressions/six clicks, versus 163/six now. The October 29 report recorded October 1–28 as 730/27, versus the fresh dimensionless final aggregate of 741/28. The exact cause of each revision/state difference is not established; use fresh, like-for-like final periods rather than combine pulls.
+
+Completed the E-ITS summary correction noted above. Both visible FAQs and their generated answers now distinguish the audit-rule deadline (14 days after receiving both the conclusion and final report, submitted to the supervisory authority) from Regulation no. 121 § 4(2) (30 days after receiving the conclusion, forwarded to RIA). The ET and EN regulation overviews now carry the same distinction. `llms-full.txt` also corrects the recipient: filing is not "with the auditor." Both requirements remain relevant; meet the earlier applicable deadline.
+
+Sources: [RIA audit rules, point 6.17](https://eits.ria.ee/et/versioon/2026/eits-poohidokumendid/auditeerimiseeskiri) and [Regulation no. 121, § 4(2)](https://www.riigiteataja.ee/akt/113122022030?leiaKehtiv#para4), freshly checked. Only the four materially edited page dates and their derived metadata/sitemap entries move to October 30; no blanket freshness reset. FAQ/date changes do not alter the OG renderer's inputs, so no image or asset rebuild is needed.
+
+Verification: `node tools/sync-faq.mjs` rewrote two answers; `node tools/stamp-modified.mjs` updated five files (the four HTML pages and sitemap). `npm run test:seo` reported zero FAQ differences and passed for 70 indexable pages plus one noindex page. No new pages, permanent wording tests, backlinks, notifications or indexing-API submissions were introduced.
+
+Measure subsequent performance over complete seven-day windows and the same queries/pages/countries/devices after recrawling; daily increases are not an acceptance criterion Google can guarantee.

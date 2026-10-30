@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-10-29
+Last materially reviewed: 2026-10-30
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -59,7 +59,7 @@ The NIS2 board-duties article covers the management body’s approval and oversi
 
 Canonical page: https://tehisabiline.ee/e-its/
 
-Explains the Estonian information security standard administered by RIA: it is set by regulation no. 30 (25.08.2026, in force 01.09.2026), mandatory for public-sector tasks, applied to KüTS service providers as the basic measures, and added when those basic measures are not sufficient; otherwise its use is voluntary. Covers E-ITS audit versus ISO 27001 certification, what must be filed with the auditor and when (auditor conclusion within 14 days, six months to remedy a high-risk finding), and a six-step evidence preparation path. It explicitly states that an E-ITS audit is not a pentest, not an ISO certificate, and not a service Tehisabiline performs as a formal E-ITS audit.
+Explains the Estonian information security standard administered by RIA: it is set by regulation no. 30 (25.08.2026, in force 01.09.2026), mandatory for public-sector tasks, applied to KüTS service providers as the basic measures, and added when those basic measures are not sufficient; otherwise its use is voluntary. Covers E-ITS audit versus ISO 27001 certification; filing deadlines are distinct: the auditee submits the audit conclusion to the supervisory authority within 14 days of receiving both the conclusion and final report (audit rule 6.17), while Government Regulation no. 121 § 4(2) separately requires the service provider to forward the conclusion to RIA within 30 days of receiving it. Observe both requirements and meet the earlier applicable deadline. For a high-level risk, the final report is also submitted and the risk must be remedied within six months. Covers a six-step evidence preparation path. It explicitly states that an E-ITS audit is not a pentest, not an ISO certificate, and not a service Tehisabiline performs as a formal E-ITS audit.
 
 ### AI application security testing
 
