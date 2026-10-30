@@ -1,7 +1,7 @@
 {
-  "$comment": "Canonical entity map for tehisabiline.ee. Enforced by tools/entitymap.mjs (run standalone or via npm run test:seo). Pages may repeat these values and must reference the same @id; they must not introduce a contradicting Organization, Person, Service or Topic node. Asset URLs are compared without their ?v= cache-buster.",
+  "$comment": "Canonical entity map for tehisabiline.ee. Enforced by tools/entitymap.mjs. `npm run check:entitymap` is read-only; `npm run render:entitymap` validates the graph and replaces only the generated region in entitymap/index.html. Pages may repeat these values and must reference the same @id; they must not introduce a contradicting Organization, Person, Service or Topic node. Asset URLs are compared without their ?v= cache-buster.",
   "version": 1,
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "origin": "https://tehisabiline.ee",
   "organization": {
     "@type": "Organization",
@@ -537,7 +537,9 @@
         "/viitamine/",
         "/sonastik/",
         "/kasutusjuhud/",
-        "/privaatsus/"
+        "/privaatsus/",
+        "/ai_info/",
+        "/entitymap/"
       ]
     },
     {
@@ -556,6 +558,8 @@
     "/viitamine/": "trust",
     "/sonastik/": "trust",
     "/privaatsus/": "trust",
+    "/ai_info/": "trust",
+    "/entitymap/": "trust",
     "/mudelid/": "product",
     "/pentestimine/": "audit",
     "/pentestimine/naidisraport/": "audit",

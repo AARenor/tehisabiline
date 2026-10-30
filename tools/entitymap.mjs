@@ -7,10 +7,11 @@
 //   3. every JSON-LD node on every page agrees with the map (no drift, no
 //      second Organization with a different name, URL, logo or profile set);
 //   4. the homepage publishes the full canonical Organization.
+//   5. the rendered public entity map exactly matches the canonical JSON.
 //
-// Run standalone: `node tools/entitymap.mjs`
-// Or via `npm run test:seo`, which imports validateEntityMap().
-import {existsSync, readFileSync, readdirSync} from "node:fs";
+// Run standalone: `node tools/entitymap.mjs` validates without writing.
+// `node tools/entitymap.mjs --render` validates the graph, then regenerates only the HTML map region.
+import {existsSync, readFileSync, readdirSync, writeFileSync} from "node:fs";
 import {dirname, join} from "node:path";
 import {fileURLToPath} from "node:url";
 
@@ -74,7 +75,7 @@ function pageJsonLd(html) {
 
 const typesOf = (node) => (Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]]);
 
-export function validateEntityMap(root = toolRoot) {
+function validateEntityMapGraph(root = toolRoot) {
     const problems = [];
     const mapPath = join(root, "entitymap.json");
     if (!existsSync(mapPath)) return ["entitymap.json is missing."];
@@ -252,13 +253,209 @@ export function validateEntityMap(root = toolRoot) {
     return problems;
 }
 
+const GENERATED_START = "<!-- entitymap:generated:start -->";
+const GENERATED_END = "<!-- entitymap:generated:end -->";
+
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (character) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#39;",
+    })[character]);
+}
+
+// Return only the canonical page route; graph @id fragments are not assumed to be DOM anchors.
+function canonicalPageUrl(map, path) {
+    if (typeof path !== "string") return null;
+    try {
+        const origin = new URL(map.origin);
+        if (origin.protocol !== "https:" || origin.pathname !== "/" || origin.search || origin.hash) return null;
+        const target = new URL(path, `${origin.origin}/`);
+        if (
+            target.protocol !== "https:"
+            || target.origin !== origin.origin
+            || target.username
+            || target.password
+            || target.search
+            || !Object.prototype.hasOwnProperty.call(map.pages, target.pathname)
+        ) return null;
+        return `${origin.origin}${target.pathname}`;
+    } catch {
+        return null;
+    }
+}
+
+function safeSourceUrl(map, value) {
+    if (typeof value !== "string") return null;
+    try {
+        const target = new URL(value);
+        if (target.protocol !== "https:" || target.username || target.password) return null;
+        if (target.origin === new URL(map.origin).origin) {
+            if (target.search) return null;
+            return canonicalPageUrl(map, target.pathname);
+        }
+        return target.href;
+    } catch {
+        return null;
+    }
+}
+
+function pageLink(map, path, label) {
+    const href = canonicalPageUrl(map, path);
+    if (!href) return escapeHtml(label);
+    return `<a href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
+}
+
+function sourceLinks(map, values) {
+    return (values || []).map((value) => {
+        const href = safeSourceUrl(map, value);
+        if (!href) return "";
+        return `<a href="${escapeHtml(href)}">${escapeHtml(new URL(href).hostname)}</a>`;
+    }).filter(Boolean).join(", ");
+}
+
+function renderEntityMap(map) {
+    const {organization, person, services, topics, clusters, pages} = map;
+    const organizationPage = pageLink(map, organization.url, organization.name);
+    const personPage = pageLink(map, person.url, person.name);
+    const registryUrl = safeSourceUrl(map, organization.identifier?.url);
+    const serviceItems = services.map((service) => `
+        <li>
+            <h3>${pageLink(map, service.url, service.name)}</h3>
+            <p>Tüüp: <code>Service</code> · tunnus: <code>${escapeHtml(service.id)}</code></p>
+            <p>Tegevuse liik: ${escapeHtml(service.serviceType)}</p>
+        </li>`).join("");
+    const clusterItems = clusters.map((cluster, index) => {
+        const hub = pageLink(map, cluster.hub, cluster.hub);
+        const clusterPages = (cluster.pages || []).map((path) => `
+                <li>${pageLink(map, path, path)}</li>`).join("");
+        return `
+        <section aria-labelledby="cluster-title-${index + 1}">
+            <h3 id="cluster-title-${index + 1}">${escapeHtml(cluster.label)}</h3>
+            <p>Klastri tunnus: <code>${escapeHtml(cluster.id)}</code> · keskne leht: ${hub} · liikmeid: ${(cluster.pages || []).length}.</p>
+            <ul>${clusterPages}
+            </ul>
+        </section>`;
+    }).join("");
+    const topicItems = topics.map((topic) => {
+        const sourceList = sourceLinks(map, topic.sameAs);
+        const terms = (topic.knowsAbout || []).map((term) => `<code>${escapeHtml(term)}</code>`).join(", ");
+        return `
+        <li>
+            <h3>${pageLink(map, topic.hub, topic.label)}</h3>
+            <p>Tüüp: <code>Topic</code> · tunnus: <code>${escapeHtml(topic.id)}</code></p>
+            <p>Seotud mõisted: ${terms || "sõnastikus pole täpsustatud"} · juhend: ${pageLink(map, topic.hub, topic.hub)}</p>
+            ${sourceList ? `<p>Välisallikas: ${sourceList}</p>` : ""}
+        </li>`;
+    }).join("");
+    return `<div class="entity-map">
+    <p>Kaardis on ${Object.keys(pages).length} kanoonilist lehte, ${clusters.length} leheklastrit, ${topics.length} teemakirjet ja ${services.length} teenusesõlme.</p>
+    <section id="organization" aria-labelledby="entity-organization">
+        <h2 id="entity-organization">Ettevõte</h2>
+        <p>Tüüp: <code>Organization</code> · kanooniline <code>@id</code>: <code>${escapeHtml(organization["@id"])}</code></p>
+        <p>Ettevõtte leht: ${organizationPage} · asutaja seos: <code>${escapeHtml(organization.founder?.["@id"])}</code></p>
+        <p>Registrikood: <code>${escapeHtml(organization.identifier?.value)}</code>${registryUrl ? ` · allikas: <a href="${escapeHtml(registryUrl)}">Eesti e-Äriregister</a>` : ""}</p>
+    </section>
+    <section id="person" aria-labelledby="entity-person">
+        <h2 id="entity-person">Asutaja</h2>
+        <p>Tüüp: <code>Person</code> · kanooniline <code>@id</code>: <code>${escapeHtml(person["@id"])}</code></p>
+        <p>${personPage} · ametinimetus: ${escapeHtml(person.jobTitle)} · <code>worksFor</code>: <code>${escapeHtml(person.worksFor?.["@id"])}</code>.</p>
+    </section>
+    <section id="services" aria-labelledby="entity-services">
+        <h2 id="entity-services">Teenusesõlmed</h2>
+        <p>Iga sõlm viitab lehele, kus teenuse või arendusplaani ulatus ja piirangud on kirjeldatud.</p>
+        <ul>${serviceItems}
+        </ul>
+    </section>
+    <section id="clusters" aria-labelledby="entity-clusters">
+        <h2 id="entity-clusters">Leheklastrid</h2>
+        <p>Klastrid koondavad omavahel seotud lehed ühise keskse lehe alla. Lingitekst näitab kanoonilist teekonda.</p>
+        ${clusterItems}
+    </section>
+    <section id="topics" aria-labelledby="entity-topics">
+        <h2 id="entity-topics">Teemad ja juhendid</h2>
+        <p>Teema seob sõnavara selle kohta käiva juhendiga; välisallikas on loetletud ainult siis, kui see on lähtekaardis olemas.</p>
+        <ul>${topicItems}
+        </ul>
+    </section>
+</div>`;
+}
+
+function generatedRegionBounds(html) {
+    const starts = html.split(GENERATED_START).length - 1;
+    const ends = html.split(GENERATED_END).length - 1;
+    const problems = [];
+    if (starts !== 1) problems.push(`entitymap/index.html must contain exactly one "${GENERATED_START}" marker (found ${starts}).`);
+    if (ends !== 1) problems.push(`entitymap/index.html must contain exactly one "${GENERATED_END}" marker (found ${ends}).`);
+    if (problems.length) return {problems};
+    const start = html.indexOf(GENERATED_START) + GENERATED_START.length;
+    const end = html.indexOf(GENERATED_END);
+    if (end < start) return {problems: ["entitymap/index.html generated-region markers are reversed."]};
+    return {start, end, problems};
+}
+
+function readGeneratedHtml(root) {
+    const file = join(root, "entitymap", "index.html");
+    try {
+        return {file, html: readFileSync(file, "utf8")};
+    } catch (error) {
+        return {file, problems: [`entitymap: cannot read entitymap/index.html: ${error.message}`]};
+    }
+}
+
+function validateGeneratedRegion(root, map) {
+    const {html, problems: readProblems} = readGeneratedHtml(root);
+    if (readProblems) return readProblems;
+    const bounds = generatedRegionBounds(html);
+    if (bounds.problems.length) return bounds.problems.map((problem) => `entitymap: ${problem}`);
+    const expected = `\n${renderEntityMap(map)}\n`;
+    if (html.slice(bounds.start, bounds.end) !== expected) {
+        return ["entitymap: entitymap/index.html generated region is stale or empty; run `npm run render:entitymap`."];
+    }
+    return [];
+}
+
+export function validateEntityMap(root = toolRoot) {
+    const graphProblems = validateEntityMapGraph(root);
+    if (graphProblems.length) return graphProblems;
+    const map = JSON.parse(readFileSync(join(root, "entitymap.json"), "utf8"));
+    return validateGeneratedRegion(root, map);
+}
+
+function renderEntityMapRegion(root = toolRoot) {
+    const graphProblems = validateEntityMapGraph(root);
+    if (graphProblems.length) return graphProblems;
+    const map = JSON.parse(readFileSync(join(root, "entitymap.json"), "utf8"));
+    const {file, html, problems: readProblems} = readGeneratedHtml(root);
+    if (readProblems) return readProblems;
+    const bounds = generatedRegionBounds(html);
+    if (bounds.problems.length) return bounds.problems.map((problem) => `entitymap: ${problem}`);
+    const expected = `\n${renderEntityMap(map)}\n`;
+    if (html.slice(bounds.start, bounds.end) !== expected) {
+        writeFileSync(file, `${html.slice(0, bounds.start)}${expected}${html.slice(bounds.end)}`);
+    }
+    const parityProblems = validateGeneratedRegion(root, map);
+    if (parityProblems.length) return parityProblems;
+    return [];
+}
+
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-    const problems = validateEntityMap();
+    const args = process.argv.slice(2);
+    const unsupported = args.filter((argument) => argument !== "--render");
+    if (unsupported.length) {
+        console.error(`entitymap: unsupported argument(s): ${unsupported.join(", ")}.`);
+        process.exit(2);
+    }
+    const render = args.includes("--render");
+    const problems = render ? renderEntityMapRegion() : validateEntityMap();
     if (problems.length) {
         console.error(`entitymap check failed with ${problems.length} issue(s):`);
         for (const problem of problems) console.error(`- ${problem}`);
         process.exit(1);
     }
     const map = JSON.parse(readFileSync(join(toolRoot, "entitymap.json"), "utf8"));
-    console.log(`entitymap OK: ${Object.keys(map.pages).length} pages, ${map.clusters.length} clusters, ${map.topics.length} topics, ${map.services.length} services.`);
+    const message = render ? "HTML map rendered and parity verified" : "HTML map parity verified";
+    console.log(`entitymap OK: ${Object.keys(map.pages).length} pages, ${map.clusters.length} clusters, ${map.topics.length} topics, ${map.services.length} services; ${message}.`);
 }

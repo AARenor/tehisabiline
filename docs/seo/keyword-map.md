@@ -1,6 +1,100 @@
-# Tehisabiline keyword map — 2026-10-24
+# Tehisabiline keyword map — current view 2026-10-30; dated evidence retained
 
-## Method
+## Current owner- and evidence-led decisions — 2026-10-30
+
+Current positioning is in `docs/seo/icp-keywords.md`. Primary commercial audience is
+Estonian company entrepreneurs/IT leads seeking an authorized cyber audit or pentest;
+owner priority is pentesting. Developer/security teams are an owner-confirmed audience
+for an application-based pilot model API that is still in development. Ordinary readers
+and funders need verifiable company facts. Compliance advisers and journalists are not
+separate owner-confirmed ICPs. Managed AI services, assistants, knowledge bases and
+automation are on arletop.com; do not retarget them on tehisabiline.ee.
+
+### Fresh GSC signal (final data only)
+
+GSC is current through 2026-10-28. Search Console reports Pacific dates; 2026-10-29 was
+the first incomplete day in the pull. The latest complete 7 days (2026-10-22–28) are
+618 impressions / 19 clicks / 7.86 average position; latest 28 days
+(2026-10-01–28) are 741 / 28 / 8.59. These are property totals, not per-query metrics.
+Visible query rows account for only 141/618 latest-seven-day and 163/741 latest-28-day
+impressions. Omitted/anonymized query rows are not zero demand.
+
+| Observed query row (2026-10-22–28) | Impressions / clicks / average position | Current page intent and action |
+| --- | --- | --- |
+| `nis2 audit` | 33 / 1 / 15.15 | Preserve `/en/nis2/audit/` as the observed English query page. In 28-day query/page data it had 32 / 0 / 15.59; `/nis2/audit/` had 1 / 1 / 1 for the query family. Keep Estonian and English pages distinct; don't call these fixed Estonia rankings. |
+| `nis2 eesti` | 10 / 1 / 15.20 | Keep `/nis2/` as Estonian scope and law hub; current page-level 28-day signal is 63 / 3 / 9.90. |
+| `iso 27001` | 7 / 0 / 5.43 | Preserve the guide pair rather than a synonym page; 28-day page metrics are ET `/iso-27001/` 24 / 0 / 3.21 and EN `/en/iso-27001/` 26 / 1 / 4.85. |
+| `audit nis2` | 6 / 0 / 11.00 | Same NIS2 audit intent; link from overview to the existing audit and checklist guides. |
+| `audit cybersecurity nis 2` | 5 / 0 / 9.80 | Same NIS2 audit family; do not create another URL. |
+| `nis 2 audit` | 5 / 0 / 10.20 | Same query family; use readable spelling naturally, not a new page. |
+| `cra` | 5 / 0 / 8.20 | Keep CRA product scope and deadline answers on `/cra/` and `/en/cra/`; the query row alone does not prove which page won. |
+| `turvatestimine` | 4 / 0 / 9.75 | Broad term appeared against the noindex HTML sitemap in the query/page report. Do not make the sitemap a landing page; keep service language qualified as cyber/IT and written-scope pentesting. |
+
+The visible-query averages are all-country and can represent several impressions. Do not
+turn a displayed average into an exact current rank, causation claim or forecast. The
+current page-level leaders relevant to the map include `/en/ai-act/` (81 / 5 / 4.53),
+`/pentestimine/` (26 / 2 / 3.65), `/nis2/` (63 / 3 / 9.90), `/en/nis2/` (61 / 0 /
+11.70), `/en/nis2/audit/` (59 / 0 / 14.54), `/e-its/` (36 / 1 / 7.08),
+`/en/dora/register/` (23 / 0 / 7.04), and `/regulatsioonid/` (23 / 0 / 5.35).
+These are page totals, not evidence of a particular query. The full page and zero
+inventory is in the visibility artifact paths below.
+
+### Priority map (no volume/difficulty scores)
+
+| Priority | Intent and canonical | Evidence | Action |
+| --- | --- | --- | --- |
+| **P1 — service** | Authorized pentest → `/pentestimine/`; broader posture audit → `/kuberaudit/` | Owner-confirmed priority; G28 pages 26 / 2 and 23 / 1; AC includes `pen testid`, `pen testimine`, `pentesting eesti` | Maintain the two distinct service answers. Keep written permission, human review, scope and price factors. The synthetic sample report is a decision aid, not client evidence. |
+| **P1 — NIS2 discovery** | Estonian scope and duties → `/nis2/`; English audit query → `/en/nis2/audit/` | G28 pages 63 / 3, 61 / 0 and 59 / 0; Q7 rows above; NIS2 Autocomplete families | Preserve existing URLs/titles and answer scope, evidence, reporting and audit intent separately. Do not react to a single daily change. |
+| **P1 — visible English regulatory information** | AI Act guide → `/en/ai-act/` | G28 81 / 5; this is page-level regulatory visibility | Retain its risk-class and source answer. Do not infer demand for AI consulting, assistants or managed services. |
+| **P1 — existing frameworks** | E-ITS, ISO 27001, DORA register, regulation overview | G28 page evidence above; public SERP review | Keep each rule distinct, source official deadlines and distinguish a working CSV from regulator/certification formats. |
+| **P2 — specialized tools/guides** | API, SBOM/CRA, RPO/RTO, supplier, sector and checklist spokes | Some G28 visibility; 19/70 old routes have Z90 with no recorded impressions in 90 days | Preserve an existing distinct reader job; label examples and limitations. A zero row is not position zero or proof of deindexing. Do not build sector pages symmetrically. |
+| **P3 — trust resources** | `/ai_info/`, `/entitymap/` | New routes; no pre-launch GSC data | Keep factual and self-canonical as assigned; treat as trust/navigation references, not keyword doorways. |
+
+Autocomplete is evidence of suggested phrasing, not frequency. The 2026-10-28 EN
+suggestion `NIS2 requirements for OT` is a hypothesis only: no corresponding GSC query
+was visible, and there is no dedicated OT route. Keep general entity scope on `/en/nis2/`
+and energy-sector context on `/sektorid/energeetika/`; do not assert a blanket OT
+obligation or create a separate page without fresh evidence. The RPO/RTO article's
+90-minute recovery sequence is an illustrative plan to adapt, not a customer example or
+mandated cadence. Its 90-day URL filter has no recorded impressions.
+
+### Public-source research — results are intent evidence, not ranking measurements
+
+Four complementary public search groups were sampled on 2026-10-30:
+
+| Query group | Original pages and primary sources consulted | Finding and use |
+| --- | --- | --- |
+| Estonian NIS2/KüTS scope and RIA registration | [RIA advice for organisations](https://www.ria.ee/kuberturvalisus/kuberruumi-analuus-ja-ennetus/nouanded-asutustele-ja-ettevotetele); primary references: [Riigi Teataja KüTS](https://www.riigiteataja.ee/akt/106102026002) and [NIS2 Directive](https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng) | Prefer current statute and RIA; scope/registration are informational decisions. The law endpoints returned only title/JS-shell text in this reader pass; the [NIS2 Europe guide](https://nis2europe.eu/ee/et/juhend) combines a scope screen and checklist but states Estonia had not yet transposed NIS2, so it is stale counterevidence, not legal authority. |
+| Estonian cyber audit, security audit and pentest | RIA advice and first-party `/pentestimine/`, `/kuberaudit/` pages | Broad `turvaaudit` results can be ambiguous. Qualify the offer as cyber/IT security and explain the difference between posture audit and active test; RIA guidance is not a commercial pentest comparison. |
+| English DORA register and TLPT | [EBA DORA preparation](https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application) and the official ITS 2024/2956 resource it links | Template intent is supported; Tehisabiline CSV is a working collection tool, not the official submission format. |
+| English CRA, vulnerability reporting and SBOM | [Commission CRA reporting](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting), [Commission summary](https://digital-strategy.ec.europa.eu/en/policies/cra-summary), [Regulation (EU) 2024/2847](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng), [CISA SBOM guidance](https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom) | Commission reporting guidance gives the 2026-09-11 start and the 24/72-hour/final-report sequence. The Commission labels its summary non-comprehensive; the Regulation controls. CISA informs SBOM terminology, not EU legal duties. |
+**AI Act primary source:** [European Commission regulatory framework](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai), used for risk-category and staged-timeline context; check the current official timeline before future legal-date edits.
+
+Additional counterevidence: [Grant Thornton's 2025 overview of information-security
+standards](https://www.grantthornton.ee/insights-landing-page/luhijuhis-levinumad-standardid-ja-sertifikaadid-infoturbe-maailmas/)
+shows comparison and “which standard applies?” informational intent, but its date makes
+it unsuitable for current deadlines.
+
+Implemented reader journeys (30 October body-link handoff, not proposed work): on
+`/en/nis2/`, the new anchors lead to the scope assessment, supplier questionnaire, English
+checklist, and NIS2/ISO comparison; `/en/iso-27001/` links to its audit checklist;
+`/en/security-audit/` links to its checklist/report template; `/meist/` links “Tehisabilise
+faktilehte” to `/ai_info/` and “HTML-üksuste kaardilt” to `/entitymap/`. Exact anchors
+are recorded in `local://contextual_link_changes.txt`.
+
+Source paths: `docs/seo/suggest-et-2026-10-28.json` and
+`docs/seo/suggest-en-2026-10-28.json` (suggestions only);
+`/home/arle/tmp/tehisabiline_gsc_20261030/derived_summary.json` and its query/page exports
+(GSC); `/home/arle/tmp/tehisabiline_visibility_20261030/visibility_summary.json` and
+`visibility_inventory.json` (page visibility and exact-filtered zero routes);
+`docs/seo/topical-map.md` (72-route map and source trail); and private `PRODUCT.md`
+(owner-confirmed audiences, not a public source). No paid search-volume/difficulty data
+or precise rank estimate was used.
+
+Historical dated snapshots continue below. They are preserved as point-in-time evidence,
+not silently rolled forward to the current plan.
+
+## Historical baseline — 2026-10-24 method (preserved)
 
 - Google Autocomplete with `hl=et`, `gl=ee` for seed terms.
 - Google Search Console Performance (current property data: 3 clicks, 20 impressions).
@@ -168,3 +262,11 @@ Sources: [RIA audit rules, point 6.17](https://eits.ria.ee/et/versioon/2026/eits
 Verification: `node tools/sync-faq.mjs` rewrote two answers; `node tools/stamp-modified.mjs` updated five files (the four HTML pages and sitemap). `npm run test:seo` reported zero FAQ differences and passed for 70 indexable pages plus one noindex page. No new pages, permanent wording tests, backlinks, notifications or indexing-API submissions were introduced.
 
 Measure subsequent performance over complete seven-day windows and the same queries/pages/countries/devices after recrawling; daily increases are not an acceptance criterion Google can guarantee.
+
+## 2026-10-30 22:53 UTC — accepted crawl requests now indexed
+
+A fresh read-only URL Inspection pass returned **PASS / Submitted and indexed for all nine previously unindexed priority URLs**, with no API errors. The initial 10-indexed / 9-not-indexed split above remains a historical snapshot; it is not the current status of those nine URLs. Recorded crawls for them range from 15:45 to 16:00 UTC on October 30.
+
+This confirms their indexed state at inspection time, not new impressions, higher positions, or a response to changes that were not yet deployed. Do not resubmit these nine URLs merely because their earlier Search Analytics window had no impressions.
+
+Sanitized follow-through evidence is retained privately at `/home/arle/projects/tehisabiline_seo_geo/evidence/indexing_results_20261030.json`; its observation time is `2026-10-30T22:53:28.673959+00:00`.

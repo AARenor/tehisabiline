@@ -33,6 +33,11 @@ function pages(dir, out = []) {
 }
 
 const slugOf = (urlPath) => {
+    const resourceSlugs = {
+        "/ai_info/": "og_ai_info",
+        "/entitymap/": "og_entitymap",
+    };
+    if (resourceSlugs[urlPath]) return resourceSlugs[urlPath];
     const slug = urlPath.replace(/^\/|\/$/g, "").replace(/\//g, "-") || "home";
     return `og-${slug}`;
 };

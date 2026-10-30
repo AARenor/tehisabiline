@@ -24,7 +24,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline — Varunduse taastetest: kas varukoopia töötab?">
     <meta name="article:published_time" content="2026-10-24">
-    <meta name="article:modified_time" content="2026-10-27">
+    <meta name="article:modified_time" content="2026-10-30">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Varunduse taastetest: kas varukoopia töötab? | Tehisabiline">
     <meta name="twitter:description" content="Varunduse taastetest: RPO, RTO, testi ulatus, 90-minuti näidistestiplaan, mõõdikud ja tõendid, mida auditeerija küsib. Neli testitaset.">
@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=98f905c0">
+    <link rel="stylesheet" href="/site.css?v=c2378234">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,7 +49,7 @@
       "headline": "Varunduse taastetest: kas varukoopia päriselt töötab?",
       "description": "Varunduse taastetest: RPO, RTO, testi ulatus, 90-minuti näidistestiplaan, mõõdikud ja tõendid, mida auditeerija küsib.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-30",
       "inLanguage": "et",
       "author": {
         "@type": "Person",
@@ -108,7 +108,7 @@
       "name": "Varunduse taastetest: kas varukoopia töötab? | Tehisabiline",
       "description": "Varunduse taastetest: RPO, RTO, testi ulatus, 90-minuti näidistestiplaan, mõõdikud ja tõendid, mida auditeerija küsib.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-30",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -230,7 +230,7 @@
       <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li><a href="/artiklid/">Artiklid</a></li><li aria-current="page">Varunduse taastetest</li></ol></nav>
       <h1>Varunduse taastetest: kas varukoopia päriselt töötab?</h1>
       <p class="lead">Varundustöö õnnestumine ei tõenda, et süsteemi saab tagasi. Taastetest mõõdab aega, andmekadu ja seda, kas protsess toimib ka siis, kui admini töölaud on maas.</p>
-      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
+      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-30">30. oktoobril 2026</time></p>
     </div>
   </header>
   <section class="section"><div class="wrap article">
@@ -240,7 +240,7 @@
 
       <section id="miks"><h2>Miks varunduse olemasolu ei tõenda taastamist</h2><p>Varundustarkvara testib tavaliselt kirjutamist ja kopeerimist. See ei testi seda, kas rakendus käivitub taastatud andmetega, kas domeeni- või identiteedisõltuvused on olemas või kas krüpteerimisvõti on alles. Ransomware'i puhul võib ründaja olla juba varundussüsteemis sees; siis on „olemasolev“ varukoopia osa rünnakust, mitte päästerõngas.</p><p>CISA soovitab hoida kriitilistest andmetest offline ja krüpteeritud varukoopiaid ning testida nende kättesaadavust ja terviklust regulaarselt. See on oluline eristus: <strong>olemasolu</strong>, <strong>terviklus</strong> ja <strong>taastatavus</strong> on kolm eri kontrolli.</p></section>
 
-      <section id="rpo"><h2>RPO ja RTO: kaks numbrit, millest test algab</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Mõiste</th><th scope="col">Küsimus</th><th scope="col">Testi mõõdik</th></tr></thead><tbody><tr><th scope="row">RPO</th><td data-label="Küsimus">Kui palju andmeid võib kaduda?</td><td data-label="Mõõdik">Viimase taastatava varukoopia vanus vs lubatud kadu</td></tr><tr><th scope="row">RTO</th><td data-label="Küsimus">Kui kaua võib teenus olla maas?</td><td data-label="Mõõdik">Taastamise algusest kuni teenuse kontrollitud avamiseni kulunud aeg</td></tr></tbody></table></div><p>Kui RPO ja RTO on kirjas ainult poliitikas, ei ole neid testitud. Sea iga kriitilise süsteemi kohta eraldi eesmärk ja kirjuta, kas test mõõtis seda tegelikult. Näiteks „e-post taastub 4 tunni jooksul“ on testitav; „varundus on korras“ ei ole.</p></section>
+      <section id="rpo"><h2>RPO ja RTO: kaks numbrit, millest test algab</h2><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Mõiste</th><th scope="col">Küsimus</th><th scope="col">Testi mõõdik</th></tr></thead><tbody><tr><th scope="row">RPO</th><td data-label="Küsimus">Kui palju andmeid võib kaduda?</td><td data-label="Mõõdik">Viimase taastatava varukoopia vanus vs lubatud kadu</td></tr><tr><th scope="row">RTO</th><td data-label="Küsimus">Kui kaua võib teenus olla maas?</td><td data-label="Mõõdik">Taastamise algusest kuni teenuse kontrollitud avamiseni kulunud aeg</td></tr></tbody></table></div><p>Kui RPO ja RTO on kirjas ainult poliitikas, ei ole neid testitud. Sea iga kriitilise süsteemi kohta eraldi eesmärk ja kirjuta, kas test mõõtis seda tegelikult. Näiteks „e-post taastub 4 tunni jooksul“ on testitav; „varundus on korras“ ei ole.</p><p><strong>Illustratiivne arvutus:</strong> kui süsteemi lubatud RPO on 4 tundi ja viimane kontrollitult taastatav koopia on katkestuse algusest 8 tunni kaugusel, ületab andmekadu eesmärgi 4 tunniga. Kui lubatud RTO on 4 tundi, aga taastatud rakendus läbib kasutuskontrolli 5 tunni järel, ületab ka taastamisaeg eesmärgi 1 tunniga. Pane raportisse mõlemad tegelikud mõõtmised eraldi: „varundustöö õnnestus“ ei vasta kumbagi küsimusele. Märgi kõrvalekalde omanik, ajutine riskimaandus ja paranduse järel kordustesti kuupäev.</p></section>
 
       <section id="ulatus"><h2>Mida taastetest peab katma</h2><ul><li><strong>Andmed:</strong> andmebaas, failid, objektihoidla ja konfiguratsioon.</li><li><strong>Rakendus:</strong> kood, keskkonnamuutujad, sertifikaadid, saladused ja integraatsioonid.</li><li><strong>Identiteet:</strong> kasutajad, rollid, teenuskontod ja MFA seadistus (vt <a href="/artiklid/mfa-juurutamine/">MFA juurutamine</a>).</li><li><strong>Taristu:</strong> virtuaalmasinad, võrguseadistus, DNS ja salvestus.</li><li><strong>Sõltuvused:</strong> kolmandad osapooled, milleta rakendus ei käivitu (vt <a href="/artiklid/nis2-tarneahel/">NIS2 tarneahela turve</a>).</li></ul><p>Üks võimalik lünk ei ole andmebaas, vaid rakenduse saladus, sertifikaat või identiteedisõltuvus, mida keegi varunduse nimekirja ei pannud.</p></section>
 
@@ -329,20 +329,21 @@
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/ai_info/">Ettevõtte faktid ja allikad</a></li>
+                    <li><a href="/entitymap/">Üksuste ja teemade kaart</a></li>
                     <li><a href="https://arletop.com/arle-reidma/">Asutaja: Arle Aron Reidma</a></li>
                     <li><a href="/artiklid/">Artiklid</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
                     <li><a href="/viitamine/">Viitamine ja allikad</a></li>
                     <li><a href="/saidikaart/">Kõik lehed</a></li>
                     <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
-                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
                     <li><a href="/en/" hreflang="en" lang="en">English</a></li>
                 </ul>
             </nav>
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-30">30. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>

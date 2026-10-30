@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SBOM Eestis: koostisosade loend ja CRA nõue | Tehisabiline</title>
-    <meta name="description" content="SBOM ehk tarkvara koostisosade loend: mida CRA ja NIS2 tarneahel nõuavad, millised väljad lisada, kuidas hoida loendit ajakohasena ja mida SBOM ei tõesta.">
+    <meta name="description" content="SBOM ehk tarkvara koostisosade loend: CRA miinimumnõue, NIS2 tarneahela riskide seos, olulised väljad ja formaadid, ajakohastamine ning mida SBOM ei tõesta.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
     <meta name="theme-color" content="#0857f8">
@@ -16,18 +16,18 @@
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
     <meta property="og:title" content="SBOM Eestis: koostisosade loend ja CRA nõue | Tehisabiline">
-    <meta property="og:description" content="SBOM ehk tarkvara koostisosade loend: mida CRA ja NIS2 tarneahel nõuavad, millised väljad lisada, kuidas hoida loendit ajakohasena ja mida SBOM ei tõesta.">
+    <meta property="og:description" content="SBOM ehk tarkvara koostisosade loend: CRA miinimumnõue, NIS2 tarneahela riskide seos, olulised väljad ja formaadid, ajakohastamine ning mida SBOM ei tõesta.">
     <meta property="og:url" content="https://tehisabiline.ee/sbom/">
-    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/og-sbom.png?v=e5bdb7f0">
+    <meta property="og:image" content="https://tehisabiline.ee/assets/brand/og-sbom.png?v=43d9771f">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline — SBOM Eestis: koostisosade loend ja CRA nõue">
     <meta name="article:published_time" content="2026-10-24">
-    <meta name="article:modified_time" content="2026-10-27">
+    <meta name="article:modified_time" content="2026-10-30">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SBOM Eestis: koostisosade loend ja CRA nõue | Tehisabiline">
-    <meta name="twitter:description" content="SBOM ehk tarkvara koostisosade loend: mida CRA ja NIS2 tarneahel nõuavad, millised väljad lisada, kuidas hoida loendit ajakohasena ja mida SBOM ei tõesta.">
-    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/og-sbom.png?v=e5bdb7f0">
+    <meta name="twitter:description" content="SBOM ehk tarkvara koostisosade loend: CRA miinimumnõue, NIS2 tarneahela riskide seos, olulised väljad ja formaadid, ajakohastamine ning mida SBOM ei tõesta.">
+    <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/og-sbom.png?v=43d9771f">
     <meta name="twitter:image:alt" content="Tehisabiline — SBOM Eestis: koostisosade loend ja CRA nõue">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/brand/favicon-64.png?v=ea8aea47">
@@ -36,7 +36,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png?v=717eaa27">
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/site.css?v=98f905c0">
+    <link rel="stylesheet" href="/site.css?v=c2378234">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,9 +46,9 @@
       "@id": "https://tehisabiline.ee/sbom/#article",
       "url": "https://tehisabiline.ee/sbom/",
       "headline": "SBOM: tarkvara koostisosade loend ja CRA nõue",
-      "description": "SBOM ehk tarkvara koostisosade loend: CRA ja NIS2 tarneahela nõuded, vajalikud väljad, formaadid ja elutsükkel.",
+      "description": "SBOM ehk tarkvara koostisosade loend: CRA miinimumnõue, NIS2 tarneahela riskide seos, vajalikud väljad, formaadid ja elutsükkel.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-30",
       "inLanguage": "et",
       "author": {
         "@type": "Person",
@@ -73,7 +73,7 @@
       },
       "image": {
         "@type": "ImageObject",
-        "url": "https://tehisabiline.ee/assets/brand/og-sbom.png?v=e5bdb7f0",
+        "url": "https://tehisabiline.ee/assets/brand/og-sbom.png?v=43d9771f",
         "width": 1200,
         "height": 630
       },
@@ -97,6 +97,7 @@
       ],
       "citation": [
         "https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng",
+        "https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng",
         "https://www.cisa.gov/sbom",
         "https://spdx.dev/",
         "https://cyclonedx.org/",
@@ -108,9 +109,9 @@
       "@id": "https://tehisabiline.ee/sbom/#webpage",
       "url": "https://tehisabiline.ee/sbom/",
       "name": "SBOM Eestis: koostisosade loend ja CRA nõue | Tehisabiline",
-      "description": "SBOM ehk tarkvara koostisosade loend: mida CRA ja NIS2 tarneahel nõuavad, millised väljad lisada, kuidas hoida loendit ajakohasena ja mida SBOM ei tõesta.",
+      "description": "SBOM ehk tarkvara koostisosade loend: CRA miinimumnõue, NIS2 tarneahela riskide seos, olulised väljad ja formaadid, ajakohastamine ning mida SBOM ei tõesta.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-30",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -257,7 +258,7 @@
             <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li><a href="/regulatsioonid/">Regulatsioonid</a></li><li aria-current="page">SBOM</li></ol></nav>
             <h1>SBOM: tarkvara koostisosade loend ja CRA nõue</h1>
             <p class="lead">SBOM ehk tarkvara koostisosade loend näitab, millistest komponentidest tarkvara koosneb ja milliseid versioone see kasutab. CRA kontekstis ei ole see dokumentatsiooni kunsttükk, vaid haavatavuste haldamise ja tarneahela tõendamise alus.</p>
-            <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
+            <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-30">30. oktoobril 2026</time></p>
         </div></header>
 
         <section class="section"><div class="wrap article">
@@ -278,8 +279,7 @@
                 <section id="elutsukkel"><h2>SBOM-i elutsükkel</h2><p>SBOM ei ole ühekordne fail. Selle väärtus sõltub sellest, kas see uueneb koos tootega ja kas keegi kasutab seda otsuste tegemiseks. Praktiline tsükkel (soovitus, mitte seadusest tulenev sagedus):</p><ul><li><strong>Iga väljalaske juures:</strong> genereeri uus SBOM ja arhiveeri see versiooni juurde.</li><li><strong>Regulaarne haavatavuste kontroll:</strong> võrdle komponente CVE/OSV andmebaasidega ning hinda mõju.</li><li><strong>VEX ja otsused:</strong> dokumenteeri, kas konkreetne haavatavus on mõjutatud, mitte mõjutatud või parandatud.</li><li><strong>Turvauuendused:</strong> seo parandus väljalaske, SBOM-i ja klienditeavituse vahel.</li><li><strong>Arhiveerimine:</strong> säilita vanad SBOM-id vähemalt tugiperioodi jooksul, et intsidenti saaks hiljem uurida.</li><li><strong>Ülevaatus:</strong> kontrolli protsessi mõõdikuid, näiteks SBOM-i katvust ja aega CVE tuvastamisest paranduseni.</li></ul></section>
 
                 <section id="vead"><h2>Tüüpilised vead</h2><ul><li><strong>Ainult otsesed sõltuvused:</strong> kaudsed teegid jäävad välja ja suur osa ründepinnast on nähtamatu.</li><li><strong>Puuduv versioon:</strong> „log4j“ ilma versioonita ei aita haavatavust hinnata.</li><li><strong>Aegunud loend:</strong> SBOM on olemas, kuid ei vasta enam toote tegelikule buildile.</li><li><strong>Käsitsi Excel:</strong> sobib alguseks, kuid ei skaleeru ega toeta automaatset päringut.</li><li><strong>SBOM kui turvatõend:</strong> loend ei tõesta, et komponendid on turvalised või õigesti seadistatud.</li><li><strong>Puuduv omanik:</strong> keegi ei vastuta uuendamise ja klientide teavitamise eest.</li></ul></section>
-
-                <section id="eesti"><h2>Eesti ja tarnijad</h2><p>Eesti ettevõtte jaoks on SBOM kõige otsesemalt seotud CRA ja NIS2 tarneahela nõuetega. Kui oled tarkvara- või seadmetootja, küsi oma komponentide tarnijatelt masinloetavat loendit ja teavita neid haavatavustest, mida ise leiad. Kui oled teenuseosutaja, küsi SBOM-i oma kriitilistelt tarkvaratarnijatelt ning kontrolli, kas nende tugiperiood ja teatamisprotsess vastavad sinu riskile.</p><p>SBOM-i ei tohiks nõuda kõigilt tarnijatelt ühesuguse detailsusega. Riskipõhine lähenemine on mõistlikum: kriitilistelt komponentidelt nõua masinloetavat loendit ja VEX-i, vähem kriitilistelt vähemalt versioonide ja haavatavuste teavitamise protsessi.</p><p>Loe lisaks: <a href="/cra/">CRA juhend</a>, <a href="/nis2/">NIS2 Eestis</a> ja <a href="/artiklid/nis2-tarneahel/">NIS2 tarneahela artikkel</a>.</p></section>
+                <section id="eesti"><h2>Eesti ja tarnijad</h2><p>CRA nõuab tootjalt toote komponentide dokumenteerimist, sealhulgas SBOM-i. NIS2 artikli 21 lõike 2 punkt d nõuab tarneahela turvalisusega seotud meetmeid, kuid ei nimeta konkreetset SBOM-faili. Komponentide loend võib siiski aidata teenuseosutajal tarkvara tarneahela riske hinnata. Kui oled tarkvara- või seadmetootja, küsi oma komponentide tarnijatelt masinloetavat loendit ja teavita neid haavatavustest, mida ise leiad. Kui oled teenuseosutaja, küsi SBOM-i kriitilistelt tarkvaratarnijatelt ning kontrolli, kas nende tugiperiood ja teatamisprotsess vastavad sinu riskile.</p><p>SBOM-i ei tohiks nõuda kõigilt tarnijatelt ühesuguse detailsusega. Riskipõhine lähenemine on mõistlikum: kriitilistelt komponentidelt küsi masinloetavat loendit ja VEX-i, vähem kriitilistelt vähemalt versioonide ja haavatavuste teavitamise protsessi.</p><p>Loe lisaks: <a href="/cra/">CRA juhend</a>, <a href="/nis2/">NIS2 Eestis</a> ja <a href="/artiklid/nis2-tarneahel/">NIS2 tarneahela artikkel</a>. Vaata NIS2 tarneahela turvalisuse nõuet <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng" rel="noopener">direktiivi (EL) 2022/2555 artikli 21 lõike 2 punktist d</a>.</p></section>
 
                 <section id="kontroll"><h2>Kontrolli SBOM-i CSV-d</h2><p>Laadi allalaaditav tööleht või oma sama veerustruktuuriga fail. Kontroll on põhikontroll: see vaatab veerustruktuuri, kohustuslikud väljad, identifikaatori prefiksi (pkg: või cpe:), korduvad komponendiversioonid ja näidisväärtused. See ei valideeri SPDX- ega CycloneDX-vormingut ega otsi haavatavusi. Fail ei lahku sinu brauserist.</p><form class="nis2-check" data-sbom-check data-local-check novalidate><label for="sbom-file">Vali SBOM-i CSV-fail</label><input id="sbom-file" type="file" accept=".csv,text/csv" data-sbom-file><button class="btn" type="submit">Kontrolli faili</button><div class="nis2-check__result" data-sbom-result tabindex="-1" aria-live="polite" hidden></div></form><p class="nis2-check__note">Kontroll on orienteeruv ega asenda SBOM-i kvaliteedi auditit ega formaadivalideerimist. <a href="/assets/downloads/cra-sbom-mall.csv">Laadi inventari tööleht (CSV)</a>.</p></section>
                 <section id="faq"><h2>Küsimused SBOM-i kohta</h2><div class="faq">
@@ -354,20 +354,21 @@
                 <p class="site-footer__title">Teave</p>
                 <ul>
                     <li><a href="/meist/">Meist ja põhimõtted</a></li>
+                    <li><a href="/ai_info/">Ettevõtte faktid ja allikad</a></li>
+                    <li><a href="/entitymap/">Üksuste ja teemade kaart</a></li>
                     <li><a href="https://arletop.com/arle-reidma/">Asutaja: Arle Aron Reidma</a></li>
                     <li><a href="/artiklid/">Artiklid</a></li>
                     <li><a href="/sonastik/">Küberturbe sõnastik</a></li>
                     <li><a href="/viitamine/">Viitamine ja allikad</a></li>
                     <li><a href="/saidikaart/">Kõik lehed</a></li>
                     <li><a href="/privaatsus/">Privaatsus ja küpsised</a></li>
-                    <li><a href="/llms.txt">AI-süsteemidele</a></li>
                     <li><a href="/en/" hreflang="en" lang="en">English</a></li>
                 </ul>
             </nav>
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-30">30. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>

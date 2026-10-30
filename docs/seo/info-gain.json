@@ -1,6 +1,6 @@
 {
-  "$comment": "Per-page information gain: the one thing this page has that a competing page does not. Enforced by tools/info-gain.mjs (npm run test:seo). proof must be a string that appears verbatim in the page HTML, so this file cannot silently reference a deleted asset. Pages without an entry are listed as gaps in docs/seo/topical-map.md.",
-  "updated": "2026-10-29",
+  "$comment": "Per-page information gain records the actual answer-to-decision/example-to-existing-asset-to-evidence/limit-to-next-step stack. `pages` retains the existing 40 proof-backed assets checked by tools/info-gain.mjs; this registry is not a competitive-uniqueness, ranking or score model. Existing `proof` strings must appear verbatim in page HTML. Optional `layers` document the live content stack and are not separately counted or scored; `layerNotes` may document useful in-page examples without adding an asset-coverage entry.",
+  "updated": "2026-10-30",
   "requiredCoverage": 40,
   "pages": {
     "/": {
@@ -21,12 +21,26 @@
     "/nis2/": {
       "asset": "Nelja küsimuse kuuluvustest + kohaldamismemo mall",
       "type": "calculator",
-      "proof": "/assets/js/nis2-check.js"
+      "proof": "/assets/js/nis2-check.js",
+      "layers": {
+        "answer": "The Estonian scope guide screens whether the entity and its activity meet the applicable conditions; the result depends on the legal facts, not only the company name.",
+        "decision_or_example": "Use the four-question browser check, then record the entity, activity, relevant size/group facts and the answer in the memo.",
+        "tool_or_download": "Existing four-question browser check and memo DOCX.",
+        "evidence_and_limit": "The guide cites KüTS and RIA. The screen is an aid, not a legal opinion; verify current law and RIA instructions, especially special cases.",
+        "next_step": "Continue to /nis2/kontrollnimekiri/ for measures, /nis2/registreerimine/ for registration or /nis2/audit/ for evidence."
+      }
     },
     "/nis2/kontrollnimekiri/": {
       "asset": "Interaktiivne kümne meetme kontrollnimekiri",
       "type": "calculator",
-      "proof": "/assets/js/nis2-checklist.js"
+      "proof": "/assets/js/nis2-checklist.js",
+      "layers": {
+        "answer": "Article 21(2)(a)-(j) contains ten risk-management measures; logs are evidence for several measures, not an extra measure.",
+        "decision_or_example": "For continuity, test a restore and record elapsed time/RTO and data-loss boundary/RPO; the page labels practical examples and recommendations separately from legal duties.",
+        "tool_or_download": "Existing interactive ten-measure checklist with progress and print/PDF controls.",
+        "evidence_and_limit": "The page cites the legal measure text and labels recommendations/examples; a checked item is not a certification or proof that a control operates.",
+        "next_step": "Use /artiklid/varunduse-taastetest/ for the illustrative recovery plan or /nis2/audit/ for evidence collection."
+      }
     },
     "/nis2/intsidendist-teatamine/": {
       "asset": "24/72-tunni teatamistähtaja kalkulaator",
@@ -46,7 +60,14 @@
     "/nis2/audit/": {
       "asset": "Auditi tõendite register (Excel: rippmenüüd, tähtaja värv ja kokkuvõte)",
       "type": "template",
-      "proof": "/assets/downloads/nis2-auditi-toendite-mall.xlsx"
+      "proof": "/assets/downloads/nis2-auditi-toendite-mall.xlsx",
+      "layers": {
+        "answer": "NIS2 does not prescribe one certificate or audit form; a review should connect measures and management duties to evidence.",
+        "decision_or_example": "Define scope, criteria and method; record a finding with evidence, risk, owner, date and follow-up.",
+        "tool_or_download": "Existing Excel evidence register with measure rows, date fields, status/results and summary.",
+        "evidence_and_limit": "The page cites NIS2/KüTS and says Tehisabiline does not issue legal opinions, certificates or official compliance audits.",
+        "next_step": "Use /nis2/kontrollnimekiri/ for measure evidence or /kuberaudit/ and /pentestimine/ to scope technical work."
+      }
     },
     "/nis2/toetus/": {
       "asset": "EIS NIS2 toetuse tingimuste tabel (maht, määrad, tähtaeg; olek kontrollitud 27.10.2026)",
@@ -56,7 +77,14 @@
     "/pentestimine/naidisraport/": {
       "asset": "Sünteetiline pentesti raport (PDF)",
       "type": "sample",
-      "proof": "/assets/downloads/pentesti-raporti-naidis.pdf"
+      "proof": "/assets/downloads/pentesti-raporti-naidis.pdf",
+      "layers": {
+        "answer": "A useful pentest report shows scope, method, repeatable evidence, impact, remediation and retest conditions.",
+        "decision_or_example": "The page walks through a fictional engagement with three synthetic findings and a retest; it is a format example, not a case study.",
+        "tool_or_download": "Existing synthetic PDF report.",
+        "evidence_and_limit": "The page explicitly says all names, domains, targets and findings are fictional; none of the example results are customer outcomes.",
+        "next_step": "Compare report scope and evidence, then use /pentestimine/#tellimine to request a scoped offer."
+      }
     },
     "/dora/": {
       "asset": "DORA teaberegistri mall (CSV; jagatud /dora/teaberegister/ lehega)",
@@ -66,7 +94,14 @@
     "/dora/teaberegister/": {
       "asset": "Brauseripõhine CSV-kontrollija",
       "type": "calculator",
-      "proof": "/assets/js/dora-csv-check.js"
+      "proof": "/assets/js/dora-csv-check.js",
+      "layers": {
+        "answer": "A DORA register connects ICT contracts and providers to supported functions, criticality, data locations, subcontractors and exit risk.",
+        "decision_or_example": "Start from contracts, then assign the function and criticality before completing provider, location and exit evidence.",
+        "tool_or_download": "Existing browser-only CSV field/date/duplicate-ID check and internal working template.",
+        "evidence_and_limit": "The page cites DORA, ITS 2024/2956 and Finantsinspektsioon. The CSV is not the official submission format; check FI instructions and deadlines.",
+        "next_step": "Use /en/dora/register/ for the detailed ITS mapping or follow Finantsinspektsioon's official submission instructions."
+      }
     },
     "/dora/audit/": {
       "asset": "DORA auditi tõendite tabel (CSV)",
@@ -81,7 +116,14 @@
     "/en/dora/register/": {
       "asset": "Register of information template (CSV, English fields)",
       "type": "template",
-      "proof": "/assets/downloads/dora-register-of-information-template.csv"
+      "proof": "/assets/downloads/dora-register-of-information-template.csv",
+      "layers": {
+        "answer": "DORA Article 28(3) requires a maintained register; ITS 2024/2956 specifies the supervisory reporting format.",
+        "decision_or_example": "Collect by contractual arrangement and link the provider, function, criticality, data location, subcontractors and exit evidence across the official template structure.",
+        "tool_or_download": "Existing English working CSV with example rows to remove before use.",
+        "evidence_and_limit": "EBA and the Commission ITS are cited. The CSV is not the official ITS deliverable, a legal filing or proof of DORA compliance.",
+        "next_step": "Check the current Finantsinspektsioon instructions; use /en/dora/audit/ for broader evidence."
+      }
     },
     "/regulatsioonid/": {
       "asset": "Kuue raamistiku võrdlustabel (CSV), kontrollitud 27.10.2026",
@@ -96,12 +138,26 @@
     "/en/ai-act/": {
       "asset": "AI Act risk-class self-check",
       "type": "calculator",
-      "proof": "/assets/js/ai-act-check-en.js"
+      "proof": "/assets/js/ai-act-check-en.js",
+      "layers": {
+        "answer": "The AI Act uses risk categories and assigns obligations by system role and classification; not every AI system is high-risk.",
+        "decision_or_example": "Run the existing risk-class self-check, then verify whether the high-risk worksheet is relevant to the use case.",
+        "tool_or_download": "Existing English risk-class self-check.",
+        "evidence_and_limit": "The page cites the AI Act and Commission material. Timelines have staged application and changed under later EU amendments; the self-check is not a legal determination or AI security test.",
+        "next_step": "Use /en/ai-act/high-risk/ only if the classification route points there."
+      }
     },
     "/sbom/": {
       "asset": "SBOM-i kontrollija + mall (CSV)",
       "type": "calculator",
-      "proof": "/assets/js/sbom-check.js"
+      "proof": "/assets/js/sbom-check.js",
+      "layers": {
+        "answer": "For CRA technical documentation, the component list must be machine-readable and include at least first-level dependencies; the Regulation does not prescribe one exact format or require public release.",
+        "decision_or_example": "Choose a product/build inventory workflow and keep component versions, dependency information and vulnerability handling current.",
+        "tool_or_download": "Existing hand-filled CSV inventory worksheet and browser-side CSV structure check.",
+        "evidence_and_limit": "The page cites CRA Annex I Part II and distinguishes CRA product duties from NIS2 supply-chain risk management. The worksheet is not a machine-readable SBOM; the checker is not SPDX/CycloneDX validation, vulnerability scanning or proof of security.",
+        "next_step": "Use /cra/ to check product scope and reporting dates."
+      }
     },
     "/en/sbom/": {
       "asset": "SBOM checker",
@@ -126,7 +182,14 @@
     "/cra/": {
       "asset": "CRA kohaldumise enesekontroll",
       "type": "calculator",
-      "proof": "/assets/js/cra-check.js"
+      "proof": "/assets/js/cra-check.js",
+      "layers": {
+        "answer": "CRA applies to in-scope products with digital elements; reporting duties started 2026-09-11 and the principal product requirements apply from 2027-12-11.",
+        "decision_or_example": "Answer the existing product/market questions, then distinguish the reporting timeline from the principal application date.",
+        "tool_or_download": "Existing browser-side scope self-check and reporting-deadline calculator.",
+        "evidence_and_limit": "The page cites Regulation (EU) 2024/2847 and European Commission guidance. The tools assist planning; they do not determine legal scope, issue a conformity decision or replace ENISA/CSIRT instructions.",
+        "next_step": "Use /sbom/ for component inventory boundaries or /en/cra/vulnerability-reporting/ for the English handling workflow."
+      }
     },
     "/en/cra/": {
       "asset": "CRA scope self-check",
@@ -171,12 +234,26 @@
     "/en/nis2/suppliers/": {
       "asset": "NIS2 supplier questionnaire (CSV, 14 questions with evidence and risk columns)",
       "type": "template",
-      "proof": "/assets/downloads/nis2-supplier-questionnaire.csv"
+      "proof": "/assets/downloads/nis2-supplier-questionnaire.csv",
+      "layers": {
+        "answer": "NIS2 places the supply-chain risk-management duty on the in-scope entity; it does not create a separate supplier certificate or fixed mandatory questionnaire.",
+        "decision_or_example": "Assess direct suppliers proportionally, record the reason/evidence and use contract terms tied to the identified risk.",
+        "tool_or_download": "Existing 14-question supplier CSV with evidence, answer and risk columns.",
+        "evidence_and_limit": "The page cites NIS2 Articles 21(2)(d) and 21(3). Its questionnaire, suggested clause set and annual/event-driven cadence are practical aids, not prescribed text or a statutory fixed cycle.",
+        "next_step": "Use /en/nis2/checklist/ for the entity's ten measures; for a financial entity's register use /en/dora/register/."
+      }
     },
     "/en/nis2/scope-assessment/": {
       "asset": "Browser-only NIS2 scope assessment: sector, size and group test with a verdict, plus a decision worksheet CSV (EN)",
       "type": "calculator",
-      "proof": "/assets/downloads/nis2-scope-assessment-worksheet.csv"
+      "proof": "/assets/downloads/nis2-scope-assessment-worksheet.csv",
+      "layers": {
+        "answer": "NIS2 scope depends on entity type/activity, size and group treatment, plus special cases and national rules.",
+        "decision_or_example": "Work through the four legal steps, then document which entity, accounting period, group data and exception determine the result.",
+        "tool_or_download": "Existing browser-only yes/no assessment and decision worksheet CSV.",
+        "evidence_and_limit": "The page links the NIS2 Directive, KüTS and EU SME rules. The assessment is a screen, not a legal opinion; complex group facts and national special cases need authoritative review.",
+        "next_step": "Return to /en/nis2/ for duties, registration and the English checklist."
+      }
     },
     "/en/nis2/vs-iso-27001/": {
       "asset": "Article 21(2) to Annex A mapping CSV: controls, coverage, open gap and closing evidence per measure (EN)",
@@ -191,7 +268,14 @@
     "/en/security-audit/checklist/": {
       "asset": "Cybersecurity audit checklist CSV (74 rows across ten domains) plus a fill-in report template TXT (EN)",
       "type": "template",
-      "proof": "/assets/downloads/security-audit-report-template.txt"
+      "proof": "/assets/downloads/security-audit-report-template.txt",
+      "layers": {
+        "answer": "A cybersecurity audit tests whether controls exist and operate; a pentest asks whether a weakness can be exploited inside an agreed scope.",
+        "decision_or_example": "Choose the review from the decision needed, define systems and evidence period, then sample from a complete population rather than memory.",
+        "tool_or_download": "Existing 74-row, ten-domain checklist CSV plus plain-text report template.",
+        "evidence_and_limit": "The page calls the checklist a sampling plan, not a compliance certificate. A clean audit does not prove a secure system; a clean pentest does not prove controls operate.",
+        "next_step": "Use /en/security-audit/ for service scope, /en/iso-27001/audit-checklist/ for ISO-specific clauses or /en/nis2/audit/ for NIS2 evidence."
+      }
     },
     "/en/pentest-report/": {
       "asset": "Pentest report template TXT with CVSS/CWE finding fields and a scope worksheet CSV for rules of engagement (EN)",
@@ -202,6 +286,15 @@
       "asset": "TLPT readiness checklist CSV mapped to the TIBER-EU phases and DORA Article 26 duties (EN)",
       "type": "template",
       "proof": "/assets/downloads/tlpt-readiness-checklist.csv"
+    }
+  },
+  "layerNotes": {
+    "/artiklid/varunduse-taastetest/": {
+      "answer": "RTO describes the time objective for restoring service; RPO describes the tolerable data-loss interval.",
+      "decision_or_example": "The existing 90-minute restore sequence is an illustrative test plan: restore one critical service, record elapsed time and the data point recovered, then compare the result with the organisation's own RTO/RPO.",
+      "tool_or_download": "No separate tool or download; the example and record prompts are in the article.",
+      "evidence_and_limit": "The article labels the scenario as an example to adapt. It is not a customer case, measured service result or legally required test cadence; NIS2 does not prescribe a universal RTO/RPO number.",
+      "next_step": "Use /nis2/kontrollnimekiri/ for the continuity measure and /artiklid/kuberriskide-register/ to record the risk and owner."
     }
   }
 }

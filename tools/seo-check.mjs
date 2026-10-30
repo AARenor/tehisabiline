@@ -554,6 +554,20 @@ const expectedPages = [
         schemaTypes: ["WebPage", "BreadcrumbList"],
         dateType: "WebPage",
         requiresPublishedDate: true
+    },
+    {
+        file: "ai_info/index.html",
+        canonical: `${origin}/ai_info/`,
+        schemaTypes: ["AboutPage", "BreadcrumbList", "Person"],
+        dateType: "AboutPage",
+        requiresPublishedDate: true
+    },
+    {
+        file: "entitymap/index.html",
+        canonical: `${origin}/entitymap/`,
+        schemaTypes: ["CollectionPage", "BreadcrumbList", "Person"],
+        dateType: "CollectionPage",
+        requiresPublishedDate: true
     }
 ];
 const expectedUrls = expectedPages.filter((page) => !page.noindex).map((page) => page.canonical);

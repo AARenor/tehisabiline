@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ has two main offerings: human-reviewed cybersecurity audits/pentesting for businesses, and a keeldudeta cyber-AI API for security-tool developers. Pentesting also means läbistustestimine or läbitungimistest. The OpenAI-compatible API is in development and not yet public; intended use is lawful security work, not unrestricted activity. Contact: tehisabiline@gmail.com.
+> Tehisabiline OÜ describes scoped cybersecurity audits and penetration testing; significant findings receive human review. A cybersecurity API for security-tool developers is in development, not public or available as a production service; it has no public endpoint or published price. Testing is limited to systems the client owns or controls, with written authorization and an agreed scope. Contact: tehisabiline@gmail.com.
 
 Entity:
 
@@ -10,8 +10,10 @@ Entity:
 - Email: tehisabiline@gmail.com
 - Website: https://tehisabiline.ee/ · GitHub: https://github.com/AARenor/tehisabiline
 - Entity map (JSON): https://tehisabiline.ee/entitymap.json — canonical organization, founder, services, topic vocabulary and the page-to-cluster map
+- Company facts: https://tehisabiline.ee/ai_info/ — source-linked identity, described security-testing scope, API development status and correction contact
+- HTML entity map: https://tehisabiline.ee/entitymap/ — navigable relationships between the organization, founder, service nodes, topics and clustered pages
 
-Status reviewed on 2026-10-29:
+Status reviewed on 2026-10-30:
 
 - The developer API is not yet public; pilot access is discussed by email.
 - Model hosting hardware is ordered; processing in Estonia is forthcoming, not live.
@@ -96,6 +98,8 @@ Status reviewed on 2026-10-29:
 - [NIS2 audit](https://tehisabiline.ee/nis2/audit/): scope, evidence, process, report contents and the difference from a penetration test.
 - [Küberturbe sõnastik](https://tehisabiline.ee/sonastik/): definitions of pentest, BOLA, IDOR, XSS, SQL injection, NIS2, MFA, RTO/RPO and related terms in Estonian.
 - [Meist](https://tehisabiline.ee/meist/): organization, working principles and contact.
+- [Tehisabilise faktid ja allikad](https://tehisabiline.ee/ai_info/): source-linked company identity, described security-testing scope, API development status, limits and correction route.
+- [Üksuste ja teemade kaart](https://tehisabiline.ee/entitymap/): navigable HTML map of the organization, founder, service nodes, topic groups and canonical page clusters.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
 - [Privaatsus](https://tehisabiline.ee/privaatsus/): privacy information.
 
