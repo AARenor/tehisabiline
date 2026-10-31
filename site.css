@@ -677,6 +677,9 @@ table.data thead .ours { background: var(--blue); color: #fff; }
 .site-footer ul { list-style: none; display: grid; gap: .55rem; font-size: .975rem; color: var(--text); }
 .site-footer ul a { color: var(--text); text-decoration: none; }
 .site-footer ul a:hover { color: var(--blue); text-decoration: underline; }
+.site-footer__badge { margin-top: 1.5rem; }
+.site-footer__badge a { display: inline-block; line-height: 0; border-radius: 6px; }
+.site-footer__badge img { display: block; width: 169px; max-width: 100%; height: auto; }
 .site-footer__legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding-block: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 
 /* 17 Utilities ------------------------------------------------------------ */
@@ -744,7 +747,7 @@ table.data thead .ours { background: var(--blue); color: #fff; }
 @media print {
   @page { margin: 16mm 14mm; }
   body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
-  .skip-link, .site-header, .mobile-menu, .toc, .site-footer__grid nav, .cta-row, .band .btn, .faq summary .i, .related__list .i, .hero__ribbon, .demo__send { display: none !important; }
+  .skip-link, .site-header, .mobile-menu, .toc, .site-footer__grid nav, .site-footer__badge, .cta-row, .band .btn, .faq summary .i, .related__list .i, .hero__ribbon, .demo__send { display: none !important; }
   .hero, .page-head { margin-top: 0; padding-top: 1rem; }
   .page-head::before, .band::before { display: none; }
   .page-head, .hero, .section--tint, .band, .site-footer, .callout, .short-answer, .demo { background: none !important; box-shadow: none !important; }

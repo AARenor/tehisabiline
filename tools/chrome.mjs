@@ -145,6 +145,7 @@ const FOOTER = {
         contactTitle: "Kontakt",
         place: "Reg. kood 17607255 · Viimsi vald, Harju maakond",
         linkedin: "LinkedIn",
+        badge: { file: "google_preferred_source_badge_light_ET", alt: "Lisage Google'is eelistatud allikana" },
         rights: "© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.",
         updated: "Viimati sisuliselt uuendatud",
     },
@@ -212,6 +213,7 @@ const FOOTER = {
         contactTitle: "Contact",
         place: "Reg. no. 17607255 · Viimsi Parish, Harju County",
         linkedin: "LinkedIn",
+        badge: { file: "google_preferred_source_badge_light_en", alt: "Add as a preferred source on Google" },
         rights: "© 2026 Tehisabiline OÜ. All rights reserved.",
         updated: "Last materially updated",
     },
@@ -227,6 +229,11 @@ function footer(date, path = "/") {
                     ${g.links.map(link).join("\n                    ")}
                 </ul>
             </nav>`;
+    const badge = `<div class="site-footer__badge">
+                    <a href="https://www.google.com/preferences/source?q=tehisabiline.ee" target="_blank" rel="noopener">
+                        <img src="/assets/brand/${f.badge.file}.png" srcset="/assets/brand/${f.badge.file}.png 1x, /assets/brand/${f.badge.file}@2x.png 2x" width="169" height="53" alt="${f.badge.alt}" loading="lazy" decoding="async">
+                    </a>
+                </div>`;
     return `<footer class="site-footer">
     <div class="wrap">
         <div class="site-footer__grid">
@@ -240,6 +247,7 @@ function footer(date, path = "/") {
                     <li><a href="https://www.linkedin.com/in/arlearonreidma/" rel="me noopener" target="_blank">${f.linkedin}</a></li>
                     <li><a href="${locale.contact[0]}">${locale.contact[1]}</a></li>
                 </ul>
+                ${badge}
             </div>
 ${f.groups.map(group).join("\n")}
         </div>
