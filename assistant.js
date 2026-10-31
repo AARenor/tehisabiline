@@ -148,6 +148,7 @@
 
   var panel, log, input, sendBtn, launcher, compose, leadView, successView;
   var history = [];
+  var introShown = false;
   var transcript = [];
   var streaming = false;
 
@@ -369,7 +370,10 @@
     panel.hidden = false;
     panel.classList.add("ta-enter");
     launcher.setAttribute("aria-expanded", "true");
-    if (!history.length) addMsg("bot", L.intro);
+    if (!introShown) {
+      introShown = true;
+      addMsg("bot", L.intro);
+    }
     input.focus();
   }
 
