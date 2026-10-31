@@ -27,7 +27,7 @@ This file summarizes public website information. The site language is Estonian; 
 
 ## Services
 
-### Turvatestimine / penetration testing in Estonia
+### Pentest ja turvatestimine Eestis
 
 Canonical page: https://tehisabiline.ee/pentestimine/
 
