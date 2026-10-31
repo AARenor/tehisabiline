@@ -22,7 +22,7 @@
         title: "Tehisabiline assistent",
         subtitle: "Küberturvalisus ja küber-AI · küsige julgelt",
         intro:
-          "Tere! Olen Tehisabiline AI-assistent. Küsi küberauditi, pentestimise, NIS2 või küber-AI API kohta — või jäta kontakt ja vastame ise.",
+          "Tere! Olen Tehisabiline AI-assistent. Küsi küberauditi, pentestimise, NIS2 või küber-AI API kohta, või jäta kontakt ja vastame ise.",
         placeholder: "Kirjuta küsimus…",
         send: "Saada",
         leave: "Jäta kontakt",
@@ -38,7 +38,7 @@
         leadTitle: "Jäta kontakt",
         leadName: "Nimi",
         leadEmail: "E-post",
-        leadMsg: "Sõnum (valikuline — vestlus lisatakse automaatselt)",
+        leadMsg: "Sõnum (valikuline, vestlus lisatakse automaatselt)",
         leadQuote: "Soovin hinnapakkumist või tasuta kaardistust",
         leadConsent:
           "Nõustun, et minu andmeid kasutatakse vastamiseks. Vaata /privaatsus/.",
@@ -61,7 +61,7 @@
         title: "Tehisabiline assistant",
         subtitle: "Cybersecurity and cyber-AI · ask away",
         intro:
-          "Hi! I'm the Tehisabiline AI assistant. Ask about cybersecurity audits, pentesting, NIS2 or the cyber-AI API — or leave your contact and we'll reply.",
+          "Hi! I'm the Tehisabiline AI assistant. Ask about cybersecurity audits, pentesting, NIS2 or the cyber-AI API. Or leave your contact and we'll reply.",
         placeholder: "Type your question…",
         send: "Send",
         leave: "Leave contact",
@@ -73,7 +73,7 @@
         leadTitle: "Leave your contact",
         leadName: "Name",
         leadEmail: "Email",
-        leadMsg: "Message (optional — the chat is attached automatically)",
+        leadMsg: "Message (optional, the chat is attached automatically)",
         leadQuote: "I'd like a quote or a free scoping call",
         leadConsent: "I agree my data is used to reply. See /privaatsus/.",
         leadConsentLink: "privacy",
