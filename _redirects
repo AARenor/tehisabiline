@@ -43,3 +43,5 @@
 # Retired training page (2026-10-27): Tehisabiline does not sell training; the free NIS2 guide is the closest useful destination.
 /koolitus  /nis2/  301
 /koolitus/  /nis2/  301
+/artiklid/ai-teadmistebaas  https://arletop.com/artiklid/teadmistebaas-chatbotile/  301
+/artiklid/ai-teadmistebaas/  https://arletop.com/artiklid/teadmistebaas-chatbotile/  301

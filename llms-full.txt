@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-10-30
+Last materially reviewed: 2026-10-31
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -27,13 +27,13 @@ This file summarizes public website information. The site language is Estonian; 
 
 ## Services
 
-### Pentesting / penetration testing in Estonia
+### Turvatestimine / penetration testing in Estonia
 
 Canonical page: https://tehisabiline.ee/pentestimine/
 
-Additional Estonian synonym: läbistustestimine. The service page explains who benefits, the decisions testing supports and Tehisabiline's working principles. Every process phase names its output: agreed targets, written authorization, validated findings and report. Quote requests specify the system, test objective, access/staging options, preferred window, retest needs and authorization contact.
+Additional Estonian terms: turvatestimine and läbistustestimine. The service page explains who benefits, the decisions testing supports and Tehisabiline's working principles. Every process phase names its output: agreed targets, written authorization, validated findings and report. Quote requests specify the system, test objective, access/staging options, preferred window, retest needs and authorization contact.
 
-Estonian terms: pentestimine, pentest and läbitungimistest. Tehisabiline offers scoped active security testing of agreed web applications and APIs. It assesses whether weaknesses can be exploited within the authorization, rather than simply repeating scanner warnings. The engagement specifies targets, environment, accounts, allowed actions, test window, stop conditions and contacts before testing. Important findings are reviewed by a human. Outputs include evidence, impact, recommended fixes and the retest agreed in the offer. Pricing depends on targets, roles, flows, access, test depth and follow-up; initial mapping is free. Black-box, grey-box and white-box describe the information supplied to the tester and are scoping choices, not guaranteed packages. OWASP WSTG and NIST SP 800-115 are referenced as public planning guidance, not certifications.
+Estonian terms: turvatestimine, pentestimine, pentest and läbitungimistest. Tehisabiline offers scoped active security testing of agreed web applications and APIs. It assesses whether weaknesses can be exploited within the authorization, rather than simply repeating scanner warnings. The engagement specifies targets, environment, accounts, allowed actions, test window, stop conditions and contacts before testing. Important findings are reviewed by a human. Outputs include evidence, impact, recommended fixes and the retest agreed in the offer. Pricing depends on targets, roles, flows, access, test depth and follow-up; initial mapping is free. Black-box, grey-box and white-box describe the information supplied to the tester and are scoping choices, not guaranteed packages. OWASP WSTG and NIST SP 800-115 are referenced as public planning guidance, not certifications.
 
 ### Pentesti raporti näidis
 
@@ -278,7 +278,7 @@ Authorised penetration testing for web applications and APIs; cloud configuratio
 Canonical page: https://tehisabiline.ee/en/security-audit/
 A scoped cybersecurity audit reviews identity and access, configuration, cloud, suppliers, incident readiness and the evidence behind security claims. It is distinct from penetration testing, which attempts controlled exploitation of a specific scope. Deliverables include findings, a management summary and a prioritised remediation plan.
 
-## ISO 27001 in Estonia (EN)
+## ISO certification in Estonia (EN)
 
 Canonical page: https://tehisabiline.ee/en/iso-27001/
 ISO/IEC 27001 is a voluntary international standard for an information-security management system. Certification is issued by an accredited certification body after a two-stage audit and annual surveillance. It does not by itself prove NIS2, E-ITS or DORA compliance, but it can support the evidence base.
