@@ -19,7 +19,7 @@ This file summarizes public website information. The site language is Estonian; 
 
 ## Current status
 
-- Public uncensored-model text demo: available as a standalone demo at https://tehisabiline.ee/mudelid/#lfm3-demo. Its dedicated endpoint is https://ai.tehisabiline.ee/api/demo/lfm3; it proxies to a same-host local model service.
+- Public uncensored-model text demo: available as a standalone demo at https://tehisabiline.ee/mudelid/#demo. Its dedicated endpoint is https://ai.tehisabiline.ee/api/demo/lfm3; it proxies to a same-host local model service.
 - The demo has a fixed server-side system prompt and accepts only the current user prompt: no conversation history, RAG, CRM or app-level conversation database. Prompt maximum: 2,000 Unicode characters. Model-generated reasoning, when returned, is streamed separately from the final answer; total output is capped at 4,096 generated tokens, including up to 1,024 reasoning tokens. One generation runs at a time. Rate limits: 5 requests/minute and 20/hour per IP, 100/hour globally.
 - The demo route does not log prompt or generated-output content. This does not establish what Cloudflare, the tunnel, model service or runtime infrastructure logs or retains; those practices have not been verified. Users must not submit personal or confidential data. No server-country or third-party non-processing claim is made.
 - Commercial cybersecurity API: still planned/in development, not public, with no production endpoint or published price. It is separate from the uncensored-model demo. Model hosting in Estonia is forthcoming for the planned API; hardware has been ordered, but processing there is not live.
@@ -79,7 +79,7 @@ Tehisabiline offers cybersecurity audits and scoped penetration testing for Esto
 
 ### Standalone uncensored-model public text demo
 
-Canonical entry point: https://tehisabiline.ee/mudelid/#lfm3-demo
+Canonical entry point: https://tehisabiline.ee/mudelid/#demo
 Dedicated endpoint: https://ai.tehisabiline.ee/api/demo/lfm3
 
 This public text demo is a standalone technical demonstration and is not the planned commercial cybersecurity API. The endpoint uses a fixed server-side system prompt and sends only the current prompt to the same-host local model service. Each request has no conversation history, RAG or CRM. The route does not log prompt or generated-output content or use an app-level conversation database. Responses stream; only one generation runs at a time; prompts are limited to 2,000 Unicode characters and total output is capped at 4,096 generated tokens, including up to 1,024 reasoning tokens. When the model returns reasoning, the page displays it separately from the final answer. Limits are 5 requests/minute and 20/hour per IP, and 100/hour globally.
