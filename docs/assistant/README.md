@@ -12,13 +12,14 @@ külastaja brauser (tehisabiline.ee, Cloudflare Pages)
         └── POST https://ai.tehisabiline.ee/api/chat   (SSE)
             └── Cloudflare tunnel "home-apps" (ee14ae85-c169-4bf1-87be-91ff10130cf9)
                 └── FastAPI 127.0.0.1:8790  (käesolev kataloog, systemd)
-                     ├── Ollama 127.0.0.1:11434  (chat: gemma3:4b, embeddings: bge-m3)
-                     ├── RAG indeks  data/chunks.json + data/embeddings.npy  (121 chunk'i, 10 lk)
+                     ├── Codex Responses API  (chat, model from CHAT_MODEL)
+                     ├── Ollama 127.0.0.1:11434  (embeddings: bge-m3)
+                     ├── RAG indeks  data/chunks.json + data/embeddings.npy
                      └── Twenty CRM  http://127.0.0.1:3010  (REST API, secrets/twenty_api_key)
         └── POST https://ai.tehisabiline.ee/api/lead    (kontaktivorm → Twenty)
 ```
 
-## Eraldiseisev LFM3 avalik demo
+## Eraldiseisev avalik tekstidemo
 
 See demo ei kasuta ülal kirjeldatud RAG-assistendi `/api/chat` ega kontaktivormi `/api/lead` teenust. Avalik rada on:
 
@@ -31,10 +32,11 @@ brauser (tehisabiline.ee)
 ```
 
 - Demo kasutab fikseeritud serveripoolset süsteemiviipa ja ainult päringu praegust viipa. Sellel pole vestlusajalugu, RAG-i, CRM-i ega rakenduse vestlusandmebaasi.
-- Voogvastus; korraga üks genereerimine. Viip kuni 2 000 Unicode'i märki, väljund kuni 256 tokenit.
+- SSE: `reasoning_delta` carries model-generated reasoning only; `delta` carries the final answer only. The browser displays them separately, with reasoning in a native expandable disclosure and the final answer in its own region. The browser imposes no token cap.
+- `finish_reason="length"` means the combined generated-output limit was reached: up to 4,096 tokens total, including up to 1,024 reasoning tokens. The UI warns that the final answer or reasoning may be incomplete. Stop and stream errors preserve partial output; clearing resets both regions.
 - Piirangud: IP kohta 5 päringut minutis ja 20 tunnis; globaalselt 100 päringut tunnis.
-- Demoruut ei logi viiba ega vastuse sisu. Cloudflare'i, tunneli, mudeli ja käitustaristu logimist ning säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet.
-- See on avalik tehniline demo, mitte arendamisel olev kommertslik küber-AI API. Ära käsitle API tulevast Qwen-põhist mudelit ega Eesti-hostingu plaani selle demo kirjeldusena; demo serveri asukoha kohta väidet ei tehta.
+- The demo route does not log the prompt or generated model output. Cloudflare's, tunnel's, model service's and runtime infrastructure's logging and retention have not been checked. Do not submit personal or confidential information.
+- This is a public technical demo, not the planned commercial cybersecurity API. Its public label is “Tsenseerimata mudel”; do not expose the internal model identifier in public copy. Do not describe the planned API's Qwen-based model or Estonia-hosting plan as facts about this demo; no demo server-location claim is made.
 
 Muudatuste korral hoia demo teekonna, piirangute ja privaatsuskirjelduse faktid sünkroonis `privaatsus/index.html`, `llms.txt`, `llms-full.txt` ja `PRODUCT.md` failidega.
 
@@ -64,23 +66,23 @@ curl -s http://127.0.0.1:8790/healthz            # kohalik tervis
 curl -s https://ai.tehisabiline.ee/healthz       # läbi tunneli (sama vastus)
 ```
 
-Oodatav `/healthz`: `{"ok":true,"chat_model":"gemma3:4b","embed_model":"bge-m3","chunks":121,"index":true,...}`
+Oodatav `/healthz`: `{"ok":true,"chat_model":"gpt-6-luna","embed_model":"bge-m3","chunks":237,"index":true,...}`. The chat model is sent to the Codex Responses API; Ollama serves embeddings only.
 
 ## Konfiguratsioon (env)
 
 | Muutuja | Vaikeväärtus | Tähendus |
 |---|---|---|
-| `CHAT_MODEL` | `qwen2.5:7b` (koodis) / `gemma3:4b` (unit'is) | Ollama vestlusmudel |
-| `EMBED_MODEL` | `bge-m3` | Embedding-mudel (peab klappima indeksiga) |
-| `OLLAMA_URL` | `http://127.0.0.1:11434` | Ollama |
+| `CHAT_MODEL` | `gpt-6-luna` | Codex Responses API chat model |
+| `CODEX_AUTH_FILE` | `/home/arle/.codex/auth.json` | Codex OAuth credentials (do not expose) |
+| `CODEX_RESPONSES_URL` | Codex Responses endpoint | Chat generation endpoint |
+| `EMBED_MODEL` | `bge-m3` | Ollama embedding model |
+| `OLLAMA_URL` | `http://127.0.0.1:11434` | Ollama, used for embeddings |
 | `TWENTY_URL` | `http://127.0.0.1:3010` | Twenty REST (AINULT localhost; avalik crm.* blokeerib boti-UA) |
 | `TWENTY_KEY_FILE` | `secrets/twenty_api_key` | API JWT fail |
 | `DEV_ORIGINS` | tühi | Komaga eraldatud lisa-CORS originid (lokaalne test) |
 | `PORT` | 8790 (unit) | Kuulatav port (ainult 127.0.0.1) |
 
-Mudeli vahetus: `sudo systemctl edit tehisabiline-assistant` → `Environment=CHAT_MODEL=qwen2.5:7b`
-→ restart. CPU-only (i5-10500T): gemma3:4b ≈ 8-9 tok/s (~45 s vastus), qwen2.5:7b ≈ 5 tok/s
-(~85 s). Vastus voogetakse SSE-ga, seega kasutaja näeb teksti kohe.
+`CHAT_MODEL` selects the chat model identifier sent to the Codex Responses API. It does not switch generation to Ollama. The separate text demo uses its own fixed local model endpoint and system prompt; the public label is “Tsenseerimata mudel”.
 
 ## Indeksi uuendamine (kui saidi sisu muutub)
 

@@ -39,7 +39,8 @@
 }
 
 .lfm3-demo__prompt:focus-visible,
-.lfm3-demo__button:focus-visible {
+.lfm3-demo__button:focus-visible,
+.lfm3-demo__reasoning summary:focus-visible {
   outline: 2px solid var(--blue, #0857f8);
   outline-offset: 3px;
 }
@@ -77,6 +78,36 @@
 .lfm3-demo__button:disabled {
   cursor: wait;
   opacity: 0.65;
+}
+
+.lfm3-demo__output {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.lfm3-demo__reasoning {
+  padding: 0.9rem;
+  border: 1px solid var(--line, #e1e8f4);
+  border-radius: var(--radius-md, 12px);
+  background: var(--paper, #fff);
+}
+
+.lfm3-demo__reasoning summary {
+  color: var(--ink, #090c24);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.lfm3-demo__reasoning-text {
+  margin-top: 0.65rem;
+  color: var(--text, #2c3552);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.lfm3-demo__output-heading {
+  margin: 0;
 }
 
 .lfm3-demo__status {

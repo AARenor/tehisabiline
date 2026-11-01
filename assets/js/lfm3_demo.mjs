@@ -50,13 +50,16 @@ function mountDemo() {
     const stop = document.getElementById("lfm3-stop");
     const clear = document.getElementById("lfm3-clear");
     const status = document.getElementById("lfm3-status");
+    const reasoningDetails = document.getElementById("lfm3-reasoning-details");
+    const reasoning = document.getElementById("lfm3-reasoning");
+    const output = document.getElementById("lfm3-output");
     const answer = document.getElementById("lfm3-answer");
     let activeController = null;
 
     function setBusy(busy) {
         send.disabled = busy;
         stop.hidden = !busy;
-        answer.setAttribute("aria-busy", String(busy));
+        output.setAttribute("aria-busy", String(busy));
     }
 
     function clearDemo() {
@@ -64,6 +67,9 @@ function mountDemo() {
         activeController = null;
         prompt.value = "";
         answer.textContent = "";
+        reasoning.textContent = "";
+        reasoningDetails.open = false;
+        reasoningDetails.hidden = true;
         status.textContent = "";
         setBusy(false);
         prompt.focus();
@@ -76,10 +82,15 @@ function mountDemo() {
         const controller = new AbortController();
         activeController = controller;
         answer.textContent = "";
-        status.textContent = "LFM3 koostab vastust…";
+        status.textContent = "Päringu töötlemine…";
+        reasoning.textContent = "";
+        reasoningDetails.open = false;
+        reasoningDetails.hidden = true;
         setBusy(true);
 
         let terminal = false;
+        let phase = "waiting";
+        let hasReasoning = false;
         try {
             const response = await fetch("https://ai.tehisabiline.ee/api/demo/lfm3", {
                 method: "POST",
@@ -94,17 +105,48 @@ function mountDemo() {
             }
 
             const decoder = createSseDecoder((event) => {
-                if (event.delta) answer.textContent += event.delta;
+                if (typeof event.reasoning_delta === "string" && event.reasoning_delta.length > 0) {
+                    if (!hasReasoning) {
+                        hasReasoning = true;
+                        reasoningDetails.hidden = false;
+                        reasoningDetails.open = true;
+                    }
+                    reasoning.textContent += event.reasoning_delta;
+                    if (phase === "waiting") {
+                        phase = "thinking";
+                        status.textContent = "Mudel mõtleb…";
+                    }
+                }
+                if (typeof event.delta === "string" && event.delta.length > 0) {
+                    if (phase !== "answering") {
+                        phase = "answering";
+                        status.textContent = "Mudel koostab lõppvastust…";
+                    }
+                    answer.textContent += event.delta;
+                }
                 if (event.done) {
                     terminal = true;
-                    status.textContent = event.finish_reason === "length"
-                        ? "Vastus jõudis demo pikkuse piirini ja võib pooleli olla."
-                        : "Vastus valmis. LFM3 võib eksida; kontrolli olulist infot.";
+                    if (event.finish_reason === "length") {
+                        status.textContent = "Mudel jõudis väljundi pikkuse piirini; lõppvastus või mõttekäik võib olla pooleli.";
+                    } else if (answer.textContent) {
+                        status.textContent = "Vastus valmis. Tsenseerimata mudel võib eksida; kontrolli olulist infot.";
+                    } else if (reasoning.textContent) {
+                        status.textContent = "Mõttekäik valmis, kuid mudel ei saatnud lõppvastust.";
+                    } else {
+                        status.textContent = "Mudel ei saatnud nähtavat vastust.";
+                    }
                 } else if (event.error) {
                     terminal = true;
-                    status.textContent = event.error === "timeout"
-                        ? "Vastuse koostamine võttis liiga kaua. Esita uus küsimus."
-                        : "Vastus katkes. Esita uus küsimus.";
+                    const hasPartialOutput = reasoning.textContent.length > 0 || answer.textContent.length > 0;
+                    if (event.error === "timeout") {
+                        status.textContent = hasPartialOutput
+                            ? "Päring aegus; seni saabunud tekst jäi alles. Proovi uuesti."
+                            : "Päring aegus enne nähtava teksti saabumist. Proovi uuesti.";
+                    } else {
+                        status.textContent = hasPartialOutput
+                            ? "Vastus katkes; seni saabunud tekst jäi alles. Proovi uuesti."
+                            : "Vastus katkes enne nähtava teksti saabumist. Proovi uuesti.";
+                    }
                 }
             });
             const reader = response.body.getReader();
@@ -114,12 +156,26 @@ function mountDemo() {
                 decoder.push(part.value);
             }
             decoder.finish();
-            if (!terminal) status.textContent = "Vastus katkes. Esita uus küsimus.";
+            if (!terminal) {
+                const hasPartialOutput = reasoning.textContent.length > 0 || answer.textContent.length > 0;
+                status.textContent = hasPartialOutput
+                    ? "Vastuse voog katkes; seni saabunud tekst jäi alles. Proovi uuesti."
+                    : "Vastuse voog katkes enne nähtava teksti saabumist. Proovi uuesti.";
+            }
         } catch (error) {
             if (error.name === "AbortError") {
-                if (activeController === controller) status.textContent = "Päring peatati.";
+                if (activeController === controller) {
+                    const hasPartialOutput = reasoning.textContent.length > 0 || answer.textContent.length > 0;
+                    status.textContent = hasPartialOutput
+                        ? "Päring peatati; seni saabunud tekst jäi alles."
+                        : "Päring peatati enne nähtava teksti saabumist.";
+                }
             } else if (activeController === controller) {
-                status.textContent = error.message || "Demo ei vasta praegu. Proovi hiljem uuesti.";
+                const message = error.message || "Demo ei vasta praegu. Proovi hiljem uuesti.";
+                const hasPartialOutput = reasoning.textContent.length > 0 || answer.textContent.length > 0;
+                status.textContent = hasPartialOutput
+                    ? `${message} Seni saabunud tekst jäi alles.`
+                    : message;
             }
         } finally {
             if (activeController === controller) {

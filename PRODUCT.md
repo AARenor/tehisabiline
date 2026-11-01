@@ -11,7 +11,7 @@ web
 Confirmed by the owner (2026-10-11): the site serves four audiences at once.
 
 - **Entrepreneurs and IT leads** of Estonian companies who want to know whether their website, apps and AI systems hold up. Job: understand the risk in plain words and ask for a cyber audit (free initial mapping by email).
-- **Developers and security teams** building security tooling. Job: explore the standalone public LFM3 text demo; the separate cyber-tuned, OpenAI-compatible commercial API is still in development and pilot access is not public.
+- **Developers and security teams** building security tooling. Job: explore the standalone public uncensored-model text demo; the separate cyber-tuned, OpenAI-compatible commercial API is still in development and pilot access is not public.
 - **Ordinary people** curious about AI and cyber safety. Job: understand what the company does and whether it can be trusted.
 - **Funders** (investors, grant bodies, startup programmes). Job: judge the team, the mechanism, honesty and momentum of an early-stage company.
 
@@ -21,7 +21,7 @@ Tehisabiline OÜ (Estonia) has two planned commercial service families and one s
 
 - agent-driven cyber audits and pentesting ("küberaudit ja pentestimine") with written permission and human review of every significant finding;
 - a cyber-tuned, OpenAI-compatible model API for legitimate security work. It is in development, not public, and has no production endpoint or published price. Qwen-based and Estonia-hosting plans describe the future API, not an operating service;
-- the public LFM3 text demo, a separate and limited technical demonstration, not the commercial API.
+- the public uncensored-model text demo, a separate and limited technical demonstration, not the commercial API.
 
 Managed AI services, assistants, knowledge bases, automation and startup packages now live on the separate site `https://arletop.com/` (launched 2026-10-24); SEO/GEO remains out of scope. Their source content is retained under `docs/future-ai-site/` and the public AI pages are maintained in the `arle-top` repository. On tehisabiline.ee, the old `/ai/`, `/ai-chatbot/` and `/ai-automatiseerimine/` URLs permanently redirect to the matching arletop.com pages.
 
@@ -31,21 +31,21 @@ Success: qualified email inquiries, API access requests, and credibility with fu
 
 ## Positioning
 
-"Keeldudeta, aga piirangutega": the planned commercial API is intended to support legitimate security work within agreed legal and authorization boundaries; it remains in development and is not public. The separate LFM3 demo is not that API. It sends one prompt to a fixed model and streams a limited answer; do not submit personal or confidential data. The demo route does not log prompt or answer content and uses no app-level conversation database, but Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified. No claims are made here about server location, third-party non-processing, model accuracy or safety. Every significant audit finding is reviewed by a human before the report.
+"Keeldudeta, aga piirangutega": the planned commercial API is intended to support legitimate security work within agreed legal and authorization boundaries; it remains in development and is not public. The separate public demo is labeled “Tsenseerimata mudel” and is not that API. It sends one prompt to a fixed model and streams a limited output; when returned, generated reasoning and final-answer text are shown separately. Do not submit personal or confidential data. The demo route does not log prompt or generated-output content and uses no app-level conversation database, but Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified. The configured output ceiling is 4,096 generated tokens total, including up to 1,024 reasoning tokens; the final answer may therefore be shorter. No claims are made here about server location, third-party non-processing, model accuracy or safety. Every significant audit finding is reviewed by a human before the report.
 
 ## Operating Context
 
 - Audit path: free mapping ("Tasuta kaardistus") → scoped audit request; planned API access is discussed separately and is not public → handover with a prioritised fix plan (Kohe / 7 päeva / Plaani) and a re-check.
 - Audit check areas: prompt-injection surfaces, API authentication logic, rate limits, HTTP security headers, data-exfiltration vectors.
-- Contact is email only (tehisabiline@gmail.com); the public LFM3 text demo is available, but the planned commercial cybersecurity API has no public endpoint.
+- Contact is email only (tehisabiline@gmail.com); the public uncensored-model text demo is available, but the planned commercial cybersecurity API has no public endpoint.
 - NIS2 guidance for Estonian companies is part of the site.
 
 ## Capabilities and Constraints
 
 - Static HTML/CSS/JS, deployed to Vercel from the repository root with `vercel --prod`. Shared header and footer come from `tools/chrome.mjs`; `npm run build:assets` versions assets; `npm run test:seo` gates every change (H1 wording, JSON-LD, Open Graph, image width/height/alt, font-preload usage, manifest/theme-color parity, no canvas hero, local links).
 - Self-hosted assets only (CSP: fonts and images from 'self').
-- Early stage: the commercial cyber-AI API is planned, with hardware ordered and Estonia hosting forthcoming; neither API access nor Estonia-hosted API processing is live. The public LFM3 demo is separate.
-- Public LFM3 demo contract: `POST https://ai.tehisabiline.ee/api/demo/lfm3` proxies to same-host local LFM3 API at `127.0.0.1:8092`, fixed model `lfm3-1.7b-uncensored`, fixed server-side system prompt and only the current prompt (no history/RAG/CRM). Streams up to 256 tokens; one generation at a time; prompt max 2,000 Unicode characters; per-IP 5/minute and 20/hour, global 100/hour. The route does not log prompt/answer content and does not use an app-level conversation database. Infrastructure logging/retention is unverified.
+- Early stage: the commercial cyber-AI API is planned, with hardware ordered and Estonia hosting forthcoming; neither API access nor Estonia-hosted API processing is live. The public uncensored-model demo is separate.
+- Public demo contract (visible label: “Tsenseerimata mudel”): `POST https://ai.tehisabiline.ee/api/demo/lfm3` proxies to the same-host local LFM3 API at `127.0.0.1:8092`, fixed model `lfm3-1.7b-uncensored`, fixed server-side system prompt and only the current prompt (no history/RAG/CRM). It streams reasoning and final-answer text in separate SSE fields; the total generated-output cap is 4,096 tokens including up to 1,024 reasoning tokens. One generation at a time; prompt max 2,000 Unicode characters; per-IP 5/minute and 20/hour, global 100/hour. The route does not log prompt/generated-output content and does not use an app-level conversation database. Infrastructure logging/retention is unverified.
 - Demo users must not submit personal or confidential data.
 - Future commercial model base: Qwen-based open weights, fine-tuned for cybersecurity; not the demo model and not operational.
 - EU AI Act: general-purpose AI category, not high-risk.
@@ -74,7 +74,7 @@ Success: qualified email inquiries, API access requests, and credibility with fu
 1. Honesty over hype: limits are shown as prominently as capabilities.
 2. Prove with concrete artifacts (findings, refusals versus answers, check areas), not adjectives.
 3. Plain language first for non-experts; technical depth one step away for developers.
-4. Do not frame Estonian hosting or data handling as current demo facts. Any hosting statement must distinguish the planned commercial API from the standalone LFM3 demo and avoid unsupported server-location, logging, retention, or third-party processing claims.
+4. Do not frame Estonian hosting or data handling as current demo facts. Any hosting statement must distinguish the planned commercial API from the standalone uncensored-model demo and avoid unsupported server-location, logging, retention, or third-party processing claims.
 
 ## Accessibility & Inclusion
 

@@ -19,12 +19,12 @@ This file summarizes public website information. The site language is Estonian; 
 
 ## Current status
 
-- Public LFM3 text demo: available as a standalone demo at https://tehisabiline.ee/mudelid/#lfm3-demo. Its dedicated endpoint is https://ai.tehisabiline.ee/api/demo/lfm3; it proxies to a same-host local LFM3 service using the fixed model `lfm3-1.7b-uncensored`.
-- The demo has a fixed server-side system prompt and accepts only the current user prompt: no conversation history, RAG, CRM or app-level conversation database. Prompt maximum: 2,000 Unicode characters. Output streams up to 256 tokens, with one generation at a time. Rate limits: 5 requests/minute and 20/hour per IP, 100/hour globally.
-- The demo route does not log prompt or answer content. This does not establish what Cloudflare, the tunnel, model service or runtime infrastructure logs or retains; those practices have not been verified. Users must not submit personal or confidential data. No server-country or third-party non-processing claim is made.
-- Commercial cybersecurity API: still planned/in development, not public, with no production endpoint or published price. It is separate from the LFM3 demo. Model hosting in Estonia is forthcoming for the planned API; hardware has been ordered, but processing there is not live.
+- Public uncensored-model text demo: available as a standalone demo at https://tehisabiline.ee/mudelid/#lfm3-demo. Its dedicated endpoint is https://ai.tehisabiline.ee/api/demo/lfm3; it proxies to a same-host local model service.
+- The demo has a fixed server-side system prompt and accepts only the current user prompt: no conversation history, RAG, CRM or app-level conversation database. Prompt maximum: 2,000 Unicode characters. Model-generated reasoning, when returned, is streamed separately from the final answer; total output is capped at 4,096 generated tokens, including up to 1,024 reasoning tokens. One generation runs at a time. Rate limits: 5 requests/minute and 20/hour per IP, 100/hour globally.
+- The demo route does not log prompt or generated-output content. This does not establish what Cloudflare, the tunnel, model service or runtime infrastructure logs or retains; those practices have not been verified. Users must not submit personal or confidential data. No server-country or third-party non-processing claim is made.
+- Commercial cybersecurity API: still planned/in development, not public, with no production endpoint or published price. It is separate from the uncensored-model demo. Model hosting in Estonia is forthcoming for the planned API; hardware has been ordered, but processing there is not live.
 - Pentesting and audits: offered for systems the client owns or controls, under written authorization and an agreed scope. Cloud configuration can be included in an agreed scope; no separate network, mobile or cloud speciality, complete OWASP coverage, certificate, fixed price or security guarantee is implied.
-- The planned commercial API intends human review for consequential outputs. LFM3 demo responses are automatically generated and are not human-reviewed.
+- The planned commercial API intends human review for consequential outputs. Demo responses are automatically generated and are not human-reviewed.
 - Tehisabiline does not claim 100 percent security, error-free AI, guaranteed savings or guaranteed outcomes.
 
 ## Services
@@ -77,12 +77,12 @@ Canonical page: https://tehisabiline.ee/kuberaudit/
 
 Tehisabiline offers cybersecurity audits and scoped penetration testing for Estonian businesses. The same service is described in Estonian as turvaaudit, küberaudit, IT turvaaudit, küberturbe audit or infoturbe audit; the page distinguishes broad security-posture review from penetration testing and certification. Audits cover agreed website, API and AI-application checks and give a broader view of security posture; a pentest tests whether a weakness can be exploited within the agreed target. Automated scanning alone is not equivalent to either service. Written authorization, targets, permitted tests and stop conditions are agreed before active testing. A human reviews significant findings; the client receives evidence, a prioritized remediation plan and the re-check agreed in the offer. Price depends on scope, depth, access and re-check needs; initial mapping is free. No fixed public price or guaranteed security outcome is claimed.
 
-### Standalone LFM3 public text demo
+### Standalone uncensored-model public text demo
 
 Canonical entry point: https://tehisabiline.ee/mudelid/#lfm3-demo
 Dedicated endpoint: https://ai.tehisabiline.ee/api/demo/lfm3
 
-This public text demo is a standalone technical demonstration and is not the planned commercial cybersecurity API. The endpoint uses a fixed server-side system prompt and sends only the current prompt to the same-host local LFM3 service with fixed model `lfm3-1.7b-uncensored`. Each request has no conversation history, RAG or CRM. The route does not log prompt or answer content or use an app-level conversation database. Responses stream; only one generation runs at a time; prompts are limited to 2,000 Unicode characters and output to 256 tokens. Limits are 5 requests/minute and 20/hour per IP, and 100/hour globally.
+This public text demo is a standalone technical demonstration and is not the planned commercial cybersecurity API. The endpoint uses a fixed server-side system prompt and sends only the current prompt to the same-host local model service. Each request has no conversation history, RAG or CRM. The route does not log prompt or generated-output content or use an app-level conversation database. Responses stream; only one generation runs at a time; prompts are limited to 2,000 Unicode characters and total output is capped at 4,096 generated tokens, including up to 1,024 reasoning tokens. When the model returns reasoning, the page displays it separately from the final answer. Limits are 5 requests/minute and 20/hour per IP, and 100/hour globally.
 
 Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified. Do not submit personal or confidential information. No claim is made about server country or third-party non-processing.
 
@@ -92,7 +92,7 @@ Canonical page: https://tehisabiline.ee/mudelid/
 
 The commercial API is in development and not public. OpenAI chat-completions compatibility is planned; example code is illustrative, not a working public endpoint. Interested developers can email tehisabiline@gmail.com with their tool, use case and anticipated usage to discuss pilot participation. Actual endpoint, model name, key, limits and pricing are agreed for the pilot; none should be inferred from the examples. Model hosting in Estonia is forthcoming for this planned API; hardware has been ordered, but this processing is not live. Intended models support security work such as log, code and configuration analysis; significant outputs require human review.
 
-Keeldudeta is Tehisabiline's intended model positioning: support for legitimate security work within agreed legal and authorization boundaries, not unrestricted or unauthorized activity. This planned API is the second main offering alongside the cybersecurity audit/pentesting service; it is not the standalone LFM3 demo.
+Keeldudeta is Tehisabiline's intended model positioning: support for legitimate security work within agreed legal and authorization boundaries, not unrestricted or unauthorized activity. This planned API is the second main offering alongside the cybersecurity audit/pentesting service; it is not the standalone uncensored-model demo.
 
 ## Other public pages
 
@@ -100,7 +100,7 @@ Keeldudeta is Tehisabiline's intended model positioning: support for legitimate 
 
 Canonical page: https://tehisabiline.ee/
 
-Overview of cybersecurity audit/pentesting for businesses, the planned developer API and a separate public LFM3 text demo. The commercial cybersecurity API remains in development, not public; the LFM3 demo is not that API. Both API testing of a client's existing system and the planned model API are distinct.
+Overview of cybersecurity audit/pentesting for businesses, the planned developer API and a separate public uncensored-model text demo. The commercial cybersecurity API remains in development, not public; the demo is not that API. Both API testing of a client's existing system and the planned model API are distinct.
 
 ### API security testing guide
 
@@ -175,7 +175,7 @@ Citation-ready page for journalists and partners: company description, canonical
 
 Canonical page: https://tehisabiline.ee/privaatsus/
 
-Privacy information covers email inquiries, website technical processing and the standalone LFM3 demo. The demo accepts one prompt only, has no conversation history/RAG/CRM or app-level conversation database, and its route does not log prompt/answer content. Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified. Users are told not to submit personal or confidential data. The planned commercial cybersecurity API is separate.
+Privacy information covers email inquiries, website technical processing and the standalone uncensored-model demo. The demo accepts one prompt only, has no conversation history/RAG/CRM or app-level conversation database, and its route does not log prompt/generated-output content. Generated reasoning, when returned, is displayed separately from the final answer. Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified. Users are told not to submit personal or confidential data. The planned commercial cybersecurity API is separate.
 
 ### Regulation map
 

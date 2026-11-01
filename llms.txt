@@ -1,6 +1,6 @@
 # Tehisabiline
 
-> Tehisabiline OÜ describes scoped cybersecurity audits and penetration testing; significant findings receive human review. Its public LFM3 text demo is a standalone, limited demonstration, not the planned commercial cybersecurity API. That API remains in development, is not public, and has no public endpoint or published price. The demo accepts one prompt only (no history, RAG or CRM), and users must not submit personal or confidential data. Testing is limited to systems the client owns or controls, with written authorization and an agreed scope. Contact: tehisabiline@gmail.com.
+> Tehisabiline OÜ describes scoped cybersecurity audits and penetration testing; significant findings receive human review. Its public uncensored-model text demo is a standalone, limited demonstration, not the planned commercial cybersecurity API. That API remains in development, is not public, and has no public endpoint or published price. The demo accepts one prompt only (no history, RAG or CRM), and users must not submit personal or confidential data. Testing is limited to systems the client owns or controls, with written authorization and an agreed scope. Contact: tehisabiline@gmail.com.
 
 Entity:
 
@@ -13,11 +13,11 @@ Entity:
 - Company facts: https://tehisabiline.ee/ai_info/ — source-linked identity, described security-testing scope, API development status and correction contact
 - HTML entity map: https://tehisabiline.ee/entitymap/ — navigable relationships between the organization, founder, service nodes, topics and clustered pages
 
-Status reviewed on 2026-10-31:
+Status reviewed on 2026-11-01:
 
-- The public LFM3 text demo is available at https://tehisabiline.ee/mudelid/; it calls https://ai.tehisabiline.ee/api/demo/lfm3 and uses the fixed model `lfm3-1.7b-uncensored`. It accepts one prompt (maximum 2,000 Unicode characters), streams up to 256 tokens, and runs one generation at a time. Per-IP limits are 5/minute and 20/hour; global limit is 100/hour.
-- The demo uses a fixed server-side system prompt and the current prompt only; it has no conversation history, RAG, CRM or app-level conversation database. The route does not log prompt/answer content. Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified; users should not enter personal or confidential data.
-- The planned commercial cybersecurity API remains in development, is not public, and has no production endpoint or published price. It is not the LFM3 demo.
+- The public uncensored-model text demo is available at https://tehisabiline.ee/mudelid/; its dedicated endpoint is https://ai.tehisabiline.ee/api/demo/lfm3. It accepts one prompt (maximum 2,000 Unicode characters), streams model-generated reasoning separately from the final answer when reasoning is returned, and has a total output cap of 4,096 tokens including up to 1,024 reasoning tokens. One generation runs at a time. Per-IP limits are 5/minute and 20/hour; global limit is 100/hour.
+- The demo uses a fixed server-side system prompt and the current prompt only; it has no conversation history, RAG, CRM or app-level conversation database. The route does not log prompt/generated-output content. Cloudflare, tunnel, model and runtime infrastructure logging and retention have not been verified; users should not enter personal or confidential data.
+- The planned commercial cybersecurity API remains in development, is not public, and has no production endpoint or published price. It is separate from the uncensored-model demo.
 - Model hosting hardware is ordered; processing in Estonia for the planned API is forthcoming, not live. No server-location claim is made for the demo.
 - Audits test only systems the client owns or controls, with written permission. Scope and price are agreed in writing.
 
@@ -74,7 +74,7 @@ Status reviewed on 2026-10-31:
 - [Küberriskide register](https://tehisabiline.ee/artiklid/kuberriskide-register/): register columns, a 5×5 scale, treatment and residual risk, evidence, a CSV template and a 30/60/90 plan.
 - [Turvaaudit ja küberaudit Eestis](https://tehisabiline.ee/kuberaudit/): broader security posture review under the Estonian terms turvaaudit, küberaudit, IT turvaaudit, küberturbe audit and infoturbe audit; human-validated findings and a prioritized remediation plan.
 - [Keeldudeta küber-AI API](https://tehisabiline.ee/mudelid/): planned OpenAI-compatible interface for lawful security work, developer use cases and pilot participation. No public endpoint, published price or production availability is claimed.
-- [LFM3 tekstidemo](https://tehisabiline.ee/mudelid/): avalik eraldiseisev tekstidemo fikseeritud LFM3 mudeliga; üks viip, piiratud sisend/väljund ja päringusagedus. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. See ei ole arendamisel olev kommertslik küber-AI API.
+- [Tsenseerimata mudeli tekstidemo](https://tehisabiline.ee/mudelid/): avalik eraldiseisev tekstimudeli demo; üks viip, piiratud sisend/väljund ja päringusagedus. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. See ei ole arendamisel olev kommertslik küber-AI API.
 
 - [English home](https://tehisabiline.ee/en/): cybersecurity audit, penetration testing and NIS2/CRA evidence in Estonia.
 
@@ -104,7 +104,7 @@ Status reviewed on 2026-10-31:
 - [Tehisabilise faktid ja allikad](https://tehisabiline.ee/ai_info/): source-linked company identity, described security-testing scope, API development status, limits and correction route.
 - [Üksuste ja teemade kaart](https://tehisabiline.ee/entitymap/): navigable HTML map of the organization, founder, service nodes, topic groups and canonical page clusters.
 - [Viitamine ja allikad](https://tehisabiline.ee/viitamine/): citation-ready descriptions, public resources and copy-paste citation formats for journalists and partners.
-- [Privaatsus](https://tehisabiline.ee/privaatsus/): email and website data-processing information plus the standalone LFM3 demo's prompt flow and limitations. The app route does not log prompt/answer content or use a conversation database; infrastructure logging and retention are unverified. Users must not submit personal or confidential data. The demo is not the planned commercial API.
+- [Privaatsus](https://tehisabiline.ee/privaatsus/): email and website data-processing information plus the standalone uncensored-model demo's prompt flow and limitations. Generated reasoning, when returned, is displayed separately from the final answer. The app route does not log prompt/model-output content or use a conversation database; infrastructure logging and retention are unverified. Users must not submit personal or confidential data. The demo is not the planned commercial API.
 
 ## Facts to quote
 
