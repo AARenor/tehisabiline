@@ -22,7 +22,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Tehisabiline — AI-rakenduse turvatestimine: LLM, RAG">
     <meta name="article:published_time" content="2026-10-24">
-    <meta name="article:modified_time" content="2026-10-29">
+    <meta name="article:modified_time" content="2026-11-01">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI-rakenduse turvatestimine: LLM, RAG | Tehisabiline">
     <meta name="twitter:description" content="Kokkulepitud ulatuses AI-rakenduse turvatestimine: prompt injection, RAG, tööriistad ja väljundid. Osa kirjaliku loa alusel tehtavast auditist või pentestist.">
@@ -79,7 +79,7 @@
       "name": "AI-rakenduse turvatestimine: LLM, RAG | Tehisabiline",
       "description": "Kokkulepitud ulatuses AI-rakenduse turvatestimine: prompt injection, RAG, tööriistad ja väljundid. Osa kirjaliku loa alusel tehtavast auditist või pentestist.",
       "datePublished": "2026-10-24",
-      "dateModified": "2026-10-29",
+      "dateModified": "2026-11-01",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -196,7 +196,7 @@
       <nav aria-label="Asukoharada"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">AI turvatestimine</li></ol></nav>
       <h1>AI-rakenduse turvatestimine: LLM, RAG ja agendid</h1>
       <p class="lead">Kontrollime, kas LLM-, RAG- või agentrakendust saab kokkulepitud ulatuses panna tegema midagi, mida see ei peaks tegema – ja kas andmed, tööriistad ning väljundid on kaitstud.</p>
-      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-29">29. oktoobril 2026</time></p>
+      <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-11-01">1. novembril 2026</time></p>
     </div>
   </header>
   <section class="section">
@@ -218,9 +218,8 @@
 
         <section id="piirid"><h2>Mida test ei tõesta</h2><ul><li><strong>Mitte täielikku turvalisust:</strong> LLM-i käitumine on tõenäosuslik; test katab kokkulepitud stsenaariumid, mitte kõiki võimalikke prompting­viise.</li><li><strong>Mitte mudeli treenimise auditit:</strong> me ei hinda treeningandmete kvaliteeti ega mudeli sisemist kaalu.</li><li><strong>Mitte vastavussertifikaati:</strong> AI Acti või NIS2 vastavust tõendab vastavushindamine ja tõendite kogum, mitte üks test.</li><li><strong>Mitte garantiid kolmanda osapoole süsteemidele:</strong> mudelipakkuja, pluginad ja taristu vajavad oma kontrolle ja lepinguid.</li></ul></section>
 
-        <section id="ai-act"><h2>AI Act ehk tehisintellekti seadus ja NIS2</h2><p>Euroopa AI määruse <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">artikkel 15</a> nõuab täpsust, vastupidavust ja küberturvalisust ainult kõrge riskiga AI-süsteemidelt. Määrus ei sätesta ühte konkreetset testimeetodit, seega testimine on tõendusmaterjal, mitte automaatne vastavus. <a href="/ai-act/">AI Acti nõuete ja riskiklasside juhend</a> selgitab, kuidas riskiklass ja tähtajad mõjutavad kohustusi.</p><p>Kas süsteem on „kõrge riskiga“, ei otsusta testija ega turvatestimine: selle määrab süsteemi otstarve ja määruse artikli 6 tingimused. III lisa süsteemid on kõrge riskiga, kui artikli 6 lõike 3 erand ei kohaldu; I lisa tootesse integreeritud süsteemid on kõrge riskiga ainult siis, kui selle toote õigusakt nõuab kolmanda osapoole vastavushindamist. Enne testi tasub selgitada, kas oled AI-süsteemi pakkuja või kasutaja (deployer), milline on riskiklass ja milliseid tõendeid ootab vastavushindamine. Test võib toetada tehnilist dokumentatsiooni, logimist, inimjärelevalvet ja turvameetmeid, kuid ei asenda neid.</p><p>Kõrge riskiga süsteemide kohustused kehtivad määruse muudetud artikli 113 järgi III lisa süsteemidele alates 2. detsembrist 2027 ja I lisa toodetesse integreeritud süsteemidele alates 2. augustist 2028 (muudatus: Regulation (EU) 2026/1744, 8. juuli 2026). Need kuupäevad tulevad 2026. aasta muudatusest, mitte määruse algtekstist; kontrolli kehtivat redaktsiooni <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">EUR-Lexist</a>.</p><p><a href="/nis2/">NIS2 Eestis</a>: AI-rakendus on osa sinu teenusest ja tarneahelast, seega riskianalüüs, ligipääsud, intsidendivalmidus ja tarnijate haldamine kehtivad ka siis, kui mudel ise on väline. Kui AI-rakendus on kõrge riskiga või mõjutab olulist teenust, tuleb testi tulemused siduda juhtimisotsuste ja tõenditega.</p></section>
+        <section id="ai-act"><h2>AI Act ehk tehisintellekti seadus ja NIS2</h2><p>Euroopa AI määruse <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">artikkel 15</a> nõuab täpsust, vastupidavust ja küberturvalisust ainult kõrge riskiga AI-süsteemidelt. Määrus ei sätesta ühte konkreetset testimeetodit, seega testimine on tõendusmaterjal, mitte automaatne vastavus. <a href="/ai-act/">AI Acti nõuete ja riskiklasside juhend</a> selgitab, kuidas riskiklass ja tähtajad mõjutavad kohustusi.</p><p>Kas süsteem on „kõrge riskiga“, ei otsusta testija ega turvatestimine: selle määrab süsteemi otstarve ja määruse artikli 6 tingimused. III lisa süsteemid on kõrge riskiga, kui artikli 6 lõike 3 erand ei kohaldu; I lisa tootesse integreeritud süsteemid on kõrge riskiga ainult siis, kui selle toote õigusakt nõuab kolmanda osapoole vastavushindamist. Enne testi tasub selgitada, kas oled AI-süsteemi pakkuja või kasutaja (deployer), milline on riskiklass ja milliseid tõendeid ootab vastavushindamine. Test võib toetada tehnilist dokumentatsiooni, logimist, inimjärelevalvet ja turvameetmeid, kuid ei asenda neid.</p><p>Kõrge riskiga süsteemide kohustused kehtivad määruse muudetud artikli 113 järgi III lisa süsteemidele alates 2. detsembrist 2027 ja I lisa toodetesse integreeritud süsteemidele alates 2. augustist 2028 (muudatus: Regulation (EU) 2026/1744, 8. juuli 2026). Need kuupäevad tulevad 2026. aasta muudatusest, mitte määruse algtekstist; kontrolli kehtivat redaktsiooni <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">EUR-Lexist</a>.</p><p><a href="/nis2/">NIS2 Eestis</a>: AI-rakendus on osa sinu teenusest ja tarneahelast, seega riskianalüüs, ligipääsud, intsidendivalmidus ja tarnijate haldamine kehtivad ka siis, kui mudel ise on väline. Kui AI-rakendus on kõrge riskiga või mõjutab olulist teenust, tuleb testi tulemused siduda juhtimisotsuste ja tõenditega.</p><p>Kõrge riskiga süsteemide klassifikatsiooni, artikli 6(3) erandit ja artiklite 9–15 tõendeid on lahti kirjutatud eraldi juhendis: <a href="/ai-act/korge-riskiga-susteemid/">kõrge riskiga AI-süsteemid</a>.</p><p>RIA E-ITS-i portaali praktiline juhend AI riskide tuvastamiseks: <a href="https://eits.ria.ee/api/2/main_menu/asset/AI_riskide_tuvastamine.pdf">„Praktiline AI riskide tuvastamine“</a>. Selles on viieastmeline protsess: kontekst, varad, ohud, mõju ja tõenäosus ning meetmed. Pentest annab sellele protsessile tõendeid, ta ei asenda seda.</p></section>
 
-        <p>Kõrge riskiga süsteemide klassifikatsiooni, artikli 6(3) erandit ja artiklite 9–15 tõendeid on lahti kirjutatud eraldi juhendis: <a href="/ai-act/korge-riskiga-susteemid/">kõrge riskiga AI-süsteemid</a>.</p>
         <section id="tulemused"><h2>Tulemused</h2><p>Raport sisaldab juhtkokkuvõtet, ulatust ja piiranguid, metoodikat, leide tõenditega, mõju- ja tõenäosushinnangut, parandussoovitusi ning kordustesti plaani. Leiud järjestatakse sinu ärikonteksti järgi, mitte ainult tehnilise tõsiduse järgi.</p><p>Näidisena saab vaadata <a href="/pentestimine/naidisraport/">raporti struktuuri</a>. AI-testi puhul lisanduvad promptide kataloog, retrieval'i ja tööriistade maatriks ning mudeli versiooni ja testimisaja fikseerimine – ilma nendeta ei ole tulemus hiljem korratav.</p></section>
 
         <section id="prioriteedid"><h2>Kuidas leide prioriseerida</h2><p>AI-leiu tõsidus ei sõltu ainult sellest, kui veenvalt mudel vastas. Hinda kolme asja koos: <strong>mõju</strong> (millised andmed või toimingud olid kättesaadavad), <strong>ärakasutatavus</strong> (kui lihtne on rünnet korrata) ja <strong>kontekst</strong> (kas see puudutab päris kliente, raha või regulatsiooni).</p><ul><li><strong>Kohe:</strong> leke päris andmetest, tööriist, mis teeb pöördumatu toimingu, või väljund, mis käivitub teises süsteemis.</li><li><strong>7 päeva:</strong> piiratud mõjuga leke või möödaminek, mille parandus nõuab disainiotsust.</li><li><strong>Plaan:</strong> hügieenipuudus, mis ei anna üksi ligipääsu, kuid halvendab kaitsevõimet.</li></ul><p>Parandused jagunevad kihtidesse: sisendi valideerimine ja puhastamine, retrieval'i õiguskontroll, tööriistade allowlist ja inimkinnitus, väljundi kodeerimine, saladuste hoidmine väljaspool prompti ning logimine ja seire. Ükski kiht üksi ei ole piisav.</p></section>
@@ -317,7 +316,7 @@
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-29">29. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-11-01">1. novembril 2026</time></span>
         </div>
     </div>
 </footer>
