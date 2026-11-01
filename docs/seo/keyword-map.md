@@ -301,3 +301,15 @@ Approved improvements are deliberately narrow:
 
 No new SEO pages, winner-title changes, canonical changes, fabricated prices, mass content generation or blanket date refresh are justified by this evidence. Mobile Lighthouse measurements found no urgent performance failure; field CWV and INP remain unknown because public PSI calls were quota-limited. Reassess the same query/page/country cohorts over complete post-recrawl periods; do not promise an immediate ranking gain.
 
+## 2026-11-01 — external audit reconciliation (public pages only)
+
+An external ChatGPT audit proposed new landing pages, a headline change and technical fixes. Checked against HEAD and the live site:
+
+- Technical items were already in place: OAI-SearchBot allowed, 72-URL sitemap, Organization, Article (author and dates) and BreadcrumbList JSON-LD, one hreflang set per page, service pages covering scope, method, retest and API authorisation. No change.
+- Not created: `/pentest-eestis/`, `/nis2-turvaaudit/`, `/cyber-ai-api/`. Each duplicates `/pentestimine/`, `/nis2/` or `/mudelid/`; the one-hub and no-duplicate rules above still apply.
+- Headline kept: the owner brand commitment requires naming both offers, the keeldudeta API included. The hero lead states the legal boundary instead.
+- Corrected: the English homepage now states that the cyber-AI API is in development and not public (hero, services card, footer, FAQ). The Estonian API training-intent wording now matches `/mudelid/`.
+- Open owner decisions: hardware-ordered wording against PRODUCT.md's never-published list; a privacy-respecting measurement method for enquiry KPIs (the site has no analytics).
+
+Evidence: private `evidence/2026_11_01/chatgpt_audit_reconciliation_20261101.md` in the SEO workspace.
+
