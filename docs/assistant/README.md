@@ -18,6 +18,26 @@ külastaja brauser (tehisabiline.ee, Cloudflare Pages)
         └── POST https://ai.tehisabiline.ee/api/lead    (kontaktivorm → Twenty)
 ```
 
+## Eraldiseisev LFM3 avalik demo
+
+See demo ei kasuta ülal kirjeldatud RAG-assistendi `/api/chat` ega kontaktivormi `/api/lead` teenust. Avalik rada on:
+
+```
+brauser (tehisabiline.ee)
+  └── POST https://ai.tehisabiline.ee/api/demo/lfm3
+        └── Cloudflare / tunnel
+              └── samal hostil kohalik LFM3 API 127.0.0.1:8092
+                    └── fikseeritud mudel lfm3-1.7b-uncensored
+```
+
+- Demo kasutab fikseeritud serveripoolset süsteemiviipa ja ainult päringu praegust viipa. Sellel pole vestlusajalugu, RAG-i, CRM-i ega rakenduse vestlusandmebaasi.
+- Voogvastus; korraga üks genereerimine. Viip kuni 2 000 Unicode'i märki, väljund kuni 256 tokenit.
+- Piirangud: IP kohta 5 päringut minutis ja 20 tunnis; globaalselt 100 päringut tunnis.
+- Demoruut ei logi viiba ega vastuse sisu. Cloudflare'i, tunneli, mudeli ja käitustaristu logimist ning säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet.
+- See on avalik tehniline demo, mitte arendamisel olev kommertslik küber-AI API. Ära käsitle API tulevast Qwen-põhist mudelit ega Eesti-hostingu plaani selle demo kirjeldusena; demo serveri asukoha kohta väidet ei tehta.
+
+Muudatuste korral hoia demo teekonna, piirangute ja privaatsuskirjelduse faktid sünkroonis `privaatsus/index.html`, `llms.txt`, `llms-full.txt` ja `PRODUCT.md` failidega.
+
 - Widget on saidi repost (/home/arle/projects/tehisabiline/assistant.js + assistant.css),
   injekteeritud lehtedesse `tools/chrome.mjs` abil (plokk `<!-- chrome:widget -->`).
 - `_headers` lubab `connect-src https://ai.tehisabiline.ee`; assistant.js/css cache 300 s.

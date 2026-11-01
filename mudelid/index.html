@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Küber-AI API arendajatele: kasutusjuhud ja piirangud</title>
-    <meta name="description" content="Eestis kavandatav küberturbe API arendajatele. OpenAI-ühilduv liides on plaanis; teenus pole veel avalik. Küsi piiratud piloodi võimalust.">
+    <meta name="description" content="Proovi LFM3 tekstidemos üldküsimusi. Tehisabiline kavandab eraldi OpenAI-ühilduvat küberturbe API-t, mis pole veel avalik.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Tehisabiline OÜ">
     <meta name="theme-color" content="#0857f8">
@@ -16,7 +16,7 @@
     <meta property="og:locale" content="et_EE">
     <meta property="og:site_name" content="Tehisabiline">
     <meta property="og:title" content="Küberturbe API arendajatele – OpenAI-ühilduv | Tehisabiline">
-    <meta property="og:description" content="Eestis kavandatav OpenAI-ühilduv küberturbe API. Teenus pole veel avalik; küsi piiratud piloodi võimalust.">
+    <meta property="og:description" content="Proovi LFM3 tekstidemos üldküsimusi. Kavandatav küberturbe API pole veel avalik.">
     <meta property="og:url" content="https://tehisabiline.ee/mudelid/">
     <meta property="og:image" content="https://tehisabiline.ee/assets/brand/og-mudelid.png?v=a6f7417a">
     <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     <meta property="og:image:alt" content="Tehisabiline — Küberturbe API arendajatele – OpenAI-ühilduv">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Küberturbe API arendajatele – OpenAI-ühilduv | Tehisabiline">
-    <meta name="twitter:description" content="Eestis kavandatav OpenAI-ühilduv küberturbe API. Teenus pole veel avalik; küsi piiratud piloodi võimalust.">
+    <meta name="twitter:description" content="Proovi LFM3 tekstidemos üldküsimusi. Kavandatav küberturbe API pole veel avalik.">
     <meta name="twitter:image" content="https://tehisabiline.ee/assets/brand/og-mudelid.png?v=a6f7417a">
     <meta name="twitter:image:alt" content="Tehisabiline — Küberturbe API arendajatele – OpenAI-ühilduv">
 
@@ -36,6 +36,7 @@
     <link rel="preload" href="/assets/fonts/host-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/hanken-latin.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="stylesheet" href="/site.css?v=498f2970">
+    <link rel="stylesheet" href="/assets/css/pages/lfm3_demo.css?v=e10dd89d">
 
     <script type="application/ld+json">
 {
@@ -69,9 +70,9 @@
       "@id": "https://tehisabiline.ee/mudelid/#webpage",
       "url": "https://tehisabiline.ee/mudelid/",
       "name": "Küberturbe API arendajatele – OpenAI-ühilduv | Tehisabiline",
-      "description": "API arendajatele: kavandatav OpenAI-ühilduv liides, piloodi taotlemine, andmekäitluse kavatsused ja teenuse praegune arendusjärg.",
+      "description": "Tehisabilise kavandatav API turvatööriistade arendajatele pole avalik. Lehel on eraldiseisev LFM3 tekstidemo, mis ei ole API pakkumine.",
       "datePublished": "2026-09-24",
-      "dateModified": "2026-10-27",
+      "dateModified": "2026-10-31",
       "inLanguage": "et",
       "isPartOf": {
         "@id": "https://tehisabiline.ee/#website"
@@ -125,7 +126,7 @@
           "name": "Mida tähendab keeldudeta ja piirangutega AI?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Keeldudeta (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst – näiteks ründekoodi selgitamisest või oma süsteemide testimisest –, mille puhul pilveteenused tihti keelduvad. Piirangutega tähendab, et töö käib kirjaliku loa ja seadusliku raami piires: ebaseaduslikku tegevust mudel ei toeta."
+            "text": "Keeldudeta (ehk tsenseerimata) kirjeldab siin kavandatava API sihti vastata seaduslikule turvatööle – näiteks ründekoodi selgitamisele või oma süsteemide testimisele. Piirangutega tähendab, et kasutus peab jääma kirjaliku loa ja seadusliku raami piiresse. Need kirjeldavad kavandatava API kasutuspoliitikat, mitte LFM3 demo turvagarantiid: demo vastuseid inimene ei kontrolli ning mudel võib anda sobimatut või ohtlikku infot."
           }
         },
         {
@@ -149,7 +150,7 @@
           "name": "Milliseid mudeleid kasutate?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Avatud kaaludega alusmudel on Qwen3.8-27B . Tehisabiline kavatseb selle häälestada seadusliku turvatöö jaoks; see töö on pooleli. Mudel hakkab töötama meie riistvaral Eestis (riistvara tellitud)."
+            "text": "Proovimiseks on avalik eraldiseisev LFM3 tekstidemo, mis ei ole küberturbe API. Kavandatava kommertsliku API avatud kaaludega alusmudel on Qwen3.8-27B ; selle turvatööks häälestamine on pooleli ja Eesti majutus on tulevikuplaan."
           }
         },
         {
@@ -157,7 +158,7 @@
           "name": "Kus mu andmed asuvad?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Eesti majutus on plaanis ja riistvara tellitud, kuid API pole veel seal töös. Päringute tegelik asukoht ja logimise kord kinnitatakse enne pilooti."
+            "text": "LFM3 demo viip liigub Cloudflare'i ja tunneli kaudu kohaliku mudeliteenuseni; taristu täpset asukohta, logimist ega säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. Kavandatava kommerts-API Eesti majutus on tulevikuplaan, mitte demo asukoha väide."
           }
         },
         {
@@ -165,7 +166,7 @@
           "name": "Mida te minu andmetega teete?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ettevõtte eesmärk on kasutada päringu sisu vastuse koostamiseks, mitte mudeli treenimiseks ega kolmandatele osapooltele jagamiseks. Tegelikud säilitamise ja andmekäitluse tingimused lepitakse kokku enne pilooti."
+            "text": "LFM3 demot kasutades töödeldakse viipa ainult vastuse loomiseks. Rakendus ei salvesta viipa ega vastust vestlusandmebaasi, kuid Cloudflare'i, tunneli ja käitustaristu logimist ning säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. Kommerts-API andmekäitluse tingimused lepitakse kokku enne pilooti."
           }
         },
         {
@@ -236,13 +237,35 @@
     <nav aria-label="Breadcrumb"><ol class="breadcrumbs"><li><a href="/">Avaleht</a></li><li aria-current="page">Küberturbe API</li></ol></nav>
     <h1>Küberturbe API arendajatele</h1>
     <p class="lead">Kavandame OpenAI-ühilduvat liidest seadusliku turvatöö tööriistadele. <strong>API pole veel avalik</strong>; riistvara on tellitud ja Eesti majutus tulekul. Piloodis osalemist saad taotleda e-kirjaga.</p>
-    <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></p>
+    <p class="page-head__meta">Koostanud <a href="/meist/#autor" rel="author">Arle Aron Reidma</a>, Tehisabiline OÜ · Viimati sisuliselt uuendatud <time datetime="2026-10-31">31. oktoobril 2026</time></p>
   </div>
 </section>
 <section class="section section--tight" aria-labelledby="short-answer"><div class="wrap split split--wide-left">
   <div class="stack"><div class="short-answer stack"><h2 id="short-answer">Kas API on saadaval ja kuidas sellele ligi saab?</h2><p>Tehisabilise küberturbe API on arenduses ega ole veel avalik (seis 27.10.2026). Kavandame OpenAI chat-completions liidest turvatööriistadele; allolevad koodinäited kirjeldavad planeeritud päringu kuju, mitte töötavat avalikku otspunkti. Piloodis osalemiseks kirjuta <a href="mailto:tehisabiline@gmail.com">tehisabiline@gmail.com</a> ning kirjelda tööriista, kasutusjuhtu ja eeldatavat koormust. Ligipääsu, limiidid, hinna ja andmekäitluse tingimused lepime enne alustamist kirjalikult kokku.</p></div><h3>Mis teeb mudeli küber-AI-ks?</h3><p>Kavatseme häälestada avatud kaaludega <strong>Qwen3.8-27B</strong> alusmudelit turvaülesannetele: haavatavused, logid, konfiguratsioonid, koodianalüüs ja oma süsteemide testimine kirjaliku loa alusel. Oma riistvara on tellitud ja majutus Eestis tulekul; API kaudu kasutamine on veel arenduses.</p></div>
   <ul class="facts"><li><strong>Arenduses</strong><span>API pole veel avalik; riistvara on tellitud, Eesti majutus kavandamisel.</span></li><li><strong>Seaduslik turvatöö</strong><span>Kavandatud piirid on loa ja seadusliku kasutuse järgi.</span></li><li><strong>OpenAI-ühilduv liides</strong><span>Chat-completions kuju on plaanis, mitte praegu kasutatav teenus.</span></li><li><strong>Inimese kontroll</strong><span>Oluliste leidude käsitsi ülevaatus on ettevõtte tööpõhimõte.</span></li></ul>
 </div></section>
+<section class="section section--tight section--tint" id="lfm3-demo" aria-labelledby="lfm3-demo-title">
+  <div class="wrap lfm3-demo__layout">
+    <div class="lfm3-demo__intro stack">
+      <h2 id="lfm3-demo-title">Proovi LFM3 tekstidemos</h2>
+      <p>Esita ükskõik milline küsimus. Iga päring alustab uut vestlust ilma varasema ajaloo või küsimusteta. See on eraldiseisev tekstimudeli demo, mitte kavandatav küberturbe API ega tõend selle valmisoleku kohta.</p>
+      <p>Vastus tuleb automaatselt koostatud mudelilt, mis võib eksida või juhistest valesti aru saada. Ära kasuta seda ainsa alusena tähtsa või turvakriitilise otsuse tegemisel.</p>
+    </div>
+    <div class="lfm3-demo__panel">
+      <label class="lfm3-demo__label" for="lfm3-prompt">Sinu küsimus</label>
+      <textarea class="lfm3-demo__prompt" id="lfm3-prompt" maxlength="2000" rows="4" placeholder="Mida soovid teada?" aria-describedby="lfm3-demo-hint"></textarea>
+      <p class="lfm3-demo__hint" id="lfm3-demo-hint">Kuni 2000 märki. Ctrl+Enter saadab küsimuse.</p>
+      <div class="lfm3-demo__actions">
+        <button class="lfm3-demo__button lfm3-demo__button--primary" id="lfm3-send" type="button" aria-describedby="lfm3-demo-hint">Küsi LFM3-lt</button>
+        <button class="lfm3-demo__button" id="lfm3-stop" type="button" hidden>Peata vastus</button>
+        <button class="lfm3-demo__button" id="lfm3-clear" type="button">Tühjenda</button>
+      </div>
+      <p class="lfm3-demo__status" id="lfm3-status" role="status" aria-live="polite"></p>
+      <div class="lfm3-demo__answer" id="lfm3-answer" role="region" aria-label="LFM3 vastus" aria-busy="false" tabindex="0"></div>
+      <p class="lfm3-demo__note">Ära sisesta isiku-, sisselogimis- ega konfidentsiaalset teavet. Päringu töötlemise kohta vaata <a href="/privaatsus/">privaatsustingimusi</a>.</p>
+    </div>
+  </div>
+</section>
 <section class="section section--tint" id="eelised"><div class="wrap"><div class="section__head"><h2>Mida kavandame turvatööks?</h2><p>Need on ettevõtte arendusplaanid, mitte veel avaliku API tõendatud omadused.</p></div><div class="split split--wide-left"><ul class="checks"><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Turvasisendite tugi.</strong> Eesmärk on võtta sisendiks näiteks CVE-ID, logilõik või konfiguratsioon; väljundeid tuleb inimesel hinnata.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Seaduslik turvatöö.</strong> Kavandatav kasutus on lubatud turvatöö kokkulepitud ulatuses; ebaseaduslik tegevus on välistatud.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Eesti majutus.</strong> Riistvara on tellitud, kuid majutus ja teenus Eestis on tulevikuplaan.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Andmekäitlus.</strong> Kavatsus on päringuid mitte säilitada ega treenimiseks kasutada; tegelikud tingimused lepitakse kokku enne pilooti.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Vastavus.</strong> Kasutus- ja dokumentatsioonikohustused hinnatakse enne teenuse avamist; see leht ei asenda õigusnõu.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#check"/></svg><span><strong>Inimese kontroll.</strong> Oluliste leidude käsitsi ülevaatus on ettevõtte tööpõhimõte.</span></li></ul><figure><picture><source type="image/avif" srcset="/assets/images/tehisabiline-setup-640.avif 640w, /assets/images/tehisabiline-setup-960.avif 960w, /assets/images/tehisabiline-setup.avif 1280w" sizes="auto, (max-width: 768px) 100vw, 800px"><img src="/assets/images/tehisabiline-setup.jpg" srcset="/assets/images/tehisabiline-setup-640.jpg 640w, /assets/images/tehisabiline-setup-960.jpg 960w, /assets/images/tehisabiline-setup.jpg 1280w" sizes="auto, (max-width: 768px) 100vw, 800px" alt="Kavandatav serveriruum Eestis (illustratsioon)" width="1280" height="960" loading="lazy"></picture><figcaption class="note">Kavandatav serveriruum Eestis (illustratsioon)</figcaption></figure></div></div></section>
 <section class="section section--tint" id="vastavus"><div class="wrap split split--wide-left"><div class="stack"><h2>Kavandatav andmekäitlus ja piirid</h2><p>Kuna teenus pole veel töös, ei saa siin kirjeldada tegelikku andmekäitlust. Kavatsus on töödelda ainult päringus esitatud sisendit vastuse koostamiseks ning mitte kasutada seda mudeli treenimiseks ega jagada kolmandatele osapooltele. Enne pilooti tuleb säilitamise, tehniliste logide, majutuse ja juurdepääsu täpsed tingimused osalejaga kirjalikult kokku leppida. Eesti majutus on plaan; riistvara on tellitud, kuid teenus pole veel seal töös.</p></div><div class="table-wrap table-wrap--stack"><table class="data"><thead><tr><th scope="col">Teema</th><th scope="col">Kavatsus (ei ole veel toimiv teenus)</th></tr></thead><tbody><tr><th scope="row">Päringu sisu</th><td data-label="Kavatsus (ei ole veel toimiv teenus)">Teenuse toimivat logimist ega säilitamist ei saa enne pilooti kinnitada; kavatsus on sisu mitte säilitada.</td></tr><tr><th scope="row">Mudelitreening</th><td data-label="Kavatsus (ei ole veel toimiv teenus)">Kavatsus on kliendi päringuid treeninguks mitte kasutada.</td></tr><tr><th scope="row">Kolmandad osapooled</th><td data-label="Kavatsus (ei ole veel toimiv teenus)">Jagamise tingimused kirjeldatakse enne teenuse avamist.</td></tr><tr><th scope="row">Majutus</th><td data-label="Kavatsus (ei ole veel toimiv teenus)">Eesti majutus on kavandatud; riistvara on tellitud.</td></tr></tbody></table></div></div></section>
 <section class="section" id="api"><div class="wrap split split--wide-left"><div class="stack"><h2>Kavandatav API turvatööriistadele</h2><p>Plaanis on OpenAI <em>chat-completions</em> kujuga liides. See on liidese formaat, mitte seos OpenAI-ga ega nende teenus. Allolev näide kirjeldab kavandatud päringu kuju. Piloodis osalemiseks <a href="mailto:tehisabiline@gmail.com">saada e-kiri</a>, kirjeldades arendatavat tööriista, sisendite tüüpe ja eeldatavat kasutusmahtu. Enne ligipääsu lepime kokku kasutusulatuse, limiidid, andmekäitluse ja piloodi tingimused. Hinda pole veel avaldatud; arvelduse aluseks on kasutusmaht ja kokkulepitud limiidid. Kui vajad enda süsteemide kontrolli, vaata <a href="/kuberaudit/">küberauditi ja pentestimise teenust</a>.</p><ul class="facts"><li><strong>Ligipääs</strong><span>Taotluse alusel, pärast piloodi tingimuste kokkuleppimist.</span></li><li><strong>Limiidid ja hind</strong><span>Pole veel avaldatud; täpsustuvad piloodis.</span></li><li><strong>Andmekäitlus</strong><span>Täpsed tingimused kinnitame enne pilooti kirjalikult.</span></li></ul></div><div class="code-window"><div class="code-window__bar"><span>Kavandatava liidese näide — mitte avalik otspunkt</span><span class="chip">Näide, mitte töötav liides</span></div><pre><code>curl https://PILOODI-ENDPOINT.example/v1/chat/completions \
@@ -258,16 +281,16 @@ client = OpenAI(base_url="https://PILOODI-ENDPOINT.example/v1", api_key="SINU-VO
 vastus = client.chat.completions.create(model="PILOODI-MUDEL", messages=[{"role": "user", "content": "Analüüsi seda Nginxi konfigi."}])</code></pre></div></div></section>
 <section class="section section--tint" id="sobivus"><div class="wrap split"><div><h2>Kellele API sobib?</h2></div><div class="limits"><div><h3>Hea sobivus</h3><p>Ehitad küberturbetööriista ja vajad API kaudu mudelit seadusliku turvatöö jaoks.</p></div><div><h3>Ei sobi</h3><p>See API ei ole üldine juturobot ega pildi loomise teenus. See on mõeldud turvatööriistade arendajatele.</p></div></div></div></section>
 <section class="section" id="hind"><div class="wrap split"><div><h2>API kasutus</h2></div><div class="prose"><p>Ligipääsu ja hinnastuse tingimused täpsustuvad piloodi järel; arvelduse aluseks on kasutusmaht ja kokkulepitud limiidid.</p></div></div></section>
-<section class="section section--tint" id="piirid"><div class="wrap split"><div><h2>Mida mudelid ei tee?</h2></div><ul class="crosses"><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Ei ebaseaduslikku abi:</strong> ründed võõraste vastu, pahavara ja pettused on välistatud.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Ei imesid:</strong> mudel võib eksida – kriitilised leiud käivad inimese käest läbi.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Ei asenda auditit:</strong> süsteemide kontrollimiseks telli <a href="/kuberaudit/">agendipõhine küberaudit</a>.</span></li></ul></div></section>
+<section class="section section--tint" id="piirid"><div class="wrap split"><div><h2>Mida kavandatav API lubab?</h2></div><ul class="crosses"><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Kavandatava API kasutusreeglid.</strong> Need on mõeldud seaduslikuks turvatööks. See ei taga LFM3 demo väljundit: mudel võib siiski luua sobimatut või ohtlikku teksti.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Inimese kontroll.</strong> LFM3 demo vastuseid inimene ei kontrolli. Kavandatava API kriitilisi leide tuleb enne kasutamist inimesel hinnata.</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#x"/></svg><span><strong>Ei asenda auditit:</strong> süsteemide kontrollimiseks telli <a href="/kuberaudit/">agendipõhine küberaudit</a>.</span></li></ul></div></section>
 <section class="section" id="faq"><div class="wrap faq-layout"><div class="section__head"><h2>Küsimused mudelite kohta</h2></div><div class="faq">
-<details><summary><h3>Mida tähendab keeldudeta ja piirangutega AI?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><strong>Keeldudeta</strong> (ehk tsenseerimata) tähendab, et mudel ei keeldu seaduslikust turvatööst – näiteks ründekoodi selgitamisest või oma süsteemide testimisest –, mille puhul pilveteenused tihti keelduvad. <strong>Piirangutega</strong> tähendab, et töö käib kirjaliku loa ja seadusliku raami piires: ebaseaduslikku tegevust mudel ei toeta.</div></details>
+<details><summary><h3>Mida tähendab keeldudeta ja piirangutega AI?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer"><strong>Keeldudeta</strong> (ehk tsenseerimata) kirjeldab siin kavandatava API sihti vastata seaduslikule turvatööle – näiteks ründekoodi selgitamisele või oma süsteemide testimisele. <strong>Piirangutega</strong> tähendab, et kasutus peab jääma kirjaliku loa ja seadusliku raami piiresse. Need kirjeldavad kavandatava API kasutuspoliitikat, mitte LFM3 demo turvagarantiid: demo vastuseid inimene ei kontrolli ning mudel võib anda sobimatut või ohtlikku infot.</div></details>
 <details><summary><h3>Kas mudelid sõltuvad suurettevõtte pilvest?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Eesti majutus on plaanis ja riistvara tellitud, kuid teenus pole veel seal töös; tegelik asukoht ja tingimused kinnitatakse enne pilooti.</div></details>
 <details><summary><h3>Kellele API mõeldud on?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">See on mõeldud turvatööriistade arendajatele; OpenAI chat-completions kujuga liides on plaanis. Piloodis osalemiseks <a href="mailto:tehisabiline@gmail.com">kirjuta e-kiri</a>, kirjeldades tööriista, kasutusjuhtu ja eeldatavat koormust.</div></details>
-<details><summary><h3>Milliseid mudeleid kasutate?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Avatud kaaludega alusmudel on <a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a>. Tehisabiline kavatseb selle häälestada seadusliku turvatöö jaoks; see töö on pooleli. Mudel hakkab töötama meie riistvaral Eestis (riistvara tellitud).</div></details>
+<details><summary><h3>Milliseid mudeleid kasutate?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Proovimiseks on avalik eraldiseisev LFM3 tekstidemo, mis ei ole küberturbe API. Kavandatava kommertsliku API avatud kaaludega alusmudel on <a href="https://huggingface.co/Qwen/Qwen3.8-27B">Qwen3.8-27B</a>; selle turvatööks häälestamine on pooleli ja Eesti majutus on tulevikuplaan.</div></details>
 <details><summary><h3>Miks pilv keeldub legitiimsest turvatööst?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Mitmed avalikud AI-teenused keelduvad osast seaduslikust turvatööst, näiteks ründekoodi selgitamisest või oma süsteemide testimisest. See on nende teenusepakkujate poliitika, mitte hinnang sinu töö seaduslikkusele. Meie mudel kavatsetakse häälestada vastama lubatud turvatööle sinu reeglite ja seadusliku raami piires; seda kontrollitakse piloodis, mitte ei väideta ette.</div></details>
-<details><summary><h3>Mida te minu andmetega teete?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Ettevõtte eesmärk on kasutada päringu sisu vastuse koostamiseks, mitte mudeli treenimiseks ega kolmandatele osapooltele jagamiseks. Tegelikud säilitamise ja andmekäitluse tingimused lepitakse kokku enne pilooti.</div></details>
+<details><summary><h3>Mida te minu andmetega teete?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">LFM3 demot kasutades töödeldakse viipa ainult vastuse loomiseks. Rakendus ei salvesta viipa ega vastust vestlusandmebaasi, kuid Cloudflare'i, tunneli ja käitustaristu logimist ning säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. Kommerts-API andmekäitluse tingimused lepitakse kokku enne pilooti.</div></details>
 <details><summary><h3>Kuidas on lood AI Actiga?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">GPAI-mudeli kategooria ei määra API riskiklassi. Riskiklass sõltub süsteemi otstarbest ja AI Acti artikli 6 tingimustest; hindame seda enne teenuse avamist. Dokumenteerimise ja riskide käsitlemise korra täpsustame enne pilooti. See leht ei ole õigusnõu.</div></details>
-<details><summary><h3>Kus mu andmed asuvad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Eesti majutus on plaanis ja riistvara tellitud, kuid API pole veel seal töös. Päringute tegelik asukoht ja logimise kord kinnitatakse enne pilooti.</div></details>
+<details><summary><h3>Kus mu andmed asuvad?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">LFM3 demo viip liigub Cloudflare'i ja tunneli kaudu kohaliku mudeliteenuseni; taristu täpset asukohta, logimist ega säilitamist pole kontrollitud. Ära sisesta isikuandmeid ega konfidentsiaalset teavet. Kavandatava kommerts-API Eesti majutus on tulevikuplaan, mitte demo asukoha väide.</div></details>
 <details><summary><h3>Millest hind sõltub?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">Hinda ega limiite pole veel avaldatud. Need täpsustuvad piloodis ning võivad sõltuda päringumahust, mudeli kasutusest ja kokkulepitud limiitidest.</div></details>
 <details><summary><h3>Kas API töötab OpenAI teekidega?</h3><svg class="i" aria-hidden="true"><use href="/assets/icons.svg?v=1aee5dfe#plus"/></svg></summary><div class="answer">OpenAI chat-completions kujuga liides on plaanis, kuid teenus pole veel töös ega ühilduvust saa praegu katsetada. Koodinäide on kavandatud päringu kuju. Piloodis osalemist saad taotleda <a href="mailto:tehisabiline@gmail.com">e-kirjaga</a>.</div></details>
 </div></div></section>
@@ -353,12 +376,13 @@ vastus = client.chat.completions.create(model="PILOODI-MUDEL", messages=[{"role"
         </div>
         <div class="site-footer__legal">
             <span>© 2026 Tehisabiline OÜ. Kõik õigused kaitstud.</span>
-            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-27">27. oktoobril 2026</time></span>
+            <span>Viimati sisuliselt uuendatud <time datetime="2026-10-31">31. oktoobril 2026</time></span>
         </div>
     </div>
 </footer>
 <!-- /chrome:footer -->
 <script src="/site.js?v=a750108a" defer></script>
+<script type="module" src="/assets/js/lfm3_demo.mjs?v=0a6fd660"></script>
 <!-- chrome:widget -->
 <link rel="stylesheet" href="/assistant.css">
 <script src="/assistant.js" defer></script>
