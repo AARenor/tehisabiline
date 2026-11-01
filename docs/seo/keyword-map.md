@@ -1,4 +1,4 @@
-# Tehisabiline keyword map — current view 2026-10-30; dated evidence retained
+# Tehisabiline keyword map — current view 2026-11-01; dated evidence retained
 
 ## Current owner- and evidence-led decisions — 2026-10-30
 
@@ -270,3 +270,34 @@ A fresh read-only URL Inspection pass returned **PASS / Submitted and indexed fo
 This confirms their indexed state at inspection time, not new impressions, higher positions, or a response to changes that were not yet deployed. Do not resubmit these nine URLs merely because their earlier Search Analytics window had no impressions.
 
 Sanitized follow-through evidence is retained privately at `/home/arle/projects/tehisabiline_seo_geo/evidence/indexing_results_20261030.json`; its observation time is `2026-10-30T22:53:28.673959+00:00`.
+
+## 2026-11-01 — fresh decline diagnosis and bounded improvements
+
+Fresh API and shared-Chrome Search Console captures are retained privately under `/home/arle/projects/tehisabiline_seo_geo/evidence/2026_11_01/`. The readonly helper uses `dataState=all` and omits `firstIncompleteDate`; October 28 remains the latest previously confirmed complete boundary. The standard UI reports through October 30 without an explicit finality marker. Do not label October 29–31 finalized.
+
+| Property-level window | Clicks | Impressions | CTR | Average position |
+| --- | ---: | ---: | ---: | ---: |
+| October 15–21, previously confirmed complete | 4 | 55 | 7.27% | 8.71 |
+| October 22–28, previously confirmed complete | 19 | 618 | 3.07% | 7.86 |
+| October 26–28, previously confirmed complete | 16 | 459 | 3.49% | 8.04 |
+| October 29–31, provisional | 9 | 378 | 2.38% | 12.19 |
+
+The recent decline signal is real in the captured provisional rows, but it is not a demonstrated sitewide indexing failure. The three-day comparison also mixes weekdays. Estonia's average position is nearly stable while its impressions and clicks fall; non-Estonia impressions are nearly flat with weaker average position. Separate country and device reports do not establish an Estonia-desktop cause. The fresh dimensionless daily responses and multi-day/date-dimension series differ by two impressions across the full 28-day capture; retain both observations, and use the dimensionless period aggregate for the table above.
+
+Visible query rows cover only 22.8% of impressions in the complete seven-day window. The clearest small matched concern is `nis2 audit` on `/en/nis2/audit/`, with a weaker provisional average position; `nis2 eesti` on `/nis2/` also has a much smaller, weaker provisional row. Neither warrants a title, canonical or route rewrite. The broader `tlpt` movement includes a shift between Estonian and English landing pages, so it is not evidence that the same URL fell. Preserve `/pentestimine/`, the existing commercial hub, and keep localized NIS2 pages separate.
+
+All 72 sitemap routes returned HTTP 200 with self-canonicals, valid JSON-LD syntax and crawlable metadata; all were reachable from the homepage. Five selected Google URL Inspections passed with self-canonicals and allowed robots. This is not proof that all 72 URLs are indexed. The legacy AI-service routes deliberately 301 to relevant, live Arletop pages following the October 24 migration; do not restore generic chatbot or managed-AI services to this property's keyword plan merely to reverse their source-URL impression losses.
+
+The Generative AI beta report is available. Its fresh full-table captures contain Pages, Countries, Devices and Days, but no query, click or position metrics and no AI Overviews-versus-AI Mode split. Treat its impressions as a separate report view, not as an additive total or a fixed ranking measure. Do not infer a causal trend from overlapping rolling windows.
+
+Two Anthropic Haiku 5.5 research records were verified from actual provider/model JSON events; the research evidence and original Google/competitor URLs are in `haiku_google_serp_research.json`. The public search-index sample is not a controlled Google Estonia rank test. Google's traffic-drop and core-update guidance supports preserving successful pages rather than making drastic changes on a few noisy days.
+
+Approved improvements are deliberately narrow:
+
+- Clarify the Estonian and English NIS2 audit FAQs about internal reviews. Remove an unqualified claim of satisfying Article 21(2)(f) and an unsourced quarterly-internal/annual-external schedule; explain evidence needs and independence instead.
+- Add a contextual link from the English NIS2 audit service explanation to the existing English penetration-testing scope and authorisation guide. Do not imply that a pentest establishes NIS2 compliance.
+- Expand the NIS2 self-check's activity/legal-role and size-independent-category question. Direct readers to the full current KüTS § 3 list and include omitted examples, including applicable public-information-register roles, family-physician providers and public electronic-communications providers. Keep the existing hedged result and uncertainty choices.
+- Preserve the current Estonian statutory threshold logic. The readable in-force KüTS § 3 explicitly uses 50 or more staff **and** one financial threshold; do not replace it with a generic SME interpretation. The EU-versus-Estonian edge case remains a matter for authoritative interpretation, not a new public legal conclusion.
+
+No new SEO pages, winner-title changes, canonical changes, fabricated prices, mass content generation or blanket date refresh are justified by this evidence. Mobile Lighthouse measurements found no urgent performance failure; field CWV and INP remain unknown because public PSI calls were quota-limited. Reassess the same query/page/country cohorts over complete post-recrawl periods; do not promise an immediate ranking gain.
+
