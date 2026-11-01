@@ -14,7 +14,7 @@ const assets = [
     "/site.js",
     "/assets/js/roi-calculator.js",
     "/assets/js/hero-demo.js",
-    "/assets/js/lfm3_demo.mjs",
+    "/assets/js/model_demo.mjs",
     "/assets/js/nis2-check.js",
     "/assets/icons.svg",
     ...readdirSync(join(root, "assets/brand"))

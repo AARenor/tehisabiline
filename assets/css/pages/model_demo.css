@@ -1,15 +1,15 @@
-.lfm3-demo__layout {
+.model-demo__layout {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1.2fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
 
-.lfm3-demo__intro {
+.model-demo__intro {
   max-width: 42rem;
 }
 
-.lfm3-demo__panel {
+.model-demo__panel {
   padding: clamp(1.1rem, 2vw, 1.6rem);
   border: 1px solid var(--line, #e1e8f4);
   border-radius: var(--radius-xl, 22px);
@@ -17,14 +17,14 @@
   box-shadow: var(--shadow-sheet, 0 26px 52px -24px rgba(8, 52, 170, 0.16));
 }
 
-.lfm3-demo__label {
+.model-demo__label {
   display: block;
   margin-bottom: 0.5rem;
   color: var(--ink, #090c24);
   font-weight: 700;
 }
 
-.lfm3-demo__prompt {
+.model-demo__prompt {
   display: block;
   width: 100%;
   min-height: 8rem;
@@ -38,26 +38,26 @@
   line-height: 1.55;
 }
 
-.lfm3-demo__prompt:focus-visible,
-.lfm3-demo__button:focus-visible,
-.lfm3-demo__reasoning summary:focus-visible {
+.model-demo__prompt:focus-visible,
+.model-demo__button:focus-visible,
+.model-demo__thinking summary:focus-visible {
   outline: 2px solid var(--blue, #0857f8);
   outline-offset: 3px;
 }
 
-.lfm3-demo__hint {
+.model-demo__hint {
   margin: 0.55rem 0 1rem;
   color: var(--muted, #56617f);
   font-size: 0.9rem;
 }
 
-.lfm3-demo__actions {
+.model-demo__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
 }
 
-.lfm3-demo__button {
+.model-demo__button {
   min-height: 2.75rem;
   padding: 0.55rem 0.9rem;
   border: 1px solid var(--line, #c7d3e7);
@@ -69,36 +69,36 @@
   cursor: pointer;
 }
 
-.lfm3-demo__button--primary {
+.model-demo__button--primary {
   border-color: var(--blue, #0857f8);
   color: #fff;
   background: var(--blue, #0857f8);
 }
 
-.lfm3-demo__button:disabled {
+.model-demo__button:disabled {
   cursor: wait;
   opacity: 0.65;
 }
 
-.lfm3-demo__output {
+.model-demo__output {
   display: grid;
   gap: 0.75rem;
 }
 
-.lfm3-demo__reasoning {
+.model-demo__thinking {
   padding: 0.9rem;
   border: 1px solid var(--line, #e1e8f4);
   border-radius: var(--radius-md, 12px);
   background: var(--paper, #fff);
 }
 
-.lfm3-demo__reasoning summary {
+.model-demo__thinking summary {
   color: var(--ink, #090c24);
   font-weight: 650;
   cursor: pointer;
 }
 
-.lfm3-demo__reasoning-text {
+.model-demo__thinking-text {
   margin-top: 0.65rem;
   color: var(--text, #2c3552);
   line-height: 1.6;
@@ -106,18 +106,18 @@
   overflow-wrap: anywhere;
 }
 
-.lfm3-demo__output-heading {
+.model-demo__output-heading {
   margin: 0;
 }
 
-.lfm3-demo__status {
+.model-demo__status {
   min-height: 1.5em;
   margin: 1rem 0 0.5rem;
   color: var(--muted, #56617f);
   font-size: 0.92rem;
 }
 
-.lfm3-demo__answer {
+.model-demo__answer {
   min-height: 4.5rem;
   padding: 0.9rem;
   border: 1px solid var(--line, #e1e8f4);
@@ -125,18 +125,81 @@
   background: var(--mist, #f5f8ff);
   color: var(--text, #2c3552);
   line-height: 1.6;
-  white-space: pre-wrap;
+  white-space: normal;
   overflow-wrap: anywhere;
 }
+.model-demo__answer > :first-child {
+  margin-top: 0;
+}
 
-.lfm3-demo__note {
+.model-demo__answer > :last-child {
+  margin-bottom: 0;
+}
+
+.model-demo__answer h1,
+.model-demo__answer h2,
+.model-demo__answer h3,
+.model-demo__answer h4,
+.model-demo__answer h5,
+.model-demo__answer h6 {
+  margin: 0.9rem 0 0.45rem;
+  color: var(--ink, #090c24);
+  font-size: 1.1em;
+  line-height: 1.35;
+}
+
+.model-demo__answer p,
+.model-demo__answer ul,
+.model-demo__answer ol {
+  margin: 0.6rem 0;
+}
+
+.model-demo__answer ul,
+.model-demo__answer ol {
+  padding-left: 1.5rem;
+}
+
+.model-demo__answer li + li {
+  margin-top: 0.25rem;
+}
+
+.model-demo__answer pre {
+  margin: 0.75rem 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  border-radius: var(--radius-md, 12px);
+  background: var(--paper, #fff);
+}
+
+.model-demo__answer code {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.92em;
+}
+
+.model-demo__answer :not(pre) > code {
+  padding: 0.08rem 0.25rem;
+  border-radius: 4px;
+  background: var(--paper, #fff);
+}
+
+.model-demo__answer pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+}
+
+.model-demo__answer a {
+  color: var(--blue, #0857f8);
+  text-decoration: underline;
+}
+
+.model-demo__note {
   margin: 1rem 0 0;
   color: var(--muted, #56617f);
   font-size: 0.9rem;
 }
 
 @media (max-width: 760px) {
-  .lfm3-demo__layout {
+  .model-demo__layout {
     grid-template-columns: 1fr;
   }
 }

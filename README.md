@@ -115,6 +115,7 @@ Peamised failid:
 
 - `index.html` — avaleht; `site.css`, `site.js` — ühine disainisüsteem ja skript (Host Grotesk + Hanken Grotesk + JetBrains Mono, iseseisvalt majutatud)
 - `assets/js/hero-demo.js` — avalehe demo; ilma JS-ita on kõik kohe nähtav
+- `assets/js/model_demo.mjs` ja `assets/css/pages/model_demo.css` — avaliku tekstidemo kood; mõtlemine avaneb kasutaja valikul ja lõppvastuse Markdown kuvatakse turvaliselt. Test: `npm run test:demo`
 - `assets/plates/ribbon.*` — sinine valguslint (PNG originaal + AVIF/WebP 900/1500 px); kasutavad hero, alamlehtede päis ja kontaktiriba
 - `assets/icons.svg` — SVG ikoonide sprite (Lucide); `assets/css/pages/*.css` — lehespetsiifilised lisareeglid
 - `assets/brand/logo.svg`, `assets/brand/favicon.svg` — vektorlogo ja väikese ikooni pikslivõrgule joondatud algallikas

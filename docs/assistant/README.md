@@ -25,18 +25,18 @@ See demo ei kasuta ülal kirjeldatud RAG-assistendi `/api/chat` ega kontaktivorm
 
 ```
 brauser (tehisabiline.ee)
-  └── POST https://ai.tehisabiline.ee/api/demo/lfm3
+  └── POST https://ai.tehisabiline.ee/api/demo/chat
         └── Cloudflare / tunnel
               └── samal hostil kohalik LFM3 API 127.0.0.1:8092
                     └── fikseeritud mudel lfm3-1.7b-uncensored
 ```
 
 - Demo kasutab fikseeritud serveripoolset süsteemiviipa ja ainult päringu praegust viipa. Sellel pole vestlusajalugu, RAG-i, CRM-i ega rakenduse vestlusandmebaasi.
-- SSE: `reasoning_delta` carries model-generated reasoning only; `delta` carries the final answer only. The browser displays them separately, with reasoning in a native expandable disclosure and the final answer in its own region. The browser imposes no token cap.
+- SSE: `reasoning_delta` carries model-generated reasoning only; `delta` carries the final answer only. The browser keeps reasoning in a closed native disclosure labeled “Mõtlemine”; users open it themselves. The final answer is separate and renders headings, lists, bold, inline code and fenced code with DOM nodes; Markdown links allow only safe protocols. The browser imposes no token cap.
 - `finish_reason="length"` means the combined generated-output limit was reached: up to 4,096 tokens total, including up to 1,024 reasoning tokens. The UI warns that the final answer or reasoning may be incomplete. Stop and stream errors preserve partial output; clearing resets both regions.
 - Piirangud: IP kohta 5 päringut minutis ja 20 tunnis; globaalselt 100 päringut tunnis.
 - The demo route does not log the prompt or generated model output. Cloudflare's, tunnel's, model service's and runtime infrastructure's logging and retention have not been checked. Do not submit personal or confidential information.
-- This is a public technical demo, not the planned commercial cybersecurity API. Its public label is “Tsenseerimata mudel”; do not expose the internal model identifier in public copy. Do not describe the planned API's Qwen-based model or Estonia-hosting plan as facts about this demo; no demo server-location claim is made.
+- This is a public technical demo, not the planned commercial cybersecurity API. Its public label is “Tsenseerimata mudel”; do not expose the internal model identifier in public copy. Neutral public naming does not guarantee that the model will not identify itself in an answer. Do not describe the planned API's Qwen-based model or Estonia-hosting plan as facts about this demo; no demo server-location claim is made.
 
 Muudatuste korral hoia demo teekonna, piirangute ja privaatsuskirjelduse faktid sünkroonis `privaatsus/index.html`, `llms.txt`, `llms-full.txt` ja `PRODUCT.md` failidega.
 

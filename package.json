@@ -15,7 +15,7 @@
         "check:dates": "node tools/stamp-modified.mjs --check",
         "check:faq": "node tools/sync-faq.mjs --check",
         "test:seo": "node tools/sync-faq.mjs --check && node tools/seo-check.mjs && node --test tools/entitymap_test.mjs",
-        "test:lfm3-demo": "node --test tools/lfm3_demo_test.mjs",
+        "test:demo": "node --test tools/model_demo_test.mjs",
         "check:entitymap": "node tools/entitymap.mjs",
         "render:entitymap": "node tools/entitymap.mjs --render",
         "check:info-gain": "node tools/info-gain.mjs",
