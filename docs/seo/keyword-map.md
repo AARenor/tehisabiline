@@ -313,3 +313,7 @@ An external ChatGPT audit proposed new landing pages, a headline change and tech
 
 Evidence: private `evidence/2026_11_01/chatgpt_audit_reconciliation_20261101.md` in the SEO workspace.
 
+## 2026-11-01 — long-form audit triage (no new pages, no title or H1 change)
+
+A long-form public audit was measured against `8dacbeb`: all 72 titles and descriptions are unique and within length, every page has one H1, no key page overflows at 390 px, and every page is within two clicks of the homepage. Its homepage and title rewrites, duplicate commercial pages and new informational URLs were rejected: the owner brand commitment and the keyword rules above still apply. Enquiry form, footer reduction, analytics and Bing verification stay with the owner. Evidence: private `evidence/2026_11_01/long_audit_triage_20261101.md`.
+
