@@ -103,9 +103,11 @@ used to identify intent and source quality, not rank:
 - “Cyber Resilience Act SBOM vulnerability reporting official European Commission regulation 2024/2847”: [European Commission CRA reporting](https://digital-strategy.ec.europa.eu/en/policies/cra-reporting), [Commission CRA summary](https://digital-strategy.ec.europa.eu/en/policies/cra-summary), [Regulation (EU) 2024/2847](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng), and [CISA SBOM guidance](https://www.cisa.gov/topics/information-communications-technology-supply-chain-security/sbom). The Commission page gives the CRA reporting start date and reporting sequence; the Regulation controls over the Commission's expressly non-comprehensive summary. CISA informs SBOM terminology, not EU law.
 
 Counterevidence: [NIS2 Europe Estonia](https://nis2europe.eu/ee/et/juhend) combines a
-scope screen and practical guide, but says Estonia had not yet transposed NIS2, which is
-inconsistent with the current Estonian legal source. Use it only as a result-page pattern,
-not legal authority. [Grant Thornton's 2025 standards overview](https://www.grantthornton.ee/insights-landing-page/luhijuhis-levinumad-standardid-ja-sertifikaadid-infoturbe-maailmas/)
+scope screen and practical guide, but says Estonia had not yet transposed NIS2. A 2026-11-02
+search snippet of [NIS Solutions' Estonia summary](https://nis-solutions.eu/countries/estonia)
+says Estonia transposed NIS2 by amending KüTS; the Riigi Teataja text linked above was not
+read in that check, so confirm it before quoting legal status. Use NIS2 Europe only as a
+result-page pattern, not legal authority. [Grant Thornton's 2025 standards overview](https://www.grantthornton.ee/insights-landing-page/luhijuhis-levinumad-standardid-ja-sertifikaadid-infoturbe-maailmas/)
 shows informational comparison intent; it is not current deadline evidence.
 
 Data sources: `docs/seo/suggest-et-2026-10-28.json` and
