@@ -318,11 +318,11 @@ Evidence: private `evidence/2026_11_01/chatgpt_audit_reconciliation_20261101.md`
 A long-form public audit was measured against `8dacbeb`: all 72 titles and descriptions are unique and within length, every page has one H1, no key page overflows at 390 px, and every page is within two clicks of the homepage. Its homepage and title rewrites, duplicate commercial pages and new informational URLs were rejected: the owner brand commitment and the keyword rules above still apply. Enquiry form, footer reduction, analytics and Bing verification stay with the owner. Evidence: private `evidence/2026_11_01/long_audit_triage_20261101.md`.
 
 
-## 2026-11-04 — artifact parity for the English NIS2 pages (no new URLs)
+## 2026-11-04: artifact parity for the English NIS2 pages (no new URLs)
 
-Fresh GSC data (Pacific dates, 2026-11-04 incomplete): daily impressions ran 124–163 per
-day on 2026-10-25..31 and 148–339 per day on 2026-11-01..03, against 2–17 per day in early
-October, while clicks stayed at 1–6 per day. The 2026-10-26..11-03 page rows sum to 1,875
+Fresh GSC data (Pacific dates, 2026-11-04 incomplete): daily impressions ran 124 to 163 per
+day on 2026-10-25..31 and 148 to 339 per day on 2026-11-01..03, against 2 to 17 per day in early
+October, while clicks stayed at 1 to 6 per day. The 2026-10-26..11-03 page rows sum to 1,875
 impressions and 30 clicks across 73 pages, so the property now has visibility without
 clicks, mostly on page two to five.
 
