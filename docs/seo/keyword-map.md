@@ -317,3 +317,39 @@ Evidence: private `evidence/2026_11_01/chatgpt_audit_reconciliation_20261101.md`
 
 A long-form public audit was measured against `8dacbeb`: all 72 titles and descriptions are unique and within length, every page has one H1, no key page overflows at 390 px, and every page is within two clicks of the homepage. Its homepage and title rewrites, duplicate commercial pages and new informational URLs were rejected: the owner brand commitment and the keyword rules above still apply. Enquiry form, footer reduction, analytics and Bing verification stay with the owner. Evidence: private `evidence/2026_11_01/long_audit_triage_20261101.md`.
 
+
+## 2026-11-04 — artifact parity for the English NIS2 pages (no new URLs)
+
+Fresh GSC data (Pacific dates, 2026-11-04 incomplete): daily impressions ran 124–163 per
+day on 2026-10-25..31 and 148–339 per day on 2026-11-01..03, against 2–17 per day in early
+October, while clicks stayed at 1–6 per day. The 2026-10-26..11-03 page rows sum to 1,875
+impressions and 30 clicks across 73 pages, so the property now has visibility without
+clicks, mostly on page two to five.
+
+- Largest zero-click pages are `/en/nis2/audit/` (192 impressions, position 19.4) and
+  `/en/nis2/checklist/` (117, 45.4); `/en/security-audit/checklist/` is 98 / 1 / 37.9.
+  Four URL inspections (both NIS2 pages plus the two checklist pages) returned PASS /
+  Submitted and indexed, self-canonical, robots ALLOWED, last crawl 2026-10-30 or 10-31.
+  The weak positions are therefore relevance and competition against vendor blogs, not an
+  indexing or canonical defect, and no title or H1 change was justified by them.
+- Fixed a parity defect with a real artifact instead: the Estonian twin
+  `/nis2/kontrollnimekiri/` shipped a PDF, a risk-register CSV and an evidence XLSX, while
+  `/en/nis2/checklist/` and `/en/nis2/audit/` shipped no download at all. Commit `3e810cc`
+  adds `assets/downloads/nis2-compliance-checklist.csv` (eleven rows: Article 21(2)(a)-(j)
+  plus the Article 20 board row, with blank result, finding, action, due date, status and
+  evidence-location columns), a page-head button on both pages, an inventory row in
+  `/viitamine/`, an `llms-full.txt` section and a fresh `lastmod`.
+- Not created: no separate printed PDF for the English checklist, no new checklist or
+  audit URL, no title rewrites, no sector pages. The ET page keeps its PDF; the EN page
+  answers the same intent with a sortable CSV, which is what the observed SERP surfaces
+  for `nis2 checklist` and `iso 27001 internal audit checklist` (ungated downloads and
+  printable lists).
+- Google write: none. The `request_indexing` gate stayed BLOCKED on the recorded quota
+  stop `seo-20261101-index-quota-nis2` and was not probed; `sitemap_submit` was NOOP. The
+  two pages are already indexed, so natural recrawl from the new `lastmod` is the
+  documented route.
+
+Follow-up: re-read `nis2 checklist` and `nis2 compliance checklist` over a complete window
+after the recrawl and compare with the 2026-10-26..11-03 baseline (69 and 15 impressions,
+0 clicks, positions 47.8 and 38.2). Evidence: private
+`evidence/2026_11_04/capture_and_release_20261104.md`.
