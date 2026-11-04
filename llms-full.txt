@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-11-01
+Last materially reviewed: 2026-11-04
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -243,6 +243,11 @@ These are international research findings, not measurements of Tehisabiline cust
 
 Canonical page: https://tehisabiline.ee/en/nis2/
 NIS2 is Directive (EU) 2022/2555, a unified framework for cybersecurity in 18 critical sectors that replaced Directive 2016/1148 (NIS1); it is a directive, not a regulation, so its duties reach organisations through national law. Estonia transposed NIS2 through the Cybersecurity Act (KüTS), in force since 1 January 2026. Entities already in scope on that date had three months to notify RIA (that window closed in spring 2026); a new service provider has three months from becoming one. The ten minimum measures cover risk analysis, incident handling, continuity, supply chain, secure development, effectiveness testing, hygiene and training, cryptography, human resources and access control, and multi-factor authentication. Incident reports: early warning within 24 hours and notification within 72 hours of becoming aware, final report within one month of filing the 72-hour notification.
+
+## NIS2 compliance checklist (EN)
+
+Canonical page: https://tehisabiline.ee/en/nis2/checklist/
+The English checklist turns Article 21(2)(a)-(j) into ten rows with what done looks like, the evidence a reviewer requests, the sample that proves the measure operates and the owner, plus a separate row for the Article 20 board duties. Any row where only the policy can be produced, and not the proof, is a gap. A printable CSV with the same eleven rows and blank result, finding, action, due date, status and evidence-location columns is free and ungated: https://tehisabiline.ee/assets/downloads/nis2-compliance-checklist.csv
 
 ## CRA in Estonia (EN)
 
