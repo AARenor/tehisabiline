@@ -435,3 +435,28 @@ because sending stays owner-gated.
 
 Follow-up: unchanged from the entry above, plus re-check whether the new template earns
 download clicks on the ISO page once it is recrawled. Evidence: private `evidence/2026_11_05/`.
+
+## 2026-11-05, third pass, facet depth on the two thinnest visible pages
+
+Asked whether the site can rank for more keywords. The answer was checked before anything was
+written: the autocomplete corpus (4,219 distinct suggestions, 617 English and 620 Estonian seeds)
+matched against 75 pages leaves 2,200 fully covered, 1,096 partial and 866 absent, and the absent
+top-ranked suggestions are foreign-language or homonym noise plus the conversational-AI family that
+now redirects to `arletop.com` and still collects 76 impressions on the retired URLs. Query to page
+matching over the 196 visible queries found 29 misassignments, nearly all on those same retired URLs,
+and 28 queries with no close page, again the same two categories. No legitimate new URL exists, so
+new URLs were not created.
+
+Work went to depth on pages that already hold page-one positions and were the thinnest in the set:
+`/en/iso-27001/` (74 impressions at 5.6) gained cost drivers and a way to check that a certification
+body is accredited, and `/en/nis2/fines/` (36 impressions at 11.7) gained the supervisory ladder that
+precedes a fine, both with FAQ entries in the visible FAQ and the FAQPage graph. This is the facet
+coverage route to more keywords: one page answering more of the sub-questions its query set already
+contains, rather than a new document that re-states what an existing page says.
+
+Expect long-tail gains, not a step change. The count moves with authority: the profile still has no
+editorial link from an independent site.
+
+Follow-up: after recrawl, compare the ISO cost and NIS2 fine-procedure facets against their
+pre-change rows, and watch whether the 20 to 50 position block (59 queries, 534 impressions in the
+90-day window) narrows.
