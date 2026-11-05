@@ -1,0 +1,132 @@
+ISO 27001 INTERNAL AUDIT REPORT — TEMPLATE
+==========================================
+
+Plain-text skeleton for an internal audit report under clause 9.2 of
+ISO/IEC 27001:2022. Fill every angle-bracket field. Delete a section only if
+you say why under "Scope and exclusions" or "Limitations". The report has two
+readers: the process owner who must act, and the top manager whose review
+(clause 9.3) needs the results.
+
+Published by Tehisabiline OU, https://tehisabiline.ee/en/iso-27001/audit-checklist/
+Version 1.0, 2026-11-05. Free to copy and adapt inside your organisation.
+
+Pair it with the audit checklist that items are tested against:
+https://tehisabiline.ee/assets/downloads/iso-27001-audit-checklist.csv
+
+
+1. DOCUMENT CONTROL
+-------------------
+Report title:            <organisation> internal audit report, <area>
+Report ID:               <IA-YYYY-NNN>
+Version:                 <1.0 draft / 1.1 final>
+Audit dates:             <start> to <end>
+Report date:             <date>
+Prepared by:             <auditor name, role>
+Reviewed by:             <ISMS owner, name and role>
+Distribution:            <top management, area owner, ISMS file>
+Classification:          <internal / confidential>
+
+
+2. SCOPE AND CRITERIA
+---------------------
+Audit area:              <systems, locations, processes, organisational units>
+Clauses covered:         <4 to 10, list the ones in this audit>
+Annex A controls:        <control IDs from the Statement of Applicability, or
+                          "all applicable controls for this area">
+Criteria:                <ISO/IEC 27001:2022 clauses and Annex A, internal
+                          policy versions and IDs, legal and contractual
+                          obligations adopted, Statement of Applicability
+                          version>
+Excluded:                <what is deliberately out of scope, and the reason>
+Interface to other audits: <other audits in the programme that cover the
+                          remainder of the ISMS, with report IDs>
+Independence statement:  <why the auditor is independent of the area audited,
+                          for example a peer from another unit, an external
+                          auditor engaged for the task, or a rotation record>
+
+
+3. METHOD AND SAMPLING
+----------------------
+Method:                  <document review, interviews, system walkthrough,
+                          technical verification, observation>
+Population lists used:    <asset register, identity export, procurement list,
+                          supplier list, incident log, change log>
+Sample sizes:            <items per control and the rule used, for example
+                          five items per control, or the whole population
+                          when it holds fewer than ten>
+Sampled period:          <start> to <end>
+Evidence handling:       <where screenshots and exports are stored, how they
+                          are identified, retention>
+Tooling:                 <any tool used to generate evidence, and its version>
+Limitations:             <evidence that could not be obtained, and how that
+                          affects the conclusion>
+
+
+4. SUMMARY OF RESULTS
+---------------------
+Controls tested:         <n>
+Conforming:              <n>
+Partially conforming:    <n>
+Nonconforming:           <n>
+Not tested:              <n, with the reason>
+Overall opinion:         <the ISMS area audited [conforms / conforms with
+                          findings / does not conform] with the criteria, in
+                          one or two sentences a board member can act on>
+Repeat findings:         <n, listing the finding IDs that were already open>
+
+
+5. FINDINGS
+-----------
+One block per finding. Do not merge findings to reduce the count, and do not
+split one root cause into several findings.
+
++ Finding ID:            <F-01>
+  Requirement:           <clause or Annex A control, plus the internal policy
+                          reference the finding is measured against>
+  Evidence seen:         <what was shown, identifier, date, who showed it>
+  Condition:             <what was found, stated as fact>
+  Effect:                <the consequence if not corrected, in business terms>
+  Classification:         <major nonconformity / minor nonconformity /
+                          observation / improvement opportunity>
+  Root cause:            <the cause agreed with the owner, not the symptom>
+  Correction:            <the immediate action taken or planned>
+  Corrective action:     <what prevents a repeat>
+  Owner:                 <name, role>
+  Due date:              <date>
+  Re-test evidence:      <what will be checked, and when>
+  Status:                <open / in progress / awaiting verification / closed>
+
++ Finding ID:            <F-02>
+  ... repeat the block ...
+
+Classification rule to state once, in the report, so it is not argued later:
+  Major      a requirement is not implemented, or a failure reaches a
+             regulatory, contractual or material business impact
+  Minor      an isolated lapse in an implemented control
+  Observation  no requirement breached; a weakness with a plausible future
+             impact
+  Improvement  no breach and no weakness; a possible gain
+
+
+6. REQUIREMENTS TESTED WITHOUT FINDINGS
+---------------------------------------
+List what was tested and found conforming, so the audit file shows coverage:
+  <clause or control>  <evidence sampled>  <items tested>
+A report that lists only findings cannot prove coverage of clauses 4 to 10.
+
+
+7. ACTIONS AND FOLLOW-UP
+------------------------
+Action log:              <finding ID, action, owner, due date, status>
+Management review input: <date the results go to the clause 9.3 review>
+Re-test plan:            <which items are re-tested, in which cycle>
+Escalation:              <what happens when an action passes its due date>
+
+
+8. LIMITATIONS AND DISCLAIMERS
+------------------------------
+State plainly what the audit does not cover, for example: this is an internal
+audit under clause 9.2, not a certification audit, not a penetration test and
+not a legal opinion; sample-based testing gives reasonable assurance, not
+proof of completeness; findings reflect the evidence available at the audit
+dates.
