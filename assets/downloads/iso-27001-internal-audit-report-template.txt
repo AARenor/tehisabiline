@@ -1,4 +1,4 @@
-ISO 27001 INTERNAL AUDIT REPORT — TEMPLATE
+ISO 27001 INTERNAL AUDIT REPORT: TEMPLATE
 ==========================================
 
 Plain-text skeleton for an internal audit report under clause 9.2 of
