@@ -392,3 +392,46 @@ Follow-up: after recrawl, compare `iso 27001 audit checklist` and the three vari
 the 2026-10-29..11-04 baseline (37 at 10.6, 12 at 11.4, 11 at 13.9, 9 at 14.9), and re-read the
 `nis2 checklist` family for the 2026-11-04 artifact as its own follow-up. Evidence: private
 `evidence/2026_11_05/`.
+
+## 2026-11-05, second pass — artifact completion and the limits of on-page work
+
+Verified before changing anything, so the next session does not repeat it:
+
+- URL Inspection on all 72 sitemap URLs: 72 PASS, submitted and indexed. Indexation
+  coverage is complete, so no crawl or canonical work is justified.
+- Mobile Lighthouse through `unlighthouse-ci` 0.19.1 on `/`, `/nis2/`, `/nis2/audit/`,
+  `/nis2/kontrollnimekiri/`, `/iso-27001/auditeerimine/`, `/en/iso-27001/audit-checklist/`:
+  performance 0.99 to 1.0, accessibility 1, best practices 1, SEO 1. Core Web Vitals are not
+  a lever here.
+- Structured data inventory across 79 indexable pages: Organization on 64 with registry
+  identifier, founder, address, areaServed, contactPoint and sameAs; Service on 21 pages with
+  areaServed Estonia and provider references; FAQPage on 71; Article on 56; BreadcrumbList on
+  78; Dataset on 5; HowToStep on 4. No missing entity layer.
+- Competitor comparison, fetched and measured: `iso 27001 audit checklist` is held by
+  hightable.io (1,935 words), mitti.com (2,003) and securesystems.com (1,776), each built
+  around gated templates. Our page carries more than twice that with 8 tables, 29 clause rows
+  and 63 Annex A rows, and still sits at position 10.6, so depth is not what ranks it there.
+  `nis2 checklist` is held by a 7,875-word phased guide on nis-2-templates.com and two PDFs.
+- Zero-click page-1 impressions are not a language artefact: of 212 impressions at positions
+  1 to 11, 192 come from English queries on English pages, 18 from Estonian, and one click was
+  recorded. Titles and descriptions already match the query text within length.
+
+Work landed in this pass:
+
+- `assets/downloads/iso-27001-internal-audit-report-template.txt`, a clause 9.2 report
+  skeleton (eight numbered sections, finding block, classification rule, coverage list), linked
+  from the page head, the gap-scoring section and the short answer, listed in `/viitamine/` and
+  described in `llms-full.txt`. This completes the page: a checklist to test against plus the
+  report to write into, which is the pairing the ranked competitors monetise and we give away.
+- Body links from the four thinnest English pages: `/en/e-its/` and `/en/dora/audit/` to the
+  ISO audit checklist, `/en/sbom/` to CRA vulnerability reporting.
+- IndexNow: 72 URLs accepted on the first pass, 5 changed URLs after the second deploy.
+
+Not done, and why: no title rewrites (titles already match the query set), no new URLs, no
+second change to `/en/nis2/checklist/` while its 2026-11-04 artifact is pre-recrawl, no front
+matter, no Google write. The remaining binding constraint is referring domains: the measured
+baseline is one nofollow GitHub link and one profile citation, and no outreach has been sent
+because sending stays owner-gated.
+
+Follow-up: unchanged from the entry above, plus re-check whether the new template earns
+download clicks on the ISO page once it is recrawled. Evidence: private `evidence/2026_11_05/`.
