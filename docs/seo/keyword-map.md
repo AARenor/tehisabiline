@@ -353,3 +353,42 @@ Follow-up: re-read `nis2 checklist` and `nis2 compliance checklist` over a compl
 after the recrawl and compare with the 2026-10-26..11-03 baseline (69 and 15 impressions,
 0 clicks, positions 47.8 and 38.2). Evidence: private
 `evidence/2026_11_04/capture_and_release_20261104.md`.
+
+## 2026-11-05 — ISO 27001 clause coverage for the English audit checklist
+
+Fresh read-only GSC for 2026-10-29..11-04 (Pacific dates; 2026-11-05 incomplete and excluded):
+1,572 Web impressions and 16 clicks across 73 pages, a 1.0% property CTR, against 769
+impressions in the previous week. Impressions are no longer the constraint. The visible query
+rows hold 760 impressions and 1 click, and the position buckets inside them are 18 impressions
+at position 3 to 5, 46 at 5 to 8 and 102 at 8 to 11, all with zero clicks, so ranking alone
+does not explain the flat click count. Country mix is Estonia 485, United States 237,
+Netherlands 228, United Kingdom 70, Belgium 61, Germany 56: the English pages carry 659 of the
+visible query impressions.
+
+- Largest coherent new cluster is the ISO 27001 audit-checklist family (`iso 27001 audit
+  checklist` 37 impressions at position 10.6, `iso 27001 checklist` 12 at 11.4, `isms 27001 audit
+  checklist` 11 at 13.9, `iso 27001 internal audit checklist` 9 at 14.9, and four more variants,
+  about 105 impressions in total), all landing on `/en/iso-27001/audit-checklist/`. URL
+  inspection returns PASS / Submitted and indexed, self-canonical, last crawl 2026-10-30.
+- Defect found and fixed: the Estonian workbook `iso-27001-siseauditi-toovihik.xlsx` covers
+  clauses 4.1 to 10.2, while the English artifact held Annex A rows only, so the English page
+  could not answer an internal-audit question for the management system clauses. Commit
+  `TBD` adds 29 clause rows to `assets/downloads/iso-27001-audit-checklist.csv` (63 to 92 rows),
+  a visible clause section with the same questions and evidence, a generator script, matching
+  counts in `llms-full.txt` and `/viitamine/`, and a fresh `lastmod`.
+- Internal links: the page had 8 inbound pages against 30 or more for the peers linked from the
+  shared chrome. Adding it to the chrome footer was rejected because the 2026-11-01 triage left
+  footer size with the owner; instead two topically exact body links were added from
+  `/en/nis2/audit/` and `/en/nis2/vs-iso-27001/` (the Annex A mapping page), which had none.
+- Restored a claim that a rebuild had reverted: `tools/chrome.mjs` still carried the older
+  English footer line about the API, so every chrome rebuild overwrote the 2026-11-01 disclaimer.
+  The template now carries the "in development and not public" wording, which is a footer-text
+  change only and is not a material update to any route.
+- No title rewrite, no new URL, no FAQ change. Google writes: none. `sitemap_submit` stays NOOP
+  and `request_indexing` stays BLOCKED on the recorded quota stop; the affected page is already
+  indexed, so natural recrawl from `lastmod` is the route.
+
+Follow-up: after recrawl, compare `iso 27001 audit checklist` and the three variants above with
+the 2026-10-29..11-04 baseline (37 at 10.6, 12 at 11.4, 11 at 13.9, 9 at 14.9), and re-read the
+`nis2 checklist` family for the 2026-11-04 artifact as its own follow-up. Evidence: private
+`evidence/2026_11_05/`.

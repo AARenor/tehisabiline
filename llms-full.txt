@@ -1,6 +1,6 @@
 # Tehisabiline: factual overview
 
-Last materially reviewed: 2026-11-04
+Last materially reviewed: 2026-11-05
 Canonical source: https://tehisabiline.ee/
 Short index: https://tehisabiline.ee/llms.txt
 
@@ -312,7 +312,7 @@ An ISO/IEC 27001 certificate cannot prove NIS2 compliance. Certification attests
 ## ISO 27001 audit checklist (EN)
 
 Canonical page: https://tehisabiline.ee/en/iso-27001/audit-checklist/
-An internal audit under clause 9.2 of ISO/IEC 27001:2022 is a planned check of the organisation's own ISMS by people who are not responsible for what they check. It tests conformity with the standard and with the organisation's own rules, and whether the ISMS is effectively implemented and maintained. It is not a certification audit, not a penetration test, and not a policy-library review. The page carries clause 9.2 requirements, a six-step method with sampling defaults, the checklist by Annex A theme, gap scoring, and a 63-row CSV.
+An internal audit under clause 9.2 of ISO/IEC 27001:2022 is a planned check of the organisation's own ISMS by people who are not responsible for what they check. It tests conformity with the standard and with the organisation's own rules, and whether the ISMS is effectively implemented and maintained. It is not a certification audit, not a penetration test, and not a policy-library review. The page carries clause 9.2 requirements, a six-step method with sampling defaults, a 29-row checklist by management system clause (4 to 10), the checklist by Annex A theme, gap scoring, and a 92-row CSV that starts with the clause rows.
 
 ## Cybersecurity audit checklist (EN)
 

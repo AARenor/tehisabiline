@@ -152,7 +152,7 @@ const FOOTER = {
     en: {
         lang: "en",
         home: " – home",
-        about: "Penetration testing and cyber audits under written authorization, with human review. API for security tooling.",
+        about: "Penetration testing and cyber audits under written authorization, with human review. Cyber-AI API for security tools is in development and not public.",
         groups: [
             {
                 title: "Services",
