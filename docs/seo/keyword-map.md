@@ -354,7 +354,7 @@ after the recrawl and compare with the 2026-10-26..11-03 baseline (69 and 15 imp
 0 clicks, positions 47.8 and 38.2). Evidence: private
 `evidence/2026_11_04/capture_and_release_20261104.md`.
 
-## 2026-11-05 — ISO 27001 clause coverage for the English audit checklist
+## 2026-11-05, ISO 27001 clause coverage for the English audit checklist
 
 Fresh read-only GSC for 2026-10-29..11-04 (Pacific dates; 2026-11-05 incomplete and excluded):
 1,572 Web impressions and 16 clicks across 73 pages, a 1.0% property CTR, against 769
@@ -393,7 +393,7 @@ the 2026-10-29..11-04 baseline (37 at 10.6, 12 at 11.4, 11 at 13.9, 9 at 14.9), 
 `nis2 checklist` family for the 2026-11-04 artifact as its own follow-up. Evidence: private
 `evidence/2026_11_05/`.
 
-## 2026-11-05, second pass — artifact completion and the limits of on-page work
+## 2026-11-05, second pass, artifact completion and the limits of on-page work
 
 Verified before changing anything, so the next session does not repeat it:
 
