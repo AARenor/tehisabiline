@@ -373,7 +373,7 @@ visible query impressions.
 - Defect found and fixed: the Estonian workbook `iso-27001-siseauditi-toovihik.xlsx` covers
   clauses 4.1 to 10.2, while the English artifact held Annex A rows only, so the English page
   could not answer an internal-audit question for the management system clauses. Commit
-  `TBD` adds 29 clause rows to `assets/downloads/iso-27001-audit-checklist.csv` (63 to 92 rows),
+  `ae7551e` adds 29 clause rows to `assets/downloads/iso-27001-audit-checklist.csv` (63 to 92 rows),
   a visible clause section with the same questions and evidence, a generator script, matching
   counts in `llms-full.txt` and `/viitamine/`, and a fresh `lastmod`.
 - Internal links: the page had 8 inbound pages against 30 or more for the peers linked from the
