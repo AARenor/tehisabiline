@@ -460,3 +460,45 @@ editorial link from an independent site.
 Follow-up: after recrawl, compare the ISO cost and NIS2 fine-procedure facets against their
 pre-change rows, and watch whether the 20 to 50 position block (59 queries, 534 impressions in the
 90-day window) narrows.
+
+## 2026-11-07, link strength for the two starved ISO pages
+
+Fresh readonly Search Console data, `dataState` final, newest finalized date 2026-11-04. Per-day
+rates, which is the only safe comparison across unequal finalized day counts: impressions 125.7 to
+261.8 and clicks 3.71 to 1.80 from the week of 2026-10-24..30 to the five finalized days of
+2026-10-31..11-04. The 28 day windows are nearly flat (2299 impressions and 44 clicks prior, 2287
+and 40 now), so this is a mix shift rather than a property-wide change: English checklist pages
+entered positions 12 to 45 and added impressions without clicks, while the pages already in the top
+three kept their clicks. Numbers and retained rows: private
+`evidence/2026_11_07/gsc_review_20261107.{json,md}`.
+
+Query plus page rows show the hubs being surfaced for the dedicated pages' queries:
+`/iso-27001/` carried 167 query row impressions dominated by English checklist terms
+(`iso 27001 audit checklist` 35 at 10.7, `iso 27001 checklist` 13 at 12.1, `isms 27001 audit
+checklist` 11 at 13.9), and `/en/nis2/` carried 282 rows with `nis2 checklist` at position 47.4
+against 38.2 for `/en/nis2/checklist/`. Internal anchor text is not the cause: no anchor on the site
+points at a hub using checklist wording. The measurable difference is inbound internal links, 10 for
+`/en/iso-27001/audit-checklist/` and 4 for `/iso-27001/auditeerimine/` against 29 to 47 for their
+siblings.
+
+Change made: one contextual sentence each, with a varied anchor, added to eight pages that already
+discuss audit evidence, taking inbound links from 10 to 14 for the English ISO 27001 audit checklist
+and from 4 to 8 for the Estonian ISO audit guide. No title, description, canonical, heading, claim,
+route or date change, because the previous passes already established that wording, depth,
+structured data, Core Web Vitals and indexation are not the constraint here.
+
+Google Trends was read the same day as routine keyword research rather than only after a decline.
+Worldwide, 12 months, relative inside one request: `iso 27001 internal audit` mean 51.4 (first half
+48.1, second half 54.7), `nis2 checklist` 21.5 (28.1 to 15.1), `iso 27001 audit checklist` 7.0 (5.6
+to 8.3), `cybersecurity audit checklist` 5.8. The internal-audit phrasing is the strongest and
+rising, which the existing H1 already leads with. In Estonia, `nis2` and `iso 27001` register only
+in the last two weeks and `küberaudit`, `pentestimine` and `tehisabiline` stay at zero for the whole
+window: a zero is below the reporting threshold, so Estonia cannot be sized from Trends and the
+Search Console impressions stay the measurement. Reader and limits are documented in
+`tooling.md#google-trends-reader`.
+
+No Google write: no new URL and no substantial correction justifies a scarce indexing request.
+
+Follow-up: after recrawl, compare the two linked targets against 178 impressions at 11.9
+(`/en/iso-27001/audit-checklist/`) and against the Estonian ISO query set, and watch whether the
+`nis2 checklist` and `iso 27001 audit checklist` splits move from the hubs to the dedicated pages.
