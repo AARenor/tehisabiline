@@ -318,7 +318,10 @@ table { border-collapse: collapse; }
 .prose h3 { margin-top: 2.25rem; font-size: clamp(1.25rem, 1.1rem + .6vw, 1.5rem); }
 .prose h2 + *, .prose h3 + * { margin-top: .9rem; }
 .prose > :first-child, .prose > :first-child > h2:first-child { margin-top: 0; }
-.prose :where(ul, ol):not([class]) { padding-left: 1.4rem; display: grid; gap: .5rem; }
+.prose :where(ul, ol):not([class]) { padding-left: 1.4rem; display: grid; gap: .5rem; grid-template-columns: minmax(0, 1fr); }
+/* Grid items default to min-width:auto, so one long unbreakable token widens the track past
+   the viewport (seen on /en/security-audit/ at 390px: a 46-character NIST function list). */
+.prose :where(ul, ol):not([class]) > li { min-width: 0; overflow-wrap: break-word; }
 .prose li::marker { color: var(--blue); }
 .prose a { font-weight: 500; }
 .prose blockquote { margin-inline: 0; padding: .25rem 0 .25rem 1.25rem; border-left: 1px solid var(--blue); color: var(--ink); font-size: 1.15rem; }

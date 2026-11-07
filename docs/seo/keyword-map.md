@@ -472,14 +472,21 @@ entered positions 12 to 45 and added impressions without clicks, while the pages
 three kept their clicks. Numbers and retained rows: private
 `evidence/2026_11_07/gsc_review_20261107.{json,md}`.
 
-Query plus page rows show the hubs being surfaced for the dedicated pages' queries:
-`/iso-27001/` carried 167 query row impressions dominated by English checklist terms
-(`iso 27001 audit checklist` 35 at 10.7, `iso 27001 checklist` 13 at 12.1, `isms 27001 audit
-checklist` 11 at 13.9), and `/en/nis2/` carried 282 rows with `nis2 checklist` at position 47.4
-against 38.2 for `/en/nis2/checklist/`. Internal anchor text is not the cause: no anchor on the site
-points at a hub using checklist wording. The measurable difference is inbound internal links, 10 for
-`/en/iso-27001/audit-checklist/` and 4 for `/iso-27001/auditeerimine/` against 29 to 47 for their
-siblings.
+Query plus page rows, matched exactly rather than by substring, show the dedicated pages holding
+their own queries and not converting: `/en/nis2/checklist/` carries `nis2 checklist` 85 at 47.4,
+`nis2 compliance checklist` 15 at 38.2 and `nis 2 checklist` 9 at 62.9; `/en/security-audit/checklist/`
+carries `cybersecurity audit checklist` 12 at 39.2 and two variants around 42; `/en/iso-27001/audit-checklist/`
+carries `iso 27001 audit checklist` 35 at 10.7, `iso 27001 checklist` 13 at 12.1 and `isms 27001 audit
+checklist` 11 at 13.9. The English hub `/en/nis2/` holds four query rows totalling four impressions with
+no checklist query, and the Estonian hub `/iso-27001/` holds only Estonian queries, so hub
+cannibalisation is not in the data. The gap is position, not a misplaced URL, and the lever this site
+controls is link strength: inbound internal links are 10 for `/en/iso-27001/audit-checklist/` and 4 for
+`/iso-27001/auditeerimine/` against 29 to 47 for their siblings.
+
+Correction made the same day: an earlier revision of this section claimed the hubs were being surfaced
+for these queries. That was a misread of a substring page filter, where `/en/nis2/` also matched
+`/en/nis2/checklist/` and `/iso-27001/` also matched `/en/iso-27001/audit-checklist/`. The exact-match
+rows above replace it. The link change stands on the inbound link counts, not on cannibalisation.
 
 Change made: one contextual sentence each, with a varied anchor, added to eight pages that already
 discuss audit evidence, taking inbound links from 10 to 14 for the English ISO 27001 audit checklist
@@ -502,3 +509,38 @@ No Google write: no new URL and no substantial correction justifies a scarce ind
 Follow-up: after recrawl, compare the two linked targets against 178 impressions at 11.9
 (`/en/iso-27001/audit-checklist/`) and against the Estonian ISO query set, and watch whether the
 `nis2 checklist` and `iso 27001 audit checklist` splits move from the hubs to the dedicated pages.
+
+## 2026-11-07, second pass: TLPT links, an ISMS alias and a mobile overflow defect
+
+Same capture and same exact-match rule as above. Three changes, each tied to a measured row.
+
+Link strength for the TLPT pair: `/en/tlpt/` earns 47 impressions at average position 17.2 with
+no clicks and holds the query `tlpt` at 50.8, while carrying 5 inbound internal links against 29 to
+47 for comparable pages. `/tlpt/` carried 10. Four English pages (the DORA audit page, the NIS2
+audit page, the regulations overview and the security audit page) and two Estonian pages (the NIS2
+audit page and the cybersecurity audit hub) gained one contextual sentence each, taking the counts
+to 9 and 12. Anchors are all distinct and every sentence restates a fact the target page already
+carries.
+
+An alias facet on the English ISO 27001 audit checklist page: `isms 27001 audit checklist` (11
+impressions at 13.9) and `isms iso 27001 audit checklist` (10 at 13.5) use a name the page used only
+in passing. A visible FAQ entry now answers the naming question and the same entry is in the FAQPage
+graph, which moved the page's visible modified date to 2026-11-07 and its sitemap `lastmod` with it.
+`llms-full.txt` gained the one-line statement and its review date.
+
+An intent mismatch: the query `iso 27001 certification in estonia` (9 impressions at position 5.8,
+no clicks) is held by `/en/e-its/`, not by the ISO page. The E-ITS page now says where that route
+lives and links `/en/iso-27001/` with the query's own wording, next to the existing checklist link.
+
+A defect found by rendering rather than by any validator: `/en/security-audit/` overflowed the
+viewport by 22px at 390px. Cause: `.prose ul` is `display: grid`, and a grid item defaults to
+`min-width: auto`, so a single 46-character unbreakable token (a slash-joined NIST function list)
+widened the track past the container. Fixed at the CSS rule with `minmax(0, 1fr)` on the track and
+`min-width: 0` plus `overflow-wrap: break-word` on the items, and the token itself rewritten as a
+comma list. `tools/seo-check.mjs` and `html-validate` are static and had passed both before and
+after, so this is only visible in a browser. A full sweep of all 80 routes at 1280x800 and 390x844
+now reports zero overflow, zero console errors and zero failed requests.
+
+Follow-up: the TLPT and ISO link targets are unchanged in position until recrawl, so compare them
+after Google revisits, and keep the render sweep in the release routine since static checks cannot
+see layout.
