@@ -544,3 +544,39 @@ now reports zero overflow, zero console errors and zero failed requests.
 Follow-up: the TLPT and ISO link targets are unchanged in position until recrawl, so compare them
 after Google revisits, and keep the render sweep in the release routine since static checks cannot
 see layout.
+
+## 2026-11-07, third pass: structural checks, and one real duplication defect
+
+Four checks that need no new Search Console rows, run against the working tree before any edit.
+
+Link integrity: `lychee --offline` over the repository reports 5 broken targets, all inside the
+private `docs/future-ai-site/` folder that the deploy excludes. No public page links a missing route.
+
+Canonical and hreflang pairing: all 74 public pages are self-canonical, 68 declare a full hreflang
+set, every alternate target exists, every pair is reciprocal and every set carries `x-default`. The
+single page without a canonical is a tooling artefact under `.impeccable/`, not a site page.
+
+Duplicate content: five-word shingle overlap between every page pair, then paragraph-level verbatim
+reuse inside `<article>`. Twelve reuse groups exist. Most are benign: the shared author line, the
+"dates checked" provenance note on two AI Act pages, one quoted Estonian statutory sentence inside
+the English NIS2 audit page, and one self-check widget intro shared by `/en/nis2/` and `/en/cra/`.
+One is a real defect: `/sektorid/energeetika/` and `/sektorid/tervishoid/` shared 1718 characters of
+identical prose, five substantive paragraphs plus the same three-row timetable table, which is half
+of each page's body text. Both now carry a single sector-specific paragraph that states the shared
+deadlines and points at `/nis2/intsidendist-teatamine/`, the page that already holds the timetable,
+the interim-report rule and the notification content. Shared paragraphs fell from 6 to 1, the author
+line. Both sector pages keep their sector-specific checks, evidence lists and questions.
+
+Question and modifier probes over the 90-day query rows, which close two doors: only 5 queries
+contain a question word (11 impressions total), so FAQ expansion has nothing to chase; and only one
+query contains a price or "free" term, so no commercial modifier demand is visible in Search Console.
+
+The structural picture, 90-day query rows by position: 12 queries at positions 1 to 3 (33
+impressions), 25 at 4 to 7 (84), 46 at 8 to 15 (200), 40 at 16 to 30 (343), 34 at 31 to 50 (253) and
+39 beyond 50 (163). Fifty-eight percent of queries and seventy percent of query-row impressions sit
+past position 15. The largest single bucket is the checklist and template family: 56 queries, 348
+impressions, zero clicks. Those three pages were deepened twice already and their titles match the
+query wording, so the position is an authority question, not a copy question.
+
+No Google write and no new URL again. Release state is unchanged: commits `945137f`, `f8109fd` and
+`2754912` are local until a Cloudflare credential exists.
