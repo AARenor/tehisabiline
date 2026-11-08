@@ -580,3 +580,49 @@ query wording, so the position is an authority question, not a copy question.
 
 No Google write and no new URL again. Release state is unchanged: commits `945137f`, `f8109fd` and
 `2754912` are local until a Cloudflare credential exists.
+
+## 2026-11-08, the AI answer boundary, and two title and intent defects
+
+Two changes in commit `b0d58da`, plus the measurement that decided them.
+
+The measurement first, because it changes what the numbers mean. Fourteen non-brand queries were
+read from a signed-in Chrome with `pws=0` and `num=20`. Twelve of them put a Google AI Mode or AI
+Overview reply above the organic list: `iso 27001 audit checklist`, `iso 27001 internal audit
+checklist`, `isms iso 27001 audit checklist`, `nis2 checklist`, `nis2 compliance checklist`,
+`nis2 audit`, `nis2 vs iso 27001`, `security audit checklist`, `dora audit`,
+`penetration testing estonia` and `nis2 consultant estonia`. The site's four largest zero-click
+pages are all drawn from that set. One page does reach page one of an AI answered query,
+`/en/iso-27001/audit-checklist/` at slot 8 for `iso 27001 internal audit checklist`, and it still
+earns no clicks. Ranking position is therefore not the binding constraint on those pages, and more
+copy will not fix it.
+
+The two queries in this space with a normal result list and no AI answer are `pentestimine tallinn`,
+whose eleven live results are apartment listings and a planning register, and
+`iso 27001 sertifitseerimine eesti`, whose results are training providers, certification bodies and
+two ads.
+
+Change one, `/iso-27001/`. The page already answered certification questions in full: the stage 1
+and stage 2 sequence, who may issue a certificate, the EAK accreditation check, what a consultancy
+does and does not do. Its title was `ISO 27001: mis see on ja nõuded`, which contains neither
+`sertifitseerimine` nor `Eestis`. The title is now `ISO 27001 sertifitseerimine Eestis: nõuded |
+Tehisabiline` at 57 characters, the description was rewritten to 134 characters, and the og, twitter,
+image alt and both JSON-LD descriptions were aligned to it. No body copy and no URL changed, so the
+`iso 27001` ranking that the existing pair holds at positions 5 to 7 has the same text to match
+against.
+
+Change two, `/pentestimine/`. The page named Estonia and never Tallinn, on the one measured query in
+the portfolio whose SERP has no real service answer. It gained an honest section,
+`Pentestimine Tallinnas ja üle Eesti`, that states the registered location (Viimsi vald, Harju
+maakond), says which tests need an on-site visit and which do not, and refuses to present a city
+office as a quality signal. A table-of-contents entry was added with it.
+
+What is not claimed. The title change is a coverage fix, not a rank prediction: the query had no
+recorded impressions before it, so the measurement is whether `/iso-27001/` starts collecting
+impressions for `sertifitseerimine` variants in exact query-page rows over four weeks. The service
+area section is a foundation for a query the page previously had no chance at, not evidence that it
+will rank.
+
+Release state: commit `b0d58da` adds to `945137f`, `f8109fd`, `2754912` and the rest as local until a
+Cloudflare credential exists. The impression pullback that prompted this pass is a return from an
+exploration spike, not lost ground: 339 impressions on 2026-11-03 down to 212 on 2026-11-06, while
+every finalised day is up 61 to 129 percent against the same weekday a week earlier.
